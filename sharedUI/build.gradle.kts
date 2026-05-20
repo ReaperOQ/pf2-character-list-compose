@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.compiler)
@@ -8,6 +10,9 @@ plugins {
 kotlin {
     js { browser() }
     wasmJs { browser() }
+    jvm {
+        compilerOptions { jvmTarget = JvmTarget.JVM_17 }
+    }
 
     sourceSets {
         commonMain.dependencies {
@@ -27,7 +32,7 @@ kotlin {
             implementation(libs.ktor.client.logging)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime)
-            implementation(libs.compose.nav3)
+            implementation(libs.navigation.compose)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.coil)
             implementation(libs.coil.network.ktor)
@@ -40,6 +45,24 @@ kotlin {
             implementation(kotlin("test"))
             implementation(libs.compose.ui.test)
             implementation(libs.kotlinx.coroutines.test)
+        }
+
+        jvmMain.dependencies {
+            implementation(compose.desktop.currentOs)
+            implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.ktor.client.okhttp)
+        }
+
+        jsMain.dependencies {
+            implementation("org.jetbrains.kotlinx:kotlinx-browser:0.3")
+        }
+
+        wasmJsMain.dependencies {
+            // wasmJs uses kotlinx-browser from the Kotlin stdlib wasm bundle
+        }
+
+        webMain.dependencies {
+            implementation(libs.navigation3.browser)
         }
 
     }

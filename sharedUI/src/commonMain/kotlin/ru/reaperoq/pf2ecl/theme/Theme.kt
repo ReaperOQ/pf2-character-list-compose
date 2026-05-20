@@ -2,6 +2,7 @@ package ru.reaperoq.pf2ecl.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MotionScheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -99,7 +100,9 @@ internal fun AppTheme(
         onThemeChanged(!isDark)
         MaterialTheme(
             colorScheme = if (isDark) DarkColorScheme else LightColorScheme,
-            content = { Surface(content = content) }
+            content = content,
+            motionScheme = MotionScheme.expressive(),
+            typography = LiterataTypography()
         )
     }
 }

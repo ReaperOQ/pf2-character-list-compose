@@ -14,9 +14,13 @@ pluginManagement {
         mavenCentral()
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
 
 dependencyResolutionManagement {
     repositories {
+        mavenLocal()
         google {
             content { 
               	includeGroupByRegex("com\\.android.*")
@@ -26,8 +30,10 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 include(":sharedUI")
 include(":webApp")
-
+include(":desktopApp")
