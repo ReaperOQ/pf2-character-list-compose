@@ -77,6 +77,7 @@ fun PrintSheetScreen(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val graphicsLayer = rememberGraphicsLayer()
+    val autoTrainedSkills = viewModel.getAutoTrainedSkills()
 
     val a4Width = 794.dp
     val a4Height = 1123.dp
@@ -162,6 +163,12 @@ fun PrintSheetScreen(
                             onCheckedChange = { viewModel.toggleWidget("strikes") }
                         )
 
+                        WidgetToggleRow(
+                            label = "Черты",
+                            checked = characterState.enabledWidgets.contains("feats"),
+                            onCheckedChange = { viewModel.toggleWidget("feats") }
+                        )
+
                         Spacer(modifier = Modifier.height(16.dp))
 
                         Button(
@@ -223,7 +230,8 @@ fun PrintSheetScreen(
                                         fortSave = fortSave,
                                         refSave = refSave,
                                         willSave = willSave,
-                                        profTrained = profTrained
+                                        profTrained = profTrained,
+                                        autoTrainedSkills = autoTrainedSkills
                                     )
                                 }
                             }
@@ -297,7 +305,8 @@ fun PrintSheetScreen(
                                         fortSave = fortSave,
                                         refSave = refSave,
                                         willSave = willSave,
-                                        profTrained = profTrained
+                                        profTrained = profTrained,
+                                        autoTrainedSkills = autoTrainedSkills
                                     )
                                 }
                             }
@@ -330,7 +339,8 @@ fun PrintSheetScreen(
                         fortSave = fortSave,
                         refSave = refSave,
                         willSave = willSave,
-                        profTrained = profTrained
+                        profTrained = profTrained,
+                        autoTrainedSkills = autoTrainedSkills
                     )
                 }
             }
@@ -359,7 +369,8 @@ fun A4SheetContent(
     fortSave: Int,
     refSave: Int,
     willSave: Int,
-    profTrained: Int
+    profTrained: Int,
+    autoTrainedSkills: Set<String> = emptySet()
 ) {
     val classLabel = characterState.classData?.name?.let { Translations.translateClass(it) } ?: "Без класса"
     val ancestryLabel = characterState.ancestry?.name?.let { Translations.translateAncestry(it) } ?: "Без родословной"
@@ -529,7 +540,7 @@ fun A4SheetContent(
                 Column(modifier = Modifier.padding(12.dp)) {
                     Text("НАВЫКИ ПЕРСОНАЖА (SKILLS)", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
                     Spacer(modifier = Modifier.height(8.dp))
-                    
+
                     val skillList = listOf(
                         "Acrobatics" to Attribute.DEX,
                         "Arcana" to Attribute.INT,
@@ -559,9 +570,12 @@ fun A4SheetContent(
                     ) {
                         items(skillList) { (skillId, attr) ->
                             val attrVal = attributes[attr] ?: 0
-                            val isTrained = true
-                            val finalSkillVal = attrVal + (if (isTrained) profTrained else 0)
+                            val allTrained = autoTrainedSkills + characterState.extraTrainedSkills
+                            val isTrained = skillId.lowercase() in allTrained
+                            val attrMod = (attrVal - 10) / 2
+                            val finalSkillVal = attrMod + (if (isTrained) profTrained else 0)
                             val finalSign = if (finalSkillVal >= 0) "+$finalSkillVal" else "$finalSkillVal"
+                            val trainedMark = if (isTrained) "●" else "○"
 
                             Row(
                                 modifier = Modifier.width(200.dp),
@@ -569,15 +583,15 @@ fun A4SheetContent(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    text = "${Translations.translateSkill(skillId)} (${Translations.translateAttribute(attr)})",
+                                    text = "$trainedMark ${Translations.translateSkill(skillId)} (${Translations.translateAttribute(attr)})",
                                     fontSize = 11.sp,
-                                    color = Color.Black
+                                    color = if (isTrained) Color.Black else Color.Gray
                                 )
                                 Text(
                                     text = finalSign,
                                     fontSize = 11.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color.Black
+                                    fontWeight = if (isTrained) FontWeight.Bold else FontWeight.Normal,
+                                    color = if (isTrained) Color.Black else Color.Gray
                                 )
                             }
                         }
@@ -585,6 +599,42 @@ fun A4SheetContent(
                 }
             }
         }
+
+        if (characterState.enabledWidgets.contains("feats")) {
+            val hasFeat = characterState.ancestryFeat != null || characterState.classFeat != null
+            if (hasFeat) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFF9F9F9)),
+                    border = BorderStroke(1.dp, Color.Black)
+                ) {
+                    Column(modifier = Modifier.padding(12.dp)) {
+                        Text("ЧЕРТЫ ПЕРСОНАЖА (FEATS)", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        characterState.ancestryFeat?.let { feat ->
+                            FeatRow(label = "Черта родословной", featName = feat.name)
+                        }
+                        characterState.classFeat?.let { feat ->
+                            FeatRow(label = "Черта класса", featName = feat.name)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun FeatRow(label: String, featName: String) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 2.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(label, fontSize = 10.sp, color = Color.DarkGray)
+        Text(featName, fontSize = 11.sp, fontWeight = FontWeight.Medium, color = Color.Black)
     }
 }
 

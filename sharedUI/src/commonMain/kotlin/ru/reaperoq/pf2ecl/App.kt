@@ -44,6 +44,8 @@ fun App(
                     Triple("ancestry", "Родословная", Icons.Rounded.Groups),
                     Triple("background", "Предыстория", Icons.Rounded.History),
                     Triple("classSelection", "Класс", Icons.Rounded.Shield),
+                    Triple("skills", "Навыки", Icons.Rounded.School),
+                    Triple("feats", "Черты", Icons.Rounded.Stars),
                     Triple("matrix", "Атрибуты", Icons.Rounded.AutoAwesome),
                     Triple("printSheet", "Сводка", Icons.Rounded.Print)
                 )
@@ -161,11 +163,14 @@ fun App(
                     }
                 }
             } else if (showCreationNav && !isWideScreen) {
+                // On mobile, show only the main steps in the bottom bar, rest accessible via nav
                 val navItems = listOf(
-                    Triple("ancestry", "Родословная", Icons.Rounded.Groups),
-                    Triple("background", "Предыстория", Icons.Rounded.History),
+                    Triple("ancestry", "Род.", Icons.Rounded.Groups),
+                    Triple("background", "Пред.", Icons.Rounded.History),
                     Triple("classSelection", "Класс", Icons.Rounded.Shield),
-                    Triple("matrix", "Атрибуты", Icons.Rounded.AutoAwesome),
+                    Triple("skills", "Навыки", Icons.Rounded.School),
+                    Triple("feats", "Черты", Icons.Rounded.Stars),
+                    Triple("matrix", "Атр.", Icons.Rounded.AutoAwesome),
                     Triple("printSheet", "Сводка", Icons.Rounded.Print)
                 )
                 Scaffold(
@@ -250,6 +255,20 @@ fun AppNavHost(
         }
         composable("classSelection") {
             ClassScreen(
+                viewModel = characterViewModel,
+                onBack = { navController.popBackStack() },
+                onContinue = { navController.navigate("skills") }
+            )
+        }
+        composable("skills") {
+            SkillsScreen(
+                viewModel = characterViewModel,
+                onBack = { navController.popBackStack() },
+                onContinue = { navController.navigate("feats") }
+            )
+        }
+        composable("feats") {
+            FeatsScreen(
                 viewModel = characterViewModel,
                 onBack = { navController.popBackStack() },
                 onContinue = { navController.navigate("matrix") }

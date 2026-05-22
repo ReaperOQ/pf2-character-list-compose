@@ -16,7 +16,9 @@ data class IndexEntry(
     val id: String? = null,
     val name: String? = null,
     val img: String? = null,
-    val type: String? = null
+    val type: String? = null,
+    val level: Int? = null,
+    val category: String? = null
 )
 
 @Serializable
@@ -67,6 +69,12 @@ data class Background(
 }
 
 @Serializable
+data class BackgroundTrainedSkills(
+    val value: List<String> = emptyList(),
+    val lore: List<String> = emptyList()
+)
+
+@Serializable
 data class ClassData(
     val _id: String,
     val name: String,
@@ -84,6 +92,12 @@ data class ClassData(
         val trainedSkills: JsonElement? = null
     )
 }
+
+@Serializable
+data class ClassTrainedSkills(
+    val value: List<String> = emptyList(),
+    val additional: Int = 0
+)
 
 @Serializable
 data class SaveProficiencies(
@@ -115,10 +129,41 @@ enum class Attribute(val label: String, val ruLabel: String) {
     INT("Intelligence", "ИНТ"),
     WIS("Wisdom", "МУД"),
     CHA("Charisma", "ХАР");
-    
+
     companion object {
         fun fromId(id: String): Attribute? = entries.find { it.name.equals(id, ignoreCase = true) }
     }
+}
+
+@Serializable
+data class Feat(
+    val _id: String? = null,
+    val name: String,
+    val system: FeatSystem
+) {
+    @Serializable
+    data class FeatSystem(
+        val description: Description,
+        val level: FeatLevel? = null,
+        val category: String? = null,
+        val traits: Traits? = null,
+        val prerequisites: Prerequisites? = null
+    )
+
+    @Serializable
+    data class FeatLevel(
+        val value: Int = 0
+    )
+
+    @Serializable
+    data class Prerequisites(
+        val value: List<PrerequisiteEntry> = emptyList()
+    )
+
+    @Serializable
+    data class PrerequisiteEntry(
+        val value: String = ""
+    )
 }
 
 @Serializable
@@ -132,5 +177,8 @@ data class CharacterState(
     val backgroundBoosts: Map<String, Attribute> = emptyMap(),
     val classBoost: Attribute? = null,
     val freeBoosts: Set<Attribute> = emptySet(),
-    val enabledWidgets: Set<String> = setOf("attributes", "defenses", "skills", "strikes")
+    val extraTrainedSkills: Set<String> = emptySet(),
+    val ancestryFeat: Feat? = null,
+    val classFeat: Feat? = null,
+    val enabledWidgets: Set<String> = setOf("attributes", "defenses", "skills", "strikes", "feats")
 )
