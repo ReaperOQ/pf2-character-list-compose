@@ -143,7 +143,10 @@ class CharacterBuilderViewModel : ViewModel() {
                 val ancestryIndex = json.decodeFromString<IndexFile>(ancestryIndexBytes.decodeToString())
                 val loadedAncestries = ancestryIndex.files.mapNotNull { entry ->
                     try {
-                        entry.data?.let { json.decodeFromJsonElement<Ancestry>(it) }
+                        entry.data?.let {
+                            val ancestry = json.decodeFromJsonElement<Ancestry>(it)
+                            ancestry.copy(slug = entry.fileName.substringBeforeLast(".json"))
+                        }
                     } catch (e: Exception) {
                         Logger.e(e) { "Error decoding ancestry ${entry.fileName} from index" }
                         null
@@ -167,7 +170,10 @@ class CharacterBuilderViewModel : ViewModel() {
                 val classIndex = json.decodeFromString<IndexFile>(classIndexBytes.decodeToString())
                 val loadedClasses = classIndex.files.filter { !it.fileName.startsWith("_") }.mapNotNull { entry ->
                     try {
-                        entry.data?.let { json.decodeFromJsonElement<ClassData>(it) }
+                        entry.data?.let {
+                            val classData = json.decodeFromJsonElement<ClassData>(it)
+                            classData.copy(slug = entry.fileName.substringBeforeLast(".json"))
+                        }
                     } catch (e: Exception) {
                         Logger.w(e) { "Error decoding class ${entry.fileName} from index" }
                         null
@@ -185,7 +191,8 @@ class CharacterBuilderViewModel : ViewModel() {
     fun loadHeritagesForAncestry(ancestry: Ancestry) {
         viewModelScope.launch {
             _heritagesLoading.value = true
-            val slug = ancestrySlug(ancestry.name)
+            val ancestryFromIndex = _ancestries.value.find { it._id == ancestry._id }
+            val slug = ancestryFromIndex?.slug ?: Translations.getAncestrySlug(ancestry)
             _ancestryHeritages.value = loadHeritagesFromFolder("files/heritages/$slug")
             _versatileHeritages.value = loadHeritagesFromFolder("files/heritages/versatile-heritages")
             _heritagesLoading.value = false
@@ -241,7 +248,10 @@ class CharacterBuilderViewModel : ViewModel() {
                 .filter { it.fileName.endsWith(".json") && !it.fileName.startsWith("_") }
                 .mapNotNull { entry ->
                     try {
-                        entry.data?.let { json.decodeFromJsonElement<Spell>(it) }
+                        entry.data?.let {
+                            val spell = json.decodeFromJsonElement<Spell>(it)
+                            spell.copy(slug = entry.fileName.substringBeforeLast(".json"))
+                        }
                     } catch (e: Exception) {
                         Logger.w(e) { "Error decoding spell ${entry.fileName} from index at $resourcePath" }
                         null
@@ -287,7 +297,8 @@ class CharacterBuilderViewModel : ViewModel() {
     fun loadFeatsForAncestry(ancestry: Ancestry) {
         viewModelScope.launch {
             _featsLoading.value = true
-            val path = ancestry.name.lowercase().replace(" ", "-")
+            val ancestryFromIndex = _ancestries.value.find { it._id == ancestry._id }
+            val path = ancestryFromIndex?.slug ?: Translations.getAncestrySlug(ancestry)
             val maxLevel = _characterState.value.level
             _ancestryFeats.value = loadFeatsUpToLevel("files/feats/ancestry/$path", maxLevel)
             _featsLoading.value = false
@@ -298,7 +309,8 @@ class CharacterBuilderViewModel : ViewModel() {
     fun loadFeatsForClass(classData: ClassData) {
         viewModelScope.launch {
             _featsLoading.value = true
-            val path = classData.name.lowercase().replace(" ", "-")
+            val classFromIndex = _classes.value.find { it._id == classData._id }
+            val path = classFromIndex?.slug ?: Translations.getClassSlug(classData)
             val maxLevel = _characterState.value.level
             _classFeats.value = loadFeatsUpToLevel("files/feats/class/$path", maxLevel)
             _featsLoading.value = false

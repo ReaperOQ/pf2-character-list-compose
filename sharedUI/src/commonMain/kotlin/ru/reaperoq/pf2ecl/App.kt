@@ -79,9 +79,13 @@ fun App(
                                     .background(MaterialTheme.colorScheme.surface, shape = MaterialTheme.shapes.medium)
                                     .padding(12.dp)
                             ) {
-                                val ancestryKey = characterState.ancestry?.name?.let { Translations.getAncestryDrawableKey(it) } ?: ""
-                                val classKey = characterState.classData?.name?.lowercase() ?: ""
-                                val resourceId = Res.allDrawableResources[ancestryKey] ?: Res.allDrawableResources["class_$classKey"]
+                                val resourceId = characterState.ancestry?.let { ancestry ->
+                                    val ancestryKey = Translations.getAncestryDrawableKey(ancestry)
+                                    Res.allDrawableResources[ancestryKey]
+                                } ?: characterState.classData?.let { classData ->
+                                    val classKey = Translations.getClassDrawableKey(classData)
+                                    Res.allDrawableResources[classKey]
+                                }
 
                                 if (resourceId != null) {
                                     Image(

@@ -244,8 +244,8 @@ fun ClassGridCard(
     onClick: () -> Unit
 ) {
     val translatedName = Translations.translateClass(classData.name)
-    val classKey = classData.name.lowercase()
-    val resourceId = Res.allDrawableResources["class_$classKey"]
+    val classKey = Translations.getClassDrawableKey(classData)
+    val resourceId = Res.allDrawableResources[classKey]
 
     Card(
         modifier = modifier
@@ -322,8 +322,8 @@ fun ClassDetailPanel(
     onContinue: () -> Unit
 ) {
     val scrollState = rememberScrollState()
-    val classKey = classData.name.lowercase()
-    val resourceId = Res.allDrawableResources["class_$classKey"]
+    val classKey = Translations.getClassDrawableKey(classData)
+    val resourceId = Res.allDrawableResources[classKey]
 
     Column(
         modifier = Modifier
@@ -378,43 +378,51 @@ fun ClassDetailPanel(
 
             classData.system.keyAbility?.let { keyAbility ->
                 val availableAttrs = keyAbility.value.mapNotNull { Attribute.fromId(it) }
-                val isChoice = availableAttrs.size > 1
+                if (availableAttrs.isNotEmpty()) {
+                    val isChoice = availableAttrs.size > 1
 
-                if (!isChoice) {
-                    val attr = availableAttrs.first()
-                    Text(
-                        text = "• ${Translations.translateAttribute(attr)} (+1) [Фиксированная]",
-                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                } else {
-                    val selectedAttr = characterState.classBoost
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .background(MaterialTheme.colorScheme.surface, shape = MaterialTheme.shapes.medium)
-                            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, MaterialTheme.shapes.medium)
-                            .padding(12.dp)
-                    ) {
+                    if (!isChoice) {
+                        val attr = availableAttrs.first()
                         Text(
-                            text = "Выберите ключевую характеристику:",
-                            style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                            text = "• ${Translations.translateAttribute(attr)} (+1) [Фиксированная]",
+                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        FlowRow(
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                    } else {
+                        val selectedAttr = characterState.classBoost
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .background(MaterialTheme.colorScheme.surface, shape = MaterialTheme.shapes.medium)
+                                .border(1.dp, MaterialTheme.colorScheme.outlineVariant, MaterialTheme.shapes.medium)
+                                .padding(12.dp)
                         ) {
-                            availableAttrs.forEach { attr ->
-                                val isSelected = selectedAttr == attr
-                                FilterChip(
-                                    selected = isSelected,
-                                    onClick = { viewModel.setClassBoost(attr) },
-                                    label = { Text(Translations.translateAttribute(attr)) }
-                                )
+                            Text(
+                                text = "Выберите ключевую характеристику:",
+                                style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            FlowRow(
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                availableAttrs.forEach { attr ->
+                                    val isSelected = selectedAttr == attr
+                                    FilterChip(
+                                        selected = isSelected,
+                                        onClick = { viewModel.setClassBoost(attr) },
+                                        label = { Text(Translations.translateAttribute(attr)) }
+                                    )
+                                }
                             }
                         }
                     }
+                } else {
+                    Text(
+                        text = "• Определяется выбором подкласса",
+                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 }
             }
         }

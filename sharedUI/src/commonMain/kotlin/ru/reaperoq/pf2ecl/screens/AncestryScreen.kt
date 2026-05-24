@@ -234,7 +234,7 @@ fun AncestryCard(
     onClick: () -> Unit
 ) {
     val translatedName = Translations.translateAncestry(ancestry.name)
-    val ancestryKey = Translations.getAncestryDrawableKey(ancestry.name)
+    val ancestryKey = Translations.getAncestryDrawableKey(ancestry)
     val resourceId = Res.allDrawableResources[ancestryKey]
 
     Card(
@@ -352,7 +352,7 @@ fun AncestryDetailPanel(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            val ancestryKey = Translations.getAncestryDrawableKey(ancestry.name)
+            val ancestryKey = Translations.getAncestryDrawableKey(ancestry)
             val resourceId = Res.allDrawableResources[ancestryKey]
             if (resourceId != null) {
                 Image(

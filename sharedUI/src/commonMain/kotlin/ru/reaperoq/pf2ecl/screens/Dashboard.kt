@@ -164,9 +164,13 @@ fun CharacterCard(
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            val ancestryKey = character.ancestry?.name?.let { Translations.getAncestryDrawableKey(it) } ?: ""
-            val classKey = character.classData?.name?.lowercase() ?: ""
-            val resourceId = Res.allDrawableResources[ancestryKey] ?: Res.allDrawableResources["class_$classKey"]
+            val resourceId = character.ancestry?.let { ancestry ->
+                val ancestryKey = Translations.getAncestryDrawableKey(ancestry)
+                Res.allDrawableResources[ancestryKey]
+            } ?: character.classData?.let { classData ->
+                val classKey = Translations.getClassDrawableKey(classData)
+                Res.allDrawableResources[classKey]
+            }
             if (resourceId != null) {
                 Image(
                     painter = painterResource(resourceId),

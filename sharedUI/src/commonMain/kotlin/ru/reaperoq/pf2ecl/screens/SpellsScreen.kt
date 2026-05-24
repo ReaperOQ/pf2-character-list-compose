@@ -262,7 +262,7 @@ private fun SpellListItem(
     onPreview: () -> Unit,
     onToggle: () -> Unit
 ) {
-    val spellKey = Translations.getSpellDrawableKey(spell.name)
+    val spellKey = Translations.getSpellDrawableKey(spell)
     val resourceId = Res.allDrawableResources[spellKey]
 
     Card(
@@ -346,7 +346,7 @@ private fun SpellDetailPanel(
     val castTime = spell.system.time?.value?.takeIf { it.isNotBlank() }?.let { "$it actions" }
     val range = spell.system.range?.value?.takeIf { it.isNotBlank() }
 
-    val spellKey = Translations.getSpellDrawableKey(spell.name)
+    val spellKey = Translations.getSpellDrawableKey(spell)
     val resourceId = Res.allDrawableResources[spellKey]
 
     Card(

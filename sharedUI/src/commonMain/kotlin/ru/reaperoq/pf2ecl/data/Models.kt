@@ -26,6 +26,8 @@ data class IndexEntry(
 data class Ancestry(
     val _id: String,
     val name: String,
+    val img: String? = null,
+    val slug: String? = null,
     val system: AncestrySystem
 ) {
     @Serializable
@@ -79,6 +81,8 @@ data class BackgroundTrainedSkills(
 data class ClassData(
     val _id: String,
     val name: String,
+    val img: String? = null,
+    val slug: String? = null,
     val system: ClassSystem
 ) {
     @Serializable
@@ -159,6 +163,8 @@ data class Heritage(
 data class Spell(
     val _id: String,
     val name: String,
+    val img: String? = null,
+    val slug: String? = null,
     val system: SpellSystem
 ) {
     @Serializable

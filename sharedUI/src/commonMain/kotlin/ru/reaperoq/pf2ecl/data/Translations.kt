@@ -1,5 +1,8 @@
 package ru.reaperoq.pf2ecl.data
 
+import pathfinder_2e_character_list.sharedui.generated.resources.Res
+import pathfinder_2e_character_list.sharedui.generated.resources.allDrawableResources
+
 object Translations {
     val ancestries = mapOf(
         "Athamaru" to "Атамару",
@@ -97,8 +100,95 @@ object Translations {
     fun translateAttribute(attr: Attribute): String = attributeNames[attr] ?: attr.ruLabel
     fun translateBackground(name: String): String = name
 
+    fun getFilenameKey(img: String?): String? {
+        if (img.isNullOrBlank()) return null
+        val fileName = img.substringAfterLast('/').substringBeforeLast('.')
+        return fileName.lowercase()
+            .replace("'", "")
+            .replace("-", "_")
+            .replace(" ", "_")
+            .replace(",", "")
+            .replace(":", "")
+            .replace("(", "")
+            .replace(")", "")
+    }
+
+    fun getClassDrawableKey(classData: ClassData): String {
+        val slug = classData.slug
+        if (slug != null) {
+            val key = "class_${slug.lowercase().replace("-", "_")}"
+            if (Res.allDrawableResources.containsKey(key)) {
+                return key
+            }
+        }
+        val imgFilename = getFilenameKey(classData.img)
+        if (imgFilename != null) {
+            val key = "class_$imgFilename"
+            if (Res.allDrawableResources.containsKey(key)) {
+                return key
+            }
+        }
+        val englishName = classes.entries.find { it.value.equals(classData.name, ignoreCase = true) }?.key
+            ?: classes.entries.find { it.key.equals(classData.name, ignoreCase = true) }?.key
+            ?: classData.name
+        return "class_${englishName.lowercase()}"
+    }
+
+    fun getAncestryDrawableKey(ancestry: Ancestry): String {
+        val slug = ancestry.slug
+        if (slug != null) {
+            val key = "ancestry_${slug.lowercase().replace("-", "_")}"
+            if (Res.allDrawableResources.containsKey(key)) {
+                return key
+            }
+        }
+        val imgFilename = getFilenameKey(ancestry.img)
+        if (imgFilename != null) {
+            val key = "ancestry_$imgFilename"
+            if (Res.allDrawableResources.containsKey(key)) {
+                return key
+            }
+        }
+        val englishName = ancestries.entries.find { it.value.equals(ancestry.name, ignoreCase = true) }?.key
+            ?: ancestries.entries.find { it.key.equals(ancestry.name, ignoreCase = true) }?.key
+            ?: ancestry.name
+        return "ancestry_" + englishName.lowercase()
+            .replace("'", "")
+            .replace("-", "_")
+            .replace(" ", "_")
+            .replace(",", "")
+            .replace(":", "")
+            .replace("(", "")
+            .replace(")", "")
+    }
+
     fun getAncestryDrawableKey(name: String): String {
         return "ancestry_" + name.lowercase()
+            .replace("'", "")
+            .replace("-", "_")
+            .replace(" ", "_")
+            .replace(",", "")
+            .replace(":", "")
+            .replace("(", "")
+            .replace(")", "")
+    }
+
+    fun getSpellDrawableKey(spell: Spell): String {
+        val slug = spell.slug
+        if (slug != null) {
+            val key = "spell_${slug.lowercase().replace("-", "_")}"
+            if (Res.allDrawableResources.containsKey(key)) {
+                return key
+            }
+        }
+        val imgFilename = getFilenameKey(spell.img)
+        if (imgFilename != null) {
+            val key = "spell_$imgFilename"
+            if (Res.allDrawableResources.containsKey(key)) {
+                return key
+            }
+        }
+        return "spell_" + spell.name.lowercase()
             .replace("'", "")
             .replace("-", "_")
             .replace(" ", "_")
@@ -117,5 +207,23 @@ object Translations {
             .replace(":", "")
             .replace("(", "")
             .replace(")", "")
+    }
+
+    fun getAncestrySlug(ancestry: Ancestry): String {
+        val slug = ancestry.slug
+        if (slug != null) return slug.lowercase()
+        val englishName = ancestries.entries.find { it.value.equals(ancestry.name, ignoreCase = true) }?.key
+            ?: ancestries.entries.find { it.key.equals(ancestry.name, ignoreCase = true) }?.key
+            ?: ancestry.name
+        return englishName.lowercase().replace(" ", "-")
+    }
+
+    fun getClassSlug(classData: ClassData): String {
+        val slug = classData.slug
+        if (slug != null) return slug.lowercase()
+        val englishName = classes.entries.find { it.value.equals(classData.name, ignoreCase = true) }?.key
+            ?: classes.entries.find { it.key.equals(classData.name, ignoreCase = true) }?.key
+            ?: classData.name
+        return englishName.lowercase().replace(" ", "-")
     }
 }
