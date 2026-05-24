@@ -1,0 +1,229 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "adaptive-anadi.json",
+      "id": "7gGcpQMqnZhBDZLI",
+      "name": "Adaptive Anadi",
+      "img": "icons/creatures/invertebrates/bug-cross-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "7gGcpQMqnZhBDZLI",
+        "folder": "1nhgH7eUL9FK6Ofz",
+        "img": "icons/creatures/invertebrates/bug-cross-green.webp",
+        "name": "Adaptive Anadi",
+        "system": {
+          "ancestry": {
+            "name": "Anadi",
+            "slug": "anadi",
+            "uuid": "Compendium.pf2e.ancestries.Item.TQEqWqc7BYiadUdY"
+          },
+          "description": {
+            "value": "<p>You descend from a line of anadi who worked to perfect their transformation magic, allowing them to integrate into a wider variety of cultures. Choose a common, Medium humanoid ancestry. Your human form is replaced with a form that matches this choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Adopted Ancestry] feat for your chosen humanoid ancestry.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Adopted Ancestry"
+            },
+            {
+              "key": "RollOption",
+              "option": "non-humanoid-change-shape",
+              "priority": 41,
+              "value": false
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "polychromatic-anadi.json",
+      "id": "daaXga11ov9YQVNq",
+      "name": "Polychromatic Anadi",
+      "img": "icons/creatures/invertebrates/spider-pink-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "daaXga11ov9YQVNq",
+        "folder": "1nhgH7eUL9FK6Ofz",
+        "img": "icons/creatures/invertebrates/spider-pink-purple.webp",
+        "name": "Polychromatic Anadi",
+        "system": {
+          "ancestry": {
+            "name": "Anadi",
+            "slug": "anadi",
+            "uuid": "Compendium.pf2e.ancestries.Item.TQEqWqc7BYiadUdY"
+          },
+          "description": {
+            "value": "<p>Your body is covered with exceptionally colorful hairs that create vibrant, eye-catching patterns, some of which might even show in your human form. You become trained in Performance (or another skill if you were already trained in Performance), and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Impressive Performance] feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Impressive Performance"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "snaring-anadi.json",
+      "id": "cwOUw7kofcAiY01I",
+      "name": "Snaring Anadi",
+      "img": "icons/creatures/invertebrates/spider-striped-web-red.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "cwOUw7kofcAiY01I",
+        "folder": "1nhgH7eUL9FK6Ofz",
+        "img": "icons/creatures/invertebrates/spider-striped-web-red.webp",
+        "name": "Snaring Anadi",
+        "system": {
+          "ancestry": {
+            "name": "Anadi",
+            "slug": "anadi",
+            "uuid": "Compendium.pf2e.ancestries.Item.TQEqWqc7BYiadUdY"
+          },
+          "description": {
+            "value": "<p>You were hatched with hooked fangs that give you an edge when hunting in your true form. Your fangs attack gains the grapple and trip traits.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:anadi-fangs"
+              ],
+              "property": "traits",
+              "value": "grapple"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:anadi-fangs"
+              ],
+              "property": "traits",
+              "value": "trip"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "spindly-anadi.json",
+      "id": "WxcbLvufI6JBpLt0",
+      "name": "Spindly Anadi",
+      "img": "icons/creatures/invertebrates/bug-sixlegged-gray.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "WxcbLvufI6JBpLt0",
+        "folder": "1nhgH7eUL9FK6Ofz",
+        "img": "icons/creatures/invertebrates/bug-sixlegged-gray.webp",
+        "name": "Spindly Anadi",
+        "system": {
+          "ancestry": {
+            "name": "Anadi",
+            "slug": "anadi",
+            "uuid": "Compendium.pf2e.ancestries.Item.TQEqWqc7BYiadUdY"
+          },
+          "description": {
+            "value": "<p>Your limbs are exceptionally long in both forms, allowing you to skitter about with surprising agility. Your Speed increases from 25 to 30 feet.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "venomous-anadi.json",
+      "id": "kTlJqhC7ZSE8P8lu",
+      "name": "Venomous Anadi",
+      "img": "icons/creatures/invertebrates/spider-beetle-runed-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "kTlJqhC7ZSE8P8lu",
+        "folder": "1nhgH7eUL9FK6Ofz",
+        "img": "icons/creatures/invertebrates/spider-beetle-runed-green.webp",
+        "name": "Venomous Anadi",
+        "system": {
+          "ancestry": {
+            "name": "Anadi",
+            "slug": "anadi",
+            "uuid": "Compendium.pf2e.ancestries.Item.TQEqWqc7BYiadUdY"
+          },
+          "description": {
+            "value": "<p>Your natural form's fangs are capable of injecting foes with venom. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Anadi Venom] ability.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Anadi Venom"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

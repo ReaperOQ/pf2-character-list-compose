@@ -7,6 +7,73 @@
       "name": "Armored Stealth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lB9MVGCJr7aJQuIH",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armored Stealth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You have learned techniques to adjust and modify your armor and movements to reduce the noise you make.</p>\n<p>When you wear non-noisy armor with which you are trained, your penalty to Stealth checks is reduced by 1 (to a minimum penalty of 0). If you're a master in Stealth, reduce the penalty by 2, and if you're legendary, reduce the penalty by 3.</p>\n<p>If your armor has the noisy trait, instead of reducing the penalty to Stealth checks, you ignore the effects of the noisy trait, enabling you to remove the penalty with a sufficient Strength score as normal.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "stealth",
+              "key": "RollOption",
+              "option": "armor:ignore-noisy-penalty"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "armor:trait:noisy"
+                }
+              ],
+              "selector": "stealth-check",
+              "slug": "armor-check-penalty",
+              "value": "max(@actor.system.skills.stealth.rank - 1, 0)"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "downgrade",
+              "selector": "stealth-check",
+              "slug": "armor-check-penalty",
+              "value": 0
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -16,6 +83,71 @@
       "name": "Assured Identification",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XmF4q4rzKWg55vG4",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Assured Identification",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You rarely misidentify an item. When using Arcana, Nature, Occultism, or Religion checks to Identify Magic, if you roll a critical failure, you get a failure instead. If you would misidentify a cursed item because you roll a success but not a critical success, you simply can't identify it instead.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Arcana, Nature, Occultism, or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:identify-magic"
+              ],
+              "selector": "skill-check"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:identify-magic"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.AssuredIdentification.CursedItem",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -25,6 +157,55 @@
       "name": "Aura Sight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zdjPTg6vRwg8r2Lm",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aura Sight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You've learned how to read the natural auras of other living creatures. To do this, you must focus on a single living target without blinking for 1 minute. You can do this while performing some other minor task—such as making conversation to distract from your intentions—but you can't blink or otherwise lose your concentration. You can then perceive any or all of the following information.</p><ul><li>The target's current apparent attitude toward you (friendly, indifferent, and so on).</li><li>The target's current apparent emotional state.</li><li>A general assessment of the target's physical health, such as what conditions or afflictions it has. You might need to succeed at an Occultism check against the affliction or condition's DC to detect the presence of a specifically hidden or subtle condition or affliction.</li></ul><p>In addition, the GM rolls a secret @Check[occultism|defense:deception|traits:secret] check for you against the target's Deception DC. If your result exceeds your target's, you can identify if they're being deceptive in some way (such as expressing a false attitude toward you or faking an emotional state). This doesn't allow you to automatically identify the exact nature of that deception, only to tell the outward appearance is false.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "exploration",
+              "general",
+              "secret",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -34,6 +215,52 @@
       "name": "Automatic Knowledge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "H3I2X0f7v4EzwxuN",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Automatic Knowledge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You know basic facts off the top of your head. Choose a skill you're an expert in that has the Recall Knowledge action and for which you have the Assurance feat. You can use the Recall Knowledge action with that skill as a free action once per round. If you do, you must use Assurance on the skill check.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different skill each time. You can use Automatic Knowledge with any skills you have chosen, but you can still use Automatic Knowledge only once per round.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in a skill with the recall knowledge action"
+              },
+              {
+                "value": "Assurance in that skill"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -43,6 +270,55 @@
       "name": "Automatic Writing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nJ3EBRat9yUgeWwv",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Automatic Writing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day When confronted with the unknown, you can receive knowledge beyond your own experience via written messages delivered by your hand. You spend 10 minutes seated while holding a writing utensil, using it to make small circular motions as you open your mind to the forces around you. You receive information as your hand writes on its own, guided by spirits. At the end of these 10 minutes, @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] with any Lore skill in which you are not trained, using your Occultism modifier instead of your modifier with that skill. The strain of this spirit channeling leaves you @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for the next 10 minutes.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "exploration",
+              "general",
+              "manipulate",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -52,6 +328,48 @@
       "name": "Backup Disguise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7F3sTNRoNsQgD8tX",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Backup Disguise",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You have a specific disguise that you keep at the ready, worn underneath your outer garment. You can change into this disguise to Impersonate as a 3-action activity. If you are a master in Deception, it is instead a 2-action activity, and if you are legendary in Deception, it is a single action. You can create a new backup disguise by spending the normal amount of time it takes you to Impersonate, but you can have only one backup disguise at a time. Having a backup disguise doesn't allow you to remove your armor or any other complex piece of clothing any more quickly, but once you have those off, the disguise is readily available. Because you have the backup disguise at the ready, it's possible that a thorough search might reveal some elements of the disguise (see Conceal an Object in the Stealth skill).</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -61,6 +379,48 @@
       "name": "Battle Planner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qvLcZGsV0HP2O0CG",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battle Planner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You are constantly drawing up plans and battle scenarios, assembling strategies and gathered intelligence for later use. When you scout an enemy's position or receive a detailed report from an ally who scouted the enemy's position, if you have a clear indication of the number, position, and identities of your potential foes, you can spend 1 minute to come up with a battle plan that takes such potential factors into account and reduces the role luck plays in the equation.</p>\n<p>Roll a Warfare Lore check. As long as the information was accurate and remains accurate when you roll initiative against those enemies, you can use the Warfare Lore result you previously rolled for your initiative roll; if you do, this is a fortune effect.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Battle Planner]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Warfare Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -70,6 +430,49 @@
       "name": "Bonded Animal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pLjvgeqwHrYdg411",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bonded Animal",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You forge strong connections with animals. You can spend 7 days of downtime regularly interacting with a normal animal (not a companion or other special animal) that is friendly or helpful to you. After this duration, attempt a @Check[nature|defense:will] check against the animal's Will DC. If successful, you bond with the animal. The animal is permanently bonded to you until you form a bond with a different animal or do something egregious to break your bond.</p>\n<p>A helpful animal is easier to direct. If your bonded animal is level –1, it gains the minion trait, allowing you to command it more efficiently. The maximum level of creature that can be your minion increases to 3 if you're a master in Nature and to 11 if you're legendary.</p>\n<hr />\n<p><strong>Special</strong> You can't have both a bonded animal and an animal companion (though you can have both a bonded animal and a pet or familiar).</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "downtime",
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -79,6 +482,50 @@
       "name": "Chromotherapy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RlFZ648UR0Q0YECL",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chromotherapy",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You firmly believe in the technique of strengthening one's life force, spiritual energies, and bodily fluids through the application of colored light. When using a torch, lantern, or other artificial light source to illuminate an area of dim light or darker, you use a combination of alchemical reagents, medicinal components, and colored lenses to turn that light one of seven colors, allowing you to help an ally recover from persistent damage. You give that target an assisted recovery, but the target can be anywhere within the bright light of the light source instead of needing to be adjacent to you. Ambient bright light (like sunlight) drowns out your artificial illumination and prevents you from using Chromotherapy.</p>\n<p>The color of the light you choose determines the type of persistent damage from which you help the target recover.</p><table><colgroup><col style=\"width:55px\"><col style=\"width:auto\"></colgroup><thead><tr><th>Color</th><th>Description</th></tr></thead><tbody><tr><td>Red</td><td>You increase blood flow to heat the body, attempting to end persistent cold damage.</td></tr><tr><td>Orange</td><td>You cancel out electric charge, attempting to end persistent electricity damage.</td></tr><tr><td>Yellow</td><td>You reduce pain and mental stress, attempting to end persistent mental damage.</td></tr><tr><td>Green</td><td>You promote blood flow in a way that helps clot wounds, attempting to end persistent bleed damage.</td></tr><tr><td>Blue</td><td>You cool the body, attempting to end persistent fire damage.</td></tr><tr><td>Indigo</td><td>You render acids inert, attempting to end persistent acid damage.</td></tr><tr><td>Violet</td><td>You purify the body, attempting to end persistent poison damage.</td></tr></tbody></table>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "healing",
+              "manipulate",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -88,6 +535,48 @@
       "name": "Communal Crafting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lUXVmSFJbaPos5pY",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Communal Crafting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can have other PCs help you @UUID[Compendium.pf2e.actionspf2e.Item.Craft] an item, under your direction. A helper PC rolls a check with a skill in which they're trained. The skill must be Crafting or another skill relevant to the item, as determined by the GM. For example, a PC might use Religion to help you Craft an item with the divine trait or Warfare Lore to help you Craft a weapon. Your roll still determines whether you successfully create the item. Any helper's roll contributes toward reducing the cost of raw materials using the numbers from the @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income] table; this uses the ally PC's proficiency rank in the skill and their level – 1 for their level. Helping PCs must accompany you throughout the Craft activity (preventing them from pursuing other downtime activities) or the benefit is lost. The GM might determine that only a certain number of PCs can help depending on the circumstances. Communal Crafting also allows you to take the role of a helper when someone else is crafting, provided they accept your help.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -97,6 +586,48 @@
       "name": "Confabulator",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6Z4e3B9vePYpibcy",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Confabulator",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion] or @UUID[Compendium.pf2e.actionspf2e.Item.Lie] to it from +4 to +2. If you're a master in Deception, reduce the bonus to +1, and if you're legendary, your targets don't get these bonuses at all.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -106,6 +637,58 @@
       "name": "Continual Recovery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c85a69mB1urW2Se2",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Continual Recovery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You zealously monitor a patient's progress to administer treatment faster. When you @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], your patient becomes immune for only 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:treat-wounds"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.ContinualRecovery.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -115,6 +698,48 @@
       "name": "Discreet Inquiry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uF0ATN2Zw1Q67ew2",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Discreet Inquiry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You are subtle in your efforts to learn the things you need to know.</p>\n<p>When @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information], you can hide the true subject of your inquiry among other topics of little interest to you without increasing the difficulty of the check or taking more time to Gather Information.</p>\n<p>Anyone trying to Gather Information to determine if someone else was asking around about the topic in question must exceed your Deception DC or the normal DC to Gather Information about your inquiries, whichever is higher, or else they don't learn of your efforts.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Deception or Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -124,6 +749,48 @@
       "name": "Distracting Performance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4UXyMtXLaOxuH6Js",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distracting Performance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your performances are especially distracting, allowing your allies to @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] away with ease. You [[/act create-a-diversion statistic=performance]], except you roll a Performance check instead of Deception, and the benefits of successful checks apply to an ally of your choice instead of you. The effects of a success last until the end of that ally's turn, and can end early based on the ally's actions. You don't need to be observing your ally or know where they are, but you need to know they're present to choose them.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -133,6 +800,59 @@
       "name": "Energy Fortification",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qaiwbAb1PaKrZ2O0",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Energy Fortification",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Access</strong> Minkai or Forest of Spirits origin</p><hr /><p>You learn Minkaian traditions about the void and know how to manipulate the five elements to fortify vitality and void energies in the body. When you @UUID[Compendium.pf2e.feats-srd.Item.Prepare Elemental Medicine], you can choose to use @Check[occultism] instead of the usual skills. If you do, the medicine also grants the recipient resistance 2 and weakness 2 based on the element you chose. A wood, earth, or water elemental medicine grants resistance to void damage and weakness to vitality damage, and a living recipient loses its immunity to vitality damage for the duration. A fire or metal elemental medicine grants resistance to vitality damage and weakness to void damage, and an undead recipient loses its immunity to void damage for the duration.</p>\n<p>If you're a master in Occultism, increase the resistance and weakness to 4. If you're legendary, instead increase them to 8.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prepare Elemental Medicine"
+              },
+              {
+                "value": "expert in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:prepare-elemental-medicine"
+              ],
+              "property": "other-tags",
+              "value": "energy-fortification"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -142,6 +862,90 @@
       "name": "Exhort the Faithful",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QvBIYW6aAqoiyim3",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exhort the Faithful",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your knowledge of the tenets of your faith gives you insight into the best ways to get others of your faith to help you or to follow your directions.</p>\n<p>When you @UUID[Compendium.pf2e.actionspf2e.Item.Request] something of or @UUID[Compendium.pf2e.actionspf2e.Item.Coerce] members of your own faith, you can attempt a Religion check instead of Diplomacy or Intimidation, and you gain a +2 circumstance bonus to the check. On a critically failed attempt to make a Request, the target's attitude toward you doesn't worsen.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Religion"
+              },
+              {
+                "value": "follower of a specific religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Exhort the Faithful (Request members of your faith)",
+              "predicate": [
+                "action:request",
+                "member-of-your-faith"
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "label": "Exhort the Faithful (Coerce members of your faith)",
+              "predicate": [
+                "action:coerce",
+                "member-of-your-faith"
+              ],
+              "selector": "intimidation",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "label": "Exhort the Faithful (Request/Coerce members of your faith)",
+              "predicate": [
+                "member-of-your-faith",
+                {
+                  "or": [
+                    "action:request",
+                    "action:coerce"
+                  ]
+                }
+              ],
+              "selector": "religion",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -151,6 +955,48 @@
       "name": "Eyes of the City",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IyJyZ1VQxS58Nk6V",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eyes of the City",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can track down targets with the help of locals. You can use Diplomacy or Society, whichever you're trained in, to @UUID[Compendium.pf2e.actionspf2e.Item.Track] creatures in settlements. You chat with locals to help follow the trail of creatures you Track. At the GM's discretion, there might not be enough people to speak with to keep following the trail.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Diplomacy or Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -160,6 +1006,48 @@
       "name": "Glad-Hand",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cc8O47KFsODReoBe",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Glad-Hand",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>First impressions are your strong suit. When you meet someone in a casual or social situation, you can immediately attempt a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on that creature rather than needing to converse for 1 minute. If you fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -169,6 +1057,62 @@
       "name": "Godless Healing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tnzZvaJ97t0N9g6y",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Godless Healing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You recover an additional 5 Hit Points from a successful attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds]{Treat your Wounds} or use @UUID[Compendium.pf2e.feats-srd.Item.Battle Medicine] on you. After you or an ally use Battle Medicine on you, you become temporarily immune to that Battle Medicine for only 1 hour, instead of 1 day.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Battle Medicine"
+              },
+              {
+                "value": "can't have a patron deity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:battle-medicine",
+                    "action:treat-wounds"
+                  ]
+                }
+              ],
+              "selector": "healing-received",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -178,6 +1122,89 @@
       "name": "Intimidating Prowess",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XFJiGllNZp8Xebda",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Intimidating Prowess",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>In situations where you can physically menace the target when you @UUID[Compendium.pf2e.actionspf2e.Item.Coerce] or @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize], you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength modifier is +5 or higher and you are a master in Intimidation, this bonus increases to +2.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Strength +3"
+              },
+              {
+                "value": "expert in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "target:physically-menaced",
+                {
+                  "or": [
+                    "action:coerce",
+                    "action:demoralize"
+                  ]
+                }
+              ],
+              "selector": "intimidation",
+              "slug": "intimidating-prowess",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "gte": [
+                    "attribute:str:mod",
+                    5
+                  ]
+                },
+                {
+                  "gte": [
+                    "skill:intimidation:rank",
+                    3
+                  ]
+                }
+              ],
+              "selector": "intimidation",
+              "slug": "intimidating-prowess",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -187,6 +1214,49 @@
       "name": "Inventor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XR95taODq1sq82Du",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inventor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You are a genius at Crafting, easily able to determine how things are made and create new inventions. You can spend downtime to invent a common formula that you don't know. This works just like the Craft activity: you spend half the Price of the formula up front, attempt a Crafting check, and on a success either finish the formula by paying the difference or work for longer to decrease the Price. The difference is that you spend the additional time in research, design, and development, rather than in creating an item. Once it's complete, you add the new formula you invented to your formula book.</p>\n<p>The GM might allow you to invent uncommon or rare formulas, typically with an increased DC. You need the Alchemical Crafting feat to invent alchemical formulas and the Magical Crafting feat to invent magical formulas.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "downtime",
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -196,6 +1266,48 @@
       "name": "Lasting Coercion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6vnbC90UQ3I57RrQ",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lasting Coercion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Coerce] someone, the maximum time they comply increases to a week, still determined by the GM. If you're legendary, the maximum increases to a month.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -205,6 +1317,48 @@
       "name": "Lead Climber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vjQ3VUpYlTAAIx3b",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lead Climber",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>When climbing, you can prepare routes for others to follow, and you can pull your allies up to avoid disaster. When your allies attempt to Climb a route you set using the Follow the Expert exploration activity, if any of them critically fail their checks to Climb, you can attempt an Athletics check against the same DC. If you succeed, your ally only fails instead of critically failing. If you also critically fail, you both experience the consequences of the critical failure.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -214,6 +1368,51 @@
       "name": "Leverage Connections",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iCv8KTZ5PcF4GqeV",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leverage Connections",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You know the right people who can get things done for you in certain circles. Once per week, when you're in an area that has an established group of influential nobles, mercantile elites, or the like (if you have Courtly Graces), or a network of unsavory characters such as a thieves' guild (if you have Streetwise), you can use Society to Request a favor or aid from those people as if they were friendly to you. Your request must make sense for the type of people you contact. For instance, a member of the royal court could secure you a proper invitation to a fancy ball, while a local burglar could point out a way to stealthily infiltrate that same party. If you critically succeed this check, your connection gives a piece of helpful advice or lets you in on a small secret, granting you or a member of your party a +2 circumstance bonus to the first skill check you attempt when acting on the favor. If you critically fail this check, you might have to perform some service for your connection to get back in their good graces, as determined by the GM.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Society"
+              },
+              {
+                "value": "Courtly Graces or Streetwise"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -223,6 +1422,48 @@
       "name": "Magical Crafting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xWY5omyIcILNR7y1",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magical Crafting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can @UUID[Compendium.pf2e.actionspf2e.Item.Craft] magic items, though some have other requirements. When you select this feat, you gain formulas for four common magic items of 2nd level or lower.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -232,6 +1473,72 @@
       "name": "Magical Shorthand",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "v7Bt6hjmzYnLFLeG",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magical Shorthand",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Learning spells comes easily to you. When you succeed at Learning a Spell, it takes 10 minutes regardless of the spell's rank. If you would succeed on the check, you critically succeed instead. If you fail, you can try again after a week or after you gain a level, whichever is first.</p>\n<p>You can use downtime to learn and inscribe new spells. This works as if you were using @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income] with the tradition's associated skill, but instead of gaining money, you choose a spell available to you to learn and gain a discount on learning it, learning it for free if your earned income equals or exceeds its cost.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Arcana, Nature, Occultism, or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:learn-a-spell"
+              ],
+              "selector": "skill-check"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalFailure",
+                "failure"
+              ],
+              "predicate": [
+                "action:learn-a-spell"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.MagicalShorthand.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -241,6 +1548,61 @@
       "name": "Mortal Healing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mEk2POFNU1Q0TQg2",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mortal Healing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You grant greater healing when the gods don't interfere. When you roll a success to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds] for a creature that hasn't regained Hit Points from divine magic in the past 24 hours, you get a critical success on your check instead and restore the corresponding amount of Hit Points.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godless Healing"
+              },
+              {
+                "value": "You follow the Laws of Mortality"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:treat-wounds"
+              ],
+              "selector": "medicine",
+              "text": "When you roll a success to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds] for a creature that hasn't regained Hit Points from divine magic in the past 24 hours, you get a critical success on your check instead and restore the corresponding amount of Hit Points.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -250,6 +1612,48 @@
       "name": "Nimble Crawl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5I97q0FfAeXcUQhs",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nimble Crawl",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can @UUID[Compendium.pf2e.actionspf2e.Item.Crawl] incredibly swiftly—up to half your Speed, rather than 5 feet. If you're a master in Acrobatics, you can Crawl at full Speed, and if you're legendary, you aren't @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] while @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -259,6 +1663,48 @@
       "name": "Pei Zing Adept",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EmIV9haKFrBRB43E",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pei Zing Adept",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>You're practiced at timing preparations to the point where you can treat multiple patients at once. During your daily preparations, you can administer up to two elemental medicines to different recipients.</p>\n<p>If you're a master in one of the prerequisite skills, you can administer to up to four recipients, and if you're legendary, you can administer to up to eight.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prepare Elemental Medicine"
+              },
+              {
+                "value": "expert in Crafting, Herbalism Lore, or Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -268,6 +1714,56 @@
       "name": "Performer's Treatment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nxq9hFyIPR2jRi6G",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Performer's Treatment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>With your experience as a performer, you can keep a set of medical tools handy at all times. You can wear a healer's toolkit as part of any costume or disguise. Creatures will generally only notice the toolkit it if they use a @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action and succeed at a @Check[perception|against:performance|traits:secret] check against your Performance DC. In addition, you can realize at the last moment when you should just be pretending to avoid doing any lasting harm.</p>\n<p>When you critically fail a Medicine check to Administer First Aid, @UUID[Compendium.pf2e.actionspf2e.Item.Treat Disease], @UUID[Compendium.pf2e.actionspf2e.Item.Treat Poison], or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], you can attempt a @Check[performance|against:perception] check against the patient's Perception DC. On a success, your critical failure at the Medicine check becomes a failure.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              },
+              {
+                "value": "expert in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -277,6 +1773,48 @@
       "name": "Powerful Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HJYQlmGTdtyGWr6a",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Powerful Leap",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can jump 5 feet up with a vertical @UUID[Compendium.pf2e.actionspf2e.Item.Leap] without making a @UUID[Compendium.pf2e.actionspf2e.Item.High Jump]. You also increase the horizontal distance when you Leap, including as part of a High Jump or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump], by 5 feet.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -286,6 +1824,48 @@
       "name": "Quick Disguise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e4KB4pSkx2lDBNw3",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Disguise",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can set up a disguise in one-tenth the usual time (generally 1 minute). If you're a master in Deception, you can create a full disguise and @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] as a 3-action activity. If you're legendary, it takes a single action.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -295,6 +1875,48 @@
       "name": "Quiet Allies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pekKtubQTkG9m1xK",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quiet Allies",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You're skilled at moving with a group. When you are @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice]{Avoiding Notice} and your allies @UUID[Compendium.pf2e.actionspf2e.Item.Follow the Expert], you and those allies can roll a single Stealth check, using the lowest modifier, instead of rolling separately. This doesn't apply for initiative rolls.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -304,6 +1926,48 @@
       "name": "Rapid Mantel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FJK7JTLSgugRIlvS",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Mantel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You easily pull yourself onto ledges. When you @UUID[Compendium.pf2e.actionspf2e.Item.Grab an Edge], you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to Grab an Edge. If you Climb or @UUID[Compendium.pf2e.actionspf2e.Item.Leap] to within 5 feet beneath the top of an edge, you can pull yourself onto the surface and stand as part of that action.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -313,6 +1977,48 @@
       "name": "Robust Recovery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3ZerjLH8ls3JT6cD",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Robust Recovery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You learned folk medicine to help recover from diseases and poison, and using it diligently has made you especially resilient. When you Treat a Disease or a Poison, or someone else uses one of these actions on you, increase the circumstance bonus granted on a success to +4, and if the result of the patient's saving throw is a success, the patient gets a critical success.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -322,6 +2028,48 @@
       "name": "Rolling Landing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bJ4tF95Byy7wCS65",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rolling Landing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You land with quick rolls that help you keep your momentum. If you fall more than 5 feet and don't take damage (usually due to treating the fall as a shorter distance), you can use your reaction to immediately enter a short roll when you land and Step. If you are an expert in Acrobatics, you can use your reaction to Step or Stride up to half your Speed. If you're a master in Acrobatics, you can use your reaction to Step or Stride up to your full Speed. If you're legendary in Acrobatics, you don't trigger reactions triggered by movement when you Stride in this way.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cat Fall"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -331,6 +2079,51 @@
       "name": "Sanctify Water",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P9dVBWB8nYZt4AFA",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sanctify Water",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You imbue water with your deity's blessing. Choose a container of water with light Bulk possessed by you or an ally within your reach. Until the end of your next turn, it becomes holy water or unholy water. You can choose holy water if your deity allows holy sanctification, unholy water if your deity allows unholy sanctification, or either if your deity allows both sanctifications. This is a temporary effect and doesn't impart monetary value or allow the water to be used for costs of rituals or the like. If you're a master in Religion, you can sanctify two containers when you take this action, and if you're legendary, you can sanctify three.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Religion"
+              },
+              {
+                "value": "must worship a deity that lists \"holy\" or \"unholy\" in their sanctification"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -340,6 +2133,48 @@
       "name": "Shadow Mark",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N7IsnLDFt73r7x56",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shadow Mark",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You have learned special tricks that help you follow individuals without them noticing you.</p>\n<p>When you attempt a Stealth check to @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] while following a specific target, the target takes a -2 circumstance penalty to their Perception DC. If you have master proficiency in Stealth, the penalty is -3 or -4 if you're legendary.</p>\n<p>If you start an encounter with the target while shadowing them, the target takes this penalty to their initiative roll and to their Perception DC to determine if they notice you, as normal for @UUID[Compendium.pf2e.actionspf2e.Item.Sneak].</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -349,6 +2184,48 @@
       "name": "Slippery Prey",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5YlHrBCZJmb6Q4Lz",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slippery Prey",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You're able to escape bonds more easily than others. When you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] using Acrobatics or Athletics, you reduce the multiple attack penalty for repeated attempts to –4 and –8 if you're trained in the skill. The penalty becomes –3 and –6 if you're a master in the appropriate skill. If you're legendary in the skill, you don't take penalties for multiple Escape attempts in the same turn. Regardless of your training, your attempts to Escape still have the attack trait and incur a multiple attack penalty with other actions.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Acrobatics or Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -358,6 +2235,49 @@
       "name": "Sow Rumor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sLEawQueTV1wGn0B",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sow Rumor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You spread rumors, which may or may not be true, about a specific subject. If the subject of your rumor is not currently the subject of any contradictory rumors, this takes as long as it would normally take you to Gather Information (typically 2 hours), at the end of which the GM rolls a secret Deception check against a DC they set to see how well you spread the rumor. If your rumor matches any current rumors about the subject, it takes less time to spread, and if you are attempting to overtake a particularly popular and contradictory rumor, it takes much longer or may be impossible. The DC similarly increases or decreases depending on how plausible your rumor is. For example, it might be harder to sow a rumor that the beloved, generous mayor is the head of a cult of murderous demon worshippers.</p><hr /><p><strong>Critical Success</strong> Your rumor spreads like wildfire. Anyone who succeeds at a check to Gather Information on the specific subject learns your rumor in preference to other rumors about the subject. Your rumor persists for 1 month. You gain a +2 circumstance bonus to Deception, Diplomacy, and Intimidation checks in an appropriate situation when you invoke your rumor.</p>\n<p><strong>Success</strong> You successfully spread the rumor. Anyone who succeeds at a check to Gather Information on the specific subject adds your rumor to the list of rumors they could learn about the subject. Your rumor persists for 1 week. You gain a +1 circumstance bonus to Deception, Diplomacy, and Intimidation checks in an appropriate situation when you invoke your rumor.</p>\n<p><strong>Failure</strong> Your rumor dies off, never becoming popular enough for other people to learn it via Gather Information.</p>\n<p><strong>Critical Failure</strong> You are unable to spread a rumor and take a –4 circumstance penalty to Deception checks to Sow Rumors about the same subject within the same region for 1 week. In addition, a rumor spreads about someone trying to spread false rumors about the subject.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "secret",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -367,6 +2287,48 @@
       "name": "Tattoo Artist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "z0HX5L7bOOrKi0dD",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tattoo Artist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can craft tattoos, including magical tattoos. When you select this feat, you gain the formulas for four common magical tattoos of 2nd level or lower.</p>\n<p>You gain a +1 circumstance bonus to Crafting checks to Craft tattoos. If you're a master in Crafting, this bonus increases to +2 and you gain the formulas for four common magical tattoos of 7th level or lower.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -376,6 +2338,59 @@
       "name": "Terrifying Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iDimfGmQHacwxeh2",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrifying Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>The spells of those you have @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] are less effective on you. If you succeed in Demoralizing a creature, for the next 24 hours you gain a +1 circumstance bonus to saving throws against that creature's spells.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "demoralized-by-you",
+                "item:type:spell"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -385,6 +2400,48 @@
       "name": "Tumbling Teamwork",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5XwTj6DBX2a2q97E",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tumbling Teamwork",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your tumbling distracts a foe enough to create an advantage for one of your allies. When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] an enemy's space, an ally who is adjacent to that enemy can Step as a reaction, but they must remain adjacent to that enemy.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -394,6 +2451,51 @@
       "name": "Underground Network",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gydOsP9VsdRw3Wg1",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Underground Network",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You're connected to groups that know what's going on in the streets, and you can get information out of them quickly. When you use Society to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] in an area where you have a network (typically a settlement where you've spent at least a week or spent a day of downtime to build a network faster), you can contact a member of these groups to get information directly from them. This usually takes about an hour, and it doesn't draw as much attention as Gathering Information in public might. The check and information gained otherwise follow the normal rules for Gather Information.</p>\n<p>In addition, if you have successfully consulted the underground network, you get a +1 circumstance bonus to the next check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] you attempt about the subject you were Gathering Information on, or a +2 circumstance bonus if you're using Underworld Lore for the check. The GM might change the Lore skill related to the network depending on your location or the specifics of the network you're tapping into.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Society"
+              },
+              {
+                "value": "Streetwise"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -403,6 +2505,69 @@
       "name": "Unmistakable Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XvX1EyxWbbBF32NV",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unmistakable Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You never get information about your areas of expertise wrong. When you Recall Knowledge using any Lore subcategory in which you're trained, if you roll a critical failure, you get a failure instead. If you're a master in a Lore subcategory, on a critical success, you gain even more information or context than usual.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:recall-knowledge"
+              ],
+              "selector": "lore-skill-check",
+              "text": "When you Recall Knowledge using any Lore subcategory in which you're trained, if you roll a critical failure, you get a failure instead. If you're a master in a Lore subcategory, on a critical success, you gain even more information or context than usual.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:recall-knowledge"
+              ],
+              "selector": "lore-skill-check",
+              "type": "skill"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -412,6 +2577,48 @@
       "name": "Unusual Treatment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rLwzwcrLh1qaN4pk",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unusual Treatment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your medical training extends to less obvious conditions. When you succeed against a DC 20 check to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], you can also reduce the value of one @UUID[Compendium.pf2e.conditionitems.Item.Clumsy], @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled], or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied] condition on the patient by 1. If you're able to treat more than one creature at once, choose only one to gain this benefit. A creature can benefit from Unusual Treatment only once per day. If the condition results from an affliction, the affliction isn't cured, though the condition is reduced as long as the affliction remains at that stage. If you are a master in Medicine, add the @UUID[Compendium.pf2e.conditionitems.Item.Drained] condition to the list of conditions you can remove if you succeed at a DC 30 check. If you are legendary in Medicine, you reduce the chosen condition by 2 instead of by 1.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -421,6 +2628,62 @@
       "name": "Vasodilation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X4T7pO25YgW5lHWJ",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vasodilation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Using the power of your own blood, you encourage increased blood flow to nourish damaged tissue or stifle the flow to clot wounds or prevent the spread of poison and disease. You no longer require a healer's toolkit to @UUID[Compendium.pf2e.actionspf2e.Item.Administer First Aid], @UUID[Compendium.pf2e.actionspf2e.Item.Treat Disease], @UUID[Compendium.pf2e.actionspf2e.Item.Treat Poison], or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], though you take @Damage[1[untyped]] damage each time you take one of these actions without the proper tools from the expenditure of your blood. You can't reduce or prevent this damage.</p>\n<p>You gain a +1 item bonus when performing these actions using your blood, which increases to +2 if you're a master in Medicine and +3 if you're legendary.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #213: Thirst for Blood"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:administer-first-aid",
+                    "action:treat-disease",
+                    "action:treat-poison",
+                    "action:treat-wounds"
+                  ]
+                }
+              ],
+              "selector": "medicine",
+              "type": "item",
+              "value": "ternary(gte(@actor.system.skills.medicine.rank,4),3,ternary(gte(@actor.system.skills.medicine.rank,3),2,1))"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -430,6 +2693,63 @@
       "name": "Ward Medic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8c61nOIr5AM3KxZi",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ward Medic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You've studied in large medical wards, treating several patients at once and tending to all their needs. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Treat Disease] or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], you can treat up to two targets. If you're a master in Medicine, you can treat up to four targets, and if you're legendary, you can treat up to eight targets.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                {
+                  "or": [
+                    "action:treat-wounds",
+                    "action:treat-disease"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.WardMedic.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -439,6 +2759,62 @@
       "name": "Wary Disarmament",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RLBYJiGMVkaGL5w9",
+        "folder": "dYkg05JEhiF1J6gL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wary Disarmament",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>If you trigger a device or set off a trap while disarming it, you gain a +2 circumstance bonus to your AC or saving throw against the device or trap. This applies only to attacks or effects triggered by your failed attempt, not to any later ones, such as additional attacks from a complex trap.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Thievery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Wary Disarmament (vs. traps)",
+              "predicate": [
+                "trap"
+              ],
+              "selector": [
+                "ac",
+                "saving-throw"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     }

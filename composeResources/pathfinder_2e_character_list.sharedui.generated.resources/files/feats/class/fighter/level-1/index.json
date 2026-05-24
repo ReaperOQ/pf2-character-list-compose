@@ -7,6 +7,63 @@
       "name": "Double Slice",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "onde0SxLoxLBTnvm",
+        "folder": "RStBridCTD0EzIJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Double Slice",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding two melee weapons, each in a different hand.</p>\n<hr />\n<p>You lash out at your foe with both weapons. Make two Strikes, one with each of your two melee weapons, each using your current multiple attack penalty. Both Strikes must have the same target. If the second Strike is made with a weapon that doesn't have the agile trait, it takes a –2 penalty.</p>\n<p>If both attacks hit, combine their damage, and then add any other applicable effects from both weapons. You add any precision damage only once, to the attack of your choice. Combine the damage from both Strikes and apply resistances and weaknesses only once. This counts as two attacks when calculating your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Fighter.DoubleSlice.SecondAttackLabel",
+              "option": "double-slice-second",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "double-slice-second",
+                {
+                  "not": "item:trait:agile"
+                }
+              ],
+              "selector": [
+                "melee-strike-attack-roll"
+              ],
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +73,44 @@
       "name": "Exacting Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8tS5NzytLmgbq5hF",
+        "folder": "RStBridCTD0EzIJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exacting Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a controlled follow-up attack, fully accounting for your momentum. Make a Strike. The Strike gains the following failure effect.</p>\n<p><strong>Failure</strong> This attack doesn't count toward your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +120,62 @@
       "name": "Point Blank Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Yl2wYv24v5kw95aS",
+        "folder": "RStBridCTD0EzIJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Point Blank Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon.</p>\n<hr />\n<p>You take aim to pick off nearby enemies quickly. When using a ranged volley weapon while you are in this stance, you don't take the penalty to your attack rolls from the volley trait. When using a ranged weapon that doesn't have the volley trait, you gain a +2 circumstance bonus to damage rolls on attacks against targets within the weapon's first range increment.</p>"
+          },
+          "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          },
+          "identified": {
+            "value": true
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Point Blank Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Point Blank Stance"
+          },
+          "start": {
+            "initiative": null,
+            "value": 103462347
+          },
+          "target": null,
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +185,43 @@
       "name": "Snagging Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mWCiu9Hl1WxajSLa",
+        "folder": "RStBridCTD0EzIJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Snagging Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have one hand free, and your target is within reach of that hand.</p>\n<hr />\n<p>You combine an attack with quick grappling moves to throw an enemy off balance as long as it stays in your reach. Make a Strike while keeping one hand free. If this Strike hits, the target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the start of your next turn or until it's no longer within the reach of your hand, whichever comes first.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +231,59 @@
       "name": "Vicious Swing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2xk4jdwcCfmasYfT",
+        "folder": "RStBridCTD0EzIJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vicious Swing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You unleash a particularly powerful attack that clobbers your foe but leaves you a bit unsteady. Make a melee Strike. This counts as two attacks when calculating your multiple attack penalty. If this Strike hits, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "diceNumber": "ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,10),2,1))",
+              "key": "DamageDice",
+              "predicate": [
+                "vicious-swing"
+              ],
+              "selector": "melee-strike-damage"
+            },
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "vicious-swing",
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

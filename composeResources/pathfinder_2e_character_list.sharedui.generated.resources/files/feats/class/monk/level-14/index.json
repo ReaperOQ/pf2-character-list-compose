@@ -7,6 +7,76 @@
       "name": "Ironblood Surge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IqDbNiwHQH1xApo9",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ironblood Surge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Ironblood Stance]</p>\n<hr />\n<p>You steel yourself, preparing to resist oncoming attacks and using your muscles to absorb the impact.</p>\n<p>You gain the benefits of your iron sweep's parry trait (a +1 circumstance bonus to AC until the start of your next turn) and your resistance from Ironblood Stance increases to your Strength modifier (if it's higher) for the same duration.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ironblood Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:ironblood-stance"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "ironblood-surge",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "ironblood-surge"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "ironblood-surge"
+              ],
+              "type": "all-damage",
+              "value": "@actor.abilities.str.mod"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +86,55 @@
       "name": "Mountain Quake",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hO4sKslTrSQMLbGx",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mountain Quake",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Mountain Stance]</p><hr /><p>You stomp, shaking the earth beneath you. Creatures on the ground within a @Template[emanation|distance:20] take damage equal to your Strength modifier (minimum 0), with a @Check[fortitude|against:class|basic] save against your class DC. On a failure, they also fall @UUID[Compendium.pf2e.conditionitems.Item.Prone]. After you use this action, you can't use it again for [[/r 1d4 #Recharge it]]{1d4 rounds}.</p><hr /><p><strong>Special</strong> If you have this feat, the Dexterity modifier cap to your AC while using Mountain Stance increases from +1 to +2.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mountain Stronghold"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "DexterityModifierCap",
+              "predicate": [
+                "self:effect:mountain-stance"
+              ],
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +144,53 @@
       "name": "Peerless Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GsXKThvUN2Mi9eNk",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Peerless Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mastery over your body is perfect enough to hold back the ravages of time. You cease aging, though you still die when your time is up. In addition, you gain a +2 status bonus to Fortitude and Will saving throws.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": [
+                "fortitude",
+                "will"
+              ],
+              "type": "status",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +200,47 @@
       "name": "Shadow's Web",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AfTMuAln2f0Pa3Lj",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shadow's Web",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can launch a wave of shadowy qi outward from your body, damaging your opponents and potentially binding them in place. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Shadow's Web] qi spell.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Clinging Shadows Initiate"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +250,47 @@
       "name": "Tangled Forest Rake",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ewbt80Yin18k6oLq",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tangled Forest Rake",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in Tangled Forest Stance.</p><hr /><p>You reposition foes with raking attacks. Make a lashing branch Strike. If you hit and deal damage, you can @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] the target up to 10 feet. You can move the target through your space during this movement.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Tangled Forest Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -52,6 +300,52 @@
       "name": "Whirling Blade Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IaiEZaA8erufMUCr",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whirling Blade Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You enter a mindful stance that creates a deep connection between you and your monk weapons, allowing you to manipulate them with your qi, even at a distance. All melee monk weapons you wield with the finesse trait gain the thrown 10 feet trait (unless they already have the thrown trait with a greater range).</p>\n<p>Once you've made a thrown Strike with such a weapon, you can use the precision of your throw to make additional strikes with it, even from a distance. Start from the space of the previous Strike's target to determine the range increment and whether the new target has cover. At the end of your turn, the thrown weapon flies directly back to you in a straight line. If a solid barrier blocks its path, it falls to the ground after hitting the barrier.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monastic Weaponry"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Whirling Blade Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Whirling Blade Stance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -61,6 +355,50 @@
       "name": "Wild Winds Gust",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wKx7BWdQu5sEjL9j",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wild Winds Gust",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.spells-srd.Item.Wild Winds Stance]</p><hr /><p>You build air pressure with repeated motions, before releasing an enormous crescent of rushing wind strikes. Make a wind crash Strike against each creature in your choice of a @Template[cone|distance:30] or a @Template[line|distance:60]. These attacks all count toward your multiple attack penalty, but the penalty doesn't increase until after you make all the attacks.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Winds Initiate"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "concentrate",
+              "manipulate",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +408,47 @@
       "name": "World-Breaking Footfall",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9oQRX6ss2pSqMZBr",
+        "folder": "vdIaK49PDrK8a8Lz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "World-Breaking Footfall",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Kaiju Stance] and are touching the ground.</p><hr /><p>You slam the ground and unleash a fearsome roar, sending broken shards of earth flying in all directions. The ground in a @Template[type:emanation|distance:20] around you becomes difficult terrain, or greater difficult terrain if it was already difficult terrain. All other creatures within the emanation take @Damage[7d6[bludgeoning]|options:area-damage] damage with a @Check[reflex|against:monk|basic|options:area-effect] save against your class DC. You then can't use World-breaking Footfall for [[/r 1d4 #Recharge World-Breaking Footfall]].</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kaiju Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

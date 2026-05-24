@@ -7,6 +7,43 @@
       "name": "Improbable Elixirs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nnsoFOtuHnpz2QHc",
+        "folder": "yiKneJqLnfBvFb0n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improbable Elixirs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mastery of alchemical secrets enables you to replicate effects most believe can be achieved only via magic. Select a number of potions equal to your Intelligence modifier (minimum 1); these potions must be of 9th level or lower. You gain formulas to create these potions as alchemical consumables with the elixir trait. When making these alchemical elixirs, you can substitute alchemical reagents for an equal value of magical components, and you can use an alchemist's toolkit (for @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy]) or an alchemist's lab (for the Craft activity) instead of any other required toolkits. Other than that, the formula doesn't change. Once you've chosen the potion formulas, they can't be changed.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +53,48 @@
       "name": "Miracle Worker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "m2pHkmyGvkwqfSSN",
+        "folder": "yiKneJqLnfBvFb0n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Miracle Worker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once every 10 minutes</p><hr /><p>Your alchemical mastery can resuscitate the recently slain. You can administer a major or true elixir of life to a creature who has been dead for no more than 2 rounds. When you do, that creature is immediately returned to life with 1 Hit Point and becomes @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 1}.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M",
+            "value": 1
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +104,55 @@
       "name": "Perfect Debilitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HBhLR980Q0cb2rxp",
+        "folder": "yiKneJqLnfBvFb0n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Perfect Debilitation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have perfected the formulas for bombs that impede your enemies. When you use @UUID[Compendium.pf2e.feats-srd.Item.Debilitating Bomb], your target avoids the condition the bomb imposes only if it critically succeeds at its saving throw.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "alchemical",
+                "bomb",
+                "debilitating-bomb"
+              ],
+              "selector": "attack-roll",
+              "text": "If your bomb hits, the target must critically succed at its Fortitude save to avoid the condition the bomb imposes.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

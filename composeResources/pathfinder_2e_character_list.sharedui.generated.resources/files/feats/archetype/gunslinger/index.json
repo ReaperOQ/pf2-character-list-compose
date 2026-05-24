@@ -7,6 +7,61 @@
       "name": "Advanced Firearm Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UotFrqA7zAxtpJdE",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Firearm Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have familiarity with advanced firearms, treating them as martial weapons for the purposes of proficiency. You gain access to all uncommon firearms.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gunslinger Dedication"
+              },
+              {
+                "value": "expert in any kind of weapon or unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:category:advanced",
+                "item:group:firearm"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedGroup.firearm",
+              "sameAs": "martial",
+              "slug": "advanced-firearms"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +71,48 @@
       "name": "Advanced Shooting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XkemuXgSQtxFAhZ8",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Shooting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one gunslinger feat. For the purpose of meeting its prerequisites, your gunslinger level is equal to half your level.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another gunslinger feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Shooting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +122,71 @@
       "name": "Basic Shooting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1VrV24hhPSEvuKgT",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Shooting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level gunslinger feat of your choice.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gunslinger Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:gunslinger",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicShooting",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicShooting}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +196,57 @@
       "name": "Eagle Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W7Rkw1L5QxHvgeUW",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eagle Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your practice with crossbows and firearms has sharpened your attention to detail. You become a master in Perception.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gunslinger Dedication"
+              },
+              {
+                "value": "expert in Perception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "perception": {
+                "rank": 3
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +256,91 @@
       "name": "Gunslinger Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "USt0jwK8XI5loG4E",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gunslinger Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You excel in using specific types of ranged weapons. You have familiarity with martial crossbows and firearms, treating them as simple weapons for the purposes of proficiency.</p>\n<p>You gain access to uncommon martial and simple crossbows and firearms that do not have an ancestry trait. You become trained in gunslinger class DC.</p>\n<p>Choose a gunslinger way. You become trained in your way's associated skill; if you were already trained in this skill, you become trained in a skill of your choice. You don't gain any other abilities from your choice of way.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.CSVoyUvynmM5LzPW]{Gunslinger}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dexterity +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:gunslinger-way",
+                  {
+                    "not": "item:tag:class-archetype"
+                  }
+                ]
+              },
+              "flag": "way",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Gunslinger.Way.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.way}"
+            },
+            {
+              "definition": [
+                "item:category:martial",
+                {
+                  "or": [
+                    "item:group:firearm",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialFirearmsCrossbows",
+              "sameAs": "simple",
+              "slug": "martial-firearms-crossbows"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "gunslinger": {
+                "attribute": "dex",
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +350,52 @@
       "name": "Practiced Reloads",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6dJokwhIMvjAHL52",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Practiced Reloads",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've mastered the reloading techniques and methods usually practiced by only the most dedicated firearm professionals. You gain the slinger's reload for the way you selected with @UUID[Compendium.pf2e.feats-srd.Item.Gunslinger Dedication].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gunslinger Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "{actor|flags.system.gunslinger.slingersReload}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -61,6 +405,52 @@
       "name": "Slinger's Readiness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JxSxCTJOOayIdO4B",
+        "folder": "cbsBMDCgI7cZ31xm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slinger's Readiness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned a gunslinger's tricks for staking out your territory in a fight. You gain the initial deed for the way you selected with @UUID[Compendium.pf2e.feats-srd.Item.Gunslinger Dedication].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gunslinger Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "{actor|flags.system.gunslinger.initialDeed}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

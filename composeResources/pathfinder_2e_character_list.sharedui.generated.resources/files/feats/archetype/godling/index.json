@@ -7,6 +7,49 @@
       "name": "Absolve Sins",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sUMrRRFsHiJf4VXP",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Absolve Sins",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your forgiveness is without limit, though the path to penitence can be painful, especially against those who have trespassed against your current mortal form. Spend a Mythic Point; each enemy within a @Template[type:emanation|distance:30] takes @Damage[14d6[mental]|options:area-damage] damage (@Check[will|against:class-spell|basic|options:area-effect] save against your class DC or spell DC, whichever is higher) as you force them to reflect upon their sins and misdeeds.</p>\n<p>Any creature who dealt damage to you or your hierophant since the end of your previous turn uses the outcome one degree of success worse than the result of their saving throw.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Absolve Sins]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "concentrate",
+              "mental",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +59,52 @@
       "name": "Assume Godhood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MfolzkTNi6V4XQ7J",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Assume Godhood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You complete your apotheosis into living godhood, allowing you to empower more followers. You can serve as the deity for classes with a deity feature, such as clerics, empowering them to cast divine spells with their class features. When you serve as the deity in this way, you can provide any aspect of a deity stat block (such as domains or a favored weapon) that you yourself have acquired from a godling feat. In addition, you can choose one skill you are legendary in to act as your divine skill, and your divine attributes include your key attribute and one other attribute of your choosing.</p>\n<p>When you Assume Godhood, choose three spells from any list other than the divine list; one must be 1st rank, one must be 2nd or 3rd rank, and one can be of any rank. These spells become additional cleric spells you can grant to your followers. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Intercession Spell] ability, allowing you to directly provide the magic that your hierophant uses to enact your miracles.</p>\n<p>If you die after Assuming Godhood, only your mortal body perishes, and you continue your existence as a deity, watching over the Universe from afar. In this deific form, you cannot move, act, or speak normally, though you still grant spells to your followers and can perceive and affect them using your godling abilities like @UUID[Compendium.pf2e.feats-srd.Item.Receive Prayers] or Intercession Spell, regardless of range. If you need to take more direct action in creation, you can descend to the Universe and incarnate yourself into a mortal body of your choosing within 1 mile of one of your followers or a holy site relevant to your faith, which has the same statistics and abilities that you had before you died. This new body can have any appearance you wish, but typically retains at least one feature important to your divine iconography, such as eye color, a scar, or a unique birthmark. You can incarnate yourself as often as you like, but repeated direct intercessions in the affairs of mortals typically attract the attention and sanction of older and more established deities.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Intercession Spell"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +114,47 @@
       "name": "Claim Cardinal Domains",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6rGdm00nWbS267LF",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Claim Cardinal Domains",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your dominion over the divine truths of the world increases. You can lay claim to up to three additional domains, to a total maximum of four. Your mortal form cannot easily contain such power, however—each day during your daily preparations, decide which of your domains you are currently drawing power from; you gain access to this domain for the day and can cast its domain spells as normal, while your ability to access the power of your other domains lies dormant. You learn the advanced domain spell for any domain that you have claimed with your godling abilities.</p>\n<p>When you gain this feat, you can choose not to lay claim to one or more domains immediately, instead leaving the space open until later in your story. As long as you have one or more domains unclaimed, you can spend a Mythic Point as a single action to claim a domain, even in the heat of battle, immediately making this your active domain. This domain remains a part of your portfolio forever and cannot be changed after this point.</p>\n<p>You can also spend a Mythic Point to overcharge your divine power, gaining access to all the domains you have claimed for the next minute and passing this access on to your hierophant as normal. After the minute ends, you can choose which of the four domains you retain access to until your next daily preparations.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +164,55 @@
       "name": "Divine Invulnerability",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "frPdltbxoYtAHpPX",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Invulnerability",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Though you are not yet a god, you can invoke a measure of omnipotence that makes you high invulnerable. Spend a Mythic Point. You gain resistance to all damage equal to half your level for 1 minute as your aura smolders with power.</p>\n<p>During this time, if you cast a domain spell you received from this destiny, this resistance increases to equal your level until the beginning of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Divine Invulnerability (Domain Spell)]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Divine Invulnerability",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Divine Invulnerability"
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +222,47 @@
       "name": "Font of Life or Death",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KVF2c1ixGkbG6Idi",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Font of Life or Death",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you reach ever higher in your quest to achieve true divinity, the powers of life and death flow evermore easily from you. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Heal] or @UUID[Compendium.pf2e.spells-srd.Item.Harm]; you gain the chosen spell as an 8th rank innate spell you can cast three times per day. Your hierophant can cast these innate spells as well by expending one of your daily uses.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -52,6 +272,79 @@
       "name": "Gird Champion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pGIJ6iXyg2CRzQxb",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gird Champion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your will manifests into divine weapons to protect and arm your followers. When you gain this feat, choose one type of weapon with special significance to you, such as a longsword or a sickle. This becomes your favored weapon. You and your hierophant both treat this weapon as a simple weapon for the purposes of proficiency. You and your hierophant gain the critical specialization effect of your favored weapon and deal an additional 1d6 spirit damage with Strikes made with your favored weapon. If one of your current domain spells can deal a type of damage other than spirit, you can choose to match this damage type (for instance, wreathing your weapon in sacred ashes that deal fire damage if you have the fire domain).</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Gird Champion (Hierophant)]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "actorFlag": true,
+              "adjustName": false,
+              "choices": {
+                "config": "baseWeaponTypes"
+              },
+              "flag": "godlingWeapon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+            },
+            {
+              "definition": [
+                "item:base:{actor|flags.system.godlingWeapon}"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.Weapon.Base.{actor|flags.system.godlingWeapon}",
+              "sameAs": "simple"
+            },
+            {
+              "damageType": "{actor|flags.system.godlingDomainDamage}",
+              "diceNumber": 1,
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "selector": "{actor|flags.system.godlingWeapon}-damage"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                "item:base:{actor|flags.system.godlingWeapon}"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -61,6 +354,135 @@
       "name": "Godling Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "102gdaYHnMFoDRL1",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Godling Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your Calling allows you to begin walking the path to true deific ascension, inspiring followers as your divine seed grows. Your first follower is your hierophant—the high priest of your new faith—whom you rely on to spread your word and provide an anchoring mortal presence as your perspectives are increasingly pulled toward the cosmic. When you gain this feat, choose one willing ally to be your hierophant. If your hierophant is not trained in spell attack modifier and spell DC, they become trained for as long as they are your designated hierophant. If your hierophant dies or chooses to part ways with you, you can designate a new hierophant by communing with the chosen ally for a period of 24 hours.</p>\n<p>Your Calling allows you to seize the divine magic typically restricted to deities. Choose one domain to claim from the list on Player Core, or from other domains you have access to. You learn the initial domain spell for this domain. You gain a pool of Focus Points with 1 Focus Point and you can Refocus by taking 10 minutes to replenish your divine energy from the planes beyond. You gain expert proficiency in spell modifier and spell DC, and your spellcasting ability for these spells is your choice of Wisdom or Charisma, decided when you gain this feat.</p>\n<p>Your hierophant also gains the Cast a Spell activity and can cast the domain spell you learned with Godling Dedication. When they Cast the Spell in this way, your Focus Point is expended as the cost of the spell. Your hierophant uses their own spellcasting proficiency in spell modifier and spell DC when casting a spell in this way, and they use their own Wisdom or Charisma modifier (matching your choice). If your hierophant has mythic power, they can spend a Mythic Point to cast any divine spell they gain by being your hierophant at mythic proficiency.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.AJQCccOtbPq1dIWY]{Godling}</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Godling.DomainDamageDropdown",
+              "option": "godling-domain-damage",
+              "predicate": [
+                {
+                  "or": [
+                    "feat:gird-champion",
+                    "feat:pass-vengeful-judgment"
+                  ]
+                }
+              ],
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitSpirit",
+                  "value": "spirit"
+                },
+                {
+                  "label": "PF2E.TraitAcid",
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitBludgeoning",
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitForce",
+                  "value": "force"
+                },
+                {
+                  "label": "PF2E.TraitMental",
+                  "value": "mental"
+                },
+                {
+                  "label": "PF2E.TraitPiercing",
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.TraitPoison",
+                  "value": "poison"
+                },
+                {
+                  "label": "PF2E.TraitSlashing",
+                  "value": "slashing"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "value": "sonic"
+                },
+                {
+                  "label": "PF2E.TraitVitality",
+                  "value": "vitality"
+                },
+                {
+                  "label": "PF2E.TraitVoid",
+                  "value": "void"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.godlingDomainDamage",
+              "predicate": [
+                "godling-domain-damage"
+              ],
+              "priority": 51,
+              "value": "{item|flags.system.rulesSelections.godlingDomainDamage}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "destiny",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -70,6 +492,60 @@
       "name": "Heroic Weakness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4iEQ5zQSTRls3Kln",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Heroic Weakness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As word of your faith spreads, so too does word of your foibles and weaknesses. Where originally these disadvantages may have been myths themselves, or simply manifestations of ill fortune or chance, when you take this feat, one of those weaknesses becomes real.</p>\n<p>Work with your GM to choose your heroic weakness—it must be to a specific damage type and must be associated with a specific condition, both of which must be elements that are going to be significant parts of your story's future. For example, you could choose for a weakness to be spirit damage caused to you by a follower of a rival god, physical damage from a specific category of weapon, void damage caused by a specific kind of undead, or fire damage taken in a certain part of the world or from creatures from that part of the world. The amount of weakness you gain to this damage is equal to twice your level.</p>\n<p>But with this new weakness comes a new source of power, for when your foes would take advantage of your weakness, you can use the pain and humiliation to bolster your own resolve. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Makes Me Stronger] reaction.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              },
+              {
+                "value": "hero-god accomplishment"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Makes Me Stronger"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -79,6 +555,55 @@
       "name": "Myth of Quick-Thinking",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "53sHAxpDg9KrkcGk",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Myth of Quick-Thinking",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your myth includes amusing parables of clever plans and sly maneuvers, often applied to small things in life such as disguising yourself as a sheep to ambush a wolf or tricking a snake into shedding its skin. You can Lie as a two-action activity, regardless of how elaborate your tale. When you attempt a Deception check, you can spend a Mythic Point to do so at mythic proficiency. If you succeed at a Deception check while in the presence of your hierophant, any of your worshippers that you can see automatically succeed at an attempt to Impersonate or Lie in such a way that supports your story (for example, the target of your Lie claiming you are a teacher sees all of your worshippers as students).</p>\n<p>You also lay claim to one of the following domains of your choice: confidence, secrecy, or trickery.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              },
+              {
+                "value": "hero-god accomplishment"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -88,6 +613,71 @@
       "name": "Myth of Realm-Walking",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n7GdtqrIaQPGaptn",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Myth of Realm-Walking",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your myth speaks of distant travel to countless countries, planes, or dimensions. When any effect attempts to anchor you to a plane (such as @UUID[Compendium.pf2e.spells-srd.Item.Planar Tether]) or to banish you from the current plane (such as @UUID[Compendium.pf2e.spells-srd.Item.Banishment]), that effect gains the incapacitation trait. If it already has the incapacitation trait, you gain a +4 status bonus to your save against the effect. If you successfully save against such an effect, the creature that attempted to use this effect on you must succeed at a @Check[will|against:class-spell] save against your class or spell DC (whichever is higher) to avoid becoming @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for 1 minute (@UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} on a critical failure).</p>\n<p>You also lay claim to one of the following domains of your choice: dreams, fate, or travel.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              },
+              {
+                "value": "hero-god accomplishment"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:incapacitation",
+                {
+                  "or": [
+                    "item:slug:planar-tether",
+                    "item:slug:banishment"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 4
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -97,6 +687,62 @@
       "name": "Pass Vengeful Judgment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lL5MxRUFqbzS6jDm",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pass Vengeful Judgment",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Your hierophant invoked your judgment on their previous turn</p><hr /><p>To prevent yourself from frivolously calling down the terrible power of divine wrath, you have vowed to do so only with the assent of your mortal hierophant. If your hierophant successfully Strikes a target, they can spend a single action to invoke your wrath. On your turn, you can then Pass Vengeful Judgment on the target, calling down a scouring pillar of divine energy that deals @Damage[20d10[spirit]] damage with a @Check[fortitude|basic|against:class-spell] save. You do not need to have line of effect to the target and it functions at any range. If one of your current domain spells can deal a type of damage other than spirit, you can choose to match this damage type (for instance, calling down a flaming pillar that deals fire damage if you have the fire domain).</p>\n<p>If you spend a Mythic Point as part of Passing your Vengeful Judgment, the blast extends into the heavens, scattering the clouds in a detonation visible to all creatures within a 10-mile radius as a show of wrath and a warning to those who would dare harm your followers or question your commandments. For the next month, you and your hierophant gain a +2 status bonus to Intimidation checks against creatures in the area.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pass Vengeful Judgment]</p><hr /><p><strong>Special</strong> If you have Font of Life or Death, you can choose for the damage type to be vitality (if you chose heal) or void (if you chose harm) when you use this ability.</p><hr /><p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "property": "damage-type",
+              "selectors": [
+                "pass-vengeful-judgment-inline-damage"
+              ],
+              "value": "{actor|flags.system.godlingDomainDamage}"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic",
+              "sanctified"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -106,6 +752,66 @@
       "name": "Receive Prayers",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ttWl0hOh9cdk7Zko",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Receive Prayers",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You open your senses so the prayers of mortals can better reach your ears. You gain a +1 status bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive], but only when attempting to ascertain hopes, prayers, wishes, and other strongly held desires of the target. You gain an even greater sense of your hierophant's prayers, which grants you a constant status as a constant divine spell targeting your hierophant. The spell has unlimited duration and functions at any range, included across planar boundaries, and counteracting the spell merely suppresses it until your next daily preparations, though it automatically ends if the creature stops being your hierophant.</p>\n<p>You gain the ability to cast @UUID[Compendium.pf2e.spells-srd.Item.Breath of Life] once per day as a 5th-rank divine innate spell. You can cast this spell only on your hierophant, and the spell has unlimited range (your status spell typically alerting to you to when your hierophant would die).</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "domain": "perception",
+              "key": "RollOption",
+              "option": "receive-prayers",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive",
+                "receive-prayers"
+              ],
+              "selector": "perception",
+              "type": "status",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "concentrate",
+              "mental",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -115,6 +821,47 @@
       "name": "Sanctified Relic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZTI12qEjht0pQuaB",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sanctified Relic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You fill an item with your divine power, granting the wearer your blessings. When you take this feat, choose two attributes (one of which must be your key attribute) as your divine attributes and either holy or unholy sanctification; if you have the holy or unholy trait through a class feature or other ability, you must choose that same trait. As part of your daily preparations, you can touch one worn magical item that doesn't have the apex trait. It gains the apex trait until your next daily preparations, and increases the modifier of one of your divine attributes (chosen during your preparations) by 1 or to a total of +4, whichever is higher. In addition, the item grants the wearer the holy or unholy trait as chosen by you. A character can benefit from only one apex item at a time, as normal. You can't wear this apex item, but your hierophant can.</p>\n<p>If you spend 1 Mythic Point when you create this apex item, it increases the wearer's modifiers of both of your divine attributes by 1 or to a total of +4, whichever is higher. This is an exception to the usual limit for apex items.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -124,6 +871,51 @@
       "name": "Stymie the Gods",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S2YTLXTvqaXhThG6",
+        "folder": "O7SJLJtCStA1pAHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stymie the Gods",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>By exerting your will as a nascent god present in the mortal realms, you can hold off the influences of most distant entities, even ones much older and more powerful than yourself. Either you or your hierophant are able to use this action. When either of you do, you both gain a +2 status bonus to Armor Class and saving throws against divine spells, as well as the spells, Strikes, and abilities of extraplanar creatures, for 3 rounds. This benefit affects both you and your hierophant even if you are on separate planes of existence when this ability is used.</p>\n<p>If a Mythic Point is spent by the individual using Stymie the Gods, the bonus increases to +4 and the effects last for 10 minutes</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Stymie the Gods]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Godling Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

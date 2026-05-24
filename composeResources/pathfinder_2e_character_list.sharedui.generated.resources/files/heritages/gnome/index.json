@@ -1,0 +1,337 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "chameleon-gnome.json",
+      "id": "XeXWsvcWU3Zaj5WC",
+      "name": "Chameleon Gnome",
+      "img": "systems/pf2e/icons/features/ancestry/chameleon-gnome.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "XeXWsvcWU3Zaj5WC",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "systems/pf2e/icons/features/ancestry/chameleon-gnome.webp",
+        "name": "Chameleon Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>The color of your hair and skin is mutable, possibly due to latent magic from First World influences or lingering illusion effects. You can slowly change the vibrancy and the exact color, and the coloration can be different across your body, allowing you to create patterns or other colorful designs. It takes a single action for minor localized shifts and up to an hour for dramatic shifts throughout your body. While you're asleep, the colors shift on their own in tune with your dreams, giving you an unusual coloration each morning. When you're in an area where your coloration is roughly similar to the environment (for instance, forest green in a forest), you can use the single action to make minor localized shifts designed to help you blend into your surroundings. This grants you a +2 circumstance bonus to Stealth checks until your surroundings shift in coloration or pattern.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "coloration-matches"
+              ],
+              "selector": "stealth",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "fey-touched-gnome.json",
+      "id": "D3hTAqgwSank8OyO",
+      "name": "Fey-Touched Gnome",
+      "img": "systems/pf2e/icons/features/ancestry/fey-touched-gnome.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "D3hTAqgwSank8OyO",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "systems/pf2e/icons/features/ancestry/fey-touched-gnome.webp",
+        "name": "Fey-Touched Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>The blood of the fey flows through your veins, saturating you with their magic and making you truly one of them. You gain the fey trait, in addition to the gnome and humanoid traits. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. You can change this cantrip to a different one from the same list once per day by meditating to realign yourself with the First World; this is a 10-minute activity that has the concentrate trait.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "add": [
+                "fey"
+              ],
+              "key": "ActorTraits"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "kijimuna-gnome.json",
+      "id": "8Uw1E3L2Mgo6PxwB",
+      "name": "Kijimuna Gnome",
+      "img": "icons/environment/wilderness/island.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "8Uw1E3L2Mgo6PxwB",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "icons/environment/wilderness/island.webp",
+        "name": "Kijimuna Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>Your ancestors lived in the trees and fished in all the waters of Tian Xia. You gain your choice of the following benefits. Once made, this choice can't be changed.</p><ul><li>You can climb any banyan. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] feat, and if you roll a success on the Athletics check to Climb, you get a critical success instead.</li><li>You can catch any fish. You gain a swim Speed of 15 feet.</li></ul>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Speed.Type.Climb",
+                  "value": "climb"
+                },
+                {
+                  "label": "PF2E.Actor.Speed.Type.Swim",
+                  "value": "swim"
+                }
+              ],
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.MovementType",
+              "rollOption": "kijimuna-gnome"
+            },
+            {
+              "key": "GrantItem",
+              "predicate": [
+                "kijimuna-gnome:climb"
+              ],
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb",
+                "kijimuna-gnome:climb"
+              ],
+              "selector": "athletics"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kijimuna-gnome:swim"
+              ],
+              "selector": "swim",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "gnome"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sensate-gnome.json",
+      "id": "tXC5Gwn9D5x0ouJh",
+      "name": "Sensate Gnome",
+      "img": "systems/pf2e/icons/features/ancestry/sensate-gnome.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "tXC5Gwn9D5x0ouJh",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "systems/pf2e/icons/features/ancestry/sensate-gnome.webp",
+        "name": "Sensate Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>You see all colors as brighter, hear all sounds as richer, and especially smell all scents with incredible detail. You gain a special sense: imprecise scent with a range of 30 feet. This means you can use your sense of smell to determine the exact location of a creature. The GM will usually double the range if you're downwind from the creature or halve the range if you're upwind.</p>\n<p>In addition, you gain a +2 circumstance bonus to Perception checks whenever you're trying to locate an undetected creature that is within the range of your scent.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:seek",
+                {
+                  "lte": [
+                    "target:distance",
+                    30
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "umbral-gnome.json",
+      "id": "d0bNxgGqvaCkFlhN",
+      "name": "Umbral Gnome",
+      "img": "systems/pf2e/icons/features/ancestry/umbral-gnome.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "d0bNxgGqvaCkFlhN",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "systems/pf2e/icons/features/ancestry/umbral-gnome.webp",
+        "name": "Umbral Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>Whether from a connection to dark or shadowy fey, from the underground gnomes known as drathnelar, or from another source, you can see in complete darkness. You gain darkvision.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "selector": "darkvision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "vivacious-gnome.json",
+      "id": "ViKRoVgog172r163",
+      "name": "Vivacious Gnome",
+      "img": "systems/pf2e/icons/features/ancestry/vivacious-gnome.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ViKRoVgog172r163",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "systems/pf2e/icons/features/ancestry/vivacious-gnome.webp",
+        "name": "Vivacious Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>You have an incredibly strong connection to the vitality energy that flows through the First World, making it harder to attack your life force with void energy. You gain void resistance equal to half your level (minimum 1). When you have the @UUID[Compendium.pf2e.conditionitems.Item.Doomed] condition, the condition affects you as if its value was 1 lower than it actually is (doomed 1 has no effect, doomed 2 causes you to die at @UUID[Compendium.pf2e.conditionitems.Item.Dying]{Dying 3}, and so on).</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "void",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "wellspring-gnome.json",
+      "id": "etkuQkjkNLPLnjkA",
+      "name": "Wellspring Gnome",
+      "img": "systems/pf2e/icons/features/ancestry/wellspring-gnome.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "etkuQkjkNLPLnjkA",
+        "folder": "m0AVBp1MMQgNQRhn",
+        "img": "systems/pf2e/icons/features/ancestry/wellspring-gnome.webp",
+        "name": "Wellspring Gnome",
+        "system": {
+          "ancestry": {
+            "name": "Gnome",
+            "slug": "gnome",
+            "uuid": "Compendium.pf2e.ancestries.Item.CYlfsYLJcBOgqKtD"
+          },
+          "description": {
+            "value": "<p>Some other source of magic has a greater hold on you than the primal magic of your fey lineage does. This connection might come from an occult plane or an ancient occult song; a deity, celestial, or fiend; magical effluent left behind by a mage war; or ancient rune magic.</p>\n<p>Choose arcane, divine, or occult. You gain one cantrip from that magical tradition's spell list. You can cast this spell as an innate spell at will, as a spell of your chosen tradition. A cantrip is heightened to a spell rank equal to half your level rounded up. Whenever you gain a primal innate spell from a gnome ancestry feat, change its tradition from primal to your chosen tradition.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,48 @@
       "name": "Doctor's Visitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1fBHZpM3Z3MQtzvi",
+        "folder": "6T2hGP8R4T6Vl08J",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Doctor's Visitation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You move to provide immediate care to those who need it. You @UUID[Compendium.pf2e.actionspf2e.Item.Stride], then use @UUID[Compendium.pf2e.feats-srd.Item.Battle Medicine] or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Poison]. You can spend 2 actions for Doctor's Visitation to instead Stride and then use either @UUID[Compendium.pf2e.actionspf2e.Item.Administer First Aid] or @UUID[Compendium.pf2e.feats-srd.Item.Treat Condition] (if you have that feat).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Medic Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +58,51 @@
       "name": "Holistic Care",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1WfvvjjObPKeZyid",
+        "folder": "6T2hGP8R4T6Vl08J",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Holistic Care",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You provide emotional and spiritual care. Add @UUID[Compendium.pf2e.conditionitems.Item.Frightened], @UUID[Compendium.pf2e.conditionitems.Item.Stupefied], and @UUID[Compendium.pf2e.conditionitems.Item.Stunned] to the list of conditions you can reduce with @UUID[Compendium.pf2e.feats-srd.Item.Treat Condition]. If the stunned condition has a duration instead of a value, you can't use Treat Condition to reduce it.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Diplomacy"
+              },
+              {
+                "value": "Treat Condition"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "skill"
     },
@@ -25,6 +112,58 @@
       "name": "Medic Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MJg24e9fJd7OASvF",
+        "folder": "6T2hGP8R4T6Vl08J",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Medic Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become an expert in Medicine. When you succeed with @UUID[Compendium.pf2e.feats-srd.Item.Battle Medicine] or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], the target gains a circumstance bonus to the number of Hit Points they regain equal to 5 HP at DC 20, 10 HP at DC 30, or 15 HP at DC 40.</p>\n<p>Once per day, you can use Battle Medicine on a creature that's temporarily immune due to having already been treated with Battle Medicine. If you're a master in Medicine, you can do so once per hour.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.XWkyCVISmVtJ0ZY3]{Medic}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Medicine"
+              },
+              {
+                "value": "Battle Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.medicine.rank",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +173,52 @@
       "name": "Resuscitate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lleedxE6fTDSK6og",
+        "folder": "6T2hGP8R4T6Vl08J",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resuscitate",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding healer's tools or are wearing them and have a hand free.</p><hr /><p>You resuscitate the dead. Attempt a @Check[medicine|dc:40|showDC:all] check to revive a dead creature who has been dead for no more than 3 rounds and whose body is mostly intact. If you succeed, the target returns to life with the effects of @UUID[Compendium.pf2e.spells-srd.Item.Raise Dead], except it still has the wounded condition it had before dying, increased by 1 (or @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 1} if it wasn't wounded before dying). Whether you succeed or fail, the target is temporarily immune to Resuscitate for 1 day.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Medic Dedication"
+              },
+              {
+                "value": "legendary in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +228,50 @@
       "name": "Treat Condition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rfnEcjxIFqwlJwJT",
+        "folder": "6T2hGP8R4T6Vl08J",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Treat Condition",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding healer's tools, or you are wearing them and have a hand free.</p><hr /><p>You treat an adjacent creature in an attempt to reduce the clumsy, enfeebled, or sickened condition. If a creature has multiple conditions from this list, choose one. Attempt a counteract check against the condition using your Medicine modifier as your counteract modifier and the condition's source to determine the DC. You can't treat a condition that came from an artifact or effect above 20th level unless you have Legendary Medic; even if you do, the counteract DC increases by 10. Treating a Condition that is continually applied under certain circumstances (for instance, the enfeebled condition a holy character gains from carrying a weapon with the unholy rune) has no effect as long as the circumstances continue.</p>\n<p><strong>Critical Success</strong> Reduce the condition value by 2.</p>\n<p><strong>Success</strong> Reduce the condition value by 1.</p>\n<p><strong>Critical Failure</strong> Increase the condition value by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Medic Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "manipulate",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     }

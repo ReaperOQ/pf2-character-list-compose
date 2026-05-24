@@ -7,6 +7,63 @@
       "name": "Assisting Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UiQbjeqBUFjUtgUR",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Assisting Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon.</p><hr /><p>Using your last shot to gauge your accuracy, you can fire off a quick shot to interfere with a foe in combat. Make a Strike with a ranged weapon. If the Strike hits, the next creature other than you to attack the same target before the start of your next turn gains a +1 circumstance bonus to their roll, or a +2 circumstance bonus if your Strike was a critical hit.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Assisting Shot]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "assisting-shot",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "assisting-shot"
+              ],
+              "selector": "ranged-attack-roll",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +73,44 @@
       "name": "Blade Brake",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7BuL6JqHAqRQ0dQJ",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blade Brake",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would be moved by a forced movement effect.</p>\n<p><strong>Requirements</strong> You are wielding a melee weapon and are within reach of a hard surface.</p>\n<hr />\n<p>You plow your weapon into a floor, wall, or another sturdy surface, anchoring yourself in place. If you would be moved 20 feet or more, you are moved only 5 feet. Otherwise, you don't move at all.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +120,44 @@
       "name": "Brutish Shove",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gt9pvIicabSOe6pB",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brutish Shove",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a two-handed melee weapon.</p>\n<hr />\n<p>Using the momentum of your last attack to throw your weight into another, you make your opponent stumble back. Make a Strike with a two-handed melee weapon. If you hit a target that is your size or smaller, that creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your current turn, and you can automatically @UUID[Compendium.pf2e.actionspf2e.Item.Shove] it, with the same benefits as the Shove action (including the critical success effect, if your Strike was a critical hit). If you move to follow the target, your movement doesn't trigger reactions.</p>\n<p>This Strike has the following failure effect.</p>\n<p><strong>Failure</strong> The target becomes @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your current turn.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +167,44 @@
       "name": "Combat Grab",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dF1HR6TqyMz03o6F",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Combat Grab",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have one hand free, and your target is within reach of that hand.</p>\n<hr />\n<p>Using your prior attack to shift your opponent's guard, you take another swing and grab them. Make a melee Strike while keeping one hand free. If the Strike hits, you grab the target using your free hand. The creature remains @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] until the end of your next turn or until it @UUID[Compendium.pf2e.actionspf2e.Item.Escape]{Escapes}, whichever comes first.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +214,73 @@
       "name": "Dueling Parry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n7nQQR940OvFbw7T",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dueling Parry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a single one-handed melee weapon and hold nothing else in your hands.</p><hr /><p>You can parry attacks against you with your one-handed weapon. You gain a +2 circumstance bonus to AC until the start of your next turn as long as you continue to meet the requirements.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "gte": [
+                    "hands-free",
+                    1
+                  ]
+                }
+              ],
+              "selector": "ac",
+              "slug": "parry-bonus",
+              "value": 2
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "override",
+              "predicate": [
+                "hands-free:0"
+              ],
+              "selector": "ac",
+              "slug": "parry-bonus",
+              "value": 0
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Parry",
+            "uuid": "Compendium.pf2e.equipment-effects.Item.Effect: Parry"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +290,59 @@
       "name": "Lunge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rTkr1EqpAN6YtnAh",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lunge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a melee weapon.</p>\n<hr />\n<p>You attack an enemy at the edge of your reach. Make a Strike with a melee weapon, increasing your reach by 5 feet for that Strike. If the weapon has the disarm, shove, or trip trait, you can use the corresponding action instead of a Strike.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "lunge",
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.reach.base",
+              "phase": "afterDerived",
+              "predicate": [
+                "lunge"
+              ],
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +352,44 @@
       "name": "Rebounding Toss",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5SBFayX7JqKYANwa",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rebounding Toss",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a thrown weapon.</p>\n<hr />\n<p>You bounce your weapon off one foe to strike another. Make a ranged Strike with a thrown weapon. If this Strike hits, the weapon rebounds toward an enemy within 10 feet of the original target. Make an additional Strike against this second target. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both attacks.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -70,6 +399,44 @@
       "name": "Sleek Reposition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Bm8votckjbge54bl",
+        "folder": "RMlWUQQ6uumylPgu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sleek Reposition",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a finesse weapon or polearm.</p><hr /><p>While your opponent is still recovering from your prior attack, you snag its armor, clothing, or flesh to move it as you please. Make a melee Strike with a finesse weapon or polearm. If you hit a target that is your size or smaller, you can automatically @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] it, with the same benefits as the Reposition action (including the critical success effect, if your Strike was a critical hit). If you used a weapon with reach, use the weapon's reach for this Reposition. If you're wielding a polearm, you can ignore Reposition's requirement that you have a hand free.</p>\n<p>This Strike has the following failure effect.</p>\n<p><strong>Failure</strong> The target becomes @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your current turn.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

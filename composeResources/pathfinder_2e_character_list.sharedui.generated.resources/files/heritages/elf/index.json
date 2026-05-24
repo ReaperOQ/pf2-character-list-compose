@@ -1,0 +1,349 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ancient-elf.json",
+      "id": "Nd9hdX8rdYyRozw8",
+      "name": "Ancient Elf",
+      "img": "systems/pf2e/icons/features/ancestry/ancient-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "Nd9hdX8rdYyRozw8",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/ancient-elf.webp",
+        "name": "Ancient Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>In your long life, you've dabbled in many paths and many styles. A typical ancient elf is at least 100 years old, though you might be younger at the GM's discretion. Choose a class other than your own. You gain the multiclass dedication feat for that class, even though you don't meet its level prerequisite. You must still meet its other prerequisites to gain the feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:dedication",
+                  "item:trait:multiclass"
+                ],
+                "itemType": "feat"
+              },
+              "flag": "ancientElf",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.AncientElf.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.ancientElf}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "arctic-elf.json",
+      "id": "1dYDucCIaZpCJqBc",
+      "name": "Arctic Elf",
+      "img": "systems/pf2e/icons/features/ancestry/artic-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "1dYDucCIaZpCJqBc",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/artic-elf.webp",
+        "name": "Arctic Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>You dwell deep in the frozen north and have gained incredible resilience against cold environments, granting you cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "cavern-elf.json",
+      "id": "NfIAGatB1KIzt8G7",
+      "name": "Cavern Elf",
+      "img": "systems/pf2e/icons/features/ancestry/caveren-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "NfIAGatB1KIzt8G7",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/caveren-elf.webp",
+        "name": "Cavern Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>You were born or spent many years in underground tunnels or caverns where light is scarce. You gain darkvision.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "selector": "darkvision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "desert-elf.json",
+      "id": "kiKxnKd7Dfegk9dM",
+      "name": "Desert Elf",
+      "img": "systems/pf2e/icons/features/ancestry/desert-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "kiKxnKd7Dfegk9dM",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/desert-elf.webp",
+        "name": "Desert Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>You live under the desert's blazing heat, gaining incredible resilience to warm environments. You gain fire resistance equal to half your level (minimum 1), and environmental heat effects are one step less extreme for you (incredible heat becomes extreme, extreme heat becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "fire",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "seer-elf.json",
+      "id": "jEtVesbqYcWGbBYk",
+      "name": "Seer Elf",
+      "img": "systems/pf2e/icons/features/ancestry/seer-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "jEtVesbqYcWGbBYk",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/seer-elf.webp",
+        "name": "Seer Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>You have an inborn ability to detect and understand magical phenomena. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic] cantrip as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>\n<p>In addition, you gain a +1 circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Identify Magic] and to @UUID[Compendium.pf2e.actionspf2e.Item.Decipher Writing] of a magical nature. These skill actions typically use the Arcana, Nature, Occultism, or Religion skill.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:identify-magic",
+                    "action:decipher-writing"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:detect-magic",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:detect-magic",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:elf"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "whisper-elf.json",
+      "id": "1wVDYY9Wue0G5R9Q",
+      "name": "Whisper Elf",
+      "img": "systems/pf2e/icons/features/ancestry/whisper-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "1wVDYY9Wue0G5R9Q",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/whisper-elf.webp",
+        "name": "Whisper Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>Your ears are finely tuned, able to detect even the slightest whispers of sound. You gain a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action to find @UUID[Compendium.pf2e.conditionitems.Item.Hidden] or @UUID[Compendium.pf2e.conditionitems.Item.Undetected] creatures within 30 feet of you. When you target an opponent that is @UUID[Compendium.pf2e.conditionitems.Item.Concealed] from you or hidden from you, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one. This benefit doesn't apply if you can't hear or if the creature is incapable of making sound (for example, if it's affected by a @UUID[Compendium.pf2e.spells-srd.Item.Silence] spell).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "target:condition:undetected",
+                    "target:condition:hidden"
+                  ]
+                },
+                {
+                  "lte": [
+                    "target:distance",
+                    30
+                  ]
+                },
+                "target:audible"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "woodland-elf.json",
+      "id": "nW1gi13E62Feto2w",
+      "name": "Woodland Elf",
+      "img": "systems/pf2e/icons/features/ancestry/woodland-elf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "nW1gi13E62Feto2w",
+        "folder": "yI3glLXLna5Uq2GR",
+        "img": "systems/pf2e/icons/features/ancestry/woodland-elf.webp",
+        "name": "Woodland Elf",
+        "system": {
+          "ancestry": {
+            "name": "Elf",
+            "slug": "elf",
+            "uuid": "Compendium.pf2e.ancestries.Item.PgKmsA2aKdbLU6O0"
+          },
+          "description": {
+            "value": "<p>You're adapted to life in the forest, the deep jungle, or a similar environment, and you know how to climb trees and use foliage to your advantage. When @UUID[Compendium.pf2e.actionspf2e.Item.Climb]{Climbing} trees, vines, and other foliage, you move at half your Speed on a success and at full Speed on a critical success (and you move at full Speed on a success if you have @UUID[Compendium.pf2e.feats-srd.Item.Quick Climb]). This doesn't affect you if you're using a climb Speed.</p>\n<p>You can always use the @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover] action when you are within forest terrain to gain cover, even if you're not next to an obstacle you can Take Cover behind.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [],
+              "predicate": [
+                "action:climb",
+                "terrain:foliage"
+              ],
+              "selector": "athletics",
+              "text": "When you climb trees, vines or other foliage, you move at half your Speed on a success, and full speed on a critical success.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,97 @@
       "name": "Animal Actor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pShjDoTqAdX1m3DK",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Actor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You participated in a performance of The Leaping Lion, a play focusing on Cyricas, the animal-loving adventurer who traveled with his ape friend Mardu and remains a favorite hero among Taldan youth. You become trained in Nature and a Lore skill related to a particular type of animal commonly used in show business (such as Canine Lore, Ursine Lore, or Primate Lore); if you were already trained in either, you become an expert in that skill instead. You gain a +2 circumstance bonus to all checks to Command an Animal and @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about creatures with the animal trait. You can use your chosen animal Lore to Command an Animal of that type.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "animal-actor",
+                {
+                  "or": [
+                    "action:recall-knowledge",
+                    "action:command-an-animal"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.UI.RuleElements.ChoiceSet.YesLabel",
+                  "predicate": [
+                    "skill:nature:rank:1"
+                  ],
+                  "value": 2
+                },
+                {
+                  "label": "PF2E.UI.RuleElements.ChoiceSet.NoLabel",
+                  "predicate": [
+                    {
+                      "not": "skill:nature:rank:1"
+                    }
+                  ],
+                  "value": 1
+                }
+              ],
+              "flag": "rank",
+              "key": "ChoiceSet"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": "@item.flags.system.rulesSelections.rank"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +107,59 @@
       "name": "Bleak Humorist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5FbGtKWE8Qc14o0g",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bleak Humorist",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You are reduced to 0 Hit Points by a creature within 30 feet, but not immediately killed</p><hr /><p>You've watched dozens of morbid comedies depicting Beldam I, Taldor's prankster emperor whose wife accidentally killed him when she struck him with a marble bust after he jumped out from behind curtains to frighten her. You are reminded of this depressing yet perversely comical tale whenever you are near death, and in your final moments of consciousness you murmur a bleak joke to the creature who reduced you to 0 Hit Points. The creature must attempt a @Check[will|against:class] save against your class DC.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is distracted by giggles and can't use reactions until the beginning of your next turn.</p>\n<p><strong>Failure</strong> The target laughs uncontrollably. It can't use reactions until the beginning of your next turn and is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1}.</p>\n<p><strong>Critical Failure</strong> As failure, but the target also immediately falls @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "emotion",
+              "linguistic",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +169,53 @@
       "name": "Clean Take",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d26S1yVaOlNgayuX",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clean Take",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fail, but don't critically fail, a Deception or Performance check to portray a famous figure.</p><hr /><p>Thanks to many long hours of rehearsals, your acting skill is infinitely adaptable. Even when your impressions don't quite hit the mark, you're able to refine and tweak your performance on the spot. Reroll the triggering check and take the second result.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +225,52 @@
       "name": "Heaven's Step Offense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4fbGUm8j4zzljOo6",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Heaven's Step Offense",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your melee Strike reduces a creature to 0 Hit Points</p><hr /><p>Your lessons from the stage find life in the storied mercy and fearlessness of Grand Prince Gennaris III. With a theatrical flourish, the Strike becomes nonlethal, and you can Stride up to half your Speed in a straight line toward another enemy. This attention-arresting movement does not provoke reactions from enemies unless they are immune to mental effects.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +280,66 @@
       "name": "Kitharodian Actor Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Xiv87UvRqfLPqvin",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kitharodian Actor Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Taldor or have attended Kitharodian Academy.</p><hr /><p>You've studied classic Taldan theater and learned to embody various roles to a sublime degree. You become trained in Society and in Theater Lore; if you were already trained in either, you become an expert in that skill instead. In addition, when you attempt a Deception or Performance check to portray a famous figure, you gain a +2 circumstance bonus to your check. This bonus changes to +3 at 10th level and +4 at 17th level. However, you don't gain this bonus while Impersonating a figure whose death is common knowledge (as determined by the GM).</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Uxi73hAyBx7GjYW9]{Kitharodian Actor}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "portray-famous-figure"
+              ],
+              "selector": [
+                "performance",
+                "deception"
+              ],
+              "type": "circumstance",
+              "value": "ternary(gte(@actor.level,17), 4, ternary(gte(@actor.level,10), 3, 2))"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +349,69 @@
       "name": "Monumental Maestro",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6UeJLQ8tQP8E0kSn",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monumental Maestro",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've studied the moving compositions of Andreas Romung, a legendary maestro whose Shining Crusade anthems live on in the music for the play Echoes of Glory. You gain a +2 circumstance bonus to Performance checks to @UUID[Compendium.pf2e.actionspf2e.Item.Perform] with a musical instrument or sing. If you succeed, the DCs of subsequent Diplomacy checks against any creature who observed your performance are reduced by 2 for the next 24 hours.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "monumental-maestro",
+                {
+                  "or": [
+                    "action:perform:keyboards",
+                    "action:perform:percussion",
+                    "action:perform:strings",
+                    "action:perform:winds"
+                  ]
+                }
+              ],
+              "selector": "performance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +421,67 @@
       "name": "Of Lions and Wyrms",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5IYiVzVLwok0mT2A",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Of Lions and Wyrms",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You starred in a war drama depicting First Emperor Taldaris's battles against the Grogrisant, a massive six-eyed lion, and Verksaris the Kingeater, a mighty dragon. To prepare for your role, you spent weeks in the wild observing and occasionally scrapping with any creature resembling Taldaris's legendary foes. You gain a +2 circumstance bonus to saving throws against effects from beasts and dragons.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "origin:trait:beast",
+                    "origin:trait:dragon"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +491,64 @@
       "name": "Ruthless Orator",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7HZaOlJ43QxkDrmO",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ruthless Orator",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You were once cast in the role of Daronlyr XII, one of Taldor's most ambitious rulers who slew his cousin to seize the crown, yet somehow still managed to convince the entire Ulfen Guard to swear loyalty to him simply through his powers of oration. You attempt a @Check[performance|dc:@self.level|adjustment:2] check to launch into a powerful monologue, pulling lines from Daronlyr's playbook to win respect from everyone around you, even your enemies. The DC of this check is a hard difficulty DC of your level. On a success, any hostile creatures within 20 feet take a –2 circumstance penalty to attack rolls and spell attack rolls that target you until the beginning of your next turn, and any allies within 20 feet are @UUID[Compendium.pf2e.conditionitems.Item.Quickened] until the beginning of your next turn. The additional action can be only used to Strike or Stride.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Ruthless Orator",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Ruthless Orator"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "emotion",
+              "linguistic",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -79,6 +558,57 @@
       "name": "Stunt Performer Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pfVTsZ2asd6cnVed",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stunt Performer Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are unarmored.</p><hr /><p>You clear your mind, regulate your breathing, and prepare your muscles in a stance inspired by Kemen Kayton, a graduate of Zimar's Monastery of the Seven Forms. Kemen controversially shunned monastic life and instead used his martial skills as a death-defying stunt performer, winning acclaim for exhibitions that saw him survive great falls and escape deadly traps. While in this stance, you gain a +2 circumstance bonus to Reflex saving throws and skill checks to @UUID[Compendium.pf2e.actionspf2e.Item.Escape], as well as resistance 2 to all physical damage.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Stunt Performer Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Stunt Performer Stance"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +618,52 @@
       "name": "Sympathetic Portrayal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PwgiNjYvCM68ZyqS",
+        "folder": "pFo9tZOFFk8cOse6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sympathetic Portrayal",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You portrayed Grand Prince Stavian III in Fall of the Troubled King, a production dedicated to the life and times of the paranoid Taldan ruler whose violent resistance to new policies on succession kicked off the War for the Crown. Your acting won rave reviews for recasting Stavian's paranoia and political machinations in a sympathetic light, and you've learned to apply these subtle techniques outside of the stage to win others over. Whenever you succeed at a Deception or Performance check to portray a famous figure, you can select one creature within 60 feet who observed your performance. As long as this creature isn't hostile, its attitude toward you automatically improves by two steps (three steps if your check was a critical success). If it's hostile, it's @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} for 1 minute as it tries to reconcile its desire to harm you with its newfound sympathy for you.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kitharodian Actor Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

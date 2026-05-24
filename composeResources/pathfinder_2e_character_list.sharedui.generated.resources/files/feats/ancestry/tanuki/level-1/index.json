@@ -7,6 +7,43 @@
       "name": "Everyday Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fsovjV7yFMGiVs6z",
+        "folder": "XJWTyscjsCut1o0D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Everyday Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>There's nothing better than being a tanuki, but sometimes you need a less conspicuous form when going into the big city or other crowded places. When you Change Shape, you can assume the form of a common Small or Medium humanoid ancestry prevalent where you grew up, typically human. This everyday form is a specific form with the same age and body type as your true tanuki form and has roughly analogous physical traits, such as hair color.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +53,63 @@
       "name": "Iron Belly",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SiIha6u0XNtepG1N",
+        "folder": "XJWTyscjsCut1o0D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Iron Belly",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>A good laugh comes from the belly, and by laughing every day, yours has grown quite strong. You have a belly melee unarmed Strike, which deals 1d6 bludgeoning damage, is in the brawling group, and has the forceful trait.</p><hr /><p><strong>Special</strong> It's never too late to learn to laugh, so you can select this feat at any level and retrain into and out of this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/skills/social/intimidation-impressing.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Belly",
+              "slug": "belly",
+              "traits": [
+                "unarmed",
+                "forceful"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +119,54 @@
       "name": "Scorched on the Crackling Mountain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Xdtwvy3RrrorHEzX",
+        "folder": "XJWTyscjsCut1o0D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scorched on the Crackling Mountain",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>By ritualistically marking your fur with fire, like an infamous tanuki of legend, you protect yourself against future flames. You gain a black stripe down your back that looks charred. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which can be reduced to DC 5 with appropriate assistance. The first time each day you would be reduced to 0 Hit Points by a fire effect, you avoid being knocked out and remain at 1 Hit Point, and your wounded condition increases by 1. Two hairs plucked from your tail can be used as flint and steel to create a fire, emitting a strange crackling sound as they ignite.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "item:damage:type:fire"
+              ],
+              "property": "pd-recovery-dc",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +176,60 @@
       "name": "Tanuki Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dH7ZyYArCHJfpKRi",
+        "folder": "XJWTyscjsCut1o0D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tanuki Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Tanuki love to play two things: tricks and music. You become trained in Deception and Performance. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Tanuki Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.deception.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +239,43 @@
       "name": "Teakettle Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U8rjCtUuk6qhFyZs",
+        "folder": "XJWTyscjsCut1o0D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Teakettle Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your shapeshifting is advanced enough to take the form of not just creatures, but objects as well. When you Change Shape, you can assume the form of a simple tool or object of 1 Bulk or less, such as a teakettle or umbrella. When transformed into an object, you can function as that object for allies to use; for instance, turning into a crowbar so you can help an ally pry open a crate. You can speak while in object form, but you can't attack, cast spells, or move except to @UUID[Compendium.pf2e.actionspf2e.Item.Crawl] (usually by hopping or flopping across the ground in an undignified manner).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

@@ -7,6 +7,63 @@
       "name": "Demon Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7Jc5gVUNcEBriL9G",
+        "folder": "sONqfJxDDZkU5CX5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demon Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The demons of Tanglebriar have long haunted your dreams, just as they have long threatened Kyonin. You have not only studied these fiendish foes well, but have trained extensively to battle the hordes of demons that serve Treerazer and are particularly adept at striking desperate melee blows against them.</p>\n<p>When you make your daily preparations, choose one kind of demon, such as succubus, omox, shemhazian, or Treerazer. For the remainder of the day, the first time you hit one of those specific demons in a round with a melee Strike, you also deal 1d6 additional spirit damage. At 13th level, the extra damage increases to 2d6 additional spirit damage, and at 17th level, the extra damage increases to 3d6 spirit damage.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Religion or Demon Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "demon-hunter",
+              "toggleable": true
+            },
+            {
+              "damageType": "spirit",
+              "diceNumber": "ternary(gte(@actor.level,17),3,ternary(gte(@actor.level,13),2,1))",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "demon-hunter"
+              ],
+              "selector": "melee-strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +73,43 @@
       "name": "Elf Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aIm2qi4JZerthZmF",
+        "folder": "sONqfJxDDZkU5CX5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elf Step",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You move in a graceful dance, and even your steps are broad. You Step 5 feet twice.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +119,69 @@
       "name": "Expert Longevity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vfuHVSuExvtyajkW",
+        "folder": "sONqfJxDDZkU5CX5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expert Longevity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've continued to refine the knowledge and skills you've gained through your life. When you choose a skill in which to become trained with @UUID[Compendium.pf2e.feats-srd.Item.Ancestral Longevity], you can also choose a skill in which you are already trained and become an expert in that skill. This lasts until your Ancestral Longevity expires.</p>\n<p>When the effects of Ancestral Longevity and Expert Longevity expire, you can retrain one of your skill increases. The skill increase you gain from this retraining must either make you trained in the skill you chose with Ancestral Longevity or make you an expert in the skill you chose with Expert Longevity.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ancestral Longevity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "expert-longevity",
+              "phase": "beforeDerived",
+              "suboptions": {
+                "config": "skills",
+                "predicate": [
+                  "skill:{choice|value}:rank:1"
+                ]
+              },
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.expertLongevity}.rank",
+              "phase": "beforeDerived",
+              "priority": 60,
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +191,47 @@
       "name": "Otherworldly Acumen",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KgiYiDz1lWoBMRlF",
+        "folder": "sONqfJxDDZkU5CX5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Otherworldly Acumen",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The arcane magic you possess grows in power and complexity. Choose one common 2nd-rank spell from the same tradition as an innate spell you previously gained from another elf ancestry feat (from the arcane list if you have @UUID[Compendium.pf2e.feats-srd.Item.Otherworldly Magic], for example). You can cast that spell as an innate spell once per day, using the same tradition as the list you chose the spell from.</p>\n<p>Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-rank spell from the same tradition.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "at least one innate spell gained from an elf ancestry feat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +241,57 @@
       "name": "Political Virtuoso",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S4rYzJqW3tbdXS1Z",
+        "folder": "sONqfJxDDZkU5CX5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Political Virtuoso",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your mastery of the politics of your home nation is profound. Your circumstance bonus from @UUID[Compendium.pf2e.feats-srd.Item.Political Acumen] becomes +4 instead of +2.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Political Acumen"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "selectors": [
+                "perception"
+              ],
+              "slug": "political-acumen",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +301,49 @@
       "name": "Tree Climber (Elf)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qS2VcFLez4PLOpIS",
+        "folder": "sONqfJxDDZkU5CX5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tree Climber (Elf)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've spent much of your life among the treetops and have become an expert at quickly and safely climbing them. You gain a @UUID[Compendium.pf2e.actionspf2e.Item.Climb] Speed of 10 feet.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "climb",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

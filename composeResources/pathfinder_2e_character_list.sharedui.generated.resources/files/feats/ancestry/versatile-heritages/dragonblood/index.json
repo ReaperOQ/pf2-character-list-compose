@@ -7,6 +7,90 @@
       "name": "Aqueous Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P4qFFAjB4UnecVNH",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aqueous Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your blood surges with the might of dragons who master the waters, and you can move freely in their domain. You gain a swim Speed of 15 feet; if you already have a base swim Speed, it increases by 5 feet. You can hold your breath underwater for 10 minutes before needing air, and you take only a –1 circumstance melee penalty to slashing or bludgeoning attacks that pass through water (instead of –2). If you choose a draconic exemplar, you must choose a dragon with a swim Speed.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.UI.RuleElements.ChoiceSet.YesLabel",
+                  "predicate": [
+                    "speed:swim"
+                  ],
+                  "value": "existing-swim-speed"
+                },
+                {
+                  "label": "PF2E.UI.RuleElements.ChoiceSet.NoLabel",
+                  "predicate": [
+                    {
+                      "not": "speed:swim"
+                    }
+                  ],
+                  "value": "no-swim-speed"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "aqueous-dragonblood"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "aqueous-dragonblood:no-swim-speed"
+              ],
+              "selector": "climb",
+              "value": 20
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "aqueous-dragonblood:existing-swim-speed"
+              ],
+              "selector": [
+                "swim-speed"
+              ],
+              "value": 5
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +100,55 @@
       "name": "Arcane Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oqWclVuvEOh7R5og",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You descend from a dragon that wields mastery of their magical abilities, such as a fortune dragon or mirage dragon. As such, you can instinctively grasp the intricacies of magic. You gain the trained proficiency rank in Arcana. If you would automatically become trained in Arcana (from your background or class, for example), you instead become trained in a skill of your choice. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Arcane Sense] skill feat. If you choose a draconic exemplar, you must choose an arcane dragon.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Arcane Sense"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +158,79 @@
       "name": "Ascendant Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TafPYNuDBD2GEAxQ",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ascendant Blood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Twice per week, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Interplanar Teleport] as an innate spell of the tradition corresponding to your draconic exemplar. This can be used only to travel to the plane associated with your draconic exemplar (for instance, Heaven if your draconic nature is tied to an empyreal dragon) or from that plane to the Universe. Due to your draconic blood, your body serves as the locus, and you don't require a planar key. If there's any question about the plane to which your draconic exemplar is associated, the GM determines the answer.</p>"
+          },
+          "frequency": {
+            "max": 2,
+            "per": "P1W"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "draconic exemplar associated with a specific plane (such as a diabolic dragon or empyreal dragon)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:interplanar-teleport",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:interplanar-teleport",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dragonblood"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -34,6 +240,67 @@
       "name": "Blood And Spirit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iqgAmntmu3udEgEI",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood And Spirit",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to the divine has sanctified your blood, but the power only manifests when you are shedding it. Choose holy or unholy. While you are taking persistent bleed damage, you can Interact to coat a piercing or slashing weapon you're wielding with your blood. Until the end of your turn, your Strikes with that weapon deal an additional 1d6 spirit damage with the chosen trait to creatures with the opposing trait.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Blood and Spirit]</p>\n<p>Alternatively, you can deal @Damage[1d6[slashing]] damage to yourself (which can't be resisted in any way) as part of that Interact action if you aren't taking persistent bleed damage.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Divine Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitHoly",
+                  "value": "holy"
+                },
+                {
+                  "label": "PF2E.TraitUnholy",
+                  "value": "unholy"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "blood-and-spirit"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +310,110 @@
       "name": "Breath of the Dragon (Dragonblood)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7y8DKd24c7eqzJGV",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Breath of the Dragon (Dragonblood)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:15] or a @Template[line|distance:30], dealing 1d4 damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #Recharge Breath of the Dragon]]{1d4 rounds}.</p>\n<p>At 3rd level and every 2 levels thereafter, the damage increases by 1d4. The shape of the breath, the damage type, and the saving throw match those of your draconic exemplar. This ability has the trait associated with the type of damage it deals.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "{actor|flags.system.dragonblood.tradition}"
+            },
+            {
+              "key": "RollOption",
+              "option": "breath-of-the-dragon:{actor|flags.system.dragonblood.shape}"
+            },
+            {
+              "key": "RollOption",
+              "option": "breath-of-the-dragon:{actor|flags.system.dragonblood.save}"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "property": "description",
+              "value": [
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:cone",
+                    "breath-of-the-dragon:fortitude"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.BreathOfTheDragon.Cone.Fortitude"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:cone",
+                    "breath-of-the-dragon:reflex"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.BreathOfTheDragon.Cone.Reflex"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:cone",
+                    "breath-of-the-dragon:will"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.BreathOfTheDragon.Cone.Will"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:line",
+                    "breath-of-the-dragon:fortitude"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.BreathOfTheDragon.Line.Fortitude"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:line",
+                    "breath-of-the-dragon:reflex"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.BreathOfTheDragon.Line.Reflex"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:line",
+                    "breath-of-the-dragon:will"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.BreathOfTheDragon.Line.Will"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +423,58 @@
       "name": "Deadly Aspect",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7EbfPEq1Hd2s2wAh",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deadly Aspect",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have honed the unarmed attack your draconic heritage has granted you to a lethal degree. The unarmed attack you gained from Draconic Aspect gains the deadly d8 trait.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Aspect"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:draconic-aspect"
+              ],
+              "property": "traits",
+              "value": "deadly-d8"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +484,67 @@
       "name": "Debilitating Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6VvvcS067uytDv76",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Debilitating Breath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your breath causes lasting hindrance to those it harms. Creatures who fail their saves against your @UUID[Compendium.pf2e.feats-srd.Item.Breath of the Dragon (Dragonblood)]{Breath of the Dragon} gain one of the following conditions, based on the damage type of your breath: @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} (electricity, cold, fire, or sonic damage), @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} (acid, physical, or poison damage), or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} (force, mental, spirit, vitality, or void damage). The condition lasts until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Breath of the Dragon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:breath-of-the-dragon-dragonblood"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -70,6 +554,57 @@
       "name": "Divine Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "axDwTLGN32Qfv0SD",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can trace your lineage to a dragon with almost deific powers, such as a diabolic dragon or empyreal dragon. You are blessed with a small bit of divine protection. You gain the trained proficiency rank in Religion. If you would automatically become trained in Religion (from your background or class, for example), you instead become trained in a skill of your choice. In addition, you are endowed quick reactions. You gain a +1 circumstance bonus to initiative rolls. If you choose a draconic exemplar, you must choose a divine dragon.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +614,147 @@
       "name": "Draconic Aspect",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U38YThMudfDihnj1",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Aspect",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have an obvious draconic feature, such as sharp claws, a snout full of sharp teeth, or strong reptilian tail, that you can use offensively. You gain your choice of one of the following unarmed attacks. The attack is in the brawling group and has the listed damage die and traits.</p><ul><li><strong>Claw</strong> 1d4 slashing (agile, finesse, unarmed)</li><li><strong>Jaws</strong> 1d6 piercing (forceful, unarmed)</li><li><strong>Tail</strong> 1d6 bludgeoning (sweep, trip, unarmed)</li></ul><hr /><p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat, nor can you change the type of attack you gained.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "actorFlag": true,
+              "choices": [
+                {
+                  "label": "PF2E.BattleForm.Attack.Claw",
+                  "value": "claw"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Jaws",
+                  "value": "jaws"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Tail",
+                  "value": "tail"
+                }
+              ],
+              "flag": "draconicAspectStrike",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.UnarmedAttack",
+              "rollOption": "draconic-aspect"
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/claw.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                "draconic-aspect:claw"
+              ],
+              "range": null,
+              "slug": "claw",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                "draconic-aspect:jaws"
+              ],
+              "range": null,
+              "slug": "jaws",
+              "traits": [
+                "forceful",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/tail.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tail",
+              "predicate": [
+                "draconic-aspect:tail"
+              ],
+              "range": null,
+              "slug": "tail",
+              "traits": [
+                "sweep",
+                "trip",
+                "unarmed"
+              ]
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:id:{item|id}"
+              ],
+              "property": "other-tags",
+              "value": "draconic-aspect"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +764,112 @@
       "name": "Draconic Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mI6dFvu28r66SfY0",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Draconic magic safeguards you against harm. You gain resistance equal to half your level (minimum 1) to the damage type associated with your draconic exemplar. Double this resistance against damage of that type dealt to you by dragons.</p>\n<p>If your draconic exemplar is associated with bludgeoning, piercing, or slashing damage, instead of gaining resistance to that type you can choose acid, cold, fire, electricity, or sonic.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "draconic-resistance:{actor|flags.system.dragonblood.damageType}"
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "value": "sonic"
+                }
+              ],
+              "flag": "resistance",
+              "key": "ChoiceSet",
+              "predicate": [
+                {
+                  "or": [
+                    "draconic-resistance:bludgeoning",
+                    "draconic-resistance:slashing",
+                    "draconic-resistance:piercing"
+                  ]
+                }
+              ],
+              "prompt": "PF2E.SpecificRule.Prompt.EnergyType"
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                {
+                  "nor": [
+                    "draconic-resistance:bludgeoning",
+                    "draconic-resistance:piercing",
+                    "draconic-resistance:slashing"
+                  ]
+                }
+              ],
+              "type": "{actor|flags.system.dragonblood.damageType}",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                {
+                  "or": [
+                    "draconic-resistance:bludgeoning",
+                    "draconic-resistance:piercing",
+                    "draconic-resistance:slashing"
+                  ]
+                }
+              ],
+              "type": "{item|flags.system.rulesSelections.resistance}",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -97,6 +879,58 @@
       "name": "Draconic Scent",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2UKf5IiUbpUbOC9a",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Scent",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your sense of smell has heightened to be as keen as that of a dragon. You gain imprecise scent with a range of 30 feet. At their discretion, the GM might double this range if you're downwind from the creature or halve this range if you're upwind.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "scent": {
+                "acuity": "imprecise",
+                "range": 30
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -106,6 +940,56 @@
       "name": "Draconic Sight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8JyyB66LK0pOpnYv",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Sight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a fraction of the senses of your draconic forebear. You gain low-light vision, or you gain darkvision if your ancestry already grants you low-light vision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "predicate": [
+                "self:low-light-vision:from-ancestry"
+              ],
+              "selector": "darkvision"
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "low-light-vision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -115,6 +999,66 @@
       "name": "Draconic Veil",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VDOROn71nTjuQ7To",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Veil",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Like some dragons, your forebear had the supernatural ability to change their shape to walk among humanoids. You have learned how to mimic this ability. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Humanoid Form] as a 5th-rank innate spell once per day, except that the duration is increased to 1 hour. The spell's tradition matches your draconic exemplar's.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:humanoid-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:humanoid-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dragonblood"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -124,6 +1068,60 @@
       "name": "Dragon Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vXNWjiUxu79S2vUN",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've set your mind on learning more about your ancestor and their kin, and perhaps you were even raised by a dragon parent. You've come to understand how dragons can invoke fear but also how they've contributed to society as a whole. You gain the trained proficiency rank in Diplomacy and Intimidation. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Dragon Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -133,6 +1131,66 @@
       "name": "Dragon's Flight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zQgdTW7CPYw8km5F",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon's Flight",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p><hr /><p>You have grown a small pair of draconic wings or have honed your use of the wings you've had since birth. You Fly. If you don't normally have a fly Speed, you gain a fly Speed of 20 feet for this movement. If you aren't on solid ground at the end of this movement, you fall.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "dragons-flight",
+              "predicate": [
+                {
+                  "not": "feat:true-dragons-flight"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "dragons-flight"
+              ],
+              "selector": "fly",
+              "value": 20
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -142,6 +1200,71 @@
       "name": "Earthbond",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ED4CiawXGklyubnk",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Earthbond",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your bond to the terra firma under your feet increases as your connection to your draconic aspect grows. You can ignore difficult terrain caused by stone (such as rubble or gravel) and uneven ground made of stone and earth. In addition, you gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] or @UUID[Compendium.pf2e.actionspf2e.Item.Shove] you. This bonus also applies to saving throws against spells or effects that attempt to force you to move.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Terra Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:reposition",
+                    "action:shove",
+                    "forced-movement"
+                  ]
+                }
+              ],
+              "selector": [
+                "reflex-dc",
+                "fortitude-dc"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -151,6 +1274,59 @@
       "name": "Energize Bite",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3Xc0jsbXBsF4FSui",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Energize Bite",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your most recent action was to use @UUID[Compendium.pf2e.feats-srd.Item.Breath of the Dragon (Dragonblood)]{Breath of the Dragon}.</p><hr /><p>The deadly energy of your breath remains in your jaws to empower your attacks. Until the end of your turn, your jaws unarmed attack deals an extra 1d6 damage of a type matching that of your draconic benefactor. This ability has the trait associated with the type of damage it deals.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Breath of the Dragon"
+              },
+              {
+                "value": "jaws unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Energize Bite",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Energize Bite"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -160,6 +1336,66 @@
       "name": "Form of the Dragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ehiLW2Kjl5csT3fk",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Form of the Dragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can briefly transform into a paragon of your draconic ancestry. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Dragon Form] as an 8th-rank innate spell once per day. This spell has the same tradition as your draconic exemplar. When you cast this innate spell, you must transform into your draconic exemplar. However, if you have the @UUID[Compendium.pf2e.feats-srd.Item.Arcane Dragonblood], @UUID[Compendium.pf2e.feats-srd.Item.Divine Dragonblood], @UUID[Compendium.pf2e.feats-srd.Item.Occult Dragonblood], or @UUID[Compendium.pf2e.feats-srd.Item.Primal Dragonblood] lineage feat, you can instead choose any dragon of that tradition.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:dragon-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:dragon-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dragonblood"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -169,6 +1405,102 @@
       "name": "Formidable Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gnDQSlSVh6KCnq8t",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Formidable Breath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Thanks to rigorous breathing exercises and a diet similar to that of your lineage, your magical breath is more powerful. The area of your Breath of the Dragon increases to 30 feet for a cone or 60 feet for a line, and the damage dice are d6s instead of d4s.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Breath of the Dragon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:slug:breath-of-the-dragon-dragonblood"
+              ],
+              "priority": 151,
+              "property": "description",
+              "value": [
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:cone",
+                    "breath-of-the-dragon:fortitude"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.FormidableBreath.Cone.Fortitude"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:cone",
+                    "breath-of-the-dragon:reflex"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.FormidableBreath.Cone.Reflex"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:cone",
+                    "breath-of-the-dragon:will"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.FormidableBreath.Cone.Will"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:line",
+                    "breath-of-the-dragon:fortitude"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.FormidableBreath.Line.Fortitude"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:line",
+                    "breath-of-the-dragon:reflex"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.FormidableBreath.Line.Reflex"
+                },
+                {
+                  "predicate": [
+                    "breath-of-the-dragon:line",
+                    "breath-of-the-dragon:will"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonblood.FormidableBreath.Line.Will"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -178,6 +1510,73 @@
       "name": "Heart of Earth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IlD1DL4kZl1tinCT",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Heart of Earth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The earth parts to allow you passage. You gain a burrow Speed of 15 feet. While burrowing, your tremorsense becomes precise up to 15 feet. When you Burrow, you can choose to leave behind a tunnel of your size or smaller for others to traverse through.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Terra Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "burrow",
+              "value": 15
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Dragonblood.HeartOfEarth.RollOptionLabel",
+              "option": "heart-of-earth-tremorsense",
+              "toggleable": true
+            },
+            {
+              "acuity": "precise",
+              "key": "Sense",
+              "predicate": [
+                "heart-of-earth-tremorsense"
+              ],
+              "range": 15,
+              "selector": "tremorsense"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -187,6 +1586,66 @@
       "name": "Home in the Deep",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pYASxr38SiFDna45",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Home in the Deep",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You cut through the water, and dwell beneath the surface with ease. Increase your swim Speed by 15 feet; you also gain the amphibious trait.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aqueous Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": [
+                "swim-speed"
+              ],
+              "value": 15
+            },
+            {
+              "add": [
+                "amphibious"
+              ],
+              "key": "ActorTraits"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -196,6 +1655,62 @@
       "name": "Lingering Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j3An3QgKFre2KW8l",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lingering Breath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your draconic breath destroys the surrounding environment and leaves your enemies in pain. When you use Breath of the Dragon, the area of your breath becomes difficult terrain for 1 minute. In addition, a creature who fails or critically fails its saving throw takes 2d6 persistent damage of the same type.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Breath of the Dragon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:breath-of-the-dragon-dragonblood"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Dragonblood.LingeringBreath.Description"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -205,6 +1720,47 @@
       "name": "Majestic Presence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TYGrEiOjp6pDmgO2",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Majestic Presence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>By taking an impressive stance, the full force of your personality cows lesser beings. Each creature in a @Template[emanation|distance:20] must attempt a @Check[will|against:class-spell] save against the higher of your class DC or spell DC. Regardless of the result of the saving throw, the creature is temporarily immune to your Majestic Presence for 24 hours.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 4}.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "emotion",
+              "fear",
+              "mental",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -214,6 +1770,60 @@
       "name": "Mineral Deposits",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BSrYYphRONIkM19m",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mineral Deposits",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Precious metals from your bloodstream line your claws, jaws, or the tip of your tail, and you're able call upon your blood to surge and empower your attacks. Choose cold iron or silver and a claw, jaws, or tail unarmed attack that you have. Until the end of your turn, your Strikes with the chosen unarmed attack count as being made of the chosen metal. At 17th level, you can choose adamantine.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Terra Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Mineral Deposits",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Mineral Deposits"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -223,6 +1833,55 @@
       "name": "Occult Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4xP7rC0gmEb66bAY",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Occult Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your blood contains a tiny fragment of unusual or inexplicable power from a mysterious dragon, such as a conspirator dragon or omen dragon. You are drawn to the stranger parts of the world and can generally spot them with a glance. You gain the trained proficiency rank in Occultism. If you would automatically become trained in Occultism (from your background or class, for example), you instead become trained in a skill of your choice. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Oddity Identification] skill feat. If you choose a draconic exemplar, you must choose an occult dragon.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.occultism.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Oddity Identification"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -232,6 +1891,51 @@
       "name": "Primal Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XAsPe0mfxfQpgvCR",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>A dragon with a deep connection to the natural world, such as an adamantine dragon or a horned dragon, resides somewhere on your family tree. You tend to trust your instincts and might take on the role of a protector of the wilderness. You gain the trained proficiency rank in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice. You can use Nature to Sense Direction and Subsist in the wilds. If you choose a draconic exemplar, you must choose a primal dragon.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -241,6 +1945,110 @@
       "name": "Scaly Hide",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Vp00zw92L5yGqBHB",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scaly Hide",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were born with a layer of scales across your entire body that resemble those of your draconic progenitor. When you're unarmored, the scales give you a +1 item bonus to AC with a Dexterity cap of +3. The item bonus to AC increases to +2 at 5th level. The item bonus to AC from these scales is cumulative with armor potency runes on your explorer's clothing, the @UUID[Compendium.pf2e.spells-srd.Item.Mystic Armor] spell, or @UUID[Compendium.pf2e.equipment-srd.Item.Bands of Force].</p><hr /><p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "DexterityModifierCap",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "value": 3
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "flags.system.scalyHideBonus",
+              "priority": 19,
+              "value": "ternary(gte(@actor.level,5),2,1)"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "selector": "ac",
+              "type": "item",
+              "value": "@actor.flags.system.scalyHideBonus"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "relabel": "PF2E.SpecificRule.Dragonblood.ScalyHide.BracersOfArmor",
+              "selector": "ac",
+              "slug": "bands-of-force",
+              "value": "@actor.flags.system.scalyHideBonus"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "relabel": "PF2E.SpecificRule.Dragonblood.ScalyHide.ExplorersClothing",
+              "selector": "ac",
+              "slug": "explorers-clothing",
+              "value": "@actor.flags.system.scalyHideBonus"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "relabel": "PF2E.SpecificRule.Dragonblood.ScalyHide.MageArmor",
+              "selector": "ac",
+              "slug": "mage-armor",
+              "value": "@actor.flags.system.scalyHideBonus"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -250,6 +2058,56 @@
       "name": "Sheltering Wing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iY08DGiUW8MVBR5k",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sheltering Wing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You raise your fledgling wings to protect you from attack, gaining a +1 circumstance bonus to AC and to saving throws against spells that target you until the start of your next turn. If you have @UUID[Compendium.pf2e.feats-srd.Item.Dragon's Flight], this bonus increases to +2 as your large wings provide greater protection.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dragon's Flight"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Sheltering Wing",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Sheltering Wing"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -259,6 +2117,90 @@
       "name": "Summiting Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fDsJH3Vxnf6uZWql",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Summiting Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Thanks to your draconic blood, there are no mountains or hills you can't surmount. You gain a climb Speed of 20 feet; if you already have a base climb Speed, it increases by 5 feet. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] skill feat, even if you aren't trained in Athletics. If you choose a draconic exemplar, you must choose a dragon with a climb Speed.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.UI.RuleElements.ChoiceSet.YesLabel",
+                  "predicate": [
+                    "speed:climb"
+                  ],
+                  "value": "existing-climb-speed"
+                },
+                {
+                  "label": "PF2E.UI.RuleElements.ChoiceSet.NoLabel",
+                  "predicate": [
+                    {
+                      "not": "speed:climb"
+                    }
+                  ],
+                  "value": "no-climb-speed"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "summiting-dragonblood"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "summiting-dragonblood:no-climb-speed"
+              ],
+              "selector": "climb",
+              "value": 20
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "summiting-dragonblood:existing-climb-speed"
+              ],
+              "selector": [
+                "climb-speed"
+              ],
+              "value": 5
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -268,6 +2210,66 @@
       "name": "Tenacious Jaws",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1KtlTS3dWcqRWwb8",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tenacious Jaws",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your teeth are curved or hooked to hold on to your enemies. Your jaws unarmed attack gains the grapple trait. When you use your @UUID[Compendium.pf2e.feats-srd.Item.Breath of the Dragon (Dragonblood)]{Breath of the Dragon}, an opponent @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] in your jaws uses the outcome one degree of success worse than the result of their saving throw.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Aspect"
+              },
+              {
+                "value": "jaws unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:base:jaws"
+              ],
+              "property": "traits",
+              "value": "grapple"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -277,6 +2279,59 @@
       "name": "Terra Dragonblood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "92fmK6O9y8Wf03P4",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terra Dragonblood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Each step upon the earth makes your blood resonate. You gain tremorsense as an imprecise sense to a range of 30 feet; if you already have tremorsense, increase its range by 5 feet. If you choose a draconic exemplar, you must choose a dragon with a burrow Speed.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {
+              "tremorsense": {
+                "acuity": "imprecise",
+                "range": 30,
+                "special": {
+                  "ancestry": false,
+                  "llv": false,
+                  "second": false
+                }
+              }
+            },
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -286,6 +2341,81 @@
       "name": "Traditional Resistances",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lvEcVeZdYPCGc4tQ",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Traditional Resistances",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Due to your blood, you have some resistance to certain types of magic. You gain a +1 status bonus to AC and saves against spells and other magical effects from the same tradition as your lineage. This bonus increases to +2 against sleep and paralysis effects.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Arcane Dragonblood, Divine Dragonblood, Occult Dragonblood, or Primal Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:magical",
+                {
+                  "or": [
+                    "item:trait:{actor|flags.system.dragonblood.tradition}",
+                    "spellcasting:{actor|flags.system.dragonblood.tradition}"
+                  ]
+                }
+              ],
+              "selector": [
+                "ac",
+                "saving-throw"
+              ],
+              "slug": "traditional-resistances",
+              "type": "status",
+              "value": 1
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:sleep",
+                    "inflicts:paralysis"
+                  ]
+                }
+              ],
+              "slug": "traditional-resistances",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -295,6 +2425,53 @@
       "name": "True Dragon's Flight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jXi4pZiYVakeqEXF",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "True Dragon's Flight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your wings have grown more powerful, capable of keeping you aloft longer. You have a fly Speed of 20 feet at all times.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dragon's Flight"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": 20
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -304,6 +2481,65 @@
       "name": "Voice of the Elements",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2m94GSxJIkQZ5Xnt",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Voice of the Elements",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You inherit a primal dragon's bond to base elements. You gain a +1 circumstance bonus to Diplomacy checks to [[/act make-an-impression]] on creatures with the elemental trait. You can also ask questions of, receive answers from, and use the Diplomacy skill with elementals that don't speak any language.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Primal Dragonblood"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression",
+                "target:trait:elemental"
+              ],
+              "selector": [
+                "diplomacy"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -313,6 +2549,48 @@
       "name": "Wing Buffet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tPi6FAnHYe6ijuyk",
+        "folder": "hC1Cykg6qFGneUPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wing Buffet",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a pair of draconic wings strong enough to batter your foes away and shove them away. Choose up to two creatures adjacent to you. Attempt an @Check[athletics|defense:fortitude] check and compare it to the Fortitude DC of each target. This counts as two attacks for your multiple attack penalty, but the penalty doesn't increase until after both attacks.</p><hr /><p><strong>Critical Success</strong> The target takes bludgeoning damage equal to double your level (@Damage[2*@actor.level[bludgeoning]]) and is pushed up to 10 feet away from you.</p>\n<p><strong>Success</strong> The target takes bludgeoning damage equal to your level (@Damage[@actor.level[bludgeoning]]) and is pushed up to 5 feet away from you.</p>\n<p><strong>Failure</strong> The target takes bludgeoning damage equal to half your level (@Damage[(floor(@actor.level/2))[bludgeoning]]).</p>\n<p><strong>Critical Failure</strong> You fall @UUID[Compendium.pf2e.conditionitems.Item.Prone] at the end of this activity.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "dragonblood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

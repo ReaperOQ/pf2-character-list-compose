@@ -7,6 +7,124 @@
       "name": "Animal Fleetness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7sI2tb0XRvAKmz2o",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Fleetness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're adept at using your animal shape's natural means of locomotion. While you're in animal shape, the Speeds granted by that shape increases by 10 feet.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:werebat",
+                "change-shape:animal"
+              ],
+              "selector": "land",
+              "value": 20
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:werebat",
+                "change-shape:animal"
+              ],
+              "selector": "fly",
+              "value": 25
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:werebear",
+                    "werecreature:werecrocodile",
+                    "werecreature:weremoose",
+                    "werecreature:wererat",
+                    "werecreature:weretiger"
+                  ]
+                },
+                "change-shape:animal"
+              ],
+              "selector": "land",
+              "value": 35
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:wereboar",
+                    "werecreature:werewolf"
+                  ]
+                },
+                "change-shape:animal"
+              ],
+              "selector": "land",
+              "value": 40
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:werecrocodile",
+                "change-shape:animal"
+              ],
+              "selector": "swim",
+              "value": 25
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:animal"
+              ],
+              "selector": "land",
+              "value": 25
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:animal"
+              ],
+              "selector": "swim",
+              "value": 35
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +134,51 @@
       "name": "Antler Rush",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L9pd3yyjVK0rgiDc",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Antler Rush",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in your moose or hybrid shape.</p>\n<hr />\n<p>Stride twice. If you end your movement within your antlers' reach of an enemy, you can @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], or Strike with your antlers.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "weremoose"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +188,50 @@
       "name": "Bear Hug (Werecreature)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eClTKWfhyv2lFrwC",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bear Hug (Werecreature)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in bear or hybrid shape, and your last action was a successful claw Strike.</p>\n<hr />\n<p>You hug your opponent. You make another claw Strike against the same target. If this Strike hits, the target is @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] until the end of your next turn, unless you move or your target @UUID[Compendium.pf2e.actionspf2e.Item.Escape]{Escapes}.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "werebear"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +241,51 @@
       "name": "Beastkin Resilience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CJHvU61UpOpgPtSa",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beastkin Resilience",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've regained beastkin protections after becoming a full werecreature. You no longer gain silver weakness from Werecreature Dedication.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "beastkin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +295,66 @@
       "name": "Cornered Animal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PcayTyfEv6s9wRfN",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cornered Animal",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in animal or hybrid form and are flanked.</p>\n<hr />\n<p>You become more dangerous when surrounded by enemies. You make unarmed Strikes against two different creatures flanking you. The attacks take a –2 penalty if the unarmed weapon is not agile. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both of them.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "option": "cornered-animal",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "cornered-animal",
+                {
+                  "not": "item:trait:agile"
+                }
+              ],
+              "selector": "unarmed-attack-roll",
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +364,68 @@
       "name": "Death Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6RDMR41SGsBBVqcA",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Death Roll",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in your crocodile or hybrid shape and have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed].</p>\n<hr />\n<p>You corkscrew your body, twisting your victim. You attempt a jaws Strike against the grabbed creature, with a +2 circumstance bonus if you're fighting in water. If the Strike hits, you knock the creature @UUID[Compendium.pf2e.conditionitems.Item.Prone]; if it misses, they escape your grab.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "werecrocodile"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Werecreature.Werecrocodile.DeathRoll.ToggleLabel",
+              "option": "death-roll",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "death-roll",
+                "target:condition:grabbed"
+              ],
+              "selector": "jaws-attack",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +435,91 @@
       "name": "Dire Growth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IlygXZqCaeB9X30e",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dire Growth",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You transform into a primal reflection of your animal shape. If you aren't already in your animal shape from Werecreature Dedication, you Change Shape into it. As long as you stay in animal shape, you have the effects of @UUID[Compendium.pf2e.spells-srd.Item.Enlarge].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape is not Small"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "dire-growth",
+              "predicate": [
+                "change-shape:animal"
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "CreatureSize",
+              "predicate": [
+                "change-shape:animal",
+                "dire-growth"
+              ],
+              "reach": {
+                "override": "10"
+              },
+              "resizeEquipment": true,
+              "value": "large"
+            },
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "predicate": [
+                "change-shape:animal",
+                "dire-growth"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Clumsy"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "change-shape:animal",
+                "dire-growth"
+              ],
+              "selector": "melee-strike-damage",
+              "type": "status",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -70,6 +529,50 @@
       "name": "Echolocation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "t7SlYWC4M2JcgwRM",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Echolocation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you take the @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action, you can use hearing as a precise sense with a range of 40 feet until the start of your next turn. You can also use this sense while you @UUID[Compendium.pf2e.actionspf2e.Item.Search].</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Echolocation]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "werebat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +582,54 @@
       "name": "Fearful Symmetry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a57EppvkRS1x3OFs",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fearful Symmetry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in hybrid or tiger shape and your last action was a critically successful Strike with your unarmed attack.</p><hr /><p>You attack with a feline grace as captivatingly beautiful as it is deadly. All enemies within 30 feet of the creature you critically hit must attempt at a @Check[will|against:class] save against your class DC. Enemies that fail their saves become @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} and are @UUID[Compendium.pf2e.conditionitems.Item.Fascinated] with you for 1 round. Your hostile actions don't end this fascination, but those of your allies do. Regardless of the effects of the save, the creature is immune to Fearful Symmetry for 1 hour.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "weretiger"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "emotion",
+              "fear",
+              "mental",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -88,6 +639,73 @@
       "name": "Feeding Frenzy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "St2pWABnDri2n1FO",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feeding Frenzy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your serrated teeth rip and tear at your prey. When you critically hit with your jaws Strike from Werecreature Dedication, your target takes 1d4 persistent bleed damage and you gain a +1 circumstance bonus to jaws Strikes against the target until the end of your turn. If you have scent as a special sense, it's a precise sense with double its normal range when locating creatures taking persistent bleed damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "wereshark"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "selector": "jaws-damage"
+            },
+            {
+              "key": "RollOption",
+              "option": "feeding-frenzy",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "feeding-frenzy"
+              ],
+              "selector": "jaws-attack",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +715,51 @@
       "name": "Feral Lunge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rzr6VIRaPEomi9E4",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feral Lunge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in hybrid or animal shape.</p>\n<hr />\n<p>You spring on an unsuspecting opponent, tearing at them with your teeth. You Stride up to 10 feet and make a jaws Strike at the end of that movement. If you began this action @UUID[Compendium.pf2e.conditionitems.Item.Hidden], you remain hidden until after this Strike. If you have a fly or swim Speed, you can Fly or Swim up to 10 feet instead of Stride</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape grants a fangs or jaws unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -106,6 +769,56 @@
       "name": "Feral Mending",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oHRCNciSjIBz4xqe",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feral Mending",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your previous action was to Change Shape.</p><hr /><p>You can heal your wounds while reshaping your flesh. You regain @Damage[(max(1,floor(@actor.level/2)))d6[healing]]{1d6 Hit Points for every 2 levels you have} (minimum 1d6).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "you were not afflicted with the curse of the werecreature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -115,6 +828,50 @@
       "name": "Feral Scramble",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UXuwSoU09MUB7rNV",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feral Scramble",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in hybrid or animal shape.</p><hr /><p>Sinking your claws in, you propel yourself at shocking speed. You Climb up to your land Speed and make a claw Strike at any point during that movement. After you finish the movement, attempt an @Check[athletics] check against the surface's Climb DC.</p><hr /><p><strong>Success</strong> You maintain your position.</p>\n<p><strong>Failure</strong> You slide down 60 feet or to the ground without taking falling damage.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape grants a claw unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -124,6 +881,74 @@
       "name": "Feral Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GDYy2HaaTAEWRfGQ",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feral Senses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The eyes and noses of animals are naturally sharper than most humanoids. While in your hybrid or animal shape, you gain low-light vision and imprecise scent with a range of 30 feet.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                {
+                  "or": [
+                    "change-shape:animal",
+                    "change-shape:hybrid"
+                  ]
+                }
+              ],
+              "range": 30,
+              "selector": "scent"
+            },
+            {
+              "key": "Sense",
+              "predicate": [
+                {
+                  "or": [
+                    "change-shape:animal",
+                    "change-shape:hybrid"
+                  ]
+                }
+              ],
+              "selector": "low-light-vision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -133,6 +958,51 @@
       "name": "Feral Toss",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nwHYTpyreUgvxh1z",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feral Toss",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in hybrid or animal shape.</p>\n<hr />\n<p>You hurl foes away with a shake of your head. You Strike with your antler, horn, or tusk. If you hit and damage a creature of your size or smaller, push it 5 feet from you (10 feet on a critical hit). This is forced movement.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape grants an antler, horn, or tusk unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -142,6 +1012,65 @@
       "name": "Force of Nature",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jIL0dobpVmCrmSj1",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Force of Nature",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're a nigh-unstoppable killing machine, with only silver able to quell your rampage. When in hybrid or animal shape, you gain fast healing 5. If you take damage from a silver weapon, your fast healing deactivates until the end of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Force of Nature (Silver Damage)]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FastHealing",
+              "predicate": [
+                {
+                  "or": [
+                    "change-shape:animal",
+                    "change-shape:hybrid"
+                  ]
+                },
+                {
+                  "not": "self:effect:force-of-nature-silver-damage"
+                }
+              ],
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -151,6 +1080,67 @@
       "name": "Pack Attack",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Mq6wjHaaqBnfScYe",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pack Attack",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have mastered techniques for hunting alongside your pack. Your Strikes deal an additional 1d4 precision damage to creatures within reach of at least two of your allies.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "werewolf"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "pack-attack",
+              "toggleable": true
+            },
+            {
+              "category": "precision",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "predicate": [
+                "pack-attack"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -160,6 +1150,53 @@
       "name": "Plague Rat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vtohCw7HNaCmcWyf",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plague Rat",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your bites carry a cursed infection. When you hit and deal damage to a creature with a jaws Strike while in hybrid or rat shape, the creature is cursed until the start of your next turn. Whenever they regain Hit Points during that time, they must attempt a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Success</strong> The creature regains Hit Points normally.</p>\n<p><strong>Failure</strong> The creature regains half the normal Hit Points.</p>\n<p><strong>Critical Failure</strong> The creature regains no Hit Points.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "wererat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "curse",
+              "disease",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -169,6 +1206,51 @@
       "name": "Pouncing Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tCKme98RHrTZ8QdS",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pouncing Transformation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By transforming as you move, you attack from odd angles. You Change Shape or Dismiss the change then Stride. Any creature adjacent to you at the end of your movement is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your turn and is then temporarily immune for 1 hour.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape has a land Speed only"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -178,6 +1260,54 @@
       "name": "Rapid Hybridization",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QA4IJbtW1NoYJY9M",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Hybridization",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative.</p>\n<hr />\n<p>When danger threatens, your instincts kick in, and you can assume a different shape at a moment's notice. You use Change Shape to enter your hybrid shape.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "selector": "initiative",
+              "text": "{item|system.description.value}",
+              "title": "<span class=\"action-glyph\">F</span> {item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -187,6 +1317,53 @@
       "name": "Rushing Boar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pQmkNJi8BVPTa2XN",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rushing Boar",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in boar or hybrid shape.</p>\n<p><strong>Trigger</strong> An attack from a creature that isn't adjacent to you damaged you.</p>\n<hr />\n<p>You embrace the pain of the triggering attack, allowing it to drive you into a violent rush. You Stride in a straight line toward the triggering creature.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "wereboar"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -196,6 +1373,64 @@
       "name": "Scarred Hide",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "95VqyEvnxcee8XBS",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scarred Hide",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your hide is an impenetrable mass of scars, accrued over countless bloody conflicts. When in your hybrid or animal shape, you gain resistance to non-silver slashing damage equal to half your level.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "exceptions": [
+                "silver"
+              ],
+              "key": "Resistance",
+              "predicate": [
+                {
+                  "or": [
+                    "change-shape:animal",
+                    "change-shape:hybrid"
+                  ]
+                }
+              ],
+              "type": "slashing",
+              "value": "floor(@actor.level/2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -205,6 +1440,50 @@
       "name": "Shared Tide",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vpHn5uCd55OwGgOW",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shared Tide",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You Swim up to twice the normal distance. Any ally you pass within 30 feet of during that movement gains your swim Speed until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape has a swim Speed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -214,6 +1493,51 @@
       "name": "Terrifying Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rAUNZfiulXh4zcm6",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrifying Transformation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your flesh tears and warps as you transform. Attempt Intimidation checks to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] each enemy within 30 feet. This Demoralize loses the auditory trait and gains the visual trait, and you don't take a penalty if a creature doesn't understand your language. Regardless of the results of your checks, each creature is temporarily immune to Terrifying Transformation for 1 minute.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "you were afflicted with the curse of the werecreature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -223,6 +1547,50 @@
       "name": "Touch of Lunacy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5oifNocjSTR9PdRy",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Touch of Lunacy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>In moments of viciousness, your curse can partially infect your prey. Whenever you critically succeed with an unarmed attack from the werecreature archetype, the target must attempt a @Check[fortitude|against:class-spell] save against the higher of your class DC or spell DC, or become @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} until the beginning of your next turn as their bones elongate and form warps. On a critical failure, the target is also @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} for one minute as the transformation lingers.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "curse",
+              "morph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -232,6 +1600,47 @@
       "name": "Undying Beast",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1qvN6vznehBjV6ml",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Undying Beast",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can be injured by non-silver sources but recover with staggering speed. When you are reduced to 0 Hit Points by non-silver damage and don't immediately die from a death effect or a high @UUID[Compendium.pf2e.conditionitems.Item.Dying] value, you stabilize immediately afterward. You gain the @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition as normal.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -241,6 +1650,617 @@
       "name": "Werecreature Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AfreuohzCrdqJdRt",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Werecreature Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You were born into a lineage of true werecreatures or were afflicted with the curse of the werecreature.</p><hr /><p>You're a werecreature, able to shift between your humanoid shape, an animal shape, and a monstrous hybrid of the two. You gain the beast and werecreature traits. Choose your werecreature type.</p>\n<p>Once chosen, this can't be changed. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Toughness] feat but also a weakness to silver equal to half your level. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Change Shape] action. On the night of the full moon, you automatically use Change Shape to assume your hybrid shape, and you can't voluntarily activate or dismiss Change Shape until sunrise.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Zct5tHOoQGwwx7Ia]{Werecreature}</p><hr /><p><strong>Special</strong> If you're a beastkin, you can use unarmed attacks from your hybrid shape while you're in your werecreature hybrid shape. These forms are otherwise separate.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Werebat.Label",
+                  "value": "werebat"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Werebear.Label",
+                  "value": "werebear"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Wereboar.Label",
+                  "value": "wereboar"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Werecrocodile.Label",
+                  "value": "werecrocodile"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Weremoose.Label",
+                  "value": "weremoose"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Wererat.Label",
+                  "value": "wererat"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Wereshark.Label",
+                  "value": "wereshark"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Weretiger.Label",
+                  "value": "weretiger"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Werecreature.Werewolf.Label",
+                  "value": "werewolf"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "werecreature"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Toughness"
+            },
+            {
+              "key": "Weakness",
+              "predicate": [
+                {
+                  "not": "feat:beastkin-resilience"
+                }
+              ],
+              "type": "silver",
+              "value": "floor(@actor.level/2)"
+            },
+            {
+              "add": [
+                "beast",
+                "werecreature"
+              ],
+              "key": "ActorTraits"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Change Shape"
+            },
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.NPCAbility.ChangeShape.Label",
+              "mergeable": true,
+              "option": "change-shape",
+              "suboptions": [
+                {
+                  "label": "PF2E.NPCAbility.ChangeShape.Form.Hybrid",
+                  "value": "hybrid"
+                },
+                {
+                  "label": "PF2E.NPCAbility.ChangeShape.Form.Animal.Animal",
+                  "value": "animal"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:change-shape"
+              ],
+              "property": "traits",
+              "value": "primal"
+            },
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Werecreature.ChangeShape.AlterationLabel",
+              "mode": "override",
+              "predicate": [
+                "item:slug:change-shape"
+              ],
+              "priority": 160,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.ChangeShape.Werecreature"
+                },
+                {
+                  "predicate": [
+                    "werecreature:werebat"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Werebat.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:werebear"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Werebear.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:wereboar"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Wereboar.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:werecrocodile"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Werecrocodile.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:weremoose"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Weremoose.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:wererat"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Wererat.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:wereshark"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Wereshark.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:weretiger"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Weretiger.Description"
+                },
+                {
+                  "predicate": [
+                    "werecreature:werewolf"
+                  ],
+                  "text": "PF2E.SpecificRule.Werecreature.Werewolf.Description"
+                }
+              ]
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:werebat",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "selector": "land",
+              "value": 10
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:werebat",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "selector": "fly",
+              "value": 15
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:werebear",
+                    "werecreature:werecrocodile",
+                    "werecreature:weremoose",
+                    "werecreature:wererat",
+                    "werecreature:weretiger"
+                  ]
+                },
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "selector": "land",
+              "value": 25
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:wereboar",
+                    "werecreature:werewolf"
+                  ]
+                },
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "selector": "land",
+              "value": 30
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:werecrocodile",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "selector": "swim",
+              "value": 15
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:hybrid"
+              ],
+              "selector": "land",
+              "value": 15
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:hybrid"
+              ],
+              "selector": "swim",
+              "value": 25
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:animal"
+              ],
+              "selector": "swim",
+              "value": 35
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/fangs.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Fangs",
+              "predicate": [
+                "werecreature:werebat",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "fangs",
+              "traits": [
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:werebear",
+                    "werecreature:weretiger"
+                  ]
+                },
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "jaws",
+              "traits": [
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/claw.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:werebear",
+                    "werecreature:weretiger"
+                  ]
+                },
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "claw",
+              "traits": [
+                "agile",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/tusk.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tusk",
+              "predicate": [
+                "werecreature:wereboar",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "tusk",
+              "traits": [
+                "sweep",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                {
+                  "or": [
+                    "werecreature:werecrocodile",
+                    "werecreature:wereshark"
+                  ]
+                },
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "jaws",
+              "traits": [
+                "grapple",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/antler.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Antler",
+              "predicate": [
+                "werecreature:weremoose",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "antler",
+              "traits": [
+                "shove",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                "werecreature:wererat",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "jaws",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/claw.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                "werecreature:wererat",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "claw",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                "werecreature:werewolf",
+                {
+                  "or": [
+                    "change-shape:hybrid",
+                    "change-shape:animal"
+                  ]
+                }
+              ],
+              "slug": "jaws",
+              "traits": [
+                "trip",
+                "unarmed"
+              ]
+            },
+            {
+              "key": "CreatureSize",
+              "predicate": [
+                "werecreature:wererat",
+                "change-shape:animal"
+              ],
+              "value": "small"
+            },
+            {
+              "add": [
+                "amphibious"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:hybrid"
+              ]
+            },
+            {
+              "add": [
+                "aquatic"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "werecreature:wereshark",
+                "change-shape:animal"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -250,6 +2270,50 @@
       "name": "Wings of the Moon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tVqU3Ro0WPuAbCre",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wings of the Moon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can stay aloft with Fly normally when using the fly Speed from your animal shape, letting you fly long distances without breaks.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              },
+              {
+                "value": "your animal shape has a fly Speed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -259,6 +2323,92 @@
       "name": "You Don't Smell Right",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pog3LJUEhSeGikl3",
+        "folder": "IuPreCoIEABvPblu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You Don't Smell Right",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can sniff out fellow werecreatures and master impersonators alike. You gain scent as an imprecise sense with a range of 30 feet or extend the range of your scent by 30 feet. When a creature that's transformed into another form or is @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate]{Impersonating} a specific creature passes within range of your scent ability, the GM rolls a secret @Check[perception|traits:secret] check for you to realize that the creature is transformed, even if you didn't spend an action to @UUID[Compendium.pf2e.actionspf2e.Item.Seek]. When you actively Seek a creature within range of your scent, you gain a +2 circumstance bonus to your Perception check to determine if it's disguised.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Werecreature Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Werecreature.YouDontSmellRight.Label",
+              "option": "seek-disguise",
+              "predicate": [
+                {
+                  "or": [
+                    "change-shape:animal",
+                    "change-shape:hybrid"
+                  ]
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "feat:feral-senses",
+                {
+                  "or": [
+                    "change-shape:animal",
+                    "change-shape:hybrid"
+                  ]
+                }
+              ],
+              "range": 60,
+              "selector": "scent"
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "seek-disguise"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

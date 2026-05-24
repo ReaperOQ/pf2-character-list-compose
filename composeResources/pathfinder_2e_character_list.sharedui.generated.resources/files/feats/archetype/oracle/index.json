@@ -7,6 +7,48 @@
       "name": "Advanced Mysteries",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PxTRE0mFEO3tyt8h",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Mysteries",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one oracle feat. For meeting its prerequisites, your oracle level is equal to half your level.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time, you gain another oracle feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Mysteries"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +58,71 @@
       "name": "Basic Mysteries",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NdgMxlz5I1ddT0Zi",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Mysteries",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level oracle feat of your choice.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Oracle Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:oracle",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicMysteries",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicMysteries}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +132,47 @@
       "name": "Basic Oracle Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7ycF0fgSw1ovUPit",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Oracle Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#basic-spellcasting-feat]{Basic Spellcasting Feat} benefits. When you gain a spell slot of a new rank from the oracle archetype, add a common divine spell or another divine spell you have learned or discovered (including the granted spells associated with your mystery) to your repertoire, of that spell rank.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Oracle Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +182,57 @@
       "name": "Expert Oracle Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FtO8DjjMLBtWiRhZ",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expert Oracle Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#expert-spellcasting-feat]{Expert Spellcasting Feat} benefits.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Oracle Spellcasting"
+              },
+              {
+                "value": "master in Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +242,47 @@
       "name": "First Revelation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HdhnAm9SNfDqxRSN",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "First Revelation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain your mystery's initial revelation spell. If you don't have one, you gain a focus pool of 1 Focus Point. You can Refocus by reconciling the conflicting nature of your mystery, which also reduces your @UUID[Compendium.pf2e.conditionitems.Item.Cursebound] value by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Oracle Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +292,57 @@
       "name": "Master Oracle Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZkGhDEpqe7fzJuSr",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Master Oracle Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#master-spellcasting-feat]{Master Spellcasting Feat} benefits.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Expert Oracle Spellcasting"
+              },
+              {
+                "value": "legendary in Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 3
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -61,6 +352,47 @@
       "name": "Mysterious Breadth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "y4Cws9vZj3Bf9uqH",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mysterious Breadth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Increase the number of spells in your repertoire and number of spell slots you gain from oracle archetype feats by 1 for each spell rank other than your two highest oracle spell slots.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Oracle Spellcasting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +402,88 @@
       "name": "Oracle Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OUNj8nXTHwGcEdlh",
+        "folder": "kwnppFGkg1PLVV5s",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oracle Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Choose a @UUID[Compendium.pf2e.classfeatures.Item.Mystery].You become trained in Religion and the mystery's skill; if you were already trained, you become trained in a skill of your choice. You gain the curse associated with your mystery, which follows the normal rules for an oracular curse.</p>\n<p>You cast spells like an oracle and gain the Cast a Spell activity. You gain a spell repertoire with two cantrips, either common divine cantrips or other divine cantrips you learn or discover. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for oracle archetype spells is Charisma, and they are divine oracle spells.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.ngVnNmi1Qke3lTy0]{Oracle}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Charisma +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:oracle-mystery",
+                  {
+                    "not": "item:tag:class-archetype"
+                  }
+                ]
+              },
+              "flag": "mystery",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Oracle.Mystery.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.mystery}"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Oracular Curse"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "otherTags": [
+              "spellcasting-multiclass-archetype"
+            ],
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

@@ -7,6 +7,44 @@
       "name": "Anoint Ally",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bRftzbFvSF1pilIo",
+        "folder": "hwAn5xxyQsSHkNwZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Anoint Ally",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You forge a mystical connection with an ally using your body as a focus, allowing them to benefit from your magic.</p>\n<p>You place a blood rune on an adjacent ally that lasts for 1 minute. When you would gain a blood magic effect, you can forgo it, granting it to your ally instead.</p>\n<p>You can anoint only one ally at a time; if you place another rune, your previous designation ends.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +54,44 @@
       "name": "Bleed Out",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "skPVYOSDj7oC6PSX",
+        "folder": "hwAn5xxyQsSHkNwZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bleed Out",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your most recent action was to cast a non-cantrip spell that granted you a blood magic effect.</p><hr /><p>You channel the residual energy from the last spell you cast into a ranged bloodletting. Make a ranged spell attack roll against the AC of a target within 60 feet. This attack deals persistent bleed damage equal to the rank of the spell you just cast.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +101,141 @@
       "name": "Propelling Sorcery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3JebYAYEYPdOf4kS",
+        "folder": "hwAn5xxyQsSHkNwZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Propelling Sorcery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The force of your magic can be used to propel yourself or another. You know the following blood magic effect.</p>\n<p><strong>Blood Magic—Propelling Sorcery</strong> You channel your magic outward into a rush of movement. Either you Step as a free action or move the target 5 feet in a direction of your choice.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mergeable": true,
+              "option": "blood-magic",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "propelling-sorcery"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Sorcerer.SecondBloodMagic",
+              "mergeable": true,
+              "option": "second-blood-magic",
+              "placement": "spellcasting",
+              "predicate": [
+                {
+                  "or": [
+                    "feat:blood-ascendancy",
+                    "feat:blood-sovereignty"
+                  ]
+                }
+              ],
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "propelling-sorcery"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mode": "add",
+              "predicate": [
+                "class:sorcerer",
+                "item:tag:blood-magic-spell",
+                {
+                  "or": [
+                    "blood-magic:propelling-sorcery",
+                    {
+                      "and": [
+                        "second-blood-magic:propelling-sorcery",
+                        "feat:blood-sovereignty"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.PropellingSorcery",
+                  "title": "{item|name}"
+                }
+              ]
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mode": "add",
+              "predicate": [
+                "class:sorcerer",
+                "item:slug:blood-rising",
+                {
+                  "or": [
+                    "blood-magic:propelling-sorcery",
+                    {
+                      "and": [
+                        "second-blood-magic:propelling-sorcery",
+                        "feat:blood-ascendancy"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.PropellingSorcery",
+                  "title": "{item|name}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

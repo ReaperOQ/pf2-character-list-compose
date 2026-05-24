@@ -1,0 +1,283 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ascetic-tanuki.json",
+      "id": "L6FwEsrOK3Xno7qM",
+      "name": "Ascetic Tanuki",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "L6FwEsrOK3Xno7qM",
+        "folder": "W02zcMYyeNEfvUOz",
+        "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+        "name": "Ascetic Tanuki",
+        "system": {
+          "ancestry": {
+            "name": "Tanuki",
+            "slug": "tanuki",
+            "uuid": "Compendium.pf2e.ancestries.Item.pILFsoGsUQkVF5dZ"
+          },
+          "description": {
+            "value": "<p>It's said your round form is the result of calmness and restraint, not indulgence. You gain scent as an imprecise sense with a range of 30 feet. The GM will usually double the range if you're downwind from something you're trying to smell or halve the range if you're upwind. In addition, you gain a +2 circumstance bonus to Perception checks whenever you're trying to locate food, drink, or a consumable item that's ingested (such as a potion or elixir) using your scent.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "locate-food-or-drink"
+              ],
+              "selector": "perception",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "courageous-tanuki.json",
+      "id": "hqh4zKHYBtDE26g8",
+      "name": "Courageous Tanuki",
+      "img": "icons/magic/control/fear-fright-mask-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "hqh4zKHYBtDE26g8",
+        "folder": "W02zcMYyeNEfvUOz",
+        "img": "icons/magic/control/fear-fright-mask-orange.webp",
+        "name": "Courageous Tanuki",
+        "system": {
+          "ancestry": {
+            "name": "Tanuki",
+            "slug": "tanuki",
+            "uuid": "Compendium.pf2e.ancestries.Item.pILFsoGsUQkVF5dZ"
+          },
+          "description": {
+            "value": "<p>Your heart beats with the courage of those who came before you, giving you the kind of bravery only a tanuki can demonstrate. Whenever you gain the @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] condition, you also gain a +10-foot circumstance bonus to your Speeds that lasts as long as you're fleeing. When you have the fleeing condition, instead of having to spend all your actions trying to escape, you can act normally for one action but must still spend the remainder of your actions fleeing. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Tactical Retreat] ability.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Tactical Retreat"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:condition:fleeing"
+              ],
+              "selector": "speed",
+              "type": "circumstance",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "even-tempered-tanuki.json",
+      "id": "uAo0wK1JL9kePcZb",
+      "name": "Even-Tempered Tanuki",
+      "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "uAo0wK1JL9kePcZb",
+        "folder": "W02zcMYyeNEfvUOz",
+        "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+        "name": "Even-Tempered Tanuki",
+        "system": {
+          "ancestry": {
+            "name": "Tanuki",
+            "slug": "tanuki",
+            "uuid": "Compendium.pf2e.ancestries.Item.pILFsoGsUQkVF5dZ"
+          },
+          "description": {
+            "value": "<p>You're possessed of a serenity uncommon to other tanuki, who always seem to be flying off the handle. You gain a +1 circumstance bonus to saving throws against emotion effects. If you roll a success at a saving throw against an emotion effect, you get a critical success instead, but when you roll a failure at a saving throw against an emotion effect, you get a critical failure instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "failure": "to-critical-failure",
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:emotion"
+              ],
+              "selector": "saving-throw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "steadfast-tanuki.json",
+      "id": "5gqcEsJ4gkE6W5jj",
+      "name": "Steadfast Tanuki",
+      "img": "icons/containers/kitchenware/pot-meal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "5gqcEsJ4gkE6W5jj",
+        "folder": "W02zcMYyeNEfvUOz",
+        "img": "icons/containers/kitchenware/pot-meal.webp",
+        "name": "Steadfast Tanuki",
+        "system": {
+          "ancestry": {
+            "name": "Tanuki",
+            "slug": "tanuki",
+            "uuid": "Compendium.pf2e.ancestries.Item.pILFsoGsUQkVF5dZ"
+          },
+          "description": {
+            "value": "<p>Your pride in your true tanuki form knows no bounds. You gain your choice of @UUID[Compendium.pf2e.feats-srd.Item.Everyday Form] or @UUID[Compendium.pf2e.feats-srd.Item.Teakettle Form] as a bonus ancestry feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Everyday Form"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Teakettle Form"
+                }
+              ],
+              "flag": "steadfastTanuki",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Feat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.steadfastTanuki}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "virtuous-tanuki.json",
+      "id": "JtrZ2TcPXP1uIcmd",
+      "name": "Virtuous Tanuki",
+      "img": "icons/consumables/drinks/alcohol-jug-spirits-brown.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "JtrZ2TcPXP1uIcmd",
+        "folder": "W02zcMYyeNEfvUOz",
+        "img": "icons/consumables/drinks/alcohol-jug-spirits-brown.webp",
+        "name": "Virtuous Tanuki",
+        "system": {
+          "ancestry": {
+            "name": "Tanuki",
+            "slug": "tanuki",
+            "uuid": "Compendium.pf2e.ancestries.Item.pILFsoGsUQkVF5dZ"
+          },
+          "description": {
+            "value": "<p>Many tanuki carry a gourd of alcohol to remind themselves to act with virtue, and by these standards, you're quite virtuous indeed. You gain poison resistance equal to half your level (minimum 1). You can eat and drink things when you're @UUID[Compendium.pf2e.conditionitems.Item.Sickened]. You can't become incapacitated by conventional alcohol if you don't wish to be.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "poison",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "itemType": "consumable",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "self:condition:sickened",
+                {
+                  "or": [
+                    "item:tag:alchemical-food",
+                    "item:trait:elixir",
+                    "item:trait:ingested",
+                    "item:trait:potion"
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Conditions.Sickened.AllowEatOrDrink"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

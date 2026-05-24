@@ -7,6 +7,67 @@
       "name": "Adamantine Mantra",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nCVX6szvnW1Js57w",
+        "folder": "rSRBHVJEYhh7icE2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Adamantine Mantra",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You attain your true potential as a tutelary spirit. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Blessing of Defiance] as a 5th-rank primal innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:blessing-of-defiance",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:blessing-of-defiance",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:yaksha"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +77,47 @@
       "name": "Germination of Resolve",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PFKUr11TUN5NfOYF",
+        "folder": "rSRBHVJEYhh7icE2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Germination of Resolve",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Vitality floods your trammeled soul, offering you rejuvenation, if not quite rest. For each effect that causes the @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled] or @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] conditions to affect you, attempt a @Check[nature] check to counteract that effect. The counteract rank of Germination of Resolve is equal to half your level rounded up.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +127,50 @@
       "name": "Wild-Haired Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W0JwZEe2uJnSGZRN",
+        "folder": "rSRBHVJEYhh7icE2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wild-Haired Fury",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your broken bones jut at odd angles, yet this pain only adds to your anger and prowess. You add the combined value of your @UUID[Compendium.pf2e.conditionitems.Item.Doomed] and @UUID[Compendium.pf2e.conditionitems.Item.Wounded] conditions as a circumstance bonus to damage rolls with your melee attacks (for example, if you were doomed 1 and wounded 2, you would gain a +3 circumstance bonus to your melee damage rolls).</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "melee-damage",
+              "type": "circumstance",
+              "value": "@actor.conditions.doomed.badge.value + @actor.conditions.wounded.badge.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

@@ -7,6 +7,53 @@
       "name": "Battlefield Agility",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UetL3DTdUa3JYSSU",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battlefield Agility",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're flanked by at least two enemies.</p><hr /><p>Your enemies might think they have you surrounded, but you know just how to extricate yourself. Make a melee Strike against one of the enemies flanking you and Step, in any order.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Blackjacket Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +63,53 @@
       "name": "Belay That!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7FOxECsqayIulRAh",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Belay That!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally within 30 feet of you critically fails a Strike.</p><hr /><p>You can recognize when a strategy isn't working and advise your ally to change course. The next Strike the triggering ally makes before the end of their turn has the same multiple attack penalty as the critically failed Strike, but it counts toward their multiple attack penalty as normal.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Blackjacket Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +119,73 @@
       "name": "Blackjacket Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PWKHlkSx7baAcPw4",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blackjacket Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're from Druma.</p><hr /><p>You have entered the ranks of the Mercenary League and now wear the black uniform that's the source of the organization's popular epithet. You become trained in Intimidation; if you were already trained, you become an expert instead. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat for Warfare Lore; if you were already trained in Warfare Lore, you also become trained in a Lore skill of your choice. While wearing medium or heavy armor, you gain a +1 circumstance bonus to Intimidation checks.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.irUrG1k3AJ0OfW9b]{Blackjacket}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in medium armor and martial weapons"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "armor:equipped",
+                {
+                  "or": [
+                    "armor:category:medium",
+                    "armor:category:heavy"
+                  ]
+                }
+              ],
+              "selector": "intimidation",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +195,57 @@
       "name": "Close Contract",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xCbvXyWZ7JyUtN2N",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Close Contract",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have completed your active course of action but haven't Dismissed it or chosen a new one.</p><hr /><p>You're bolstered when a plan comes together. You Dismiss your current course of action and gain 15 temporary Hit Points that last for 1 hour. The number of temporary Hit Points increases by 5 at 12th level and every 2 levels thereafter.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mercenary Motivation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Close Contract",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Close Contract"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +255,68 @@
       "name": "Lead by Example",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nLFP7rT0jhM11nFR",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lead by Example",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You telegraph your next attack to let your allies in on your strategy. Make a melee or ranged Strike with a –2 circumstance penalty. On a hit, the next ally to target the same creature with a Strike gains a +2 circumstance bonus to their attack roll. On a critical hit, the bonus applies to any allies who act before the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Lead by Example]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Blackjacket Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "lead-by-example",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "lead-by-example"
+              ],
+              "selector": "strike-attack-roll",
+              "type": "circumstance",
+              "value": -2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +326,67 @@
       "name": "Mercenary Motivation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2IiZFG2HJjr0Droz",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mercenary Motivation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A large part of being in the Mercenary League entails doing mercenary work. You spend 1 minute planning a course of action that will allow you to complete a task you've been hired or requested to do. Work with your GM to determine the circumstances of any job or task if need be, but typically, they can involve protecting a place or person, defeating a foe or enemy force, or retrieving an item. The course of action you plan must be something you believe you can accomplish.</p>\n<p><strong>Active Plan</strong> You can have only one course of action planned at a time. If you use Mercenary Motivation to plan a second course of action, you no longer receive the bonus to checks related to the first course of action.</p>\n<p><strong>On the Job</strong> Whenever you attempt a Perception check or skill check that will advance your course of action, you gain a +1 circumstance bonus to the check. The exact checks this bonus applies to depend on your current job and are determined by the GM.</p>\n<p><strong>Finishing a Plan</strong> When you complete the course of action you planned to do, you don't lose the bonus or other benefits until you make a different plan with Mercenary Motivation or voluntarily Dismiss the current plan.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Blackjacket Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "on-the job"
+              ],
+              "selector": [
+                "perception",
+                "skill-check"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +396,57 @@
       "name": "Nothing Personal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gDvLmqxAtxY3LVaH",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nothing Personal",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have an active course of action planned.</p><hr /><p>When you're on a job, you can't allow anyone to stop you. Designate a single creature you can see as being an impediment to your active course of action. The first time you Strike your impediment in a round, you deal an extra die of weapon damage. At 14th level, this increases to two extra dice, and at 20th level, this increases to three extra dice.</p>\n<p>You can have only one creature designated as an impediment at a time. If you use Nothing Personal against a creature when you already have a creature designated, the prior creature loses the designation, and the new impediment gains the designation. Otherwise, your designation lasts for 1 hour.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mercenary Motivation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Nothing Personal",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Nothing Personal"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +456,66 @@
       "name": "Opportune Opening",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3q7uo810lJJ09ghv",
+        "folder": "eLN5fg0dn0xdQGZZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Opportune Opening",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally lands a critical hit on a creature within your melee reach.</p><hr /><p>Your combat training taught you to capitalize on any moment of weakness from your foe. You make a melee Strike against the same creature your ally just hit. The creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against this Strike</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Blackjacket Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "opportune-opening",
+              "toggleable": true
+            },
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "opportune-opening"
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

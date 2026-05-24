@@ -7,6 +7,55 @@
       "name": "Shattered Sacrament",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Dthd23nBhnKZaMlP",
+        "folder": "wXS0eAMOesKusxel",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shattered Sacrament",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When Vigil fell to Tar-Baphon's Radiant Fire, that lost innocence brought you a deeper understanding of what faith means in the context of your own magic. When you cast a halcyon spell, you can choose for it to be a divine spell instead of arcane or primal. You gain a halcyon cantrip and a 1st-rank halcyon spell.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Halcyon Speaker Dedication"
+              },
+              {
+                "value": "Cascade Bearer's Spellcasting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Claws of the Tyrant"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +65,131 @@
       "name": "Speak for the Gravelands",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ogso0WqodeFG27L1",
+        "folder": "wXS0eAMOesKusxel",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Speak for the Gravelands",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're a member of the Vellumis Scholars.</p><hr /><p>You have learned much of what the Gravelands need and are confident in your ability to speak for them. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Geomancer Dedication] archetype feat, even if you normally couldn't take another dedication feat until you take more feats from your current archetype. You can benefit from the following Gravelands terrain attunement when in the Gravelands.</p>\n<p><strong>Gravelands</strong> (vitality) You gain a +1 status bonus to saving throws against the spells and abilities of haunts and undead creatures for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Terrain Attunement (Gravelands)]</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Halcyon Speaker Dedication"
+              },
+              {
+                "value": "trained in Nature"
+              },
+              {
+                "value": "can cast at least one spell with the vitality trait"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Claws of the Tyrant"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Geomancer Dedication"
+            },
+            {
+              "disabledIf": [
+                "attunement-shift"
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Geomancer.TerrainAttunement.Label",
+              "mergeable": true,
+              "option": "terrain-attunement",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Geomancer.SpeakForTheGravelands.GravelandsLabel",
+                  "value": "gravelands"
+                }
+              ],
+              "toggleable": "totm"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Geomancer.AttunementShift",
+              "mergeable": true,
+              "option": "attunement-shift",
+              "placement": "spellcasting",
+              "predicate": [
+                "feat:attunement-shift"
+              ],
+              "priority": 49,
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Geomancer.SpeakForTheGravelands.GravelandsLabel",
+                  "value": "gravelands"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Geomancer.Dedication.Label",
+              "mode": "add",
+              "predicate": [
+                "item:trait:vitality",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "terrain:gravelands",
+                        {
+                          "not": "attunement-shift"
+                        }
+                      ]
+                    },
+                    "terrain-attunement:gravelands",
+                    "attunement-shift:gravelands"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Geomancer.TerrainAttunement.Gravelands"
+                },
+                {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Terrain Attunement (Gravelands)]"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +199,58 @@
       "name": "Tripartite Omen",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4mDk8SQyx9dRxy9y",
+        "folder": "wXS0eAMOesKusxel",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tripartite Omen",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You invoke religious portents to ward yourself against danger without losing sight of the history that led to this point. When you use @UUID[Compendium.pf2e.feats-srd.Item.Dualistic Synergy], if your next action is to Cast a Spell from your spell slots and that spell is divine, you gain a +1 status bonus to AC for 1 round. If the spell is a halcyon spell, you gain this benefit in addition to the benefits described in Dualistic Synergy.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Tripartite Omen]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dualistic Synergy"
+              },
+              {
+                "value": "Shattered Sacrament"
+              },
+              {
+                "value": "master in Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Claws of the Tyrant"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +260,52 @@
       "name": "Vellumis Excision",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EPqhCeCo1uOvJSTZ",
+        "folder": "wXS0eAMOesKusxel",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vellumis Excision",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're a member of the Vellumis Scholars.</p><hr /><p>You seek to excise the rot from the Gravelands and have made progress to do so. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Field of Life] as a 6th-rank halcyon spell, and you gain a 6th-rank halcyon spell slot. When you cast your halcyon <em>field of life</em> as a primal spell, any living creatures in the area when you Sustain the spell gain a +2 status bonus to saving throws against curses, diseases, and poisons for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Vellumis Excision]</p><hr /><p><strong>Special</strong> If you have the Halcyon Spellcasting Sage feat, you treat the <em>field of life</em> halcyon spell gained from this feat as a signature spell, even though halcyon spells normally can't be signature spells.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Halcyon Spellcasting Adept"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Claws of the Tyrant"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +315,52 @@
       "name": "Vigil's Palisades",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S3rPkukk46SHntai",
+        "folder": "wXS0eAMOesKusxel",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vigil's Palisades",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you use Persistent Creation, you can create up to three special wooden shields that provide a +2 circumstance bonus to AC and have Hardness 15, 120 HP, and BT 60. A creature that Raises a Shield made with your Persistent Creation also gains a +2 item bonus to saving throws while the shield is raised.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Persistent Creation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Claws of the Tyrant"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

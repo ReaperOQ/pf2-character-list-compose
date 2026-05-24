@@ -1,0 +1,308 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "elfbane-hobgoblin.json",
+      "id": "ikNJZRxUjcRLisO6",
+      "name": "Elfbane Hobgoblin",
+      "img": "systems/pf2e/icons/features/ancestry/unbreakable-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ikNJZRxUjcRLisO6",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "systems/pf2e/icons/features/ancestry/unbreakable-goblin.webp",
+        "name": "Elfbane Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>Hobgoblins were engineered long ago from the unreliable and fecund goblins to be used as an army against the elves. Although the elves ultimately freed the hobgoblins from their bondage, some hobgoblins retain ancestral resistance to magic, which they refer to as \"elf magic.\" You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Resist Elf Magic] reaction.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Resist Elf Magic"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "runtboss-hobgoblin.json",
+      "id": "CzOHITB2ihLGqMuJ",
+      "name": "Runtboss Hobgoblin",
+      "img": "systems/pf2e/icons/features/ancestry/runtboss-hobgoblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "CzOHITB2ihLGqMuJ",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "systems/pf2e/icons/features/ancestry/runtboss-hobgoblin.webp",
+        "name": "Runtboss Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>You come from a long line of hobgoblins who commanded goblins. You are smaller than other hobgoblins, but goblins still listen to any commands you bellow. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Group Coercion] skill feat. If you roll a success on an Intimidation check to @UUID[Compendium.pf2e.actionspf2e.Item.Coerce] a goblin, you get a critical success instead; if you roll a critical failure, you get a failure instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Group Coercion"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "target:trait:goblin",
+                    "action:coerce"
+                  ]
+                }
+              ],
+              "selector": "intimidation"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shortshanks-hobgoblin.json",
+      "id": "rQJBtQ9uKUzK9ktK",
+      "name": "Shortshanks Hobgoblin",
+      "img": "systems/pf2e/icons/features/ancestry/warmarch-hobgoblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "rQJBtQ9uKUzK9ktK",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "systems/pf2e/icons/features/ancestry/warmarch-hobgoblin.webp",
+        "name": "Shortshanks Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>You have a longer torso and broader shoulders than most hobgoblins, making your legs seem short by comparison. This gives you a strong, muscular core and lowers your center of gravity—features that assist you in riding and climbing—and you've trained at riding in a saddle from an extremely early age. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Ride] feat. Additionally, you are not @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] while you Climb.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Ride"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "smokeworker-hobgoblin.json",
+      "id": "n2eJEjA8pnOMiuCm",
+      "name": "Smokeworker Hobgoblin",
+      "img": "systems/pf2e/icons/features/ancestry/smokeworker-hobgoblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "n2eJEjA8pnOMiuCm",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "systems/pf2e/icons/features/ancestry/smokeworker-hobgoblin.webp",
+        "name": "Smokeworker Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>Your family have been alchemists, engineers, and scientists for generations, laboring on projects that bring smoke and fire to the field of battle. You gain fire resistance equal to half your level (minimum 1). You automatically succeed at the DC 5 flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.Concealed] creature if that creature is concealed only by smoke.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "fire",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "steelskin-hobgoblin.json",
+      "id": "BFOsMnWfXL1oaWkY",
+      "name": "Steelskin Hobgoblin",
+      "img": "icons/commodities/metal/mail-scale-steel.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "BFOsMnWfXL1oaWkY",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "icons/commodities/metal/mail-scale-steel.webp",
+        "name": "Steelskin Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>When you are cut or burned, your body responds by forming tough but flexible callouses over the site of the injury. Over time, this makes the most vulnerable sections of your body harder and more resistant to damage. Many steelskin hobgoblins intentionally use blades and flame to scar themselves in intricate patterns, though this isn't universal. Your flat check to recover from persistent physical (including bleed), energy, or poison damage is DC 13 (rather than DC 15), or @Check[flat|dc:8] when provided particularly effective assistance.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                {
+                  "or": [
+                    "item:damage:category:energy",
+                    "item:damage:category:physical",
+                    "item:damage:type:poison"
+                  ]
+                }
+              ],
+              "property": "pd-recovery-dc",
+              "value": 13
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "warmarch-hobgoblin.json",
+      "id": "K124fCpU03SJvmeP",
+      "name": "Warmarch Hobgoblin",
+      "img": "systems/pf2e/icons/features/ancestry/warmarch-hobgoblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "K124fCpU03SJvmeP",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "systems/pf2e/icons/features/ancestry/warmarch-hobgoblin.webp",
+        "name": "Warmarch Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>You come from a line of wandering mercenaries constantly on the march and scavenging food on the trail. If you fail, but don't critically fail, to @UUID[Compendium.pf2e.actionspf2e.Item.Subsist] in the wilderness, you can still keep yourself fed with poor meals. When exploring, you can @UUID[Compendium.pf2e.actionspf2e.Item.Hustle] twice as long before you have to stop.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "warrenbred-hobgoblin.json",
+      "id": "0vaeOoECfVD5EGbq",
+      "name": "Warrenbred Hobgoblin",
+      "img": "systems/pf2e/icons/features/ancestry/warrenbred-hobgoblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "0vaeOoECfVD5EGbq",
+        "folder": "DoyS4o4DOl0MXyma",
+        "img": "systems/pf2e/icons/features/ancestry/warrenbred-hobgoblin.webp",
+        "name": "Warrenbred Hobgoblin",
+        "system": {
+          "ancestry": {
+            "name": "Hobgoblin",
+            "slug": "hobgoblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.piNLXUrm9iaGqD2i"
+          },
+          "description": {
+            "value": "<p>Your ancestors lived underground. Your ears are larger than those of other hobgoblins and sensitive to echoes. While you're underground, when you target an opponent that is @UUID[Compendium.pf2e.conditionitems.Item.Concealed] from you or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from you, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one. In addition, if you roll a success on an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Squeeze], you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:squeeze"
+              ],
+              "selector": "acrobatics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,43 @@
       "name": "Hierophant's Power",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Chu6s3xVnpOB64GH",
+        "folder": "llQsbLYuKvm6QaPj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hierophant's Power",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have entwined yourself with the natural world, and its full power flows through you. You gain an additional 10th-rank spell slot.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +53,89 @@
       "name": "Ley Line Conduit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BQkk7qSSRTFc5jNG",
+        "folder": "llQsbLYuKvm6QaPj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ley Line Conduit",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p>You can draw magic from the ley lines of the world. If your next action is to Cast a Spell of 5th rank or lower that has no duration, you don't expend the prepared spell as you cast it.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:ley-line-conduit",
+                "item:duration:0",
+                {
+                  "lte": [
+                    "item:rank",
+                    5
+                  ]
+                },
+                {
+                  "not": "cantrip"
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.LeyLineConduit"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "ley-line-conduit"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "druid",
+              "manipulate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +145,56 @@
       "name": "True Shapeshifter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mGzPR7M9H733j2wN",
+        "folder": "llQsbLYuKvm6QaPj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "True Shapeshifter",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You transcend the limitations of form. Once per day you can cast @UUID[Compendium.pf2e.spells-srd.Item.Nature Incarnate], even if you don't have it prepared, to transform into a kaiju. If you have @UUID[Compendium.pf2e.feats-srd.Item.Plant Shape], you can choose to transform into a green man instead. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.True Shapeshift] activity.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dragon Shape"
+              },
+              {
+                "value": "Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.True Shapeshift"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

@@ -7,6 +7,44 @@
       "name": "Dastardly Dash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5My8JBXkQru8m2n1",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dastardly Dash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You dash past an opponent, confounding them with underhanded tactics. Stride up to half your speed. You can attempt a @UUID[Compendium.pf2e.actionspf2e.Item.Trip] or a @UUID[Compendium.pf2e.feats-srd.Item.Dirty Trick] (if you have that action) against one opponent you pass within range of at any point during your movement.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +54,51 @@
       "name": "Even the Odds",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5HDBvVbfoaXljbch",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Even the Odds",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> Your turn begins.</p>\n<p><strong>Requirements</strong> You are being flanked.</p><hr /><p>You shine brightest in desperate moments. You flash a confident smile or pose, and you gain panache until the end of your turn.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Even the Odds",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Even the Odds"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +108,64 @@
       "name": "Flamboyant Athlete",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tmGsnUkPv8SIhBgn",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flamboyant Athlete",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your panache allows you to perform incredible feats: climbing, swimming, and leaping far beyond your normal capacity. While you have @UUID[Compendium.pf2e.classfeatures.Item.Panache], you gain the following benefits.</p><ul><li>You gain climb and swim Speeds equal to half your land Speed.</li><li>The DCs of your @UUID[Compendium.pf2e.actionspf2e.Item.High Jump]{High Jumps} and @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump]{Long Jumps} decrease by 10. This doesn't combine with other abilities that reduce those DCs.</li><li>The distance you can move with a vertical @UUID[Compendium.pf2e.actionspf2e.Item.Leap] increases to 5 feet. Your distance for a horizontal Leap increases to 15 feet if your Speed is at least 15 feet, or to 20 feet if your Speed is at least 30 feet.</li></ul>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "self:effect:panache"
+              ],
+              "selector": "climb",
+              "value": "floor(@actor.system.movement.speeds.land.value/2)"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "self:effect:panache"
+              ],
+              "selector": "swim",
+              "value": "floor(@actor.system.movement.speeds.land.value/2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +175,43 @@
       "name": "Guardian's Deflection (Swashbuckler)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YJIzE2RhGRGfbt9j",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guardian's Deflection (Swashbuckler)",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally within your melee reach is hit by an attack, you can see the attacker, and a +2 circumstance bonus to AC would turn the critical hit into a hit or the hit into a miss.</p>\n<p><strong>Requirements</strong> You are wielding a single one-handed melee weapon and have your other hand or hands free.</p><hr /><p>You use your weapon to deflect the attack against your ally, granting a +2 circumstance bonus to their AC against the triggering attack. This turns the triggering critical hit into a hit, or the triggering hit into a miss. You gain panache until the end of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Guardian's Deflection]</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache (Temporary)]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +221,64 @@
       "name": "Impaling Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qfn7lmOeXfBtpG4O",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impaling Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You stab two foes with a single thrust or bash them together with one punch.</p>\n<p>Make a bludgeoning or piercing melee Strike and compare the attack roll result against the AC of up to two foes. One foe must be adjacent to you, and the other foe must be adjacent to and directly behind the first foe, in a straight line from your space.</p>\n<p>Roll damage once and apply it to each creature you hit. An Impaling Finisher counts as two attacks when calculating your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Impaling",
+                  "value": "impaling"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +288,49 @@
       "name": "Leading Dance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZHPSASbvbbshq1zG",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leading Dance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are adjacent to an enemy.</p><hr /><p>You sweep your foe into your dance. Attempt a @Check[performance|defense:will] check against an adjacent enemy's Will DC.</p><hr /><p><strong>Critical Success</strong> Your foe is swept up in your dance. You both move up to 10 feet in the same direction, remaining adjacent to one another. Your movement doesn't trigger reactions from the target (and the target's movement doesn't trigger reactions because it's forced movement).</p>\n<p><strong>Success</strong> As critical success, but you both move only 5 feet.</p>\n<p><strong>Failure</strong> The foe doesn't follow your steps. You can move 5 feet if you choose, but this movement triggers reactions normally.</p>\n<p><strong>Critical Failure</strong> You stumble, falling @UUID[Compendium.pf2e.conditionitems.Item.Prone] in your space.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bravado",
+              "move",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +340,59 @@
       "name": "Swaggering Initiative",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NHheDmNB7L4REmlr",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swaggering Initiative",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are about to roll initiative.</p><hr /><p>You swagger readily into any fight. You gain a +2 circumstance bonus to your initiative roll and can Interact to draw a weapon. If you are the first to act in combat, you gain @UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache]{Panache}.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "initiative",
+              "key": "RollOption",
+              "option": "swaggering-initiative",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "swaggering-initiative"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +402,90 @@
       "name": "Twirling Throw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WGGLlrhV8cKFn1v0",
+        "folder": "RXB0Yz1ukXYfyRAG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twirling Throw",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your thrown weapons seem to defy physics as they soar through the air and spin back to you after a strike. Make a thrown weapon strike, ignoring the penalty for making ranged attacks within the second and third range increment. The weapon returns to your hand after the attack unless you critically failed on the attack roll.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Flying Blade"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.TwirlingThrow",
+                  "value": "twirling-throw"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "domain": "ranged-attack-roll",
+              "key": "RollOption",
+              "option": "ignore-range-penalty:3",
+              "predicate": [
+                "finisher:twirling-throw"
+              ]
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure",
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "finisher:twirling-throw"
+              ],
+              "selector": "ranged-strike-attack-roll",
+              "text": "PF2E.SpecificRule.Swashbuckler.Finisher.TwirlingThrowNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

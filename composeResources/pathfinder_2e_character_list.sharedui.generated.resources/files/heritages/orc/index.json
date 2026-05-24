@@ -1,0 +1,330 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "badlands-orc.json",
+      "id": "8Gsa8KFsHizEwSHU",
+      "name": "Badlands Orc",
+      "img": "systems/pf2e/icons/features/ancestry/badlands-orc.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "8Gsa8KFsHizEwSHU",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "systems/pf2e/icons/features/ancestry/badlands-orc.webp",
+        "name": "Badlands Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>You come from sun-scorched badlands, where long legs and an ability to withstand the elements helped you thrive. You can @UUID[Compendium.pf2e.actionspf2e.Item.Hustle] twice as long while exploring before you have to stop, and you treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "battle-ready-orc.json",
+      "id": "nXQxlmjH24Eb8h2Q",
+      "name": "Battle-Ready Orc",
+      "img": "icons/magic/control/fear-fright-monster-grin-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "nXQxlmjH24Eb8h2Q",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "icons/magic/control/fear-fright-monster-grin-green.webp",
+        "name": "Battle-Ready Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>You descend from a line of terrifying battlefield commanders. You become trained in Intimidation, and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Intimidating Glare] skill feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Intimidating Glare"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "deep-orc.json",
+      "id": "wn4EbYk1QN3tyFhh",
+      "name": "Deep Orc",
+      "img": "systems/pf2e/icons/features/ancestry/deep-orc.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "wn4EbYk1QN3tyFhh",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "systems/pf2e/icons/features/ancestry/deep-orc.webp",
+        "name": "Deep Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>Your calloused hands and red eyes speak to a life spent in the deep darkness of mountain caverns, where you learned to battle on rocky cliffs and survive with minimal resources. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Terrain Expertise] skill feat for underground terrain and the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] skill feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "preselectChoices": {
+                "terrain": "underground"
+              },
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Expertise"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "grave-orc.json",
+      "id": "VvEAFoxuddYNBmNc",
+      "name": "Grave Orc",
+      "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VvEAFoxuddYNBmNc",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+        "name": "Grave Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>You were exposed to powerful necromantic energies that should have killed you—but you survived. Your skin is cold, clammy, and gray. You gain resistance to void damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against effects with the death or void trait.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "void",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:death",
+                    "item:trait:void"
+                  ]
+                }
+              ],
+              "selector": [
+                "saving-throw"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "hold-scarred-orc.json",
+      "id": "MTTU2t7x6TjvUDnE",
+      "name": "Hold-Scarred Orc",
+      "img": "systems/pf2e/icons/features/ancestry/hold-scarred-orc.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "MTTU2t7x6TjvUDnE",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "systems/pf2e/icons/features/ancestry/hold-scarred-orc.webp",
+        "name": "Hold-Scarred Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>You are part of an orc community that participates in ritual scarification or tattooing. The marks on your skin show your exceptional hardiness and vitality. You gain 12 Hit Points from your ancestry instead of 10. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Diehard] feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 12
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "rainfall-orc.json",
+      "id": "dwKCwwtWetvPmJks",
+      "name": "Rainfall Orc",
+      "img": "systems/pf2e/icons/features/ancestry/rainfall-orc.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "dwKCwwtWetvPmJks",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "systems/pf2e/icons/features/ancestry/rainfall-orc.webp",
+        "name": "Rainfall Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms and flash floods. You've learned to move adeptly through jungle terrain and resist the various ailments common in humid environs. You gain a +2 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Climb] or @UUID[Compendium.pf2e.actionspf2e.Item.Swim] and a +1 circumstance bonus to saving throws against diseases.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:climb",
+                    "action:swim"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "disease"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "winter-orc.json",
+      "id": "pZ1u2ScWrBXSaAqQ",
+      "name": "Winter Orc",
+      "img": "icons/magic/water/ice-snowman.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "pZ1u2ScWrBXSaAqQ",
+        "folder": "LTFGaifgeBxZ0LtD",
+        "img": "icons/magic/water/ice-snowman.webp",
+        "name": "Winter Orc",
+        "system": {
+          "ancestry": {
+            "name": "Orc",
+            "slug": "orc",
+            "uuid": "Compendium.pf2e.ancestries.Item.lSGWXjcbOa6O5fTx"
+          },
+          "description": {
+            "value": "<p>Your ancestors survived in cold climates. You become trained in Survival, and you treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

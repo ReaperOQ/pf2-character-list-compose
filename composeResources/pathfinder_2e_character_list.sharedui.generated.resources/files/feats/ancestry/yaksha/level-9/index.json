@@ -7,6 +7,58 @@
       "name": "Abjure the False Kin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P40wHiI9uidwPkTW",
+        "folder": "L9P124Vjhvme5wTj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Abjure the False Kin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your vow reminds you that there can be brackish vinegar hiding within honeyed words, helping you detect attempts to influence your mind. If you roll a success on a saving throw against a mental effect that doesn't deal damage, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:mental",
+                {
+                  "not": "damaging-effect"
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +68,62 @@
       "name": "Fiend-Trampling Stature",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nk8jtjNodT15IU1N",
+        "folder": "L9P124Vjhvme5wTj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fiend-Trampling Stature",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Fiends unfortunate enough to be trampled beneath your feet or rent within your grasp are swiftly granulated into bone kindling and blood powder, and the pain of your strikes prevents them from action. Whenever you critically hit a creature that's @UUID[Compendium.pf2e.conditionitems.Item.Prone], @UUID[Compendium.pf2e.conditionitems.Item.Grabbed], or @UUID[Compendium.pf2e.conditionitems.Item.Restrained], it can't use reactions for 1 round.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                {
+                  "or": [
+                    "target:condition:prone",
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +133,49 @@
       "name": "Four-Armed Aspect",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "10bkE3TZsr7kvdn4",
+        "folder": "L9P124Vjhvme5wTj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Four-Armed Aspect",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You intone vows to shoulder others' pains; in response, your torso sprouts an additional pair of arms to help you bear those burdens. For the following minute, you can carry 3 more Bulk than normal before becoming encumbered and up to a maximum of 6 more Bulk. You can also use these arms as free hands to perform only the following actions or activities: @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Grapple], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], and @UUID[Compendium.pf2e.actionspf2e.Item.Trip]. After this minute or when you become @UUID[Compendium.pf2e.conditionitems.Item.Unconscious], whichever comes first, these additional arms fade away.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "morph",
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +185,77 @@
       "name": "Horn and Bone Incantation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JXKbfwsyYWcqZUUl",
+        "folder": "L9P124Vjhvme5wTj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Horn and Bone Incantation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You invoke mantras of tellurian rebirth. You gain the ability to cast @UUID[Compendium.pf2e.spells-srd.Item.Animal Form] and @UUID[Compendium.pf2e.spells-srd.Item.Humanoid Form] as 2nd-rank primal innate spells, each once per day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:animal-form",
+                    "item:slug:humanoid-form"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:animal-form",
+                    "item:slug:humanoid-form"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:yaksha"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +265,44 @@
       "name": "Witness of Earth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NhBKdOa02dCMxUnG",
+        "folder": "L9P124Vjhvme5wTj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Witness of Earth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The primal magic in your soul offers the patient earth's timeless counsel. You learn the @UUID[Compendium.pf2e.spells-srd.Item.Atone] ritual. When you use the <em>atone</em> ritual on yakshas and you roll a critical failure, you get a failure instead, and if you roll a success, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +312,81 @@
       "name": "World-Protector's Hospitality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2sVR3Z1TPZ8pQdQ0",
+        "folder": "L9P124Vjhvme5wTj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "World-Protector's Hospitality",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Through your spiritual power, you impede starvation and restore pantries. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Create Food] and @UUID[Compendium.pf2e.spells-srd.Item.Cleanse Cuisine] as 2nd-rank primal innate spells, each once per day. Additionally, when you cast these spells, you instantly restore Hit Points to the containers storing these magical comestibles as though you've succeeded at a Repair action using your proficiency in your spell DC in place of your Crafting proficiency.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Meticulous Restorer"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:create-food",
+                    "item:slug:cleanse-cuisine"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:create-food",
+                    "item:slug:cleanse-cuisine"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:yaksha"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

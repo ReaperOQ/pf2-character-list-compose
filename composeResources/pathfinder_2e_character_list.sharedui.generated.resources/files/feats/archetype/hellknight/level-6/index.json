@@ -7,6 +7,66 @@
       "name": "Hellknight-Errant",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3acizttblPMfO1O7",
+        "folder": "8TID8WMvKPKzRf7n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hellknight-Errant",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Either through unfortunate circumstances or your own choice, you remain a Hellknight armiger instead of entering the true ranks of your order, though you still believe in the tenets of law and order. You likely take on an adventuring life with a group of like-minded individuals who aren't Hellknights. The resistance to mental damage you gained from the Hellknight Dedication feat increases to 5 + your number of archetype class feats from the Hellknight archetype.</p>\n<p>You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Warding Shift] action, which allows you to keep your allies from harm.</p><hr /><p><strong>Special</strong> You can't take both this feat and @UUID[Compendium.pf2e.feats-srd.Item.Hellknight Preferment] or @UUID[Compendium.pf2e.feats-srd.Item.Hellknight Signifer Preferment].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hellknight Dedication"
+              },
+              {
+                "value": "you’ve refused to take or have failed the Hellknight Test"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.hellknightArchetype.featCount",
+              "value": 5
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Warding Shift"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +76,102 @@
       "name": "Hellknight Preferment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oNh2vedij8xbDbph",
+        "folder": "8TID8WMvKPKzRf7n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hellknight Preferment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've forged your body to be able to stand toe-to-toe with a devil, and your mind has been shaped by the strictures of the Measure and the Chain. You've become a true Hellknight. You gain expert proficiency rank in Intimidation (or in another skill in which you're trained of your choice, if you were already an expert in Intimidation). You gain the armor specialization effects of Hellknight breastplate, Hellknight half plate, and Hellknight plate, and your resistance from that armor specialization is 1 higher than normal. In addition, you gain a +1 circumstance bonus to Intimidation checks while wearing any Hellknight armor.</p><hr /><p><strong>Special</strong> You can't take both this feat and @UUID[Compendium.pf2e.feats-srd.Item.Hellknight-Errant] or @UUID[Compendium.pf2e.feats-srd.Item.Hellknight Signifer Preferment].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hellknight Dedication"
+              },
+              {
+                "value": "passed the Hellknight Test"
+              },
+              {
+                "value": "trained in Hellknight plate"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.hellknightArchetype.featCount",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "armor:slug:hellknight-plate",
+                    "armor:slug:hellknight-breastplate",
+                    "armor:slug:hellknight-half-plate"
+                  ]
+                }
+              ],
+              "selector": "intimidation",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                {
+                  "or": [
+                    "armor:slug:hellknight-plate",
+                    "armor:slug:hellknight-half-plate"
+                  ]
+                }
+              ],
+              "type": "slashing",
+              "value": "3 + @armor.system.runes.potency"
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "armor:slug:hellknight-breastplate"
+              ],
+              "type": "slashing",
+              "value": "2 + @armor.system.runes.potency"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +181,134 @@
       "name": "Hellknight Signifer Preferment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "62hpJOuvYYSa4X7u",
+        "folder": "8TID8WMvKPKzRf7n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hellknight Signifer Preferment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've bolstered your force of will with the power of the Measure and the Chain. You've officially joined the ranks of Hellknight signifers, and you receive a @UUID[Compendium.pf2e.equipment-srd.Item.Signifer's Mask], often devoid of eyeholes or other decorative features. The mask doesn't obscure your vision, though it makes it impossible for others to see your eyes. While wearing your signifer's mask, you gain a +1 circumstance bonus to Deception checks to [[/act lie]], Intimidation checks to [[/act coerce]], and Deception DCs against [[/act sense-motive]]. You gain expert proficiency rank in Intimidation (or in another skill in which you're trained of your choice, if you were already an expert in Intimidation), as well as in your choice of Arcana, Nature, Occultism, or Religion.</p><hr /><p><strong>Special</strong> You can't take both this feat and @UUID[Compendium.pf2e.feats-srd.Item.Hellknight-Errant] or @UUID[Compendium.pf2e.feats-srd.Item.Hellknight Preferment].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hellknight Dedication"
+              },
+              {
+                "value": "passed the Hellknight Test"
+              },
+              {
+                "value": "trained in Hellknight breastplate"
+              },
+              {
+                "value": "you have a spellcasting class feature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.hellknightArchetype.featCount",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "value": 2
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Signifer's Mask"
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Arcana",
+                  "predicate": [
+                    {
+                      "lt": [
+                        "skill:arcana:rank",
+                        2
+                      ]
+                    }
+                  ],
+                  "value": "arcana"
+                },
+                {
+                  "label": "PF2E.Skill.Nature",
+                  "predicate": [
+                    {
+                      "lt": [
+                        "skill:nature:rank",
+                        2
+                      ]
+                    }
+                  ],
+                  "value": "nature"
+                },
+                {
+                  "label": "PF2E.Skill.Religion",
+                  "predicate": [
+                    {
+                      "lt": [
+                        "skill:religion:rank",
+                        2
+                      ]
+                    }
+                  ],
+                  "value": "religion"
+                },
+                {
+                  "label": "PF2E.Skill.Occultism",
+                  "predicate": [
+                    {
+                      "lt": [
+                        "skill:occultism:rank",
+                        2
+                      ]
+                    }
+                  ],
+                  "value": "occultism"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

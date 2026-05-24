@@ -7,6 +7,76 @@
       "name": "Adaptive Vision",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "z92LsdpE98QdwILa",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Adaptive Vision",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>After years of using black powder weaponry in dimly lit spaces, you've become accustomed to dazzling flashes of light and sudden shifts in illumination. You gain a +1 circumstance bonus to saving throws against visual effects. If you roll a success on a saving throw against a visual effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:visual"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "visual"
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "item:trait:visual"
+              ],
+              "selector": "saving-throw",
+              "text": "When you roll a success on a save against a visual effect, you get a critical success instead.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +86,71 @@
       "name": "Clan Pistol",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LvVg83ZDj8mabcWF",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clan Pistol",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>Raised in the ancient halls of Dongun Hold or the surrounding region, you display your lineage with a clan pistol, rather than a clan dagger. You get one clan pistol of your clan for free, as it was given to you at birth. This replaces your clan dagger. Selling this pistol is a terrible taboo and earns you the disdain of other dwarves. You are trained with the clan pistol. In addition, when your clan pistol is visible, you gain a +1 circumstance bonus on checks to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] or @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] when interacting with citizens of Alkenstar, Dongun Hold, or their allies.</p>"
+          },
+          "level": {
+            "taken": 1,
+            "value": 1
+          },
+          "location": "ancestry-1",
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Clan Pistol"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "dongun-ally",
+                {
+                  "or": [
+                    "action:gather-information",
+                    "action:make-an-impression"
+                  ]
+                }
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.weapon-base-clan-pistol.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +160,43 @@
       "name": "Dongun Education",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qvxHGcOUYVG7Tqt4",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dongun Education",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>You're knowledgeable in trades that are important to your people's survival and commercial interests. Pick two of the following Lore skills: Engineering Lore, Explosive Lore, or Firearm Lore. At 2nd level, you gain expert proficiency in these Lore skills; at 7th level, you gain master proficiency in these Lore skills; and at 15th level, you gain legendary proficiency in them.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +206,43 @@
       "name": "Dwarven Doughtiness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UJ8AqzkkDqRCMNFW",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dwarven Doughtiness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are naturally calm and collected in the face of imminent danger. At the end of your turn, reduce your @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition by 2 instead of 1.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +252,60 @@
       "name": "Dwarven Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9bnkx6VgcO5mOk5b",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dwarven Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You eagerly absorbed the old stories and traditions of your ancestors, your gods, and your people, studying subjects and techniques passed down for generation upon generation. You gain the trained proficiency rank in Crafting and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Dwarf Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +315,94 @@
       "name": "Dwarven Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CXS0ryG2SODSobm9",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dwarven Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your kin have instilled in you an affinity for hard-hitting weapons, and you prefer these to more elegant arms. You gain access to all uncommon weapons with the dwarf trait. You have familiarity with weapons with the dwarf trait plus the battle axe, pick, and warhammer—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:dwarf",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:battle-axe",
+                    "item:base:warhammer",
+                    "item:base:pick"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialDwarfWeapons",
+              "sameAs": "simple",
+              "slug": "martial-dwarf-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:dwarf",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedDwarfWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-dwarf-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:dwarf",
+                    "item:base:battle-axe",
+                    "item:base:pick",
+                    "item:base:warhammer"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +412,73 @@
       "name": "Explosive Savant",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6EgHimhCuS8L0xDE",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Explosive Savant",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>You've spent a lifetime wielding guns and explosive ordinance. You have familiarity with bombs and firearms; for the purposes of proficiency you treat bombs and martial firearms as simple weapons, and advanced firearms as martial weapons.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:group:bomb",
+                    {
+                      "and": [
+                        "item:group:firearm",
+                        "item:category:martial"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialBombsFirearms",
+              "sameAs": "simple",
+              "slug": "martial-bombs-firearms"
+            },
+            {
+              "definition": [
+                "item:category:advanced",
+                "item:group:firearm"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedGroup.firearm",
+              "sameAs": "martial",
+              "slug": "advanced-firearms"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +488,54 @@
       "name": "Fire Savvy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W5hgaJvaCrTKfYbC",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fire Savvy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>You've grown up around a forge and are well-suited to dealing with smoke and flame. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which is reduced to DC 5 with appropriate assistance. In addition, if you roll a success on a saving throw against suffocation or choking due to smoke or ash, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "item:damage:type:fire"
+              ],
+              "property": "pd-recovery-dc",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +545,75 @@
       "name": "Mountain Strategy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UFn85K7uDsZj5Hep",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mountain Strategy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Dwarves have a long history fighting common foes, and you've mastered the ancient tactics to better face these enemies. You gain a +1 circumstance bonus to damage with weapons and unarmed attacks against creatures with the giant, goblin, hryngar, or orc trait. If your attack would deal more than one weapon die of damage (as is common at higher levels than 1st), the bonus is equal to the number of weapon dice or unarmed attack dice.</p>\n<p>In addition, if any creature critically succeeds at an attack against you and deals damage to you, you gain your bonus to damage against that creature for 1 minute regardless of whether it has one of the listed traits.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Mountain Strategy (Critically Hit)]</p><hr /><p><strong>Special</strong> Your GM can add appropriate creature traits to the ancestral foes list if your character is from a community that commonly fights other types of enemies.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "selector": [
+                "damage-received"
+              ],
+              "text": "PF2E.SpecificRule.Dwarf.MountainStrategy.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "target:mark:mountain-strategy",
+                    "target:trait:giant",
+                    "target:trait:goblin",
+                    "target:trait:hryngar",
+                    "target:trait:orc"
+                  ]
+                }
+              ],
+              "selector": [
+                "unarmed-damage",
+                "weapon-damage"
+              ],
+              "type": "circumstance",
+              "value": "@weapon.system.damage.dice"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +623,70 @@
       "name": "Rock Runner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NIUSBGMmdqhkYtmo",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rock Runner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your innate connection to stone makes you adept at moving across uneven surfaces. You can ignore difficult terrain caused by stone (such as rubble or gravel) and uneven ground made of stone and earth. In addition, when you use the Acrobatics skill to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] on narrow surfaces or uneven ground made of stone or earth, you aren't @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], and when you roll a success at one of these Acrobatics checks, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:balance",
+                {
+                  "or": [
+                    "terrain:stone",
+                    "terrain:earth"
+                  ]
+                }
+              ],
+              "selector": "acrobatics",
+              "type": "save"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:balance"
+              ],
+              "selector": "acrobatics",
+              "text": "PF2E.SpecificRule.Dwarf.RockRunner.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -97,6 +696,75 @@
       "name": "Stonemason's Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HOUHs5rahwIsQoBf",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stonemason's Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You understand the intricacies of stonework. You become trained in Crafting. If you're already trained in Crafting, you instead gain the @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting] skill feat for stonemasonry.</p>\n<p>You also gain a +2 circumstance bonus to Perception checks to notice unusual stonework. This bonus applies to checks to discover mechanical traps made of stone or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] within stone.</p>\n<p>If you aren't using the @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action or searching, the GM automatically rolls a secret check for you to notice unusual stonework anyway. This check doesn't gain your normal circumstance bonus.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:seek",
+                "terrain:unusual-stonework"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "gte": [
+                    "skill:crafting:rank",
+                    1
+                  ]
+                }
+              ],
+              "preselectChoices": {
+                "specialtyCrafting": "stonemasonry"
+              },
+              "uuid": "Compendium.pf2e.feats-srd.Item.Specialty Crafting"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -106,6 +774,72 @@
       "name": "Unburdened Iron",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "C1R4wd6G46CAVIn7",
+        "folder": "kTu1AMjR6p5abNSc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unburdened Iron",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned techniques first devised by your ancestors during their ancient wars, allowing you to comfortably wear massive suits of armor. Ignore the reduction to your Speed from any armor you wear.</p>\n<p>In addition, any time you're taking a penalty to your Speed for some other reason (such as from the @UUID[Compendium.pf2e.conditionitems.Item.Encumbered] condition or from a spell), deduct 5 feet from the penalty. For example, the encumbered condition normally gives a –10-foot penalty to Speed, but this feat would reduce it to a –5-foot penalty. If your Speed is taking multiple penalties, pick only one penalty to reduce.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "selectors": [
+                "land-speed"
+              ],
+              "slug": "armor-speed-penalty",
+              "suppress": true
+            },
+            {
+              "key": "AdjustModifier",
+              "maxApplications": 1,
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "penalty:slug:armor-speed-penalty"
+                },
+                {
+                  "lte": [
+                    "penalty:value",
+                    -5
+                  ]
+                }
+              ],
+              "selectors": [
+                "land-speed"
+              ],
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

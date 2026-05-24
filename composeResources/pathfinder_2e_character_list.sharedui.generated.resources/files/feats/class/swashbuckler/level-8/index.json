@@ -7,6 +7,114 @@
       "name": "Bleeding Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dxujgA0NgiEvA0H8",
+        "folder": "c5TgbUK0sYtB0lXP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bleeding Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your blow inflicts profuse bleeding. Make a slashing or piercing Strike. If you hit, the target also takes persistent bleed damage equal to your precise strike finisher damage.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Bleeding",
+                  "value": "bleeding"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "category": "persistent",
+              "damageType": "bleed",
+              "diceNumber": "@actor.flags.system.swashbuckler.preciseStrike",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "finisher:bleeding",
+                {
+                  "or": [
+                    "item:melee",
+                    {
+                      "and": [
+                        "feat:flying-blade",
+                        "item:thrown",
+                        {
+                          "or": [
+                            "target:range-increment:1",
+                            {
+                              "and": [
+                                "finisher:twirling-throw",
+                                {
+                                  "lte": [
+                                    "target:range-increment",
+                                    3
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:agile",
+                    "item:trait:finesse"
+                  ]
+                },
+                {
+                  "or": [
+                    "item:damage:type:piercing",
+                    "item:damage:type:slashing"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +124,45 @@
       "name": "Distracting Toss",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lGuoGim7J8Z97kor",
+        "folder": "c5TgbUK0sYtB0lXP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distracting Toss",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You toss one weapon into the air as a distraction as you throw another. Choose a creature within 30 feet and [[/act feint traits=bravado]] against it; you can attempt this Feint even if the target is not within melee range, and if the target becomes @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] as a result of the Feint, this applies to your thrown weapon attacks for the duration.</p>\n<p>Regardless of the result, you can then Interact to draw a thrown weapon and make a thrown weapon Strike against the target. If you have an open hand, you then catch the weapon you originally tossed into the air unless you critically failed at your attempt to Feint, in which case it lands on the ground at your feet.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bravado",
+              "flourish",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +172,86 @@
       "name": "Dual Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PP1gfRCc1YwnQGxp",
+        "folder": "c5TgbUK0sYtB0lXP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dual Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You wield two melee weapons, one in each hand.</p>\n<hr />\n<p>You split your attacks. Make two melee @UUID[Compendium.pf2e.actionspf2e.Item.Strike]{Strikes}, one with each required weapon, each against a different foe. If the second Strike is made with a non-agile weapon, it takes a -2 penalty.</p>\n<p>Increase your multiple attack penalty only after attempting both Strikes.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Dual",
+                  "value": "dual"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.DualSecondAttackLabel",
+              "option": "dual-finisher-second",
+              "predicate": [
+                "finisher:dual"
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "dual-finisher-second",
+                {
+                  "not": "item:trait:agile"
+                }
+              ],
+              "selector": [
+                "melee-strike-attack-roll"
+              ],
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +261,57 @@
       "name": "Flashy Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DfSe0BFocS9AuJTP",
+        "folder": "c5TgbUK0sYtB0lXP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flashy Roll",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can use @UUID[Compendium.pf2e.feats-srd.Item.Flashy Dodge] before attempting a Reflex save, in addition to its original trigger. If you do, the circumstance bonus applies to your Reflex save against the triggering effect.</p>\n<p>When you use Flashy Dodge and the triggering attack fails or critically fails, or when you succeed or critically succeed at the saving throw, you can also Stride up to 10 feet as part of the reaction. If you do, the reaction gains the move trait. You can use Flashy Roll while Flying or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Flashy Dodge"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "flashy-dodge"
+              ],
+              "selector": "reflex",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +321,77 @@
       "name": "Stunning Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jkBzlMB4TS1sS2Fm",
+        "folder": "c5TgbUK0sYtB0lXP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stunning Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You attempt a dizzying blow. Make a melee Strike. If you hit, your foe must attempt a @Check[fortitude|against:swashbuckler|traits:incapacitation] save against your class DC with the following results; the save has the incapacitation trait.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target can't use reactions until its next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3}.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Stunning",
+                  "value": "stunning"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "finisher:stunning"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +401,47 @@
       "name": "Vivacious Bravado",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2MHzEh1KUQEbhjUf",
+        "folder": "c5TgbUK0sYtB0lXP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vivacious Bravado",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You gained @UUID[Compendium.pf2e.classfeatures.Item.Panache] this turn.</p><hr /><p>Your ego swells, granting you a temporary reprieve from your pain. You gain temporary Hit Points equal to your level plus your Charisma modifier that last until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Vivacious Bravado",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Vivacious Bravado"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

@@ -7,6 +7,64 @@
       "name": "Celestial Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yTqKHRz2Jv8KiXve",
+        "folder": "b6DZbemkVXVz34Ym",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Celestial Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You take on a celestial countenance, gaining the features of a type of celestial who serves your deity; for example, as an angel, you gain a halo and feathery wings. You gain a fly Speed equal to your Speed. You gain darkvision if you don't already have it, and you gain the celestial trait and the trait appropriate to the type of servitor you've become (archon, angel, or azata, for example).</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "holy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "add": [
+                "celestial"
+              ],
+              "key": "ActorTraits"
+            },
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +74,59 @@
       "name": "Fiendish Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CYSH4aFmzH9PM3sm",
+        "folder": "b6DZbemkVXVz34Ym",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fiendish Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your features reshape into those of a type of fiend who serves your deity; for example, as a demon you might have putrid scales, twisted horns, and red eyes. You gain a fly Speed equal to your Speed. You gain darkvision if you don't already have it, and you gain the fiend trait and the trait appropriate to the type of servitor you've become (such as daemon, demon, or devil).</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "unholy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "add": [
+                "fiend"
+              ],
+              "key": "ActorTraits"
+            },
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +136,62 @@
       "name": "Rejuvenating Touch",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xZrTjUub7V09sXZF",
+        "folder": "b6DZbemkVXVz34Ym",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rejuvenating Touch",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your healing energies linger after you cast, providing continual benefits. An ally that recovers Hit Points from your @UUID[Compendium.pf2e.spells-srd.Item.Lay on Hands] gains 10 temporary Hit Points immediately and at the start of their turn during each of the next 10 rounds. These temporary HP last until the start of the creature's next turn. This effect ends if the ally is knocked @UUID[Compendium.pf2e.conditionitems.Item.Unconscious].</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Rejuvenating Touch]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "lay on hands"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:lay-on-hands"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +201,51 @@
       "name": "Retributive Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lT6yLoMfalzxGL8y",
+        "folder": "b6DZbemkVXVz34Ym",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Retributive Focus",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Your focus pool is currently empty.</p><hr /><p>Your enemy's offenses fuel your righteous power. When an enemy triggers your champion's reaction, you regain 1 Focus Point.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Desperate Prayer"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -43,6 +255,47 @@
       "name": "Swift Retribution",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZoVC0Ni7QdiWvoIx",
+        "folder": "b6DZbemkVXVz34Ym",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Retribution",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The transgressions of your enemies fuel you to retaliate with divine speed. When an enemy triggers your champion's reaction, you are @UUID[Compendium.pf2e.conditionitems.Item.Quickened] on your next turn. You can use the extra action to move closer to that enemy or to Strike that enemy.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "champion's reaction"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +305,47 @@
       "name": "Ultimate Mercy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rb16bcCiovwRqVgN",
+        "folder": "b6DZbemkVXVz34Ym",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ultimate Mercy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mercy transcends the bounds of life and death. Add ultimate mercy to the types of mercy you can provide. When you use @UUID[Compendium.pf2e.feats-srd.Item.Mercy], you can target a creature that died since your last turn to return it to life. The target returns to life with 1 Hit Point and becomes @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 1}. You can't return the target to life if it died from @UUID[Compendium.pf2e.spells-srd.Item.Disintegrate] or a death effect. The creature gains the other benefits of @UUID[Compendium.pf2e.spells-srd.Item.Lay on Hands] after it returns to life.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mercy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

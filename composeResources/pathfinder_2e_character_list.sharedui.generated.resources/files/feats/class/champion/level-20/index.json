@@ -7,6 +7,47 @@
       "name": "Armament Paragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jYEMVfrXJLpXS6aC",
+        "folder": "wLGBICZBgt9sMckl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armament Paragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Add the following property runes to the list you can choose for your blessed armament: @UUID[Compendium.pf2e.equipment-srd.Item.Animated], @UUID[Compendium.pf2e.equipment-srd.Item.Fearsome (Greater)]{Greater Fearsome}, @UUID[Compendium.pf2e.equipment-srd.Item.Grievous], @UUID[Compendium.pf2e.equipment-srd.Item.Keen], and @UUID[Compendium.pf2e.equipment-srd.Item.Vitalizing (Greater)]{Greater Vitalizing}. If you have the @UUID[Compendium.pf2e.feats-srd.Item.Radiant Armament] feat, add greater @UUID[Compendium.pf2e.equipment-srd.Item.Astral (Greater)]{Greater Astral} and @UUID[Compendium.pf2e.equipment-srd.Item.Brilliant (Greater)]{Greater Brilliant} to the list as well.</p>\n<p>In addition, you can change the rune you've selected for the day to a different rune from your list as a single action that has the concentrate and divine traits. Changing the rune doesn't restore abilities that can be used only a limited number of times.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Blessed Armament]</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "blessed armament"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +57,97 @@
       "name": "Sacred Defender",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JaBDNtNYYDfTGYad",
+        "folder": "wLGBICZBgt9sMckl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sacred Defender",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are a great warrior that can stand strong against the fiercest opponents to your cause. You gain resistance 5 to bludgeoning, piercing, and slashing damage.</p>\n<p>If you're holy, this resistance increases to 10 against unholy creatures, and if you're unholy it increases to 10 against holy creatures.</p>\n<p>In addition, creatures and effects that roll a natural 20 on an attack roll against you don't improve their result by one degree of success.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "damage:type:bludgeoning",
+                    "damage:type:piercing",
+                    "damage:type:slashing"
+                  ]
+                }
+              ],
+              "key": "Resistance",
+              "label": "PF2E.IWR.Custom.BludgeoningPiercingSlashing",
+              "type": "custom",
+              "value": 5
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    "damage:type:bludgeoning",
+                    "damage:type:piercing",
+                    "damage:type:slashing"
+                  ]
+                },
+                "origin:trait:unholy"
+              ],
+              "key": "Resistance",
+              "label": "PF2E.IWR.Custom.UnholyBludgeoningPiercingSlashing",
+              "predicate": [
+                "self:trait:holy"
+              ],
+              "type": "custom",
+              "value": 10
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    "damage:type:bludgeoning",
+                    "damage:type:piercing",
+                    "damage:type:slashing"
+                  ]
+                },
+                "origin:trait:holy"
+              ],
+              "key": "Resistance",
+              "label": "PF2E.IWR.Custom.HolyBludgeoningPiercingSlashing",
+              "predicate": [
+                "self:trait:unholy"
+              ],
+              "type": "custom",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +157,47 @@
       "name": "Shield Paragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P9swngiLXbhMegQ8",
+        "folder": "wLGBICZBgt9sMckl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield Paragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your shield is a vessel of divine protection. When you're wielding your chosen shield, it is always raised, even without you using the Raise a Shield action.</p>\n<p>If the shield would be destroyed, it vanishes to your deity's realm instead, where a servitor of your deity repairs it. During your next daily preparations, the shield returns to you fully repaired. While the shield is gone, you can spend 1 minute to infuse a different shield with your blessed shield benefit until your true shield returns</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "blessed shield"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -34,6 +207,53 @@
       "name": "Swift Paragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lzK0lwhjj5AW7iFH",
+        "folder": "wLGBICZBgt9sMckl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Paragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The movement of you and your allies is swift and decisive as the judgment of your deity. If your ally starts a move action in your champion's aura, their movement during that action doesn't trigger reactions.</p>\n<p>In addition, you're permanently @UUID[Compendium.pf2e.conditionitems.Item.Quickened]. You can use your extra action only to Step or Stride. If you have a fly Speed, add Fly to this list. If you have an animal companion and are mounted on it at the start of your turn, you can have your mount be quickened that turn instead of you.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "blessed swiftness"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Quickened"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

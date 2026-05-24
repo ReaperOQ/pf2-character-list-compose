@@ -7,6 +7,47 @@
       "name": "Concentrated Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NCsjkjEp6kHFS07h",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Concentrated Assault",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your spotter combine your efforts to bring down your target. If you and your spotter both use the Ready activity to make a Strike against the same opponent and choose the same trigger for the readied action, resolve your attacks at the same time. Each of you can use the higher of the two attack rolls for your Strikes, each using your own modifier; this is a fortune effect. If both attacks are successful, total the damage for both attacks for the purpose of resistances and weaknesses.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +57,82 @@
       "name": "Duo's Aim",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pu8Mg2FIrhBYTNnB",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duo's Aim",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With assistance from your spotter, you aim for an especially accurate attack. Make a crossbow or firearm Strike against a foe either within your spotter's melee reach or the first range increment of a ranged weapon your spotter is wielding. On this Strike, you gain a +2 circumstance bonus to the attack roll and ignore the target's concealment. If you're using a firearm with the kickback trait, you don't take the normal circumstance penalty to this Strike for not having the required Strength modifier or firing without using a tripod.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "duos-aim",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "duos-aim"
+              ],
+              "selector": "ranged-strike-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                "duos-aim"
+              ],
+              "selector": "strike-attack-roll",
+              "slug": "kickback",
+              "suppress": true
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "duos-aim",
+                "target:condition:concealed"
+              ],
+              "selector": "ranged-strike-attack-roll",
+              "text": "PF2E.SpecificRule.Feat.DuosAim.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +142,49 @@
       "name": "Eagle Eyes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UhmPekgw2HO40zKC",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eagle Eyes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your spotter are adept at watching out for one another. As long as you can see or hear each other, neither of you is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to @UUID[Compendium.pf2e.conditionitems.Item.Hidden], @UUID[Compendium.pf2e.conditionitems.Item.Undetected], or flanking creatures of your level or lower, or to creatures of your level or lower using a surprise attack. However, they can still help their allies flank.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +194,47 @@
       "name": "Exploit Opening",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FGdKV40UiS6jvBmI",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exploit Opening",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your spotter critically succeeds at a Strike against a creature, and that creature is within your crossbow or firearm's first range increment.</p><hr /><p>You take advantage of your spotter's devastating attack to unleash your own follow-up attack. Make a ranged Strike with a +2 circumstance bonus using a loaded crossbow or firearm against the target of the triggering attack.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +244,51 @@
       "name": "Sniping Duo Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6PP57Aa5HmSr0qIZ",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sniping Duo Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you take this dedication, choose one willing, non-minion ally to act as your spotter. This character does not need to specialize in ranged attacks; a melee partner can be just as effective and maybe even preferable depending on your preferred tactics and weaponry!</p>\n<p>As part of your training in this archetype, you train your spotter in the necessary habits and techniques to use your abilities automatically; your spotter doesn't need to spend any feats of their own to grant the effects. You only gain the benefits of your Sniping Duo archetype feats if both you and your spotter are alive and conscious. You and your spotter don't grant your foes lesser cover against one another's Strikes. Whenever you or your spotter successfully Strikes a target, the other member of your duo gains a +1 circumstance bonus per weapon damage die on the damage roll of their next Strike made against that target before the end of their next turn. You can change your designated spotter by spending 3 days of downtime training with another ally to teach them your techniques and signals.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Sniping Duo Dedication]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in at least one type of weapon in the bow or firearm groups"
+              },
+              {
+                "value": "trained in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +298,47 @@
       "name": "Tag Team",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pT6r5BVJjALJUmb3",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tag Team",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You or your spotter misses with a Strike against a creature, and the creature is within the other's melee reach or first range increment.</p>\n<hr />\n<p>Your skilled teamwork with your spotter enables you both to assist one another when you falter, using either other's failures as opportunities to strike. If you used Tag Team after your spotter missed the triggering Strike, make a ranged Strike against the same target with a -2 penalty. If you used this reaction after you missed the triggering Strike, your spotter can use their reaction to make a melee or ranged Strike against the same target. Strikes granted by this feat don't count toward your or your spotter's multiple attack penalty and your or your spotter's multiple attack penalty doesn't apply to the granted Strike.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -61,6 +348,47 @@
       "name": "Targeted Redirection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xqyN4Nk5mLgUm09l",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Targeted Redirection",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You aim a shot at your spotter, intending for your spotter to redirect that shot off their own weapon or shield to hit your foe from a better angle, and avoid your foe's cover. If your next action is to make a ranged Strike, you treat your spotter's position as your own for the purposes of determining cover and range. Your spotter must be within your weapon's first range increment and they must use their reaction to redirect your shot.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +398,77 @@
       "name": "Triangulate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xtRcWpprFBiXeCOB",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Triangulate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your spotter's quick signals help you make even difficult shots seem simple. As long as both you and your spotter can see the target of your attacks, you don't take a penalty for attacking within your second range increment with a crossbow or firearm. The penalty you take for firing into further range increments is –3 for the third range increment, with an additional –2 penalty for each additional increment beyond the third (–5 for the fourth range increment, –7 for the fifth, and –9 for the sixth).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.ToggleProperty.Triangulate",
+              "option": "triangulate",
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "domain": "ranged-attack-roll",
+              "key": "RollOption",
+              "option": "ignore-range-penalty:2",
+              "predicate": [
+                "triangulate"
+              ]
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                "triangulate"
+              ],
+              "selectors": [
+                "ranged-attack-roll"
+              ],
+              "slug": "range-penalty",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +478,47 @@
       "name": "Vantage Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qXWcmyHLkMlzRffC",
+        "folder": "8doC5H2PAm5u9qvc",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vantage Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your spotter take advantage of each other's attacks to momentarily hide and throw your foes off-balance against your follow-up attack. When you successfully Strike a foe using a crossbow or firearm, your spotter can use a reaction to attempt a Stealth check against the foe's Perception DC. On a success, the foe is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the spotter's next attack before the end of your spotter's next turn. Similarly, when your spotter successfully makes a ranged Strike against a foe, you can use a reaction to attempt a Stealth check against the foe's Perception DC. On a success, the foe is off-guard against your next attack against them before the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sniping Duo Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

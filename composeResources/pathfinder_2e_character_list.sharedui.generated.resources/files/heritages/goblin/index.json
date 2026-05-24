@@ -1,0 +1,456 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "charhide-goblin.json",
+      "id": "32oX6hHUY6K8N70Q",
+      "name": "Charhide Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/charhide-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "32oX6hHUY6K8N70Q",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/charhide-goblin.webp",
+        "name": "Charhide Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>Your ancestors have always had a connection to fire and a thicker skin, which allows you to resist burning. You gain fire resistance equal to half your level (minimum 1). You can also recover from being on fire more easily. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which is reduced to @Check[flat|dc:5] if another creature uses a particularly appropriate action to help.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "fire",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "item:damage:type:fire"
+              ],
+              "property": "pd-recovery-dc",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "dokkaebi-goblin.json",
+      "id": "gf2CfXocpIQgRsCY",
+      "name": "Dokkaebi Goblin",
+      "img": "icons/magic/light/hand-sparks-smoke-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "gf2CfXocpIQgRsCY",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "icons/magic/light/hand-sparks-smoke-green.webp",
+        "name": "Dokkaebi Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>Your ancestors mastered illusion-based magic, giving you an innate understanding of it. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Figment] as an innate occult cantrip at will. A cantrip is heightened to a spell rank equal to half your level rounded up. You also gain a +1 circumstance bonus to Will saves against illusions.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:illusion"
+              ],
+              "selector": "will",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:figment",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:figment",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:goblin"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "goblin"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "irongut-goblin.json",
+      "id": "gyoN45SVfRZwHMkk",
+      "name": "Irongut Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/irongut-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "gyoN45SVfRZwHMkk",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/irongut-goblin.webp",
+        "name": "Irongut Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>You can subsist on food that most folks would consider spoiled. You can keep yourself fed with poor meals in a settlement as long as garbage is readily available, without using the @UUID[Compendium.pf2e.actionspf2e.Item.Subsist] downtime activity. You can eat and drink things when you are @UUID[Compendium.pf2e.conditionitems.Item.Sickened].</p>\n<p>You gain a +2 circumstance bonus to saving throws against afflictions, against gaining the sickened condition, and to remove the sickened condition. When you roll a success on a Fortitude save affected by this bonus, you get a critical success instead. All these benefits apply only when the affliction or condition resulted from something you ingested.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:ingested",
+                {
+                  "or": [
+                    "inflicts:sickened",
+                    "item:type:affliction"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "slug": "irongut-save-bonus",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:ingested",
+                {
+                  "or": [
+                    "inflicts:sickened",
+                    "item:type:affliction"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "itemType": "consumable",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "self:condition:sickened",
+                {
+                  "or": [
+                    "item:tag:alchemical-food",
+                    "item:trait:elixir",
+                    "item:trait:ingested",
+                    "item:trait:potion"
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Conditions.Sickened.AllowEatOrDrink"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "razortooth-goblin.json",
+      "id": "a6F2WjYU8D0suT8T",
+      "name": "Razortooth Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/razortooth-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "a6F2WjYU8D0suT8T",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/razortooth-goblin.webp",
+        "name": "Razortooth Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>Your family's teeth are formidable weapons. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the finesse and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "baseType": "jaws",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.jaws",
+              "slug": "razortooth-jaws",
+              "traits": [
+                "finesse"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "snow-goblin.json",
+      "id": "gQyPU441J3rGt8mD",
+      "name": "Snow Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/snow-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "gQyPU441J3rGt8mD",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/snow-goblin.webp",
+        "name": "Snow Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>You are acclimated to living in frigid lands and have skin ranging from sky blue to navy in color, as well as blue fur. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "tailed-goblin.json",
+      "id": "8wGUh9RsMUamOKjh",
+      "name": "Tailed Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/tailed-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "8wGUh9RsMUamOKjh",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/tailed-goblin.webp",
+        "name": "Tailed Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>You have a powerful tail, likely because you descend from a community of monkey goblins. You gain a +2 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Climb], you gain @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] as a bonus feat, and you reduce the number of free hands required to climb or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] by one.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Tailed Goblin (Climb)",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "treedweller-goblin.json",
+      "id": "EEvA4uj8h3zDiAfP",
+      "name": "Treedweller Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/treedweller-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "EEvA4uj8h3zDiAfP",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/treedweller-goblin.webp",
+        "name": "Treedweller Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>You have adapted particularly well to living in forested environments. As long as you are in a forest or jungle, you gain a +2 circumstance bonus to Stealth checks to @UUID[Compendium.pf2e.actionspf2e.Item.Hide] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak], Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.Subsist], and your Survival DC to @UUID[Compendium.pf2e.actionspf2e.Item.Cover Tracks].</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Treedweller Goblin (Subsist)",
+              "predicate": [
+                "action:subsist"
+              ],
+              "selector": "survival",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "label": "Treedweller Goblin (Hide or Sneak)",
+              "predicate": [
+                {
+                  "or": [
+                    "action:hide",
+                    "action:sneak"
+                  ]
+                }
+              ],
+              "selector": "stealth",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "unbreakable-goblin.json",
+      "id": "ULj56ZoW7dWdnBvu",
+      "name": "Unbreakable Goblin",
+      "img": "systems/pf2e/icons/features/ancestry/unbreakable-goblin.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ULj56ZoW7dWdnBvu",
+        "folder": "5LdB5OQeWNrPAk3X",
+        "img": "systems/pf2e/icons/features/ancestry/unbreakable-goblin.webp",
+        "name": "Unbreakable Goblin",
+        "system": {
+          "ancestry": {
+            "name": "Goblin",
+            "slug": "goblin",
+            "uuid": "Compendium.pf2e.ancestries.Item.sQfjTMDaZbT9DThq"
+          },
+          "description": {
+            "value": "<p>You're able to bounce back from injuries easily due to an exceptionally thick skull, cartilaginous bones, or some other mixed blessing. You gain 10 Hit Points from your ancestry instead of 6. When you fall, reduce the falling damage you take as though you had fallen half the distance.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

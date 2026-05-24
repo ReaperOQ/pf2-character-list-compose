@@ -7,6 +7,51 @@
       "name": "Many Faces",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9G6wmGCdyXOgExQs",
+        "folder": "LCTtFpestjCPnVv5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Many Faces",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> three times per day</p><hr /><p>Putting on a new face offers a great way to get a fresh perspective on life. When you Change Shape into your everyday form, you gain the effects of a 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.Illusory Disguise] for 1 hour or until you shift back, whichever comes first, except it's a polymorph effect rather than an illusion. However, your transformations can be broken with a good shock; if you gain the @UUID[Compendium.pf2e.conditionitems.Item.Frightened] or @UUID[Compendium.pf2e.conditionitems.Item.Stunned] condition while transformed, your transformation ends, returning you to your tanuki form, and your confidence is so shaken you can't attempt to resume that specific disguise again until your next daily preparations.</p>"
+          },
+          "frequency": {
+            "max": 3,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Everyday Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +61,44 @@
       "name": "Mud Boat's Passage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nBf0LAT4HwUCOQtl",
+        "folder": "LCTtFpestjCPnVv5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mud Boat's Passage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You instinctively create magical boats that keep your feet dry (mostly). You can walk on the surface of water and other non-damaging liquids, moving at half your normal Speed, as a magical boat forms under your feet to carry you. Unfortunately, this magical boat is made out of mud, so you can't get very far—if you end your turn without reaching solid ground, the boat dissolves, and you sink.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +108,76 @@
       "name": "Phantom Orchestra",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "18B3fL77WgEY25M1",
+        "folder": "LCTtFpestjCPnVv5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Phantom Orchestra",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>An easy way to trick others is to throw your voice into a nearby forest or thicket to make strange noises. You can cast 2nd-rank @UUID[Compendium.pf2e.spells-srd.Item.Ventriloquism] as an innate primal spell once per day. You can also cast the @UUID[Compendium.pf2e.spells-srd.Item.Figment] cantrip as a primal innate spell at will, heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:figment",
+                    "item:slug:ventriloquism"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:figment",
+                    "item:slug:ventriloquism"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tanuki"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +187,47 @@
       "name": "Rolling White Bottle Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DFMjIYlTeBlNhfsl",
+        "folder": "LCTtFpestjCPnVv5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rolling White Bottle Form",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You Drop Prone or otherwise become @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p><hr /><p>As you fall to the ground, you transform into a white bottle, gourd, or sake jar, then roll away before anyone can pick you up. You @UUID[Compendium.pf2e.actionspf2e.Item.Crawl] up to two times, and your movement doesn't provoke reactions—you somehow always roll just out of reach. When you come to a stop, you return to your tanuki form, face down on the ground.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Teakettle Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

@@ -7,6 +7,54 @@
       "name": "Divine Grace",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tJduF6N83l5khRow",
+        "folder": "42aYWmPxl2i0PBGT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Grace",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You attempt a save against a spell, but you haven't rolled yet.</p><hr /><p>You call upon your deity's grace, gaining a +2 circumstance bonus to the save.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:type:spell",
+                "divine-grace"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +64,107 @@
       "name": "Divine Health",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GNMy7NYfF3AQwHpN",
+        "folder": "42aYWmPxl2i0PBGT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Health",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your faith makes you resistant to disease, protecting you as you offer succor to the ill. You gain a +2 status bonus to saves against diseases and poisons and to flat checks to recover from persistent poison damage. Allies in your champion's aura get this benefit, but their bonus is +1.</p>\n<p>In addition, if you roll a success on a save against a disease or poison, you get a critical success instead. (Your allies don't share this benefit.) If you have the @UUID[Compendium.pf2e.classfeatures.Item.Sacred Body] class feature, when you roll a critical failure on a save against a disease or poison, you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 2
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "feature:sacred-body",
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "includesSelf": false,
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Divine Health"
+                }
+              ],
+              "key": "Aura",
+              "predicate": [
+                "champions-aura",
+                {
+                  "not": "self:condition:unconscious"
+                }
+              ],
+              "radius": "@actor.flags.system.champion.aura",
+              "slug": "champions-aura"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +174,90 @@
       "name": "Oath of the Avenger",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "483yvMrNZFV3fiSo",
+        "folder": "42aYWmPxl2i0PBGT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oath of the Avenger",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've sworn an oath to punish wicked acts you witness. You gain the edict \"hunt down those who have harmed innocents or committed heinous atrocities.\" When you see a creature harm an ally, an innocent, or a noncombatant, you can invoke your oath against that creature. Like speaking, this doesn't require an action. Most champions choose to invoke these oaths out loud if they're able. The invocation lasts indefinitely, though you can choose to end if you are satisfied that the target has reformed, atoned, or been forgiven.</p>\n<p>You can use @UUID[Compendium.pf2e.spells-srd.Item.Lay on Hands] to damage a creature you have invoked your oath against as if it were undead; in this case, <em>lay on hands</em> deals spirit damage instead of vitality damage, gains the spirit trait, and loses the vitality trait. This doesn't prevent you from healing such a creature with <em>lay on hands</em> if you so choose.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "lay on hands"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "oath-of-the-avenger",
+              "placement": "spellcasting",
+              "toggleable": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:slug:lay-on-hands",
+                "oath-of-the-avenger"
+              ],
+              "property": "damage-type",
+              "selectors": [
+                "spell-damage"
+              ],
+              "value": "spirit"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "predicate": [
+                "item:slug:lay-on-hands",
+                "oath-of-the-avenger"
+              ],
+              "property": "traits",
+              "value": "vitality"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:lay-on-hands",
+                "oath-of-the-avenger"
+              ],
+              "property": "traits",
+              "value": "spirit"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "oath"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +267,109 @@
       "name": "Oath of the Defender",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "imBsp1Tg7KMut4Lf",
+        "folder": "42aYWmPxl2i0PBGT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oath of the Defender",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>During your daily preparations, you can swear an oath to defend against a certain kind of enemy during your deeds that day. Choose aberrations, celestials, dragons, fiends, or undead. You can't choose celestials if you're holy, nor can you choose fiends if you're unholy. You gain an edict to defend against creatures of that kind.</p>\n<p>Allies in your champion's aura, not including you, get resistance 2 to damage dealt by creatures with the chosen trait. If such a creature deals more than one damage type at once, apply this resistance only to the highest amount of damage. The resistance increases to 3 at 7th level, 4 at 12th level, and 5 at 17th level. If a creature with the chosen trait triggers your champion's reaction and your champion's reaction grants resistance against the triggering damage, the resistance increases by 5.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "oath-of-the-defender",
+              "phase": "beforeDerived",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitAberration",
+                  "value": "aberration"
+                },
+                {
+                  "label": "PF2E.TraitCelestial",
+                  "predicate": [
+                    {
+                      "not": "self:trait:holy"
+                    }
+                  ],
+                  "value": "celestial"
+                },
+                {
+                  "label": "PF2E.TraitDragon",
+                  "value": "dragon"
+                },
+                {
+                  "label": "PF2E.TraitFiend",
+                  "predicate": [
+                    {
+                      "not": "self:trait:unholy"
+                    }
+                  ],
+                  "value": "fiend"
+                },
+                {
+                  "label": "PF2E.TraitUndead",
+                  "value": "undead"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.oathOfTheDefender",
+              "phase": "beforeDerived",
+              "priority": 51,
+              "value": "{item|flags.system.rulesSelections.oathOfTheDefender}"
+            },
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "includesSelf": false,
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Oath of the Defender"
+                }
+              ],
+              "key": "Aura",
+              "predicate": [
+                "champions-aura",
+                {
+                  "not": "self:condition:unconscious"
+                }
+              ],
+              "radius": "@actor.flags.system.champion.aura"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "oath"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +379,128 @@
       "name": "Oath of the Slayer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vUBMjoOiZiMzdc18",
+        "folder": "42aYWmPxl2i0PBGT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oath of the Slayer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>During your daily preparations, you can swear an oath to defeat, topple, or destroy a certain kind of enemy during your deeds that day. Choose aberrations, celestials, dragons, fiends, or undead. You can't choose celestials if you're holy, nor can you choose fiends if you're unholy. You gain an edict to banish or slay creatures of that kind.</p>\n<p>Your Strikes and devotion spells that deal damage do an additional 1 spirit damage against a creature with the chosen trait. This damage increases to 2 at 7th level and 3 at 14th level. If a creature with the chosen trait triggers your champion's reaction, this additional damage doubles until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "oath-of-the-slayer",
+              "phase": "beforeDerived",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitAberration",
+                  "value": "aberration"
+                },
+                {
+                  "label": "PF2E.TraitCelestial",
+                  "predicate": [
+                    {
+                      "not": "self:trait:holy"
+                    }
+                  ],
+                  "value": "celestial"
+                },
+                {
+                  "label": "PF2E.TraitDragon",
+                  "value": "dragon"
+                },
+                {
+                  "label": "PF2E.TraitFiend",
+                  "predicate": [
+                    {
+                      "not": "self:trait:unholy"
+                    }
+                  ],
+                  "value": "fiend"
+                },
+                {
+                  "label": "PF2E.TraitUndead",
+                  "value": "undead"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Champion.OathOfTheSlayer.RollOptionLabel",
+              "option": "oath-of-the-slayer-double",
+              "toggleable": true
+            },
+            {
+              "damageType": "spirit",
+              "key": "FlatModifier",
+              "predicate": [
+                "target:trait:{item|flags.system.rulesSelections.oathOfTheSlayer}",
+                {
+                  "or": [
+                    "action:strike",
+                    {
+                      "and": [
+                        "item:type:spell",
+                        "item:trait:champion",
+                        "item:trait:focus"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": [
+                "strike-damage",
+                "spell-damage"
+              ],
+              "slug": "oath-of-the-slayer",
+              "value": "ternary(gte(@actor.level,14),3,ternary(gte(@actor.level,7),2,1))"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "multiply",
+              "predicate": [
+                "oath-of-the-slayer-double"
+              ],
+              "selectors": [
+                "strike-damage",
+                "spell-damage"
+              ],
+              "slug": "oath-of-the-slayer",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "oath"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

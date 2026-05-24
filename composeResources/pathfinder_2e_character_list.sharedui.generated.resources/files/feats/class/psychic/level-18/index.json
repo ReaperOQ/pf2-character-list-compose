@@ -7,6 +7,44 @@
       "name": "All in Your Head",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kYLtH4PYfvqruLyo",
+        "folder": "P19urYa1hGzz2CcX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "All in Your Head",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're about to attempt a Fortitude save or a Reflex save.</p>\n<hr />\n<p>Flames scouring at your body, venom coursing through your veins-you refuse to believe they exist, and nothing can affect you if you don't believe in it. You attempt a Will save against the triggering effect, instead of a Reflex or Fortitude save. You don't gain the benefits of @UUID[Compendium.pf2e.classfeatures.Item.Fortress of Will] or @UUID[Compendium.pf2e.classfeatures.Item.Walls of Will] on this save.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psyche",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +54,67 @@
       "name": "Cranial Detonation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vCsprcXVTwgtUYAZ",
+        "folder": "P19urYa1hGzz2CcX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cranial Detonation",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Trigger</strong> You successfully reduce one or more non-mindless enemies to 0 Hit Points with a spell.</p><hr /><p>As your overwhelming psyche fells a creature, you use its flickering consciousness to detonate psychic energy from the creature's head. Each enemy you reduced to 0 Hit Points dies and its head explodes. Each exploding head generates a shock wave in a @Template[emanation|distance:15] around that enemy. Each creature in any of the emanations takes @Damage[10d6[bludgeoning]|options:area-damage] damage with a @Check[reflex|against:occult|basic|options:area-effect]. If this damage reduces an enemy to 0 Hit Points, its head also explodes, potentially damaging more creatures and potentially causing more detonations. A given creature can take damage only once from a single use of Cranial Detonation.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round",
+            "value": 1
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "label": "PF2E.TraitMindshift",
+              "mode": "add",
+              "predicate": [
+                "item:tag:mindshifted"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Psychic.Mindshift.Addendum"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "death",
+              "mindshift",
+              "psyche",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +124,43 @@
       "name": "Twin Psyche",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PTAdxHcTS7TjyBTg",
+        "folder": "P19urYa1hGzz2CcX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twin Psyche",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've segmented your psyche so it can operate in tandem. When you Unleash your Psyche, you can double its duration.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

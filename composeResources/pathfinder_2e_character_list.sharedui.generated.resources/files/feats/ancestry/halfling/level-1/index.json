@@ -7,6 +7,43 @@
       "name": "Distracting Shadows",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vcfeHDoaWEZtEcfz",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distracting Shadows",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have learned to remain hidden by using larger folk as a distraction to avoid drawing attention to yourself. You can use creatures that are at least one size larger than you (usually Medium or larger) as cover for the @UUID[Compendium.pf2e.actionspf2e.Item.Hide] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] actions, though you still can't use such creatures as cover for other uses, such as the @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover] action.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +53,43 @@
       "name": "Folksy Patter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0YXRPqCaOQ3G73hh",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Folksy Patter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are adept at disguising coded messages as folksy idioms. Using slang, jokes, halfling loanwords, and the like, you convey a simple message consisting of three basic words (such as \"Danger assassin flee\" or \"Meet me moonrise\"). Your intended listener can attempt a @Check[perception|dc:20] check to discern the message. This DC is reduced by 5 if the listener is a halfling or has Folksy Patter, or by 10 if both apply (@Check[perception|dc:15] @Check[perception|dc:10]). Eavesdroppers can also attempt a @Check[perception|against:deception] check against your Deception DC to discern your meaning. Any bonuses or penalties to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] apply to checks to understand Folksy Patter.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +99,60 @@
       "name": "Halfling Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VU07hybqzUXIJ6l2",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Halfling Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've dutifully learned how to keep your balance and how to stick to the shadows where it's safe, important skills passed down through generations of halfling tradition. You gain the trained proficiency rank in Acrobatics and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Halfling Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.acrobatics.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.stealth.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +162,48 @@
       "name": "Halfling Luck",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZbRVqf14RTJJIZXG",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Halfling Luck",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You fail a skill check or saving throw.</p>\n<hr />\n<p>Your happy-go-lucky nature makes it seem like misfortune avoids you, and to an extent, that might even be true. You can reroll the triggering check, but you must use the new result, even if it's worse.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +213,91 @@
       "name": "Halfling Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2ebcYbg68pCZfAFQ",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Halfling Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You favor traditional halfling weapons, so you've learned how to use them more effectively. You gain access to all uncommon weapons with the halfling trait. You have familiarity with weapons with the halfling trait plus the sling and shortsword—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:halfling",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:shortsword"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialHalflingWeapons",
+              "sameAs": "simple",
+              "slug": "martial-halfling-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:halfling",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedHalflingWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-halfling-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:halfling",
+                    "item:base:sling",
+                    "item:base:shortsword"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +307,65 @@
       "name": "Prairie Rider",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "A9HQ2bMAge2aGgWx",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prairie Rider",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You grew up riding your clan's shaggy ponies and riding dogs. You become trained in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice. You also get a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] if the target is a traditional halfling mount, such as a pony or riding dog.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:command-an-animal",
+                {
+                  "or": [
+                    "target:pony",
+                    "target:riding-dog"
+                  ]
+                }
+              ],
+              "selector": "nature",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +375,82 @@
       "name": "Sure Feet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ehvHedIwPcxq9cRt",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sure Feet",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Whether keeping your balance or climbing, your feet easily find purchase. If you roll a success on an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] or an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Climb], you get a critical success instead. You're not @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] when you attempt to Balance or Climb.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:balance"
+              ],
+              "selector": "acrobatics",
+              "text": "PF2E.SpecificRule.Halfling.SureFeet.BalanceNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics",
+              "text": "PF2E.SpecificRule.Halfling.SureFeet.ClimbNote",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:balance"
+              ],
+              "selector": "acrobatics"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +460,59 @@
       "name": "Titan Slinger",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "50CRpoP5XS1MVbu8",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Titan Slinger",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have learned how to use your sling to fell enormous creatures. When you hit on an attack with a weapon of the sling group against a Large or larger creature, increase the size of the weapon damage die by one step.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "DamageDice",
+              "override": {
+                "upgrade": true
+              },
+              "predicate": [
+                {
+                  "gte": [
+                    "target:size",
+                    3
+                  ]
+                }
+              ],
+              "selector": "sling-weapon-group-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +522,80 @@
       "name": "Unfettered Halfling",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uuD8Z9jUG61GmenX",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unfettered Halfling",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were either pressed into indentured servitude or shackled in a prison, but you've since escaped and have trained to ensure you'll never be caught again. Whenever you roll a success on a check to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] or a saving throw against an effect that would impose the @UUID[Compendium.pf2e.conditionitems.Item.Grabbed], @UUID[Compendium.pf2e.conditionitems.Item.Immobilized], or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] condition on you, you get a critical success instead. Whenever a creature rolls a failure on a check to @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] you, it gets a critical failure instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "inflicts:grabbed",
+                    "inflicts:immobilized",
+                    "inflicts:restrained"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "skill-check"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "attack-roll"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +605,59 @@
       "name": "Watchful Halfling",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zAZJpgeEf5TWvdq4",
+        "folder": "MlNGMEeedSIgPZTb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Watchful Halfling",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You pay close attention to the people around you, allowing you to more easily notice when they act out of character. You gain a +2 circumstance bonus to Perception checks when using the @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] basic action to notice enchanted or possessed characters. If you aren't actively using Sense Motive on an enchanted or possessed character, the GM rolls a secret check, without your usual circumstance bonus, for you to potentially notice the enchantment or possession anyway.</p>\n<p>In addition to using it for skill checks, you can use the @UUID[Compendium.pf2e.actionspf2e.Item.Aid] basic action to grant a bonus to another creature's saving throw or other check to overcome enchantment or possession. As usual for Aid, you need to prepare by using an action on your turn to encourage the creature to fight against the effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive",
+                {
+                  "or": [
+                    "target:trait:possessed",
+                    "target:trait:enchanted"
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

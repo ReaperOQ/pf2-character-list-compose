@@ -7,6 +7,47 @@
       "name": "Advanced Construct Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cTR67ZKDD1EKntXw",
+        "folder": "xbCKkmp7Z0yDZjMH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Construct Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've upgraded your construct companion's power and decision-making ability. It becomes an advanced construct companion. During an encounter, even if you don't use the Command a Construct action, your construct companion can still use 1 action on your turn that round to Stride or Strike.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "construct companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +57,57 @@
       "name": "Diving Armor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4L5pj2W7Zyf8B3kg",
+        "folder": "xbCKkmp7Z0yDZjMH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Diving Armor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've modified your armor with fins, rotors, and other devices to make it easy for you to move through the water, plus mechanical gills that can help you extract breathable air from water. While wearing your armor innovation, you can breathe underwater and gain a swim Speed equal to your land Speed.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "armor:id:{actor|flags.system.innovationId}"
+              ],
+              "selector": "swim",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "modification"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +117,51 @@
       "name": "Dual-Form Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XWtNGOkMHcrdrRw8",
+        "folder": "xbCKkmp7Z0yDZjMH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dual-Form Weapon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your innovation has replaceable interlocking pieces that you can use to transform it into another type of weapon. When you select this feat, choose a level 0 weapon. It must be either a common weapon or another to which you have access. This weapon becomes your innovation's second configuration.</p>\n<p>Select a new set of weapon modifications for this new configuration. You can spend two Interact actions to switch your weapon innovation between the two configurations. These actions don't need to be taken consecutively, but if you've provided the first and not the second, the weapon is non-functional as it is stranded between states. Your weapon's Bulk is always the greater Bulk of the two configurations, regardless of which configuration it's in—if one weapon is smaller than the other, you still need to keep any weapon parts on hand. Any runes on your weapon innovation affect the second weapon configuration as long as it would normally qualify for them.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert overdrive"
+              },
+              {
+                "value": "weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "modification"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +171,64 @@
       "name": "Duo Dragon Kick",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wOb5YGq1EcRn3lwl",
+        "folder": "xbCKkmp7Z0yDZjMH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duo Dragon Kick",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your construct innovation is adjacent to you.</p><hr /><p>You've practiced an impressive spin technique with your construct, automatically attacking in tandem as you launch each other through the air. You Command your construct companion to fight alongside you, after which you both @UUID[Compendium.pf2e.actionspf2e.Item.Leap] in the same direction, making an unarmed Strike at the start or end of the Leap; this uses your companion's actions for the turn. If the Strikes both hit the same creature, combine their damage for the purposes of resistances and weaknesses.</p>\n<p><strong>Unstable Function</strong> You spin farther and higher, though the extreme movement risks discombobulating your innovation. Add the unstable trait to Duo Dragon Kick. Increase the distance of your Leaps by 10 feet if horizontal or 5 feet if vertical.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "construct innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +238,58 @@
       "name": "Gadget Specialist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DQN7YC7s7T0pL6Aa",
+        "folder": "xbCKkmp7Z0yDZjMH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gadget Specialist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Rather than just using your gadgets for various boosts and tweaks, you also craft a few specific temporary consumable gadgets each day. You gain the formulas for three common or uncommon gadgets. Each day during your daily preparations, you can create two temporary gadgets from your formula book. Gadgets prepared in this way don't cost you any resources to Craft and don't have any sale value. They are temporary items and fall apart the next time you make your daily preparations if you haven't already used them.</p>\n<p>If you're a master in Crafting, you can create three gadgets per day, and you gain three additional common or uncommon gadget formulas. If you're legendary in Crafting, you can create four gadgets per day, and you gain another additional three common or uncommon gadget formulas, for a total of nine.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "craftableItems": [
+                "item:trait:gadget"
+              ],
+              "isDailyPrep": true,
+              "key": "CraftingAbility",
+              "maxSlots": "max(2,@actor.system.skills.crafting.rank)",
+              "priority": 60,
+              "slug": "gadget-specialist"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +299,122 @@
       "name": "Megaton Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BEqXsP6UqARzpEFD",
+        "folder": "xbCKkmp7Z0yDZjMH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Megaton Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You activate gears, explosives, and other hidden mechanisms in your innovation to make a powerful attack. You make a Strike, dealing an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice. The type of Strike you can make depends on your innovation.</p><ul><li><strong>Armor</strong> You Strike with a melee unarmed attack or a melee weapon. To use a melee weapon for this, you must have prepared it in advance with special contraptions when you make your daily preparations.</li><li><strong>Construct</strong> Your minion innovation Strikes.</li><li><strong>Weapon</strong> You Strike with your weapon innovation.</li></ul><p><strong>Unstable Function</strong> You put even more force into the Strike, though you risk stress fractures to your innovation. Add the unstable trait to Megaton Strike. The Strike deals another extra damage die, for a total of two extra dice at 4th level, three at 10th level, and four at 18th level.</p><hr /><p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor, construct, or weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "option": "megaton-strike",
+              "predicate": [
+                {
+                  "not": "feature:construct-innovation"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "unstable-state",
+                "megaton-strike"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            },
+            {
+              "diceNumber": "ternary(gte(@actor.level, 18), 3, ternary(gte(@actor.level, 10), 2, 1))",
+              "key": "DamageDice",
+              "predicate": [
+                "megaton-strike",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "feature:weapon-innovation",
+                        "item:id:{actor|flags.system.innovationId}"
+                      ]
+                    },
+                    {
+                      "and": [
+                        "feature:armor-innovation",
+                        "item:melee"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "strike-damage",
+              "slug": "megaton-strike"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "strike-damage"
+              ],
+              "slug": "megaton-strike",
+              "value": 1
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

@@ -7,6 +7,55 @@
       "name": "Alchemical Discoveries",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0FNLI8APwj9NsBDa",
+        "folder": "haKvrUgHnaDVby96",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alchemical Discoveries",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've devoted extra time in the lab to improve your knowledge of alchemy. You learn the formulas for two alchemical items each time you level up instead of one; these must still be elixirs or tools. The number of versatile vials you can create each day increases by one if you're an expert in Crafting, two if you're a master, or three if you're legendary.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "alchemical sciences methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.resources.versatileVials.max",
+              "priority": 60,
+              "value": "@actor.system.skills.crafting.rank - 1"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +65,68 @@
       "name": "Detective's Readiness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5cYFHKQK6OZCwavI",
+        "folder": "haKvrUgHnaDVby96",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Detective's Readiness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you're on a case, you stay watchful and resolute to avoid tricks your suspect might pull. You gain your investigation bonus from @UUID[Compendium.pf2e.actionspf2e.Item.Pursue a Lead] on saving throws (and their DCs, as normal) against creatures or effects that are related to the question at the heart of an open investigation, and you can use @UUID[Compendium.pf2e.actionspf2e.Item.Clue In] to assist an ally's saving throw against that creature or effect.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:clue-in"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Investigator.DetectivesReadiness.ClueInAddendum"
+                }
+              ]
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "pursue-a-lead"
+              ],
+              "selector": "saving-throw",
+              "slug": "pursue-a-lead",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +136,72 @@
       "name": "Lie Detector",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I10dkdvL6kAnqZWA",
+        "folder": "haKvrUgHnaDVby96",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lie Detector",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're adept at noticing the tells of a liar—sweat, flushing, a quavering voice, a quickening pulse. You gain a +1 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] and to Perception DCs against attempts to Lie to you. When you determine someone is lying to you, you can use their deceit to your advantage to gain a +1 circumstance bonus to the next Deception, Diplomacy, Intimidation, or Performance check you attempt against that creature within the next minute.</p>\n<p>If you would gain your Pursue a Lead investigation bonus to any of the above checks, that bonus increases by 1 instead of you gaining the +1 bonus listed.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "empiricism or interrogation methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "label": "Lie Detector (against a known liar)",
+              "predicate": [
+                "known-liar"
+              ],
+              "selector": [
+                "deception",
+                "diplomacy",
+                "intimidation",
+                "performance"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +211,43 @@
       "name": "Ongoing Investigation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KWXoo738KuddWMOB",
+        "folder": "haKvrUgHnaDVby96",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ongoing Investigation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're always investigating what's around you, even as you perform other activities. You can move at full Speed while using the @UUID[Compendium.pf2e.actionspf2e.Item.Investigate] exploration activity, and you can use another exploration activity while Investigating.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +257,65 @@
       "name": "Scalpel's Point",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hYu6XxARNJYdf8Qe",
+        "folder": "haKvrUgHnaDVby96",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scalpel's Point",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your stratagems benefit from your precise knowledge of anatomy. When you critically hit with an attack on which you substituted your attack roll due to @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem]{Devising a Strategem}, if your attack dealt piercing or slashing damage, you also deal @Damage[1d6[bleed]] to your target.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "forensic medicine methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "check:substitution:devise-a-stratagem",
+                {
+                  "or": [
+                    "item:damage:type:piercing",
+                    "item:damage:type:slashing"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +325,43 @@
       "name": "Strategic Assessment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IvgLDtXmZwzbVJj1",
+        "folder": "haKvrUgHnaDVby96",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strategic Assessment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn your foes' strengths and weaknesses by watching them move. When you hit a creature with a Strike on which you substituted your attack roll due to Devising a Stratagem, the GM chooses one of the following pieces of information about the enemy to tell you.</p><ul><li>Which of the enemy's weaknesses is highest</li><li>Which of the enemy's resistances is highest</li><li>Which of the enemy's saving throws is lowest</li><li>One immunity the enemy has</li></ul><p>The GM can choose deliberately or at random, but they can't choose information that doesn't apply (such as choosing an immunity for an enemy that has no immunities). This applies only the first time you hit a given creature.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

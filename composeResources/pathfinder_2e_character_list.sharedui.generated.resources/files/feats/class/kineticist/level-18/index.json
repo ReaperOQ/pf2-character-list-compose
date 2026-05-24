@@ -7,6 +7,48 @@
       "name": "All Shall End in Flames",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tinTdUGzxWStlf44",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "All Shall End in Flames",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>White-hot fire consumes everything in a cataclysmic sphere of death. The fire fills your choice of a @Template[burst|distance:30] within 500 feet or a @Template[emanation|distance:30]. This deals @Damage[13d6[fire]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. Any creature dropped to 0 HP by this fire dies, reduced to a pile of ash.</p>\n<p>If you die to this impulse, you return to life at the start of your next turn in the same space. When you return, you have Hit Points equal to double your level.</p>\n<hr />\n<p><strong>Level (20th)</strong> The damage is @Damage[15d6[fire]].</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "death",
+              "fire",
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +58,46 @@
       "name": "Beasts of Slumbering Steel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ANOXSBs2lm11vsWO",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beasts of Slumbering Steel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You conjure metal elemental mounts made of interlocking metal pieces. Target up to 5 Medium or smaller willing creatures within 30 feet. Large mounts appear underneath them, and the targets can immediately @UUID[Compendium.pf2e.actionspf2e.Item.Mount] the creatures. Each mount can take four different forms. One form has only a land Speed of 80 feet, and the other forms each have a land Speed of 30 feet with a climb, fly, or swim Speed of 60 feet. Each rider chooses the initial form and can change the form as a single action, which has the concentration trait.</p>\n<p>The mounts have AC 40, Fortitude +30, Reflex +30, Will +25, and 180 Hit Points. They're mindless and immune to bleed, healing, @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed], poison, and sleep. They can't attack. They remain for 1 minute or until you use this impulse again. You can use this impulse as a 1-minute exploration activity to make the duration 1 hour, but this halves the mounts' defenses and HP.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "metal",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +107,52 @@
       "name": "Crowned in Tempest's Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8iHpUB0bYaHh86Kk",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crowned in Tempest's Fury",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become one with a devastating thunderstorm from the Plane of Air, placing a crown of lightning upon your brow. Sparks flash in your eyes, and lightning strikes constantly in the air around you as howling winds lift you from the ground.</p>\n<ul>\n<li>Any creature that enters your kinetic aura or ends its turn there takes @Damage[2d12[electricity]] damage.</li>\n<li>If you don't have a fly Speed, you gain a 20-foot fly Speed. If you have the Cyclonic Ascent impulse, you instead gain that fly Speed and the extra benefits.</li>\n<li>You gain a +10-foot status bonus to all your Speeds.</li>\n<li>Your air Elemental Blasts deal an additional @Damage[1d12[electricity]] damage.</li>\n</ul>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Crowned in Tempest's Fury",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Crowned in Tempest's Fury"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "electricity",
+              "impulse",
+              "kineticist",
+              "primal",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +162,186 @@
       "name": "Elemental Apotheosis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nr2ZvNFTuvshuq3Y",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elemental Apotheosis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You take on an elemental countenance, appearing like a type of elemental of your element. You gain any Speeds listed in the @UUID[Compendium.pf2e.spells-srd.Item.Elemental Form] spell for your element and gain darkvision if you don't already have it. You also gain the elemental trait and the trait of your chosen element.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Nourishing Gate"
+              },
+              {
+                "value": "exactly one kinetic element"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "kinetic-gate:earth",
+                    "kinetic-gate:water",
+                    "kinetic-gate:wood"
+                  ]
+                }
+              ],
+              "selector": "land",
+              "value": 20
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:air"
+              ],
+              "selector": "fly",
+              "value": 80
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:earth"
+              ],
+              "selector": "burrow",
+              "value": 20
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:fire"
+              ],
+              "selector": "land",
+              "value": 50
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:metal"
+              ],
+              "selector": "land",
+              "value": 40
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:metal"
+              ],
+              "selector": "fly",
+              "value": 20
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:water"
+              ],
+              "selector": "swim",
+              "value": 60
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "kinetic-gate:wood"
+              ],
+              "selector": "climb",
+              "value": 30
+            },
+            {
+              "add": [
+                "elemental",
+                "earth"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "kinetic-gate:earth"
+              ]
+            },
+            {
+              "add": [
+                "elemental",
+                "fire"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "kinetic-gate:fire"
+              ]
+            },
+            {
+              "add": [
+                "elemental",
+                "metal"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "kinetic-gate:metal"
+              ]
+            },
+            {
+              "add": [
+                "elemental",
+                "water"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "kinetic-gate:water"
+              ]
+            },
+            {
+              "add": [
+                "elemental",
+                "wood"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "kinetic-gate:wood"
+              ]
+            },
+            {
+              "add": [
+                "elemental",
+                "air"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "kinetic-gate:air"
+              ]
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kineticist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -43,6 +351,47 @@
       "name": "Hell of 1,000,000 Needles",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mGGnDgk4wWpCMon8",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hell of 1,000,000 Needles",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The landscape fills with monumental filaments of metal. The needles lance into a cube 30 feet on a side within 500 feet. Each creature in the area takes @Damage[(ternary(gte(@actor.level,20),17,13))d6[piercing]|options:area-damage] damage, with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. Each creature that fails its save is impaled, becoming @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] until it @UUID[Compendium.pf2e.actionspf2e.Item.Escape]{Escapes} (the DC is your class DC); a creature that critically failed is also off-guard as long as it's impaled. The hell remains until the end of your next turn, but you can Sustain it up to 1 minute. Using this impulse again ends any previous one. The first time you Sustain it each round, lightning crisscrosses the needles. Each creature in the area takes @Damage[3d12[electricity]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic] save against your class DC. Squares in the area are hazardous terrain. A creature takes @Damage[(ternary(gte(@actor.level,20),7,6))[piercing]] damage for every square of the area it moves through.</p><hr /><p><strong>Level (20th)</strong> The initial damage is 17d6, and the hazardous terrain damage is 7.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "metal",
+              "overflow",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +401,47 @@
       "name": "Ignite the Sun",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uKeUPPqV1cNnIy0h",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ignite the Sun",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The fires of creation become yours to control. You create a miniature sun in a @Template[burst|distance:5] within 500 feet. A creature takes @Damage[7d6[fire]|options:area-damage] damage any time it's in the miniature sun, with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. A creature can take this damage no more than once per round. The sun sheds bright light in a @Template[emanation|distance:500] (and dim light for another 500 feet); this is sunlight for creatures with a particular vulnerability to sunlight.</p>\n<p>The sun lasts until the end of your next turn, but you can Sustain it up to 1 minute. The first time you Sustain the impulse each round, you can choose to increase the size of the sun's burst by 5 feet, then make it Fly up to 30 feet. The sun can move through creatures, damaging them as described above.</p>\n<p>The sun continually channels fire into you and your allies. You and each of your allies within the sun's light deal an additional @Damage[1d6[fire]] damage with all Strikes, spells that deal fire damage, and impulses that deal fire damage (except for Ignite the Sun itself). These aren't cumulative with multiple suns.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fire",
+              "impulse",
+              "kineticist",
+              "light",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -61,6 +451,50 @@
       "name": "Infinite Expanse of Bluest Heaven",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fklx5lSy6ZEI3sID",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Infinite Expanse of Bluest Heaven",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>An illusion of a limitless expanse with an impossibly blue sky makes all within feel the sensation of falling... forever. The vision appears in a @Template[burst|distance:20] within 100 feet. The illusion lasts until the end of your next turn, but you can Sustain it up to 1 minute. Using this impulse again ends any previous one. Each creature in the area or that later enters it must attempt a @Check[will|against:kineticist] save against your class DC. Creatures with the air trait are immune. Any effect of the illusion ends for a creature as soon as it leaves the illusion's area or the impulse ends, and the creature then becomes temporarily immune for 1 hour.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard].</p>\n<p><strong>Failure</strong> The creature is off-guard. It is @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] from the illusory sky but is also disoriented; any time it uses an action to attempt to flee, it must succeed at a @Check[flat|dc:11] or flee to a space that's still within the illusion. The GM determines where the creatures ends up, but the creature can't stay stationary if it's able to move.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "illusion",
+              "impulse",
+              "kineticist",
+              "mental",
+              "overflow",
+              "primal",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -70,6 +504,51 @@
       "name": "Rebirth in Living Stone",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mNiJvsbyxdLBnTRs",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rebirth in Living Stone",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Rock overflows from within you to consume your form before cracking open to reveal your body transformed into living stone. You gain 40 temporary Hit Points. You're immune to critical hits and precision damage. You can't be pushed, pulled, or tripped while you're standing on earth or stone. Your earth Elemental Blasts deal an additional 1d10 damage of their normal type. These benefits last until the end of your next turn, but you can Sustain them up to 1 minute. After you gain temporary Hit Points from this impulse, you can't do so again for 10 minutes.</p>\n<hr />\n<p><strong>Level (20th)</strong> You gain 50 temporary Hit Points.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Rebirth In Living Stone",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Rebirth in Living Stone"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "earth",
+              "impulse",
+              "kineticist",
+              "polymorph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -79,6 +558,47 @@
       "name": "Ride the Tsunami",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P4xwr0xnh1uvK9qs",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ride the Tsunami",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Booming, crashing walls of water, enough to fill a harbor, smash out ahead of you, overwhelming all in their path. The waves move forward in your choice of a @Template[cone|distance:60] or @Template[line|distance:120]. If you're in water, you can increase these waves to a @Template[cone|distance:90] or @Template[line|distance:180]. Each creature in the area takes @Damage[10d10[bludgeoning]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. A creature that fails its save is pushed 20 feet (or 40 feet on a critical failure). Any unattended object of 1 Bulk or less in the area is pushed to the far edge of the area. The sheer mass of water extinguishes all non-magical flames in the area.</p>\n<p>As the wave crashes down, you can catch it to your destination. After the impulse deals damage, you can Swim in a straight line to any point in its area before the water disappears.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -88,6 +608,48 @@
       "name": "Rouse the Forest's Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P0v56G9Hkt87cAKj",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rouse the Forest's Fury",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Terrifying trees attack your enemies. Three Large trees appear in unoccupied spaces within 500 feet, at least 15 feet from one another. Each tree has AC 40, Fortitude +33, Reflex +24, Will +30, and 200 HP. The trees can flank, but are unable to move. When the trees appear, each makes a Strike; they share a multiple attack penalty. The tree's melee Strike is a branch that has reach 10 feet; on a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] by the tree ([[/act escape dc=40]]). The ranged Strike is a hurled fruit, gourd, seed, or stone with a range increment of 60 feet. Either Strike has a [[/r 1d20+30]]{+30} attack modifier and deals @Damage[(ternary(gte(@actor.level, 20), 5, 4)d10+9)[bludgeoning]] damage.</p>\n<p>The trees last until the end of your next turn, and you can Sustain the impulse. Each time you Sustain the impulse, you can have one tree make a Strike.</p><hr /><p><strong>Level (20th)</strong> The attack modifier is [[/r 1d20+32]]{+32} and the Strike damage is 5d10+9.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "overflow",
+              "plant",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -97,6 +659,47 @@
       "name": "The Shattered Mountain Weeps",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Aa0DqivAEL0ngunw",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Shattered Mountain Weeps",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A massive sphere of rock explodes, unleashing a cataclysm of falling debris and deadly shrapnel. Its destruction falls in a @Template[burst|distance:20] within 120 feet. Creatures in the area take @Damage[(ternary(gte(@actor.level,20),10,9))d10[bludgeoning]|options:area-damage] damage with a @Check[fortitude|against:kineticist|basic|options:area-effect] save against your class DC. Those who fail are knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone]. For the next minute, rocks continue to fall, making the area difficult terrain and dealing @Damage[(ternary(gte(@actor.level,20),4,3))d10[bludgeoning]|options:area-damage] damage to any creature that ends its turn in the area. If you use this impulse again, any previous one ends.</p><hr /><p><strong>Level (20th)</strong> The initial damage is 10d10, and the area damage is 4d10.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "earth",
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -106,6 +709,48 @@
       "name": "The Thousand Lashes of the Weeping Willow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PYRx4lCIQXyW8tz8",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Thousand Lashes of the Weeping Willow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You conjure a massive willow tree, which lashes your foes with a thousand branches. The trunk of the weeping willow tree is 10-feet in diameter and appears in an unoccupied space within 500 feet. The tree whips its branches at all your enemies within a @Template[emanation|distance:30]{30-foot-radius emanation } centered on the willow's trunk, dealing @Damage[(10 + floor(@actor.level/20)*4)d8[slashing]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic|options:area-effect,inflicts:slowed] save against your class DC. A creature that fails its save is also overcome with sorrow, becoming @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for as long as the willow remains, as it weeps uncontrollably. The willow doesn't target you or your allies.</p>\n<p>The willow tree remains until the end of your next turn, but you can Sustain it up to 1 minute. The first time you Sustain the impulse each round, the weeping willow attacks again, dealing @Damage[floor(@actor.level/4)d8[slashing]|options:area-damage] damage to all enemies in the area with a basic reflex save. If you use this impulse again, the previous one ends.</p><hr /><p><strong>Level (20th)</strong> The initial damage is 14d8, and the Sustained damage is 5d8.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "impulse",
+              "kineticist",
+              "overflow",
+              "plant",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -115,6 +760,47 @@
       "name": "Turn the Wheel of Seasons",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7jMAkP86uwnZCxYx",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Turn the Wheel of Seasons",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The seasons shift rapidly. This impulse affects a cube 100 feet in each dimension within 1,000 feet. Choose the starting season. The impulse lasts for 4 rounds, proceeding to the next season at the start of each of your turns. You can't use this impulse again until the previous one ends.</p>\n<p><strong>Spring</strong> Each ally in the cube gains 20 temporary HP that last until the start of your next turn. Any dying ally rolls a recovery check, but can't get worse than a success.</p>\n<p><strong>Summer</strong> (light) Each enemy in the area is exposed to sunlight and must attempt a @Check[reflex|against:kineticist|traits:light] save against your class DC. It's unaffected on a critical success, @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] until the start of your next turn on a success, or @UUID[Compendium.pf2e.conditionitems.Item.Blinded] until the start of your next turn on a failure.</p>\n<p><strong>Autumn</strong> Leaves and rain make everything in the area @UUID[Compendium.pf2e.conditionitems.Item.Concealed] until the start of your next turn, and a cold wind makes each enemy in the area @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} until the start of your next turn unless it succeeds at a @Check[fortitude|against:kineticist] save against your class DC.</p>\n<p><strong>Winter</strong> Each enemy in the aura takes @Damage[5d6[cold]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. A creature that fails its save also takes @Damage[2d6[persistent,cold]] damage.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -124,6 +810,47 @@
       "name": "Usurp the Lunar Reins",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c3c7pVXq0Ys5a6Mr",
+        "folder": "BpTvQkikp9VsKQQ8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Usurp the Lunar Reins",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The moon has always been connected to the tides, and now you can grasp that connection. You can create massive amounts of water and control these tides, subverting even the moon's sovereignty over the oceans and seas. Choose an area @Template[square|distance:50]{50 feet long by 50 feet wide} within 500 feet, and choose two different effects from the options provided below. The effects take place in the listed order.</p>\n<ul>\n<li><strong>Flood</strong> You create a pool of pure, clean water in the area, which coalesces from ambient moisture. This water must be created on a surface-not in air-and flows normally.</li>\n<li><strong>Control</strong> You tug on the moon to raise or lower the level of bodies of water in the area by 10 feet. If you control a portion of a larger body of water, the water then equalizes normally.</li>\n<li><strong>Modulate</strong> With a wave of your hand, you create or smooth ripples, making all bodies of water in the area either calm or turbulent. Making it calm turns difficult terrain or greater difficult terrain to calm water, and making it turbulent turns calm water into difficult terrain.</li>\n<li><strong>Slow</strong> By exercising your rightful control over all water, each creature with the water trait in the area must succeed at a @Check[fortitude|against:kineticist] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 2} on a critical failure).</li>\n</ul>\n<p>Flood and control are permanent and non-magical. Modulate and slow last until the end of your next turn, but you can Sustain the impulse to continue them.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

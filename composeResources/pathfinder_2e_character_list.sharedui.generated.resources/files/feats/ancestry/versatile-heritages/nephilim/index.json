@@ -7,6 +7,44 @@
       "name": "Aeonbound",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SXaQi6cZ58mvz9rV",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aeonbound",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your lineage is influenced or directly tied to the supernatural inhabitants of the Perfect City of Axis, a realm of pure and absolute order. This energy suffuses your body and helps it maintain coherency, resisting effects that would undermine your function or mar your otherwise orderly form. You and your allies can Treat your Wounds without a healer's toolkit. Once per day, when someone rolls a failure or a critical failure on a check to Treat your Wounds, you can focus on your internal cohesion to increase the degree of success by one step.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +54,51 @@
       "name": "Alter Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Z15QFC45psi0txWg",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alter Resistance",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You take acid, electricity, or sonic damage.</p><hr /><p>You focus on your protean forebears to change your energy resistance. The energy resistance you gain from your Proteankin lineage changes to match the triggering damage. This change occurs after the damage is dealt and lasts until the next day, or the next time you use this ability.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Proteankin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +108,91 @@
       "name": "Amorphous Aspect",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aZIdjtIYlLtJJP3g",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Amorphous Aspect",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your body is supremely flexible. You gain a +1 circumstance bonus on checks to Escape or Squeeze, and when you critically fail when Squeezing, you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Proteankin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:escape",
+                "unarmed"
+              ],
+              "selector": "attack",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": [
+                "acrobatics",
+                "athletics"
+              ],
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:squeeze"
+              ],
+              "selector": "acrobatics",
+              "slug": "squeeze",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:squeeze"
+              ],
+              "selector": "acrobatics",
+              "type": "skill"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +202,50 @@
       "name": "Anarchic Arcana",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ngNzsvIpnj1iLfSC",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Anarchic Arcana",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The magic in your blood is unpredictable. When you make your daily preparations, roll [[/r 1d12]] twice and consult the following list:</p><table class=\"pf2e remaster\"><tbody><tr><td data-colwidth=\"47\"><p>1</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Acid Grip]</p></td></tr><tr><td data-colwidth=\"47\"><p>2</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Blur]</p></td></tr><tr><td data-colwidth=\"47\"><p>3</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Gecko Grip]</p></td></tr><tr><td data-colwidth=\"47\"><p>4</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Humanoid Form]</p></td></tr><tr><td data-colwidth=\"47\"><p>5</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Illusory Object]</p></td></tr><tr><td data-colwidth=\"47\"><p>6</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Laughing Fit]</p></td></tr><tr><td data-colwidth=\"47\"><p>7</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Noise Blast]</p></td></tr><tr><td data-colwidth=\"47\"><p>8</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Resist Energy]</p></td></tr><tr><td data-colwidth=\"47\"><p>9</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.See the Unseen]</p></td></tr><tr><td data-colwidth=\"47\"><p>10</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Shatter]</p></td></tr><tr><td data-colwidth=\"47\"><p>11</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Shrink]</p></td></tr><tr><td data-colwidth=\"47\"><p>12</p></td><td><p>@UUID[Compendium.pf2e.spells-srd.Item.Telekinetic Maneuver]</p></td></tr></tbody></table><p>You can cast each of those two spells once during the following day (or one spell twice if you rolled the same number) as 2nd-rank divine innate spells</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Proteankin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "proteankin"
+            ],
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +255,64 @@
       "name": "Angelkin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ydgCsYsgqSkFWEDK",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Angelkin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You descend from an angel, a winged messenger from Nirvana or one of the other celestial realms. You gain the trained proficiency rank in Society. If you would automatically become trained in Society (from your background or class, for example), you instead become trained in a skill of your choice. You know the Empyrean language, and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Multilingual] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Multilingual"
+            }
+          ],
+          "subfeatures": {
+            "languages": {
+              "granted": [
+                "empyrean"
+              ],
+              "slots": 0
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +322,70 @@
       "name": "Arise, Ye Worthy!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YryDlMt3zARg6j7T",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arise, Ye Worthy!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>A touch of valkyrie magic in your blood lets you hold back death's grasp. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Breath of Life] as a divine innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Battleblooded"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:breath-of-life",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:breath-of-life",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:battleblooded"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -61,6 +395,55 @@
       "name": "Battleblooded",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eAAPdjByxKA1ILaX",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battleblooded",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You descend from those whose lives were touched by legendary einherjars, who were crafted from the souls of mighty warriors slain in battle and chosen by valkyries to serve as foot soldiers to many gods. You may even be the distant mortal descendant of an actual valkyrie.</p>\n<p>You are trained in Intimidation. If you were already trained in Intimidation (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Intimidating Glare] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Intimidating Glare"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +453,47 @@
       "name": "Bestial Brutality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "w4CJl4oyNcMPIle1",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bestial Brutality",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your animalistic unarmed attack grows more dangerous. The unarmed attack you chose for Bestial Manifestation gains the deadly d6 trait. Whenever you score a critical hit with this unarmed attack, you get the brawling critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bestial Manifestation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -79,6 +503,179 @@
       "name": "Bestial Manifestation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eUyZBi8vV5QDxOXD",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bestial Manifestation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Part of your body has an animalistic influence from a planar creature. Your hands end in claws, you have hooves instead of feet, sharp teeth fill your mouth, or a tail extends from your spine. You gain your choice of one of the following unarmed attacks. The attack is in the brawling group and has the listed damage die and traits.</p>\n<p><strong>Claw</strong> 1d4 slashing (agile, finesse, unarmed, versatile piercing)</p>\n<p><strong>Hoof</strong> 1d6 bludgeoning (finesse, unarmed)</p>\n<p><strong>Jaws</strong> 1d6 piercing (finesse, unarmed)</p>\n<p><strong>Tail</strong> 1d4 bludgeoning (agile, finesse, unarmed)</p>\n<hr />\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat, nor can you change the type of attack you gained.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
+                  "label": "PF2E.BattleForm.Attack.Claw",
+                  "value": "claw"
+                },
+                {
+                  "img": "icons/commodities/biological/foot-black-grey.webp",
+                  "label": "PF2E.BattleForm.Attack.Hoof",
+                  "value": "hoof"
+                },
+                {
+                  "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+                  "label": "PF2E.BattleForm.Attack.Jaws",
+                  "value": "jaws"
+                },
+                {
+                  "img": "icons/creatures/abilities/tail-swipe-green.webp",
+                  "label": "PF2E.BattleForm.Attack.Tail",
+                  "value": "tail"
+                }
+              ],
+              "flag": "bestialManifestation",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.UnarmedAttack",
+              "rollOption": "bestial-manifestation"
+            },
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                "bestial-manifestation:claw"
+              ],
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed",
+                "versatile-p"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/commodities/biological/foot-black-grey.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Hoof",
+              "predicate": [
+                "bestial-manifestation:hoof"
+              ],
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "baseType": "jaws",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                "bestial-manifestation:jaws"
+              ],
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/abilities/tail-swipe-green.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tail",
+              "predicate": [
+                "bestial-manifestation:tail"
+              ],
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "feat:bestial-brutality"
+              ],
+              "property": "traits",
+              "value": "deadly-d6"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                "feat:bestial-brutality",
+                "item:id:{item|id}"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +685,56 @@
       "name": "Blessed Blood (Nephilim)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BuaOQzmRNgIhGsfN",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blessed Blood (Nephilim)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your spilled blood is sanctified, with effects similar to those of @UUID[Compendium.pf2e.equipment-srd.Item.Holy Water]. Whenever a fiend, undead, or creature with a weakness to holy drinks your blood or deals piercing or slashing damage to you with jaws, fangs, or a similar attack, that creature takes @Damage[1d6[spirit]|traits:holy] damage with the holy trait. You gain a +4 circumstance bonus to Crafting checks to @UUID[Compendium.pf2e.actionspf2e.Item.Craft] <em>holy water</em> using your blood as one of the ingredients.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Blessed Blood (craft Holy Water with own blood)",
+              "predicate": [
+                "action:craft",
+                "item:holy-water",
+                "own-blood"
+              ],
+              "selector": "crafting",
+              "type": "circumstance",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -97,6 +744,47 @@
       "name": "Call to Battle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5yV41pARitDoPUen",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call to Battle",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You lose the @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] condition.</p><hr /><p>You channel the undying spirit of the einherjar to join to fight. You Stand. This movement doesn't trigger reactions.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Battleblooded"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -106,6 +794,95 @@
       "name": "Celestial Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "esKk5XrnlqRayDPG",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Celestial Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You possess celestial magic. Choose two of the following spells: @UUID[Compendium.pf2e.spells-srd.Item.Clear Mind], @UUID[Compendium.pf2e.spells-srd.Item.Everlight], @UUID[Compendium.pf2e.spells-srd.Item.Humanoid Form], @UUID[Compendium.pf2e.spells-srd.Item.Revealing Light], @UUID[Compendium.pf2e.spells-srd.Item.Share Life], or @UUID[Compendium.pf2e.spells-srd.Item.Sure Footing]. You can use each of the chosen spells once per day as 2nd-rank divine innate spells.</p>\n<p>Angelkin typically take <em>clear mind</em> and <em>humanoid form</em>, lawbringers typically have <em>everlight</em> and <em>share life</em>, and musetouched typically have <em>revealing light</em> and <em>sure footing</em>.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Angelkin, Lawbringer, Musetouched, or another lineage feat associated with celestials"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  {
+                    "or": [
+                      "item:slug:clear-mind",
+                      "item:slug:sure-footing",
+                      "item:slug:share-life",
+                      "item:slug:revealing-light",
+                      "item:slug:humanoid-form",
+                      "item:slug:everlight"
+                    ]
+                  }
+                ],
+                "itemType": "spell",
+                "slugsAsValues": true
+              },
+              "flag": "spell",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "aasimar": "Aasimar"
+            },
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -115,6 +892,70 @@
       "name": "Celestial Mercy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "V6iJ4v15Qc8awVCH",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Celestial Mercy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your celestial powers allow you to remove lesser afflictions with ease. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Cleanse Affliction] twice per day as a 4th-rank divine innate spell.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Angelkin, Lawbringer, Musetouched, or another lineage feat associated with celestials"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:cleanse-affliction",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:cleanse-affliction",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dwarf"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -124,6 +965,58 @@
       "name": "Channel the Godmind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DYFOlJlMoDuHjrZx",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Channel the Godmind",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You tap into the collective consciousness of the Godmind, the governing entity of axiomite society, to rapidly parse near-infinite variables to read your surroundings. For 1 minute, you gain precise motion sense out to 60 feet, you can see @UUID[Compendium.pf2e.conditionitems.Item.Invisible] creatures and objects, and you gain the benefits of @UUID[Compendium.pf2e.spells-srd.Item.Truesight] (with a counteract check modifier equal to your Perception modifier).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aeonbound"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Channel the Godmind",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Channel the Godmind"
+          },
+          "traits": {
+            "otherTags": [
+              "aeonbound"
+            ],
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -133,6 +1026,70 @@
       "name": "Creative Prodigy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3J0NxeHcA1h9eToK",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Creative Prodigy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a powerful creative drive that is clear to any who interact with you. You are trained in Performance. If you were already trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Impressive Performance] skill feat, and when you use Performance [[/act make-an-impression variant=performance]], you gain a +1 circumstance bonus to the check.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Proteankin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Impressive Performance"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression"
+              ],
+              "selector": "performance",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "proteankin"
+            ],
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -142,6 +1099,53 @@
       "name": "Divine Countermeasures",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ovMIxhiStlPE7tty",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Countermeasures",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've studied your extraplanar heritage with the intent of better defending yourself, whether against creatures aligned with or opposed to your extraplanar lineage, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against divine effects.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:divine"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -151,6 +1155,66 @@
       "name": "Divine Declaration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KL3Pk10ReItAHTw9",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Declaration",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can call forth a holy or unholy word from the realms beyond to punish your foes. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Divine Decree] as a 7th-rank divine innate spell.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:divine-decree",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:divine-decree",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -160,6 +1224,53 @@
       "name": "Divine Wings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vtCrMziYxNyj8kP7",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Wings",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>With effort, you can call forth magical wings from your back, similar in appearance to those of your extraplanar forebear, whether they be elegantly feathered wings or ominous bat wings. These wings remain for 10 minutes. You gain a fly Speed equal to your Speed while you've manifested your wings.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Divine Wings",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Divine Wings"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "divine",
+              "morph",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -169,6 +1280,53 @@
       "name": "Eternal Wings (Nephilim)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OWL6ZNVWMU0AFqvZ",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eternal Wings (Nephilim)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your wings are now a permanent part of your body. You gain the effects of @UUID[Compendium.pf2e.feats-srd.Item.Divine Wings] at all times, rather than just once per day for 10 minutes.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Divine Wings"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -178,6 +1336,47 @@
       "name": "Extraplanar Cloud",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KxBrjGgSYyb1Rsbh",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Extraplanar Cloud",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When you use Extraplanar Haze, you can spend 1 additional action to disperse the particles as a @Template[type:emanation|distance:10] cloud centered on you instead of as a haze; the activity gains the concentrate trait. All creatures within the cloud become @UUID[Compendium.pf2e.conditionitems.Item.Concealed], and all creatures outside the cloud become concealed to creatures within it.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Extraplanar Haze"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -187,6 +1386,47 @@
       "name": "Extraplanar Haze",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ewk7h9aQpKvy1RJo",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Extraplanar Haze",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your body emits tiny particles of extraplanar matter, such as crystalline motes or smoky vapor, that surround you in a haze. You become @UUID[Compendium.pf2e.conditionitems.Item.Concealed], though you can't use this concealment to @UUID[Compendium.pf2e.actionspf2e.Item.Hide] or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak], as normal for concealment where your position is still obvious. These particles stay within an inch of your skin, move with you, and last for a number of rounds equal to half your level.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -196,6 +1436,79 @@
       "name": "Extraplanar Supplication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n3CbbtK4fgBznIMf",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Extraplanar Supplication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You call upon divine power to place a benediction upon your allies or a malediction upon your foes. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Bless] or @UUID[Compendium.pf2e.spells-srd.Item.Bane]. You can cast the chosen spell once per day as a 1st-rank divine innate spell.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:bless",
+                    "item:slug:bane"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:bless",
+                    "item:slug:bane"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "aasimar": "Aasimar"
+            },
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -205,6 +1518,49 @@
       "name": "Faultspawn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "D5beAl2SwNcT3brp",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Faultspawn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You bear a grudge, inherited from a blasphemous asura forebear in your bloodline, against a particular deity and their works.</p>\n<p>You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Find Fault] reaction.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Find Fault"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -214,6 +1570,92 @@
       "name": "Fiendish Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UKYO5kiOnCY1hgCD",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fiendish Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You possess fiendish magic. Choose two of the following spells: @UUID[Compendium.pf2e.spells-srd.Item.Disguise Magic], @UUID[Compendium.pf2e.spells-srd.Item.False Vitality], @UUID[Compendium.pf2e.spells-srd.Item.Invisibility], @UUID[Compendium.pf2e.spells-srd.Item.See the Unseen], @UUID[Compendium.pf2e.spells-srd.Item.Shatter], or @UUID[Compendium.pf2e.spells-srd.Item.Paranoia]. You can use each of the chosen spells once per day as 2nd-rank divine innate spells.</p>\n<p>Grimspawn typically take <em>false vitality</em> and <em>see the unseen</em>, pitborn typically take <em>paranoia</em> and <em>shatter</em>, and hellspawn typically take <em>invisibility</em> and <em>disguise magic</em>.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Grimspawn, Pitborn, Hellspawn, or another lineage feat associated with fiends"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  {
+                    "or": [
+                      "item:slug:paranoia",
+                      "item:slug:shatter",
+                      "item:slug:disguise-magic",
+                      "item:slug:see-the-unseen",
+                      "item:slug:false-vitality",
+                      "item:slug:invisibility"
+                    ]
+                  }
+                ],
+                "itemType": "spell",
+                "slugsAsValues": true
+              },
+              "flag": "spell",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -223,6 +1665,54 @@
       "name": "Glory and Valor!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2GrlSP1xhKIz4G8B",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Glory and Valor!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a Strike, whichever comes first. For the duration, the first time each round you successfully Strike a creature of your level or higher, you regain @Damage[(floor(@actor.level/2))[healing]]{Hit Points equal to half your level}.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Battleblooded"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "divine",
+              "healing",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -232,6 +1722,50 @@
       "name": "Grimspawn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nyhQ9xB0rkoAoNbf",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grimspawn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your lineage traces back to a daemon, one of the manifestations of horrific forms of death that devour souls within their foul home of Abaddon. As a result, you cling tenaciously to the last shreds of your own life force. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Diehard] general feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -241,6 +1775,74 @@
       "name": "Halo",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PGVXjbAi1Fa4uTmD",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Halo",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a halo of light and goodness that sheds light with the effects of a divine @UUID[Compendium.pf2e.spells-srd.Item.Light] cantrip. A cantrip is heightened to a spell rank equal to half your level rounded up. You can Sustain to suppress or reestablish the halo.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "halo-active",
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "TokenLight",
+              "predicate": [
+                "halo-active"
+              ],
+              "value": {
+                "alpha": 0.2,
+                "animation": {
+                  "intensity": 1,
+                  "speed": 2,
+                  "type": "pulse"
+                },
+                "bright": "ternary(gte(ceil(@actor.level / 2),4),60,20)",
+                "color": "#e7f3f1",
+                "dim": "ternary(gte(ceil(@actor.level / 2),4),120,40)"
+              }
+            },
+            {
+              "key": "TokenEffectIcon",
+              "predicate": [
+                "halo-active"
+              ],
+              "value": "icons/magic/light/explosion-star-glow-blue.webp"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -250,6 +1852,56 @@
       "name": "Hellspawn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EXVHePH8alsTZ5TB",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hellspawn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your lineage descends from devils, conniving schemers of Hell. You're as skilled at noticing lies and twisted wordings as you are at constructing them. You are trained in Deception and Legal Lore. If you were already trained in Deception (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Lie to Me] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.deception.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Lie to Me"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -259,6 +1911,52 @@
       "name": "Impose Order",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DIjpbE2dh5MRGiYO",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impose Order",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You would critically fail a skill check or suffer an effect with the misfortune trait.</p><hr /><p>You shift the underlying fabric of reality to impose a baseline of order. If the trigger was a skill check, you instead receive a result of 10 + your proficiency bonus (don't apply any other bonuses, penalties, or modifiers). If the trigger was an effect with the misfortune trait, the misfortune and fortune effects cancel each other out as normal, negating the triggering misfortune effect.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aeonbound"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -268,6 +1966,64 @@
       "name": "Intuitive Crafting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XKDFgBEtFdEzCz8X",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Intuitive Crafting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your affinity with process and order makes you a natural artisan. You are trained in Crafting. If you were already trained in Crafting, you instead gain the @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting] skill feat in a specialty of your choice; if you have both, you instead become trained in a skill of your choice. In addition, when you critically fail to Repair an item, you get a failure instead.</p><hr /><p><em>Note: If you were already trained in Crafting, you need to manually add the Specialty Crafting feat or select an alternative skill.</em></p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aeonbound"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:repair"
+              ],
+              "selector": "crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -277,6 +2033,55 @@
       "name": "Irrepressible (Nephilim)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WYEjiUZQJP3uMk4Z",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Irrepressible (Nephilim)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your slight otherworldly nature allows you to easily brush off emotional manipulation. When you roll a success on a save against an emotion effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -286,6 +2091,47 @@
       "name": "Larcenous Tail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DTU4jrz9YNr7e62e",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Larcenous Tail",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can perform minor mischief with your tail. You can use your tail to @UUID[Compendium.pf2e.actionspf2e.Item.Steal] an object, though your tail still can't hold onto it at the end of your action. If you have a hand free, you can transfer the stolen object to your hand. Otherwise, your tail surreptitiously drops it on the ground in your space, where you can grab it later. Observers other than your target who haven't witnessed you stealing something with your tail are usually distracted, meaning the GM will usually decrease their Perception DCs, as normal for Stealing something.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Skillful Tail"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -295,6 +2141,78 @@
       "name": "Lawbringer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "g3oJlWGHc74qX2z5",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lawbringer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You trace your lineage to archons, guardians of the seven-tiered mountain of Heaven and nurturers of law and virtue within mortals. You gain a +1 circumstance bonus to saves against emotion effects, and if you roll a success on a save against an emotion effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "emotion"
+              ],
+              "selector": "saving-throw",
+              "text": "When you roll a success on a save against an emotion effect, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -304,6 +2222,93 @@
       "name": "Methodical Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IJa7dQvH3HLCBUhC",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Methodical Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can reorder the world with your magic. Choose two of the following spells: @UUID[Compendium.pf2e.spells-srd.Item.Calm], @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic], @UUID[Compendium.pf2e.spells-srd.Item.Lock], @UUID[Compendium.pf2e.spells-srd.Item.Mending], @UUID[Compendium.pf2e.spells-srd.Item.Shape Wood], or @UUID[Compendium.pf2e.spells-srd.Item.Translate]. You can use each of the chosen spells once per day as 2nd-rank divine innate spells.</p>"
+          },
+          "frequency": null,
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aeonbound"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  {
+                    "or": [
+                      "item:slug:calm",
+                      "item:slug:dispel magic",
+                      "item:slug:lock",
+                      "item:slug:mending",
+                      "item:slug:shape-wood",
+                      "item:slug:translate"
+                    ]
+                  }
+                ],
+                "itemType": "spell",
+                "slugsAsValues": true
+              },
+              "flag": "spell",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -313,6 +2318,120 @@
       "name": "Musetouched",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eSP2938INGUG9b3w",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Musetouched",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your blood sings with the liberating power of the azatas, living embodiments of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Escape]. When you roll a critical failure on a check to Escape, you get a failure instead, and when you roll a success, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Musetouched (to Escape)",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": [
+                "attack",
+                "acrobatics",
+                "athletics"
+              ],
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "attack-roll"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "attack",
+              "text": "When you roll a critical failure on a check to Escape, you get a failure instead, and when you roll a success, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "athletics"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "athletics",
+              "text": "When you roll a critical failure on a check to Escape, you get a failure instead, and when you roll a success, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "acrobatics"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": "acrobatics",
+              "text": "When you roll a critical failure on a check to Escape, you get a failure instead, and when you roll a success, you get a critical success instead.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -322,6 +2441,52 @@
       "name": "Nephilim Eyes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "akCO62yBCJLjjCZJ",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nephilim Eyes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your eyes can see through darkness with visual acuity akin to that possessed by most extraplanar beings. You gain darkvision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "low-light vision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -331,6 +2496,81 @@
       "name": "Nephilim Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sKDCoxMz2yKWLGRJ",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nephilim Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You know the secrets of the Multiverse. You gain the trained proficiency rank in either Diplomacy or Intimidation, and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for a Lore subcategory of a plane to which you trace your lineage.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "predicate": [
+                    "skill:diplomacy:rank:0"
+                  ],
+                  "value": "diplomacy"
+                },
+                {
+                  "label": "PF2E.Skill.Intimidation",
+                  "predicate": [
+                    "skill:intimidation:rank:0"
+                  ],
+                  "value": "intimidation"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -340,6 +2580,76 @@
       "name": "Nephilim Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8CSewrCVEmL8sjnk",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nephilim Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You resist energy like your extraplanar predecessors. Choose one of the following energy damage types: acid, cold, electricity, fire, or sonic. You gain resistance 5 to that damage type.</p>\n<p>The damage type typically matches an extraplanar entity associated with your bloodline. For instance, an @UUID[Compendium.pf2e.feats-srd.Item.Angelkin] might choose resistance to cold, while a @UUID[Compendium.pf2e.feats-srd.Item.Hellspawn] might choose resistance to fire.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitFire",
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitAcid",
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "value": "sonic"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                }
+              ],
+              "flag": "featCelestialResistance",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.CelestialResistance.Prompt"
+            },
+            {
+              "key": "Resistance",
+              "type": "{item|flags.system.rulesSelections.featCelestialResistance}",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -349,6 +2659,49 @@
       "name": "Nimble Hooves",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ffi8L4EDO5OH5tpA",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nimble Hooves",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You possess hooves, ankle wings, or some other feature that hastens your movement. Your Speed increases by 5 feet.</p>\n<hr />\n<p><strong>Special</strong> The Speed increase from this feat isn't cumulative with any Speed increase from other ancestry feats.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -358,6 +2711,51 @@
       "name": "Pandemonium Eruption",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WRZZItgiMmpLnhdh",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pandemonium Eruption",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You unleash the pent-up chaos within you, becoming a nexus of unbridled destruction that wreaks unfettered havoc on everyone in your vicinity. Each creature within @Template[emanation|distance:15]{15 feet} of you takes 14d6 @Damage[14d6[acid]|options:area-damage]{acid}, @Damage[14d6[electricity]|options:area-damage]{electricity}, or @Damage[14d6[sonic]|options:area-damage]{sonic} damage, chosen randomly for each target. Each target receives a @Check[reflex|against:class-spell|basic|options:area-effect] save against the higher of your class DC or spell DC, but any creature that is subjected to the type of damage for which you currently have resistance through your Proteankin lineage takes a –2 penalty to the save. Any target that critically fails the save is also @UUID[Compendium.pf2e.conditionitems.Item.Confused] until the end of their next turn.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Proteankin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -367,6 +2765,90 @@
       "name": "Pitborn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gxQheZ4xuDWwyzy4",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pitborn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your blood bears the mark of a demon, a living embodiment of sin from the fetid depths of the Outer Rifts. Demonic power pulses through your veins and manifests in a different way for each pitborn, whether you have webbed fingers and thrive in the water, large hands capable of wrestling larger foes, or some other manifestation. You are trained in Athletics. If you were already trained in Athletics (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain any one common 1st-level skill feat with a prerequisite of trained in Athletics, as reflects the manifestation of your fiendish blood.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "allowedDrops": {
+                "label": "PF2E.SpecificRule.Nephilim.Pitborn.AllowedDrops",
+                "predicate": [
+                  "item:category:skill",
+                  "item:level:1",
+                  "item:rarity:common"
+                ]
+              },
+              "choices": [
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Armor Assist"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Hefty Hauler"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Quick Jump"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Titan Wrestler"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Underwater Marauder"
+                }
+              ],
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.SkillFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -376,6 +2858,81 @@
       "name": "Proteankin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gNFPwTHDygxdf9pw",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Proteankin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your blood bubbles with the roiling quintessence of the Maelstrom, the infinite sea of primal chaos that long ago spawned the other Outer Planes. You gain resistance to a single damage type equal to half your level; at the beginning of each day, determine randomly whether this resistance applies to acid, electricity, or sonic damage. You also gain a +1 circumstance bonus to saving throws against effects that would cause you to gain the controlled condition.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "inflicts:controlled"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Prompt.Resistance",
+              "option": "proteankinResistance",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "value": "sonic"
+                }
+              ],
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "Resistance",
+              "type": "{item|flags.system.rulesSelections.proteankinResistance}",
+              "value": "max(floor(@actor.level/2),1)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -385,6 +2942,51 @@
       "name": "Resilient Physiology",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vdowlFFknihiz5pm",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resilient Physiology",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You're afflicted by a disease or poison, or are taking persistent damage.</p><hr /><p>Your ordered physiology rejects unwelcome elements, allowing you to reject the negative effects of poisons and diseases or shrug off other lasting negative effects. Choose one.</p>\n<p><strong>Disease or Poison</strong> Attempt a saving throw against the affliction. On a failure or critical failure, the affliction's stage doesn't increase.</p>\n<p><strong>Persistent Damage</strong> Attempt a @Check[flat|showDC:all|dc:10] to recover from the persistent damage.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aeonbound"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -394,6 +2996,61 @@
       "name": "Scion of Many Planes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oM5TORDkpchJF0R2",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scion of Many Planes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The long and complicated history of your bloodline manifests in your ability to draw power from more planar sources than most other nephilim. Choose one nephilim lineage feat that you do not already possess; you gain that feat and all of its benefits, even if you already took a lineage feat at 1st level.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:trait:lineage",
+                  "item:trait:nephilim",
+                  "item:type:feat"
+                ]
+              },
+              "flag": "lineage",
+              "key": "ChoiceSet",
+              "prompt": "Pick a lineage feat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.lineage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -403,6 +3060,73 @@
       "name": "Slip Sideways",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rCajlx2KjGxzabAJ",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slip Sideways",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Like many fiends, you have the supernatural ability to teleport yourself to safety. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Translocate] as a 5th-rank divine innate spell.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Grimspawn, Pitborn, or Hellspawn, or another lineage feat associated with fiends or the Maelstrom"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:translocate",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:translocate",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "tiefling": "Tiefling"
+            },
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -412,6 +3136,64 @@
       "name": "Sublime Mobility",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "95DHxSO4TOP8W7qM",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sublime Mobility",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your heritage has granted you either impressive athletic skill or a physical feature that aids in traversal. You gain either a climb Speed or a swim Speed of 10 feet.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Speed.Type.Climb",
+                  "value": "climb"
+                },
+                {
+                  "label": "PF2E.Actor.Speed.Type.Swim",
+                  "value": "swim"
+                }
+              ],
+              "flag": "sublimeMobility",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.MovementType"
+            },
+            {
+              "key": "BaseSpeed",
+              "selector": "{item|flags.system.rulesSelections.sublimeMobility}",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -421,6 +3203,82 @@
       "name": "Summon Nephilim Kin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L231BR4815B6hwKT",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Summon Nephilim Kin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a connection to the Outer Planes, allowing you to summon a divine ally. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Summon Celestial], @UUID[Compendium.pf2e.spells-srd.Item.Summon Fiend], or another 5th-rank spell capable of summoning an extraplanar creature appropriate to your lineage. Once per day, you can cast the chosen spell as a 5th-rank divine innate spell, but the creature summoned must be from the same category as your own lineage, such as a creature with the angel trait if you are an angelkin.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "any nephilim lineage feat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:summon-monitor",
+                    "item:summon-celestial",
+                    "item:summon-fiend"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:summon-monitor",
+                    "item:summon-celestial",
+                    "item:summon-fiend"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:nephilim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "nephilim"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -430,6 +3288,59 @@
       "name": "Towering Presence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "t3Eky3ijnAJTiCV5",
+        "folder": "mCO6gdJ68cnsdtlN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Towering Presence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You fill an area with your force of will, towering beyond where your true form should be. Increase your size to Large until the beginning of your next turn. Your equipment grows with you but returns to natural size if removed. You're @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1}. Your reach increases by 5 feet (or by 10 feet if you started out Tiny), and you gain a +2 status bonus to melee damage. Towering Presence has no effect if you were already Large or larger.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Faultspawn"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Towering Presence",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Towering Presence"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "divine",
+              "illusion",
+              "nephilim",
+              "polymorph"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

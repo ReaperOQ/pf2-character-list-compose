@@ -7,6 +7,60 @@
       "name": "Advanced Defender",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sabbfPz4YuVzRX1j",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Defender",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one guardian feat. For the purpose of meeting its prerequisites, your guardian level is equal to half your character level.</p><hr /><p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another guardian feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Defender"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +70,81 @@
       "name": "Armored Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xACFBsq6c48R0BNF",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armored Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While you are wearing medium or heavy armor, you gain resistance to physical damage equal to half your character level when you use the @UUID[Compendium.pf2e.actionspf2e.Item.Intercept Attack] reaction to take damage instead of your ally.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian's Intercept"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            },
+            {
+              "disabledIf": [
+                {
+                  "nor": [
+                    "armor:category:medium",
+                    "armor:category:heavy"
+                  ]
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "armored-resistance",
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "armored-resistance"
+              ],
+              "type": "physical",
+              "value": "floor(@actor.level / 2)"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +154,82 @@
       "name": "Basic Defender",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FQEV0unwDlvPkyGo",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Defender",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level guardian feat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:guardian",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +239,145 @@
       "name": "Guardian Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zNInvTqZrDdNJAS7",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guardian Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become trained in Athletics; if you were already trained in Athletics, you instead become trained in a skill of your choice. You become trained in guardian class DC.</p>\n<p>You become trained in light armor and medium armor. If you already were trained in light armor and medium armor, you gain training in heavy armor as well. Whenever you gain a class feature that grants you expert or greater proficiency in any type of armor (but not unarmored defense), you also gain that proficiency in the armor types granted to you by this feat. If you have a class feature that grants you expert proficiency in unarmored defense and you're 13th level or higher, you also become an expert in the armor types granted to you by this feat.</p>\n<p>You can use the @UUID[Compendium.pf2e.actionspf2e.Item.Taunt] action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.5eGP9Wh9Nr2WFxeZ]{Guardian}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Strength +2"
+              },
+              {
+                "value": "Constitution +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.LightShort",
+                  "predicate": [
+                    {
+                      "or": [
+                        "defense:light:rank:0",
+                        "defense:medium:rank:0"
+                      ]
+                    }
+                  ],
+                  "value": "light-and-medium"
+                },
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.HeavyShort",
+                  "predicate": [
+                    {
+                      "nor": [
+                        "defense:light:rank:0",
+                        "defense:medium:rank:0"
+                      ]
+                    }
+                  ],
+                  "value": "heavy"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "guardian-dedication"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.light.rank",
+              "predicate": [
+                "guardian-dedication:light-and-medium"
+              ],
+              "value": "max(@actor.system.proficiencies.defenses.medium.rank,ternary(gte(@actor.level,13),min(@actor.system.proficiencies.defenses.unarmored.rank,2),1))"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.medium.rank",
+              "predicate": [
+                "guardian-dedication:light-and-medium"
+              ],
+              "value": "max(@actor.system.proficiencies.defenses.light.rank,ternary(gte(@actor.level,13),min(@actor.system.proficiencies.defenses.unarmored.rank,2),1))"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.heavy.rank",
+              "predicate": [
+                "guardian-dedication:heavy"
+              ],
+              "value": "max(@actor.system.proficiencies.defenses.light.rank,@actor.system.proficiencies.defenses.medium.rank,ternary(gte(@actor.level,13),min(@actor.system.proficiencies.defenses.unarmored.rank,2),1))"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Taunt"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "guardian": {
+                "attribute": "str",
+                "rank": 1
+              },
+              "light": {
+                "attribute": null,
+                "rank": 1
+              },
+              "medium": {
+                "attribute": null,
+                "rank": 1
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +387,67 @@
       "name": "Guardian Resiliency",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2Fs30aBxpFZMTJfN",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guardian Resiliency",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain 3 additional Hit Points for each guardian archetype class feat you have. As you continue selecting guardian archetype class feats, you continue to gain additional Hit Points in this way.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian Dedication"
+              },
+              {
+                "value": "class granting no more Hit Points per level than 10 + your Constitution modifier"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "3 * @actor.flags.system.guardianDedicationCount"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +457,75 @@
       "name": "Guardian's Intercept",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vC4hrYAynasBDz16",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guardian's Intercept",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can use the @UUID[Compendium.pf2e.actionspf2e.Item.Intercept Attack] reaction once per 10 minutes.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            },
+            {
+              "alterations": [
+                {
+                  "mode": "override",
+                  "property": "frequency-max",
+                  "value": 1
+                },
+                {
+                  "mode": "override",
+                  "property": "frequency-per",
+                  "value": "PT10M"
+                }
+              ],
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Intercept Attack"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +535,67 @@
       "name": "Ironclad Fortitude",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vtYJJCQKOffjd6L7",
+        "folder": "JnEMJDh1jH8xZjO1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ironclad Fortitude",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your proficiency rank in Fortitude saves increases to master.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian Dedication"
+              },
+              {
+                "value": "expert in Fortitude saves"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.guardianDedicationCount",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "fortitude": {
+                "attribute": null,
+                "rank": 3
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

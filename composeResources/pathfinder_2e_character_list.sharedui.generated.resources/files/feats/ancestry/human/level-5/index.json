@@ -7,6 +7,50 @@
       "name": "Adaptive Adept",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DBWfPOYZaupwo3rz",
+        "folder": "fmxtULnBcanMr4WT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Adaptive Adept",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've continued adapting your magic to blend your class's tradition with your adapted tradition. Choose a cantrip or 1st-rank spell from the same magical tradition as your cantrip from Adapted Cantrip. You gain that spell, adding it to your spell options just like the cantrip from Adapted Cantrip. You can cast this spell as a spell of your class's magical tradition. If you choose a 1st-rank spell, you don't gain access to the heightened versions of that spell, meaning you can't prepare them if you prepare spells and you can't learn them or select the spell as a signature spell if you have a spell repertoire.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Adapted Cantrip"
+              },
+              {
+                "value": "can cast 3rd rank spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "human"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +60,48 @@
       "name": "Clever Improviser",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KcbSxOPYC5CUqbZQ",
+        "folder": "fmxtULnBcanMr4WT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clever Improviser",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned how to handle situations when you're out of your depth. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Untrained Improvisation] general feat. In addition, you can attempt skill actions that normally require you to be trained, even if you are untrained.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Untrained Improvisation"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "human"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +111,43 @@
       "name": "Sense Allies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "m5JYglEObpWC3dhP",
+        "folder": "fmxtULnBcanMr4WT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sense Allies",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Like many humans raised in a close-knit community, you have always been strongly attuned to the presence of others. Willing allies that you are aware of within 60 feet that would otherwise be @UUID[Compendium.pf2e.conditionitems.Item.Undetected] by you are instead @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from you. The flat check for you to target willing allies within 60 feet that are hidden from you is @Check[flat|showDC:all|dc:5] instead of 11.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "human"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

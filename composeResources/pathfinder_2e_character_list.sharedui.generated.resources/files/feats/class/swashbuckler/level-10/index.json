@@ -7,6 +7,48 @@
       "name": "Buckler Dance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tDWc2LQNl0Op1Auq",
+        "folder": "LwQYVo8HbQp58xYp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Buckler Dance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a @UUID[Compendium.pf2e.equipment-srd.Item.Buckler].</p><hr /><p>You spin your buckler defensively toward every attack. You constantly have your buckler raised as if you'd used @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield], as long as you meet that action's requirements.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Buckler Dance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Buckler Dance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "stance",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +58,54 @@
       "name": "Derring-Do",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SlMkuKMny7hWdNxL",
+        "folder": "LwQYVo8HbQp58xYp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Derring-Do",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you compound panache with even more derring-do, it somehow tends to work out. When you already have @UUID[Compendium.pf2e.classfeatures.Item.Panache], you can roll twice and use the higher result on checks to which the circumstance bonus from @UUID[Compendium.pf2e.classfeatures.Item.Stylish Combatant] applies (@UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] and any skill actions with the bravado trait).</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "keep": "higher",
+              "key": "RollTwice",
+              "predicate": [
+                "self:effect:panache",
+                "item:trait:bravado"
+              ],
+              "selector": "skill-check"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +115,47 @@
       "name": "Reflexive Riposte",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uotQ9yqetPoAWrfW",
+        "folder": "LwQYVo8HbQp58xYp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reflexive Riposte",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can riposte almost without a thought. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to perform an @UUID[Compendium.pf2e.actionspf2e.Item.Opportune Riposte].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Opportune Riposte"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +165,77 @@
       "name": "Stumbling Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gHkRvvdjNv6nfh9Y",
+        "folder": "LwQYVo8HbQp58xYp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stumbling Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your excellent display of fighting prowess leaves your opponent stumbling back. Make a Strike. If you hit, the target is pushed 5 feet back (or 10 feet on a critical hit).</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Stumbling",
+                  "value": "stumbling"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "finisher:stumbling"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +245,43 @@
       "name": "Switcheroo",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RG6PAQuPho2MWdmZ",
+        "folder": "LwQYVo8HbQp58xYp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Switcheroo",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are targeted by a ranged attack.</p>\n<p><strong>Requirements</strong> You are adjacent to an enemy and have @UUID[Compendium.pf2e.classfeatures.Item.Panache].</p><hr /><p>You attempt to deftly swap places with an adjacent enemy to avoid the attack. Choose an adjacent enemy and attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] it. Instead of the normal results of Reposition, use the following.</p><hr /><p><strong>Critical Success</strong> You swap places with the target enemy and the enemy becomes the target of the triggering attack.</p>\n<p><strong>Success</strong> As critical success, except the target has lesser cover against the triggering attack, and you lose your panache.</p>\n<p><strong>Failure</strong> You lose your panache.</p>\n<p><strong>Critical Failure</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the triggering attack, and you lose your panache.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +291,77 @@
       "name": "Targeting Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DLkMoVb8qb4qxnx3",
+        "folder": "LwQYVo8HbQp58xYp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Targeting Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attack harms and hinders your foe. Choose a particular part of your foe from the list below and Strike.</p>\n<p>If you hit and damage the target, apply the effect corresponding to the chosen part. This hindrance lasts until the end of your next turn. On a critical hit, you also apply a lesser effect lasting for 1 minute.</p><ul><li><strong>Arm (or another limb used for attacks, such as a tentacle)</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2}. On a critical hit, it is also @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} for 1 minute.</li><li><strong>Head</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2}. On a critical hit, it is also @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for 1 minute.</li><li><strong>Legs</strong> The target takes a –10-foot status penalty to its Speeds. On a critical hit, it also takes a –5-foot status penalty to its Speeds for 1 minute.</li></ul><p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Targeting Finisher]</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Targeting",
+                  "value": "targeting"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "finisher:targeting"
+              ],
+              "selector": "strike-damage",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

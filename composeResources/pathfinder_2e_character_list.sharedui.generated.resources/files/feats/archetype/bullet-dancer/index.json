@@ -7,6 +7,50 @@
       "name": "Black Powder Blaze",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YrRlbIzjsFlGGmVN",
+        "folder": "UQdIYofnLbcraxlJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Black Powder Blaze",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded firearm.</p><hr /><p>You launch yourself across the battlefield. Stride and use @UUID[Compendium.pf2e.feats-srd.Item.Black Powder Boost]. Make a melee Strike with an attached weapon or the required weapon's combination melee form, at any point during the Black Powder Boost.</p><hr /><p><strong>Special</strong> If you have @UUID[Compendium.pf2e.feats-srd.Item.Bullet Dancer Burn], apply the additional fire damage to the granted Strike.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bullet Dancer Dedication"
+              },
+              {
+                "value": "Black Powder Boost"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +60,47 @@
       "name": "Bullet Dancer Burn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uc6JcNrI31wzSC2h",
+        "folder": "UQdIYofnLbcraxlJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bullet Dancer Burn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a simple combination weapon or an attached bayonet or reinforced stock.</p><hr /><p>The fiery blaze of your weapon shocks your enemies. While in @UUID[Compendium.pf2e.actionspf2e.Item.Bullet Dancer Stance], when you successfully Strike an opponent with the melee form of a combination weapon or a bayonet or reinforced stock attached to a simple firearm, the next ranged Strike you make against that opponent doesn't trigger reactions that would trigger on a ranged attack, such as Reactive Strike. While in Bullet Dancer Stance, when you make a successful ranged Strike against an opponent within your melee reach using a firearm, the next melee attack against that opponent with that weapon or a weapon attached to it deals an additional 1 fire damage and 1 persistent fire damage per weapon damage die of the attached firearm.</p>\n<p>The benefit on your next Strike from either use of Bullet Dancer Burn is lost if not used by the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bullet Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +110,77 @@
       "name": "Bullet Dancer Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j1hhTLOq7o80XCyV",
+        "folder": "UQdIYofnLbcraxlJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bullet Dancer Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You mix guns and melee into a deadly art. You gain the Bullet Dancer Stance action. You are also granted familiarity with bayonets, reinforced stocks, martial firearms, and martial combination weapons; for the purposes of proficiency and abilities from this archetype, you treat bayonets, reinforced stocks, martial firearms, and martial combination weapons as simple weapons. You gain access to uncommon combination weapons that have a firearm ranged form.</p>\n<p><strong>@UUID[Compendium.pf2e.actionspf2e.Item.Bullet Dancer Stance]</strong> <span class=\"action-glyph\">1</span> (stance)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.SMF1hTWPHtmlS8Cd inline]</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.5nd8ON2kFGOsCdwQ]{Bullet Dancer}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in unarmored defense"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Bullet Dancer Stance"
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:base:bayonet",
+                    "item:base:reinforced-stock",
+                    {
+                      "and": [
+                        "item:category:martial",
+                        {
+                          "or": [
+                            "item:group:firearm",
+                            "item:trait:combination"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "sameAs": "simple",
+              "slug": "bullet-dancer-dedication"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +190,48 @@
       "name": "Bullet Dancer Reload",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5ZX4btrw5yjBr8IM",
+        "folder": "UQdIYofnLbcraxlJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bullet Dancer Reload",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in @UUID[Compendium.pf2e.actionspf2e.Item.Bullet Dancer Stance].</p><hr /><p>You've learned to reload your firearms with uncanny grace, the ammunition simply falling into place as though part of a well-practiced kata. You Strike with a simple firearm, and then Interact to reload that same firearm. You don't need a free hand to reload your weapon in this way.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bullet Dancer Burn"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +241,50 @@
       "name": "Ranged Disarm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MyDluIbnX2sjm3pB",
+        "folder": "UQdIYofnLbcraxlJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ranged Disarm",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a simple firearm or simple combination weapon.</p><hr /><p>When using a simple firearm, you can shoot objects right out of your enemy's hands. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] the target using a ranged attack roll with the required firearm or combination weapon, instead of attempting an Athletics check against the target's Reflex DC.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bullet Dancer Dedication"
+              },
+              {
+                "value": "Trick Shot"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

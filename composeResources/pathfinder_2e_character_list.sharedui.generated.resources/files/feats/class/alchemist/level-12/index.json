@@ -7,6 +7,43 @@
       "name": "Extend Elixir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "asRbkgW59DZUpvAq",
+        "folder": "ssE4ppnIBXHHXNfh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Extend Elixir",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Integrating your own personal energy into the elixirs you create causes them to affect you for longer. When you consume one of your alchemical items that has the elixir and infused traits and a duration of 1 minute or longer, that elixir's duration is doubled. If you created the item with @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy], this can't cause it to exceed the 10-minute duration limit.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +53,62 @@
       "name": "Supreme Invigorating Elixir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6quBFw5r7iWzln2b",
+        "folder": "ssE4ppnIBXHHXNfh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Supreme Invigorating Elixir",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>For the purposes of counteracting effects with invigorating elixirs, treat your level as though it were 2 higher. Add the listed conditions to those you can choose for an invigorating elixir you create to counteract: @UUID[Compendium.pf2e.conditionitems.Item.Petrified], @UUID[Compendium.pf2e.conditionitems.Item.Stunned]. You can also choose a disease regardless of what, if any, conditions it imposes.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Invigorating Elixir"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:invigorating-elixir"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Alchemist.SupremeInvigoratingElixir.Description"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +118,71 @@
       "name": "Uncanny Bombs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9Ht1eyBHsB1swpeE",
+        "folder": "ssE4ppnIBXHHXNfh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Uncanny Bombs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You lob bombs unerringly, despite obstructions or distance. When you throw an alchemical item with the bomb trait, its range increment increases to 60 feet, you reduce any circumstance bonus to the target's AC from cover by 1, and you automatically succeed at the flat check when targeting a @UUID[Compendium.pf2e.conditionitems.Item.Concealed] creature.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Far Lobber"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:base:alchemical-bomb"
+              ],
+              "key": "AdjustStrike",
+              "mode": "upgrade",
+              "property": "range-increment",
+              "value": 60
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "target:condition:concealed"
+              ],
+              "selector": "alchemical-bomb-base-attack-roll",
+              "text": "PF2E.SpecificRule.Alchemist.UncannyBombs.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "EphemeralEffect",
+              "selectors": "alchemical-bomb-base-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Uncanny Bombs"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

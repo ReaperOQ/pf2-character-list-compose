@@ -7,6 +7,75 @@
       "name": "On Borrowed Time",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "H1kZ8nqvHlAazM35",
+        "folder": "43MH6JznkjLMpQx3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "On Borrowed Time",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You accelerate a foe's personal timestream, which causes them to experience time at a faster rate, putting a terrible strain on their mind and body. A creature you target within 30 feet takes @Damage[3d6[persistent,mental]] damage with a @Check[will|against:oracle|basic] save. At the end of the subject's turn, they take this persistent damage after all other persistent damage. Before they roll their flat check to end the persistent damage, an additional round passes for them; this affects the duration of all beneficial effects, negative effects, afflictions, conditions, and other persistent damage. The subject attempts saving throws, flat checks, and any other rolls and takes damage as if the time had passed. They don't take the persistent mental damage from On Borrowed Time more than once per round.</p>\n<p>If you are @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 2} when you use On Borrowed Time, the persistent damage increases to 4d6. If you are @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 3} when you use On Borrowed Time, the persistent damage increases to 5d6.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "time mystery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:condition:cursebound",
+                    2
+                  ]
+                },
+                "damage:category:persistent",
+                "damage:type:mental"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "slug": "base",
+              "value": "clamp(2+@actor.conditions.cursebound.value,4,5)"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +85,54 @@
       "name": "Roll the Bones of Fate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7Q7HWETkvOM9pYwV",
+        "folder": "43MH6JznkjLMpQx3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Roll the Bones of Fate",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>You roll a handful of bones to learn (or perhaps influence) the future course of events. Roll 1d4 and use the corresponding result below. Whenever you Roll the Bones of Fate, any effects from a previous usage immediately end.</p><hr /><p><strong>1 Good</strong> You or an ally within 30 feet can roll twice on your next attack roll or skill check, taking the higher result. This is a fortune effect. @UUID[Compendium.pf2e.feat-effects.Item.Effect: Roll the Bones of Fate (Good)]</p>\n<p><strong>2 Bad</strong> One creature you are observing within 30 feet must succeed at a Will save against your spell DC; on a failure, the target must roll twice on their next attack roll or skill check that takes at least one action to perform, taking the lower result. This is a misfortune effect.</p>\n<p><strong>3 Mixed</strong> You gain the benefits of rolling both a 1 and a 2.</p>\n<p><strong>4 Cursed Possibilities</strong> Your attempts to meddle in the forces of prophecy bring dire consequences for all. Every creature within 30 feet of you when you perform the augury rolls twice on their next attack roll or skill check that takes at least one action to perform; if the highest number rolled is odd, they take the lower result, and if the highest number rolled is even, they take the higher result. If they took the lower result, this effect has the misfortune trait for them, and if they took the higher result, it has the fortune trait.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "bones or lore mystery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "oracle",
+              "prediction"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +142,49 @@
       "name": "The Dead Walk",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Fd0DriV32X3S9B2z",
+        "folder": "43MH6JznkjLMpQx3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Dead Walk",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You beseech warrior spirits to come forth and aid you. Two ghostly warriors manifest within a @Template[emanation|distance:30] of you and each attempt a Strike against an adjacent enemy, using your spell attack modifier. The warriors' Strikes each deal @Damage[4d6[spirit]] damage and the warriors can flank with one another and with you and your allies. If you are @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 2} when you use The Dead Walk, you instead summon three warriors, and if you are cursebound 3, you instead summon four warriors. The warriors disappear at the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "ancestors or battle mystery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +194,50 @@
       "name": "Trial by Skyfire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lUuEX5HVxylRvFAF",
+        "folder": "43MH6JznkjLMpQx3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Trial by Skyfire",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your lips murmur as you portend a great disaster, one you hope you survive. A rain of blazing bolts begins to fall from the heavens in a @Template[emanation|distance:10], centered on you, that deals @Damage[2d6[fire]|options:area-damage] damage to all creatures in the emanation at the end of each of your turns (@Check[reflex|against:class-spell|basic|options:area-effect] save); you can't exclude yourself from the emanation. The skyfire persists for 1 minute; while you can't Dismiss it, you can suppress the effect for 1 round with a Sustain action. The rain of fire is suppressed if you fall @UUID[Compendium.pf2e.conditionitems.Item.Unconscious]. If you become @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 3} or 4 at any point during Trial by Skyfire's duration, the emanation increases to @Template[emanation|distance:15]{15 feet} and the damage increases to @Damage[4d6[fire]|options:area-damage|shortLabel].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "cosmos or flames mystery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "fire",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +247,52 @@
       "name": "Waters of Creation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KGxGE0yv69ND2hct",
+        "folder": "43MH6JznkjLMpQx3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Waters of Creation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Water is the source of life, and you draw upon this primordial force to heal your allies' wounds. A gentle ring ripples out from you in a @Template[emanation|distance:15], restoring @Damage[(floor(@actor.level/2))d6[healing,vitality]|shortLabel:true] Hit Points to creatures in the area. At 12th level and every two levels thereafter, the amount restored increases by 1d6. If you are @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 3} when you use Waters of Creation, the amount healed increases to @Damage[(floor(@actor.level/2))d8[healing,vitality]|shortLabel:true].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "life or tempest mystery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "healing",
+              "oracle",
+              "vitality",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

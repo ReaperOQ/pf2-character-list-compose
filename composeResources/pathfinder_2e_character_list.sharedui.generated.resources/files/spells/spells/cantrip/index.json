@@ -7,6 +7,90 @@
       "name": "Bramble Bush",
       "img": "systems/pf2e/icons/spells/blight.webp",
       "type": "spell",
+      "data": {
+        "_id": "mAdxOQUA2cHgKViU",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/blight.webp",
+        "name": "Bramble Bush",
+        "system": {
+          "area": {
+            "type": "cube",
+            "value": 5
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "t5QwR29amSZkE1Dd": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "piercing"
+            }
+          },
+          "defense": {
+            "passive": null,
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>In a sudden burst of growth, you cause a thorned bush to sprout from the ground, lash around, and wither. Any creature in the area takes 1d4 piercing damage with a basic Reflex saving throw.</p>\n<p>Until the start of your next turn, the area is difficult terrain and hazardous terrain. Any creature entering the square takes @Damage[(1d4 + ceil(@item.level / 2) - 1)[piercing]] damage with a basic Reflex saving throw.</p><hr /><p><strong>Heightened (+2)</strong> The initial damage increases by 1d4, and the damage dealt by hazardous terrain increases by 1.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "t5QwR29amSZkE1Dd": "1d4"
+            },
+            "interval": 2,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #203: Shepherd of Decay"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "plant",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -15,6 +99,63 @@
       "name": "Bullhorn",
       "img": "icons/tools/instruments/megaphone.webp",
       "type": "spell",
+      "data": {
+        "_id": "W02bHXylIpoXbO4e",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/tools/instruments/megaphone.webp",
+        "name": "Bullhorn",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You amplify your voice, loud enough for you to be heard easily at a great distance. For the duration, your voice can be heard loudly and clearly by all listeners within 500 feet, even if other ambient noise would otherwise block the sound. Despite the volume, this doesn't make your voice jarring or distracting. This doesn't increase the range or area of other auditory or linguistic effects, and physical barriers such as walls and doors still block or muffle your voice as normal.</p>\n<p>Your loud voice makes it easier to @UUID[Compendium.pf2e.actionspf2e.Item.Coerce] others, and the acoustics assist in Performing at a large venue. You gain a +1 status bonus to checks to Coerce and auditory Performance checks to @UUID[Compendium.pf2e.actionspf2e.Item.Perform] at a large venue. You can Dismiss the spell.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Bullhorn]</p><hr /><p><strong>Heightened (5th)</strong> Your voice can be heard clearly up to 1,200 feet away.</p>\n<p><strong>Heightened (7th)</strong> Your voice can be heard clearly up to 1 mile away.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "10 minutes"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "auditory",
+              "cantrip",
+              "concentrate",
+              "illusion",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -23,6 +164,88 @@
       "name": "Caustic Blast",
       "img": "icons/magic/acid/orb-bubble-smoke-drip.webp",
       "type": "spell",
+      "data": {
+        "_id": "thAHF1zxNplLCJPO",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/acid/orb-bubble-smoke-drip.webp",
+        "name": "Caustic Blast",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 5
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "yI4fzrhnbFxup4Ep": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "acid"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You fling a large glob of acid that immediately detonates, spraying nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex save; on a critical failure, the creature also takes @Damage[(1+floor((@item.rank -1)/2))[persistent,acid]] damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The initial damage increases by 1d8, and the persistent damage on a critical failure increases by 1.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "yI4fzrhnbFxup4Ep": "1d8"
+            },
+            "interval": 2,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "acid",
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -31,6 +254,86 @@
       "name": "Daze",
       "img": "systems/pf2e/icons/spells/daze.webp",
       "type": "spell",
+      "data": {
+        "_id": "4gBIw4IDrSfFHik4",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/daze.webp",
+        "name": "Daze",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "mental"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>You push into the target's mind and daze it with a mental jolt. The jolt deals 1d6 mental damage, with a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d6"
+            },
+            "interval": 2,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "mental",
+              "nonlethal"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -39,6 +342,60 @@
       "name": "Deep Breath",
       "img": "systems/pf2e/icons/spells/deep-breath.webp",
       "type": "spell",
+      "data": {
+        "_id": "C2DwamKrW6QHoDQg",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/deep-breath.webp",
+        "name": "Deep Breath",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You take an incredibly deep breath and can hold it for the spell's duration. You don't lose breath when hit, but you do lose all the air you inhaled if you speak (including to Cast a Spell). This spell doesn't create air; if you don't have air to breathe when you cast it, you get no benefit.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The duration increases to 1 hour, and you lose only 10 minutes of breath if you speak.</p>\n<p><strong>Heightened (4th)</strong> The duration increases to 8 hours, and you lose only 10 minutes of breath if you speak.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "10 minutes"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "air",
+              "cantrip",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -47,6 +404,66 @@
       "name": "Detect Magic",
       "img": "systems/pf2e/icons/spells/detect-magic.webp",
       "type": "spell",
+      "data": {
+        "_id": "gpzpAAAJ1Lza2JVl",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/detect-magic.webp",
+        "name": "Detect Magic",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies. You detect illusion magic only if that magic's effect has a lower rank than the rank of your <em>detect magic</em> spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an <em>invisibility potion</em>) typically are detected normally.</p><hr /><p><strong>Heightened (3rd)</strong> You learn the rank or level of the most powerful magical effect the spell detects, as determined by the GM.</p>\n<p><strong>Heightened (4th)</strong> As 3rd rank, but you also pinpoint the source of the highest-rank magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "detection",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -55,6 +472,67 @@
       "name": "Detect Metal",
       "img": "icons/commodities/metal/ingot-plain-steel.webp",
       "type": "spell",
+      "data": {
+        "_id": "vJZ83ehQiM906lea",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/commodities/metal/ingot-plain-steel.webp",
+        "name": "Detect Metal",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You attune yourself to magnetic fields, becoming aware of the presence or absence of metallic objects, veins, and deposits within the area. You can choose to ignore metal you're fully aware of, such as the gear you and your allies wear and carry.</p>\n<p>You detect metal hidden by illusions (such as @UUID[Compendium.pf2e.spells-srd.Item.Invisibility]) only if the illusion has a lower rank than your <em>detect metal</em> spell. Against deceptive illusions, <em>detect metal</em> always notices an absence of metal when a non-metallic object is disguised as metallic. However, if the deception involves disguising one metallic object as another, such as pretending a copper coin is made of gold, <em>detect metal</em> registers only the presence of metal, not its type, even if the rank of your <em>detect metal</em> spell exceeds that of the illusion effect.</p><hr /><p><strong>Heightened (3rd)</strong> You can discern all types of metal you detected. Your spell can overcome deceptive illusory spells hiding one metal as another if the magic effect's rank is lower than that of your <em>detect metal</em> spell.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "detection",
+              "manipulate",
+              "metal"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -63,6 +541,81 @@
       "name": "Divine Lance",
       "img": "systems/pf2e/icons/spells/divine-lance.webp",
       "type": "spell",
+      "data": {
+        "_id": "qwZBXN6zBoB9BHXE",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/divine-lance.webp",
+        "name": "Divine Lance",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "spirit"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You unleash a beam of divine energy. Make a ranged spell attack against the target's AC. On a hit, the target takes 2d4 spirit damage (double damage on a critical hit).</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "overlays": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "sanctified",
+              "spirit"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -71,6 +624,62 @@
       "name": "Draw Moisture",
       "img": "systems/pf2e/icons/spells/draw-moisture.webp",
       "type": "spell",
+      "data": {
+        "_id": "lXsFKdaOz9t9w11U",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/draw-moisture.webp",
+        "name": "Draw Moisture",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You draw water out of an object, possibly to clean up spills or quickly dry a soaked book or shirt. You draw up to a pint of water from the object; this dries objects of less than 1 Bulk. The water collects in a globule floating in your hand, which you can direct into a nearby container as part of Casting the Spell; otherwise, it splashes to the ground. Repeated applications of draw moisture can be used to dry larger objects, although doing so might take significant time. You can use this spell in especially humid environments to condense drinkable water from the air, though typically, you can't draw more than a few cups before depleting the ambient moisture.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "10 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 object"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "water"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -79,6 +688,61 @@
       "name": "Eat Fire",
       "img": "systems/pf2e/icons/spells/eat-fire.webp",
       "type": "spell",
+      "data": {
+        "_id": "FWuLUKIbkJZjBiuA",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/eat-fire.webp",
+        "name": "Eat Fire",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would take fire damage.</p>\n<hr />\n<p>You consume and ingest fire, making it less harmful to you. You gain resistance 5 to fire damage until the end of the current turn. During the remaining duration of the spell, you can use the Belch Smoke action. The spell ends if you fall @UUID[Compendium.pf2e.conditionitems.Item.Unconscious], inhale, or exhale (this includes speaking).</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Eat Fire]</p>\n<p><strong>Belch Smoke</strong> <span class=\"action-glyph\">1</span> You exhale what remains of the smoke, ending the spell and creating a smoke cloud in a @Template[burst|distance:5] within 20 feet. All creatures within the smoke cloud are @UUID[Compendium.pf2e.conditionitems.Item.Concealed], and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind.</p>\n<hr />\n<p><strong>Heightened (+3)</strong> The resistance increases by 5.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the end of your next turn"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "reaction"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "fire",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -87,6 +751,84 @@
       "name": "Electric Arc",
       "img": "icons/magic/lightning/bolt-strike-forked-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "kBhaPuzLUSwS6vVf",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/lightning/bolt-strike-forked-blue.webp",
+        "name": "Electric Arc",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "electricity"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>An arc of lightning leaps from one target to another. Each target takes 2d4 electricity damage with a basic Reflex save.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 or 2 creatures"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "electricity",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -95,6 +837,59 @@
       "name": "Elemental Counter",
       "img": "systems/pf2e/icons/spells/elemental-counter.webp",
       "type": "spell",
+      "data": {
+        "_id": "fHawnhOHwzr4Mwr7",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/elemental-counter.webp",
+        "name": "Elemental Counter",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p><strong>Trigger</strong> You or a creature within 60 feet rolls a saving throw against a spell with the earth, fire, metal, plant, water, or wood trait, or are targeted by a spell attack with such a trait.</p>\n<p><strong>Requirements</strong> You have a spell slot from which you could Cast a Spell of the triggering spell's countering element; see text.</p>\n<hr />\n<p>Each element in the elemental cycle counters another, and you can use your elemental spells to protect against elements they counter. You lose your spell slot as if you had cast the triggering spell. You then attempt to counteract the triggering spell, using the rank of the spell you lost for the counteract rank. You can lose a plant or wood spell to counter earth, an earth spell to counter water, a water spell to counter fire, a fire spell to counter metal, or a metal spell to counter plant or wood.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "reaction"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -103,6 +898,62 @@
       "name": "Figment",
       "img": "systems/pf2e/icons/spells/ghost-sound.webp",
       "type": "spell",
+      "data": {
+        "_id": "0zU8CPejjQFnhZFI",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/ghost-sound.webp",
+        "name": "Figment",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You create a simple illusory sound or vision. A sound adds the auditory trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the visual trait, can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet. When you Cast or Sustain the Spell, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion] with the illusion, gaining a +2 circumstance bonus to your Deception check. If the attempt fails against a creature, that creature disbelieves the <em>figment</em>.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Figment]</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "illusion",
+              "manipulate",
+              "subtle"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -111,6 +962,60 @@
       "name": "Forbidding Ward",
       "img": "systems/pf2e/icons/spells/forbidding-ward.webp",
       "type": "spell",
+      "data": {
+        "_id": "RA7VKcen3p56rVyZ",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/forbidding-ward.webp",
+        "name": "Forbidding Ward",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You ward an ally against the attacks and hostile spells from the target enemy. The target ally gains a +1 status bonus to Armor Class and saving throws against the target enemy's attacks, spells, and other effects.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Forbidding Ward]</p>\n<hr />\n<p><strong>Heightened (6th)</strong> The status bonus increases to +2.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 ally and 1 enemy"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -119,6 +1024,84 @@
       "name": "Frostbite",
       "img": "icons/magic/movement/trail-streak-impact-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "IxhGEKl63R4QBvkj",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+        "name": "Frostbite",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "3bsJUDEgedKhPx6T": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "cold"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>An orb of biting cold coalesces around your target, freezing its body. The target takes 2d4 cold damage with a basic Fortitude save. On a critical failure, the target also gains weakness 1 to bludgeoning until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Frostbite]</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4 and the weakness on a critical failure increases by 1.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "3bsJUDEgedKhPx6T": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "cold",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -127,6 +1110,59 @@
       "name": "Frost's Touch",
       "img": "icons/magic/water/barrier-ice-crystal-wall-jagged-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "WFSazGLCUuPsBv1p",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/water/barrier-ice-crystal-wall-jagged-blue.webp",
+        "name": "Frost's Touch",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>Your <em>gelid shard</em> drinks down nearby heat in a futile attempt to sate itself and achieve a level of frigid cold unheard of in the Universe. This allows you to cool a drink, make a hot pot safe to handle, or other, similar minor effects. Once cooled, the object's temperature is subject to its environment as usual. You can also solidify ambient moisture into a solid object; this temporary object is of negligible Bulk, made of non-magical ice. The object looks crude and artificial and is extremely fragile—it can't be used as a tool, weapon, or locus or cost for a spell. Once created, it melts as normal for ice for the ambient conditions.</p><hr /><p><strong>Heightened (3rd)</strong> You can create simple objects of ice with up to 1 Bulk and of a level not exceeding 1. Such objects must be rigid. You can only have one such object created at a time; if you create another, the previous object melts instantly.</p>\n<p><strong>Heightened (5th)</strong> Items you create can be up to 4 Bulk and 4th level.</p>\n<p><strong>Heightened (7th)</strong> Items you create can be up to 8 Bulk and 8th level.</p>\n<p><strong>Heightened (9th)</strong> Items you create can be up to 20 Bulk and 12th level.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 object"
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "rare",
+            "traditions": [
+              "arcane"
+            ],
+            "value": [
+              "cantrip",
+              "cold",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -135,6 +1171,88 @@
       "name": "Gale Blast",
       "img": "icons/magic/light/orb-shadow-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "dDiOnjcsBFbAvP6t",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/light/orb-shadow-blue.webp",
+        "name": "Gale Blast",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 5
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>Wind flows from your outstretched hands and whirls around you in a 5-foot emanation. Each creature in the area takes 1d6 bludgeoning damage, with a Fortitude save.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is pushed 5 feet away from you.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is pushed 10 feet away from you.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d6"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "air",
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -143,6 +1261,62 @@
       "name": "Glamorize",
       "img": "icons/creatures/unholy/demon-female-succubus-orange.webp",
       "type": "spell",
+      "data": {
+        "_id": "UK349cSOljQVYpcu",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/creatures/unholy/demon-female-succubus-orange.webp",
+        "name": "Glamorize",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>Using simple magical gestures, you alter a minor detail of your appearance (add or remove highlights to your hair color, apply or remove cosmetics, add polish or accessories to your nails, etc.) or create a small environmental effect that's confined to your person (adjust surrounding lighting to favor your good side, cause a brief wind to make your hair blow dramatically, make a small chime occur as you smile, etc.). While the spell is active, you can Sustain it to make further adjustments. The changes persist until the spell's duration ends.</p>\n<p>At the GM's discretion, such alterations might grant a +1 status bonus to certain tasks, such as Impersonate or @UUID[Compendium.pf2e.actionspf2e.Item.Perform].</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 hour"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -151,6 +1325,125 @@
       "name": "Glass Shield",
       "img": "systems/pf2e/icons/spells/electrified-crystal-ward.webp",
       "type": "spell",
+      "data": {
+        "_id": "cgfl9Qr46bKaA59e",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/electrified-crystal-ward.webp",
+        "name": "Glass Shield",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "dtpQLfwMi5qU2XEa": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "piercing"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You summon a layer of clear glass to keep you from harm. This counts as using the @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield] action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use. You can @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] with the glass shield. It has Hardness 2. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. When you Shield Block, the shield explodes in a shower of glass. If creature that broke it is within 5 feet, the shards deal 1d4 piercing damage to that creature with a basic Reflex save. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Glass Shield]</p><hr /><p><strong>Heightened (3rd)</strong> The shield has Hardness 4, and the damage increases to 3d4.</p>\n<p><strong>Heightened (5th)</strong> The shield has Hardness 7, and the damage increases to 4d4.</p>\n<p><strong>Heightened (7th)</strong> The shield has Hardness 10, and the damage increases to 5d4.</p>\n<p><strong>Heightened (9th)</strong> The shield has Hardness 12, and the damage increases to 6d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the start of your next turn"
+          },
+          "heightening": {
+            "levels": {
+              "3": {
+                "damage": {
+                  "dtpQLfwMi5qU2XEa": {
+                    "applyMod": false,
+                    "category": null,
+                    "formula": "3d4",
+                    "materials": [],
+                    "type": "piercing"
+                  }
+                }
+              },
+              "5": {
+                "damage": {
+                  "dtpQLfwMi5qU2XEa": {
+                    "applyMod": false,
+                    "category": null,
+                    "formula": "4d4",
+                    "materials": [],
+                    "type": "piercing"
+                  }
+                }
+              },
+              "7": {
+                "damage": {
+                  "dtpQLfwMi5qU2XEa": {
+                    "applyMod": false,
+                    "category": null,
+                    "formula": "5d4",
+                    "materials": [],
+                    "type": "piercing"
+                  }
+                }
+              },
+              "9": {
+                "damage": {
+                  "dtpQLfwMi5qU2XEa": {
+                    "applyMod": false,
+                    "category": null,
+                    "formula": "6d4",
+                    "materials": [],
+                    "type": "piercing"
+                  }
+                }
+              }
+            },
+            "type": "fixed"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "earth"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -159,6 +1452,121 @@
       "name": "Gouging Claw",
       "img": "icons/creatures/claws/claw-hooked-curved.webp",
       "type": "spell",
+      "data": {
+        "_id": "MPxbKoR54gkYkqLO",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/creatures/claws/claw-hooked-curved.webp",
+        "name": "Gouging Claw",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "untyped"
+            },
+            "3Pz4NTLXD2rzKgf4": {
+              "applyMod": false,
+              "category": "persistent",
+              "formula": "2",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bleed"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of 2d6 slashing damage or 2d6 piercing damage, plus 2 persistent bleed damage. On a critical success, you deal double damage and double bleed damage.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 1d6 and the persistent bleed damage increases by 1.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d6",
+              "3Pz4NTLXD2rzKgf4": "1"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "overlays": {
+            "URQWpedXx9fB1fR7": {
+              "name": "Gouging Claw (Piercing)",
+              "overlayType": "override",
+              "sort": 1,
+              "system": {
+                "damage": {
+                  "0": {
+                    "category": null,
+                    "type": "piercing"
+                  }
+                },
+                "defense": null
+              }
+            },
+            "wQHuRGaDDW2MemlK": {
+              "_id": "wQHuRGaDDW2MemlK",
+              "name": "Gouging Claw (Slashing)",
+              "overlayType": "override",
+              "sort": 2,
+              "system": {
+                "damage": {
+                  "0": {
+                    "category": null,
+                    "type": "slashing"
+                  }
+                }
+              }
+            }
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "touch"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "morph"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -167,6 +1575,60 @@
       "name": "Guidance",
       "img": "systems/pf2e/icons/spells/guidance.webp",
       "type": "spell",
+      "data": {
+        "_id": "izcxFQFwf3woCnFs",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/guidance.webp",
+        "name": "Guidance",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You ask for the guidance of supernatural entities, granting the target a +1 status bonus to one attack roll, Perception check, saving throw, or skill check the target attempts before the duration ends. The target chooses which roll to use the bonus on before rolling. If the target uses the bonus, the spell ends. Either way, the target is then temporarily immune for 1 hour.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Guidance]</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Effect: Guidance Immunity]</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the start of your next turn"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -175,6 +1637,88 @@
       "name": "Haunting Hymn",
       "img": "icons/commodities/tech/antenna-powered-purple.webp",
       "type": "spell",
+      "data": {
+        "_id": "b5BQbwmuBhgPXTyi",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/commodities/tech/antenna-powered-purple.webp",
+        "name": "Haunting Hymn",
+        "system": {
+          "area": {
+            "type": "cone",
+            "value": 15
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "sonic"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You echo a jarring hymn that only creatures in the area can hear. The hymn deals 1d8 sonic damage, with a basic Fortitude save. If a target critically fails the save, it's also @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for 1 minute.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d8.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d8"
+            },
+            "interval": 2,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "auditory",
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "sonic"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -183,6 +1727,109 @@
       "name": "Ignition",
       "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
       "type": "spell",
+      "data": {
+        "_id": "6DfLZBl8wKIV03Iq",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+        "name": "Ignition",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "cQDyW0QpjJ38MlSi": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "fire"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You snap your fingers and point at a target, which begins to smolder. Make a spell attack roll against the target's AC, dealing 2d4 fire damage on a hit. If the target is within your melee reach, you can choose to make a melee spell attack with the flame instead of a ranged spell attack, which increases all the spell's damage dice to d6s.</p><hr /><p><strong>Critical Success</strong> The target takes double damage and 1d4 persistent fire damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p><hr /><p><strong>Heightened (+1)</strong> The initial damage increases by 1d4 and the persistent fire damage on a critical hit increases by 1d4.</p>\n<p>@Damage[(@item.rank)d4[persistent,fire]]{Scaling Persistent Fire Damage}</p>\n<p>@Damage[(@item.rank)d6[persistent,fire]]{Scaling Persistent Fire Damage (Melee)}</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "cQDyW0QpjJ38MlSi": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "overlays": {
+            "eOCNn2ohYAvsYZjn": {
+              "_id": "eOCNn2ohYAvsYZjn",
+              "overlayType": "override",
+              "sort": 1,
+              "system": {}
+            },
+            "xYyA7CV1GaFTRjBQ": {
+              "_id": "xYyA7CV1GaFTRjBQ",
+              "name": "Ignition (Melee)",
+              "overlayType": "override",
+              "sort": 2,
+              "system": {
+                "damage": {
+                  "cQDyW0QpjJ38MlSi": {
+                    "formula": "2d6"
+                  }
+                },
+                "heightening": {
+                  "damage": {
+                    "cQDyW0QpjJ38MlSi": "1d6"
+                  }
+                },
+                "range": {
+                  "value": "touch"
+                }
+              }
+            }
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "fire",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -191,6 +1838,76 @@
       "name": "Illuminate",
       "img": "icons/sundries/lights/candle-lit-yellow.webp",
       "type": "spell",
+      "data": {
+        "_id": "qCkxBOLMCCXEjBWo",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/sundries/lights/candle-lit-yellow.webp",
+        "name": "Illuminate",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You light all non-magical light sources in the area that use fire to provide their light—such as candles, lamps, and sconces. You can choose to make the emanation smaller than its maximum, to any distance of your choice. If a light source is attended by an unwilling creature, that creature can attempt a Reflex save to snuff the light out before it becomes noticeable.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The maximum area increases by 10 feet.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 10,
+            "damage": {},
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "fire",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -199,6 +1916,62 @@
       "name": "Know the Way",
       "img": "icons/skills/ranged/arrow-flying-ornate-gold.webp",
       "type": "spell",
+      "data": {
+        "_id": "tXa5vOu5giBNCjdR",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/skills/ranged/arrow-flying-ornate-gold.webp",
+        "name": "Know the Way",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>In your mind's eye, you magically reorient yourself. You immediately know which direction is north (if it exists at your current location), and you can choose a location you were at within the last 24 hours and learn what direction it lies.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can choose a location you were at within the last week.</p>\n<p><strong>Heightened (7th)</strong> You can choose a location you were at regardless of how long ago you were there.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "detection",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -207,6 +1980,63 @@
       "name": "Light",
       "img": "systems/pf2e/icons/spells/light.webp",
       "type": "spell",
+      "data": {
+        "_id": "WBmvzNDfpwka3qT4",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/light.webp",
+        "name": "Light",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You create an orb of light that sheds bright light in a 20-foot radius (and dim light for the next 20 feet) in a color you choose. If you create the light in the same space as a willing creature, you can attach the light to the creature, causing it to float near that creature as it moves. You can Sustain the spell to move the light up to 60 feet; you can attach or detach it from a creature as part of this movement.</p>\n<p>You can Dismiss the spell. If you Cast the Spell while you already have four <em>light</em> spells active, you must choose one of the existing spells to end.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Light]</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The orb sheds light in a 60-foot radius (and dim light for the next 60 feet).</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until your next daily preparations"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "light",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -215,6 +2045,92 @@
       "name": "Live Wire",
       "img": "icons/magic/lightning/strike-arrow-spear-red.webp",
       "type": "spell",
+      "data": {
+        "_id": "Vbj8bTQ1nwrOBbYF",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/lightning/strike-arrow-spear-red.webp",
+        "name": "Live Wire",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "6jB29A0HYmZ5Sndk": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "slashing"
+            },
+            "u8FtIoasOdjfSdy4": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "electricity"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You conjure up a length of sharp copper filament humming with electrical current that strikes out at your foe. The wire deals 1d4 slashing damage and 1d4 electricity damage, depending on your spell attack roll against the target's AC.</p><hr /><p><strong>Critical Success</strong> The target takes double damage and @Damage[(ceil(@item.rank / 2))d4[persistent,electricity]] damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p>\n<p><strong>Failure</strong> The target takes the electricity damage, but not the slashing damage.</p>\n<p><strong>Critical Failure</strong> The target is unaffected.</p><hr /><p><strong>Heightened (+2)</strong> The slashing damage, initial electricity damage, and persistent electricity damage on a critical hit each increase by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "6jB29A0HYmZ5Sndk": "1d4",
+              "u8FtIoasOdjfSdy4": "1d4"
+            },
+            "interval": 2,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "electricity",
+              "manipulate",
+              "metal"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -223,6 +2139,75 @@
       "name": "Message",
       "img": "systems/pf2e/icons/spells/message.webp",
       "type": "spell",
+      "data": {
+        "_id": "vLzFcIaSXs7YTIqJ",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/message.webp",
+        "name": "Message",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you. The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's range increases to 500 feet.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "see below"
+          },
+          "heightening": {
+            "levels": {
+              "3": {
+                "range": {
+                  "value": "500 feet"
+                }
+              }
+            },
+            "type": "fixed"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "auditory",
+              "cantrip",
+              "concentrate",
+              "illusion",
+              "linguistic",
+              "mental",
+              "subtle"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -231,6 +2216,139 @@
       "name": "Needle Darts",
       "img": "icons/magic/light/projectile-needles-salvo-white.webp",
       "type": "spell",
+      "data": {
+        "_id": "iYRDFxeVpJ5KIjmr",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/light/projectile-needles-salvo-white.webp",
+        "name": "Needle Darts",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "71hLuboTBYkwkqiR": {
+              "applyMod": false,
+              "category": null,
+              "formula": "3d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "piercing"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You shape three needles out of a piece of metal in your possession and send them flying in a tight group toward one target. Make a spell attack roll against your target's AC. The needles deal 3d4 piercing damage and might cause bleeding.</p>\n<p>The needles impart any special properties of the metal that forms them; for instance, cold iron needles deal additional damage to creatures with weakness to cold iron. All the needles are made of the same metal, and the metal returns to you after the attack.</p><hr /><p><strong>Critical Success</strong> The target takes double damage and @Damage[(@item.level)[bleed]] damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p><hr /><p><strong>Heightened (+1)</strong> You send one additional needle, increasing the regular damage by 1d4 and increasing the persistent bleed damage on a critical hit by 1.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "71hLuboTBYkwkqiR": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "overlays": {
+            "1gZuxDZYlG9YSzyW": {
+              "_id": "1gZuxDZYlG9YSzyW",
+              "name": "Needle Darts (Adamantine)",
+              "overlayType": "override",
+              "sort": 2,
+              "system": {
+                "damage": {
+                  "71hLuboTBYkwkqiR": {
+                    "category": null,
+                    "materials": [
+                      "adamantine"
+                    ]
+                  }
+                }
+              }
+            },
+            "E2DbTTDjNlTp0ztA": {
+              "_id": "E2DbTTDjNlTp0ztA",
+              "name": "Needle Darts (Silver)",
+              "overlayType": "override",
+              "sort": 4,
+              "system": {
+                "damage": {
+                  "71hLuboTBYkwkqiR": {
+                    "category": null,
+                    "materials": [
+                      "silver"
+                    ]
+                  }
+                }
+              }
+            },
+            "ZbRcMkLoWzgq5XvU": {
+              "_id": "ZbRcMkLoWzgq5XvU",
+              "name": "Needle Darts (Cold Iron)",
+              "overlayType": "override",
+              "sort": 3,
+              "system": {
+                "damage": {
+                  "71hLuboTBYkwkqiR": {
+                    "category": null,
+                    "materials": [
+                      "cold-iron"
+                    ]
+                  }
+                }
+              }
+            },
+            "hk5Z57VxDZI5WAgq": {
+              "_id": "hk5Z57VxDZI5WAgq",
+              "name": "Needle Darts",
+              "overlayType": "override",
+              "sort": 1,
+              "system": {}
+            }
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "metal"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -239,6 +2357,90 @@
       "name": "Phase Bolt",
       "img": "systems/pf2e/icons/spells/phase-bolt.webp",
       "type": "spell",
+      "data": {
+        "_id": "5gophZ4AOKW4VW27",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/phase-bolt.webp",
+        "name": "Phase Bolt",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "nqp6byhfcwbvtstj": {
+              "applyMod": false,
+              "category": null,
+              "formula": "3d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "piercing"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You point your finger and project a bolt of magical energy that stutters in and out of phase until it reaches the target. Make a ranged spell attack roll against your target's AC; if the target has any circumstance bonuses to AC (such as from a shield or cover), reduce that bonus by 2 for this attack. On a success, you deal 3d4 piercing damage.</p><hr /><p><strong>Critical Success</strong> The target takes double damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p><hr /><p><strong>Heightened (+1)</strong> The bolt's damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "nqp6byhfcwbvtstj": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "item:slug:phase-bolt"
+              ],
+              "selectors": [
+                "spell-attack-roll"
+              ],
+              "uuid": "Compendium.pf2e.spell-effects.Item.Spell Effect: Phase Bolt"
+            }
+          ],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -247,6 +2449,62 @@
       "name": "Prestidigitation",
       "img": "icons/magic/symbols/runes-triangle-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "Qw3fnUlaUbnn7ipC",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/symbols/runes-triangle-blue.webp",
+        "name": "Prestidigitation",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the spell. Each time you Sustain the spell, you can choose one of four options.</p><ul><li><strong>Cook</strong> Cool, warm, or flavor 1 pound of nonliving material.</li><li><strong>Lift</strong> Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</li><li><strong>Make</strong> Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile-it can't be used as a tool, weapon, or locus or cost for a spell.</li><li><strong>Tidy</strong> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object at 1 minute per Bulk.</li></ul><p><em>Prestidigitation</em> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the spell.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "10 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 object (cook, lift, or tidy only)"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -255,6 +2513,84 @@
       "name": "Puff of Poison",
       "img": "systems/pf2e/icons/spells/puff-of-poison.webp",
       "type": "spell",
+      "data": {
+        "_id": "D7ZEhTNIDWDLC2J4",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/puff-of-poison.webp",
+        "name": "Puff of Poison",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "1d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "poison"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You exhale a shimmering cloud of toxic breath at an enemy's face. The target takes 1d4 poison damage and @Damage[(ceil(@item.level/2))d4[persistent,poison]], depending on its Fortitude save.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The target takes half initial damage and no persistent damage.</p>\n<p><strong>Failure</strong> The target takes full initial and persistent damage.</p>\n<p><strong>Critical Failure</strong> The target takes double initial and persistent damage.</p><hr /><p><strong>Heightened (+2)</strong> The initial poison damage increases by 1d4, and the persistent poison damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d4"
+            },
+            "interval": 2,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": "10 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "poison"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -263,6 +2599,78 @@
       "name": "Read Aura",
       "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
       "type": "spell",
+      "data": {
+        "_id": "OhD2Z6rIGGD5ocZA",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+        "name": "Read Aura",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical. You or anyone you advise about the aura gains a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Identify Magic] on the item. If the object is illusory, you detect this only if the effect's rank is lower than the rank of your <em>read aura</em> spell.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Read Aura]</p><hr /><p><strong>Heightened (3rd)</strong> You can target up to 10 objects.</p>\n<p><strong>Heightened (6th)</strong> You can target any number of objects.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "levels": {
+              "3": {
+                "target": {
+                  "value": "10 objects"
+                }
+              },
+              "6": {
+                "target": {
+                  "value": "any number of objects"
+                }
+              }
+            },
+            "type": "fixed"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 object"
+          },
+          "time": {
+            "value": "1 minute"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "detection",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -271,6 +2679,64 @@
       "name": "Root Reading",
       "img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
       "type": "spell",
+      "data": {
+        "_id": "BX5UIAUarWG43Fg2",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+        "name": "Root Reading",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You gain general insights into the immediate vicinity by sending your sense through the root systems of trees and bushes. If there are any unnoticed Medium or larger creatures in the area, you learn of their presence and they're undetected to you. You can immediately attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] an undetected creature, and you gain a +1 status bonus to this attempt and any of your other attempts to Seek @UUID[Compendium.pf2e.conditionitems.Item.Hidden] or undetected creatures until the end of your next turn. You also learn if any such creatures passed through this area in the last hour, although you get only the vaguest sense of direction from the spell. If you begin to @UUID[Compendium.pf2e.actionspf2e.Item.Track] a creature detected in this way, you gain a +1 status bonus to the initial check.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -279,6 +2745,61 @@
       "name": "Rousing Splash",
       "img": "systems/pf2e/icons/spells/create-water.webp",
       "type": "spell",
+      "data": {
+        "_id": "zhDIiQlJmrd4UDNC",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/create-water.webp",
+        "name": "Rousing Splash",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You cause a splash of cold water to descend on an ally's head, granting some temporary vigor. The target gains 1d4 temporary Hit Points, which last for 1 minute. The target is then temporarily immune to the temporary Hit Points from <em>rousing splash</em> for 10 minutes. The target can also attempt an immediate flat check to recover from a single source of persistent acid or fire damage, with the DC reduction from appropriate assistance.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The amount of temporary Hit Points granted increases by 1d4.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Rousing Splash]</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "water"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -287,6 +2808,87 @@
       "name": "Scatter Scree",
       "img": "systems/pf2e/icons/spells/scatter-scree.webp",
       "type": "spell",
+      "data": {
+        "_id": "zA0jNIBRgLsyTpbm",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/scatter-scree.webp",
+        "name": "Scatter Scree",
+        "system": {
+          "area": {
+            "type": "line",
+            "value": 10
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>A jumble of rocks cascades into the area. The scattering rocks deal 2d4 bludgeoning damage (basic Reflex save). The ground in the area becomes difficult terrain for the duration of the spell. A creature can Interact to clear a square of this scree.</p>\n<p>If you cast this spell again, any previous <em>scatter scree</em> you've cast ends.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "earth",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -295,6 +2897,61 @@
       "name": "Shield",
       "img": "systems/pf2e/icons/spells/shield.webp",
       "type": "spell",
+      "data": {
+        "_id": "TVKNbcgTee19PXZR",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/shield.webp",
+        "name": "Shield",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</p>\n<p>While the spell is in effect, you can use the @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Shield]</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Effect: Shield Immunity]</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The shield's Hardness increases by 5.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the start of your next turn"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "force"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -303,6 +2960,62 @@
       "name": "Sigil",
       "img": "systems/pf2e/icons/spells/sigil.webp",
       "type": "spell",
+      "data": {
+        "_id": "AUctDF2fqPZN2w4W",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/sigil.webp",
+        "name": "Sigil",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or invisible, and you can change it from one state to another by using an Interact action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it's on a creature, it fades naturally over the course of a week. The time before the mark fades increases depending on your heightened rank.</p><hr /><p><strong>Heightened (3rd)</strong> The sigil instead fades after 1 month.</p>\n<p><strong>Heightened (5th)</strong> The sigil instead fades after 1 year.</p>\n<p><strong>Heightened (7th)</strong> The sigil never fades.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "unlimited"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "touch"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature or object"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -311,6 +3024,80 @@
       "name": "Slashing Gust",
       "img": "icons/magic/air/air-wave-gust-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "1Yoipc5jNcMehtEW",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/air/air-wave-gust-blue.webp",
+        "name": "Slashing Gust",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "rrgCumtxsY2Gaxqv": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "slashing"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You slash your hand through the air, channeling miniature ripples of air from each finger to slice your enemy. If you have two hands free, you can target two creatures with this spell; otherwise, you target one.</p>\n<p>Make a spell attack roll against each target's AC. This deals 2d4 slashing damage. On a critical success, a target also takes @Damage[(@item.level)d4[bleed]] damage. If you're attacking two creatures, this counts as two attacks for your multiple attack penalty, but the penalty doesn't increase until after both attacks.</p><hr /><p><strong>Critical Success</strong> The target takes double damage and 1d4 persistent bleed damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 1d4, and the persistent damage on a critical hit increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "rrgCumtxsY2Gaxqv": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "You have at least one free hand.",
+          "rules": [],
+          "target": {
+            "value": "1 or 2 creatures"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "air",
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -319,6 +3106,87 @@
       "name": "Spout",
       "img": "icons/magic/fire/beam-jet-stream-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "eSL5hVT9gXrnRLtd",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/fire/beam-jet-stream-blue.webp",
+        "name": "Spout",
+        "system": {
+          "area": {
+            "type": "cube",
+            "value": 5
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>Water blasts upward, coming out of the ground, rising from a pool, or even manifesting from thin air. Any creatures in the area take 2d4 bludgeoning damage, with a basic Reflex saving throw. A creature that critically fails its save is disoriented by the explosion of water, becoming @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your next turn.</p>\n<p>You can change this spell's area to a @Template[burst|distance:5], provided you center the burst in a body of water. This body of water can be as small as a pond or creek, but not as small as a puddle or bathtub.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "water"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -327,6 +3195,62 @@
       "name": "Stabilize",
       "img": "icons/magic/control/debuff-energy-hold-yellow.webp",
       "type": "spell",
+      "data": {
+        "_id": "SnjhtQYexDtNDdEg",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/control/debuff-energy-hold-yellow.webp",
+        "name": "Stabilize",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>Life energy shuts death's door. The target loses the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition, though it remains @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] at 0 Hit Points.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 dying creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "healing",
+              "manipulate",
+              "vitality"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -335,6 +3259,61 @@
       "name": "Summon Instrument",
       "img": "systems/pf2e/icons/spells/summon-instrument.webp",
       "type": "spell",
+      "data": {
+        "_id": "yvs1zN5Pai5U4CJX",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/summon-instrument.webp",
+        "name": "Summon Instrument",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You materialize a @UUID[Compendium.pf2e.equipment-srd.Item.Musical Instrument (Handheld)] in your grasp. The instrument is typical for its type, but it plays only for you. It vanishes when the spell ends. If you cast <em>summon instrument</em> again, any instrument you previously summoned disappears.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The instrument is instead a @UUID[Compendium.pf2e.equipment-srd.Item.Musical Instrument (Virtuoso handheld)].</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 hour"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -343,6 +3322,61 @@
       "name": "Take Root",
       "img": "icons/magic/nature/tree-elm-roots-brown.webp",
       "type": "spell",
+      "data": {
+        "_id": "WUNZizIe6rnVHGcr",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/nature/tree-elm-roots-brown.webp",
+        "name": "Take Root",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>Roots sprout from the flesh of the target and coil across the floor or around objects, reinforcing their stance or grip. The targeted creature gains a +1 circumstance bonus to their Fortitude DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] them and a +1 circumstance bonus to their Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] them. This bonus also applies to saving throws against spells or effects that would attempt to remove a held item from their grasp.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Take Root]</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 round"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 willing creature"
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "manipulate",
+              "plant",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -351,6 +3385,63 @@
       "name": "Tangle Vine",
       "img": "icons/magic/nature/root-vine-entangled-hand.webp",
       "type": "spell",
+      "data": {
+        "_id": "uZK2BYzPnxUBnDjr",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/nature/root-vine-entangled-hand.webp",
+        "name": "Tangle Vine",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>A vine appears from thin air, flicking from your hand and lashing itself to the target. Attempt a spell attack roll against the target.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Tangle Vine]</p>\n<hr />\n<p><strong>Critical Success</strong> The target gains the @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] condition and takes a –10-foot circumstance penalty to its Speeds for 1 round. It can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] against your spell DC to remove the penalty and the immobilized condition.</p>\n<p><strong>Success</strong> The target takes a –10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty.</p>\n<p><strong>Failure</strong> The target is unaffected.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The effects last for 2 rounds.</p>\n<p><strong>Heightened (4th)</strong> The effects last for 1 minute.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "plant",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -359,6 +3450,80 @@
       "name": "Telekinetic Hand",
       "img": "systems/pf2e/icons/spells/mage-hand.webp",
       "type": "spell",
+      "data": {
+        "_id": "pwzdSlJgYqN7bs2w",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/mage-hand.webp",
+        "name": "Telekinetic Hand",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You create a floating, magical hand, either invisible or ghostlike, that grasps the target object and levitates it slowly up to 20 feet in any direction. When you Sustain the spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (7th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": ""
+          },
+          "heightening": {
+            "levels": {
+              "3": {
+                "target": {
+                  "value": "1 unattended object with a Bulk of 1 or less"
+                }
+              },
+              "5": {
+                "range": {
+                  "value": "60 feet"
+                }
+              },
+              "7": {
+                "target": {
+                  "value": "1 unattended object with a Bulk of 2 or less"
+                }
+              }
+            },
+            "type": "fixed"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 unattended object of light Bulk or less"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -367,6 +3532,123 @@
       "name": "Telekinetic Projectile",
       "img": "icons/skills/ranged/bullets-triple-ball-yellow.webp",
       "type": "spell",
+      "data": {
+        "_id": "60sgbuMWN0268dB7",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/skills/ranged/bullets-triple-ball-yellow.webp",
+        "name": "Telekinetic Projectile",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "untyped"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a spell attack roll against the target. If you hit, you deal 2d6 bludgeoning, piercing, or slashing damage—as appropriate for the object you hurled. No specific traits or magic properties of the hurled item affect the attack or the damage.</p>\n<hr />\n<p><strong>Critical Success</strong> You deal double damage.</p>\n<p><strong>Success</strong> You deal full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d6"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "overlays": {
+            "2I469pfbYcmFvzOA": {
+              "_id": "2I469pfbYcmFvzOA",
+              "name": "Telekinetic Projectile (Bludgeoning)",
+              "overlayType": "override",
+              "sort": 1,
+              "system": {
+                "damage": {
+                  "0": {
+                    "category": null,
+                    "type": "bludgeoning"
+                  }
+                }
+              }
+            },
+            "cUFX7ExSLeoa3vIF": {
+              "_id": "cUFX7ExSLeoa3vIF",
+              "name": "Telekinetic Projectile (Piercing)",
+              "overlayType": "override",
+              "sort": 2,
+              "system": {
+                "damage": {
+                  "0": {
+                    "category": null,
+                    "type": "piercing"
+                  }
+                }
+              }
+            },
+            "zFWsMjoeCnLxqJaV": {
+              "_id": "zFWsMjoeCnLxqJaV",
+              "name": "Telekinetic Projectile (Slashing)",
+              "overlayType": "override",
+              "sort": 3,
+              "system": {
+                "damage": {
+                  "0": {
+                    "category": null,
+                    "type": "slashing"
+                  }
+                }
+              }
+            }
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "attack",
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -375,6 +3657,88 @@
       "name": "Timber",
       "img": "systems/pf2e/icons/spells/timber.webp",
       "type": "spell",
+      "data": {
+        "_id": "9I8mp7RkjeXbkYfx",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/timber.webp",
+        "name": "Timber",
+        "system": {
+          "area": {
+            "type": "line",
+            "value": 15
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "MNALi2V7x2auCIFW": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You create a small dead tree in your space that falls over on anyone in its path, then immediately decomposes. Any creature in the area takes 2d4 bludgeoning damage, with a basic Reflex saving throw. A creature that critically fails its save is knocked for a loop, making it @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] until the end of its next turn.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The initial damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "MNALi2V7x2auCIFW": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -383,6 +3747,59 @@
       "name": "Time Sense",
       "img": "systems/pf2e/icons/spells/time-sense.webp",
       "type": "spell",
+      "data": {
+        "_id": "BvNbDwFYaidKJG9j",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/time-sense.webp",
+        "name": "Time Sense",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>When you Cast the Spell, you gain a perfect sense of time. You can learn exactly what time it is, down to the second. You can instead choose to gain a perfect sense of the calendar if you have knowledge in that area—if you're trained in Nature, you can learn exactly how long it is until sunrise and how many days until the next solstice. If you're trained in Astronomy Lore, you can learn precisely when any known predictable astronomical conjunction will begin and end, and so on.</p>\n<p>You can gain a +1 status bonus to one attack roll, Perception check, saving throw, or skill check you take on the same turn you cast time sense that requires extremely precise timing. If you choose to gain this bonus, you can't gain it again for 1 hour.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -391,6 +3808,63 @@
       "name": "Tremor Signs",
       "img": "systems/pf2e/icons/spells/tremor-signs.webp",
       "type": "spell",
+      "data": {
+        "_id": "uMADQaASgYNsSDDM",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/tremor-signs.webp",
+        "name": "Tremor Signs",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You send a series of tremors, no longer than a short sentence of speech, toward your target. If the target is within range and connected to the same body of earth as you, the vibrations reach the target through the ground. You need neither line of sight nor line of effect, so a target on another floor of a building is a valid target.</p>\n<p>The target can give a brief, vibrational response as a reaction, or as a free action on their next turn, but they must be within range to do so. If they respond, their response is delivered to you through tremors you feel, as with the original message. The tremors impart a clear meaning only if you and the target know that meaning, such as three tremors for a specific warning, two for another. Neither of you can impart a nuanced or new meaning using this spell.</p>\n<p>A creature that has tremorsense can feel the vibrations from this spell if the creature is within range of the vibrations at any point during their journey to any target.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The spell can target up to 5 creatures.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "earth",
+              "manipulate",
+              "subtle"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -399,6 +3873,84 @@
       "name": "Vitality Lash",
       "img": "icons/magic/death/undead-skeleton-fire-green.webp",
       "type": "spell",
+      "data": {
+        "_id": "kcelf6IHl3L9VXXg",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+        "name": "Vitality Lash",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "vitality"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You demolish the target's corrupted essence with energy from Creation's Forge. You deal 2d6 vitality damage with a basic Fortitude save. If the creature critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} until the start of your next turn.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d6"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature that is undead or otherwise has void healing"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "vitality"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -407,6 +3959,85 @@
       "name": "Void Warp",
       "img": "systems/pf2e/icons/spells/chill-touch.webp",
       "type": "spell",
+      "data": {
+        "_id": "mAMEt4FFbdqoRnkN",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/chill-touch.webp",
+        "name": "Void Warp",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "2d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "void"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You call upon the Void to harm life force. The target takes 2d4 void damage with a basic Fortitude save. On a critical failure, the target is also @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} until the start of your next turn.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 living creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate",
+              "void"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     },
     {
@@ -415,6 +4046,60 @@
       "name": "Warp Step",
       "img": "systems/pf2e/icons/spells/warp-step.webp",
       "type": "spell",
+      "data": {
+        "_id": "sX2g6WFSQPNW9jzx",
+        "folder": "D7UVaOiB40wTR6kv",
+        "img": "systems/pf2e/icons/spells/warp-step.webp",
+        "name": "Warp Step",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>When you walk, the earth warps beneath your feet—your steps extend, distance contracts, and everything is just a little bit closer. You gain a +5-foot status bonus to your Speed until the end of your turn. You then Stride twice. You can use warp step to Burrow, Climb, Fly, or Swim instead of Stride if you have the corresponding movement type.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Warp Step]</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 1
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "cantrip",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 1
     }
   ]

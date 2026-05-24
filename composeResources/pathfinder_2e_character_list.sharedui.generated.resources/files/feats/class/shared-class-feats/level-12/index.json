@@ -7,6 +7,46 @@
       "name": "Magic Sense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AXy4A7zTYk1JAiOV",
+        "folder": "Rx0OepzMVIJe05Rf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magic Sense",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have a literal sixth sense for ambient magic in your vicinity. You can sense the presence of magic auras as though you were always using a 1st-rank @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic] spell. This detects magic in your field of vision only. When you @UUID[Compendium.pf2e.actionspf2e.Item.Seek], you gain the benefits of a 3rd-rank <em>detect magic</em> spell on things you see (in addition to the normal benefits of Seeking). You can turn this sense off and on with a free action at the start or the end of your turn.</p><hr /><p><strong>Special</strong> This feat has the trait corresponding to the tradition of spells you cast (arcane, divine, primal, or occult).</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "detection",
+              "oracle",
+              "sorcerer",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +56,49 @@
       "name": "Paragon's Guard",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hPDerDCYmag3s0dP",
+        "folder": "Rx0OepzMVIJe05Rf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Paragon's Guard",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a shield.</p>\n<hr />\n<p>Once you've had a moment to set your stance, you always have your shield ready without a thought. While you are in this stance, you constantly have your shield raised as if you'd used the @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield] action.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Paragon's Guard",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Paragon's Guard"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "guardian",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +108,44 @@
       "name": "Reactive Interference",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xBqDeQFzvuDfqhZC",
+        "folder": "Rx0OepzMVIJe05Rf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reactive Interference",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An adjacent enemy begins to use a reaction.</p><hr /><p><strong>Commander</strong> Your own tactical expertise allows you to quickly identify and prevent enemy responses. If the triggering creature's level is equal to or lower than yours, you disrupt the triggering reaction. If the triggering creature's level is higher than yours, make an attack roll against its AC. On a success, you disrupt the reaction.</p>\n<p><strong>Rogue</strong> Grabbing a sleeve, swiping with your weapon, or creating another obstruction, you reflexively foil an enemy's response. If the triggering creature's level is equal to or lower than yours, you disrupt the triggering reaction. If the triggering creature's level is higher than yours, you must make an attack roll against its AC. On a success, you disrupt the reaction.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

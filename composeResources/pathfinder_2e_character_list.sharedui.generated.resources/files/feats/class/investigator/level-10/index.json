@@ -7,6 +7,68 @@
       "name": "Just One More Thing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YluQPhevo0LKdF1p",
+        "folder": "adpEXF7HW2lmiwmO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Just One More Thing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your most recent action was to @UUID[Compendium.pf2e.actionspf2e.Item.Feint], @UUID[Compendium.pf2e.actionspf2e.Item.Request], or @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize], and you failed but didn't critically fail.</p><hr /><p>After your attempt to influence someone goes poorly, you add another bit of information or ask a pointed question, possibly salvaging your previous attempt. Reroll the failed check and use the new result. If the target of the failed check is involved with one of your active investigations, double your investigation bonus from @UUID[Compendium.pf2e.actionspf2e.Item.Pursue a Lead] on the rerolled check. That creature is temporarily immune to Just One More Thing for 1 day.</p>\n<p>You can also use this action if you failed, but didn't critically fail, at a check to @UUID[Compendium.pf2e.actionspf2e.Item.Lie], @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information], @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression], or @UUID[Compendium.pf2e.actionspf2e.Item.Coerce]. In this case, rather than spending 1 action, adding Just One More Thing takes you half the amount of time you initially spent on the check, to a minimum of 1 more round.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "just-one-more-thing",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "multiply",
+              "predicate": [
+                "just-one-more-thing",
+                {
+                  "or": [
+                    "action:feint",
+                    "action:demoralize",
+                    "action:request"
+                  ]
+                }
+              ],
+              "priority": 41,
+              "selector": "skill-check",
+              "slug": "pursue-a-lead",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +78,82 @@
       "name": "Ongoing Strategy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CAk1NNG4aO0VuHnZ",
+        "folder": "adpEXF7HW2lmiwmO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ongoing Strategy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're constantly studying small aspects of everyone's movements, even if you don't have a stratagem in place ahead of time.</p>\n<p>On any Strike for which you didn't @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem]{Devise a Strategem}, you still deal precision damage equal to your number of strategic strike damage dice so long as the weapon or unarmed attack you used is one that would have let you use your Intelligence modifier had you Devised a Stratagem.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "strategic strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "damageCategory": "precision",
+              "key": "FlatModifier",
+              "predicate": [
+                "class:investigator",
+                {
+                  "not": "check:substitution:devise-a-stratagem"
+                },
+                {
+                  "or": [
+                    "item:trait:agile",
+                    "item:trait:finesse",
+                    {
+                      "and": [
+                        "item:ranged",
+                        {
+                          "not": "item:thrown-melee"
+                        }
+                      ]
+                    },
+                    "item:base:sap",
+                    {
+                      "and": [
+                        "feat:takedown-expert",
+                        "item:group:club",
+                        "item:hands-held:1"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "strike-damage",
+              "value": "floor((@actor.level + 3)/4)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +163,47 @@
       "name": "Suspect of Opportunity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Sc9clbAXe97vlzxM",
+        "folder": "adpEXF7HW2lmiwmO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Suspect of Opportunity",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature who isn't, to your knowledge, tied to any of your active investigations takes a hostile action against you in combat.</p><hr /><p>Sometimes something intrudes upon your case unexpectedly, such as an ambush sent to bring your investigation to a close. You use @UUID[Compendium.pf2e.feats-srd.Item.Person of Interest] against the triggering creature. This doesn't allow you to use Person of Interest more frequently than normal.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Person of Interest"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

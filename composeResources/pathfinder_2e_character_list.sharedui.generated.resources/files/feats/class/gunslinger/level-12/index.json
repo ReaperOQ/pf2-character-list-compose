@@ -7,6 +7,44 @@
       "name": "Blood in the Air",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7spk6rZPiNk2S0yA",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood in the Air",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> An enemy you've damaged with a ranged weapon during the last minute is @UUID[Compendium.pf2e.conditionitems.Item.Concealed] or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from you.</p><hr /><p>Once you've locked on to a target, little can obscure your aim. Make a ranged weapon Strike against the required target. This Strike ignores the target's concealed condition and reduces the flat check for the hidden condition from 11 to 5.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +54,44 @@
       "name": "Deadeye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NJyyxInJ743OotKf",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deadeye",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You relax your eyes, taking in the smallest movements of objects, stirring of grass and leaves, and other signs of the presence of hidden things, granting you the ability to locate @UUID[Compendium.pf2e.conditionitems.Item.Invisible] creatures.</p>\n<p>Until the start of your next turn, you can see invisible creatures and objects as silhouettes defined by the movement of air, slight depressions in the ground, and other tells that less-keen eyes would overlook, which makes them merely @UUID[Compendium.pf2e.conditionitems.Item.Concealed] from you.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +101,89 @@
       "name": "Flesh Wound",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Xdf00Kmv5C3qqrtK",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flesh Wound",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You fire to ensure that even if your shot doesn't land cleanly, it still lands close enough to deal some damage. Make a ranged Strike. It gains the following effect on a failure (though not a critical failure).</p>\n<p><strong>Failure</strong> Though your attack misses, it still deals one die of damage plus any damage from your weapon specialization class feature. This uses your weapon's normal damage die and damage type. This attack doesn't add extra damage from any other sources or abilities.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Gunslinger.FleshWound.ToggleLabel",
+              "option": "flesh-wound",
+              "toggleable": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                {
+                  "not": "dice:slug:base"
+                },
+                "flesh-wound"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "ranged-strike-damage"
+              ],
+              "value": 0
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "flesh-wound"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "ranged-strike-damage"
+              ],
+              "slug": "base",
+              "value": 1
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                {
+                  "not": "modifier:slug:weapon-specialization"
+                },
+                "flesh-wound"
+              ],
+              "selector": "ranged-strike-damage",
+              "suppress": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +193,44 @@
       "name": "Ricochet Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c7mCj6wUdb47rrnw",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ricochet Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You bounce your shot off a nearby surface to strike your opponent from an unexpected angle. Attempt a Strike with a firearm or crossbow. When determining whether a target has cover from this Strike, you can choose one solid surface within your weapon's first range increment to ricochet your shot off of. If you do, you determine the target's cover from the point where you ricochet your shot instead of from you.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +240,43 @@
       "name": "Shattering Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7r79fZBr37qBN2EF",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shattering Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded firearm or loaded crossbow and are wearing or holding an alchemical bomb.</p><hr /><p>You fling a bomb into the air and then shoot it with your gun before it falls, raining destruction down over a wide area. If necessary, you Interact to draw the bomb and regrip your weapon. You throw your bomb to the corner of a square within your firearm's first range increment and shoot it with your firearm. All creatures in a @Template[type:burst|distance:15] of the bomb take the bomb's normal damage with a @Check[reflex|against:gunslinger|basic|options:area-effect] save against your class DC. They don't take any splash or persistent damage the bomb would deal normally.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +286,47 @@
       "name": "Shooter's Camouflage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rqUJULinzDCUgimM",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shooter's Camouflage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You specialize in blending into a particular type of environment, able to disappear after taking your shot. Choose either natural or urban terrain. In the chosen terrain, you can @UUID[Compendium.pf2e.actionspf2e.Item.Hide] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] even without cover or being @UUID[Compendium.pf2e.conditionitems.Item.Concealed].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +336,70 @@
       "name": "Unshakable Grit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eGZzifQWCf5gSq2y",
+        "folder": "Zz5V6KffgZyNka0A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unshakable Grit",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become hardened by conflict after everything you've faced, and you possess a certain intractable stubbornness. If the reroll granted to you by your @UUID[Compendium.pf2e.feats-srd.Item.Grit and Tenacity] reaction is a success, you get a critical success instead; if it's a critical failure, you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Grit and Tenacity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "grit-and-tenacity"
+              ],
+              "selector": "fortitude"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "grit-and-tenacity"
+              ],
+              "selector": "will"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

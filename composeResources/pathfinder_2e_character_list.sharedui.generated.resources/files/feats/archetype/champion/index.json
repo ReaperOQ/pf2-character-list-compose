@@ -7,6 +7,55 @@
       "name": "Advanced Devotion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7JjNWSuutkjrMrd0",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Devotion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one champion feat. For the purpose of meeting its prerequisites, your champion level is equal to half your character level.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another champion feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Devotion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +65,77 @@
       "name": "Basic Devotion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uKBT0D9gxdwMcwNl",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Devotion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level champion feat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Champion Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:champion",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicDevotion",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicDevotion}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +145,203 @@
       "name": "Champion Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0YjetnLVIUz9zQt5",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Champion Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Choose a deity. You are bound by your deity's anathema and gain the champion's aura and sanctification as described in the champion class. Choose a cause as you would if you were a champion, with the same options a champion must abide by. You gain its edicts and anathema but don't gain the other abilities.</p>\n<p>You become trained in Religion and your deity's associated skill; for each of these skills in which you were already trained, you instead become trained in a skill of your choice. You become trained in champion class DC. If you later gain a devotion spell, you become trained in spell attack modifier and spell DC.</p>\n<p>You become trained in light armor and medium armor. If you already were trained in light armor and medium armor, you gain training in heavy armor as well. Whenever you gain a class feature that grants you expert or greater proficiency in any type of armor (but not unarmored defense), you also gain that proficiency in the armor types granted to you by this feat. If you have a class feature that grants you expert proficiency in unarmored defense and you're 13th level or higher, you also become an expert in the armor types granted to you by this feat.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DXtjeVaWNB8zSjpA]{Champion}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Strength +2"
+              },
+              {
+                "value": "Charisma +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.LightShort",
+                  "predicate": [
+                    {
+                      "or": [
+                        "defense:light:rank:0",
+                        "defense:medium:rank:0"
+                      ]
+                    }
+                  ],
+                  "value": "light-and-medium"
+                },
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.HeavyShort",
+                  "predicate": [
+                    {
+                      "nor": [
+                        "defense:light:rank:0",
+                        "defense:medium:rank:0"
+                      ]
+                    }
+                  ],
+                  "value": "heavy"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "champion-dedication"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.AbilityStr",
+                  "value": "str"
+                },
+                {
+                  "label": "PF2E.AbilityDex",
+                  "value": "dex"
+                }
+              ],
+              "flag": "attribute",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.ClassDCAbilityScore"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Deity (Champion)"
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:champion-cause",
+                  {
+                    "or": [
+                      {
+                        "and": [
+                          "item:tag:holy",
+                          "sanctification:holy"
+                        ]
+                      },
+                      {
+                        "and": [
+                          "item:tag:unholy",
+                          "sanctification:unholy"
+                        ]
+                      },
+                      {
+                        "nor": [
+                          "item:tag:holy",
+                          "item:tag:unholy"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "not": "item:tag:class-archetype"
+                  }
+                ]
+              },
+              "flag": "cause",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.DeityAndCause.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.cause}"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.proficiencies.classDCs.champion.attribute",
+              "value": "{item|flags.system.rulesSelections.attribute}"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.light.rank",
+              "predicate": [
+                "champion-dedication:light-and-medium"
+              ],
+              "value": "max(@actor.system.proficiencies.defenses.medium.rank,ternary(gte(@actor.level,13),min(@actor.system.proficiencies.defenses.unarmored.rank,2),1))"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.medium.rank",
+              "predicate": [
+                "champion-dedication:light-and-medium"
+              ],
+              "value": "max(@actor.system.proficiencies.defenses.light.rank,ternary(gte(@actor.level,13),min(@actor.system.proficiencies.defenses.unarmored.rank,2),1))"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.heavy.rank",
+              "predicate": [
+                "champion-dedication:heavy"
+              ],
+              "value": "max(@actor.system.proficiencies.defenses.light.rank,@actor.system.proficiencies.defenses.medium.rank,ternary(gte(@actor.level,13),min(@actor.system.proficiencies.defenses.unarmored.rank,2),1))"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "champion": {
+                "attribute": null,
+                "rank": 1
+              },
+              "light": {
+                "rank": 1
+              },
+              "medium": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +351,62 @@
       "name": "Champion Resiliency",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qWb5IxkBUpJWKSLf",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Champion Resiliency",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain 3 additional Hit Points for each champion archetype class feat you have. As you continue selecting champion archetype class feats, you continue to gain additional Hit Points in this way.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Champion Dedication"
+              },
+              {
+                "value": "class granting no more Hit Points per level than 8 + your Constitution modifier"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "3 * @actor.flags.system.championDedicationCount"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +416,54 @@
       "name": "Champion's Reaction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7wk6yVM3OJdc4LEU",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Champion's Reaction",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can use the champion's reaction associated with your cause.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Champion Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +473,83 @@
       "name": "Devout Blessing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lix0Utu4g8mQ0ZtI",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Devout Blessing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the blessing of the devoted class feature, choosing from the listed blessings or any other to which you have access.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Champion Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "allowedDrops": {
+                "label": "PF2E.SpecificRule.DivineAlly.AllowedDrops",
+                "predicate": [
+                  "item:type:feature",
+                  "item:trait:champion"
+                ]
+              },
+              "choices": [
+                {
+                  "value": "Compendium.pf2e.classfeatures.Item.Blessed Armament"
+                },
+                {
+                  "value": "Compendium.pf2e.classfeatures.Item.Blessed Shield"
+                },
+                {
+                  "value": "Compendium.pf2e.classfeatures.Item.Blessed Swiftness"
+                }
+              ],
+              "flag": "divineAlly",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.DivineAlly.Prompt"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.divineAlly}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +559,54 @@
       "name": "Devout Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jlLWz8e7PpLFt0Ed",
+        "folder": "QEy7Vs3sZGb1qZJ7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Devout Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a devotion spell of your choice listed in the devotion spells class feature, following the same restrictions listed there.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Champion Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.championDedicationCount",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

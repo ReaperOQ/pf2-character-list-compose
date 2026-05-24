@@ -7,6 +7,53 @@
       "name": "Soaring Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WZC2XXQo6Pu2GQeo",
+        "folder": "T9mKbuGMp0Y7LgV1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Soaring Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a fly Speed of 20 feet at all times.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Soaring Flight"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": 20
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +63,85 @@
       "name": "Wind God's Fan",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QUaSGUmRnlMbzw1P",
+        "folder": "T9mKbuGMp0Y7LgV1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wind God's Fan",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your fan can stir up even more powerful winds. You can use the Wave Fan activation one additional time per day. Add a 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.Wall of Wind] spell to the spells contained within your fan.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Tengu Feather Fan"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:wall-of-wind",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "tengu-fan"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:wall-of-wind",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tengu"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:tengu-fan",
+                "item:slug:wall-of-wind"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Tengu.TenguFan.WallOfWind"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

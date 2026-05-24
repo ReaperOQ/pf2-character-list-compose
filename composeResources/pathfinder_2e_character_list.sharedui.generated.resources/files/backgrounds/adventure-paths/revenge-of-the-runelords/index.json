@@ -6,42 +6,362 @@
       "id": "A1gDZbfIPEqHClsL",
       "name": "Distant Traveler",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "A1gDZbfIPEqHClsL",
+        "folder": "IpgMFdh2A6r9Svxy",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Distant Traveler",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "cha",
+                "con"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>You hail from a distant land, such as Iblydos or Tian Xia, and you've brought new ways of thinking about the Saga Lands' problems—methods and tactics that have served you well in carving out a heroic legacy that's attracted attention from the region's elite. Your association with the other PCs, your comrades-in-arms, certainly helped bolster your reputation. Queen Sorshen, in particular, has noticed you, and in her invitation to attend the opening ceremonies of the Circle of Open Hands in Xin-Eurythnia, she mentions that she'd like to speak to you about potentially establishing trade agreements with your homeland.</p>\n<p>Choose two attribute boosts. One must be to <strong>Charisma</strong> or <strong>Constitution</strong>, and the other is a free attribute boost.</p>\n<p>You're trained in Diplomacy and Mercantile Lore. Long journeys invigorate you. When you make your daily preparations after spending the previous day traveling in exploration mode or the first time after using magic to travel a distance of at least 100 miles (or to another plane), your excitement and anticipation about what you might encounter next gives you a +1 status bonus to Will saves for the next 8 hours after your daily preparations.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Distant Traveler]</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Revenge of the Runelords Player's Guide"
+          },
+          "rules": [],
+          "trainedSkills": {
+            "lore": [
+              "Mercantile Lore"
+            ],
+            "value": [
+              "diplomacy"
+            ]
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "escaped-from-time.json",
       "id": "To76BxkBS2ErAdgv",
       "name": "Escaped from Time",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "To76BxkBS2ErAdgv",
+        "folder": "IpgMFdh2A6r9Svxy",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Escaped from Time",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "dex",
+                "int"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>You were born before Earthfall, but when that doom came to Golarion, you were in the city of Xin-Edasseril—a city pulled out of time itself when Runelord Belimarius's Runewell of Envy malfunctioned. Even though you've since learned that you (along with everyone else trapped in Xin-Edasseril) relived that final week of Thassilon thousands of times over without realizing it while trapped outside of time, to you, it feels like Earthfall instantly transformed reality into what you now know to be the present age. Everything between Earthfall and the year of 4718 ar (when heroes restored Xin-Edasseril to reality) passed in less than the blink of an eye. You spent the next several years learning about the new age in which you found yourself—whether you've embraced this as a welcome escape from your pre-Earthfall life or you've struggled with melancholy for lost friend, family, or deeds left undone, you've managed to assimilate into the Age of Lost Omens—in large part due to the support of the other PCs. Queen Sorshen has taken an interest in all those who've escaped Runelord Belimarius's control after being restored to the modern era, but in your case, she's particularly interested in how you might be able to help her forge diplomatic ties with the city of Xin-Edasseril—with or without her bitter rival Runelord Belimarius in charge. She's said as much in her invitation to attend the opening of the Circle of Open Hands, hinting that linking the portal to Xin-Edasseril may be a good way to shore up relations with the far side of New Thassilon, although you doubt such a peace can be reached while Runelord Belimarius remains in control.</p>\n<p>Choose two attribute boosts. One must be to <strong>Dexterity</strong> or <strong>Intelligence</strong>, and the other is a free attribute boost.</p>\n<p>You're trained in Occultism and Architecture Lore. Your experience trapped in time for so long has had a unique side effect on your mind—when you're startled or threatened, you see brief flashes of competing timelines that can help guide your reactions. You've learned how to interpret these strange occult visions to bolster your reflexes. You can always choose to roll Occultism for initiative; when you do so, you gain a +2 circumstance bonus to the check.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Revenge of the Runelords Player's Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "check:statistic:base:occultism"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Architecture Lore"
+            ],
+            "value": [
+              "occultism"
+            ]
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "heroic-ancestry.json",
       "id": "COUnnZRnoNb8bzan",
       "name": "Heroic Ancestry",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "COUnnZRnoNb8bzan",
+        "folder": "IpgMFdh2A6r9Svxy",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Heroic Ancestry",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "cha",
+                "str"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>While you've already made a name for yourself as a hero, either here in the Saga Lands or further abroad, adventuring has been in your blood from the very start. Someone closely related to you—perhaps a parent, sibling, cousin, aunt, or uncle, was part of a group of adventurers who they clashed against a runelord-themed villain. This could even be a previous PC you or another player played at your table in a previous Adventure Path like Rise of the Runelords, Shattered Star, or Return of the Runelords—or in a standalone adventure or Organized Play scenario. Work with the other players and the GM as needed to forge these family links, or you can simply be related to a hero from an unplayed adventure. If you choose this route, you can even create (with the GM's aid) this unplayed runelord-themed story. Regardless of the nature of your relationship, it's inspired or pursued you your entire life. Whether you grew up as a privileged young adventurer, tried your hardest to distance yourself from your relation's fame, or are proud of their accomplishments while working hard to move beyond your relation's heroic shadow, you've certainly found that adventuring and heroics appeal to your mind and soul. You may have big shoes to fill, but so far, you've more than risen to the challenge. Enough to draw Queen Sorshen's attention—in her invitation for you to attend the opening ceremony of the Circle of Open Hands, she mentioned that while she first took notice of you after learning of your relative, she's been impressed with your accomplishments and notes that she expects you to exceed your forebear's triumphs. While she expressed curiosity about an \"inside view\" of some of your relation's accomplishments, she was more eager to meet you as, in her words, \"a promising new hero who might just soon change the world.\"</p>\n<p>Choose two attribute boosts. One must be to <strong>Charisma</strong> or <strong>Strength</strong>, and the other is a free attribute boost.</p>\n<p>You're trained in Athletics and Library Lore. The disconnect between physical accomplishments and scholastic accomplishments has never been a particular challenge for you, and while this has caused jealousy now and then with childhood friends and rivals, you've managed to hone your skills so that regardless of who you're talking to, your knack of being able to find a common ground has made it easy to make a good impression. Whenever you take part in an influence encounter to Discover or Influence, or attempt to [[/act make-an-impression]] on an NPC, you reduce the DC of those checks by 2.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Revenge of the Runelords Player's Guide"
+          },
+          "rules": [],
+          "trainedSkills": {
+            "lore": [
+              "Library Lore"
+            ],
+            "value": [
+              "athletics"
+            ]
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "local-savior.json",
       "id": "p6ABkjwqe6gMi5BW",
       "name": "Local Savior",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "p6ABkjwqe6gMi5BW",
+        "folder": "IpgMFdh2A6r9Svxy",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Local Savior",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "str",
+                "wis"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>Some may be born into a situation that locks them into a heroic destiny or forced into an adventurous lifestyle from an early age through tragic events beyond their control. In your case, you're an entirely self-made hero. You had no childhood trauma or birthright that compelled you into the adventurer's lifestyle, but the small town in which you grew up needed someone to stand up for those in need. Be it an unwavering loyalty to your fellow townsfolk, an inborn conviction that compels you toward the defense of others, or simply a desire to make the world a better place, you volunteered time and again to help the community. This often had you working alongside local churches, faiths, or artisans, and whether or not you became a person of faith or an accomplished artist yourself, your knowledge of all matters faith and art is impressive. Eventually, this led you to join with your fellow PCs, and with their aid, you went from a local savior to an increasingly renowned hero. Yet even if you haven't been back to your hometown, your heart and soul never really left, and the lessons you learned in those formative years of triumphs (and perhaps failures) have made you into the famous adventurer you are today. Queen Sorshen even complimented your early accomplishments in her invitation to you to attend the opening ceremonies for the Circle of Open Hands and mentioned how she'd like you to help inspire the people of Xin-Eurythnia to follow in your footsteps in making the capital city of New Thassilon a safe place to thrive.</p>\n<p>Choose two attribute boosts. One must be to <strong>Strength</strong> or <strong>Wisdom</strong>, and the other is a free attribute boost.</p>\n<p>You're trained in Religion and Art Lore. In addition, choose one of the following small towns as your hometown. As part of your heroic services to your hometown, one of the deities whose presence is strong there has granted you a divine cantrip that you can cast as a divine innate spell at will. This cantrip is heightened to a spell rank equal to half your level rounded up. With your GM's permission, you can select a different small town from somewhere outside of the Saga Lands or even make up a small town of your own design, in which case you should work with your GM to decide which of the following five boons best match the theme and flavor of your hometown.</p><ul><li><strong>Ilsurian</strong> Located in south-central Varisia, the inhabitants of the riverside-town of Ilsurian have always been fiercely independent and self-sufficient in nature. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Shield] or @UUID[Compendium.pf2e.spells-srd.Item.Stabilize] as your divine innate cantrip. Ilsurian is detailed in Towns of the Inner Sea.</li><li><strong>Osprey Cove</strong> Located on the southern shore of Chakikoth Isle in the Ironbound Archipelago, Osprey Cove was founded by two siblings who fled servitude to crime lords in the pirate city of Riddleport. Today, Osprey Cove struggles to maintain its independence as Runelord Belimarius continues to expand her control over the region. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Message] or @UUID[Compendium.pf2e.spells-srd.Item.Read Aura] as your divine innate cantrip. Osprey Cove is detailed in Rusthenge.</li><li><strong>Roderic's Cove</strong> Located on the west coast of Varisia, Roderic's Cove has long struggled to remain self-sufficient in the shadow of the crime lords of nearby Riddleport. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Forbidding Ward] or @UUID[Compendium.pf2e.spells-srd.Item.Guidance] as your divine innate cantrip. Roderic's Cove is detailed in Secrets of Roderic's Cove.</li><li><strong>Sandpoint</strong> Located in the heart of Varisia's Lost Coast not far north from the city of Magnimar, Sandpoint has faced all manner of supernatural and physical threats over the past few decades, yet has never lost sight of the value of comfort and entertainment for those who live there. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Haunting Hymn] or @UUID[Compendium.pf2e.spells-srd.Item.Summon Instrument] as your divine innate cantrip. Sandpoint is detailed most recently in Seven Dooms for Sandpoint but more fully in Sandpoint: Light of the Lost Coast.</li><li><strong>Turtleback Ferry</strong> Situated near the Storval Rise not far from the looming presence of the Thassilonian dam known as Skull's Crossing, the people of Turtleback Ferry have embraced their remote home despite the struggles of frontier life where giants and capricious fey are a constant threat. Choose either @UUID[Compendium.pf2e.spells-srd.Item.Daze] or @UUID[Compendium.pf2e.spells-srd.Item.Prestidigitation] as your divine innate cantrip. Turtleback Ferry is detailed in Rise of the Runelords.</li></ul>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Revenge of the Runelords Player's Guide"
+          },
+          "rules": [],
+          "trainedSkills": {
+            "lore": [
+              "Art Lore"
+            ],
+            "value": [
+              "religion"
+            ]
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "runelord-researcher.json",
       "id": "JvsjDU6mKKLl0NK4",
       "name": "Runelord Researcher",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "JvsjDU6mKKLl0NK4",
+        "folder": "IpgMFdh2A6r9Svxy",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Runelord Researcher",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "dex",
+                "int"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>For thousands of years, the looming monoliths found throughout the Saga Lands were a source of pride, fear, and curiosity, yet the dangers associated with them and the gulf of time itself kept their secrets mostly hidden. When Runelord Karzoug rose from his eons-long slumber in 4707 ar, these ancient secrets became thrust into the light, and Thassilon's legacy became a topic of modern discussion and exploration. The foundation of New Thassilon only strengthened this shift, and now you're one of many who have devoted your studies on the deep history of Thassilon and its runelords—a topic still shrouded in mystery. Whether the focus of your studies has been one of the more recently active runelords, like Karzoug, Alaznist, Belimarius, or Sorshen, or you're focused on one of the more obscure dozens of runelords who ruled during the centuries Thassilon existed, your knowledge has made you an invaluable asset on many adventures in the Saga Lands. It's also attracted Queen Sorshen's attention, and in her invitation to attend the opening ceremonies for the Circle of Open Hands, she made it clear she wants to engage you in several long discussions about the truths of ancient Thassilon, impressing upon you that while the runelords (including herself, she admits) of the ancient era were cruel and domineering, that many of the wonders they created could benefit the modern age–if people could trust that these wonders were safe! With your aid, she hopes to bring these innovations back.</p>\n<p>Choose two attribute boosts. One must be to <strong>Dexterity</strong> or <strong>Intelligence</strong>, and the other is a free attribute boost.</p>\n<p>You're trained in Arcana and Academia Lore. When you @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about runelords or ancient Thassilon, you gain a +2 circumstance bonus to the check. You automatically recognize the name and time of rule of any runelord you encounter or see an accurate representation of (such as a painting or statue). In addition, during your daily preparations, you can choose one of the following schools of Thassilonian rune magic to focus your mind on, gaining a +1 status bonus to saving throws against the listed effect for the next 8 hours.</p><ul><li><strong>Envy</strong> any effect that has the incapacitation trait (against foes who are higher level than you, the status bonus increases to +2)</li><li><strong>Gluttony</strong> death effects and void</li><li><strong>Greed</strong> polymorph and effects that can cause the following conditions: enfeebled, clumsy, or petrified</li><li><strong>Lust</strong> emotion</li><li><strong>Pride</strong> illusion</li><li><strong>Sloth</strong> effects that cause paralysis, slow, stun, or that grant penalties to your Speed</li><li><strong>Wrath</strong> effects that cause acid, cold, electricity, fire, or sonic damage (choose one)</li></ul><p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Runelord Researcher]</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Revenge of the Runelords Player's Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "runelord-researcher"
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Academia Lore"
+            ],
+            "value": [
+              "arcana"
+            ]
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "runelord-survivor.json",
       "id": "Nq36wlDc9A8ldu55",
       "name": "Runelord Survivor",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "Nq36wlDc9A8ldu55",
+        "folder": "IpgMFdh2A6r9Svxy",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Runelord Survivor",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "con",
+                "wis"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>Whether you're a native-born Saga Lander or someone who came to this region relatively recently, you were there when Runelord Karzoug woke, when Runelord Krune's followers attempted to resurrect him, or when Runelord Alaznist's attempt to rework the flow of time itself brought ruin and death down upon the region. You barely escaped with your life and likely lost everything (perhaps even friends and family) as a result of a runelord's ambition. Since then, you've managed to rebuild and recover, and the other PCs are now among your closest friends—you might even regard them as your new family—yet your need for revenge against the runelords has become the primary motivation to better yourself, gain power, and indeed become the renowned hero you are today. If you played through a previous runelord-themed Adventure Path, with your GM's aid you could be one of the NPCs who featured in one of those adventures and watched in fear as that campaign's PCs did the best they could to oppose the runelords. You may or may not blame those PCs for the tragedy that befell you, but you always know it was one of the runelords themselves who was the ultimate cause of your pain. For some time—perhaps even years—after your brush with a runelord nearly killed you, you were forced to scavenge to survive in the wilds, perhaps in hiding or possibly because you had no other choice. In that time, you learned much about the natural world, but perhaps more important to your future plans, upon reintegrating into society you began to study the arts of war to achieve vengeance. When you received an invitation from Queen Sorshen to attend the opening ceremonies for the Circle of Open Hands, you may have had conflicting feelings or even pondered using the opportunity to get revenge. Yet in her invitation, the fact that she apologized for your suffering and made it clear that she wants to make amends for all of those who suffered from the actions of her fellow runelords over the past several years gave you pause. If she truly does seek repentance and wants to help repair the damage the runelord legacy has wrought upon the world, her aid would go a long way toward enabling your own peace of mind.</p>\n<p>Choose two attribute boosts. One must be to <strong>Constitution</strong> or <strong>Wisdom</strong>, and the other is a free attribute boost.</p>\n<p>You are trained in Nature and Warfare Lore. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Runelord] action.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Revenge of the Runelords Player's Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Hunt Runelord"
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Warfare Lore"
+            ],
+            "value": [
+              "nature"
+            ]
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     }
   ]
 }

@@ -7,6 +7,50 @@
       "name": "Ferocious Beasts",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wteuGNhOXLvBudRQ",
+        "folder": "z321g894ji9bZkFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ferocious Beasts",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Since ancient times, the mightiest orc beast tamers would draw out the true fighting spirit of their companion beasts by feeding the creatures a draft incorporating the orc's own blood. All animal companions, pets, familiars, and bonded animals you have gain the @UUID[Compendium.pf2e.feats-srd.Item.Orc Ferocity] feat, and gain one reaction per round they can use only for Orc Ferocity. If you have the @UUID[Compendium.pf2e.feats-srd.Item.Undying Ferocity] ancestry feat, all animal companions, pets, familiars, and bonded animals you have also gain the benefits of that feat when using the Orc Ferocity reaction.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "animal companion, Pet, or Bonded Animal"
+              },
+              {
+                "value": "Orc Ferocity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +60,58 @@
       "name": "Incredible Ferocity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GELhS1k0vHEi1PK3",
+        "folder": "z321g894ji9bZkFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incredible Ferocity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Given time to collect yourself after a near-death scrape, you can rebuild your ferocity and withstand additional finishing blows. You can use Orc Ferocity with a frequency of once per hour, rather than once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Orc Ferocity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:slug:orc-ferocity"
+              ],
+              "property": "frequency-per",
+              "value": "PT1H"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +121,69 @@
       "name": "Spell Devourer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pedHIDAVLFzzjGO1",
+        "folder": "z321g894ji9bZkFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spell Devourer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You don't just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or magical effect, you gain temporary Hit Points equal to double the spell's rank, or equal to the level if the magical effect isn't a spell. These temporary Hit Points last until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pervasive Superstition"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                {
+                  "or": [
+                    "arcane",
+                    "divine",
+                    "primal",
+                    "occult",
+                    "magical"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "text": "Whenever you succeed at a saving throw against a spell or magical effect, you gain temporary Hit Points equal to double the spell's rank, or equal to the level if the magical effect isn't a spell. These temporary Hit Points last until the end of your next turn.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

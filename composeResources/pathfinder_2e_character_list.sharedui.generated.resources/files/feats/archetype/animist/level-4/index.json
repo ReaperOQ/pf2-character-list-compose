@@ -7,6 +7,47 @@
       "name": "Basic Animist Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l64p70oQ6a3AtMq9",
+        "folder": "CRuzLuajlU99wRCo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Animist Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the basic spellcasting benefits as a prepared divine caster. In addition to standard divine tradition spells, you can prepare your bonded apparition's apparition spells in your spell slots of the appropriate level from the animist archetype.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +57,71 @@
       "name": "Spiritual Awakening",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7sJ7DzulbMjGWABJ",
+        "folder": "CRuzLuajlU99wRCo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spiritual Awakening",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level animist feat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:animist",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "spiritualAwakening",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.spiritualAwakening}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

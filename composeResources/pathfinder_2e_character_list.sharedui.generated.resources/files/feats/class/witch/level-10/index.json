@@ -7,6 +7,54 @@
       "name": "Double, Double",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wwnhnV3balaVdMu5",
+        "folder": "v3KWgmVYkP7trMap",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Double, Double",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>For each temporary oil or potion you brew during your daily preparations, you brew two copies of it. This allows you to brew two temporary oils or potions each day, four if you have master proficiency in spell DC, or six if you have legendary proficiency.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cauldron"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.crafting.entries.cauldron.batchSize",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "witch"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +64,79 @@
       "name": "Major Lesson",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZFkCMl63ogK55Otq",
+        "folder": "v3KWgmVYkP7trMap",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Major Lesson",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your patron grants you even greater secrets. Choose a major, greater, or basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat a second time if you're 14th level or higher, and a third time if you're 18th level or higher. Choose a different lesson each time.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "allowedDrops": {
+                "predicate": [
+                  "item:trait:witch",
+                  "item:type:feature",
+                  {
+                    "or": [
+                      "item:level:10",
+                      "item:level:6",
+                      "item:level:2"
+                    ]
+                  }
+                ]
+              },
+              "choices": {
+                "filter": [
+                  "item:tag:witch-lesson",
+                  {
+                    "lte": [
+                      "item:level",
+                      10
+                    ]
+                  }
+                ]
+              },
+              "flag": "lesson",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Lesson"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.lesson}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "witch"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +146,47 @@
       "name": "Witch's Communion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4IeAAmx2vZEHmRLX",
+        "folder": "v3KWgmVYkP7trMap",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Witch's Communion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can keep watch over multiple charges. Each day during your preparations, you can designate a number of charges equal to your Intelligence modifier instead of just one.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Witch's Charge"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "witch"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

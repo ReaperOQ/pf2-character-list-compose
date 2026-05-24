@@ -7,6 +7,47 @@
       "name": "Affliction Mercy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nsFnOLqYSkGWFhLD",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Affliction Mercy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The divine grace that flows through you grants reprieve from an affliction. Add mercy of recuperation to the types of @UUID[Compendium.pf2e.feats-srd.Item.Mercy] you can provide, allowing you to counteract an affliction instead of an effect causing a condition (typically an affliction is a curse, disease, or poison).</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mercy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +57,66 @@
       "name": "Aura of Faith",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7sFhBYoz5GSBFNbY",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aura of Faith",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You radiate an aura of belief that imbues your attacks and those of nearby allies with divine power. Each willing ally in your champion's aura adds the holy trait to their Strikes if you're holy or adds the unholy trait to their Strikes if you're unholy.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "holy or unholy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "includesSelf": false,
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Aura of Faith"
+                }
+              ],
+              "key": "Aura",
+              "predicate": [
+                "champions-aura",
+                {
+                  "not": "self:condition:unconscious"
+                }
+              ],
+              "radius": "@actor.flags.system.champion.aura",
+              "slug": "champions-aura"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +126,62 @@
       "name": "Blessed Counterstrike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nSDXAFQKjMROlc2l",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blessed Counterstrike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> An enemy triggered your champion's reaction since the end of your last turn.</p><hr /><p>You call upon divine power and make a weapon or unarmed Strike against the enemy who triggered your champion's reaction. The Strike deals one extra weapon damage die. If this Strike hits, until the start of your next turn, the target gains weakness equal to half your level to all Strikes made by you and your allies.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Blessed Counterstrike]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "champion's reaction that grants an ally resistance to an enemy's damage (including the grandeur, justice, liberation, and redemption causes)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "blessed-counterstrike",
+              "toggleable": true
+            },
+            {
+              "diceNumber": 1,
+              "key": "DamageDice",
+              "predicate": [
+                "blessed-counterstrike"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +191,47 @@
       "name": "Champion's Sacrifice",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U4AoJMBhJaFq5O1S",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Champion's Sacrifice",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can suffer so that others might live. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Champion's Sacrifice] devotion spell.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "you aren't unholy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +241,43 @@
       "name": "Divine Wall",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jNeIaFUFSGUXoSON",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Wall",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a shield.</p>\n<hr />\n<p>You use your shield to harry your enemies, preventing them from stepping away from or around you. All spaces adjacent to you are difficult terrain for your enemies.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +287,55 @@
       "name": "Enforce Oath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "g0C3tqGjgShoDyif",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enforce Oath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> You can see a creature you've sworn an oath against.</p><hr /><p>You call on your oath to embolden you in combat. Select one creature you can see that you've sworn an oath against (per the terms of your oath feat). You gain a +1 status bonus to AC and saves against attacks and effects by the chosen creature. You also gain a +1 status bonus to attack rolls against the chosen creature. However, your dedication draws your focus away from all other enemies. You take a –1 status penalty to AC, attack rolls, and saves against all other creatures until you stop Enforcing your Oath.</p>\n<p>Enforce Oath lasts indefinitely, but it ends if the enemy is reduced to 0 Hit Points, the enemy offers a legitimate surrender to you or your allies, you fall @UUID[Compendium.pf2e.conditionitems.Item.Unconscious], or the enemy goes unnoticed by you for more than 1 minute. You can also Dismiss the effect as a free action.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "any feat with the oath trait"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Enforce Oath",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Enforce Oath"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +345,76 @@
       "name": "Gruesome Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PEszRpnrcB7VPS9G",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gruesome Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your Strikes currently deal extra damage from your champion's reaction.</p><hr /><p>Make a Strike against the creature that triggered your champion's reaction. If you hit, double the extra damage the target takes from your reaction, and the target must succeed at a @Check[fortitude|against:class] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}. Regardless of the result, the creature is temporarily immune to your Gruesome Strike for 24 hours.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "champion's reaction that grants extra damage with your Strikes (including the desecration, iniquity, and obedience causes)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "gruesome-strike",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "gruesome-strike"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Champion.GruesomeStrike.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "multiply",
+              "predicate": [
+                "gruesome-strike"
+              ],
+              "selector": "strike-damage",
+              "slug": "champions-extra-damage",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -70,6 +424,50 @@
       "name": "Pale Horse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qPlv8HwtoO2fAjkj",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pale Horse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mount becomes a grotesque creature of foreboding when you ride it. Its appearance transforms as flames erupt from its skin, a whorl of void energy surrounds it, or poison leaks from its flesh. When you @UUID[Compendium.pf2e.actionspf2e.Item.Mount] your faithful steed, you can choose fire, poison, or void. As long as you ride it, your steed gains resistance 10 to the chosen damage type, and any creature that touches your steed takes 1d6 damage of the chosen type; this includes hitting the steed with an unarmed attack or with a melee weapon Strike while adjacent to the steed. This damage increases to 2d6 at 16th level and 3d6 at 20th level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pale Horse]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Faithful Steed"
+              },
+              {
+                "value": "unholy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -79,6 +477,53 @@
       "name": "Steed's Toppling Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cW88fH1HBM5AlV4M",
+        "folder": "KSdcmC531UnmFbGe",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Steed's Toppling Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> An enemy triggered your champion's reaction since the end of your last turn.</p><hr /><p>Those who defy your cause feel the powerful attacks of your mount. You Command an Animal to order your steed to Strike the enemy who triggered your champion's reaction. Your steed's unarmed attack deals one extra damage die for this Strike. If the Strike hits, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Faithful Steed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

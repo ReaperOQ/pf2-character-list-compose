@@ -7,6 +7,44 @@
       "name": "Impossible Flurry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OqHfUQQorVBkx34j",
+        "folder": "vgJNjJ24Ix161oLx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impossible Flurry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding two melee weapons, each in a different hand.</p>\n<hr />\n<p>You forgo precision to attack at an impossible speed. Make three melee Strikes with each of the required weapons. Your first attack with each weapon takes the multiple attack penalty as though you had already made one attack this turn. All of the remaining Strikes take the maximum multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +54,50 @@
       "name": "Manifold Edge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Dcr63tofZUome1Ze",
+        "folder": "vgJNjJ24Ix161oLx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Manifold Edge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned to leverage every possible edge. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Prey], you can gain a different hunter's edge benefit instead of the one you selected at 1st level. If you do, you don't gain the additional benefit from @UUID[Compendium.pf2e.classfeatures.Item.Masterful Hunter].</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "hunter's edge"
+              },
+              {
+                "value": "masterful hunter"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +107,65 @@
       "name": "Masterful Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AwxJcaIrutqMcUC8",
+        "folder": "vgJNjJ24Ix161oLx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Masterful Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your animal companion shares your incredible hunting skills, allowing it to take down your shared prey with ease. When you @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Prey], your animal companion gains the @UUID[Compendium.pf2e.classfeatures.Item.Masterful Hunter] benefit associated with your hunter's edge, rather than just your original hunter's edge benefit.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "masterful hunter"
+              },
+              {
+                "value": "Animal Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:hunt-prey"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Ranger.MasterfulCompanion.HuntPreyAddendum"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +175,44 @@
       "name": "Perfect Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zrIrpVOvbGS6a3ux",
+        "folder": "vgJNjJ24Ix161oLx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Perfect Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a loaded ranged weapon with reload 1 or more, and you have not reloaded your weapon since your last turn.</p>\n<hr />\n<p>After watching the motions of combat with incredible intensity and precision, you fire at your prey at the perfect moment to deliver maximum pain. Make a ranged Strike with the required weapon against your hunted prey. If you hit, the Strike deals maximum damage. After the Strike, your turn ends.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -43,6 +222,47 @@
       "name": "Shadow Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "f1acyuIGYVp2BpKc",
+        "folder": "vgJNjJ24Ix161oLx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shadow Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You blend in to your surroundings so well that others have trouble telling you apart from the terrain. While in natural terrain, you're always @UUID[Compendium.pf2e.conditionitems.Item.Concealed] from all foes if you choose to be, except for your hunted prey.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Camouflage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

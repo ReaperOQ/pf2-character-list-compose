@@ -7,6 +7,48 @@
       "name": "Advanced Warden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "it2i6OXfGIizokpg",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Warden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You unlock more powerful primal spells. You gain your choice of one warden spell from the advanced warden spells.</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Animal Feature]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Enlarge Companion]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Hunter's Luck]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Soothing Mist]</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times, choosing a different advanced warden spell each time.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Initiate Warden"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +58,47 @@
       "name": "Companion's Cry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TORYSZMLMAGgsSEW",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Companion's Cry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can urge your companion to do its utmost. You can spend 2 actions to @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] instead of 1 when commanding your animal companion. If you do, your animal companion uses an additional action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "an animal companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +108,43 @@
       "name": "Disrupt Prey",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qav9ec9cR4lFcz3C",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disrupt Prey",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your hunted prey is within your reach, and it uses a manipulate action, uses a move action, or leaves a square during a move action it's using.</p>\n<hr />\n<p>Make a melee Strike against your prey. If the attack is a critical hit, you disrupt the triggering action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +154,53 @@
       "name": "Far Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "r6dvGxru3FWNLVE2",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Far Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your experience in the field has taught you how to focus your aim at a distance, increasing your accuracy. Double your weapons' range increments.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:ranged"
+              ],
+              "key": "AdjustStrike",
+              "mode": "multiply",
+              "property": "range-increment",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +210,43 @@
       "name": "Favored Prey",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oGu9AtUAx0SpRXy8",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Favored Prey",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have studied a specific type of wild creature and can hunt it more easily. When you gain this feat, choose animals, beasts, dragons, or both fungi and plants as your favored prey. When you roll initiative and can see an enemy that belongs to the chosen category, you can Hunt Prey as a free action, designating that enemy.</p>\n<p>You can use this free action even if you haven't identified the creature yet with Recall Knowledge. The benefit doesn't apply against favored enemies disguised as other creatures, and the GM determines whether it applies against a creature disguised as a favored prey.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +256,49 @@
       "name": "Natural Conduit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nLlbcEZ5w4bsgMye",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Natural Conduit",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have line of effect to your animal companion or another friendly animal within 60 feet.</p>\n<hr />\n<p>You can use an animal as a conduit for your magic. If the next action you use is to Cast a Spell that has a range, the spell uses the animal as its origin point.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "warden spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "ranger",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +308,47 @@
       "name": "Wolf in Sheep's Clothing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Kxckxf4G9URXNc07",
+        "folder": "9i2KJXGEyKhvnkI6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wolf in Sheep's Clothing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a bit of hide, some antlers, and some cast-off fur, you can create a disguise that will fool even an experienced hunter. You can @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] creatures with the animal, beast, or plant traits, so long as they are either the same size or one size larger than you and have a body shape that conforms at least vaguely to your own (in other words, a typical humanoid could Impersonate a bear or an arboreal, but not a horse, giant scorpion, or assassin vine). Impersonating a larger creature doesn't change your actual size.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Trained in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

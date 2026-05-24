@@ -7,6 +7,52 @@
       "name": "Share Weakness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a2VAaXMzlQqALJeH",
+        "folder": "xZjxN80OpJY1RRmA",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Share Weakness",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are Exploiting a creature's Vulnerability using mortal weakness.</p><hr /><p>You select an object from your esoterica that has great personal value to you, such as a locket or treasured ring, and you grant it to an adjacent ally, establishing a personal link that allows your ally to affect an enemy as if they were you. The ally's Strikes apply the weakness from your mortal weakness the same way your Strikes do. This benefit ends when your @UUID[Compendium.pf2e.actionspf2e.Item.Exploit Vulnerability] ends or you Share Weakness again.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Exploit Vulnerability"
+              },
+              {
+                "value": "mortal weakness"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "esoterica",
+              "manipulate",
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +62,58 @@
       "name": "Thaumaturge's Investiture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nx7UPAwAyno2rM9f",
+        "folder": "xZjxN80OpJY1RRmA",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thaumaturge's Investiture",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Magical equipment and gear are the tools of your trade, and you know you need as many as possible to help you against the supernatural. Thus, mastering the efficient use of such magical equipment is a matter of great importance. You gain the Incredible Investiture skill feat, increasing your limit on invested items from 10 to 12. The limit increases to 14 if you have Charisma +4, 16 if you have Charisma +5, 18 if you have Charisma +6, and 20 if you have Charisma +7.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Charisma +3"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Incredible Investiture"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.resources.investiture.max",
+              "value": "ternary(gte(@actor.system.abilities.cha.mod,7),20,ternary(gte(@actor.system.abilities.cha.mod,6),18,ternary(gte(@actor.system.abilities.cha.mod,5),16,ternary(gte(@actor.system.abilities.cha.mod,4),14,12))))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +123,48 @@
       "name": "Twin Weakness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "85xm82Z005CUNBMB",
+        "folder": "xZjxN80OpJY1RRmA",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twin Weakness",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're holding an implement and a weapon, you are using Exploit Vulnerability with mortal weakness or personal antithesis, and the target creature is within reach of both your implement and weapon.</p>\n<hr />\n<p>As you make an attack augmented by your esoterica, you also press your implement against the creature, applying its weakness as your implement's energies sear the creature's flesh. Make a melee Strike against the target of your Exploit Vulnerability. On any attack roll result but a critical failure, you also press your implement against the creature, automatically dealing the additional damage from Exploit Vulnerability. This is in addition to any damage from your Strike, including the weakness the Strike applies from Exploit Vulnerability. This counts as two attacks when calculating your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "mortal weakness or personal antithesis"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "esoterica",
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Camouflage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qqe5VmcO1s8iTOfd",
+        "folder": "jsxQdu29nM92cie5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Camouflage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You alter your appearance to blend in to the wilderness. In natural terrain, you can @UUID[Compendium.pf2e.actionspf2e.Item.Hide] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] even without cover or being @UUID[Compendium.pf2e.conditionitems.Item.Concealed].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +57,47 @@
       "name": "Incredible Companion (Ranger)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U52NMdeSNbjSSRHE",
+        "folder": "jsxQdu29nM92cie5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incredible Companion (Ranger)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your animal companion continues to grow and develop. It becomes a nimble or savage animal companion (your choice), gaining additional capabilities determined by the type of companion.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mature Animal Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +107,65 @@
       "name": "Master Monster Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5csEOLLbYUWJDJoS",
+        "folder": "jsxQdu29nM92cie5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Master Monster Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have a nearly encyclopedic knowledge of all creatures of the world. You can use [[/act recall-knowledge skill=nature]]{Nature} to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] to identify any creature. In addition, you gain the benefits of @UUID[Compendium.pf2e.feats-srd.Item.Monster Hunter] (and @UUID[Compendium.pf2e.feats-srd.Item.Monster Warden], if you have it) on a success as well as a critical success.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Nature"
+              },
+              {
+                "value": "Monster Hunter"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:monster-hunter"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +175,48 @@
       "name": "Peerless Warden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W7aT1UJOVFkYdQti",
+        "folder": "jsxQdu29nM92cie5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Peerless Warden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mastery of primal magic has given you access to the greatest secrets of warden magic. You gain your choice of one warden spell from the peerless warden spells.</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Hunter's Vision]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Terrain Transposition]</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times, choosing a different peerless warden spell each time.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Initiate Warden"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +226,43 @@
       "name": "Penetrating Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "otBBb0ndASgPdAXW",
+        "folder": "jsxQdu29nM92cie5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Penetrating Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon.</p>\n<hr />\n<p>You shoot clear through an intervening creature to hit your prey. Choose a target that is giving lesser cover to your hunted prey. Make a single ranged Strike with the required weapon against the chosen target and your hunted prey. This attack ignores any lesser cover the chosen target provides your hunted prey. Roll damage only once, and apply it to each creature you hit. A Penetrating Shot counts as two attacks for your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +272,47 @@
       "name": "Warden's Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oD4JyvTJj4kwe5vb",
+        "folder": "jsxQdu29nM92cie5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Warden's Step",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can guide your allies to move quietly through the wilderness. When you @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] during exploration in natural terrain, you can designate any number of your allies to gain the benefits as if they were using that activity during that exploration. This requires no action on their part.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

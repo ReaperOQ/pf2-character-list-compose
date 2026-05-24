@@ -7,6 +7,43 @@
       "name": "Clotting Elixirs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vqxKsnFhzWv7AykV",
+        "folder": "uWielTtmMWajpWvp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clotting Elixirs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your restorative concoctions have a clotting effect on the drinker's blood. When a living creature drinks an infused elixir with the healing trait that you have created, it can immediately attempt a @Check[flat|dc:10] to remove any persistent bleed damage.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +53,49 @@
       "name": "Improvise Admixture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "H6SL2F11nlMfqCQC",
+        "folder": "uWielTtmMWajpWvp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improvise Admixture",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You have fewer than your maximum number of versatile vials, and you're either holding or wearing an alchemist's toolkit.</p><hr /><p>You scrounge together enough ingredients from what's left in your alchemist's toolkit to produce a few more versatile vials on the fly. Attempt a @Check[crafting|dc:@self.level] check. The DC is usually a standard-difficulty DC for your level, but the GM can assign a different DC based on the circumstances. The number of vials you regain depends on the result of your check (up to your maximum).</p><hr /><p><strong>Critical Success</strong> You regain 3 versatile vials.</p>\n<p><strong>Success</strong> You regain 2 versatile vials.</p>\n<p><strong>Failure</strong> You regain 1 versatile vial.</p>\n<p><strong>Critical Failure</strong> You don't regain any versatile vials.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +105,44 @@
       "name": "Pernicious Poison",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cZED3aBrjCgO0dPC",
+        "folder": "uWielTtmMWajpWvp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pernicious Poison",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can add a toxic additive to an alchemical poison to make it splash poison on its target. A poison with this additive deals an amount of poison damage equal to the poison's level if the target succeeds at its initial saving throw against it. A target that critically succeeds at its saving throw against this poison still takes no damage.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +152,44 @@
       "name": "Revivifying Mutagen",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2rJP5TqvfazNeNmY",
+        "folder": "uWielTtmMWajpWvp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Revivifying Mutagen",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are under the effects of a mutagen.</p><hr /><p>You metabolize a mutagen to heal yourself. You regain @Damage[(floor(@actor.level/2))d6[healing]]{1d6 Hit Points for every 2 levels} you have, but the mutagen's duration immediately ends.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +199,62 @@
       "name": "Smoke Bomb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ODnXQHvFoK7tIVpu",
+        "folder": "uWielTtmMWajpWvp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Smoke Bomb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can add a tarry additive to an alchemical bomb to make it emit smoke. When thrown, in addition to its normal effects, the bomb creates a cloud of smoke in a @Template[burst|distance:10]. You choose which corner of the target's space (or the space in which the bomb lands) the cloud is centered on. Creatures within that area have the @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dissipated by a strong wind.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "alchemical",
+                "bomb",
+                "smoke-bomb"
+              ],
+              "selector": "attack-roll",
+              "text": "Your bomb creates a cloud of smoke in a 10-foot radius burst, centered on a corner of the target's space of your choice. The smoke conceals creatures in the area, and lasts for 1 minute.",
+              "title": "{item|name}"
+            },
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "option": "smoke-bomb",
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

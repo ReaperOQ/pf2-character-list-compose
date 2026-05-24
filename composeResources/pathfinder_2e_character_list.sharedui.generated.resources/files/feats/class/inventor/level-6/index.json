@@ -7,6 +7,49 @@
       "name": "Clockwork Celerity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dxUbA1dUEcVHnU5s",
+        "folder": "3eHdrRdGpLL93qbI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clockwork Celerity",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn begins.</p><hr /><p>You can use unstable clockwork devices in your innovation to push your invention to act more quickly. You are @UUID[Compendium.pf2e.conditionitems.Item.Quickened] for this turn. How you can use the extra action depends on your innovation.</p><ul><li><strong>Armor</strong> You can use the extra action to Step, Stride, or use another movement action granted by your innovation (such as Swim if you have the Diving Armor feat).</li><li><strong>Construct</strong> You can use the extra action to Command your construct innovation (or to provide 1 of the actions if you spend 2 actions to Command your construct).</li><li><strong>Weapon</strong> You can use the extra action to Strike with your innovation or Reload your innovation.</li></ul>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor, construct, or weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate",
+              "unstable"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +59,47 @@
       "name": "Construct Shell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ls3MiZ5RcAWaiQ7f",
+        "folder": "3eHdrRdGpLL93qbI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Construct Shell",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've adjusted your construct innovation so that when you ride it, special plates, hollows, or similar form partial barriers around you to add additional protection. You have lesser cover from all attacks when mounted on your construct innovation, not just from attacks where the construct would be in the way.</p>\n<p>Additionally, if your construct uses an emanation while you're riding on it, such as @UUID[Compendium.pf2e.actionspf2e.Item.Explode], you can choose not to be affected by the emanation.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "construct innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +109,75 @@
       "name": "Megavolt",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hlX7jYoS1s6srZC2",
+        "folder": "3eHdrRdGpLL93qbI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Megavolt",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You bleed off some electric power from your innovation in the shape of a damaging bolt. Creatures in a @Template[line|distance:20] from your innovation take @Damage[(max(3,floor(@actor.level/2)))d4[electricity]|options:area-damage] damage, with a @Check[reflex|against:inventor|basic|options:area-effect] against your class DC. The electricity damage increases by 1d4 at 8th level and every 2 levels thereafter.</p>\n<p><strong>Unstable Function</strong> You overload and supercharge the voltage even higher. Add the unstable trait to Megavolt. The area increases to a @Template[line|distance:60] and the damage increases from d4s to d12s. If you have the breakthrough innovation class feature, you can choose a 60-foot or @Template[line|distance:90] for the area when you use an unstable Megavolt; if you also have the revolutionary innovation class feature, you can choose a 60-foot, 90-foot, or @Template[line|distance:120].</p><hr /><p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "dice-faces",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "slug": "base",
+              "value": 12
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "electricity",
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +187,48 @@
       "name": "Silk Bracelet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bI0PWJ4c3AOcFDWN",
+        "folder": "3eHdrRdGpLL93qbI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Silk Bracelet",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>Taking inspiration from Desna's image as a giant silk moth in Tian Xia, you've attached a bracelet to your innovation that generates ultra-strong silk strands mixed with venom. You can unleash this substance as part of an attack. Make a melee Strike. If it hits, the target takes damage from the Strike as normal and must attempt a @Check[fortitude|against:inventor] save against your class DC with the following effects.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The silk imposes a –10 foot status penalty to all the target's Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Silk Bracelet]</p>\n<p><strong>Failure</strong> As success, and the target takes an additional @Damage[(floor(@actor.level/6))d4[persistent,poison]] damage. The poison damage increases to 2d4 at 12th level and 3d4 at 18th level.</p>\n<p><strong>Critical Failure</strong> As failure, and the target is @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] until the end of their next turn.</p><hr /><p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor, construct, or weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +238,52 @@
       "name": "Visual Fidelity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lkl5QaDb1mlSD7SC",
+        "folder": "3eHdrRdGpLL93qbI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Visual Fidelity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've found a way to use a hodgepodge combination of devices to enhance your visual abilities in every situation. You gain darkvision and low-light vision, and you can see @UUID[Compendium.pf2e.conditionitems.Item.Invisible] creatures and objects as translucent shapes, though these shapes are indistinct enough to be @UUID[Compendium.pf2e.conditionitems.Item.Concealed] to you.</p>\n<p>If an effect would give you the @UUID[Compendium.pf2e.conditionitems.Item.Blinded] condition, the effect must attempt a counteract check against your class DC, with your counteract rank equaling half your level, rounded up. On a failed counteract check, you aren't blinded-your various devices are able to compensate.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {},
+              "see-invisibility": {
+                "acuity": "imprecise",
+                "range": 30
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +293,64 @@
       "name": "Xidao Sea Mine Drop",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Tlo7Ln13l5wvgVtZ",
+        "folder": "3eHdrRdGpLL93qbI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Xidao Sea Mine Drop",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>You've rigged your armor innovation with a gizmo that can safely synthesize two sea mines a day, holding them in a protected compartment. You must be submerged in water to use this action, and the mines only detonate if they're underwater.</p>\n<p>You off-load a mine onto an unoccupied square within your reach. The mine is primed to explode when a Small or larger creature moves into its square, or when you Interact to Activate your gizmo's remote detonation button, which explodes a single mine up to 50 feet away. As a 1-minute activity, you can hide a mine. Creatures can detect a hidden mine as they would any trap or hazard, using your Craft DC as the Stealth DC. If you don't Conceal the mine, its position is obvious.</p>\n<p>Any creature in a @Template[type:emanation|distance:5] around the mine when it detonates takes @Damage[ceil(@actor.level/2)d4[bludgeoning],1d4[piercing]|options:area-damage] damage, with a @Check[reflex|against:inventor|basic] against your class DC. The bludgeoning damage of your mines increases by 1d4 at 8th level and every 2 levels thereafter. Any mines that haven't detonated when you make your daily preparations become inert and harmless.</p>\n<p><strong>Unstable Function</strong> You push the safety limits of your gizmo, forcing it to synthesize and launch additional sea mines, exceeding the daily limit. Add the unstable trait to Xidao Sea Mine Drop. You create up to 3 additional sea mines that you can immediately deploy in different unoccupied spaces up to 30 feet away.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Diving Armor"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

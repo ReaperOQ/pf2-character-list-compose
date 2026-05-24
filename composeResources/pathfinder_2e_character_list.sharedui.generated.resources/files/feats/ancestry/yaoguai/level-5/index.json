@@ -7,6 +7,49 @@
       "name": "Among Humanity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KiakLUgowQFyz5Ka",
+        "folder": "1VQWhhqvILi7GmoP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Among Humanity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your talents in shapechanging allow you to pass unseen. When you Change Shape into your humanoid form, you gain the effects of 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.Illusory Disguise] for 1 hour or until you shift back, except it's a polymorph effect rather than an illusion.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "occult",
+              "polymorph",
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +59,64 @@
       "name": "Awakened Yaoguai Heritage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "s1XVDFbnP7visLI5",
+        "folder": "1VQWhhqvILi7GmoP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Awakened Yaoguai Heritage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've delved into the power of your legacy. You gain all the mechanical benefits of the yaoguai heritage you selected at first level, allowing you to take feats and gain any benefits that require a specific yaoguai heritage.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a versatile heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  "item:ancestry:yaoguai"
+                ],
+                "itemType": "heritage"
+              },
+              "flag": "heritage",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Yaoguai.AwakenedYaoguai.Prompt"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.heritage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +126,51 @@
       "name": "Bold Defiance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oDFvdHVfrBzt16js",
+        "folder": "1VQWhhqvILi7GmoP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bold Defiance",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You Change Shape.</p><hr /><p>You harden your form as you dance between shapes. You gain temporary Hit Points equal to your level that last for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Bold Defiance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Bold Defiance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +180,47 @@
       "name": "Immobile Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tL3Xu0C981AdrjVh",
+        "folder": "1VQWhhqvILi7GmoP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Immobile Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You take on the shape you had before you awoke to hide in plain sight. When you Change Shape, you can assume the form of an immobile plant, object, or natural feature of Tiny, Small, or Medium size, as suits your heritage. Using your immobile form counts as setting up a disguise for the Impersonate use of Deception, except that you can Impersonate an object instead of a creature, it gives you a +4 status bonus to Deception checks to prevent others from seeing through your disguise, and you add your level even if you're untrained. You can speak while in immobile form, but you can't attack, cast spells, or move.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "born of item, born of elements, or born of vegetation heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +230,76 @@
       "name": "Kin Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AO3qHCGDU552NEIj",
+        "folder": "1VQWhhqvILi7GmoP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kin Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're adept at combating other supernatural creatures. When you succeed at a Recall Knowledge check using Occultism or Yaoguai Lore, you gain a +1 circumstance bonus to damage with weapons and unarmed attacks against that creature and all creatures of the exact same type for the next minute. If your attack would deal more than one weapon die of damage (as is common at higher levels than 1st), the bonus is equal to the number of weapon dice or unarmed attack dice. Additionally, you gain a +1 circumstance bonus to saving throws against their abilities for the next minute. For example, if you're facing three jiang-shi, you would gain these bonuses against all three of them.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Yaoguai Historian"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "kin-hunter",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "kin-hunter"
+              ],
+              "selector": [
+                "unarmed-damage",
+                "weapon-damage"
+              ],
+              "slug": "kin-hunter-damage",
+              "type": "circumstance",
+              "value": "@weapon.system.damage.dice"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "kin-hunter"
+              ],
+              "selector": "saving-throw",
+              "slug": "kin-hunter-saves",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +309,97 @@
       "name": "Signature Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yiZwGVErxzWCJOlW",
+        "folder": "1VQWhhqvILi7GmoP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Signature Weapon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your energy saturates one of your weapons; it might be one inherited or one tied to your history. Pick a weapon and give it a name; this weapon gains the unique trait. You gain access to its critical specialization effect. You can spend one action saying the name of your weapon, summoning it into your empty hand if the weapon is unattended and within 1 mile; this is an occult teleportation effect.</p>\n<p>If your signature weapon is destroyed, you can spend three days and three nights saturating a new weapon with your energy, creating a new signature weapon.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "choices": {
+                "ownedItems": true,
+                "types": [
+                  "weapon"
+                ]
+              },
+              "flag": "weapon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                "item:id:{item|flags.system.rulesSelections.weapon}"
+              ]
+            },
+            {
+              "definition": [
+                "item:id:{item|flags.system.rulesSelections.weapon}"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "improved-signature-weapon"
+              ],
+              "property": "materials",
+              "value": "dawnsilver"
+            },
+            {
+              "definition": [
+                "item:id:{item|flags.system.rulesSelections.weapon}"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "improved-signature-weapon"
+              ],
+              "property": "materials",
+              "value": "duskwood"
+            },
+            {
+              "definition": [
+                "item:id:{item|flags.system.rulesSelections.weapon}"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "improved-signature-weapon"
+              ],
+              "property": "materials",
+              "value": "peachwood"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

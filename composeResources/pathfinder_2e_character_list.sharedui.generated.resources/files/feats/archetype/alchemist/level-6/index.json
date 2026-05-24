@@ -7,6 +7,48 @@
       "name": "Advanced Concoction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HtH8MONAzx4eYuJY",
+        "folder": "HelnobKcAtPEUzpn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Concoction",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one alchemist feat. For the purpose of meeting its prerequisites, your alchemist level is equal to half your character level.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another alchemist feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Concoction"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +58,58 @@
       "name": "Voluminous Vials",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "soHLtpMM9h3AE7PD",
+        "folder": "HelnobKcAtPEUzpn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Voluminous Vials",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your number of versatile vials per day increases to 5.</p><hr /><p><strong>Special</strong> At 12th level or higher, you can select this feat a second time to increase your number of versatile vials per day to 6. At 18th level or higher, you can select this feat a third time to increase your number of versatile vials per day to 7.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Alchemist Dedication"
+              },
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.resources.versatileVials.max",
+              "value": "4 + @item.timesTaken"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

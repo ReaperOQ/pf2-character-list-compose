@@ -7,6 +7,59 @@
       "name": "Legendary Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "B3Fz46wzUIzrxWsA",
+        "folder": "OQ8cnXs4rKR82hSb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Legendary Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You focus on your hunted prey, perceiving angles, air resistance, and every variable that would affect your ranged attack. If you have master proficiency with your ranged weapon, you can ignore the penalty for attacking up to five range increments away when attacking your hunted prey.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "masterful hunter"
+              },
+              {
+                "value": "legendary in Perception"
+              },
+              {
+                "value": "Far Shot"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "ranged-attack-roll",
+              "key": "RollOption",
+              "option": "ignore-range-penalty:5"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +69,47 @@
       "name": "To the Ends of the Earth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HLCeP87w7qEy8PUH",
+        "folder": "OQ8cnXs4rKR82hSb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "To the Ends of the Earth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ability to track your prey has surpassed explanation, allowing you to trace your prey's movements and predict its location with ease. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Prey] on a creature within 100 feet, you can follow that creature's movements, allowing you to know the creature's exact location no matter how far away it becomes, as long as it remains your prey. You must be legendary in Nature to track your prey's location across teleportation or planar travel. This feat gains the detection and primal traits if you're legendary in Nature.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "legendary in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +119,65 @@
       "name": "Triple Threat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EHorYedQ8r05qAtk",
+        "folder": "OQ8cnXs4rKR82hSb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Triple Threat",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can divide your attention three ways when hunting. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Prey], you can designate three creatures as prey, designate two creatures as prey and share the effect with one ally (as Shared Prey), or designate one creature as prey and share the effect with two allies.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Shared Prey"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:hunt-prey"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Ranger.TripleThreat.HuntPreyAddendum"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "hunters-edge-sharing"
+            ],
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -34,6 +187,47 @@
       "name": "Ultimate Skirmisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2sCzFjq8sKvBR3Jh",
+        "folder": "OQ8cnXs4rKR82hSb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ultimate Skirmisher",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are so skilled at navigating the wild, your movement is completely unaffected by terrain. You ignore the effects of all difficult terrain, greater difficult terrain, and hazardous terrain, and you don't trigger traps and hazards that are triggered by moving into an area (such as trip wires and pressure plates), unless you want to.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "unimpeded journey"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

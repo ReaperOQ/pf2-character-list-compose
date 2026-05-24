@@ -1,0 +1,377 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "clawed-catfolk.json",
+      "id": "bLhIBwqdjTiVJ5qm",
+      "name": "Clawed Catfolk",
+      "img": "systems/pf2e/icons/features/ancestry/clawed-catfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "bLhIBwqdjTiVJ5qm",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "systems/pf2e/icons/features/ancestry/clawed-catfolk.webp",
+        "name": "Clawed Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>Your family has particularly long, sharp claws capable of delivering bleeding wounds with a wicked swipe. You gain a claw unarmed attack that deals 1d6 slashing damage. Your claws are in the brawling group and have the agile, finesse and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.claw",
+              "range": null,
+              "traits": [
+                "finesse",
+                "unarmed",
+                "agile"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "flexible-catfolk.json",
+      "id": "TDc9MXLXkgEFoKdD",
+      "name": "Flexible Catfolk",
+      "img": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "TDc9MXLXkgEFoKdD",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp",
+        "name": "Flexible Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>You've inherited flexibility beyond that of most humanoids. You don't treat tight spaces that don't require you to Squeeze as difficult terrain. In addition, you get a +1 circumstance bonus to checks when you attempt to Escape.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": [
+                "acrobatics",
+                "athletics",
+                "attack"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "hunting-catfolk.json",
+      "id": "1lv7RMp7t5iqeUFT",
+      "name": "Hunting Catfolk",
+      "img": "systems/pf2e/icons/features/ancestry/hunting-catfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "1lv7RMp7t5iqeUFT",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "systems/pf2e/icons/features/ancestry/hunting-catfolk.webp",
+        "name": "Hunting Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>You come from a long line of skilled hunters and trackers and have a particularly keen sense of smell. You gain imprecise scent with a range of 30 feet. This means you can use your sense of smell to determine a creature's location. The GM will usually double the range if you're downwind from the creature or halve the range if you're upwind.</p>\n<p>In addition, you gain a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Track] a creature or object if you've smelled it before.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Hunting Catfolk (Track smelled creatures)",
+              "predicate": [
+                "action:track",
+                "target:previously-smelled"
+              ],
+              "selector": "survival",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "jungle-catfolk.json",
+      "id": "HpqQ5VQ0w4HqYgVC",
+      "name": "Jungle Catfolk",
+      "img": "systems/pf2e/icons/features/ancestry/jungle-catfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "HpqQ5VQ0w4HqYgVC",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "systems/pf2e/icons/features/ancestry/jungle-catfolk.webp",
+        "name": "Jungle Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>You're descended from jungle stalkers and can move swiftly through scrub and underbrush. You ignore difficult terrain from undergrowth, and greater difficult terrain from undergrowth is only difficult terrain for you.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "liminal-catfolk.json",
+      "id": "3F5ffk7cmnrBhPcT",
+      "name": "Liminal Catfolk",
+      "img": "icons/magic/nature/wolf-paw-glow-large-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "3F5ffk7cmnrBhPcT",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "icons/magic/nature/wolf-paw-glow-large-orange.webp",
+        "name": "Liminal Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>You've inherited a closeness to the far corners of the world, where the boundaries between dimensions grow thin. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic] cantrip as an occult innate spell at will. A cantrip is heightened to half your level rounded up. You also gain a +1 circumstance bonus to Occultism checks to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about creatures that originated on planes other than the Universe.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "target:not-from-universe"
+              ],
+              "selector": "occultism",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "nine-lives-catfolk.json",
+      "id": "hOPOyyt7qZXYYCOU",
+      "name": "Nine Lives Catfolk",
+      "img": "systems/pf2e/icons/features/ancestry/nine-lives-catfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "hOPOyyt7qZXYYCOU",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "systems/pf2e/icons/features/ancestry/nine-lives-catfolk.webp",
+        "name": "Nine Lives Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>Your family has always seems to bounce back from disaster, not through physical hardiness or specialized skill, but from sheer luck. Other catfolk whisper that you have nine lives. While you're @UUID[Compendium.pf2e.conditionitems.Item.Dying], you don't add your dying value to the DC of your recovery checks (this means the DC is typically 10). In addition, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Diehard] general feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "subtract",
+              "path": "system.attributes.dying.recoveryDC",
+              "predicate": [
+                "self:condition:dying"
+              ],
+              "value": "@actor.conditions.dying.badge.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sharp-eared-catfolk.json",
+      "id": "NWsZ0cIeghyzk9bU",
+      "name": "Sharp-Eared Catfolk",
+      "img": "icons/creatures/mammals/humanoid-fox-cat-archer.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "NWsZ0cIeghyzk9bU",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "icons/creatures/mammals/humanoid-fox-cat-archer.webp",
+        "name": "Sharp-Eared Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>You were born with big, expressive ears that move with your moods and perk up at any unexpected sound. You gain a +2 circumstance bonus to locate undetected creatures that you could hear within 30 feet with a @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action. As long as you're aware of a creature via sound, once per round, your ears can help you @UUID[Compendium.pf2e.actionspf2e.Item.Point Out] the creature to all allies as a free action.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:seek",
+                {
+                  "lte": [
+                    "target:distance",
+                    30
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "winter-catfolk.json",
+      "id": "6dMd4JG0ndrObEUj",
+      "name": "Winter Catfolk",
+      "img": "systems/pf2e/icons/features/ancestry/winter-catfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "6dMd4JG0ndrObEUj",
+        "folder": "rHnluMPovHqQZC1m",
+        "img": "systems/pf2e/icons/features/ancestry/winter-catfolk.webp",
+        "name": "Winter Catfolk",
+        "system": {
+          "ancestry": {
+            "name": "Catfolk",
+            "slug": "catfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.972EkpJOPv9KkQIW"
+          },
+          "description": {
+            "value": "<p>You have a thick coat of fur that protects you from the cold. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

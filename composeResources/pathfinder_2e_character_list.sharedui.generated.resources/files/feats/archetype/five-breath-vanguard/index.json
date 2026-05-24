@@ -7,6 +7,53 @@
       "name": "Five-Breath Vanguard Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8aYizNbZP8wyyj9y",
+        "folder": "8TNLkdxIOjJENknT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Five-Breath Vanguard Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin or exposure to Tian elementalism</p><hr /><p>You flow like the elemental cycle, adapting your stance and techniques constantly in response to whatever circumstances you face. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Cycle Elemental Stance] action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.lCmFR1N4lCMOYXcE]{Five-Breath Vanguard}</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Two of the five elemental stances (Ironblood Stance, Mountain Stance, Reflective Ripple Stance, Stoked Flame Stance, and Tangled Forest Stance)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Cycle Elemental Stance"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +63,51 @@
       "name": "Five Breaths, One Death",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aWGwGoodVZjcXkvE",
+        "folder": "8TNLkdxIOjJENknT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Five Breaths, One Death",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Requirements</strong> You're in an elemental stance, and the target is under the effects of Induce Imbalance.</p><hr /><p>You cycle through the elements in a devastating combination attack. Strike the target using the unarmed attack associated with your current elemental stance, then @UUID[Compendium.pf2e.actionspf2e.Item.Cycle Elemental Stance]. Then, Strike the target with the unarmed attack associated with your new elemental stance. You can continue to Cycle Elemental Stance and Strike until you've made a Strike using the unarmed attack of every elemental stance you know, applying the multiple attack penalty as usual. If you successfully hit the target with all five elemental Strikes using this ability, it must attempt a @Check[fortitude|against:class|traits:death] save against your class DC or die as each elementally associated organ within its body shuts down; this is a death effect.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Induce Imbalance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +117,48 @@
       "name": "Induce Imbalance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZPWYsJgSPbGkCICA",
+        "folder": "8TNLkdxIOjJENknT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Induce Imbalance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in an elemental stance.</p><hr /><p>Your blows can disrupt the delicate balance of elemental energies that keep a body in good health. Strike the target using the unarmed attack associated with your current elemental stance. On a success, the target must attempt a @Check[fortitude|against:class] save against your class DC. On a failure, the target is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} until the end of your next turn. On a critical failure, the target is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 3} for 1 minute. Elementals take a –2 circumstance penalty to their save.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Five-Breath Vanguard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +168,51 @@
       "name": "Protective Cycle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7G1gMSHyMdMGMsF9",
+        "folder": "8TNLkdxIOjJENknT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Protective Cycle",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You take damage from an attack.</p>\n<p><strong>Requirements</strong> You're in an elemental stance.</p><hr /><p>You react to harm by flowing into an elemental stance with new advantages. You @UUID[Compendium.pf2e.actionspf2e.Item.Cycle Elemental Stance] and gain a +2 circumstance bonus to AC until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Five-Breath Vanguard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Protective Cycle",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Protective Cycle"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +222,49 @@
       "name": "Renewing Cycle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "frRJAuuAgDg3RFii",
+        "folder": "8TNLkdxIOjJENknT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Renewing Cycle",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The first time each round that you @UUID[Compendium.pf2e.actionspf2e.Item.Cycle Elemental Stance], you gain temporary Hit Points equal to half your level that last until the start of your next turn. After you've gained temporary Hit Points for entering a specific elemental stance, you can't gain temporary Hit Points from entering that stance again until you've entered every other elemental stance you know or 10 minutes passes, whichever comes first.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Renewing Cycle]</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Five-Breath Vanguard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

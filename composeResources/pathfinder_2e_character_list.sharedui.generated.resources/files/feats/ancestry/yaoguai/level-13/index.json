@@ -7,6 +7,47 @@
       "name": "Elucidation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "04dRwEQh2ToqEm8u",
+        "folder": "VYxzfKZ8lOIbKFgE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elucidation",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You succeed at a saving throw to disbelieve an illusion.</p><hr /><p>You can cut through illusions with such precision that all those around you find their senses sharpened as well. Whenever you disbelieve an illusion, all allies within 15 feet can use a free action to attempt a saving throw to disbelieve the illusion as well.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Brilliant Vision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +57,52 @@
       "name": "Improved Signature Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Vb0nkFoKWE7Jt8To",
+        "folder": "VYxzfKZ8lOIbKFgE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improved Signature Weapon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your signature weapon takes on the properties of mystical materials renowned for defeating undead, spirits, and other such creatures. Your signature weapon is treated as dawnsilver, duskwood, and peachwood for the purposes of overcoming resistance.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Signature Weapon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "improved-signature-weapon"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +112,51 @@
       "name": "Unnerving Terror",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eJmloGN2jfKYUNPw",
+        "folder": "VYxzfKZ8lOIbKFgE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unnerving Terror",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You're in yaoguai form.</p><hr /><p>You let out a mighty howl, chant of death, or speak with eerie repetition that plants fear in others. All enemies within 30 feet must attempt a @Check[will|against:class-spell] save against your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target is frightened 1 and @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard].</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} and off-guard.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "emotion",
+              "fear",
+              "mental",
+              "yaoguai"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

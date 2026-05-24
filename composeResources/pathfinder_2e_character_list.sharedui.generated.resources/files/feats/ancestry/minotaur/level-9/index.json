@@ -7,6 +7,44 @@
       "name": "Friendly Fling",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YN0QYUCb8Q3PtUJy",
+        "folder": "fWgVbaq9MUBa3p9w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Friendly Fling",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are adjacent to an ally.</p>\n<hr />\n<p>You can scoop up your friends with your horns to hurl them across the battlefield. Pick up an adjacent willing ally who is smaller than you and toss them to an unoccupied space you can see within 20 feet. Since you are using your horns, you don't need to have any hands free to do this. Your ally's movement doesn't trigger reactions. Your ally ends this movement on their feet and doesn't take damage from the fall but takes @Damage[1d6[piercing]] damage from your horns. If your ally ends this movement within melee reach of at least one enemy, they can make a melee Strike against an enemy within their reach as a reaction.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +54,60 @@
       "name": "Goring Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gx9QawjDOZSfSBlN",
+        "folder": "fWgVbaq9MUBa3p9w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Goring Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Driven by the momentum of your thundering steps and powerful mass, your horns can pierce your foes. Stride twice, then make a horns Strike. If you moved at least 20 feet from your starting position, your horns Strike also deals 1d6 persistent bleed damage.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "goring-charge",
+              "toggleable": true
+            },
+            {
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "goring-charge"
+              ],
+              "selector": "horns-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +117,85 @@
       "name": "Siphon Torment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XdicxD5jMJ8JSVqk",
+        "folder": "fWgVbaq9MUBa3p9w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Siphon Torment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your progenitors suffered greatly at the hands of a curse, a fate you willingly take upon yourself rather than let fall upon others. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Claim Curse] as an innate divine spell. When you do, the target creature gains temporary Hit Points equal to your level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Siphon Torment]</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:claim-curse",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:claim-curse",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:minotaur"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:claim-curse",
+                "spellcasting:innate"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Minotaur.SiphonTorment.Description"
+                },
+                {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Siphon Torment]"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +205,52 @@
       "name": "Stone Passage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Anpsl8ibCaXcBNG9",
+        "folder": "fWgVbaq9MUBa3p9w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stone Passage",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>Calling upon your knowledge of stonework and inherent magic, you momentarily make a section of stone insubstantial, allowing you to pass through. Stride up to your Speed. You can move through stone or rock objects, such as walls, as if they were unoccupied spaces. If you end your movement inside a square that you normally would not be able to pass through, you are thrown back to the last unoccupied square you moved into.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "slabsoul minotaur heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "divine",
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

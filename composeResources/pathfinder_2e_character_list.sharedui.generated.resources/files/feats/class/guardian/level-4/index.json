@@ -7,6 +7,116 @@
       "name": "Area Armor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hzJl9iJzKvPcvZcI",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Area Armor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The armor you wear protects you and shelters your allies against explosions and other large-scale assaults. While you're wearing medium or heavy armor, allies adjacent to you gain a +1 circumstance bonus to Reflex saves against area effects. If you're a master in the armor, the bonus is +2 instead.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "includesSelf": false,
+                  "predicate": [
+                    {
+                      "or": [
+                        {
+                          "lte": [
+                            "defense:medium:rank",
+                            2
+                          ]
+                        },
+                        {
+                          "lte": [
+                            "defense:heavy:rank",
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Area Armor"
+                },
+                {
+                  "affects": "allies",
+                  "alterations": [
+                    {
+                      "mode": "add",
+                      "property": "other-tags",
+                      "value": "master-armor"
+                    }
+                  ],
+                  "includesSelf": false,
+                  "predicate": [
+                    {
+                      "or": [
+                        {
+                          "gte": [
+                            "defense:medium:rank",
+                            3
+                          ]
+                        },
+                        {
+                          "gte": [
+                            "defense:heavy:rank",
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Area Armor"
+                }
+              ],
+              "key": "Aura",
+              "predicate": [
+                {
+                  "or": [
+                    "armor:category:medium",
+                    "armor:category:heavy"
+                  ]
+                }
+              ],
+              "traits": []
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +126,56 @@
       "name": "Armored Courage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eje2BkIpxCrf39E9",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armored Courage",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> You are wearing medium or heavy armor.</p><hr /><p>You take comfort in the safety of your armor. You gain a number of temporary Hit Points equal to your level that last for 1 minute, and you reduce your @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition value by 1 (to a minimum of 0).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Armored Courage",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Armored Courage"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +185,67 @@
       "name": "Energy Interceptor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YezCCZgVOmgQPHhW",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Energy Interceptor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Though other guardians understand how to anticipate the flow of martial combat, you predict blasts of magical lightning, blazing trap runes, and more. You can use @UUID[Compendium.pf2e.actionspf2e.Item.Intercept Attack] when an ally would take acid, cold, electricity, fire, or sonic damage, not only when they would take physical damage.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Intercept Attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:intercept-attack"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Guardian.EnergyInterceptor.Addendum"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +255,70 @@
       "name": "Flying Tackle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zEvU1ZlqSsXNPghw",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flying Tackle",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You barrel forward, gathering enough momentum to take down a threatening foe. Stride and then @UUID[Compendium.pf2e.actionspf2e.Item.Leap], or attempt to @UUID[Compendium.pf2e.actionspf2e.Item.High Jump] or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump]. If you end your movement adjacent to a foe, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Trip] that foe. If you succeed at the Athletics check to Trip, you get a critical success instead. You can use Flying Tackle while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "flying-tackle",
+              "toggleable": true
+            },
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:trip",
+                "flying-tackle"
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +328,52 @@
       "name": "Not So Fast!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "46mkvetP7cdi7LO0",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Not So Fast!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature within your reach leaves a square during a move action it's using.</p>\n<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Hampering Stance].</p><hr /><p>You lash out when foes try to get past you, possibly stopping them in their tracks. Make a melee Strike against the triggering creature. The Strike gains the following additional results.</p><hr /><p><strong>Critical Success</strong> The target's movement is disrupted.</p>\n<p><strong>Success</strong> The target takes a –10-foot circumstance penalty to its Speed for the rest of its triggering movement. This penalty might cause the triggering creature's movement to end immediately based on its affected Speed.</p>\n<p><strong>Failure</strong> As success, but the target instead takes a –5-foot circumstance penalty to its Speed.</p>\n<p><strong>Critical Failure</strong> The target is unaffected.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hampering Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +383,64 @@
       "name": "Proud Nail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YHeKwgJq1zkdcV0p",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Proud Nail",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your taunted enemy is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] because it didn't target you or include you in an area effect.</p><hr /><p>When a foe ignores your taunts, you make them pay. Make a melee Strike against your taunted enemy. If this Strike hits, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "domain": "strike-damage",
+              "key": "RollOption",
+              "option": "proud-nail",
+              "toggleable": true
+            },
+            {
+              "diceNumber": "ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,10),2,1))",
+              "key": "DamageDice",
+              "predicate": [
+                "proud-nail"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +450,48 @@
       "name": "Shielded Attrition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IQGx2nSNsyPGtzYt",
+        "folder": "yx1Br5S2XJCuXqjq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shielded Attrition",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a shield.</p><hr /><p>You provoke attacks from foes that might otherwise stop your allies from moving. @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield]{Raise your Shield}, then choose whether to Stride up to half your Speed. This movement triggers enemies' reactions as normal. Each enemy who could have reacted to your movement is unable to react to your allies' movement until the start of your next turn (regardless of whether it chose to react to your movement).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Advanced Deity's Domain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JHJBmiyILzWdFRJO",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Deity's Domain",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through your conviction, you have glimpsed the deeper secrets of your deity's domain. You gain an advanced domain spell from the domain you chose with Deity's Domain as a devotion spell.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Deity's Domain"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +57,53 @@
       "name": "Faithful Stride",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "45L17b1vwUuE8mMc",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Faithful Stride",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are riding your mount.</p><hr /><p>Confident in your faith, you Command an Animal to order your mount to Stride up to twice its Speed (or up to three times its Speed if you used 3 actions for Faithful Stride). During this movement, your mount can Stride across liquid and other surfaces that don't support its weight. If your mount ends its movement on a surface that can't support it, your mount (and you) fall in or it collapses as normal.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Faithful Steed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +113,63 @@
       "name": "Greater Cruelty",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "u2rvvAqZBugZgcYg",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Cruelty",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The extent of your corruption devastates your foes' minds and reflexes. When you use @UUID[Compendium.pf2e.feats-srd.Item.Cruelty], you can choose to make the target @UUID[Compendium.pf2e.conditionitems.Item.Clumsy] or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied] instead, with the same condition value. Make the choice when you Cast the Spell (before you know the result of the target's save).</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cruelty"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:touch-of-the-void",
+                "cruelty"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +179,47 @@
       "name": "Greater Mercy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kZdcoaTD849QalR9",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Mercy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your faith enhances your ability to remove conditions. Add the following options to the list of conditions you can counteract for any type of mercy you can grant.</p><ul><li><p><strong>Mercy of the Body</strong> @UUID[Compendium.pf2e.conditionitems.Item.Drained], @UUID[Compendium.pf2e.conditionitems.Item.Slowed]; if you're 16th level, add @UUID[Compendium.pf2e.conditionitems.Item.Stunned]</p></li><li><p><strong>Mercy of Grace</strong> @UUID[Compendium.pf2e.conditionitems.Item.Immobilized], @UUID[Compendium.pf2e.conditionitems.Item.Restrained], @UUID[Compendium.pf2e.conditionitems.Item.Slowed]; if you're 12th level, add @UUID[Compendium.pf2e.conditionitems.Item.Petrified]; if you're 16th level, add @UUID[Compendium.pf2e.conditionitems.Item.Stunned]</p></li><li><p><strong>Mercy of the Mind</strong> @UUID[Compendium.pf2e.conditionitems.Item.Confused], @UUID[Compendium.pf2e.conditionitems.Item.Controlled], @UUID[Compendium.pf2e.conditionitems.Item.Slowed]; if you're 16th level, add @UUID[Compendium.pf2e.conditionitems.Item.Doomed] and @UUID[Compendium.pf2e.conditionitems.Item.Stunned].</p></li></ul>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mercy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +229,74 @@
       "name": "Greater Security",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3aolZmAj0ue8vc6q",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Security",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Shield in hand, you offer your ally its full protection you do yourself. While the companion shield is in effect, if your shield is raised, the ally with the companion shield gets the same bonus to AC your shield grants, and you can trigger @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] if that ally would meet the trigger. This uses your shield's statistics and applies damage to your shield.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Security"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "security",
+                "item:slug:shields-of-the-spirit"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Champion.GreaterSecurity.Description"
+                }
+              ]
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:shields-of-the-spirit",
+                "security"
+              ],
+              "property": "other-tags",
+              "value": "greater-security"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +306,68 @@
       "name": "Heal Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LnSMRHjMArCkE4w1",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Heal Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your devotion to your mount manifests as a surge of vital energy.</p>\n<p>When you cast @UUID[Compendium.pf2e.spells-srd.Item.Lay on Hands] on your mount, instead of the normal amount, the spell restores 10 Hit Points, plus 10 for each heightened rank.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Faithful Steed"
+              },
+              {
+                "value": "lay on hands"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "heal-mount",
+              "placement": "spellcasting",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "heal-mount",
+                "item:slug:lay-on-hands"
+              ],
+              "selector": "spell-healing",
+              "slug": "base",
+              "value": "10*ceil(@actor.level/2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +377,91 @@
       "name": "Second Blessing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VZczZNj3ozCj1Lzk",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Second Blessing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your continued service grants you another boon. Choose a second @UUID[Compendium.pf2e.classfeatures.Item.Blessing of the Devoted] (different from your first one) and gain its benefits.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "blessing of the devoted"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "allowedDrops": {
+                "label": "PF2E.SpecificRule.DivineAlly.AllowedDrops",
+                "predicate": [
+                  "item:type:feature",
+                  "item:trait:champion"
+                ]
+              },
+              "choices": [
+                {
+                  "predicate": [
+                    {
+                      "not": "feature:blessed-armament"
+                    }
+                  ],
+                  "value": "Compendium.pf2e.classfeatures.Item.Blessed Armament"
+                },
+                {
+                  "predicate": [
+                    {
+                      "not": "feature:blessed-shield"
+                    }
+                  ],
+                  "value": "Compendium.pf2e.classfeatures.Item.Blessed Shield"
+                },
+                {
+                  "predicate": [
+                    {
+                      "not": "feature:blessed-swiftness"
+                    }
+                  ],
+                  "value": "Compendium.pf2e.classfeatures.Item.Blessed Swiftness"
+                }
+              ],
+              "flag": "blessing",
+              "key": "ChoiceSet"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.blessing}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +471,47 @@
       "name": "Sense Holiness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UfgocXl8mpbgyotE",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sense Holiness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The presence of goodness sickens you with its saccharine self-righteousness. You can sense the presence of creatures with the holy trait within 120 feet. This functions as a vague sense, similar to humans' sense of smell. A holy creature using a disguise or otherwise trying to hide its presence attempts a @Check[deception|against:perception|rollerRole:target|showDC:all] check against your Perception DC to hide its sanctification from you. If the creature succeeds at its Deception check, it is then temporarily immune to your Sense Holiness for 1 day.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "unholy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +521,47 @@
       "name": "Sense Unholiness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "s0xOawuTRJ5A3cpL",
+        "folder": "fZYwwdcMjGEKuulh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sense Unholiness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You sense the truly wicked as a queasy or foreboding feeling. You can sense the presence of creatures with the unholy trait within 120 feet. This functions as a vague sense, similar to humans' sense of smell. An unholy creature using a disguise or otherwise trying to hide its presence attempts a @Check[deception|against:perception|rollerRole:target|showDC:all] check against your Perception DC to hide its sanctification from you. If the creature succeeds at its Deception check, it is then temporarily immune to your Sense Unholiness for 1 day.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "holy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

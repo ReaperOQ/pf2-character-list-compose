@@ -7,6 +7,43 @@
       "name": "Additional Recollection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nU0r77AZXMXIlti6",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Additional Recollection",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You succeed or critically succeed at a check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] on your hunted prey.</p>\n<hr />\n<p>You scan the battlefield quickly, remembering critical details about multiple opponents you face. You immediately attempt a check to Recall Knowledge about a different creature you can perceive.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +53,70 @@
       "name": "Animal Strength",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2TLn4GSwmNb3R9kc",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Strength",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You tap into the primal strength of your animal feature. When you gain a claw or jaws attack from animal feature, you can choose a weapon you're carrying and apply all runes from that weapon (if they're applicable) to that unarmed attack. This replaces any runes the unarmed attacks would normally have from other sources, like handwraps of mighty blows. In addition, when you critically hit with a claw or jaws attack from animal feature, you deal @Damage[1d6[persistent,bleed]] damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "animal feature warden spell"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "animal-feature:jaws"
+              ],
+              "selector": "jaws-damage"
+            },
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "animal-feature:claw"
+              ],
+              "selector": "claw-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +126,48 @@
       "name": "Masterful Warden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BBN5G6epRWXGwZHv",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Masterful Warden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mastery of warden magic increases. You gain your choice of one warden spell from the master warden spells.</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Ephemeral Tracking]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Ranger's Bramble]</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times, choosing a different master warden spell each time.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Initiate Warden"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +177,47 @@
       "name": "Mature Animal Companion (Ranger)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tpkJXDpSuGznfzGJ",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mature Animal Companion (Ranger)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your animal companion becomes a mature animal companion and gains additional capabilities.</p>\n<p>Your animal companion has greater independence.During an encounter, even if you don't use the Command an Animal action, your animal companion can still use 1 action that round on your turn to Strike or Stride (or Burrow, Climb, Fly, or Swim if it has that Speed). It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animal Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +227,43 @@
       "name": "Nature Prowler",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "p0ghAUQYzymGVpot",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nature Prowler",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you begin your turn @UUID[Compendium.pf2e.conditionitems.Item.Hidden] or unnoticed by your hunted prey, that creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you until the end of your turn. If you're in natural surroundings, you can @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] at full speed.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +273,43 @@
       "name": "Snap Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0UdHPOv3DX8TY9yb",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Snap Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can react with ranged weapons when a creature is in close quarters. You can use a reaction that normally allows you to make a melee weapon Strike to instead make a ranged weapon Strike. You must be Striking an adjacent target. If necessary for the reaction's trigger, you treat your ranged weapon as if it had a reach of 5 feet. If the reaction has other requirements, such as wielding a specific kind of weapon, Snap Shot doesn't allow you to ignore them; it allows you only to replace a melee weapon Strike with a ranged weapon Strike.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +319,50 @@
       "name": "Swift Tracker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c5ns35FLvvxjimuH",
+        "folder": "04zKjxhX8bAxao3V",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Tracker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your keen eyes catch signs of passage even when you're moving. You can move at your full Speed while you @UUID[Compendium.pf2e.actionspf2e.Item.Track]. If you have master proficiency in Survival, you don't need to attempt a new Survival check every hour while Tracking. If you have legendary proficiency in Survival, you can use another exploration activity while Tracking.</p>\n<p>If you roll Survival for initiative while tracking your hunted prey, when you start your first turn of the encounter, you can Stride toward your hunted prey as a free action.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Survival"
+              },
+              {
+                "value": "Experienced Tracker"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

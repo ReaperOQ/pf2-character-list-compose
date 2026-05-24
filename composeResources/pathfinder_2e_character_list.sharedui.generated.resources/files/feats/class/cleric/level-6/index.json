@@ -7,6 +7,84 @@
       "name": "Cast Down",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lGCFVYjL9Lp5m9Ex",
+        "folder": "7lOz2qjHsSKpU7HO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cast Down",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The sheer force of your faith can bring a foe crashing down. If the next action you use is to cast @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] to damage one creature, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone] if it takes any damage from the spell. If the target critically fails its save against the spell, it also takes a –10-foot status penalty to its Speed for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Cast Down]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "harmful font or healing font"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:cast-down",
+                {
+                  "or": [
+                    "item:slug:harm",
+                    "item:slug:heal"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.CastDown"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "cast-down"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +94,90 @@
       "name": "Divine Rebuttal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iLFK11lcw5hViTBS",
+        "folder": "7lOz2qjHsSKpU7HO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Rebuttal",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your ally is about to roll a saving throw against a magical ability of a creature you're adjacent to.</p>\n<p><strong>Requirements</strong> You are wielding your deity's favored weapon.</p>\n<hr />\n<p>You strive against magical threats physically and spiritually. You can Strike the adjacent creature with your deity's favored weapon. If you are holy or unholy, the Strike gains that trait. If your Strike hits, all your allies gain a +2 circumstance bonus to the triggering saving throw (or a +3 circumstance bonus on a critical hit).</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Divine Rebuttal]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "divine-rebuttal",
+              "toggleable": true
+            },
+            {
+              "definition": [
+                "item:deity-favored"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "divine-rebuttal",
+                "self:trait:holy"
+              ],
+              "property": "traits",
+              "value": "holy"
+            },
+            {
+              "definition": [
+                "item:deity-favored"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "divine-rebuttal",
+                "self:trait:unholy"
+              ],
+              "property": "traits",
+              "value": "unholy"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "divine-rebuttal",
+                "item:deity-favored"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Cleric.DivineRebuttal.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +187,52 @@
       "name": "Divine Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Trj5azJlaOk5jgBi",
+        "folder": "7lOz2qjHsSKpU7HO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Weapon",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per turn</p>\n<p><strong>Trigger</strong> You finish Casting a Spell using one of your divine spell slots on your turn.</p>\n<hr />\n<p>You siphon residual spell energy into a weapon you're wielding. Until the end of your turn, the weapon deals an additional 1d4 spirit damage. If you are holy or unholy, Strikes with the weapon also gain that trait, and the additional damage increases to 2d4 against creatures of the opposing trait.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "turn",
+            "value": 1
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Divine Weapon",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Divine Weapon"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +242,47 @@
       "name": "Magic Hands",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Su4nbNnR0mjgusTT",
+        "folder": "7lOz2qjHsSKpU7HO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magic Hands",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The blessing of your deity heightens your healing ability, integrating magical healing with the mundane. When you succeed at a Medicine check to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds], you can roll d10s instead of d8s for the healing and add a status bonus to the healing equal to your level.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Healing Hands"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +292,43 @@
       "name": "Selective Energy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yyt2I2lGbRndXjbc",
+        "folder": "7lOz2qjHsSKpU7HO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Selective Energy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you call down divine power, you can prevent some enemies from benefiting or some allies from being hurt. When you cast a version of @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] that has an area, you can designate up to 5 creatures in the area. They are not targeted by the spell.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

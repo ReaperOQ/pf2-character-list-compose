@@ -1,0 +1,310 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "deny-lady-nanbyos-charity.json",
+      "id": "qeFCDRSgFRR2ElWK",
+      "name": "Deny Lady Nanbyo's Charity",
+      "img": "icons/magic/nature/meteorite-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "qeFCDRSgFRR2ElWK",
+        "folder": "HSPsB9iHmfvgyxRE",
+        "img": "icons/magic/nature/meteorite-purple.webp",
+        "name": "Deny Lady Nanbyo's Charity",
+        "system": {
+          "ancestry": {
+            "name": "Yaksha",
+            "slug": "yaksha",
+            "uuid": "Compendium.pf2e.ancestries.Item.k3zyr6du4gV0Ftuh"
+          },
+          "description": {
+            "value": "<p>You swore a vow to release others from natural calamities. Your vow grants you the strength to carry 1 more Bulk than normal before becoming encumbered and up to a maximum of 2 more Bulk, as well as a +1 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] or @UUID[Compendium.pf2e.actionspf2e.Item.Escape].</p><hr /><p><strong>Additional Edict</strong> do your utmost to aid or rescue those trapped or affected by natural disasters</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.encumberedAfterAddend",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.maxAddend",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:force-open",
+                    "action:escape"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "deny-the-firstborn-pursuit.json",
+      "id": "AWLcCe69nzxZzWQc",
+      "name": "Deny the Firstborn Pursuit",
+      "img": "icons/magic/symbols/mask-yellow-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "AWLcCe69nzxZzWQc",
+        "folder": "HSPsB9iHmfvgyxRE",
+        "img": "icons/magic/symbols/mask-yellow-orange.webp",
+        "name": "Deny the Firstborn Pursuit",
+        "system": {
+          "ancestry": {
+            "name": "Yaksha",
+            "slug": "yaksha",
+            "uuid": "Compendium.pf2e.ancestries.Item.k3zyr6du4gV0Ftuh"
+          },
+          "description": {
+            "value": "<p>You swore a vow to shelter others from the First World's cruelties. Wise to fey's mind-affecting abilities, your vow grants mental resistance equal to half your level (minimum 1), and a +2 circumstance bonus to Nature checks to Recall Knowledge about fey.</p><hr /><p><strong>Additional Edict</strong> confront cruel fey you encounter (as long as you have a reasonable chance of success)</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "mental",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "target:trait:fey"
+              ],
+              "selector": "nature",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "deny-the-traitors-rebirth.json",
+      "id": "YoDvQ5fvpbgcoG3V",
+      "name": "Deny the Traitor's Rebirth",
+      "img": "icons/magic/symbols/rune-sigil-rough-white-teal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "YoDvQ5fvpbgcoG3V",
+        "folder": "HSPsB9iHmfvgyxRE",
+        "img": "icons/magic/symbols/rune-sigil-rough-white-teal.webp",
+        "name": "Deny the Traitor's Rebirth",
+        "system": {
+          "ancestry": {
+            "name": "Yaksha",
+            "slug": "yaksha",
+            "uuid": "Compendium.pf2e.ancestries.Item.k3zyr6du4gV0Ftuh"
+          },
+          "description": {
+            "value": "<p>You swore a vow to deliver others from rakshasas and asuras, whom yaksha legends have condemned as corrupted kin. To counter their shadowy schemes, your vow grants you darkvision and a +1 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] or @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive]{Sense the Motives} of rakshasas and asuras.</p><hr /><p><strong>Additional Edict</strong> confront rakshasas and asuras you come across (as long as you have a reasonable chance of success); in the unlikely event you find a benevolent rakshasa or asura, you don't have to confront them</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "selector": "darkvision"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "target:trait:asura",
+                    "target:trait:rakshasa"
+                  ]
+                },
+                {
+                  "or": [
+                    "action:seek",
+                    "action:sense-motive"
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "respite-of-a-thousand-roofs.json",
+      "id": "q7b4yu3Nty0jZLOi",
+      "name": "Respite of a Thousand Roofs",
+      "img": "icons/magic/symbols/rune-sigil-hook-white-red.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "q7b4yu3Nty0jZLOi",
+        "folder": "HSPsB9iHmfvgyxRE",
+        "img": "icons/magic/symbols/rune-sigil-hook-white-red.webp",
+        "name": "Respite of a Thousand Roofs",
+        "system": {
+          "ancestry": {
+            "name": "Yaksha",
+            "slug": "yaksha",
+            "uuid": "Compendium.pf2e.ancestries.Item.k3zyr6du4gV0Ftuh"
+          },
+          "description": {
+            "value": "<p>You swore a vow to shelter and feed the poor. Your vow grants you adroitness with carpentry, cook pot, and cloth; you become trained in Crafting and Cooking Lore, and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Improvise Tool] skill feat.</p><hr /><p><strong>Additional Edict</strong> help the impoverished to the extent you're able by repairing their abodes and clothing or by feeding them</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Improvise Tool"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "respite-of-cloudless-paths.json",
+      "id": "aPqNdvtKHv4amLcO",
+      "name": "Respite of Cloudless Paths",
+      "img": "icons/magic/air/weather-clouds-rainbow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "aPqNdvtKHv4amLcO",
+        "folder": "HSPsB9iHmfvgyxRE",
+        "img": "icons/magic/air/weather-clouds-rainbow.webp",
+        "name": "Respite of Cloudless Paths",
+        "system": {
+          "ancestry": {
+            "name": "Yaksha",
+            "slug": "yaksha",
+            "uuid": "Compendium.pf2e.ancestries.Item.k3zyr6du4gV0Ftuh"
+          },
+          "description": {
+            "value": "<p>You swore a vow to protect the waylaid and the lost. Both environmental heat effects and environmental cold effects are one step less extreme for you (incredible heat becomes extreme, extreme cold becomes severe, and so on), and you gain a + 1 circumstance bonus to saving throws against environmental features or hazards, such as floods, rockslides, and sandstorms.</p><hr /><p><strong>Additional Edict</strong> assist lost or incapacitated travelers</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "environmental-hazard"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "respite-of-loam-and-leaf.json",
+      "id": "WczVM4KQq7xybsPZ",
+      "name": "Respite of Loam and Leaf",
+      "img": "icons/magic/symbols/clover-luck-white-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "WczVM4KQq7xybsPZ",
+        "folder": "HSPsB9iHmfvgyxRE",
+        "img": "icons/magic/symbols/clover-luck-white-green.webp",
+        "name": "Respite of Loam and Leaf",
+        "system": {
+          "ancestry": {
+            "name": "Yaksha",
+            "slug": "yaksha",
+            "uuid": "Compendium.pf2e.ancestries.Item.k3zyr6du4gV0Ftuh"
+          },
+          "description": {
+            "value": "<p>You swore a vow to preserve the very foundation of sanctuary: the great earth and all that grows upon it. Your vow grants you the land's spiritual power; you gain one cantrip from the primal spell list. You can cast this spell as an innate primal spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. Your roots in the world grant you the plant trait.</p><hr /><p><strong>Additional Edict</strong> cure or remove blight and pollution from the plants and soil you encounter</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "plant",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

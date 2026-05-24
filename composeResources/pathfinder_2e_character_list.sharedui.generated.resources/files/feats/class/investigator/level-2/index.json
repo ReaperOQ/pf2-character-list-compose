@@ -7,6 +7,66 @@
       "name": "Athletic Strategist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Tu1hOEr6Ko9Df54L",
+        "folder": "f4240DPKWihmjTTT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Athletic Strategist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to calculatedly manipulate joints and body weight. In addition to using an attack stratagem's roll substitution for a Strike, you can use it to modify a @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Grapple], @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] attempt, substituting your @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem] roll for the Athletics check. You must apply the substitution to the first eligible attack you make, whether it's a Strike or one of the Athletics actions.</p>\n<p>You can also use your Intelligence modifier instead of Strength for the Athletics check when you substitute your Devise a Stratagem roll, unless you're using a weapon for the maneuver and the weapon doesn't fit the restrictions for using Intelligence with a stratagem.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "ability": "int",
+              "key": "FlatModifier",
+              "predicate": [
+                "class:investigator",
+                "target:mark:devise-a-stratagem",
+                {
+                  "or": [
+                    "action:disarm",
+                    "action:grapple",
+                    "action:shove",
+                    "action:trip"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "ability"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +76,58 @@
       "name": "Certain Stratagem",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gyrIwJN0CTPp08em",
+        "folder": "f4240DPKWihmjTTT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Certain Stratagem",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know exactly where to strike a foe to target their weak spots. When you make a Strike that you're adding your Intelligence modifier to due to @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem]{Devising a Stratagem} and miss, you deal half of your @UUID[Compendium.pf2e.classfeatures.Item.Strategic Strike] damage to the target. This damage type is that of the weapon or unarmed attack you used for the Strike.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "failure",
+                "criticalFailure"
+              ],
+              "predicate": [
+                "devise-a-stratagem:attack",
+                "target:mark:devise-a-stratagem"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Investigator.CertainStratagem.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +137,43 @@
       "name": "Exploit Blunder",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tFrGaa0qI2JvnHsD",
+        "folder": "f4240DPKWihmjTTT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exploit Blunder",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature you @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem]{Devised a Stratagem} against on your most recent turn fails or critically fails a Strike against you.</p><hr /><p>By watching your foes closely, you can make the most out of their mistakes. You Step.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +183,47 @@
       "name": "Person of Interest",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "csPhQeHWbUXL64p9",
+        "folder": "f4240DPKWihmjTTT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Person of Interest",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>Sometimes, you need to follow the leads as they come in the middle of an investigation. Choose a creature that you can see who isn't, to your knowledge, tied to any of your current investigations. For the next minute, you can @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem] against that creature as a free action.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +233,57 @@
       "name": "Shared Stratagem",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N4wCUZH2KG6FoGqh",
+        "folder": "f4240DPKWihmjTTT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shared Stratagem",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The plans you make include your allies as well as yourself. When you hit a creature with an attack on which you substituted your attack roll due to @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem]{Devising a Stratagem}, designate one ally. The creature you hit is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to that ally on the next attack that ally makes against that creature before the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "target:mark:devise-a-stratagem"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Investigator.SharedStratagem.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +293,43 @@
       "name": "Solid Lead",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WZWSaAwuDgne7Z0c",
+        "folder": "f4240DPKWihmjTTT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Solid Lead",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Sometimes your case splinters into smaller mysteries, but you never lose sight of the big picture. Once per day when you give up on the subject of a lead due to using @UUID[Compendium.pf2e.actionspf2e.Item.Pursue a Lead] again, you can designate the lead you stopped pursuing as your solid lead for the day. Even though you stopped following the solid lead, you can change back to your solid lead any number of times by using a single action, which has the concentrate trait. Doing so ends one of your current leads as normal.</p>\n<p>During your next daily preparations, you can maintain your solid lead or you can remove it; removing it allows you to designate a new solid lead later that day.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

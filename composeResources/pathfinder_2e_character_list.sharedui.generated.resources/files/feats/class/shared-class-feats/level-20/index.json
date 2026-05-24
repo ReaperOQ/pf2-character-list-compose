@@ -7,6 +7,44 @@
       "name": "Boundless Reprisals",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IMArawT1Sc2PTcYM",
+        "folder": "DkWXV5amUvhApZet",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Boundless Reprisals",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Fighter</strong> With a sixth sense for the flow of combat, you can quickly react to any situation as required. At the start of each enemy's turn, you gain a reaction you can use only during that turn for any reaction from a fighter feat or class feature.</p>\n<p><strong>Guardian</strong> With a sixth sense for the flow of combat, you can quickly react to any situation as required. At the start of each enemy's turn, you gain a reaction you can use only during that turn for any reaction from a guardian feat or class feature.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +54,75 @@
       "name": "Spellshape Mastery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kKZ4gnT7okaWS6tB",
+        "folder": "DkWXV5amUvhApZet",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spellshape Mastery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Altering your spells doesn't take any longer than casting them normally. You can use spellshape single actions as free actions.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:spellshape",
+                "item:action:cost:1"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:spellshape",
+                "item:action:cost:1"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

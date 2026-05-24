@@ -7,6 +7,65 @@
       "name": "Binding Serpents Celestial Arrow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lJ9j4mtNEjXoKvei",
+        "folder": "6N25cvp04M6rlN8A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Binding Serpents Celestial Arrow",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a ranged weapon ikon, or a melee weapon ikon with the thrown trait</p><hr /><p>As you prepare to shoot your weapon, you invoke divine serpents that bind your enemies. The imbued ikon gains the following ability.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Coiling Serpents]</strong> <span class=\"action-glyph\">2</span> (transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.mbOa48mQCqj86lVw inline]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Coiling Serpents"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +75,47 @@
       "name": "Flow of War",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yqspSW7eEQVvuYrC",
+        "folder": "6N25cvp04M6rlN8A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flow of War",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> Your turn begins.</p><hr /><p>Divine battle instincts take over your body, letting you move and lash out with instinctive speed. You become @UUID[Compendium.pf2e.conditionitems.Item.Quickened] until the end of your turn and can use the extra action only to Strike or Stride.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +125,65 @@
       "name": "Motionless Cutter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W2nSF326oSkAaDjw",
+        "folder": "6N25cvp04M6rlN8A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Motionless Cutter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a melee weapon ikon that deals slashing damage</p><hr /><p>Your weapon is so sharp even an insect alighting upon its still blade would be severed. Your weapon ikon gains the following ability.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Sever Four Dragonfly Wings]</strong> <span class=\"action-glyph\">3</span> (transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.XFdTDDAPO7U0r4Et inline]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Sever Four Dragonfly Wings"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +193,70 @@
       "name": "Riddle The Sphinx",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iyZC5hdOpfQhQQhn",
+        "folder": "6N25cvp04M6rlN8A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Riddle The Sphinx",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a body ikon</p><hr /><p>You've learned the secrets of the sphinx's riddles and empowered your ikon with them. You can voice these mysteries, forcing others to overcome them as you did.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Tangle in Riddle]</strong> <span class=\"action-glyph\">1</span> (auditory, mental, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.cGCQkCz14sF238gE inline]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #217: Death Sails a Wine-Dark Sea"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Tangle in Riddle"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "otherTags": [
+              "body-ikon-feat"
+            ],
+            "rarity": "uncommon",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +266,71 @@
       "name": "Shield of Stone",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6piAFd27zoIXvM9Q",
+        "folder": "6N25cvp04M6rlN8A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield of Stone",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into the @UUID[Compendium.pf2e.classfeatures.Item.Mirrored Aegis]{Mirror Aegis}</p><hr /><p>You stole a gorgon's gaze and trapped it in your ikon. You've learned how to brandish it for your advantage, subduing the rage of the trapped gaze by turning it on your enemies.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Brandish the Gorgon's Gaze]</strong> <span class=\"action-glyph\">1</span> (earth, transcendence, visual)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.5VbPhxZYfagIqE1z inline]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #217: Death Sails a Wine-Dark Sea"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Brandish the Gorgon's Gaze"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "uncommon",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

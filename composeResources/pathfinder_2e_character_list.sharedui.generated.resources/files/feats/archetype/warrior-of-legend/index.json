@@ -7,6 +7,63 @@
       "name": "Grief's Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S6X3zFOCLVgRY2gd",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grief's Fury",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> Your bonded partner gains the dying condition or their dying value would increase.</p><hr /><p>A lost love. A broken spear. Rage burning through a hero-god. When a myth speaks of a wounded partner, the hero-god often rejects the future. Too many find themselves on a battlefield, clutching a body that they swore to protect. In that moment, the wellspring of power ignites.</p>\n<p>Increase the value of your @UUID[Compendium.pf2e.conditionitems.Item.Doomed] condition by 1, to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 3}. You gain a +2 status bonus to attack rolls against any creature that attacked or dealt damage to your partner in the last minute. If you reduce a creature to 0 HP that attacked or damaged your partner, you gain temporary Hit Points equal to twice their level. These benefits last until your bonded partner is no longer @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] or for 1 minute, whichever duration is shorter.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hero-God's Bond"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Grief's Fury",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Grief's Fury"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "concentrate",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +73,52 @@
       "name": "Hero-God's Bond",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j9TEwIPFOUTZfVn3",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hero-God's Bond",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>At times, the myth of a hero-god includes a favored partner or a bonded ally, such as the hero-gods of promises and shield-bearers, Upion and Warrick. When you gain this feat, select an ally. They are your bonded partner. While you and your bonded partner are on the same plane, you and your bonded partner always have the same doomed value (defaulting to the highest value), so when your bonded partner's doomed condition would increase or be set to a specific amount, your doomed value also increases to match (if it is lower than your current doomed value). When either of you are @UUID[Compendium.pf2e.conditionitems.Item.Dying], the other knows this immediately, as well as the distance and direction to the dying partner's location. When either of you attempts a recovery check, as long as the other is on the same plane, you gain a +2 circumstance bonus to the check. You can communicate telepathically with your bonded partner as long as you are within 60 feet of each other.</p>\n<p>You can change your bonded partner by spending 1 week of downtime bonding with another ally.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Warrior of Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +128,55 @@
       "name": "Heroic Defiance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "81jVmGF9Uo9dp2dI",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Heroic Defiance",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You gain the @UUID[Compendium.pf2e.conditionitems.Item.Doomed] condition.</p><hr /><p>Even as shadows of your doom haunt the corners of your vision, your implacable spirit surges and cries out that your time has not yet come. You gain temporary Hit Points equal to your level and a +1 status bonus to all saving throws, both of which last for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Warrior of Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Heroic Defiance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Heroic Defiance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +186,52 @@
       "name": "Know Thy Doom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fs2zVzyXrn5yqGqd",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Know Thy Doom",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You are @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1} or greater and your @UUID[Compendium.pf2e.conditionitems.Item.Dying] value would increase.</p><hr /><p>As your legend grows, details of your demise become clearer. And you know that it is not yet your time. You can attempt a recovery check using your dying value before it increases, rolling twice and taking the better result. Regardless of the outcome, reduce your doomed value by 1.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Warrior of Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +241,52 @@
       "name": "Martyr's Parry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fGwd5g6yHzcyeCG1",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Martyr's Parry",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature attacks your bonded partner.</p>\n<p><strong>Requirements</strong> You are wielding a weapon that has the parry trait, and your bonded partner is within reach of one of your melee Strikes with that weapon.</p><hr /><p>You intercede to absorb the triggering attack. Your bonded partner gains a +2 circumstance bonus to their AC. If the attack still hits, you take the triggering attack's damage instead of your bonded partner, though the attack still uses your bonded partner's defenses for the purposes of determining if it hit or critically hit.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Martyr's Parry]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hero-God's Bond"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +296,43 @@
       "name": "Needle in the Gods' Eyes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9gGObk9p4gnXf9co",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Needle in the Gods' Eyes",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With sinews of bronze and thews of iron, you leap to the heavens, piercing the arrogant eyes of the gods. @UUID[Compendium.pf2e.actionspf2e.Item.Leap] up to your total Speed, either horizontally or vertically, and Strike twice at any point or points during the Leap. Each attack counts toward your multiple attack penalty, but don't increase your penalty until you have made both attacks.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -61,6 +342,65 @@
       "name": "Only My Doom May Claim Me",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I5swIFsr4UOAEBvv",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Only My Doom May Claim Me",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The power of your legend, fueled by your legendary deeds, resists any weapon that is not tied to your curse. You gain resistance equal to half your level against weapon and unarmed attacks that deal a damage type other than the type chosen for your cursed weakness.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Warrior of Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:type:melee",
+                    "item:type:weapon"
+                  ]
+                },
+                {
+                  "not": "damage:type:{actor|flags.system.warriorOfLegendCursedWeakness}"
+                }
+              ],
+              "key": "Resistance",
+              "label": "{item|name}",
+              "type": "custom",
+              "value": "floor(@actor.level/2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +410,81 @@
       "name": "Piercing Doom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4bKTV1UHBP3qSjzr",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Piercing Doom",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 2} or greater.</p><hr /><p>You have grown accustomed to the curse that comes with your blessing, able to channel its effects through your attacks and forestall your own demise. Make a melee Strike; on a success, the target takes an additional @Damage[1d10[void]] damage and your doomed value is reduced by 1.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Warrior of Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": {
+                    "gte": [
+                      "self:condition:doomed",
+                      2
+                    ]
+                  }
+                }
+              ],
+              "disabledValue": false,
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "piercing-doom",
+              "toggleable": true
+            },
+            {
+              "damageType": "void",
+              "diceNumber": 1,
+              "dieSize": "d10",
+              "key": "DamageDice",
+              "predicate": [
+                "piercing-doom",
+                {
+                  "gte": [
+                    "self:condition:doomed",
+                    2
+                  ]
+                }
+              ],
+              "selector": "melee-strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +494,47 @@
       "name": "Razor's Edge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qt8sVqczbolTMZZ2",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Razor's Edge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your curse and your power are one and the same, and you accept both equally. You can enter @UUID[Compendium.pf2e.feats-srd.Item.Spear of Doom] stance as a free action.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spear of Doom"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -88,6 +544,43 @@
       "name": "Spear Dancer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kcWdo5zzldDTqCBP",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spear Dancer",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a weapon from the spear or polearm group</p><hr /><p>You favor weapons that allow you to lash out viciously while keeping enemies at bay, giving you an opportunity to strike without fear of reprisal. You Step and then Strike with a spear or polearm you are wielding, or Strike with the spear or polearm and then Step.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +590,52 @@
       "name": "Spear of Doom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wixpmBQ5dNm3VMFk",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spear of Doom",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> An enemy hit you with an attack dealing the same damage type as your cursed weakness within the last round, and you are @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1} or greater.</p><hr /><p>The conditions for your doom have been met, and you brace yourself for a battle that will see you either live to fight another day or die a legend. You enter the spear of doom stance. While in this stance, as long as the enemy who triggered your cursed weakness is within your reach, you can Strike them as a reaction whenever they succeed or critically succeed at an attack against you. You gain an additional reaction immediately and at the start of each of your subsequent turns that can only be used to make Reactive Strikes against that opponent, or to make the Strike granted by this stance.</p>\n<p>While in spear of doom stance, your cursed weakness is equal to your level instead of half your level.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Warrior of Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Spear of Doom",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Spear of Doom"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -106,6 +645,89 @@
       "name": "Warrior of Legend Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Mkzi1UwdU4zbV3w1",
+        "folder": "lO7eEXPM4mLROj2k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Warrior of Legend Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have been given a powerful blessing of battle that is also your cursed doom. As long as you aren't wearing heavy armor or wielding a shield, spears and polearms you wield gain the parry trait. If the weapon already has the parry trait, increase the bonus when parrying to +2. In addition, you deal an additional amount of damage equal to your @UUID[Compendium.pf2e.conditionitems.Item.Doomed] value with weapons in the spear and polearm groups. This damage is the same type as the required weapon.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.61SHt571HJFGZ9Bl]{Warrior of Legend}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "location": "class-2",
+          "prerequisites": {
+            "value": [
+              {
+                "value": "warrior of legend"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:group:polearm",
+                    "item:group:spear"
+                  ]
+                },
+                {
+                  "nor": [
+                    "armor:category:heavy",
+                    "self:shield:equipped"
+                  ]
+                }
+              ],
+              "property": "traits",
+              "value": "parry"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:condition:doomed",
+                {
+                  "nor": [
+                    "armor:category:heavy",
+                    "self:shield:equipped"
+                  ]
+                }
+              ],
+              "selector": [
+                "polearm-weapon-group-damage",
+                "spear-weapon-group-damage"
+              ],
+              "value": "@actor.conditions.doomed.badge.value"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "class",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

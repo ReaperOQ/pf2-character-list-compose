@@ -7,6 +7,43 @@
       "name": "Fantastic Leaps",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lbcsniPkdSKIOnU2",
+        "folder": "ornUoHmKA6smleKg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fantastic Leaps",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your leaps seem to defy gravity as you soar through the air in a single bound. When Leaping, increase the maximum distance you can @UUID[Compendium.pf2e.actionspf2e.Item.Leap] horizontally by 10 feet, and the maximum distance you can Leap vertically by 5 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +53,47 @@
       "name": "Long Tongue",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OK8X6QFRuRxpBMcZ",
+        "folder": "ornUoHmKA6smleKg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Long Tongue",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned to stretch your exceptionally long tongue beyond its original limits. When you use your tongue to deliver touch-range spells or perform very simple Interact actions, you can do so at a distance that is 5 feet beyond your usual reach.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "snaptongue tripkee"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +103,57 @@
       "name": "Prodigious Climber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7Te7XHgRjesDKwZn",
+        "folder": "ornUoHmKA6smleKg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prodigious Climber",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your natural climbing ability and technique has made you a potent climber. You gain a climb Speed of 10 feet.</p><hr /><p><strong>Special</strong> If you have the @UUID[Compendium.pf2e.heritages.Item.Stickytoe Tripkee] heritage, you instead gain a climb Speed of 20 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "climb",
+              "value": 10
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "heritage:stickytoe-tripkee"
+              ],
+              "selector": "climb",
+              "value": 20
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +163,43 @@
       "name": "Tenacious Net",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YndH82FX7KLawNBW",
+        "folder": "ornUoHmKA6smleKg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tenacious Net",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Escaping your nets is no simple task. The Athletics DC to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] or @UUID[Compendium.pf2e.actionspf2e.Item.Escape] your nets increases from 16 to 18. After a creature you @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] with a net Escapes or Forces Open the net, stray strands of the net cling to the creature, causing them to remain @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the beginning of their next turn.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +209,47 @@
       "name": "Tripkee Glide",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PRlN77xL6Bm2gUIp",
+        "folder": "ornUoHmKA6smleKg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tripkee Glide",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You must have at least one hand free.</p><hr /><p>You can use your webbed feet to guide your fall. You glide slowly toward the ground, 5 feet down (10 feet if you don't have both hands free) and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "windweb tripkee"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +259,47 @@
       "name": "Vomit Stomach",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MFcsGkzPYaWxwW4d",
+        "folder": "ornUoHmKA6smleKg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vomit Stomach",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You gain the @UUID[Compendium.pf2e.conditionitems.Item.Sickened] condition or fail a saving throw against an ingested poison.</p>\n<p><strong>Frequency</strong> once per day</p><hr /><p>In dire circumstances you can vomit out your stomach to expel toxins. Reduce your sickened condition by 2 and immediately attempt a saving throw with a +2 circumstance bonus against any ingested poisons you have been exposed to within the last minute. You become @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] for 1 round as your exposed stomach makes you especially vulnerable to attacks.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

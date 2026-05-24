@@ -7,6 +7,56 @@
       "name": "No Gods, Only Mortals!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nXbczPfLNbuosNLE",
+        "folder": "79f1MaaILcCNzhSt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "No Gods, Only Mortals!",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You successfully Recognize a Spell with the divine trait.</p><hr /><p>You order the caster to stop their spellcasting. Attempt an @Check[intimidation] check to counteract the triggering spell, using half your level rounded up as the counteract rank.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pure Legion Enforcer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +66,72 @@
       "name": "Traces of the Divine",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yxScjPfOuvrIqPkQ",
+        "folder": "79f1MaaILcCNzhSt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Traces of the Divine",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can detect those who use divine magic like an additional sense. You gain a +2 circumstance bonus to Perception checks to [[/act seek]] and Survival checks to [[/act track]] creatures that can cast divine spells. In addition, you automatically succeed at the flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.Concealed] creature that can cast divine spells, and the flat check to target a hidden creature that can cast divine spells is reduced to DC 5.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pure Legion Enforcer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "traces-of-the-divine",
+                {
+                  "or": [
+                    "action:seek",
+                    "action:track"
+                  ]
+                }
+              ],
+              "selector": [
+                "perception",
+                "survival"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

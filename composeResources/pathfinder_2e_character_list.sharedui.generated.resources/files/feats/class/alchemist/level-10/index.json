@@ -7,6 +7,54 @@
       "name": "Advanced Efficient Alchemy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bGCQg3XAF0twCU9w",
+        "folder": "uPmhCeFVuSxdGyLL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Efficient Alchemy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make an even-larger batch of alchemical items each morning. Increase the maximum number of items you can create with advanced alchemy to 8 + your Intelligence modifier, or to 10 + your Intelligence modifier if you're 16th level or higher.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Efficient Alchemy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.crafting.entries.advancedAlchemy.maxSlots",
+              "value": "ternary(gte(@actor.level,16),10,8) + @actor.system.abilities.int.mod"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +64,70 @@
       "name": "Expanded Splash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gyVcJfZTmBytLsXq",
+        "folder": "uPmhCeFVuSxdGyLL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expanded Splash",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can throw bombs at just the right trajectory to create especially large and powerful explosions. When you throw an alchemical bomb and that bomb has the splash trait, you can have the splash damage affect all creatures within 10 feet of the target instead of 5 feet. If you do, you gain a status bonus to the bomb's splash damage equal to your Intelligence modifier. If you have the bomber 5th-level field discovery, this additional damage applies even if you caused your bomb to deal splash damage equal to your Intelligence modifier instead of the normal amount, allowing your bombs to deal splash damage equal to double your Intelligence modifier.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "expanded-splash",
+              "toggleable": true
+            },
+            {
+              "damageCategory": "splash",
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:splash",
+                "expanded-splash"
+              ],
+              "selector": "alchemical-bomb-damage",
+              "type": "status",
+              "value": "@actor.abilities.int.mod"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "item:trait:splash",
+                "expanded-splash"
+              ],
+              "selector": "alchemical-bomb-damage",
+              "text": "PF2E.SpecificRule.Alchemist.ExpandedSplash.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +137,74 @@
       "name": "Greater Debilitating Bomb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Cn4w9U7uk5m1bb2S",
+        "folder": "uPmhCeFVuSxdGyLL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Debilitating Bomb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have learned enhanced techniques and alchemical secrets that allow you to expand the range of effects you can impose with your bombs. When you use @UUID[Compendium.pf2e.feats-srd.Item.Debilitating Bomb], add the following to the list you can choose from: @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1}, @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1}, @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1}, or –10-foot status penalty to Speeds.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Debilitating Bomb"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "debilitating-bomb",
+                {
+                  "not": "feat:true-debilitating-bomb"
+                }
+              ],
+              "selector": "alchemical-bomb-base-attack-roll",
+              "text": "PF2E.SpecificRule.Alchemist.DebilitatingBomb.GreaterAttackRollNote",
+              "title": "{item|name}"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:base:alchemical-bomb"
+              ],
+              "property": "other-tags",
+              "value": "greater-debilitating-bomb"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +214,45 @@
       "name": "Sour Bomb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Q9PR9achVS7aUDDt",
+        "folder": "uPmhCeFVuSxdGyLL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sour Bomb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can mix ingredients with a powerful sour smell into an alchemical bomb to make its explosion an overpowering stench. Any creature hit by the bomb must attempt a @Check[fortitude|against:class] save against your class DC in addition to the bomb's normal effects.</p>\n<p><strong>Success</strong> The creature is unaffected beyond a strong craving for pickles.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 2}, and @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] for 1 round from the smell.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist",
+              "olfactory"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +262,44 @@
       "name": "Unstable Concoction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tY3Zg0l14CdoKPpt",
+        "folder": "uPmhCeFVuSxdGyLL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unstable Concoction",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can mix a wondrous yet volatile liquid into an alchemical consumable if it has an initial effect that uses dice. You increase the size of any dice for the item's initial effect by one step. For instance, you could increase damage from a @UUID[Compendium.pf2e.equipment-srd.Item.Alchemist's Fire (Moderate)]{Moderate Alchemist Fire} to 2d10 or healing from a @UUID[Compendium.pf2e.equipment-srd.Item.Elixir of Life (Moderate)]{Moderate Elixir of Life} to 5d8+12. Because this affects only initial dice, it wouldn't increase unarmed attack damage from a bestial mutagen, persistent damage from an acid flask, and the like. When this item is activated, the creature activating it must succeed at a @Check[flat|dc:10] or take acid damage equal to the item's level.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

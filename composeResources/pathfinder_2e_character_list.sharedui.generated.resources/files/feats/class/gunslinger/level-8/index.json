@@ -7,6 +7,64 @@
       "name": "Bullet Split",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vNIimhmP636VOP01",
+        "folder": "BdzIVyvKLMpqdAAY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bullet Split",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a firearm or crossbow in one hand and a slashing (or versatile S) melee weapon in the other.</p><hr /><p>You carefully align your weapon with the edge of your blade, splitting the projectile in two as you fire to attack two different targets. Make two Strikes, one each against two separate targets. The targets must be adjacent to each other and within your weapon's maximum range. Each of these attacks takes a –2 penalty to the attack roll, but the two count as only one attack when calculating your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "bullet-split",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "bullet-split",
+                {
+                  "or": [
+                    "item:group:firearm",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +74,67 @@
       "name": "Grit and Tenacity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "94PGauGdzrVARMLc",
+        "folder": "BdzIVyvKLMpqdAAY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grit and Tenacity",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You fail a Fortitude or Will save.</p>\n<hr />\n<p>You call upon deep reserves of toughness and mental fortitude to power through an otherwise debilitating effect. Reroll the triggering save with a +2 circumstance bonus; you must use the second result.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "domain": "saving-throw",
+              "key": "RollOption",
+              "option": "grit-and-tenacity",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "grit-and-tenacity"
+              ],
+              "selector": [
+                "fortitude",
+                "will"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +144,62 @@
       "name": "Leap and Fire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8YLCu791osZNFKN2",
+        "folder": "BdzIVyvKLMpqdAAY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leap and Fire",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're quick enough to line up a shot even while diving to the ground. When you use your @UUID[Compendium.pf2e.feats-srd.Item.Hit the Dirt!] reaction, at any point during your Leap you can also make a ranged Strike with a loaded firearm or crossbow, targeting the creature whose attack triggered the reaction.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hit the Dirt!"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:hit-the-dirt"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +209,43 @@
       "name": "Smoke Curtain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WDid62NmmC6NiTE6",
+        "folder": "BdzIVyvKLMpqdAAY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Smoke Curtain",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded firearm and are wearing or holding a dose of black powder.</p>\n<hr />\n<p>You load an extra dose of powder into your shot, causing it to belch a cloud of smoke. You make a Strike with your firearm and create a cloud of smoke in a @Template[emanation|distance:20] centered on your location. Creatures are @UUID[Compendium.pf2e.conditionitems.Item.Concealed] while within the smoke, and creatures outside the area are concealed to creatures within the smoke. The smoke dissipates at the start of your next turn. If your Strike is a critical failure, your firearm misfires.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +255,59 @@
       "name": "Stab and Blast",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UIMZe4QDJQ9k4npN",
+        "folder": "BdzIVyvKLMpqdAAY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stab and Blast",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a firearm with an attached bayonet or reinforced stock, a fire lance, or a combination weapon.</p><hr /><p>You slice or smash your opponent with the melee portion of your weapon before pulling the trigger at point-blank range. Make a melee Strike with the required weapon. If the Strike is successful, you can immediately make a ranged Strike against the same target with a +2 circumstance bonus to the attack roll. This counts as two attacks toward your multiple attack penalty, but you don't apply the multiple attack penalty until after making both attacks.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "stab-and-blast",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "stab-and-blast"
+              ],
+              "selector": "ranged-strike-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

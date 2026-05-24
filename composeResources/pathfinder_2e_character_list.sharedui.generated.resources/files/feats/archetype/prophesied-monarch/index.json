@@ -7,6 +7,51 @@
       "name": "Bloom of Health",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Fe5m807oeqJw3YUd",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloom of Health",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You shout a rallying cry that inspires the well-being of your kingdom's protectors. All your knights who hear your cry gain fast healing equal to half your level for 1 minute.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +61,55 @@
       "name": "Decree of Banishment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Tz796Pai2YX7RU41",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Decree of Banishment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You assume a demeanor of authority and decree banishment upon a foe who has defied your authority. Speak your decree; a creature you designate within 60 feet who can hear your decree must succeed at a Will saving throw against your class DC or spell DC (whichever is higher) or spend its next turn moving as far away from you as it possibly can; this includes using magic or special movement modes, if it has any, to expedite its retreat.</p>\n<p>If the target attempts to move back within 60 feet of you at any time in the next week, it must succeed at a @Check[will|against:class-spell] saving throw against your class DC or spell DC (whichever is higher) or the attempt fails, any movement ends, and any actions or spell slots used in the attempt (such as if the target were attempting to magically approach you) are wasted.</p>\n<p>When you speak a Decree of Banishment, you can spend 1 Mythic Point as part of the action to have all friendly creatures and even the land itself within a 10-mile radius of you at that moment to reject the banished target. Within the affected area for the next month, the target has a –4 penalty to all Diplomacy checks to Gather Information or @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression], all Intimidation checks to @UUID[Compendium.pf2e.actionspf2e.Item.Coerce], and all Survival checks to Subsist. If the target defies your Decree of Banishment and continues to operate within the area, you hear about their activities the next time you encounter a group of friendly creatures with 10 or more members. You can have only one target affected by this month-long banishment at a time; if you inflict a month-long banishment on another target, the effects on the first target end.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "incapacitation",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +119,57 @@
       "name": "Decree of Execution",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2mxg4JxPE8k9jSkr",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Decree of Execution",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You proclaim that a foe has violated the sanctity of your realm and must die. Speak your decree; a creature you designate within 60 feet who can hear your decree must attempt a @Check[will|against:class-spell] saving throw against your class DC or spell DC, whichever is higher. Once targeted, the creature is temporarily immune for 1 year. Whether the target perishes or is marked for death depends on their level and the result of their saving throw.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> If the target is 14th level or lower, it drops to 1 Hit point. If the target is 15th level or higher, it takes @Damage[50[spirit]] damage.</p>\n<p><strong>Failure</strong> If the target is 14th level or lower, it dies instantly. If the target is 15th level or higher, it takes @Damage[50[spirit]] damage; if this damage brings it to 0 Hit Points, it dies instantly. Otherwise, it gains weakness 20 to all damage for 1 minute.</p>\n<p><strong>Critical Failure</strong> As failure, but a target who survives the damage is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} for 1 minute.</p>\n<p>When you speak a Decree of Execution, you can spend a Mythic Point as part of the action to remove the incapacitation trait.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "death",
+              "incapacitation",
+              "mythic",
+              "spirit"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +179,54 @@
       "name": "Decree of Prosperity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "O31zB7jxaW2487Q8",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Decree of Prosperity",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You speak with a gentle encouragement that inspires confidence and competence in your followers. Speak your decree; all your knights who hear your decree treat failures (but not critical failures) on non-attack skill checks as successes for 1 minute.</p>\n<p>When you speak a Decree of Prosperity, you can spend a Mythic Point as part of the action to have the inspiration spread to every individual within a 10-mile radius around you at that moment. Each individual receives a +2 status bonus to all checks to @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income], and they're all able to find jobs of their level in the region for the next month. The people who benefit from this effect quickly learn that it happened because of your decree; for the next month, you can obtain food and lodging for free anywhere within the affected area, and you can obtain up to 10 common items of 3rd-level or lower at half price.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +236,55 @@
       "name": "Decree of War",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OaDjzK0oaKAoV6EQ",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Decree of War",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You declare your current foes as irredeemable enemies, calling your allies down upon them. Speak your decree; all your knights who hear your decree can use their reaction to Stride up to twice directly toward an enemy and then Strike that enemy if it's within their reach or range.</p>\n<p>When you speak a Decree of War, you can spend a Mythic Point as part of the action to let every individual within a 10-mile radius around you at that moment know that war has come to your kingdom. You and your knights are able to gain access to free food, lodging, and repairs of common items while within the affected area for the next month, as allied citizens and creatures come to your aid. During this time, you also receive at least 10-minutes' warning whenever an enemy group of more than 10 creatures travels in your direction, as allied scouts report to you.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +294,54 @@
       "name": "Fated Duel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iv80P6HbOpoNCoNj",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fated Duel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per week</p><hr /><p>You and your knights are an unbeatable force together, but sometimes it's a monarch's duty to resolve the fate of their kingdom with nothing more than their own trusted weapon. Spend a Mythic Point, and choose one opponent within 30 feet; you declare a Fated Duel against that opponent.</p>\n<p>If the opponent accepts your challenge, you're locked in mystical combat together. Neither you nor your opponent can move more than 30 feet from each other; you both can't be harmed by any creature other than each other; and you both can't harm any creature other than each other. This mystical bond is incredibly draining on both parties, pulling at their life and spirit; if neither you nor your opponent has defeated the other by the time 1 minute has passed, you both become @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1}. Your doomed conditions increase by 1 for each additional minute that passes until one or both of you die.</p>\n<p>If your opponent refuses your challenge, you regain a Mythic Point and can immediately attempt an Intimidation check at mythic proficiency to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] them.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "P1W"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -61,6 +351,51 @@
       "name": "Kneel Before the Rightful Heir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "h0gwBDI61MxkvVPC",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kneel Before the Rightful Heir",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You command that your foes bow down before you or face your wrath. All enemies within 40 feet who can see and hear you must attempt a Will saving throw against your class DC or spell DC, whichever is higher. Regardless of the result, a creature is then temporarily immune to Kneel Before the Rightful Heir for 24 hours.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[3d6[persistent,mental]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[6d6[persistent,mental]] damage.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[6d6[persistent,mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} for as long as it's taking that persistent damage.</p>\n<p>The persistent mental damage can be ended only if the creature Drops Prone in a location that you can see and doesn't Stand until their next turn. An affected creature is aware of this restriction.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "linguistic",
+              "mental",
+              "mythic",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -70,6 +405,50 @@
       "name": "Legacy of Monarchs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aMp7crNLWFfMGLGO",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Legacy of Monarchs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>No matter what might happen to you, your legacy shall never die. If you're slain, any of your knights who touches your corpse can choose to take up your mantle; over the course of 10 minutes, they don your equipment, replace their attribute modifiers with yours, replace their skills and feats with yours, and become you for all intents and purposes, retaining only their ancestry, heritage, and ancestry feats. If you're later returned to life, you can choose to reclaim your mantle from your former knight; if you do so, they revert to their previous state, and you reclaim all that was yours. Otherwise, you can choose to live a new life, retraining all your skills and feats while adopting a new name and identity.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -79,6 +458,51 @@
       "name": "Might of the Realm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yj70CxBMXuyjqiIU",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Might of the Realm",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Bolstered by the presence of your knights, you strike a mighty blow in the name of your rule. Strike an enemy. This counts as two attacks when calculating your multiple attack penalty. If this Strike hits, you deal an additional amount of damage equal to double the number of your designated knights whom you can see. If the Strike is a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -88,6 +512,51 @@
       "name": "My Kingdom, My Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zqGSwbm3jM2JGAy5",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "My Kingdom, My Blood",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The health of the ruler is the health of the kingdom, and the health of the kingdom is that of its ruler, each bound to the other inextricably. Stride. You can Burrow, Climb, Fly, or Swim instead of Striding if you have the corresponding movement type. You then plant your fist or weapon into the ground at your feet, creating a @Template[type:emanation|distance:60] in an aura around you that lasts for 1 minute. Whenever an ally within this aura takes damage, you can use your reaction to take half the damage in their stead while they take the remainder. When you take damage through this link, you don't apply any resistances, weaknesses, or other abilities you have to that damage; you simply take that amount of damage. Whenever you take damage while this effect is active, an ally within the aura can use their reaction to take half the damage for you in the same manner.</p>\n<p>The effect ends immediately if you're reduced to 0 Hit Points.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -97,6 +566,50 @@
       "name": "Noble Sacrifice",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "K0zDniOVUL4C77lk",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Noble Sacrifice",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> One of your designated knights is within 15 feet of you and would take damage from an enemy's Strike.</p><hr /><p>As your knights devote their lives and swords to you, so too do you return their devotion with your own fierce protection. Spend a Mythic Point. The knight Steps as a free action, and you Stride into the space previously occupied by the knight; this movement ignores difficult terrain and greater difficult terrain. You then take the triggering damage instead. If you have a shield raised and have the Shield Block reaction, you can use it as part of this ability, applying damage to the shield as though you were the original target of the attack. The enemy whose Strike triggered this reaction is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -106,6 +619,50 @@
       "name": "Once and Future",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kwYQ90zLGMSARX4O",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Once and Future",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Though foul treachery might lay you low or dark magic still your heart, when the people cry out for you in desperate need, you shall rise to protect them. You can't die except due to old age as long as one of your knights is alive and within 30 feet; if your dying or doomed condition would increase to a high enough value to kill you, it doesn't increase, and any effect that would instantly kill you instead just reduces you to 0 Hit Points. The first time each year you would die for any reason other than old age, you instead return to life and consciousness with a number of Hit Points equal to twice your level and gain a Mythic Point. If you ever truly die and aren't returned to life within 1 year, you're reborn as a child into a new mortal body somewhere in the world where stories of your accomplishments are still told. You don't complete your journey along the River of Souls until all mortal memory of you has vanished.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -115,6 +672,49 @@
       "name": "Prophesied Monarch Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Y1hwTaDIIBKtSCZe",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prophesied Monarch Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your Calling has culminated in a destiny of rulership, and you're able to forge a mythic bond with noble knights whose destinies become intertwined with your own. Designate up to five allies as your knights; as long as you're conscious, your knights' doomed condition can't rise above 3, and if they're ever in mortal peril (such as being @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] with the dying condition or imprisoned in an enemy fortress), you instantly receive a vision revealing their location and condition.</p>\n<p>In addition, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Royal Grace] exploration activity.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.qCtMGydkSVksIFOd]{Prophesied Monarch}</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Royal Grace"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "destiny",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -124,6 +724,50 @@
       "name": "Protect the Royal Line",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3KVFBmWPVSItUuq3",
+        "folder": "tneLz2wcWb3yrsFU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Protect the Royal Line",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're flanked by at least two enemies.</p><hr /><p>You must keep your royal person safe from harm, especially when surrounded by those who would dare approach you. Attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] or @UUID[Compendium.pf2e.actionspf2e.Item.Shove] one of the enemies who's flanking you. If you can see at least one of your designated knights, you gain a +2 circumstance bonus to this check; this bonus increases to +4 if one of your designated knights is adjacent to you. If you succeed, you get a critical success. If your roll would've been a critical success, you increase the distance you Reposition or Shove the enemy by 5 feet.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

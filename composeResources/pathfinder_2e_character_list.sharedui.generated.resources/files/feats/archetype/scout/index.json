@@ -7,6 +7,48 @@
       "name": "Fleeting Shadow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hE6fchGuHuPIeKlO",
+        "folder": "gczjwauJkHKHckf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fleeting Shadow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're able to quickly disappear and then move about stealthily. You @UUID[Compendium.pf2e.actionspf2e.Item.Hide], then @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] twice.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Scout Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +58,57 @@
       "name": "Scout Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qMa2fIP2nqrFzHrq",
+        "folder": "gczjwauJkHKHckf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scout Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are a highly skilled scout, capable of guiding your allies, detecting imminent threats, and avoiding the attention of dangerous enemies. You can perform the @UUID[Compendium.pf2e.actionspf2e.Item.Scout] exploration activity at the same time as the @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] exploration activity. The bonus to initiative you grant when you Scout is +2 instead of +1.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.bApp2BZEMuYQCTDM]{Scout}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Stealth and Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "relabel": "Scouting w/ Scout dedication",
+              "selector": "initiative",
+              "slug": "scouting-bonus",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +118,48 @@
       "name": "Scout's Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6CE1nVGxt192AUGk",
+        "folder": "gczjwauJkHKHckf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scout's Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You meander around unpredictably, and then ambush your opponents without warning.</p>\n<p>Choose one enemy. Stride, @UUID[Compendium.pf2e.actionspf2e.Item.Feint] against that opponent, and then make a Strike against it. For your Feint, you can attempt a [[/act feint skill=stealth]]{Stealth} check instead of the Deception check that's usually required, using the terrain around you to surprise your foe.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Scout Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +169,48 @@
       "name": "Scout's Pounce",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jvQoupE76OeUpjZp",
+        "folder": "gczjwauJkHKHckf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scout's Pounce",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from or @UUID[Compendium.pf2e.conditionitems.Item.Undetected] by all of your opponents, and you aren't within 10 feet of any enemy.</p>\n<hr />\n<p>You leap from the shadows to strike your foes. Stride up to your Speed, then Strike twice. If you were hidden or unnoticed by the target of these Strikes, your foe is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against both attacks.</p>\n<p>Your multiple attack penalty applies normally for both attacks.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Scout Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +220,54 @@
       "name": "Scout's Speed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "elbj75qsUerbM725",
+        "folder": "gczjwauJkHKHckf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scout's Speed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You move faster, especially when traveling, allowing you to scout ahead and report back without slowing your allies. You gain a +10-foot status bonus to your Speed. When calculating your travel speed, this increases to a +20-foot status bonus.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Scout Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "type": "status",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +277,56 @@
       "name": "Terrain Scout",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KOf6kmwAZaUJSDW9",
+        "folder": "gczjwauJkHKHckf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrain Scout",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have mastered movement in many different environments. You gain the Terrain Stalker skill feat twice, choosing a different terrain each time. If you @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] while exploring and any allies use @UUID[Compendium.pf2e.actionspf2e.Item.Follow the Expert] to follow you as you do so, you can choose one of those allies to gain the benefit of any one Terrain Stalker feat you have.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Scout Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Stalker"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Stalker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

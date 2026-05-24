@@ -7,6 +7,53 @@
       "name": "Cryptomnesia",
       "img": "icons/magic/perception/third-eye-blue-red.webp",
       "type": "feat",
+      "data": {
+        "_id": "QLSvmOid6gAdzBYi",
+        "folder": "aUIx8cwBys2hxQEb",
+        "img": "icons/magic/perception/third-eye-blue-red.webp",
+        "name": "Cryptomnesia",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>You retain bits of knowledge from your former lives. You gain a +1 circumstance bonus to untrained skill checks.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "proficiency:untrained"
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestryfeature"
     },
@@ -16,6 +63,43 @@
       "name": "Wanderer's Soul",
       "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
       "type": "feat",
+      "data": {
+        "_id": "D6AjSg0JOYtn7Coa",
+        "folder": "aUIx8cwBys2hxQEb",
+        "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
+        "name": "Wanderer's Soul",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>Your soul is especially able to return to the cycle of reincarnation. When you're the subject of @UUID[Compendium.pf2e.spells-srd.Item.Raise Dead], @UUID[Compendium.pf2e.spells-srd.Item.Reincarnate], or a similar ritual that would return you to life, the primary caster uses the outcome one degree of success better than their roll. You always return to life as a samsaran, even if the ritual would reincarnate you into a body of a different ancestry.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestryfeature"
     }

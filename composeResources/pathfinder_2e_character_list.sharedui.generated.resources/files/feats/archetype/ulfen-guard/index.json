@@ -7,6 +7,57 @@
       "name": "Defender's Grit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QCUylerXd0VB9jU9",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defender's Grit",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can't protect anyone if you're dead. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Diehard] general feat. If you start your turn adjacent to your designated ally, you gain a number of temporary Hit Points equal to half your level that lasts until the beginning of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Defender's Grit]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ulfen Guard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +67,67 @@
       "name": "Guarded Mind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bbBUbigCqgxiIT4E",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guarded Mind",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You fail a saving throw against an effect that has the mental trait.</p><hr /><p>When your enemies try to turn your mind against you, thoughts of your anathema bolster you. You can reroll the triggering saving throw with a +2 circumstance bonus, but you must use the new result, even if it's worse.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ulfen Guard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "guarded-mind"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +137,88 @@
       "name": "Guard's Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AAhRUP6Uvy8gE1jA",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guard's Fury",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Some Ulfen Guards tap into a well of fury to protect their charges. You can use the @UUID[Compendium.pf2e.actionspf2e.Item.Rage] action. While raging, you take a –1 penalty to AC. If you're adjacent to your designated ally while raging, increase the additional damage from Rage from 2 to 4.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ulfen Guard Dedication"
+              },
+              {
+                "value": "you can't already use the Rage action"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Rage"
+            },
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "selector": "ac",
+              "value": -1
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.UlfenGuard.GuardsFury.ToggleLabel",
+              "option": "guards-fury-adjacent",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "guards-fury-adjacent"
+              ],
+              "selector": "strike-damage",
+              "slug": "rage",
+              "value": 4
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +228,52 @@
       "name": "Protective Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aymNcrPx6zMt5ILp",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Protective Strike",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature moves adjacent to or attempts a melee Strike against your designated ally.</p><hr /><p>You keep harm at bay. Make a melee Strike against the triggering creature. On a critical success, you interrupt the triggering action.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ulfen Guard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +283,52 @@
       "name": "Tight Follower",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Pay7XmMLgLtzxklN",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tight Follower",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your designated ally moves and ends that movement more than 10 feet from you.</p><hr /><p>You keep up as a protector. Stride up to your Speed closer to your designated ally. Your movement must end within 10 feet of your designated ally.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ulfen Guard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +338,62 @@
       "name": "Ulfen Guard Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "w9HxCfZLsFcwXJRS",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ulfen Guard Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> At least one of your parents is Ulfen.</p><hr /><p>Central to your Ulfen Guard training is the ability to protect an ally. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat for Warfare Lore. If you were already trained in Warfare Lore, you also become trained in a Lore skill of your choice. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Designate Ally] action.</p>\n<p>It's anathema for you to abandon your designated ally or allow your designated ally to die when you can prevent it. If you violate this anathema, you lose the ability to Designate Ally and any feats that use this ability until you spend 1 day of downtime reaffirming your dedication to your allies.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.AgfaSXYYYvPhxn8L]{Ulfen Guard}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "member of the Ulfen Guard, trained in Athletics and Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Designate Ally"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +403,52 @@
       "name": "Wounded Party",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "biU2NqWkO91o4FMg",
+        "folder": "P6bZaFp6pYtVv52R",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wounded Party",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You or your designated ally takes damage, and you're capable of entering a Rage.</p><hr /><p>Harm to either you or your allies awakens your fury. You @UUID[Compendium.pf2e.actionspf2e.Item.Rage].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ulfen Guard Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

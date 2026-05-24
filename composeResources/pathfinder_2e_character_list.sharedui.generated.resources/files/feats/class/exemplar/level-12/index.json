@@ -7,6 +7,94 @@
       "name": "Compliant Gold",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HMbpWNqksPhaxDHM",
+        "folder": "CcHp7XCyEE4HnSMX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Compliant Gold",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a melee weapon ikon</p><hr /><p>You can command your weapon to shrink or grow, for convenience or power. Even when your ikon is not empowered, you can shrink it to a miniature size (with negligible Bulk) and keep it tucked behind an ear, in your hair, or in a similar discreet location. You can shrink your weapon or regrow it to its normal size as part of drawing it, putting it away, swapping it, or picking it up.</p>\n<p><strong>Immanence</strong> Your ikon gains the reach trait. If it already had the reach trait, it instead increases your reach by an additional 10 feet, instead of the usual additional 5 feet.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Topple the Pillar of Heaven]</strong> <span class=\"action-glyph\">2</span> (transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.Ypwa9HIw7uXdt25D inline]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Topple the Pillar of Heaven"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}",
+                "divine-spark:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "priority": 121,
+              "property": "traits",
+              "value": "reach"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Exemplar.CompliantGold.ExtraReachToggle",
+              "option": "compliant-gold-extra-reach",
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.reach.base",
+              "phase": "afterDerived",
+              "predicate": [
+                "compliant-gold-extra-reach",
+                "divine-spark:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "value": 5
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +104,45 @@
       "name": "Extract Vow of Nonviolence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6YXQT1a2C03u75zW",
+        "folder": "CcHp7XCyEE4HnSMX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Extract Vow of Nonviolence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You entice or threaten a weapon, making it swear not to harm you. Attempt a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.Request] or an Intimidation check to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] against one weapon within 60 feet—even though most weapons are inanimate and mindless, your words somehow still can affect it as if it were living and you shared a language. The DC for this check is the Will DC of the creature wielding the weapon or a moderate DC for the weapon's level if it's unattended. If the weapon is an intelligent item, use its Will DC. Regardless of the result of the save, the weapon is then temporarily immune to Extract Vow of Nonviolence for 1 day.</p><hr /><p><strong>Critical Success</strong> The object swears not to hurt you. You gain resistance to all damage dealt by that specific weapon as the weapon attempts to mitigate harm to you. The resistance is equal to half your level and lasts for 10 minutes.</p>\n<p><strong>Success</strong> As critical success, but the remaining duration decreases by 1 minute each time the weapon hits you (even if it deals no damage).</p><hr /><p><strong>Special</strong> When you gain this feat, choose cold iron, duskwood, dawnsilver, or silver. For some reason—perhaps because you underestimate this material, or because you think it a friend—you are forever unable to use Extract Vow of Nonviolence on objects composed of the chosen material.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "concentrate",
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +152,47 @@
       "name": "Rapid Spark",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yR413t9x7poTHOCH",
+        "folder": "CcHp7XCyEE4HnSMX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Spark",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn begins.</p>\n<p><strong>Frequency</strong> once per day</p><hr /><p>Your spark shifts to where it needs to be. You Shift Immanence.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +202,67 @@
       "name": "Warped by Rage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qsvtm35vkbB4wdUr",
+        "folder": "CcHp7XCyEE4HnSMX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Warped by Rage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a body or worn ikon</p><hr /><p>Rage courses through your body, transforming you into a beast of battle. The imbued ikon gains the following abilities.</p>\n<p><strong>Immanence</strong> You're affected by a 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.Enlarge] spell. You can choose to forgo this effect when your body ikon becomes empowered.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Spasm of the Berserker]</strong> <span class=\"action-glyph\">1</span> (transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.tHHpBREXDaafK3TF inline]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Spasm of the Berserker"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "body-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon",
+              "morph"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

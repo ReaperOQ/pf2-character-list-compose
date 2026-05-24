@@ -7,6 +7,55 @@
       "name": "Death Dive",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BKdKyftmphU9n3Wq",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Death Dive",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are riding your dragon companion and are airborne.</p><hr /><p>You guide your mount into a plummet, diving headlong at a single foe. You command your mount to Fly twice. It must end this movement at a lower altitude than it began its turn at. You and your mount gain a +4 circumstance bonus to AC against reactions triggered by this movement. At the end of this movement, your mount attempts a melee Strike against one creature in its reach. If the Strike hits, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone] if it's smaller than your mount; if it's a critical hit, the target is knocked prone if it's the same size as your mount or smaller.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Flair Rider Stance"
+              },
+              {
+                "value": "Wing Rider"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +65,53 @@
       "name": "Drake Rider Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hh2aqd0TGsrcSXl0",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Drake Rider Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the service of a young riding drake, riding dragonet, or another animal companion with the dragon trait you have access to. Your bond with your dragon companion lets you communicate and issue commands to it telepathically with a range of 100 feet. You must still use the @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] action to direct it but don't require words or gestures to do so.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Nature, Charisma +1"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +121,56 @@
       "name": "Flair Rider Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dyjYNaE6Nc6zpsUM",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flair Rider Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spend little time in your saddle as you flip unpredictably around your dragon mount, dodging attacks. While mounted and in this stance, your mount always provides you with lesser cover and you don't take the –2 circumstance penalty to Reflex saves while mounted.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Drake Rider Dedication"
+              },
+              {
+                "value": "trained in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +180,52 @@
       "name": "Guided Hover",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DXf3HFtO4EfXBq1A",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guided Hover",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn ends.</p>\n<p><strong>Requirements</strong> Your airborne dragon mount has not used the Fly action this turn.</p><hr /><p>You guide your draconic companion, whose outstretched wings fill with unseen thermals. Your mount hovers without needing to use a Fly action to stay in place.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wing Rider"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +235,52 @@
       "name": "Incredible Dragon Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OjGUJyeArTj5gZyG",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incredible Dragon Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mature dragon companion develops further, becoming more robust and formidable. Your dragon companion becomes a nimble or savage animal companion, gaining additional capabilities determined by the type of companion.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mature Dragon Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +290,52 @@
       "name": "Mature Dragon Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "adWnAp41sCCx02Ap",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mature Dragon Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your dragon companion matures and the bond you share is strengthened. The dragon companion you gained with your @UUID[Compendium.pf2e.feats-srd.Item.Drake Rider Dedication] is now a mature animal companion.</p>\n<p>Your dragon companion gains greater independence. During an encounter, even if you don't use the @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] action, your dragon companion can still use 1 action that round on your turn to Stride or Strike. It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Drake Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +345,52 @@
       "name": "Strafing Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pFKfYsxBWdUlmU6A",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strafing Breath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> @UUID[Compendium.pf2e.feats-srd.Item.War Rider Stance] is active.</p><hr /><p>You urge your dragon mount forward, wreathed in magical power. Your mount Strides three times. If your mount has a fly Speed, it can substitute a Fly action for any of these Stride actions. As it moves, your dragon companion's magical breath billows around you. The aura from War Rider Stance increases to a @Template[type:emanation|distance:10] during this movement, and each creature that's in the emanation at any point during your movement takes the damage from it (with the normal save). A creature can take damage only once, even if you move past it multiple times.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Rider Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -70,6 +400,60 @@
       "name": "War Rider Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ht9ctVLibKCaFQdc",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "War Rider Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your dragon's constant breath threatens your foes. While in this stance, your dragon companion has an aura in a @Template[type:emanation|distance:5]. Each creature that starts its turn in the aura takes the damage listed under the dragon's support benefit with a basic Reflex save against your mount's Athletics DC.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Drake Rider Dedication"
+              },
+              {
+                "value": "expert in martial weapons"
+              },
+              {
+                "value": "dragon companion with a support benefit that includes damage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "aura",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +463,52 @@
       "name": "Wing Rider",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RkaE55TeCvwmQq7E",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wing Rider",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your bond with your dragon has been honed so fine that it can carry you aloft with its full capability. Your dragon companion has a fly Speed of 25 feet at all times.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Leap"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +518,55 @@
       "name": "Winged Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YtL4Q55dAM1GzdDh",
+        "folder": "YHNkfjmB5sxWRLiG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Winged Leap",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While drakes and dragons are able flyers, they're uncomfortable carrying a rider in the air without special training. Through hard work, nerves of steel, and the deep bond you share with your draconic companion, your companion has learned to carry you skyward, if only briefly. Your dragon companion gains the @UUID[Compendium.pf2e.actionspf2e.Item.Winged Leap] action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Drake Rider Dedication"
+              },
+              {
+                "value": "dragon companion with the mount special ability"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

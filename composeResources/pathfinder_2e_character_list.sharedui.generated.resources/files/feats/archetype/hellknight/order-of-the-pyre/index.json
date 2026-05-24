@@ -7,6 +7,62 @@
       "name": "Righteous Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Kz4E8heU12IGcYoi",
+        "folder": "yhoDeqavUrSQZUNq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Righteous Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "bonus",
+          "description": {
+            "value": "<p>You can cast @UUID[Compendium.pf2e.spells-srd.Item.Resist Energy] as a divine innate spell twice per day, except you can target only yourself. If you grant yourself resistance to fire damage, the resistance is equal to either the spell's normal value or to your level, whichever is higher.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Righteous Resistance]</p>"
+          },
+          "level": {
+            "value": 0
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Order of the Pyre"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:resist-energy",
+                "spellcasting:category:innate",
+                "spellcasting:tradition:divine"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 0,
       "category": "bonus"
     },
@@ -16,6 +72,45 @@
       "name": "Spiritual Disruption",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FlsAYAGEiZg1gg7D",
+        "folder": "yhoDeqavUrSQZUNq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spiritual Disruption",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "bonus",
+          "description": {
+            "value": "<p>You channel disruptive power that severs a foe's spiritual connection to their magic. Make a melee Strike. This counts as two attacks when calculating your multiple attack penalty. If the attack hits, the target takes @Damage[1d6[persistent,spirit]] damage. The target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} until it stops taking the persistent spirit damage.</p>"
+          },
+          "level": {
+            "value": 0
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Order of the Pyre"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 0,
       "category": "bonus"
     }

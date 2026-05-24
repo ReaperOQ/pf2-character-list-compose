@@ -7,6 +7,67 @@
       "name": "Advanced General Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ht6b8H9DpA9lWzAg",
+        "folder": "hLjqS3RxuQAReE1h",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced General Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Over the long course of your adventuring life, your adaptability has let you pick up numerous useful abilities. You gain a general feat of 7th level or lower. You must meet the feat's prerequisites.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different feat each time.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  {
+                    "lte": [
+                      "item:level",
+                      7
+                    ]
+                  },
+                  "item:trait:general"
+                ],
+                "itemType": "feat"
+              },
+              "flag": "advancedGeneralTraining",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.AdvancedGeneralTraining.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.advancedGeneralTraining}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "human"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +77,47 @@
       "name": "Bounce Back",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MR4X38qgBj5tmkMw",
+        "folder": "hLjqS3RxuQAReE1h",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bounce Back",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You lose the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition.</p>\n<hr />\n<p>You recover from near-death experiences with astounding resilience. Don't increase the value of your @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition due to losing the dying condition.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "human"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +127,43 @@
       "name": "Stubborn Persistence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "55XNy1TVETEMc0vf",
+        "folder": "hLjqS3RxuQAReE1h",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stubborn Persistence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Humans are renowned for their ability to persist through the most grueling of trials that would leave others ready to drop. When you would become @UUID[Compendium.pf2e.conditionitems.Item.Fatigued], attempt a @Check[flat|dc:17]. On a success, you aren't fatigued. If the fatigued condition has an underlying cause that you don't address, such as lack of rest, you must attempt the check again at an interval determined by the GM until you fail the flat check or address the underlying cause.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "human"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

@@ -7,6 +7,78 @@
       "name": "Covet Hoard",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zoZRiXMyAuULzChA",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Covet Hoard",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a dragon's desire for treasure. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Hefty Hauler] skill feat, even if you don't meet the prerequisites. You also gain a +2 circumstance bonus to your Perception DC against attempts to [[/act steal]] from you and to any saving throw against an effect targeting an item you're holding or carrying.</p>\n<p>At 11th level, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Incredible Investiture] general feat, even if you don't meet the prerequisites.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Hefty Hauler"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.feats-srd.Item.Incredible Investiture"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:steal"
+              ],
+              "selector": [
+                "perception-dc"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +88,188 @@
       "name": "Dragonet Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RaqjaXp2miOq4Bis",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragonet Breath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have developed your magical breath. You expel the dragonet breath associated with your heritage. Dragonet Breath gains the traits listed in parentheses, and the DC is your class DC or spell DC, whichever is higher. After you use Dragonet Breath, you can't use it again for [[/r 1d4 #Recharge Dragonet Breath]]{1d4 rounds}.</p><ul><li><strong>Fey Dragonet</strong> (arcane, poison) You breathe a @Template[type:cone|distance:15] of euphoric gas. Each creature in the area must succeed at a @Check[fortitude|against:class-spell|options:area-effect,inflicts:stupefied|traits:arcane,poison] save or become @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for 1 round.</li><li><strong>Homing Drake</strong> (acid) You expel a @Template[type:line|distance:30] of caustic spittle that deals @Damage[(ceil(@actor.level/2))d4[acid]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect,damage:material:silver|traits:acid] save. At 3rd level and every 2 levels thereafter, the damage increases by 1d4.</li><li><p><strong>House Drake</strong> (arcane, mental) You breathe out a cloud of silver mist in a @Template[type:cone|distance:15] that deals @Damage[(ceil(@actor.level/2))d4[mental]|options:area-damage] damage with a @Check[will|against:class-spell|options:area-effect|traits:arcane,mental] save. It counts as silver for the purpose of weaknesses. At 3rd level and every 2 levels thereafter, the damage increases by 1d4.</p></li><li><p><strong>Pearl Dragonet</strong> (arcane, curse) You breathe a @Template[type:cone|distance:15] of golden mist that alters the luck of creatures caught in it. Each time you use Dragonet Breath, decide if it gives good luck or bad luck. Any creature affected by your Dragonet Breath becomes temporarily immune to it for 1 hour. If your breath gives good luck, each creature in the area gains a +1 status bonus to its next attack roll or skill check before the start of your next turn. If your breath gives bad luck, each creature in the area must attempt a @Check[will|against:class-spell|options:area-effect|traits:arcane,curse] save. A creature that fails its save takes a –1 status penalty to its next attack roll or skill check before the start of your next turn. On a critical failure, the creature must instead roll twice and take the worse result on the check; this is a misfortune effect.</p></li><li><strong>Tidepool Dragonet</strong> (fire) You breathe a @Template[type:line|distance:15] of superheated gas that deals @Damage[(ceil(@actor.level/2))d4[fire]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect|traits:fire] save. At 3rd level and every 2 levels thereafter, the damage increases by 1d4. You can use your breath underwater even though it has the fire trait. If you do, it gains the water trait and emerges as a @Template[type:cone|distance:20] of boiling water.</li></ul>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "actorFlag": true,
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:ancestry:dragonet"
+                ],
+                "itemType": "heritage",
+                "slugsAsValues": true
+              },
+              "flag": "dragonetHeritage",
+              "key": "ChoiceSet",
+              "predicate": [
+                {
+                  "nor": [
+                    "dragonet-heritage",
+                    "dragonet-heritage-determined"
+                  ]
+                }
+              ],
+              "rollOption": "dragonet-heritage"
+            },
+            {
+              "key": "RollOption",
+              "option": "dragonet-heritage-determined"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Dragonet.DragonetBreath.Description.Base"
+                },
+                {
+                  "predicate": [
+                    "dragonet-heritage:fey-dragonet"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonet.DragonetBreath.Description.FeyDragonet"
+                },
+                {
+                  "predicate": [
+                    "dragonet-heritage:homing-drake"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonet.DragonetBreath.Description.HomingDrake"
+                },
+                {
+                  "predicate": [
+                    "dragonet-heritage:house-drake"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonet.DragonetBreath.Description.HouseDrake"
+                },
+                {
+                  "predicate": [
+                    "dragonet-heritage:pearl-dragonet"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonet.DragonetBreath.Description.PearlDragonet"
+                },
+                {
+                  "predicate": [
+                    "dragonet-heritage:pearl-dragonet"
+                  ],
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pearl Dragonet Breath]"
+                },
+                {
+                  "predicate": [
+                    "dragonet-heritage:tidepool-dragonet"
+                  ],
+                  "text": "PF2E.SpecificRule.Dragonet.DragonetBreath.Description.TidepoolDragonet"
+                }
+              ]
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "dragonet-heritage:fey-dragonet",
+                    "dragonet-heritage:house-drake",
+                    "dragonet-heritage:pearl-dragonet"
+                  ]
+                }
+              ],
+              "property": "traits",
+              "value": "arcane"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "dragonet-heritage:fey-dragonet"
+              ],
+              "property": "traits",
+              "value": "poison"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "dragonet-heritage:homing-drake"
+              ],
+              "property": "traits",
+              "value": "acid"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "dragonet-heritage:house-drake"
+              ],
+              "property": "traits",
+              "value": "mental"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "dragonet-heritage:pearl-drake"
+              ],
+              "property": "traits",
+              "value": "curse"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "dragonet-heritage:tidepool-dragonet"
+              ],
+              "property": "traits",
+              "value": "fire"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +279,63 @@
       "name": "Dragonet Resistances",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "isWArbW4C1Xbd5gR",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragonet Resistances",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You might be a little dragon, but you are still a dragon, which means it's difficult to constrain you. You gain a +2 circumstance bonus to saves against sleep effects and effects that would make you @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed].</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:sleep",
+                    "inflicts:paralyzed"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +345,53 @@
       "name": "Mighty Dragonet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "txVv3rZuYyp0miFz",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mighty Dragonet",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've grown especially large and now tower over your fellow dragonets. Instead of Tiny, your size is Small.</p><hr /><p><strong>Special</strong> Though you can grow larger at a higher level than 1st, you can't retrain out of this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "value": "small"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +401,100 @@
       "name": "My Claws are Daggers",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "djQPfxfGXJL7i04C",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "My Claws are Daggers",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your claws are as sharp as your teeth. You gain a claw unarmed attack that deals 1d6 slashing damage. Your claws are in the knife group and have the agile, finesse, and unarmed traits. At 5th level, whenever you get a critical hit with your claws or jaws, you get its critical specialization effect.</p><hr /><p><strong>Special</strong> If your dragonet heritage is house drake, your claws count as silver.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "knife",
+              "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.claw",
+              "range": null,
+              "slug": "claw",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "definition": [
+                "item:base:claw"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "heritage:house-drake"
+              ],
+              "property": "materials",
+              "value": "silver"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:base:claw",
+                    "item:base:jaws"
+                  ]
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +504,91 @@
       "name": "Scales of Steel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R3erN2vKsjo84pen",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scales of Steel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your scales are hard as armor, ensuring you always have some protection in the dangerous world. When you're unarmored, your scales give you a +1 item bonus to AC with a Dexterity cap of +3. The item bonus increases to +2 at 5th level. The item bonus to AC from these scales is cumulative with armor potency runes on your @UUID[Compendium.pf2e.equipment-srd.Item.Explorer's Clothing], the @UUID[Compendium.pf2e.spells-srd.Item.Mystic Armor] spell, or @UUID[Compendium.pf2e.equipment-srd.Item.Bands of Force].</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "DexterityModifierCap",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "value": 3
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                }
+              ],
+              "selector": [
+                "ac"
+              ],
+              "slug": "scales-of-steel",
+              "type": "item",
+              "value": "ternary(gte(@actor.level,5),2,1)"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "self:armored"
+                },
+                {
+                  "or": [
+                    "bonus:slug:bands-of-force",
+                    "bonus:slug:explorers-clothing",
+                    "bonus:slug:mage-armor"
+                  ]
+                }
+              ],
+              "relabel": "{item|name}",
+              "selector": "ac",
+              "value": "ternary(gte(@actor.level,5),2,1)"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +598,71 @@
       "name": "Take Wing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ER19TNTiYbNvkhw8",
+        "folder": "Th1SHYMutVvBmHKU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Take Wing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p><hr /><p>You have strengthened your wings and can now fly for short distances. You Fly. If you don't normally have a fly Speed, you gain a fly Speed of 15 feet for this movement. If you aren't on solid ground at the end of this movement, you fall.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "take-wing",
+              "predicate": [
+                {
+                  "not": "feat:into-the-sky"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "take-wing"
+              ],
+              "selector": "fly",
+              "value": 15
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

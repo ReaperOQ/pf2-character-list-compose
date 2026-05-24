@@ -7,6 +7,52 @@
       "name": "Aphet Flash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KrF4qD1pvQthG3v8",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aphet Flash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your swarm is outside your body.</p><hr /><p>Your swarm can emit a bright flash, much like aphet beetles, a genus of flash beetles once used by Osirian miners as sources of light. Each creature in its space must succeed at a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher, or be @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round (2 rounds on a critical failure). The swarm then glows with light like a torch until it returns to your body.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +62,53 @@
       "name": "Buzzing Death Cicadas",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IGY2DVHTEWmTbfYV",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Buzzing Death Cicadas",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your swarm takes on characteristics of the death cicadas of the Mana Wastes, whose distinctive buzz is said to be a herald of imminent demise. The inclusion of these death cicadas grants your swarm a fly Speed of 20 feet. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Death Drone] action.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Death Drone"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +118,47 @@
       "name": "Carried with the Swarm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0fPboxvg8rbi65mf",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Carried with the Swarm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When your swarm is sharing your space and Strides, you can choose to have your swarm carry you with it. You stay in the same basic position within its space while it moves and when you arrive at your new location (with your exact location determined by the GM if it's unclear). Because you're moving voluntarily, your movement isn't forced movement and therefore still triggers reactions based on movement. If your swarm Flies, and you don't have a fly Speed, you fall at the end of this movement.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +168,47 @@
       "name": "Distracting Bites",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yLZWUZHI5SHfwL7E",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distracting Bites",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to take advantage of those your swarm has attacked. A creature who has taken damage from your swarm's @UUID[Compendium.pf2e.actionspf2e.Item.Bite and Sting] is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the first Strike you make against it in the same turn.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +218,47 @@
       "name": "Expanded Swarm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DjB7wElO9HkKMnzI",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expanded Swarm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your hive has grown to the point where it is difficult to keep your swarm contained within your body. When you release your swarm with Swarm Forth, you can choose for it to be Huge instead of Large.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -52,6 +268,47 @@
       "name": "Mobile Swarm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mG6Qo8e8TSIiwR9l",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mobile Swarm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The clicking of fast-moving legs accompanies your swarm in all kinds of environments. Your swarm's land and climb Speeds increase to 20 feet, and the swarm gains a 20-foot Swim speed.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +318,48 @@
       "name": "Pyre Ant Sting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mwPOOTtELS4X7reC",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pyre Ant Sting",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your swarm is outside your body.</p><hr /><p>Your swarm's stings burn with agonizing pain, much like that caused by the bright red pyre ants that make their tunnels within the parched sands of deserts like Qadira. Each creature in your swarm's space must succeed at a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher, or take @Damage[(floor(@actor.level/4))d6[persistent,poison]] damage. A creature that critically fails is also @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} for as long as it's taking this persistent poison damage.</p>\n<p>At 8th level and every 4 levels thereafter, the persistent poison damage increases by 1d6.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +369,48 @@
       "name": "Sportlebore Choke",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F4LlHjLjubbBkWRT",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sportlebore Choke",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your swarm is outside your body.</p><hr /><p>Like nefarious sportlebores, a species of insect that plague adventurers by hiding in their rations as counterfeit food, your swarm can crawl down throats. The sportlebores attempt to force their way into the mouth of each creature in your swarm's space. Each creature takes @Damage[(floor(@actor.level/2))d4[piercing]] damage depending on its @Check[fortitude|against:class-spell] save against the higher of your class DC or spell DC. The damage increases by 1d4 at 10th level and every 2 levels thereafter. Regardless of the result of its save, the creature is temporarily immune to sportlebore choke for 1 hour.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} as it spits out most of the offending sportlebores.</p>\n<p><strong>Failure</strong> The sportlebores crawl down the creature's throat. The creature takes full damage and is sickened 1.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 2}.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +420,57 @@
       "name": "Swarmkeeper Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a3YLHiWsfAFeFVYO",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swarmkeeper Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your body has become a symbiotic hive for a swarm of crawling insects. You can emit your swarm using the @UUID[Compendium.pf2e.actionspf2e.Item.Swarm Forth] action, and you can use the @UUID[Compendium.pf2e.actionspf2e.Item.Bite and Sting] action while your swarm is outside your body to command it to attack. Your deep connection to your swarm precludes you from also having an animal companion, though if an ability allows you to have more than one animal companion (such as the beastmaster archetype), you can count your swarm as one. You're immune to any damage from your swarm, and during your daily preparations you can anoint up to five willing creatures with a concoction made from your pheromones to grant them immunity as well.</p>\n<p>While outside your body, your swarm is Large and has a Speed of 15 feet and a climb Speed of 15 feet. It can occupy the same space as other creatures. While outside your body, the swarm can be attacked. It uses your statistics for defenses but is immune to @UUID[Compendium.pf2e.conditionitems.Item.Grabbed], @UUID[Compendium.pf2e.conditionitems.Item.Prone], @UUID[Compendium.pf2e.conditionitems.Item.Restrained], and mental effects that target only a specific number of creatures. The swarm has resistance equal to your level to physical damage and weakness equal to your level to area and splash damage. Any damage that would be dealt to the swarm is dealt to you instead, though you take damage only once from any ability that includes both you and the swarm in the area of effect (though you take the greater amount of damage).</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.If0rK2DhKh2CrYKR]{Swarmkeeper}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Swarm Forth"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Bite and Sting"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -88,6 +480,47 @@
       "name": "Veil of Bugs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vD1TCRWtubijBGEP",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Veil of Bugs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your swarm is dense, blotting out vision. You and your allies gain lesser cover when in your swarm's space.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -97,6 +530,48 @@
       "name": "Weaver's Web",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9aea3IysGvjKY5tT",
+        "folder": "xJd21ECSMdugkuI2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weaver's Web",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your swarm is outside your body.</p><hr /><p>Your swarm can spin dense webs much like those left by stone-gray weaver spiders under eaves and in derelict city buildings, especially along the coasts of Varisia. When your swarm ends its turn, it fills all surfaces in its space with sticky webs that last for 1 minute. The webs are difficult terrain. A creature that ends its turn in the webs must succeed at a @Check[reflex|against:class-spell] save or be @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] until it @UUID[Compendium.pf2e.actionspf2e.Item.Escape]{Escapes}. The webs' save DC and Escape DC are equal to the higher of your class DC or spell DC. The swarm is immune to its webs.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swarmkeeper Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

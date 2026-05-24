@@ -7,6 +7,60 @@
       "name": "Danse Macabre",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PcLqS5h6stRtdioZ",
+        "folder": "DMfDn7K2IfDW2i1i",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Danse Macabre",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Requirements</strong> Your horde is raised.</p><hr /><p>Your horde can drag unwilling victims along with it as it shambles forward. Your horde Strides up to its Speed and can move through the spaces of Large and smaller creatures, but it must end its movement in an unoccupied space. Each creature whose space it moves through is subjected to the horde's @UUID[Compendium.pf2e.actionspf2e.Item.Mobbing Assault], attempting a basic Reflex save as usual. A creature who fails the saving throw is also @UUID[Compendium.pf2e.actionspf2e.Item.Reposition]{Repositioned} to an unoccupied square of your choice adjacent to the horde's final position. You can't move the creature into or through obstacles.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Necrologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "flourish",
+              "manipulate",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +70,58 @@
       "name": "Shift Horde",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tAEGNtdlsTNoGnBW",
+        "folder": "DMfDn7K2IfDW2i1i",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shift Horde",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> Your horde is raised.</p><hr /><p>With a wave of your hand, your risen undead horde collapses and another one rises to take its place. You Sustain your horde, dispersing the current group of undead and replacing them with a different type of undead to which you have access.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Necrologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +131,63 @@
       "name": "Wailing Dead",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wp9Pnu2qe7GkZgHS",
+        "folder": "DMfDn7K2IfDW2i1i",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wailing Dead",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Requirements</strong> Your horde is raised and consists of spirits.</p><hr /><p>The voices of the spirits you command spark fear in the hearts of your enemies. You Sustain your horde and command those spirits to shriek in unison. Each living enemy within a @Template[type:emanation|distance:20] from your horde takes @Damage[ternary(lte(@actor.level, 12),5,(floor(@actor.level/2)-1))d10[mental]|options:area-damage] damage, depending on its @Check[will|against:spell|options:area-effect] saving throw against your spell DC. This damage increases by 1d10 at 14th level and every 2 levels thereafter.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3}.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ghostsong"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "concentrate",
+              "emotion",
+              "fear",
+              "flourish",
+              "magical",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

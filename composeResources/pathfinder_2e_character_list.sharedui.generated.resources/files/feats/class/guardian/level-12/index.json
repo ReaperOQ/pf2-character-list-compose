@@ -7,6 +7,65 @@
       "name": "Armor Break",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SqITElkyOMAvYVhh",
+        "folder": "8KwctFslFnxNmH4I",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armor Break",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing medium or heavy armor that doesn't have the broken condition, and your current Hit Points are at half your maximum or lower.</p><hr /><p>You flex your muscles to crack your damaged armor, blasting jagged shards into nearby enemies. Each enemy in a @Template[type:emanation|distance:10] takes @Damage[(11 + max(0,(@actor.level - 14)))d6[piercing]|options:area-damage] damage with a @Check[reflex|against:guardian|options:area-effect] save against your class DC. You can push any enemy that fails its save 5 feet away from you (or up to 10 feet on a critical failure). The damage increases by 1d6 per level beyond 14th.</p>\n<p>Your armor gains the broken condition. While your armor remains broken due to Armor Break, you don't take its penalty to Speed. In addition, if the broken armor has the bulwark trait, you retain its bonus to Reflex saves, but the bonus is reduced by 1.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Guardian.ArmorBreak.ToggleLabel",
+              "option": "armor-break",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "subtract",
+              "predicate": [
+                "armor-break"
+              ],
+              "selector": "ac",
+              "slug": "bulwark",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +75,52 @@
       "name": "Armored Counterattack",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Vj7L46PhxciFNMpZ",
+        "folder": "8KwctFslFnxNmH4I",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armored Counterattack",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You use @UUID[Compendium.pf2e.actionspf2e.Item.Intercept Attack] against a melee Strike and are adjacent to the creature that made the Strike.</p><hr /><p>With the might of your armor behind you, you hit back at a foe who would dare try to hurt your allies. After Intercepting the Attack, make your own Strike against the triggering enemy. If your Strike hits, you @UUID[Compendium.pf2e.actionspf2e.Item.Taunt] the target; this Taunt gains the visual trait.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Intercept Attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +130,53 @@
       "name": "Devastating Shield Wallop",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oNUIacH67QDxT5ki",
+        "folder": "8KwctFslFnxNmH4I",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Devastating Shield Wallop",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The impact of your shield sends foes tumbling to the ground. When you use Shield Wallop, after its other effects, the target attempts a @Check[fortitude|against:guardian|options:inflicts:off-guard,inflicts:prone,inflicts:stunned] saving throw against your class DC. If your shield is a tower shield, fortress shield, or another shield that grants a higher circumstance bonus to AC when you @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover] behind it, the target takes a –2 circumstance penalty to this saving throw.</p><hr /><p><strong>Critical Success</strong> The target takes no additional effect.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you until the end of the current turn.</p>\n<p><strong>Failure</strong> The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Critical Failure</strong> The target is knocked prone and @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Shield Wallop"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +186,71 @@
       "name": "Right Where You Want Them",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "87OyWx4AktAysKXc",
+        "folder": "8KwctFslFnxNmH4I",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Right Where You Want Them",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whether with a weapon or your bare hands, you keep your opponents in their place. Increase the maximum distance you can @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] or @UUID[Compendium.pf2e.actionspf2e.Item.Shove] an opponent to 10 feet on a success or 15 feet on a critical success.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                {
+                  "or": [
+                    "action:reposition",
+                    "action:shove"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +260,49 @@
       "name": "Scattering Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ylDAxUpT0rXxilro",
+        "folder": "8KwctFslFnxNmH4I",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scattering Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing medium or heavy armor.</p><hr /><p>You charge into a group of enemies to send them flying. Stride up to your Speed. At the end of your movement, you can @UUID[Compendium.pf2e.actionspf2e.Item.Shove] up to three creatures within your reach. You don't need a hand free to do so. You attempt a separate Athletics check for each one; each attempt counts toward your multiple attack penalty, but the penalty doesn't increase until after you've made all the attempts. Regardless of your results, you can't Stride to follow any of the targets.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +312,48 @@
       "name": "Weakening Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "41zc9MdLoTy02kim",
+        "folder": "8KwctFslFnxNmH4I",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weakening Assault",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a barrage of blows, you diminish an enemy's strength. Strike an enemy affected by your @UUID[Compendium.pf2e.actionspf2e.Item.Taunt] twice. If either Strike hits, the target is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} until the beginning of your next turn. If both Strikes hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 3} instead.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

@@ -7,6 +7,54 @@
       "name": "Campfire Chronicler Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MFsCCVgU0z4N9bmY",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Campfire Chronicler Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've gained Isthralei's attention and can now offer stories up to him, either passing on your own stories or collecting those of travelers as he did. You become trained in Religion and Survival; for either of these skills in which you were already trained, you instead become trained in a skill of your choice. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Offer Story] action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.NmnvKVQl51xoGQU7]{Campfire Chronicler}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Offer Story"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +64,56 @@
       "name": "Cozy Campfire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n4yLaSzQlzyNOo6J",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cozy Campfire",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spend 1 hour building a campfire in a single unoccupied square and whispering the stories of those you've met on your journeys. The campfire sheds bright light in a 30-foot radius (and dim light for the next 30 feet). The campfire can't be put out or get larger through mundane means; it instead burns out after your next daily preparations or when you use this ability again.</p>\n<p>The first time each round a creature within the campfire's bright light performs an action with the attack trait, they must then attempt a @Check[will|against:class-spell] save against your class DC or spell DC (whichever is higher). This is a divine curse effect, and you are aware of any attempt, although other creatures in the area are not.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Cozy Campfire]</p><hr /><p><strong>Critical Success</strong> The creature is aware of the effect and can choose to disrupt their action. If they don't disrupt it, the campfire goes out.</p>\n<p><strong>Success</strong> The creature is aware of the effect and can choose to disrupt their action. If they don't disrupt it, they become temporarily immune to the campfire's effects for 24 hours.</p>\n<p><strong>Failure</strong> The creature takes a –2 status penalty to the action's attack roll and to all other attack rolls until the beginning of their next turn.</p>\n<p><strong>Critical Failure</strong> The action is disrupted, and the creature takes a –2 status penalty to attack rolls until the beginning of their next turn.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "consecration",
+              "divine",
+              "exploration",
+              "fire"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +123,64 @@
       "name": "Flickering Stories",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gPiYj2vgWm0CNoGW",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flickering Stories",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Stories, like fires, can create shadows as much as they illuminate. When you Offer a Story, you can become @UUID[Compendium.pf2e.conditionitems.Item.Concealed] by shifting shadows for the duration instead of the normal benefits. The action then gains the shadow trait. You can't use this concealment to @UUID[Compendium.pf2e.actionspf2e.Item.Hide], as normal for concealing effects that leave your location obvious. The creature you share a story with can choose this benefit even if you did not.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:offer-story"
+              ],
+              "property": "other-tags",
+              "value": "flickering-stories"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +190,64 @@
       "name": "Illuminating Stories",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yRT94fGPaS1M9f9I",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Illuminating Stories",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Stories serve as beacons in the night, illuminating valuable knowledge even if the tale itself misses the mark. When you @UUID[Compendium.pf2e.actionspf2e.Item.Offer Story]{Offer a Story} about any topic, you can choose that illumination in place of the normal benefits of Offer Story. You receive a +1 status bonus on checks to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] for the duration and can Recall Knowledge about the topic of the story as a free action. The creature you share a story with can choose this benefit even if you did not.</p>\n<p>The bonus increases to +2 if you are a master of Religion and +3 if you are legendary.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:offer-story"
+              ],
+              "property": "other-tags",
+              "value": "illuminating-stories"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +257,72 @@
       "name": "Listener's Boon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2KZG1KvQjBgcSSNA",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Listener's Boon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Isthralei has given you a gift to assist you on your journey. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Domain Initiate] feat for the domain of fire, knowledge, protection, or travel. You can Refocus by spending 10 minutes telling stories of your travels or listening to others' stories of theirs. You gain the trained proficiency rank in spell attack modifier and spell DC, increasing to expert at 11th level.</p><hr /><p><strong>Special</strong> You can select this feat multiple times, selecting a different domain each time and gaining its domain spell.</p><hr /><p><em>PFS Note:</em> For the purposes of this feat, use charisma as your spellcasting attribute.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.spellcasting.rank",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "attribute": null,
+                "rank": 1
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +332,64 @@
       "name": "Raging Stories",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3GmgFUL2xzt5vhCz",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raging Stories",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you @UUID[Compendium.pf2e.actionspf2e.Item.Offer Story]{Offer a Story} about wild chances and fighting against all odds, you can wrap yourself in spectral flame in place of the normal benefits. The action then gains the fire trait. Your melee Strikes for the duration deal 2 additional fire damage. The creature you share a story with can choose this benefit even if you did not.</p>\n<p>The fire damage increases to 4 if you are a master of Religion and 6 if you are legendary.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:offer-story"
+              ],
+              "property": "other-tags",
+              "value": "raging-stories"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +399,58 @@
       "name": "Stories of Home",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HD3qC1lDSc4jHzii",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stories of Home",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You share the joy of every story of long-awaited homecoming you've offered to Isthralei. You can spend 10 minutes sharing this joy with your allies within 30 feet. You and those allies regain Hit Points equal to their Constitution modifier (minimum 1) times their level and recover from the @UUID[Compendium.pf2e.conditionitems.Item.Doomed], @UUID[Compendium.pf2e.conditionitems.Item.Drained], and @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] conditions as though they had a full night's rest (though they gain no other benefits associated with having a full night's rest).</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "divine",
+              "exploration",
+              "healing",
+              "linguistic",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +460,77 @@
       "name": "Tales of the Road",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N43qnnWMy2H6lsrm",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tales of the Road",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The blessings of Isthralei connect you to the thrum of the stories that underlie all settlements. When attempting a check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about a city you have visited, you gain a +2 circumstance bonus and can use an associated Lore skill (such as Nerosyan Lore) with your level as your proficiency bonus even if you're untrained.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "proficiency:untrained",
+                "tales-of-the-road"
+              ],
+              "selector": "lore-skill-check",
+              "slug": "tales-of-the-road-proficiency",
+              "type": "proficiency",
+              "value": "@actor.level"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "tales-of-the-road"
+              ],
+              "selector": "skill-check",
+              "slug": "tales-of-the-road-circumstance",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -79,6 +540,74 @@
       "name": "The Dead Tell Tales",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6WsUotDsr7TUVDkE",
+        "folder": "ecygCZjU63FUN433",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Dead Tell Tales",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>New campfire chroniclers are inundated with the stories of the ghosts below Pulura's Fall and the lessons learned there. You have resistance equal to your level to spirit and void damage caused by a haunt, spirit, or incorporeal undead. The first time you take damage from a haunt or spirit, you learn the general story of its origin (such as the type of tragedy that caused a ghost to linger or what a spirit represents).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Campfire Chronicler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "origin:trait:haunt",
+                    "origin:trait:spirit",
+                    "origin:trait:undead"
+                  ]
+                },
+                {
+                  "or": [
+                    "damage:type:void",
+                    "damage:type:spirit"
+                  ]
+                }
+              ],
+              "key": "Resistance",
+              "type": "custom",
+              "value": "@actor.level"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

@@ -7,6 +7,52 @@
       "name": "Expanded Runelord Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UTgVD8LwSjFVMlqc",
+        "folder": "tb8eWEvW1x47c9RK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expanded Runelord Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ability to use magic associated with your chosen sin grows. You gain the ability to cast one more arcane spell as an innate spell. This spell must be chosen from those listed in Avenging Runelord Dedication above, as well as @UUID[Compendium.pf2e.spells-srd.Item.Contingency], @UUID[Compendium.pf2e.spells-srd.Item.Spell Riposte], or any 7th-rank spell from your chosen sin's school. You can cast this spell as an arcane innate spell once per day. The spell is automatically heightened to a spell rank equal to half your level rounded up. Use mythic proficiency to determine any attack rolls or spell DCs.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Avenging Runelord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #219: Lord of the Trinity Star"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +62,52 @@
       "name": "Reliable Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HKGO65wfxlBnobHN",
+        "folder": "tb8eWEvW1x47c9RK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reliable Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Magic stored in written form or within wands is more reliable in your capable hands. Whenever you overcharge a wand, reduce the DC of the flat check to avoid destroying the wand by 4. It still gains the broken condition on a success.</p>\n<p>When you Cast a Spell from a scroll you can spend a Mythic Point as a free action. The spell is cast at mythic proficiency. Once you cast the spell using this ability, attempt a @Check[flat|dc:11]. If this check is successful, the scroll is not destroyed, and instead glows with light equivalent to that of a candle for 10 minutes. You can Cast a Spell from this scroll again, but if you do so you cannot enhance it in any way (such as by using this feat), and the scroll is destroyed. If not used before the end of the 10 minutes, the scroll is destroyed.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Avenging Runelord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #219: Lord of the Trinity Star"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +117,72 @@
       "name": "Shining Runes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OZmR9ZSAZyPoJuDj",
+        "folder": "tb8eWEvW1x47c9RK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shining Runes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whenever you Cast a Spell that requires more than one action to cast, the signature Thassilonian runes you trace in the air flicker with light and command attention. They may blaze brightly, leave lingering fog, create discordant noise, or fill the air with an overwhelming scent, such that their presence obfuscates you from onlookers. You gain @UUID[Compendium.pf2e.conditionitems.Item.Concealed]{Concealment} from enemy creatures until the beginning of your next turn. The DC to identify your spells as you cast them is 2 higher than normal.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Avenging Runelord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #219: Lord of the Trinity Star"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "gte": [
+                    "item:cast:actions",
+                    2
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.AvengingRunelord.ShiningRunes.Note"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +192,57 @@
       "name": "Willing Runes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0eo9ESm9Rmd2ndQ6",
+        "folder": "tb8eWEvW1x47c9RK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Willing Runes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Magical markings of every kind seem eager to aid your endeavors. Whenever you read text, be it mundane or magical, the writing itself seems to almost to leap into your thoughts. You gain a +2 status bonus to checks to Decipher Writing, Identify Magic, Learn a Spell, or any Research check or @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] check involving reading.</p>\n<p>You gain a +2 status bonus to saving throws and to your AC against effects from hazards that involve reading, such as those created by a rune trap ritual. If you were the one who triggered the hazard by reading the triggering runes, the status bonus increases to +4.</p>\n<p>If you prepare spells from a spellbook, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Draw From the Pages] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Avenging Runelord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #219: Lord of the Trinity Star"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Draw From the Pages"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +252,54 @@
       "name": "Writhing Runelord Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ABobcAdaA8p1nHRV",
+        "folder": "tb8eWEvW1x47c9RK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Writhing Runelord Weapon",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a polearm or spear.</p><hr /><p>Your prowess with long-hafted weapons catches your opponents by surprise, as it bends or elongates in an obviously supernatural manner. Spend a Mythic Point. Your weapon gains the reach trait until the end of your turn, if it doesn't have it already. You can Stride and Strike twice, in any order. The movement from your Stride doesn't provoke reactions. Your Strikes are made at mythic proficiency and gain the critical specialization effect of the weapon. Apply your multiple attack penalty to your Strikes as normal, but the target of your second Strike is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to it.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Avenging Runelord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #219: Lord of the Trinity Star"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "arcane",
+              "flourish",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

@@ -7,6 +7,55 @@
       "name": "Envenom Fangs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IY86Kvopp4ACuQsw",
+        "folder": "ATmhkFe3Dxkjweir",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Envenom Fangs",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You envenom your fangs. If the next fangs Strike you make before the end of your next turn hits and deals damage, the Strike deals an additional 1d6 persistent poison damage. The poison becomes inert after you hit, or at the end of your next turn, whichever comes first.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Iruxi Armaments (Fangs)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Envenom Fangs",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Envenom Fangs"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +65,43 @@
       "name": "Flexible Tail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VLCAFIXzUtiv1VuE",
+        "folder": "ATmhkFe3Dxkjweir",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flexible Tail",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can perform simple Interact actions with your tail, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +111,74 @@
       "name": "Gecko's Grip",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kGed3uQbZ7x5SBB8",
+        "folder": "ATmhkFe3Dxkjweir",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gecko's Grip",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You cling to walls with a preternatural grip. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] feat as a bonus feat, and if you roll a success on an Athletics check to climb, you get a critical success instead.</p><hr /><p><strong>Special</strong> If you have the cliffscale lizardfolk heritage, you instead gain a climb Speed of 15 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "heritage:cliffscale-lizardfolk"
+                }
+              ],
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb",
+                {
+                  "not": "heritage:cliffscale-lizardfolk"
+                }
+              ],
+              "selector": "athletics"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "heritage:cliffscale-lizardfolk"
+              ],
+              "selector": "climb",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +188,51 @@
       "name": "Shed Tail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "t3IzY8uSyFj3aGmh",
+        "folder": "ATmhkFe3Dxkjweir",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shed Tail",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.Grabbed].</p>\n<p><strong>Requirements</strong> You have a fully grown tail.</p><hr /><p>You can shed a portion of your tail to escape. You cease being grabbed, then Stride without triggering any reactions from the creature that grabbed you. It takes 1 day for your tail to fully grow back. Until it does, you can't use your tail unarmed attack, and you take a –2 circumstance penalty on checks to @UUID[Compendium.pf2e.actionspf2e.Item.Balance].</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Iruxi Armaments (Tail)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Shed Tail",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Shed Tail"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +242,57 @@
       "name": "Swift Swimmer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iliy0ONIb8Hw6muA",
+        "folder": "ATmhkFe3Dxkjweir",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Swimmer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain a swim Speed of 15 feet.</p><hr /><p><strong>Special</strong> If you have the wetlander lizardfolk heritage, your swim Speed instead increases to 25 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim",
+              "value": 15
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "heritage:wetlander-lizardfolk"
+              ],
+              "selector": "swim",
+              "value": 25
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

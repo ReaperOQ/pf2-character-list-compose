@@ -7,6 +7,117 @@
       "name": "Ageless Patience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "k8nWKHLYvAKMuwLd",
+        "folder": "2SZivh6XBv1zFLtk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ageless Patience",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You work at a pace born from longevity that enhances your thoroughness. You can voluntarily spend twice as much time as normal on a Perception check or skill check that takes 1 action or longer. If you do, you gain a +2 circumstance bonus to the check and don't automatically reduce your degree of success on a natural 1 (you get a critical failure only if your result is 10 lower than the DC). For example, you could get these benefits if you spent 2 actions to @UUID[Compendium.pf2e.actionspf2e.Item.Seek], which normally takes 1 action. You can get these benefits during exploration by taking twice as long exploring as normal, or in downtime by spending twice as much downtime.</p>\n<p>The GM might determine a situation doesn't grant you a benefit if a delay would be directly counterproductive to your success, such as a tense negotiation with an impatient creature.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "check",
+              "key": "RollOption",
+              "option": "ageless-patience",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "ageless-patience"
+              ],
+              "selector": [
+                "perception",
+                "skill-check"
+              ],
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "adjustment": {
+                "all": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "ageless-patience",
+                "check:total:natural:1",
+                {
+                  "gte": [
+                    "check:total:delta",
+                    -9
+                  ]
+                }
+              ],
+              "selector": "skill-check"
+            },
+            {
+              "adjustment": {
+                "all": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "ageless-patience",
+                "check:total:natural:1",
+                {
+                  "gte": [
+                    "check:total:delta",
+                    -9
+                  ]
+                }
+              ],
+              "selector": "perception"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "ageless-patience",
+                "check:total:natural:1",
+                {
+                  "not": {
+                    "gte": [
+                      "check:total",
+                      "check:total:delta"
+                    ]
+                  }
+                }
+              ],
+              "selector": [
+                "perception",
+                "skill-check"
+              ],
+              "text": "PF2E.SpecificRule.Elf.AgelessPatience.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +127,75 @@
       "name": "Ancestral Suspicion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "scNrNhnGTgPIzoj7",
+        "folder": "2SZivh6XBv1zFLtk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ancestral Suspicion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Long-lived elves have seen civilizations rise and fall, often at the hands of outside forces. As a result, they have developed a wariness of others who might seek to influence or control them. You've been trained to resist such manipulation, gaining a +2 circumstance bonus to saving throws against effects that would make you @UUID[Compendium.pf2e.conditionitems.Item.Controlled], such as @UUID[Compendium.pf2e.spells-srd.Item.Dominate], and to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] when trying to determine if a creature is under the influence of such an effect. When you roll a success on a saving throw against such an effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "inflicts:controlled"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive",
+                "ancestral-suspicion"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "inflicts:controlled"
+              ],
+              "selector": "saving-throw",
+              "text": "When you roll a success on a saving throw against an effect that would make you controlled, you get a critical success instead.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +205,53 @@
       "name": "Elven Persistence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "y1Jp8e5zmO1InHMe",
+        "folder": "2SZivh6XBv1zFLtk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elven Persistence",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You fail a skill check you're at least trained in.</p><hr /><p>Elves don't give up easily on their pursuits. Instead of the result you received for the triggering skill check, you receive a result of 12 + your proficiency bonus (don't apply any other bonuses, penalties, or modifiers).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +261,119 @@
       "name": "Martial Experience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qXl2cOh3wL3QszCy",
+        "folder": "2SZivh6XBv1zFLtk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Martial Experience",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've crossed blades with a wide variety of foes wielding a wide variety of weapons, and you've learned the basics of fighting with nearly any of them. When wielding a weapon you aren't proficient with, treat your level as your proficiency bonus.</p>\n<p>At 11th level, you become trained in all weapons.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "lte": [
+                    "self:level",
+                    10
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "type": "proficiency",
+              "value": "@actor.level"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.unarmed.rank",
+              "phase": "beforeDerived",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.simple.rank",
+              "phase": "beforeDerived",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.martial.rank",
+              "phase": "beforeDerived",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.advanced.rank",
+              "phase": "beforeDerived",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +383,47 @@
       "name": "Shame the Sin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "q0SPmS77pNgiQk93",
+        "folder": "2SZivh6XBv1zFLtk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shame the Sin",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You critically hit a demon with a Strike.</p><hr /><p>Your conviction against the sins that all demons grow from is so strong that you can force a demon to suffer from its sins when you strike a sound blow against them. In addition to doing the normal damage for your critical hit, the demon also suffers the effects of its special vulnerability. If the demon has no special vulnerability, it instead takes an additional @Damage[(ternary(gte(@actor.level,17),3,ternary(gte(@actor.level,13),2,1)))d6[mental]] damage. This increases to 2d6 mental damage at 13th level and to 3d6 mental damage at 17th level.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +433,47 @@
       "name": "Swamp Stealth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qz2gKNsHDMITpGPH",
+        "folder": "2SZivh6XBv1zFLtk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swamp Stealth",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in a swamp environment near an environmental feature that would allow you to @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover].</p><hr /><p>In swamplands, you are particularly skilled at quickly hiding behind bits of underbrush or foliage, or moving quietly through murky water. You Take Cover and then use that cover to @UUID[Compendium.pf2e.actionspf2e.Item.Hide].</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

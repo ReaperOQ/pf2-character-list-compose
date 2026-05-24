@@ -7,6 +7,76 @@
       "name": "Blood Must Have Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lzXVF6VTaPRfGDgj",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood Must Have Blood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You tap into a bottomless hunger for carnage. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Blood Vendetta] and @UUID[Compendium.pf2e.spells-srd.Item.Share Life] as 2nd-rank primal spells, each once per day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:blood-vendetta",
+                    "item:slug:share-life"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:blood-vendetta",
+                    "item:slug:share-life"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:hungerseed"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +86,58 @@
       "name": "Bloodsoaked Dash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EW6uZKpD0axk3VTg",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloodsoaked Dash",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Injuries don't bother you anymore—in fact, the pain invigorates you. If you're at or below half of your maximum Hit Points, you gain a 10-foot status bonus to all of your Speeds.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "lte": [
+                    "hp-percent",
+                    50
+                  ]
+                }
+              ],
+              "selector": "all-speeds",
+              "type": "status",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +147,47 @@
       "name": "Greater Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FBT84wCK2Dv3GRVO",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Transformation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can assume your oni form more easily, and with greater benefits. Your oni form lasts for 10 minutes without the need to Sustain it. While in your oni form, your reach increases by 5 feet.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Oni Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +197,56 @@
       "name": "Hungry Eyes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iW62jmvNlR5Y9cv3",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hungry Eyes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your eyes can see through darkness with an oni's visual acuity. You gain low-light vision, or you gain darkvision if you already have low-light vision.</p><hr /><p><strong>Special</strong> You can select this feat twice, once to gain low-light vision and a second time to gain darkvision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {
+                "special": {
+                  "ancestry": false,
+                  "llv": true,
+                  "second": true
+                }
+              },
+              "low-light-vision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +256,53 @@
       "name": "Kishin Rage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zknpo51jJndv68Ph",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kishin Rage",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your eyes glow a deep red and your body courses with adrenaline as you obtain a fraction of the power of the kishin oni. You attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] all creatures within a 10- foot radius; you don't take a penalty when you attempt to Demoralize a creature that doesn't understand your language.</p>\n<p>You also gain the following abilities for 1 minute.</p><ul><li>40 temporary Hit Points.</li><li>A fly Speed equal to your Speed.</li><li>The effects of 6th-rank @UUID[Compendium.pf2e.spells-srd.Item.Runic Body], and your horns deal an additional @Damage[1d4[electricity]] damage.</li><li>Bloodsense as a precise sense with a range of 60 feet, allowing you to detect freshly spilled blood; this allows you to accurately detect creatures taking persistent bleed damage, creatures whose Hit Points are currently at half or less of their maximum, and freestanding puddles or droplets of recently spilled blood.</li></ul><p>Kishin Rage lasts for 1 minute. Once it ends, you're @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3} as you recharge and recenter yourself.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Kishin Rage",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Kishin Rage"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed",
+              "morph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -52,6 +312,54 @@
       "name": "Oni Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iCNNMJeGvsIzza4A",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oni Form",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your horns flash briefly as you grow in size and ferocity. Your size increases to Large, and you're @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1}. This doesn't change your Speed, reach, or other statistics except as noted here. Your worn equipment automatically resizes to suit your new form, though it immediately returns to its original size if it leaves your possession.</p>\n<p>This form is the same age and body type as your true form and has roughly analogous physical traits, such as hair color. Using Oni Form counts as creating a disguise for the @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] use of Deception.</p>\n<p>You can Sustain your Oni Form for up to 10 minutes, though you must then spend at least 10 minutes in your natural form before using Oni Form again.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Oni Form",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Oni Form"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "hungerseed",
+              "polymorph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +369,51 @@
       "name": "Oni Rampage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Canug4VdAMqycpAJ",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oni Rampage",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're reduced to less than half your maximum Hit Points by a creature within your reach.</p><hr /><p>Nothing invigorates you more than your own freshly spilled blood. You gain the effects of @UUID[Compendium.pf2e.spells-srd.Item.Haste] for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Spell Effect: Haste",
+            "uuid": "Compendium.pf2e.spell-effects.Item.Spell Effect: Haste"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -70,6 +423,80 @@
       "name": "Oni Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3o5tWjDIcfIARHIj",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oni Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Oni prefer large, cruel weapons for smashing their foes to pieces, and so do you. For the purposes of proficiency, you treat the @UUID[Compendium.pf2e.equipment-srd.Item.Khakkhara], @UUID[Compendium.pf2e.equipment-srd.Item.Nodachi], @UUID[Compendium.pf2e.equipment-srd.Item.Ogre Hook], and @UUID[Compendium.pf2e.equipment-srd.Item.Tetsubo] as simple weapons.</p>\n<p>The ogre hook is an uncommon martial weapon that costs 1 gp, deals 1d10 piercing damage, has 2 Bulk, requires two hands to use, is in the pick weapon group, and has the deadly d10 and trip weapon traits.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, or with your horns unarmed Strike, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:base:khakkhara",
+                    "item:base:nodachi",
+                    "item:base:ogre-hook",
+                    "item:base:tetsubo"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialOniWeapons",
+              "sameAs": "simple",
+              "slug": "martial-oni-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:base:khakkhara",
+                    "item:base:nodachi",
+                    "item:base:ogre-hook",
+                    "item:base:tetsubo",
+                    "item:tag:hungerseed-horns"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +506,70 @@
       "name": "Oni's Mask",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YrawssRNHsyqYuHi",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oni's Mask",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You aren't as malleable as your oni ancestors but still can disguise yourself. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Illusory Disguise] as a 1st-rank primal innate spell once per day. This spell can't disguise your horns, though you can still hide them normally with a hairstyle or a hood.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:illusory-disguise",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:illusory-disguise",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:hungerseed"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -88,6 +579,74 @@
       "name": "Storming Gaze",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "D3usONRMsGZ7mWs1",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Storming Gaze",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can open or energize a notable third eye on your forehead to strike with storming power. You deal @Damage[(ceil(@actor.level/2))d4[@item.flags.system.rulesSelections.stormingGaze]|options:area-damage]{3d4 electricity or 3d4 sonic damage} in a @Template[type:cone|distance:15]; Storming Gaze gains this trait. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic] saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #Recharge Storming Gaze]]{1d4 rounds}.</p>\n<p>At 7th level and every 2 levels thereafter, the damage increases by 1d4.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "mergeable": true,
+              "option": "storming-gaze",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "value": "sonic"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "storming-gaze:tempest-gaze"
+                }
+              ],
+              "property": "traits",
+              "value": "{item|flags.system.rulesSelections.stormingGaze}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -97,6 +656,76 @@
       "name": "Tempest Gaze",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Cjl530PBu86JKL9c",
+        "folder": "UduQItW59597Fjgy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tempest Gaze",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your third eye grows stronger and more powerful. When you use Storming Gaze, you can increase the area to a @Template[type:cone|distance:30] and @Damage[(ceil(@actor.level/2))d4[electricity],(ceil(@actor.level/2))d4[sonic]|options:area-damage]{double the number of damage dice}; half deal electricity damage, and half deal sonic damage. If you Storming Gaze in this way, you can't use it again for 1 hour.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Storming Gaze"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "mergeable": true,
+              "option": "storming-gaze",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "tempest-gaze"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:storming-gaze",
+                "storming-gaze:tempest-gaze"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hungerseed"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

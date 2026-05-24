@@ -7,6 +7,47 @@
       "name": "Duel Spell Advantage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vsSbYfsRTHveef24",
+        "folder": "GAqi6ZQt9RCavnFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duel Spell Advantage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you start a psychic duel, you gain a third natural psychic spell. You can't choose the same spell twice.</p>\n<p>If you're 9th level or higher, add the following spells to the list of natural psychic spells you can choose: @UUID[Compendium.pf2e.spells-srd.Item.Confusion], @UUID[Compendium.pf2e.spells-srd.Item.Hallucination], @UUID[Compendium.pf2e.spells-srd.Item.Suggestion], @UUID[Compendium.pf2e.spells-srd.Item.Synaptic Pulse], @UUID[Compendium.pf2e.spells-srd.Item.Synesthesia], and @UUID[Compendium.pf2e.spells-srd.Item.Wave of Despair].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Psychic Duelist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +57,56 @@
       "name": "Instigate Psychic Duel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rm8NgrdZNjqpGlC1",
+        "folder": "GAqi6ZQt9RCavnFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Instigate Psychic Duel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You attempt to enter a psychic duel with a creature within 100 feet. The target can attempt a @Check[will|against:class-spell] save against the higher of your spell DC or class DC. If it enters the duel willingly, use the result for a critical failure.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The two of you enter a psychic duel, but it ends automatically at the end of your next turn. As normal for a psychic duel, the duel ends if one participant is knocked out, as well as under any other conditions to which both participants agree. If you're in initiative when you Instigate the Psychic Duel, you keep the same initiative positions. You can each choose a psychic center for any skill in which you're trained, as you would if you were using that skill to roll initiative for the duel.</p>\n<p><strong>Failure</strong> As a success, except instead of ending at the end of your next turn, the target can attempt a new save to end the duel at the end of each of your turns, starting with your next turn.</p>\n<p><strong>Critical Failure</strong> As a success, except the duel doesn't end until it reaches one of the normal end conditions for a psychic duel.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day",
+            "value": 1
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Psychic Duelist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "illusion",
+              "incapacitation",
+              "mental",
+              "occult"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +116,75 @@
       "name": "Psychic Duelist Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xKKyS9nEQqolJ0SF",
+        "folder": "GAqi6ZQt9RCavnFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Psychic Duelist Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through experience and in-depth visualizations of mental battles, you've grown adept at psychic duels. You gain a +2 circumstance bonus to your initiative rolls for psychic duels. Each time you enter a psychic duel, choose one of the following benefits for the duration of that duel.</p><ul><li><strong>Mind Mace</strong> You gain a status bonus to mental damage with spells you cast equal to the spell's rank.</li><li><p><strong>Psychic Fist</strong> You can use your standard attribute modifier for Strike damage instead of your highest mental modifier, and you can use your full AC instead of using your Will DC in place of your AC.</p></li></ul><p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.uA6XIArPfGSwBvZi]{Psychic Duelist}</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Occultism"
+              },
+              {
+                "value": "you have been in a psychic duel"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "psychic-duel"
+              ],
+              "selector": [
+                "initiative"
+              ],
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "damageType": "mental",
+              "key": "FlatModifier",
+              "predicate": [
+                "psychic-duel"
+              ],
+              "selector": [
+                "spell-damage"
+              ],
+              "type": "status",
+              "value": "@spell.rank"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +194,47 @@
       "name": "Supreme Psychic Center",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rqj1kmrnF9M1E6pv",
+        "folder": "GAqi6ZQt9RCavnFI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Supreme Psychic Center",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn in a psychic duel begins.</p>\n<hr />\n<p>With the merest thought, you realign your mental defenses to your duel's circumstances. You @UUID[Compendium.pf2e.actionspf2e.Item.Recenter].</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Psychic Duelist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

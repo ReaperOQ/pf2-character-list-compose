@@ -7,6 +7,47 @@
       "name": "Devastating Weaponry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Cs0hRKBfWn2gOYzK",
+        "folder": "8zynSsV7m7PEM1Uq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Devastating Weaponry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You release a volley of projectiles from your weapon, or power it to fly in every direction across the battlefield and Strike multiple creatures. Make a Strike with your weapon innovation against each foe within 30 feet of you. Don't increase your multiple attack penalty until after making all the attacks. If your innovation is a melee weapon and any of the attacks are outside your reach, you Release the weapon before the Strikes, and it returns to your grasp after all of them. If your hands are full when the weapon returns, it falls to the ground in your space. As normal, if your weapon innovation requires one or more actions to reload between Strikes, you can't use it to make multiple attacks with Devastating Weaponry.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +57,47 @@
       "name": "Engine of Destruction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GLHh9MWlcINLC6Q0",
+        "folder": "8zynSsV7m7PEM1Uq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Engine of Destruction",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your construct unleashes a broad swath of devastation by separating its limbs, deploying hidden armaments, or using a similar technique to wreak havoc. You Command your innovation. Instead of its normal actions, it Strides once, then makes a Strike against each foe within 30 feet of it with a +2 circumstance bonus to its attack rolls. The multiple attack penalty doesn't increase until after the construct makes all the attacks.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Engine of Destruction]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "construct innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +107,64 @@
       "name": "Negate Damage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "J8HLcsOkAcXfTxYy",
+        "folder": "8zynSsV7m7PEM1Uq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Negate Damage",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would take damage.</p><hr /><p>Your armor innovation activates various devices you prepared ahead of time, and you use one of them to reduce the damage you would take by 15.</p>\n<p><strong>Unstable Function</strong> You activate all the precautions at once, violently repelling the incoming attack to blunt its force. Add the unstable trait to Negate Damage and reduce the damage you would take by 50.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

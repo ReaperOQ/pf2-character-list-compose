@@ -7,6 +7,55 @@
       "name": "Blessed Thorn Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dHQovShiOg8CsuhJ",
+        "folder": "RVoZBwz4kr7OzTWZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blessed Thorn Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You witnessed an enemy harm an ally with a Strike or spell last round.</p><hr /><p>When you see a foe hurt one of your allies, your righteous retribution causes your weapon to sprout holy thorns. Make a Strike against the triggering enemy. If you hit and deal damage, the target must also succeed at a @Check[fortitude|against:class-spell] saving throw against your class DC or spell DC, whichever is higher, or become @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} on a critical failure).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rose Warden Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "flourish",
+              "sanctified"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +65,64 @@
       "name": "Holy Bloom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "p6TGLeRmYINvbLNW",
+        "folder": "RVoZBwz4kr7OzTWZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Holy Bloom",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Though you might not be a priest of Milani, her divine spirit flows through you. You gain holy sanctification. Select the @UUID[Compendium.pf2e.journals.JournalEntry.EEZvDB1Z7ezwaxIr.JournalEntryPage.5MjSsuKOLBoiL8FB]{freedom} or @UUID[Compendium.pf2e.journals.JournalEntry.EEZvDB1Z7ezwaxIr.JournalEntryPage.DI3MYGIK8iEycanU]{zeal} domain. You gain the initial domain spell for that domain. If you don't have one, you gain a focus pool of 1 Focus Point. You can Refocus by praying to Milani or by working with others to plan a just uprising. You become trained in spell attack modifier and spell DC, and your spellcasting attribute for these spells is Wisdom.</p><hr /><p><strong>Special</strong> You can choose this feat a second time, gaining the initial domain spell of the domain you didn't gain the first time.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rose Warden Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "add": [
+                "holy"
+              ],
+              "key": "ActorTraits"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "attribute": null,
+                "rank": 1
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

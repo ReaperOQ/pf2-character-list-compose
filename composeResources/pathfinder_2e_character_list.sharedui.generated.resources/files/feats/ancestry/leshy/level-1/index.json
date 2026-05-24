@@ -7,6 +7,65 @@
       "name": "Childlike Plant",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rypk6QBqwz9biJuF",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Childlike Plant",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're adept at hiding your plantlike features to pass as a human. You become trained in Deception (or another skill if you're already trained in Deception). You don't require a disguise kit when attempting Deception checks to Impersonate a human. In addition, you gain a +4 circumstance bonus to Impersonate checks to pretend that you're a human version of yourself, rather than a leshy. This bonus doesn't apply to other checks to Impersonate humans.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "chrysanthemum leshy heritage or peachchild leshy heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.deception.rank",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.ImpersonateHumanVersion",
+              "predicate": [
+                "action:impersonate",
+                "impersonate-human-self"
+              ],
+              "selector": "deception",
+              "type": "circumstance",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +75,78 @@
       "name": "Grasping Reach",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "weYZzyMmlCIC2TZt",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grasping Reach",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can extend a tangle of vines or tendrils to support your arms and extend your reach. When you wield a melee weapon that requires two hands, doesn't have reach, and deals at least 1d6 damage, you can change between a typical two-handed grip and an extended two-handed grasp using an Interact action. Weapons wielded in your extended grasp gain reach of 10 feet. This grasp is less stable and powerful than a typical grip, reducing the weapon's damage die by 1 step.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "grasping-reach",
+              "toggleable": true
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "grasping-reach",
+                "item:equipped",
+                "item:melee",
+                "item:usage:hands:2",
+                {
+                  "not": "item:trait:reach"
+                }
+              ],
+              "priority": 119,
+              "property": "damage-dice-faces"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "grasping-reach",
+                "item:equipped",
+                "item:melee",
+                "item:usage:hands:2"
+              ],
+              "property": "traits",
+              "value": "reach"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +156,57 @@
       "name": "Harmlessly Cute",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GYdLf1LhvSUeu95Y",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Harmlessly Cute",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your size and demeanor make it easy for you to convince others that you mean no harm. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Shameless Request] skill feat. Additionally, you gain a +1 circumstance bonus to initiative checks when you roll Deception for initiative.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "deception"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Shameless Request"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +216,60 @@
       "name": "Leshy Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i5W5aGWEiyo1vt2d",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leshy Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You deeply understand your people's cultural traditions and innate strengths. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Leshy Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.stealth.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +279,66 @@
       "name": "Leshy Superstition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fYVFBnv9aVHv1UNg",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leshy Superstition",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You attempt a saving throw against a spell or magical effect, but haven't rolled yet.</p>\n<hr />\n<p>You notice spirits that inhabit objects, learning which bring good fortune and which are unlucky. You focus on the power of a lucky object, granting you a +1 circumstance bonus to your saving throw against the triggering effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "leshy-superstition",
+                {
+                  "or": [
+                    "arcane",
+                    "divine",
+                    "primal",
+                    "occult"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "RollOption",
+              "option": "leshy-superstition",
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +348,80 @@
       "name": "Seedpod",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dWGa6cFSVrASTEfd",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seedpod",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your body produces a nearly endless supply of hard seedpods. You gain a seedpod ranged unarmed attack with a range increment of 30 feet that deals 1d4 bludgeoning damage. On a critical hit, a seedpod bursts, issuing forth a tangle of vegetation that imposes a –10-foot circumstance penalty on the target's Speed until the start of your next turn. Seedpods do not add critical specialization effects.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Seedpod]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "img": "icons/magic/nature/plant-poison-spit-green.webp",
+              "key": "Strike",
+              "range": {
+                "increment": 30
+              },
+              "traits": [
+                "unarmed"
+              ]
+            },
+            {
+              "definition": [
+                "item:id:{item|_id}"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "property": "traits",
+              "value": "manipulate"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "selector": "{item|_id}-damage",
+              "text": "PF2E.SpecificRule.Leshy.Seedpod.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +431,43 @@
       "name": "Shadow of the Wilds",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kDklfrprKTuTpcEE",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shadow of the Wilds",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>It's difficult to notice your passage through wild areas. As long as you're not in an urban environment, you're always considered to be @UUID[Compendium.pf2e.actionspf2e.Item.Cover Tracks]{Covering Tracks}, even if you chose a different activity in exploration mode.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +477,76 @@
       "name": "Undaunted",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1RygexXEjCKuR3Ps",
+        "folder": "aSW5ckyqL9NON3A3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Undaunted",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your spirit has endured many challenges over its long existence. You gain a +1 circumstance bonus to saves against emotion effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "item:trait:emotion"
+              ],
+              "selector": "saving-throw",
+              "text": "When you roll a success on a save against an emotion effect, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

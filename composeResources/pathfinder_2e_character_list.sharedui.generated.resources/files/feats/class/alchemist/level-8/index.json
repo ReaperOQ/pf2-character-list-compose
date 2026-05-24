@@ -7,6 +7,44 @@
       "name": "Alter Admixture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1cjjQL0z4ZVrrSAV",
+        "folder": "feOsShWg4TUR6E4C",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alter Admixture",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding or wearing an alchemist's toolkit.</p><hr /><p>Sometimes, you need to adapt your alchemical mixtures to new situations. In a process that takes 10 minutes, you change an item you created with advanced alchemy into a similar item. You can change an alchemical bomb into another type of alchemical bomb, an elixir into another type of elixir, or a poison into another type of poison. If it's unclear whether two alchemical consumables are similar, the GM decides. You must know the formula for the new item, and the new item must be of the same or lower item level than the original item. The new item still keeps the infused trait, and it remains potent as long as the original item would have.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +54,45 @@
       "name": "Glitter Crystals",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sYOaZoPqNBnppY51",
+        "folder": "feOsShWg4TUR6E4C",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Glitter Crystals",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can mix a blend of crushed flowers and alchemical salt into an alchemical elixir with the healing trait or alchemical food. Choose one of the following effects: reduce the drained condition by 1, reduce the stupefied condition by 1, remove the @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] condition, or remove the @UUID[Compendium.pf2e.conditionitems.Item.Deafened] condition. The creature who consumes the modified healing elixir or alchemical food gains this benefit in addition to the food or elixir's normal effects. This has no effect against permanent conditions.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist",
+              "healing"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +102,63 @@
       "name": "Improved Invigorating Elixir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "J9LjIYPyUmOim5r7",
+        "folder": "feOsShWg4TUR6E4C",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improved Invigorating Elixir",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Choose physical invigoration or mental invigoration, and add the listed conditions to those you can choose for an invigorating elixir you create to counteract:</p>\n<p><strong>Physical Invigoration</strong> @UUID[Compendium.pf2e.conditionitems.Item.Blinded], @UUID[Compendium.pf2e.conditionitems.Item.Deafened], @UUID[Compendium.pf2e.conditionitems.Item.Drained], @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed], @UUID[Compendium.pf2e.conditionitems.Item.Slowed]</p>\n<p><strong>Mental Invigoration</strong> @UUID[Compendium.pf2e.conditionitems.Item.Confused], controlled, @UUID[Compendium.pf2e.conditionitems.Item.Fleeing], @UUID[Compendium.pf2e.conditionitems.Item.Frightened], @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed], @UUID[Compendium.pf2e.conditionitems.Item.Slowed].</p><hr /><p><strong>Special</strong> You can select this feat a second time to choose a different type of invigoration and add its options to those you can choose.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Invigorating Elixir"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Alchemist.ImprovedInvigoratingElixir.Mental.Label",
+                  "value": "mental"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Alchemist.ImprovedInvigoratingElixir.Physical.Label",
+                  "value": "physical"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "improved-invigorating-elixir"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +168,126 @@
       "name": "Mutant Physique",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gQ2EvesPqLbISLQV",
+        "folder": "feOsShWg4TUR6E4C",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mutant Physique",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Basic mutagens that affect your physical form can bring out the beast within you, turn you nigh invincible, or make your body more elastic. While you're affected by one of the listed mutagens, you get an additional benefit.</p><ul><li><strong>@UUID[Compendium.pf2e.equipment-srd.Item.Bestial Mutagen (Lesser)]{Bestial Mutagen}</strong> You gain the mutagen's item bonus to your Intimidation checks. In addition, you increase the damage die size of your claws and jaws by one step, and they gain the deadly d10 trait.</li><li><strong>@UUID[Compendium.pf2e.equipment-srd.Item.Juggernaut Mutagen (Lesser)]{Juggernaut Mutagen}</strong> You gain resistance to all physical damage equal to half your level.</li><li><p><strong>@UUID[Compendium.pf2e.equipment-srd.Item.Quicksilver Mutagen (Lesser)]{Quicksilver Mutagen}</strong> You can stretch your legs and Step up to 10 feet, and you can squish and compress your body, allowing you to make it through tight spaces as if you were one size smaller, in addition to any effect from Squeezing.</p></li></ul><hr /><p><strong>Special</strong> If you can be under the effects of multiple mutagens (with the @UUID[Compendium.pf2e.classfeatures.Item.Greater Field Discovery (Mutagenist)]{mutagenist greater field discovery}, for example), you get all relevant benefits.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "item:tag:bestial-mutagen-strike"
+              ],
+              "property": "damage-dice-faces"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:bestial-mutagen-strike"
+              ],
+              "priority": 121,
+              "property": "traits",
+              "value": "deadly-d10"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "self:effect:bestial-mutagen-lesser",
+                    "self:effect:bestial-mutagen-moderate",
+                    "self:effect:bestial-mutagen-greater",
+                    "self:effect:bestial-mutagen-major"
+                  ]
+                }
+              ],
+              "selector": "intimidation",
+              "slug": "mutant-physique-intimidation",
+              "type": "item",
+              "value": 1
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "self:effect:bestial-mutagen-moderate"
+              ],
+              "selector": "intimidation",
+              "slug": "mutant-physique-intimidation",
+              "value": 2
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "self:effect:bestial-mutagen-greater"
+              ],
+              "selector": "intimidation",
+              "slug": "mutant-physique-intimidation",
+              "value": 3
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "self:effect:bestial-mutagen-major"
+              ],
+              "selector": "intimidation",
+              "slug": "mutant-physique-intimidation",
+              "value": 4
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                {
+                  "or": [
+                    "self:effect:juggernaut-mutagen-lesser",
+                    "self:effect:juggernaut-mutagen-moderate",
+                    "self:effect:juggernaut-mutagen-greater",
+                    "self:effect:juggernaut-mutagen-major"
+                  ]
+                }
+              ],
+              "type": "physical",
+              "value": "floor(@actor.level/2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +297,43 @@
       "name": "Pinpoint Poisoner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XtIPmZ3Ihq5NJHP2",
+        "folder": "feOsShWg4TUR6E4C",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pinpoint Poisoner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Unsuspecting targets are especially vulnerable to your poisons. When you successfully Strike an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] creature with a poisoned weapon or expose an off-guard creature to an inhaled poison, that creature takes a –2 circumstance penalty to its initial save against that poison.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pinpoint Poisoner]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +343,62 @@
       "name": "Sticky Bomb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zXKfKKOxht0b0XNL",
+        "folder": "feOsShWg4TUR6E4C",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sticky Bomb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can mix in a sticky additive to an alchemical bomb to make its contents adhere and continue to deal damage. A creature hit by a sticky bomb also takes persistent damage equal to and of the same type as the bomb's splash damage. Use the splash damage amount listed in the bomb's stat block, even if you used an ability to change the splash damage dealt. If the bomb already deals persistent damage, combine the two amounts.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "alchemical-bomb-base-type-damage",
+              "key": "RollOption",
+              "option": "sticky-bomb",
+              "toggleable": true
+            },
+            {
+              "damageCategory": "persistent",
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:splash",
+                "sticky-bomb"
+              ],
+              "selector": "alchemical-bomb-base-type-damage",
+              "slug": "sticky-bomb",
+              "value": "@weapon.system.splashDamage.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

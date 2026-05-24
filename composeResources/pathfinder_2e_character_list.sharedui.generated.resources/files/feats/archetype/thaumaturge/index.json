@@ -7,6 +7,48 @@
       "name": "Advanced Thaumaturgy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FIVuc2TRaLXiCGkn",
+        "folder": "dqmVv4Bbn1NYI7ey",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Thaumaturgy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one thaumaturge feat. For the purpose of meeting its prerequisites, your thaumaturge level is equal to half your character level.</p><hr /><p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another thaumaturge feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Thaumaturgy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +58,71 @@
       "name": "Basic Thaumaturgy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YehcIyxY5KnhPlx5",
+        "folder": "dqmVv4Bbn1NYI7ey",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Thaumaturgy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level thaumaturge feat of your choice.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Thaumaturge Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:thaumaturge",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicThaumaturgy",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicThaumaturgy}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +132,52 @@
       "name": "Implement Initiate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mrM07U3MyElcLEx4",
+        "folder": "dqmVv4Bbn1NYI7ey",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Implement Initiate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Mastery of an implement is the sign of a studied thaumaturge. You gain your implement's initiate benefit. If the benefit affects the target of @UUID[Compendium.pf2e.actionspf2e.Item.Exploit Vulnerability], for you it affects the target of @UUID[Compendium.pf2e.actionspf2e.Item.Glimpse Vulnerability] instead.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Thaumaturge Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "{actor|flags.system.thaumaturge.initiateBenefit}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +187,50 @@
       "name": "Magical Knowledge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yOybxBkebeeuHWuy",
+        "folder": "dqmVv4Bbn1NYI7ey",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magical Knowledge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Increase your proficiency rank in one of Arcana, Nature, Occultism, or Religion from expert to master and in another from trained to expert. You gain a skill feat associated with each of the skills you chose.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Thaumaturge Dedication"
+              },
+              {
+                "value": "trained in at least one of Arcana, Nature, Occultism, or Religion and expert in at least one other"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +240,57 @@
       "name": "Resolute",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qss6GKzSYGqKgY4b",
+        "folder": "dqmVv4Bbn1NYI7ey",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resolute",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've tempered your mind and become resolute against effects that strain your willpower. Your proficiency rank for Will saves increases to master.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Thaumaturge Dedication"
+              },
+              {
+                "value": "expert in Will"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "will": {
+                "rank": 3
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +300,108 @@
       "name": "Thaumaturge Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gQAQRHxpFKEkNQFs",
+        "folder": "dqmVv4Bbn1NYI7ey",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thaumaturge Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've uncovered the hidden art of basic thaumaturgy. You become trained in thaumaturge class DC. Choose an implement; you can use it to Glimpse Vulnerability, but don't gain its benefits. You also gain a few esoterica, allowing you to use esoterica actions. You become trained in your choice of Arcana, Nature, Occultism, or Religion; if you were already trained in these, you become trained in a skill of your choice. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Glimpse Vulnerability] action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.K9Krytj8OtUvQxoc]{Thaumaturge}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Charisma +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:thaumaturge-implement"
+                ]
+              },
+              "flag": "implement",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Thaumaturge.Implement.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.implement}"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Arcana",
+                  "value": "arcana"
+                },
+                {
+                  "label": "PF2E.Skill.Nature",
+                  "value": "nature"
+                },
+                {
+                  "label": "PF2E.Skill.Occultism",
+                  "value": "occultism"
+                },
+                {
+                  "label": "PF2E.Skill.Religion",
+                  "value": "religion"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill",
+              "rollOption": "thaumaturge-dedication"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Glimpse Vulnerability"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "thaumaturge": {
+                "attribute": "cha",
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

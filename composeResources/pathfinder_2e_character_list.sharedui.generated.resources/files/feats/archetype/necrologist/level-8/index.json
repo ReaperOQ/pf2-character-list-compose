@@ -7,6 +7,62 @@
       "name": "Dismal Harvest",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uaUbQsdBIqCvJc2G",
+        "folder": "kmH1pdNz3BCxfttm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dismal Harvest",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Trigger</strong> Your last action was a Mobbing Assault made by your horde that reduced at least one living creature to 0 Hit Points.</p><hr /><p>The expiring breaths of your enemies fuel your power. You gain 15 temporary Hit Points that last for 1 minute. The temporary Hit Points you gain increase by 5 at 10th level and every 2 levels thereafter.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Necrologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Dismal Harvest",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Dismal Harvest"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +72,64 @@
       "name": "Grasping Corpses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lJxoW6ser5naDGqf",
+        "folder": "kmH1pdNz3BCxfttm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grasping Corpses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your foes are left reeling from the attacks made by the zombies or skeletons of your horde. A creature that is damaged by your horde's @UUID[Compendium.pf2e.actionspf2e.Item.Mobbing Assault] is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Necrologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                {
+                  "not": "in-the-hordes-grip"
+                }
+              ],
+              "selector": "mobbing-assault-inline-damage",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +139,52 @@
       "name": "Shambling March",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PScCKDb9YujudTpa",
+        "folder": "kmH1pdNz3BCxfttm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shambling March",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your horde is swifter, marching in time to your command. Increase the Speed of your horde by 10 feet.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Necrologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

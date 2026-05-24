@@ -9,6 +9,61 @@
       "name": "Crescent Cross Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FZVKV1529A2jWYSH",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crescent Cross Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have familiarity with the @UUID[Compendium.pf2e.equipment-srd.Item.Crescent Cross], an ingenious weapon that combines an arm-mounted, multi-chamber crossbow with a crescent-shaped blade. For the purposes of proficiency, you treat both its configurations as simple weapons.</p>\n<p>Feats and abilities from this archetype that normally work with a gauntlet bow also work with your crescent cross, treating the melee form of the crescent cross as a gauntlet where appropriate. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Crescent Spray] action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:base:crescent-cross"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.Weapon.Base.crescent-cross",
+              "sameAs": "simple"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -18,6 +73,52 @@
       "name": "Infiltration Assassination",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8GJOPesRzytyouAU",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Infiltration Assassination",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wearing a loaded gauntlet bow.</p><hr /><p>With a high-priority target in reach, you quickly move to eliminate them. Make a melee Strike using your gauntlet bow as a gauntlet. If the Strike is successful, you automatically latch onto the target, giving them the @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] condition, then make a ranged Strike against them with your gauntlet bow. This Strike does not trigger reactions normally triggered by ranged attacks. If you are holding or wearing an injury poison, you can apply it to the bolt used in the attack as a free action before making the ranged Strike.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -27,6 +128,52 @@
       "name": "Infiltrator's Blitz",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HRg8cnxy0uiJ1pqE",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Infiltrator's Blitz",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're not @UUID[Compendium.pf2e.conditionitems.Item.Fatigued].</p><hr /><p>Though your training is meant to ensure you don't get caught by your enemies, your missions are often high risk, and sometimes the only option you have left when things go wrong is to unleash a blistering torrent of violence while running away as fast as possible.</p>\n<p>You can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] any effect that is currently immobilizing you. You gain a +10-foot circumstance bonus to your Speed and can Stride up to three times. At any point during each of these Strides, you can Strike with a weapon you have familiarity with from this archetype and can then immediately Interact to reload that weapon.</p>\n<p>After using Infiltrator's Blitz, you become fatigued for 1 minute.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -36,6 +183,55 @@
       "name": "Infiltrator's Reload",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2RwRguv3J0CbzjNg",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Infiltrator's Reload",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You specialize in reloading while preparing for the next step in your infiltration. Interact to reload a weapon you have familiarity with from this archetype, then either Hide, @UUID[Compendium.pf2e.actionspf2e.Item.Sneak], or @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              },
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -45,6 +241,92 @@
       "name": "Lethargy Poisoner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HlSwpxreIfsglTJ8",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lethargy Poisoner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned more than the use of hand crossbows. During your daily preparations, you can prepare a dose of @UUID[Compendium.pf2e.equipment-srd.Item.Lethargy Poison] from ordinary materials in a wilderness or urban area. If you're an expert in Crafting, you can instead craft a dose of @UUID[Compendium.pf2e.equipment-srd.Item.Stupor Poison]. You can prepare two doses (of either poison) if you're a master in Crafting and three doses if you're legendary in Crafting. The save DC for this poison is equal to your class DC. Only you can use these poisons, and they expire the next time you make your daily preparations. The GM might decide that the area you're in is too barren to provide the materials you need for this feat.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              },
+              {
+                "value": "trained in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "craftableItems": [
+                "item:slug:lethargy-poison"
+              ],
+              "isDailyPrep": true,
+              "key": "CraftingAbility",
+              "maxSlots": "ternary(gte(@actor.system.skills.crafting.rank,3),3,1)",
+              "priority": 60,
+              "slug": "lethargy-poisoner"
+            },
+            {
+              "craftableItems": [
+                "item:slug:stupor-poison"
+              ],
+              "key": "CraftingAbility",
+              "predicate": [
+                {
+                  "gte": [
+                    "skill:crafting:rank",
+                    3
+                  ]
+                }
+              ],
+              "priority": 60,
+              "slug": "lethargy-poisoner"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "item:trait:infused",
+                {
+                  "or": [
+                    "item:slug:lethargy-poison",
+                    "item:slug:stupor-poison"
+                  ]
+                }
+              ],
+              "selector": "inline-dc",
+              "value": "@actor.system.attributes.classDC.totalModifier"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -54,6 +336,50 @@
       "name": "Reloading Trick",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0idzh4dww7B7cbnW",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reloading Trick",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding an unloaded hand crossbow or an unloaded gauntlet bow.</p><hr /><p>You can fire off a single shot even when it seems like you are unprepared. You Interact to reload your hand crossbow or gauntlet bow and attempt a ranged Strike with it.</p><hr /><p><strong>Special</strong> If you have the Repeating Hand Crossbow Training feat, you can use this feat with a repeating hand crossbow to load an entire magazine, but the speed means you can fire only one bolt before the magazine jams and becomes useless. You must fully replace a magazine as normal before firing with a repeating hand crossbow after using this ability.</p>"
+          },
+          "frequency": null,
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -63,6 +389,47 @@
       "name": "Repeating Hand Crossbow Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HvPvyeXM2iMK4OYf",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Repeating Hand Crossbow Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The specific needs of your organization or mission warrant your use of the latest in ingenious crossbow technology. You gain access to repeating hand crossbows and repeater bandoliers.</p>\n<p>If you have @UUID[Compendium.pf2e.feats-srd.Item.Running Reload] or a similar feat that allows you to reload and perform another action or activity as a single action, you can use that action more efficiently with a repeating weapon. You can use the action as a 3-action activity to reload a magazine into a repeating weapon after you perform its other granted action, or as a 2-action activity if you use a magazine from a repeater bandolier.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -72,6 +439,52 @@
       "name": "Unseen Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3ka9o7vaEXoPWKFS",
+        "folder": "lcAbFFHgv56Zo5C3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unseen Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attacks are deadly, silent, and nearly untraceable. The first time each round that you attempt to Strike a target you are @UUID[Compendium.pf2e.conditionitems.Item.Undetected] or @UUID[Compendium.pf2e.conditionitems.Item.Unnoticed] by while using a weapon you have familiarity with from this archetype, you are @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from the target after the attack, as they cannot tell where the attack came from.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crossbow Infiltrator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

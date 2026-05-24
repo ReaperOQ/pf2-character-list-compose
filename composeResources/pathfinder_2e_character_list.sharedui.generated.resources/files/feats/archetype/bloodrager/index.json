@@ -7,6 +7,48 @@
       "name": "Blood Calls Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "svBQNCS2ZCPlKm6f",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood Calls Blood",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fail a flat check to Cast a Spell or your spell would be disrupted by another creature's reaction.</p><hr /><p>The magical potency of your blood will not be denied. You finish Casting the Spell, then become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1} or increase the value of your drained condition by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bloodrager Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +58,93 @@
       "name": "Bloodrager Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EcyPTxSwtdqrOtxY",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloodrager Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Drinking powerful blood has awakened magical potential within you. You gain a spell repertoire with two cantrips of your choice, from either the arcane or divine spell list. You choose these cantrips from the common spells for your tradition or from other spells you have access to on that tradition's spell list. At least one cantrip must require a spell attack roll. You're trained in spell attack modifier and spell DC. Your key spellcasting attribute for these spells is Charisma. Spells in your repertoire gain the rage trait while you are raging, and when you Cast a Spell from your repertoire, you become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1} (or increase the value of your drained condition by 1); you can reduce the value of this condition only by Harvesting Blood (see below). You become trained in Arcana if you chose arcane cantrips or Religion if you chose divine cantrips. If you were already trained in this skill, you become trained in a skill of your choice. You also gain the Harvest Blood action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.V87pMN1WuIHaoYpQ]{Bloodrager}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "location": "class-2",
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bloodrager"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitArcane",
+                  "value": "arcana"
+                },
+                {
+                  "label": "PF2E.TraitDivine",
+                  "value": "religion"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Tradition"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Harvest Blood"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "property": "traits",
+              "value": "rage"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "class",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +154,73 @@
       "name": "Exultant Blood Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Iqlv8dQHGweSNW7V",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exultant Blood Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The magic in your blood sings an exultant song of battle. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#master-spellcasting-feat]{master spellcasting} benefits. Increase the spell slots you gain from the bloodrager archetype feats by 1 for each spell rank. In addition, when you Cast a Spell from your repertoire and you are at least @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2}, double the extra damage dealt by that spell from Rage instead.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Surging Blood Magic"
+              },
+              {
+                "value": "legendary in Arcana or Religion, depending on your chosen tradition"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "override",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:condition:drained",
+                    2
+                  ]
+                }
+              ],
+              "selector": "attack-spell-damage",
+              "slug": "blood-rage-spell",
+              "value": 16
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 3
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +230,49 @@
       "name": "Hematocritical",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AY3XRv2j0cZvHaks",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hematocritical",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a Strike that critically hit a creature that isn't immune to bleed damage.</p><hr /><p>You bathe in the arterial fluids of your enemy, drinking deep of their freed essence to empower your magic and increase your spellcasting efficacy. If your next action is to Cast a Spell that requires a spell attack roll, you roll the spell attack roll twice and use the better result; this is a fortune effect. Alternatively, if your next action is to cast a spell that requires the creature damaged by the triggering strike to attempt a save, they roll twice and take the lower result; this is a misfortune effect.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bloodrager Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +282,66 @@
       "name": "Rising Blood Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QRqs9NIWeh0ONRSP",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rising Blood Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The power within your blood grows. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#basic-spellcasting-feat]{Basic Spellcasting Feat} benefits. Each time you gain a spell slot of a new rank from the bloodrager archetype, add a common spell of the appropriate tradition and rank to your repertoire. In addition, when you Cast a Spell from your repertoire and you are at least @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}, increase the extra damage dealt by that spell from Rage by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bloodrager Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:condition:drained",
+                    1
+                  ]
+                },
+                {
+                  "not": "item:surging-blood-magic"
+                }
+              ],
+              "selector": "attack-spell-damage",
+              "slug": "blood-rage-spell",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +351,48 @@
       "name": "Siphon Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XKAlLI17siAXFFyD",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Siphon Magic",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was to Harvest the Blood of a creature that can cast spells</p><hr /><p>You gorge upon the magical energies of your foe's blood. You regain one expended spell slot that must be of a lower rank than the highest rank spell you can cast. You become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1} or increase the value of your drained condition by 1.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bloodrager Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +402,51 @@
       "name": "Spelldrinker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XhblStN7dwnWKmrO",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spelldrinker",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was to Harvest Blood.</p>\n<p><strong>Frequency</strong> once per hour</p><hr /><p>You temporarily add a 3rd-rank spell to your spell repertoire, as determined by the type of creature whose blood you just drank (see table below). If the creature has more than one of the listed traits, choose one and gain the appropriate spell. If the granted spell is not on your chosen tradition's list, you cast the spell as though it was from your chosen tradition. The spell is removed from your spell repertoire after 24 hours, the next time you use Spelldrinker, or when you next make your daily preparations, whichever comes first.</p><table class=\"pf2-table remaster\"><thead><tr><th>Trait</th><th>Spell</th><th>Notes</th></tr></thead><tbody><tr><td>Aberration</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Vampiric Feast]</td><td></td></tr><tr><td>Animal, beast</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Summon Animal]</td><td>Summoned creatures appear as otherworldly versions of the creature whose blood you drank.</td></tr><tr><td>Celestial</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Holy Light]</td><td></td></tr><tr><td>Dragon</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Blazing Bolt]</td><td>Instead of fire damage, this spell deals the same damage as the dragon breath of the dragon whose blood you drank (if applicable).</td></tr><tr><td>Fey</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Wall of Thorns]</td><td></td></tr><tr><td>Fiend</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Chilling Darkness]</td><td></td></tr><tr><td>Giant</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Pummeling Rubble]</td><td></td></tr><tr><td>Humanoid</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Crisis of Faith]</td><td></td></tr><tr><td>Monitor</td><td>@UUID[Compendium.pf2e.spells-srd.Item.Impending Doom]</td><td></td></tr></tbody></table><hr /><p><strong>Special</strong> If you have @UUID[Compendium.pf2e.feats-srd.Item.Surging Blood Magic], you can add the spell at 4th rank. If you have @UUID[Compendium.pf2e.feats-srd.Item.Exultant Blood Magic], you can add the spell at 7th rank.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rising Blood Magic"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +456,73 @@
       "name": "Surging Blood Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LLhVVhDPv9Z8Kd1k",
+        "folder": "e4vGOrE8QgzFscPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Surging Blood Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your blood courses with magic. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#expert-spellcasting-feat]{Expert Spellcasting Feat} benefits. In addition, when you Cast a Spell from your repertoire and you are at least @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2}, increase the extra damage dealt by that spell from Rage by an additional 2 (for a total of 3).</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rising Blood Magic"
+              },
+              {
+                "value": "master in Arcana or Religion, depending on your chosen tradition"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:condition:drained",
+                    2
+                  ]
+                }
+              ],
+              "selector": "attack-spell-damage",
+              "slug": "blood-rage-spell",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

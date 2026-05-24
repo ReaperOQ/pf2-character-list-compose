@@ -7,6 +7,109 @@
       "name": "Deadly Grace",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e8ChYAaQ9Aa8aZES",
+        "folder": "3nvonM2iBQeTtyBL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deadly Grace",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your graceful attacks are especially powerful. When you score a critical hit with an agile or finesse melee weapon that has the deadly trait, you double the number of dice from that trait. When you wield an agile or finesse melee weapon that doesn't have the deadly trait, it gains the deadly d8 trait instead.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:equipped",
+                {
+                  "or": [
+                    "item:trait:agile",
+                    "item:trait:finesse"
+                  ]
+                },
+                {
+                  "nor": [
+                    "item:trait:deadly-d4",
+                    "item:trait:deadly-d6",
+                    "item:trait:deadly-d8",
+                    "item:trait:deadly-d10",
+                    "item:trait:deadly-d12"
+                  ]
+                }
+              ],
+              "property": "other-tags",
+              "value": "deadly-from-deadly-grace"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:deadly-from-deadly-grace"
+              ],
+              "priority": 121,
+              "property": "traits",
+              "value": "deadly-d8"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "multiply",
+              "predicate": [
+                {
+                  "not": "item:tag:deadly-from-deadly-grace"
+                },
+                {
+                  "or": [
+                    "item:trait:agile",
+                    "item:trait:finesse"
+                  ]
+                },
+                {
+                  "or": [
+                    "dice:slug:deadly-d4",
+                    "dice:slug:deadly-d6",
+                    "dice:slug:deadly-d8",
+                    "dice:slug:deadly-d10",
+                    "dice:slug:deadly-d12"
+                  ]
+                }
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "strike-damage"
+              ],
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +119,53 @@
       "name": "Felicitous Riposte",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "D71A2ZQfz9MVndqI",
+        "folder": "3nvonM2iBQeTtyBL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Felicitous Riposte",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You take advantage of your foe's openings with uncanny odds.</p>\n<p>When you make an @UUID[Compendium.pf2e.classfeatures.Item.Opportune Riposte], roll twice on the attack roll and take the better result.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "keep": "higher",
+              "key": "RollTwice",
+              "predicate": [
+                "opportune-riposte"
+              ],
+              "selector": "strike-attack-roll"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +175,78 @@
       "name": "Revitalizing Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "83zzG4XBiL5I3NZv",
+        "folder": "3nvonM2iBQeTtyBL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Revitalizing Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your swagger instills confidence in you and your allies. Make a Strike. On a hit, you and all allies within 30 feet gain temporary Hit Points equal to half your level.</p>\n<p><strong>Failure</strong> You gain temporary Hit Points equal to half your level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Revitalizing Finisher]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Revitalizing",
+                  "value": "revitalizing"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure",
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "finisher:revitalizing"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

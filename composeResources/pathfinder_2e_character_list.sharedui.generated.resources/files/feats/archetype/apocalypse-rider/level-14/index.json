@@ -7,6 +7,48 @@
       "name": "Behold, a Pale Horse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oO8Cj1PmuoKuwpit",
+        "folder": "e96RfkchucyM8CyV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Behold, a Pale Horse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your apocalypse mount becomes worthier of an eventual Rider of the Apocalypse. Your apocalypse mount gains one specialization of your choice.</p><hr /><p><strong>Special</strong> You can select this feat up to three times. Each time, add a different specialization to your apocalypse mount. Your apocalypse mount can't have more than three specializations.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +58,52 @@
       "name": "History of Violence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "T0LazeBYiLnUzQXC",
+        "folder": "e96RfkchucyM8CyV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "History of Violence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>Your attacks bring with them echoes of previous battles, calling the unquiet victims of your most brutal acts to savage your opponents. Make a Strike. If this Strike hits, you deal additional void damage equal to your key attribute modifier to the target and all enemies within 30 feet. If your attack is a critical hit, you deal twice as much damage instead, and the target of your Strike takes persistent void damage equal to your key attribute modifier as your fallen foes attempt to drag the target into oblivion with them. This Strike counts as two attacks for calculating your multiple attack penalty.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +113,110 @@
       "name": "Jousting Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tuhEOBeX0sVnRoWH",
+        "folder": "e96RfkchucyM8CyV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jousting Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While riding your apocalypse mount, any two-handed weapon you wield gains the jousting trait with a die size equal to one die size lower than the weapon's normal damage die.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "jousting-mount",
+              "toggleable": true
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:usage:hands:2",
+                "jousting-mount",
+                "item:damage:die:faces:6",
+                {
+                  "not": "item:trait:jousting-d6"
+                }
+              ],
+              "property": "traits",
+              "value": "jousting-d4"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:usage:hands:2",
+                "jousting-mount",
+                "item:damage:die:faces:8",
+                {
+                  "not": "item:trait:jousting-d8"
+                }
+              ],
+              "property": "traits",
+              "value": "jousting-d6"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:usage:hands:2",
+                "jousting-mount",
+                "item:damage:die:faces:10",
+                {
+                  "not": "item:trait:jousting-d10"
+                }
+              ],
+              "property": "traits",
+              "value": "jousting-d8"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:usage:hands:2",
+                "jousting-mount",
+                "item:damage:die:faces:12"
+              ],
+              "property": "traits",
+              "value": "jousting-d10"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +226,52 @@
       "name": "One Among the Masses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "otELTaTnOCea7DZw",
+        "folder": "e96RfkchucyM8CyV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "One Among the Masses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "classfeature",
+          "description": {
+            "value": "<p>It will take more than a gathered mass of foes to take you down. You gain resistance equal to your level to damage dealt by swarms, troops, and creatures who occupy the same space as you. In addition, you can briefly menace large groups of enemies to step aside. You gain the@UUID[Compendium.pf2e.actionspf2e.Item.Overawe Crowd] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Overawe Crowd"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "classfeature"
     },
@@ -43,6 +281,48 @@
       "name": "Putrefaction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "O0YJxlWgO1BPX7w5",
+        "folder": "e96RfkchucyM8CyV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Putrefaction",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spoil the food and water nearby, even within your foes' bodies. Spend a Mythic Point. Enemies within 60 feet of you must succeed at a @Check[fortitude|against:class-spell] save against your class DC or spell DC (whichever is higher) or become @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1}. You also cause edible food to rot and potable water to turn brackish within the area. Choose a number of potions or alchemical elixirs within the area equal to your key attribute modifier and attempt a counteract against each of them using @Check[occultism] or @Check[religion] at mythic proficiency. Your counteract rank is half your level. If you succeed, the elixir or potion spoils and becomes a mundane item.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

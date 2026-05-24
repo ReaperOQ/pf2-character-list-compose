@@ -7,6 +7,51 @@
       "name": "Black Powder Embodiment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pWbNhfBiskV4n58a",
+        "folder": "8scpZnradJHp2Mwl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Black Powder Embodiment",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded magical firearm or crossbow.</p><hr /><p>You merge your body with your ammunition, enabling you to travel the same path as your bolt or bullet. Strike a creature with the required weapon. On a success, if the target was within 120 feet, you and all your gear are teleported to an open space of your choice within 10 feet of the target.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spellshot Dedication"
+              },
+              {
+                "value": "master in Arcana"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "teleportation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +61,54 @@
       "name": "Call Gun",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SE38R6zpv2XelzZk",
+        "folder": "8scpZnradJHp2Mwl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call Gun",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You build a powerful magical connection with a chosen gun or crossbow. During your daily preparations, choose a single crossbow or firearm. Until your next daily preparations, you can use the @UUID[Compendium.pf2e.actionspf2e.Item.Call Gun] action to call the gun to your hand.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spellshot Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Call Gun"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical",
+              "teleportation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +118,57 @@
       "name": "Fulminating Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "o3J79hnr00ztcwtT",
+        "folder": "8scpZnradJHp2Mwl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fulminating Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round.</p><hr /><p>You channel magic into your next shot. Choose acid, cold, electricity, or fire. If you hit with your next attack roll using a firearm or crossbow before the end of your turn, you deal 1d6 additional damage of this type. At 12th level, this increases to 2d6 additional damage, and at 18th level, it increases to 3d6 additional damage.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round",
+            "value": 1
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spellshot Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Fulminating Shot",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Fulminating Shot"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +178,52 @@
       "name": "Phase Bullet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nY8HtHNJMqP0hz3v",
+        "folder": "8scpZnradJHp2Mwl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Phase Bullet",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You can aim your bullets not just in three normal dimensions, but in additional dimensions as well, removing all obstacles between you and your target. Attempt a crossbow or firearm Strike against a foe who's observed or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] to you (but not undetected). The ammunition travels to your target in a straight line, passing through any non-magical barriers or walls in its way, though magical barriers and force effects stop the bullet. The shot ignores all cover, the @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition, the hidden condition, and circumstance bonuses to AC from shields. It has a +4 status bonus to hit creatures wearing any type of armor. The Strike's damage can't be reduced with a Shield Block reaction using a non-magical shield.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spellshot Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +233,53 @@
       "name": "Spell-Woven Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XfGJSMH4CifHXMtw",
+        "folder": "8scpZnradJHp2Mwl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spell-Woven Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You combine your own magic with that of your magical crossbow or firearm. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Spell-Woven Shot] activity.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spellshot Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Spell-Woven Shot"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +289,65 @@
       "name": "Spellshot Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BwDIwjHasZwcd61Z",
+        "folder": "8scpZnradJHp2Mwl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spellshot Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You cast arcane spells like a wizard, gaining a spellbook with four common arcane cantrips of your choice. You gain the Cast a Spell activity. You can prepare two cantrips each day from your spellbook. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for spellshot archetype spells is Intelligence, and they are arcane spells. You become trained in Arcana; if you were already trained in Arcana, you instead become trained in a skill of your choice. This feat counts as @UUID[Compendium.pf2e.feats-srd.Item.Wizard Dedication] for the prerequisites of @UUID[Compendium.pf2e.feats-srd.Item.Basic Wizard Spellcasting].</p><hr /><p><strong>Special</strong> You can't select another dedication feat other than @UUID[Compendium.pf2e.feats-srd.Item.Beast Gunner Dedication] until you've gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.FJGPBhYmD7xTFsrW]{Spellshot} or @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.jTiXRtNNvMOnsg98]{Beast Gunner} archetypes.</p>"
+          },
+          "level": {
+            "taken": 2,
+            "value": 2
+          },
+          "location": "class-2",
+          "prerequisites": {
+            "value": [
+              {
+                "value": "way of the spellshot"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "class",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

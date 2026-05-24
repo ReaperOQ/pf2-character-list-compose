@@ -7,6 +7,58 @@
       "name": "Aggravating Scratch",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "G6rCbMrHacYWNu1K",
+        "folder": "kPQ4IKW20WGv71zW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aggravating Scratch",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your claws carry an irritant that is harmless to you but can be damaging to others. Your claw Strikes deal an additional 1d4 persistent poison damage on a critical hit.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "claw unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "category": "persistent",
+              "critical": true,
+              "damageType": "poison",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "selector": "claw-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk",
+              "disease"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +68,43 @@
       "name": "Evade Doom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l4ux6Mn2fklB2cXM",
+        "folder": "kPQ4IKW20WGv71zW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Evade Doom",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can elude supernatural disaster. When you would gain the @UUID[Compendium.pf2e.conditionitems.Item.Doomed] condition, you can attempt a @Check[flat|dc:17] check. On a success, you don't gain the doomed condition.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +114,47 @@
       "name": "Luck of the Clowder",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d022Gp8PjS4Q0ZAC",
+        "folder": "kPQ4IKW20WGv71zW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Luck of the Clowder",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When you use @UUID[Compendium.pf2e.feats-srd.Item.Cat's Luck] to reroll, any creatures you choose within 10 feet who also just failed against the same effect (such as a single spell) can also reroll their saving throws and use the better result.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cat's Luck"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +164,47 @@
       "name": "Predator's Growl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WQa6PxkOgyvRpaaM",
+        "folder": "kPQ4IKW20WGv71zW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Predator's Growl",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You successfully @UUID[Compendium.pf2e.actionspf2e.Item.Seek] a @UUID[Compendium.pf2e.conditionitems.Item.Hidden] or @UUID[Compendium.pf2e.conditionitems.Item.Undetected] creature.</p><hr /><p>You give a throaty growl to attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a creature you just found. You don't take the -4 penalty for not sharing a language with the creature.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +214,44 @@
       "name": "Silent Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HPW7Qi02lkVprW6V",
+        "folder": "kPQ4IKW20WGv71zW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Silent Step",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You Step, then @UUID[Compendium.pf2e.actionspf2e.Item.Hide] or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak]. You still need to meet the requirements to Hide or Sneak, as normal.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +261,43 @@
       "name": "Wary Skulker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fu1cTh93zgGweduf",
+        "folder": "kPQ4IKW20WGv71zW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wary Skulker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can perform the @UUID[Compendium.pf2e.actionspf2e.Item.Scout] exploration activity at the same time as the @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] exploration activity.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

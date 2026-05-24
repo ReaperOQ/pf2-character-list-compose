@@ -7,6 +7,55 @@
       "name": "Eliminate Red Herrings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wNr02jsG5nRF23YO",
+        "folder": "6R0mUPnUZrsI8pL3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eliminate Red Herrings",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have a keen sense for avoiding spurious lines of inquiry. When you roll a critical failure on a skill check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] related to a question about one of your active investigations, you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "criticalFailure": "to-failure"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "pursue-a-lead",
+                "action:recall-knowledge"
+              ],
+              "selector": "skill-check"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +65,65 @@
       "name": "Flexible Studies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9bgl6qYWKHzqWZj0",
+        "folder": "6R0mUPnUZrsI8pL3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flexible Studies",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've collected a cross-section of information on various disciplines you can refer to when preparing for various tasks. During your daily preparations, you can cram on a certain subject to become temporarily trained in one skill of your choice. This proficiency lasts until you prepare again. As this proficiency is temporary, you can't use it as a prerequisite for a permanent character option like a skill increase or a feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "flexible-studies",
+              "phase": "beforeDerived",
+              "suboptions": {
+                "config": "skills",
+                "predicate": [
+                  "skill:{choice|value}:rank:0"
+                ]
+              },
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.flexibleStudies}.rank",
+              "phase": "beforeDerived",
+              "priority": 60,
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +133,58 @@
       "name": "Known Weaknesses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iWvpq3uDZcXvBJj8",
+        "folder": "6R0mUPnUZrsI8pL3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Known Weaknesses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whenever you @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem], you can also attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] as part of that action before rolling the d20. If you critically succeed at the Recall Knowledge check, you notice a weakness and can convey the information to allies to grant each of them a +1 circumstance bonus to their next attack roll against the subject, as long as their attack is made before the beginning of your next turn. If you choose an attack stratagem, this bonus applies to that attack roll too.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Known Weaknesses]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:devise-a-stratagem"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +194,55 @@
       "name": "Takedown Expert",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yPWNbTqOIKdkwaVq",
+        "folder": "6R0mUPnUZrsI8pL3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Takedown Expert",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've mastered combat practices that let you get up close and bring down perpetrators alive. You can use your Intelligence modifier on attack rolls for an attack stratagem if you're using a weapon of the club group in one hand (like a club or staff), in addition to the usual weapons, and those Strikes qualify for your strategic strike. Additionally, you can make any of your Strikes nonlethal without taking the normal –2 penalty.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "ability": "int",
+              "key": "FlatModifier",
+              "predicate": [
+                "class:investigator",
+                "target:mark:devise-a-stratagem",
+                "item:hands-held:1"
+              ],
+              "selector": "club-group-attack-roll",
+              "type": "ability"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +252,43 @@
       "name": "That's Odd",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pIHjH1x0AVtiX5Tv",
+        "folder": "6R0mUPnUZrsI8pL3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "That's Odd",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you enter a new location, such as a room or corridor, you immediately notice one thing out of the ordinary. The GM determines what it is, or whether there's nothing reasonable to pick up, skipping obvious clues that can be easily noticed without a check or specifically looking for them. You learn only that an area or object is suspicious, but not why it's suspicious. For example, if you entered a study with a large bloodstain on the ground, the bloodstain is so obviously suspicious it's evident to you already, so the GM might note that there's something suspicious about the desk drawer instead. You would then need to investigate the drawer further to find out what specifically is out of the ordinary. If you wish, you can Pursue a Lead concerning this detail even if you have Pursued a Lead less than 10 minutes ago.</p>\n<p>That's Odd doesn't reveal whether creatures are suspicious. You don't typically get any benefit when you leave and come back to a place, though if a major change has happened there and time has passed, the GM might determine that you do.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +298,43 @@
       "name": "Underworld Investigator",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pgIrr8xrlCXbRAeo",
+        "folder": "6R0mUPnUZrsI8pL3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Underworld Investigator",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your work as an investigator makes you familiar with the criminal element. You might be a criminal yourself, or you might have gained an understanding of how they operate from the outside. You become trained in Underworld Lore, and you gain your @UUID[Compendium.pf2e.actionspf2e.Item.Pursue a Lead] investigation bonus to Thievery checks to investigate a case (such as checks to @UUID[Compendium.pf2e.actionspf2e.Item.Steal] a clue from a suspect or @UUID[Compendium.pf2e.actionspf2e.Item.Pick a Lock] to open a safe with damning documents).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

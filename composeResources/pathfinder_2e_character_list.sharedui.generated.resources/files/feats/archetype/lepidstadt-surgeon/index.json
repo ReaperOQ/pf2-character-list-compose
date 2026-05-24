@@ -7,6 +7,52 @@
       "name": "A Miracle of Science!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N7el79c9KY4JXmUb",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "A Miracle of Science!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Once, you dreamed of creating life. Now you know that merely creating life lacks ambition. No, you have taken life and improved upon it. Your construct companion becomes a paragon construct companion.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Behold My Creation!"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +62,65 @@
       "name": "Artery Map",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PFcg6OHheNy2dnoo",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Artery Map",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While you've learned all the places a scalpel can cause extensive bleeding to avoid disasters in surgery, such knowledge can serve other purposes. When you Strike an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] creature with a weapon from the knife group, you deal 1d6 persistent bleed damage. The damage increases to 1d10 when you are legendary in Medicine.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lepidstadt Surgeon Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "category": "persistent",
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "match(when(lte(@actor.system.skills.medicine.rank, 3), \"d6\"), when(gte(@actor.system.skills.medicine.rank, 4), \"d10\"))",
+              "key": "DamageDice",
+              "predicate": [
+                "target:condition:off-guard",
+                "item:group:knife"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +130,58 @@
       "name": "Beautiful Knifework",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iUCz2engECjvbSeB",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beautiful Knifework",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You perform surgical adjustments to disguise a willing ally or your construct companion. This counts as preparing a disguise to Impersonate, taking 10 minutes and requiring a healer's toolkit instead of a disguise kit. The DC to see through the deception with @UUID[Compendium.pf2e.actionspf2e.Item.Seek] is your Medicine DC (@Check[perception|against:medicine|rollerRole:target|traits:secret|options:action:seek]) unless the disguised character's Deception DC is higher. If the target directly interacts with someone while disguised, they gain a +2 circumstance bonus to their Deception check.</p>\n<p>You can reverse this effect with another 10-minute surgery. The disguised character can also end it as a free action when they receive any healing effect.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lepidstadt Surgeon Dedication"
+              },
+              {
+                "value": "master in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "exploration",
+              "manipulate",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -34,6 +191,52 @@
       "name": "Behold My Creation!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YrdQA4HbxiZkaG7I",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Behold My Creation!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have rebuilt your creation once more. It is greater now, more than it once was. Soon, it shall be greater still. Your construct companion becomes an incredible construct companion.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Let My Creature Live!"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +246,64 @@
       "name": "In Lightning, Life",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1RQLf09kpOO6ljmb",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "In Lightning, Life",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Requirements</strong> You're wearing or holding a @UUID[Compendium.pf2e.equipment-srd.Item.Healer's Toolkit].</p><hr /><p>\"In lightning, there is life.\" This lesson is whispered throughout Lepidstadt, and you can put it to practical use. You have integrated a miniature Stasian coil into your healer's toolkit. You use the coil to gently shock a willing or @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] ally within your reach, who gains 2d4 temporary Hit Points from the jolt. These temporary Hit Points last for 1 minute. These temporary Hit Points increase by 1d4 at 8th level and every 4 levels thereafter.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: In Lightning, Life]</p>\n<p>A creature that has resistance or immunity to electricity is immune to this ability, and a creature that received temporary Hit Points from In Lightning, Life is temporarily immune to it for 24 hours.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lepidstadt Surgeon Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: In Lightning, Life",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: In Lightning, Life"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "electricity",
+              "healing",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +313,81 @@
       "name": "Lepidstadt Surgeon Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8KxcNpQhmUOj3vuV",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lepidstadt Surgeon Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Before everything else, before the blood and the monsters and the Stasian technology and the horror, you are a doctor. You are, in fact, an exceptionally good doctor. You become an expert in Medicine.</p>\n<p>When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Administer First Aid] to stabilize a dying creature that doesn't yet have the @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition, it regains @Damage[(2d8 + 10*max(0,(@actor.system.skills.medicine.rank - 2)))[healing]] Hit Points; this healing increases by 10 when you are a master of Medicine and by another 10 when you are legendary in Medicine.</p>\n<p>When you successfully Administer First Aid to stop bleeding, the target rolls the flat check (with lowered DC for an assisted recovery) twice and takes the better result; this is a fortune effect.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Lepidstadt Surgeon Dedication (Stop Bleeding)]</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.siGGQuh9SijE9nlt]{Lepidstadt Surgeon}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Medicine"
+              },
+              {
+                "value": "attended the University of Lepidstadt"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.medicine.rank",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:administer-first-aid:stabilize"
+              ],
+              "selector": "medicine",
+              "text": "PF2E.SpecificRule.LepidstadtSurgeon.Dedication.StabilizeNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:administer-first-aid:stop-bleeding"
+              ],
+              "selector": "medicine",
+              "text": "PF2E.SpecificRule.LepidstadtSurgeon.Dedication.StopBleedingNote",
+              "title": "{item|name}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +397,52 @@
       "name": "Let My Creature Live!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UgmLKNTU59Z3ETFc",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Let My Creature Live!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You continue to tinker with your creation's muscles and rudimentary mind, granting it a limited form of autonomy. Your construct companion becomes an advanced construct companion. During an encounter, even if you don't use the Command a Minion action, your construct companion can still use 1 action on your turn that round to Stride or Strike.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rise, My Creature!"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +452,52 @@
       "name": "Rise, My Creature!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LlA78rVpi6F85CWG",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rise, My Creature!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have created life! You have usurped the power of the gods themselves! You gain a prototype construct companion pieced together from corpses and animated by chemicals or Stasian technology. You use Medicine in place of Crafting to Repair your construct or rebuild it if it's been destroyed.</p>\n<p>Your creation has an affinity for the lightning that brought it to life. When your construct companion takes electricity damage, it gains a +1 circumstance bonus to its Athletics skill checks until the end of its next turn.</p>\n<p>Although the coils or alchemical residue make it obvious to you and those with similar training that your creation is not undead, others must generally succeed at a @Check[crafting|dc:15], @Check[medicine|dc:15], or @Check[religion|dc:15] check to verify those claims with @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge].</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lepidstadt Surgeon Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +507,55 @@
       "name": "Stand Back, I'm A Doctor!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cQziPqmbo353bq7S",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stand Back, I'm A Doctor!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding healer's tools, or you are wearing them and have a hand free; a creature with the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition is in your reach.</p><hr /><p>You have mastered techniques to aid those at the brink of death, even if they use dangerous Stasian technology. Attempt a Medicine check on the dying creature as you deliver it a powerful shock. The DC is usually a standard-difficulty DC of a level equal to the target. On a success, the creature's dying condition is reduced by 1 (or 2 on a critical success); if this reduces the value of the dying condition to 0, the creature regains @Damage[(2d8+10)[healing]] Hit Points, its wounded condition doesn't increase, and it can Stand as a free action. Each creature except you adjacent to the target takes @Damage[8d6[electricity]] damage (@Check[reflex|against:class-spell|basic] save against your class DC or spell DC); instead of attempting this save, a creature can Step as a free action and if they end this movement not adjacent to the target, they take no damage.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lepidstadt Surgeon Dedication"
+              },
+              {
+                "value": "master in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -88,6 +565,52 @@
       "name": "Stasian Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BmKfNH7eN7E1yQXh",
+        "folder": "rKTkNlqyaQuLy3sq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stasian Charge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Charging a living body with electricity may seem like a bad idea, but you know better. When a creature gains temporary Hit Points from your In Lightning, Life, they gain the @UUID[Compendium.pf2e.conditionitems.Item.Quickened] condition until the end of their next turn. They can use the extra action only for Stride and Strike actions.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "In Lightning, Life"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

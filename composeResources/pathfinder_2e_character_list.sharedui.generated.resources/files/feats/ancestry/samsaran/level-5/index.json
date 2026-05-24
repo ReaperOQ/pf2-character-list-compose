@@ -7,6 +7,62 @@
       "name": "All This Has Happened Before",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "A2X3EBf8s5XSCYG0",
+        "folder": "xAV702hixEUo90rL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "All This Has Happened Before",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You're about to roll initiative.</p><hr /><p>You instantly recall a memory from one of your countless past lives that heightens your awareness of your surroundings and quickens your response. You gain a +4 circumstance bonus to the triggering roll. You become @UUID[Compendium.pf2e.conditionitems.Item.Quickened] for 1 round and can use your extra action only to Recall Knowledge or Step.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "all-this-has-happened-before",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "all-this-has-happened-before"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +72,63 @@
       "name": "And Will Do So Once More",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9nkcjb63ibLJrzRV",
+        "folder": "xAV702hixEUo90rL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "And Will Do So Once More",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned how to let go of most worries and move past them. The trigger for @UUID[Compendium.pf2e.feats-srd.Item.All This Will Happen Again] instead becomes, \"You fail or critically fail a Fortitude, Reflex, or Will saving throw.\" You still can use All This Will Happen Again only once per day.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "All This Will Happen Again"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "label": "{item|name}",
+              "mode": "add",
+              "predicate": [
+                "item:slug:all-this-will-happen-again"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +138,54 @@
       "name": "Blood Like Water",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UzYLSiDBFCGewhFi",
+        "folder": "xAV702hixEUo90rL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood Like Water",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The watery fluid in your veins doesn't flow in the same way as traditional blood. Your DC on flat checks to end persistent bleed damage is reduced from 15 to 10, or from 10 to 5 after receiving especially appropriate assistance.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "item:damage:type:bleed"
+              ],
+              "property": "pd-recovery-dc",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +195,48 @@
       "name": "Thousand-Year Grudge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TXWxuF8O44zNTUz8",
+        "folder": "xAV702hixEUo90rL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thousand-Year Grudge",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You succeed at a @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] check.</p><hr /><p>You can call upon your former lives and project all of your accumulated frustration, failure, and despair through your eyes at a target, overwhelming their senses. One creature you successfully Demoralized becomes @UUID[Compendium.pf2e.conditionitems.Item.Sickened] instead of frightened, with the same condition value. The DC to recover from the sickened condition is your Intimidation DC.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "occult",
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

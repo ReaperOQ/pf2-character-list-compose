@@ -7,6 +7,57 @@
       "name": "Dread Striker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9SYnbjFgyucjhN5e",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dread Striker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You capitalize on your enemies' fear to slip past their defenses. Any creature that has the @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition is also @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against your attacks.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "target:condition:frightened"
+              ],
+              "selectors": [
+                "strike-attack-roll",
+                "spell-attack-roll",
+                "strike-damage",
+                "attack-spell-damage"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +67,43 @@
       "name": "Head Stomp",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "agfosPInBLQXNQfa",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Head Stomp",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Make an unarmed melee Strike against a @UUID[Compendium.pf2e.conditionitems.Item.Prone] target. If it hits, until the end of your next turn the target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} on a critical hit) and @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard].</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +113,43 @@
       "name": "Mug",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "htOsE4hnSj2gzKdi",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mug",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a quick attack and rob your foe in the process. Make a melee Strike against an adjacent enemy. If you hit and deal sneak attack damage, you can also attempt to [[/act steal]] from the target, even if the target is in combat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +159,64 @@
       "name": "Poison Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ALbosSUygdq4T1Yk",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Poison Weapon",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a weapon.</p><hr /><p>You apply a contact poison or injury poison to the required weapon; if you have a free hand, you can Interact to draw a poison as part of this action. This poison can be one of the simple injury poisons you can create due to this feat, or another contact or injury poison you've acquired.</p><hr /><p><strong>Special</strong> During your daily preparations, you can prepare a number of simple injury poisons equal to your level. These follow the rules for injury poisons, except that they deal @Damage[1d4[poison]] damage with no saving throw. Only you can apply these poisons properly, and they expire the next time you prepare.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "phase": "afterDerived",
+              "predicate": [
+                "item:slug:poison-weapon"
+              ],
+              "property": "frequency-max",
+              "value": "@actor.level"
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Poison Weapon",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Poison Weapon"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +226,43 @@
       "name": "Predictable!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cErltcAC7OVnIyO1",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Predictable!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] against the foe's Deception DC or a hard DC of the foe's level, whichever is higher.</p><hr /><p><strong>Critical Success</strong> You precisely discern the target's strategy, gaining a +2 circumstance bonus to AC against the creature until the start of your next turn and a +2 circumstance bonus to your next saving throw against the creature before the start of your next turn.</p>\n<p><strong>Success</strong> You deduce the gist of the target's strategy; as critical success, except the circumstance bonus is only +1.</p>\n<p><strong>Failure</strong> You fail to discern the target's strategy and gain no benefit.</p>\n<p><strong>Critical Failure</strong> You misinterpret the target's strategy and take a –1 circumstance penalty to AC against the creature until the start of your next turn, and a –1 circumstance penalty to your next saving throw against the creature before the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Predictable!]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +272,43 @@
       "name": "Reactive Pursuit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VVsYBmVi2E1u9E5Z",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reactive Pursuit",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An adjacent foe moves away from you, and you can reach at least one space adjacent to the foe with a Stride action.</p>\n<hr />\n<p>You keep pace with a retreating foe. You Stride, but you must end your movement adjacent to the triggering enemy. Your move does not trigger reactions from the triggering enemy. You can use Reactive Pursuit to Burrow, Climb, Fly, or Swim instead of Stride if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +318,44 @@
       "name": "Sabotage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vDeG0N4kzTBDTC2b",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sabotage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a free hand.</p>\n<hr />\n<p>You subtly damage others' equipment. Choose one item that a creature within your reach wields or carries. The item must have moving parts that you could possibly sabotage (a shortbow could be sabotaged, but a longsword could not). Attempt a @Check[thievery|defense:reflex] check against the Reflex DC of the creature. Damage dealt by Sabotage can't take the item below its Broken Threshold.</p>\n<hr />\n<p><strong>Critical Success</strong> You deal damage equal to 4 x your Thievery proficiency bonus.</p>\n<p><strong>Success</strong> You deal damage equal to double your Thievery proficiency bonus.</p>\n<p><strong>Critical Failure</strong> The item is temporarily immune to your Sabotage for 1 day.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "incapacitation",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +365,43 @@
       "name": "Scoundrel's Surprise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c1R8qAUsJmhVsq4B",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scoundrel's Surprise",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You drop your disguise at the right moment and surprise your target. After you @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] someone else using a disguise kit, you can remove your disguise with a dramatic gesture. Any creatures that previously failed to see through your disguise are @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the next attack you make before the end of your turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +411,76 @@
       "name": "The Harder They Fall",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "k4QU2edqSoB23foo",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Harder They Fall",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make your foes fall painfully when you trip them. When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Trip] an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] foe, your target takes 1d6 bludgeoning damage. On a critical success, the target takes 1d6 bludgeoning damage plus your sneak attack damage.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TOTMToggle.OffGuard",
+              "option": "target:condition:off-guard",
+              "toggleable": "totm"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:trip",
+                "target:condition:off-guard"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Rogue.TheHarderTheyFall.CriticalSuccess",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:trip",
+                "target:condition:off-guard"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Rogue.TheHarderTheyFall.Success",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -88,6 +490,47 @@
       "name": "Twin Distraction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eXuCYDzj0UJOxNu9",
+        "folder": "SRyOhV7pAy46Ewm3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twin Distraction",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding two melee weapons, each in a different hand.</p>\n<hr />\n<p>Your movements with two weapons are so swift and disorienting that they befuddle your opponent. When using @UUID[Compendium.pf2e.feats-srd.Item.Twin Feint], if both your Strikes deal damage to a targeted creature, the target must succeed at a @Check[will|against:rogue] saving throw against your class DC or become @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Twin Feint"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

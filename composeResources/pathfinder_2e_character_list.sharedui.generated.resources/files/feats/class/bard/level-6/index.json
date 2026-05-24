@@ -7,6 +7,69 @@
       "name": "Assured Knowledge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c6CS97Zs0DPmInaI",
+        "folder": "nkYsYXNjL3pJRuxk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Assured Knowledge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can procure information with confidence. Whenever you @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] using any skill (including Bardic Lore), you can forgo rolling your check to instead receive a result of 10 + your proficiency bonus (don't apply any other bonuses, penalties, or modifiers).</p>\n<p>As long as you are an expert in a skill, you meet the prerequisites for the @UUID[Compendium.pf2e.feats-srd.Item.Automatic Knowledge] skill feat in that skill, even if you don't have @UUID[Compendium.pf2e.feats-srd.Item.Assurance] in that skill.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "enigma muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "SubstituteRoll",
+              "predicate": [
+                "action:recall-knowledge"
+              ],
+              "selector": "skill-check",
+              "slug": "assured-knowledge",
+              "value": 10
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "substitute:assured-knowledge",
+                {
+                  "not": "bonus:type:proficiency"
+                }
+              ],
+              "selector": "skill-check",
+              "suppress": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +79,83 @@
       "name": "Defensive Coordination",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "515N9nl9ChZwLWKR",
+        "folder": "nkYsYXNjL3pJRuxk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defensive Coordination",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Like the storied heroes who persist in the face of overwhelming odds, you and your allies will hold the line. If your next action is to cast the @UUID[Compendium.pf2e.spells-srd.Item.Rallying Anthem] composition cantrip, you can Raise a Shield, and one ally of your choice who gains a status bonus from the spell can immediately use their reaction to Raise a Shield.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "warrior muse"
+              },
+              {
+                "value": "Rallying Anthem"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:rallying-anthem",
+                "spellshape:courageous-advance"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.DefensiveCoordination"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "defensive-coordination"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "bard",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +165,43 @@
       "name": "Dirge of Doom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vWrGwqy4AhHMPz8V",
+        "folder": "nkYsYXNjL3pJRuxk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dirge of Doom",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn the @UUID[Compendium.pf2e.spells-srd.Item.Dirge of Doom] composition cantrip, which frightens your enemies and keeps them from fully recovering from their fear.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +211,48 @@
       "name": "Educate Allies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9cHQua33V35JPE3U",
+        "folder": "nkYsYXNjL3pJRuxk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Educate Allies",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally benefiting from one of your composition spells is subject to an effect with the auditory, illusion, linguistic, sonic, or visual trait.</p>\n<hr />\n<p>You tweak the properties of your composition spell to convey a bit of your defensive knowledge. All allies affected by your composition spell gain your +1 circumstance bonus from @UUID[Compendium.pf2e.feats-srd.Item.Well-Versed] until the start of your next turn. Teaching your allies also bolsters your own skills; your personal circumstance bonus from Well-Versed also increases to +2 until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Educate Allies]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Well-Versed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +262,79 @@
       "name": "Harmonize",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "21YWBdoXGmj60vdI",
+        "folder": "nkYsYXNjL3pJRuxk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Harmonize",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can perform multiple compositions simultaneously, typically by performing in multiple ways at the same time, using special vocal techniques to double your voice, or creating occult magic that replicates your song or speech. If your next action is to cast a composition, it becomes a harmonized composition. Unlike a normal composition, a harmonized composition doesn't end if you cast another composition, and you can cast another composition on the same turn as a harmonized one. Casting another harmonized composition ends any harmonized composition you already have in effect.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "maestro muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:harmonize"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.Harmonize"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "harmonize"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "concentrate",
+              "manipulate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +344,43 @@
       "name": "Song of Marching",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0zSoSPwC4cpqRewj",
+        "folder": "nkYsYXNjL3pJRuxk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Song of Marching",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn the @UUID[Compendium.pf2e.spells-srd.Item.Song of Marching] composition cantrip, which enables you and your allies to cross vast distances without strain.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

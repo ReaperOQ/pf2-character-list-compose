@@ -7,6 +7,60 @@
       "name": "Centaur Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tymFMTQHBXwdUoUg",
+        "folder": "Cic6ZlYRhKDqmNy7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Centaur Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned how to nurture your environment and to care for your people. You gain the trained proficiency rank in Medicine and Nature. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Centaur Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.medicine.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +70,87 @@
       "name": "Centaur Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dz3z1DLxV6GYH45Y",
+        "folder": "Cic6ZlYRhKDqmNy7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Centaur Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've trained in the weapons favored by your people, becoming a skilled archer and jouster. You have familiarity with the lance, longbow, longspear, shortbow, and spear—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:centaur",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:lance",
+                    "item:base:longbow",
+                    "item:base:longspear",
+                    "item:base:spear",
+                    "item:base:shortbow"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialCentaurWeapons",
+              "sameAs": "simple",
+              "slug": "martial-centaur-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:base:lance",
+                    "item:base:longbow",
+                    "item:base:longspear",
+                    "item:base:spear",
+                    "item:base:shortbow"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +160,77 @@
       "name": "Practiced Brawn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jABl7ROkV1tsX87g",
+        "folder": "Cic6ZlYRhKDqmNy7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Practiced Brawn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're accustomed to long days filled with hard physical labor. You gain a +1 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] and @UUID[Compendium.pf2e.actionspf2e.Item.Shove], and to Fortitude saving throws to resist becoming @UUID[Compendium.pf2e.conditionitems.Item.Fatigued]. When you roll a success on an Athletics check to Shove, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:shove",
+                    "action:force-open"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "inflicts:fatigued"
+              ],
+              "selector": "fortitude",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:shove"
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +240,48 @@
       "name": "Skilled Herbalist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zR2jp5tcb8GjnR3v",
+        "folder": "Cic6ZlYRhKDqmNy7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Skilled Herbalist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've been taught how to craft healing remedies with a variety of herbs and plants. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Alchemical Crafting] feat, except you must select the following items to add to your formula book: @UUID[Compendium.pf2e.equipment-srd.Item.Antidote (Lesser)], @UUID[Compendium.pf2e.equipment-srd.Item.Antiplague (Lesser)], and @UUID[Compendium.pf2e.equipment-srd.Item.Elixir of Life (Minor)], as well as a fourth 1st-level common alchemical formula of your choice. You can use Nature to Craft an alchemical item that has the healing trait, rather than Crafting.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Alchemical Crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +291,55 @@
       "name": "Steelhoof",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eXJR3U9UcwMpSWgJ",
+        "folder": "Cic6ZlYRhKDqmNy7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Steelhoof",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've girded your hooves in steel or other reinforcements aimed to inflict maximum damage. Your hoof attack deals 1d8 bludgeoning damage instead of 1d6.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "ironhoof centaur heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "DamageDice",
+              "override": {
+                "upgrade": true
+              },
+              "selector": "hoof-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

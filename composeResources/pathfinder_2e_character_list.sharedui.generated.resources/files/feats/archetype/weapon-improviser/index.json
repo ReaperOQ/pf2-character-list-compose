@@ -7,6 +7,54 @@
       "name": "Improvised Critical",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YDpSnLmnSLsItP45",
+        "folder": "vo57FQBynPIhMFlT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improvised Critical",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can apply critical specialization effects to improvised weapons you wield. For any given improvised weapon, the GM determines which critical specialization effect is most applicable, based on the type of object it is.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Weapon Improviser Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                "item:tag:improvised"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +64,47 @@
       "name": "Improvised Pummel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FSxugo3zTgRhW7Og",
+        "folder": "vo57FQBynPIhMFlT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improvised Pummel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you make a Strike with an improvised weapon you're wielding, you gain a +1 item bonus to the attack roll, and you can have the Strike deal two weapon damage dice instead of the improvised weapon's normal number. If the attack is a critical hit, the improvised weapon breaks after the normal effects of a critical hit occur. If the item has a Hardness greater than your level, or if it's an artifact, cursed item, or other item that's difficult to break or destroy, it doesn't break but the attack is a normal hit instead of a critical hit. You can choose not to get any of the effects of Improvised Pummel on a Strike if you don't want to risk breaking the item. At 12th level, the item bonus increases to +2, and at 16th level, the Strike deals three weapon damage dice instead of the improvised weapon's normal number.</p>\n<p>If you're benefiting from @UUID[Compendium.pf2e.equipment-srd.Item.Handwraps of Mighty Blows], you use the handwraps' item bonus if it's higher and can choose to use its number of damage dice. Any property runes from the handwraps also apply if you use the handwraps' number of weapon damage dice, provided they could apply to the improvised weapon (as determined by the GM).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Weapon Improviser Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +114,47 @@
       "name": "Makeshift Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UcIyf7bTDf6RwydU",
+        "folder": "vo57FQBynPIhMFlT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Makeshift Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You quickly snatch up whatever is nearby and then attack with it as an improvised weapon. You Interact to pick up an unattended object in reach you could use as an improvised weapon, then Strike with that improvised weapon.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Weapon Improviser Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +164,47 @@
       "name": "Shattering Strike (Weapon Improviser)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "B7VMXObJSNVI0ZGJ",
+        "folder": "vo57FQBynPIhMFlT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shattering Strike (Weapon Improviser)",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An improvised weapon that you are wielding becomes broken as a result of a critical success on an Improvised Pummel.</p>\n<hr />\n<p>The improvised weapon shatters, destroying it completely but dealing an additional @Damage[3d6[piercing]] damage to the creature you hit with the Improvised Pummel. This extra damage you apply on the critical hit doesn't double from the critical hit, as normal.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Improvised Pummel"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +214,47 @@
       "name": "Surprise Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "04RgXKFVC2A6Ryn6",
+        "folder": "vo57FQBynPIhMFlT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Surprise Strike",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whenever you make a Strike with an improvised weapon against a creature that hasn't seen you make a Strike using an improvised weapon or that is otherwise ignorant of your skill with improvised weapons, the creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against you for that Strike.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Weapon Improviser Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +264,57 @@
       "name": "Weapon Improviser Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MndcBMz6I7e6SRqx",
+        "folder": "vo57FQBynPIhMFlT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weapon Improviser Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You don't take the normal –2 penalty to attack rolls with improvised weapons. Improvised weapons you use have a minimum weapon damage die of 1d6, or 1d4 if the improvised weapon is agile.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.HDTW0vr8QL20M5ND]{Weapon Improviser}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in all martial weapons"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "selectors": [
+                "strike-attack-roll"
+              ],
+              "slug": "improvised",
+              "suppress": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

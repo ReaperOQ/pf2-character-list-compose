@@ -1,0 +1,172 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "hunter-automaton.json",
+      "id": "2kMltxs2rmxRSxfV",
+      "name": "Hunter Automaton",
+      "img": "icons/skills/targeting/crosshair-arrowhead-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "2kMltxs2rmxRSxfV",
+        "folder": "u2GMb9wLz90dagRz",
+        "img": "icons/skills/targeting/crosshair-arrowhead-blue.webp",
+        "name": "Hunter Automaton",
+        "system": {
+          "ancestry": {
+            "name": "Automaton",
+            "slug": "automaton",
+            "uuid": "Compendium.pf2e.ancestries.Item.kYsBAJ103T44agJF"
+          },
+          "description": {
+            "value": "<p>You were designed to serve as a scout or assassin and have a body resembling a pack hunter like a large cat or wolf. Though you typically move like a quadruped, you can still stand and fight like a biped, allowing you to use all equipment normally. Your quadruped design allows you to move quickly; if you have both hands free, you can increase your Speed to 30 feet as you run on all fours.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "on-all-fours",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SpecificRule.Automaton.HunterAutomaton.ToggleLabel",
+              "predicate": [
+                "on-all-fours"
+              ],
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "mage-automaton.json",
+      "id": "J0eAmntxXywr9sGt",
+      "name": "Mage Automaton",
+      "img": "icons/magic/symbols/cog-orange-red.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "J0eAmntxXywr9sGt",
+        "folder": "u2GMb9wLz90dagRz",
+        "img": "icons/magic/symbols/cog-orange-red.webp",
+        "name": "Mage Automaton",
+        "system": {
+          "ancestry": {
+            "name": "Automaton",
+            "slug": "automaton",
+            "uuid": "Compendium.pf2e.ancestries.Item.kYsBAJ103T44agJF"
+          },
+          "description": {
+            "value": "<p>The chamber housing your core has a more direct connection to the rest of your humanoid shape, allowing you to tap into your core's magical energy. You gain one cantrip from the arcane spell list. You can cast this spell as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sharpshooter-automaton.json",
+      "id": "j1nzBc9Pui7vsJ9o",
+      "name": "Sharpshooter Automaton",
+      "img": "icons/skills/ranged/projectile-spiral-gray.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "j1nzBc9Pui7vsJ9o",
+        "folder": "u2GMb9wLz90dagRz",
+        "img": "icons/skills/ranged/projectile-spiral-gray.webp",
+        "name": "Sharpshooter Automaton",
+        "system": {
+          "ancestry": {
+            "name": "Automaton",
+            "slug": "automaton",
+            "uuid": "Compendium.pf2e.ancestries.Item.kYsBAJ103T44agJF"
+          },
+          "description": {
+            "value": "<p>Your lithe, humanoid shape is designed for speed and accuracy suitable for ranged combat. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Automaton Aim] action.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Automaton Aim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "warrior-automaton.json",
+      "id": "y24ykEUfpIu5Gp6D",
+      "name": "Warrior Automaton",
+      "img": "icons/skills/melee/unarmed-punch-fist-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "y24ykEUfpIu5Gp6D",
+        "folder": "u2GMb9wLz90dagRz",
+        "img": "icons/skills/melee/unarmed-punch-fist-white.webp",
+        "name": "Warrior Automaton",
+        "system": {
+          "ancestry": {
+            "name": "Automaton",
+            "slug": "automaton",
+            "uuid": "Compendium.pf2e.ancestries.Item.kYsBAJ103T44agJF"
+          },
+          "description": {
+            "value": "<p>Sporting a bulkier, powerful design, your body has been designed for combat. You have a bulky, humanoid shape. The damage die for your fist increases to 1d6 instead of 1d4. You don't take a penalty when making a lethal attack with your fist or any other unarmed attack.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "fist": true,
+              "key": "Strike"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "property": "damage-dice-faces"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}
