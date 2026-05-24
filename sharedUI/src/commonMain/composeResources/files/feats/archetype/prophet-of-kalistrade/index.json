@@ -7,6 +7,52 @@
       "name": "Basic Prophet Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mWbIoWKDi1wANHDZ",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Prophet Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#basic-spellcasting-feat]{Basic Spellcasting Benefits}. Each time you gain a spell slot of a new rank from the prophet of Kalistrade archetype, add a common occult spell of the appropriate rank, or another appropriate occult spell you've learned or discovered, to your repertoire.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophet of Kalistrade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +62,60 @@
       "name": "Expert Prophet Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X2JzoRXHhhz5o4P4",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expert Prophet Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#expert-spellcasting-feat]{Expert Spellcasting Benefits}.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Prophet Spellcasting"
+              },
+              {
+                "value": "master in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "attribute": null,
+                "rank": 2
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +125,71 @@
       "name": "Fortune's Favor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HNeKm6BCu795585p",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fortune's Favor",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You're about to reroll a failed skill check or saving throw due to a fortune effect.</p><hr /><p>You understand when an investment in you has the chance to pay off. You gain a +2 circumstance bonus to the triggering roll.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophet of Kalistrade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "fortunes-favor",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "fortunes-favor"
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +199,53 @@
       "name": "Master Merchant",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e3YE4uKIyDc2uNXl",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Master Merchant",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Kalistrade teaches that setbacks are only temporary and that perseverance is a treasured virtue. When you fail, but not critically fail, at a Society or Mercantile Lore check to @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income] at a specific task and are allowed to continue working at that task on subsequent days, you can choose to attempt the skill check again the next day. If you succeed, you get a critical success and continue to earn that amount on further days spent working at the task, if the task lasts that long.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophet of Kalistrade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "skill"
     },
@@ -43,6 +255,60 @@
       "name": "Master Prophet Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zQazwiELy8Vhb1tS",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Master Prophet Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#master-spellcasting-feat]{Master Spellcasting Benefits}.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Expert Prophet Spellcasting"
+              },
+              {
+                "value": "legendary in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "attribute": null,
+                "rank": 3
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +318,52 @@
       "name": "Prolific Prophet Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9oLtfp28J5DQfiIS",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prolific Prophet Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Increase the number of spells in your repertoire and the number of spell slots you gain from prophet of Kalistrade archetype feats by 1 for each spell rank other than your two highest prophet of Kalistrade spell slots.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Prophet Spellcasting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +373,56 @@
       "name": "Prophet of Kalistrade Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OGCb4N1RL0w6JkR8",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prophet of Kalistrade Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're from Druma</p><hr /><p>After induction into the ranks of the Kalistocrats, you learned the skills necessary to succeed in business and rise above others by following a set of detailed strictures. Unless you take measures to hide your affiliation, anyone who has heard of the Prophets of Kalistrade will know you're one of them when they see you. You become an expert in Society and can use [[/act make-an-impression skill=society]]{Society} instead of Diplomacy to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on merchants and traders.</p>\n<p>Additionally, if you don't already cast spells from spell slots, you learn to cast spontaneous spells and gain the Cast a Spell activity. You gain a spell repertoire with two common occult cantrips, plus either @UUID[Compendium.pf2e.spells-srd.Item.Prestidigitation] or @UUID[Compendium.pf2e.spells-srd.Item.Read Aura]. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for these spells is Charisma, and they're occult spells.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.JCcY9pCEShhWSr9D]{Prophet of Kalistrade}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Mercantile Lore and Society"
+              },
+              {
+                "value": "Charisma +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -70,6 +432,52 @@
       "name": "Prophet's Lockbox",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EFowS1mD93OmBxqu",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prophet's Lockbox",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned secret methods that allow you to store your valuables where no one else can reach them. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Imaginary Lockbox] as a 5th-rank innate occult spell once per day. At 12th level and every 2 levels thereafter, the maximum amount you can target with this spell increases by 1 Bulk.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophet of Kalistrade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -79,6 +487,77 @@
       "name": "Smile at Failure",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "naghcKF1jr4dS067",
+        "folder": "w8G9YTLmzPbWp5lf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Smile at Failure",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know staying cool is key to prevailing in social situations, as anger leads to mistakes. When a creature you're interacting with decreases its attitude from indifferent to unfriendly or from unfriendly to hostile, you gain a +2 circumstance bonus to any attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on the creature for the next hour. If this decrease in attitude leads to combat, you gain a +1 circumstance bonus to the subsequent initiative roll instead.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophet of Kalistrade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "smile-at-failure",
+              "toggleable": false
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "smile-at-failure"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "smile-at-failure",
+                "action:make-an-impression"
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

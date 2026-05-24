@@ -7,6 +7,47 @@
       "name": "Elaborate Scroll Esoterica",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nWd7m0yRcIEVUy7O",
+        "folder": "Z1ffyKBWBwxc4elj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elaborate Scroll Esoterica",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've picked up more scraps of magic texts, improving your makeshift scrolls. In addition to your daily scrolls from Scroll Esoterica, add a scroll with a 3rd-rank spell. At 14th level, add a scroll with a 4th-rank spell. At 16th level, add a scroll with a 5th-rank spell.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Scroll Esoterica"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +57,63 @@
       "name": "Intensify Investiture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uJgATfMW3kumS6Y0",
+        "folder": "Z1ffyKBWBwxc4elj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Intensify Investiture",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>Your bond to your invested items enables you to put more of yourself into them. If you next action is to activate an invested item that has a saving throw DC, you can use your thaumaturge class DC instead of the item's DC if it is higher.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "intensify-investiture",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "item:trait:invested",
+                "intensify-investiture"
+              ],
+              "selector": "inline-dc",
+              "value": "@actor.classDCs.thaumaturge.mod"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +123,47 @@
       "name": "Shared Warding",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eSoMkHGw38ld4gj2",
+        "folder": "Z1ffyKBWBwxc4elj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shared Warding",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You ward your allies from the attacks of your foes whenever you apply those protections to yourself. When you gain a status bonus to AC and saves from @UUID[Compendium.pf2e.feats-srd.Item.Esoteric Warden], you can choose to grant the same benefit to all allies within 30 feet.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Esoteric Warden"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +173,44 @@
       "name": "Thaumaturge's Demesne",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rHV8GUqqt8WLgTJp",
+        "folder": "Z1ffyKBWBwxc4elj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thaumaturge's Demesne",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have claimed an area or location as your demesne, granting you the ability to ward and protect it. When you select this feat, choose a demesne, an area of no more than 2,000 square feet. You must legitimately own the area or, if its a public area, you must lay claim to the area without anyone contesting it.</p>\n<p>Once you've chosen your demesne, it's automatically protected by an arcane @UUID[Compendium.pf2e.spells-srd.Item.Peaceful Bubble] spell with an unlimited duration, heightened to half your level rounded up and using your thaumaturge class DC in place of a spell DC, if necessary. Additionally, the demesne is attended by three unseen custodians, as a successful @UUID[Compendium.pf2e.spells-srd.Item.Phantasmal Custodians]{Unseen Custodians} ritual, and one object in the area gains an elemental sentinel, as a successful @UUID[Compendium.pf2e.spells-srd.Item.Elemental Sentinel] ritual.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "arcane",
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

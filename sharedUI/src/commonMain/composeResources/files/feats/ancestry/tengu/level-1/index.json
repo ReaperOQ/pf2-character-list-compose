@@ -7,6 +7,66 @@
       "name": "Mariner's Fire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TmaxLWraJrvSQOkY",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mariner's Fire",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You conjure uncanny orbs of spiritual flame that float above or below the water's surface. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Ignition] cantrip as a primal innate spell at will, heightened to a spell rank equal to half your level rounded up. Your ignition spell takes the form of orbs of fire, and you can cast it underwater.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:ignition",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:ignition",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tengu"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +76,43 @@
       "name": "One-Toed Hop",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fD3RSV9nIkJsW6lD",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "One-Toed Hop",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Assuming a peculiar stance, you make a short hop on each toe. You make a vertical @UUID[Compendium.pf2e.actionspf2e.Item.Leap] without triggering reactions that can be triggered by move actions or upon leaving or entering a square.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +122,53 @@
       "name": "Scavenger's Search",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zaGD9Og2p8Opa0oJ",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scavenger's Search",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're always on the lookout for supplies and valuables. You gain a +2 circumstance bonus to locate objects (including secret doors and hazards) you search for within 30 feet with a @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:tag:object"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +178,43 @@
       "name": "Squawk!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CCmiEmS7ZgyQUfhn",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Squawk!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You critically fail a Deception, Diplomacy, or Intimidation check against a creature that doesn't have the tengu trait.</p><hr /><p>You let out an awkward squawk, ruffle your feathers, or fake some other birdlike tic to cover up a social misstep or faux pas. You get a failure on the triggering check, rather than a critical failure. All creatures that witnessed you Squawk are temporarily immune for 24 hours.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +224,66 @@
       "name": "Storm's Lash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bWyY9NtLU5wXr03y",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Storm's Lash",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Wind and lightning have always been friends to you. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Electric Arc] cantrip as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:electric-arc",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:electric-arc",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tengu"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +293,60 @@
       "name": "Tengu Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GjQZMmw2sz8OyLxj",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tengu Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You learned skills for surviving in the place where your people were dispersed. You gain the trained proficiency rank in Society and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Tengu Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +356,111 @@
       "name": "Tengu Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AmFv3ClkAVRowHLI",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tengu Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain access to all uncommon weapons with the tengu trait plus the katana, khakkara, temple sword, and wakizashi. You have familiarity with these weapons—for the purpose of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>During your daily preparations, you can practice with a weapon from the sword group that's in your possession. You gain familiarity with that weapon as well. This lasts until you practice with a different sword in the same way.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Sword Practice]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.tenguFamiliarSword",
+              "predicate": [
+                {
+                  "not": "self:effect:sword-practice"
+                }
+              ],
+              "priority": 8,
+              "value": "none"
+            },
+            {
+              "definition": [
+                "item:category:advanced",
+                {
+                  "or": [
+                    "item:trait:tengu",
+                    "item:id:{actor|flags.system.tenguFamiliarSword}"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedTenguWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-tengu-weapons"
+            },
+            {
+              "definition": [
+                "item:category:martial",
+                {
+                  "or": [
+                    "item:trait:tengu",
+                    "item:base:katana",
+                    "item:base:khakkara",
+                    "item:base:temple-sword",
+                    "item:base:wakazashi",
+                    "item:id:{actor|flags.system.tenguFamiliarSword}"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialTenguWeapons",
+              "sameAs": "simple",
+              "slug": "martial-tengu-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:tengu",
+                    "item:base:katana",
+                    "item:base:khakkara",
+                    "item:base:temple-sword",
+                    "item:base:wakazashi",
+                    "item:id:{actor|flags.system.tenguFamiliarSword}"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +470,48 @@
       "name": "Uncanny Agility",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qpVB9F9DURW4Lti1",
+        "folder": "BcKpSUd88G4aPHFV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Uncanny Agility",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have near-supernatural poise that lets you move swiftly across the most unsteady surfaces. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Steady Balance] skill feat. You can Step into difficult terrain caused by uneven ground, such as a rocky field, hilly incline, or rocking ship.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Steady Balance"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

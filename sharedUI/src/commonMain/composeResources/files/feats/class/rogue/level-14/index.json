@@ -7,6 +7,47 @@
       "name": "Defensive Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aPt0WfFoeLTzyQRA",
+        "folder": "9uODVWUJ93I20LIP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defensive Roll",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> A physical attack would reduce you to 0 Hit Points.</p>\n<hr />\n<p>Dropping into a roll to disperse the force of the blow, you can partially evade a lethal attack and stay conscious. You take half damage from the triggering attack</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +57,44 @@
       "name": "Instant Opening",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9zH7IOsmhRBEqXAV",
+        "folder": "9uODVWUJ93I20LIP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Instant Opening",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You distract your opponent with a few choice words or a rude gesture. Choose a target within 30 feet. It's @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against your attacks until the end of your next turn. Depending on the way you describe your distraction, this action gains either the auditory or visual trait.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +104,43 @@
       "name": "Leave an Opening",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5dAFkOYPz8PPdFrw",
+        "folder": "9uODVWUJ93I20LIP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leave an Opening",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you hit hard enough, you leave an opening so your ally can jump in on the action. Whenever you critically hit an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] opponent with a melee attack and deal damage, the target triggers a Reactive Strike reaction from one ally of your choice who has that reaction, as if the enemy had used a manipulate action.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +150,47 @@
       "name": "Stay Down!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2KBKXkRthBXpw48X",
+        "folder": "9uODVWUJ93I20LIP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stay Down!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A @UUID[Compendium.pf2e.conditionitems.Item.Prone] foe within your reach Stands.</p>\n<hr />\n<p>You have ways of keeping your foes down. Attempt an @Check[athletics|defense:fortitude] check against the triggering foe's Fortitude DC. On a success, the action is disrupted, causing the creature to remain prone. On a critical success, the creature also can't Stand until its next turn.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

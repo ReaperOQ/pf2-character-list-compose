@@ -7,6 +7,64 @@
       "name": "Add Element",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "s1eEtrNBBHpXJlEz",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Add Element",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Choose a second kinetic element to add to the one you already have. You gain an impulse feat for that element. For the purpose of meeting its prerequisites, your kineticist level is equal to half your level. If you gain more kineticist feats, you can select hybrid impulses that have both your elements, as normal for a kineticist.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Advanced Element Control"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:kineticist-kinetic-gate"
+                ]
+              },
+              "flag": "elementOne",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Kineticist.KineticGate.Prompt.Element",
+              "rollOption": "kinetic-gate:second-element"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.elementOne}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +74,48 @@
       "name": "Advanced Element Control",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ztRfsRDE7hdGbgG0",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Element Control",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one kineticist feat. For the purpose of meeting its prerequisites, your kineticist level is equal to half your level. Your options include impulse feats for your kinetic element, as normal for a kineticist.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another kineticist feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Through the Gate"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +125,52 @@
       "name": "Base Kinesis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JX9RKSlI9jSqkXa0",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Base Kinesis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the Base Kinesis impulse. For the purposes of determining when the range and Bulk improvements of the action occur, your kineticist level is equal to half your level (for example, Base Kinesis for a 10th-level character with this feat would have a range of 45 feet and could affect 1 Bulk of their chosen element).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kineticist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Base Kinesis"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +180,55 @@
       "name": "Expert Kinetic Control",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DCjkgCbjIa4er09y",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expert Kinetic Control",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become an expert in kineticist class DC and impulse attack rolls.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kineticist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "kineticist": {
+                "attribute": null,
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +238,59 @@
       "name": "Improved Elemental Blast",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8VlGHrDKjlY69jFv",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improved Elemental Blast",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The power of your elemental blast improves. The damage of your elemental blast increases by one die.</p>\n<hr />\n<p><strong>Special</strong> You can take Improved Elemental Blast a second time at 14th level to increase your Elemental Blast to three damage die, and a third time at 18th level to increase your Elemental Blast to four damage die.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kineticist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "property": "dice-number",
+              "selectors": [
+                "elemental-blast-damage"
+              ],
+              "slug": "base",
+              "value": "1 + min(3,@item.timesTaken)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +300,107 @@
       "name": "Kineticist Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CbfszeYw3cf99kdv",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kineticist Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become trained in kineticist class DC and impulse attack rolls. Choose one element to be your kinetic element (air, earth, fire, metal, water, or wood). You gain a kinetic aura and the @UUID[Compendium.pf2e.actionspf2e.Item.Channel Elements] action, though you don't get to use an @UUID[Compendium.pf2e.actionspf2e.Item.Elemental Blast] or stance impulse when you take that action. You gain the Elemental Blast action. Your Elemental Blast does not automatically gain additional damage dice every four levels, instead requiring you to take the @UUID[Compendium.pf2e.feats-srd.Item.Improved Elemental Blast] feat. You become trained in Nature; if you were already trained in Nature, you instead become trained in another skill of your choice.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.1kRGIb5LPPKypQpN]{Kineticist}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Constitution +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:kineticist-kinetic-gate"
+                ]
+              },
+              "flag": "elementOne",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Kineticist.KineticGate.Prompt.Element",
+              "rollOption": "kinetic-gate:first-element"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Impulses"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Channel Elements"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.elementOne}"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.kineticist.elements",
+              "priority": 10,
+              "value": []
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.kineticist.gate",
+              "priority": 10,
+              "value": {
+                "one": "none",
+                "two": "none"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "kineticist": {
+                "attribute": "con",
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +410,81 @@
       "name": "Through the Gate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6tDIVv2gafdO6GV4",
+        "folder": "WHfL9Rfh3txexT7Q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Through the Gate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level kineticist feat of your choice. Your options include impulse feats for your kinetic element, as normal for a kineticist.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kineticist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:kineticist",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  },
+                  {
+                    "or": [
+                      {
+                        "not": "item:trait:impulse"
+                      },
+                      "item:trait:{actor|flags.system.kineticist.gate.one}",
+                      "item:trait:{actor|flags.system.kineticist.gate.two}"
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "throughTheGate",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.throughTheGate}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

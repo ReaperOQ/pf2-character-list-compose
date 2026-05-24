@@ -7,6 +7,85 @@
       "name": "Echoing Channel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "T4Xm8vYtnGMOM0Cw",
+        "folder": "oEO12UxihfCgSSHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Echoing Channel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Animist</strong> When you channel the powers of life and death, your apparition absorbs and enhances the spiritual energy, carrying it to a nearby ally.</p>\n<p><strong>Cleric</strong> When you pull forth vitality or void energy, you also create a smaller pocket of that energy.</p><hr /><p>If the next action you use is to cast a 2-action @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] to heal or damage a single creature, choose one additional creature in range. Target that creature with a 1-action version of the same spell. This spell is the same rank as the 2-action <em>harm</em> or <em>heal</em> you cast and doesn't cost another spell slot.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Embodiment of Balance or Cleric"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:echoing-channel",
+                {
+                  "or": [
+                    "item:slug:harm",
+                    "item:slug:heal"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.EchoingChannel"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "echoing-channel"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "cleric",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +95,57 @@
       "name": "Impossible Volley",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NY2AkQscVIHEC8hQ",
+        "folder": "oEO12UxihfCgSSHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impossible Volley",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon with the volley trait and reload 0.</p><hr /><p>You fire a volley at all foes in an area. Make one Strike with a –2 penalty against each enemy within a @Template[burst|distance:10] centered at or beyond your weapon's volley range. Roll the damage only once for all targets.</p>\n<p>Each attack counts toward your multiple attack penalty, but do not increase your penalty until you have made all your attacks.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Impossible Volley",
+              "predicate": [
+                "impossible-volley",
+                "volley-30",
+                "reload-0"
+              ],
+              "selector": "ranged-attack-roll",
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +155,45 @@
       "name": "Trickster's Ace",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "POrE3ZgBRdBL9MsW",
+        "folder": "oEO12UxihfCgSSHP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Trickster's Ace",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You specify the trigger when you make your daily preparations (see Requirements below).</p>\n<p><strong>Requirements</strong> When you make your daily preparations, you must specify a trigger for this reaction using the same restrictions as the triggers for the Ready action. You also choose a single spell from the arcane, divine, occult, or primal list of 4th level or lower. The spell can't have a cost, nor can its casting time be more than 10 minutes. The spell must be able to target a single creature, and you must be a valid target for it.</p><hr /><p>Whether from jury-rigged magic items, deduction from the study of magical interactions, or other means, you have a contingency in your back pocket for desperate situations. When the trigger occurs, you cause the spell to come into effect. The spell targets only you, no matter how many creatures it would affect normally. If you define particularly complicated conditions, as determined by the GM, the trigger might fail. Once the contingency is triggered, the spell is expended until your next daily preparations.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "investigator",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

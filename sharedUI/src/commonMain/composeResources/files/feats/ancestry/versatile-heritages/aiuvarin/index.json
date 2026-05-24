@@ -7,6 +7,76 @@
       "name": "Earned Glory",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nfERPRCITBp970HO",
+        "folder": "eZdHeQqcVGxIpbFQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Earned Glory",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Elves often struggle with underestimating aiuvarins, and you are experienced at telling stories of your accomplishments to gain their respect. You are trained in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You gain the @UUID[Compendium.pf2e.feats-srd.Item.Impressive Performance] feat. When you attempt a Performance check to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on an elf, if you roll a critical failure, you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Impressive Performance"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:make-an-impression",
+                "target:trait:elf"
+              ],
+              "selector": "performance",
+              "text": "PF2E.SpecificRule.HalfElf.EarnedGlory.Note",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:make-an-impression",
+                "target:trait:elf"
+              ],
+              "selector": "performance",
+              "type": "skill"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "aiuvarin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +86,61 @@
       "name": "Elf Atavism",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7BVl9lFf0wuTjBgM",
+        "folder": "eZdHeQqcVGxIpbFQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elf Atavism",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your elven blood runs particularly strong, granting you features far more elven than those of a typical aiuvarin. You may also have been raised among elves, steeped in your elven ancestors' heritage. You gain the benefits of the elf heritage of your elven parent or ancestors. You typically can't select a heritage that depends on or improves an elven feature you don't have. For example, you couldn't take the @UUID[Compendium.pf2e.heritages.Item.Ancient Elf] heritage unless your non-elf ancestry also has a lifespan measured in multiple centuries. In these cases, at the GM's discretion, you might gain a different benefit.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  "item:ancestry:elf"
+                ],
+                "itemType": "heritage"
+              },
+              "flag": "heritage",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Elf.Atavism.Prompt"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.heritage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "aiuvarin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +150,43 @@
       "name": "Inspire Imitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pqezW5dqha1I32Ld",
+        "folder": "eZdHeQqcVGxIpbFQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inspire Imitation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your actions inspire your allies to great achievements. Whenever you critically succeed at a skill check, you automatically qualify to use the @UUID[Compendium.pf2e.actionspf2e.Item.Aid] reaction when attempting to help an ally using the same skill, even without spending an action to prepare to do so.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "aiuvarin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +196,66 @@
       "name": "Supernatural Charm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rr7GdUjXhGhV04Pe",
+        "folder": "eZdHeQqcVGxIpbFQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Supernatural Charm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The elven magic in your blood manifests as a force you can use to become more appealing or alluring. You can cast 1st-rank @UUID[Compendium.pf2e.spells-srd.Item.Charm] as an arcane innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:charm",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:charm",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:aiuvarin"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "aiuvarin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

@@ -7,6 +7,52 @@
       "name": "Coral Lifeline",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "E1QLW9gFsK0jVysV",
+        "folder": "isieeDb4TEDtINyi",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coral Lifeline",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Your coral symbiotes have grown into your bloodstream and are now curled around your heart. When you would die, the coral in your body releases a burst of healing energy. This prevents you from dying and restores @Damage[4d8[healing]] Hit Points. Once this ability is used, the coral fades to a dull gray and gives you no benefits until you complete your next daily preparations.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Coral Symbiotes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru",
+              "healing"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +62,43 @@
       "name": "Moray Ambush",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "q4DpMWlSQOvl1CIw",
+        "folder": "isieeDb4TEDtINyi",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Moray Ambush",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are @UUID[Compendium.pf2e.conditionitems.Item.Hidden] and a creature who hasn't detected you passes within 20 feet of you.</p>\n<hr />\n<p>Like the moray eels athamaru communities raise and train, you know how to quickly strike from hiding. Stride or Swim directly toward the triggering creature and make a melee Strike against it. The target creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to this attack.</p>\n<hr />\n<p><strong>Special</strong> If you're mounted on an eel, you can have the eel move instead of yourself.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -25,6 +108,62 @@
       "name": "Offensive Odor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kQLll2MHalNgdh4s",
+        "folder": "isieeDb4TEDtINyi",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Offensive Odor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've mastered your defensive pheromones and have nearly complete control over them. When you Emit Defensive Odor, you can either choose to increase the damage dealt to a single target by changing the damage dice to d8s (@Damage[(floor((@actor.level +1)/2)+1)d8[poison]|options:area-damage]), or leave the damage unchanged but spray your pheromones in a @Template[cone|distance:15].</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Emit Defensive Odor"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:emit-defensive-odor"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

@@ -7,6 +7,66 @@
       "name": "Boneyard's Call",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wfOGyLnuVMFo7Rwy",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Boneyard's Call",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a powerful connection to the Boneyard and its courts, granting you the ability to travel to and from the Boneyard. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Interplanar Teleport] as a divine innate spell twice per week. This can be used only to travel to the Boneyard or from the Boneyard to the Universe. Due to your unique connection to the Boneyard, your body serves as the locus, and you don't require a planar key.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:interplanar-teleport",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:interplanar-teleport",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:duskwalker"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +76,49 @@
       "name": "Chance Death",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uiNRrdnJe0GOzy6Q",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chance Death",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You would die as a result of a failed recovery check or saving throw.</p><hr /><p>Your previous life ended due to sheer poor luck, struck by lightning or choking on a fish bone. You can reroll the triggering recovery check or saving throw, but you must use the new result, even if it's worse.</p><hr /><p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +128,48 @@
       "name": "Deliberate Death",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "30e9SdbmI3t5OJQE",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deliberate Death",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You are about to gain the dying condition as a result of another creature's attack or ability, and that creature is within your melee reach.</p><hr /><p>Once, you died because someone—murderer, monster, or soldier—chose to strike you down. Just before losing consciousness, make a melee Strike against the triggering creature.</p><hr /><p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +179,60 @@
       "name": "Duskwalker Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "O5v8yaeCbjKeXfyi",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duskwalker Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You either found another duskwalker who taught you the secrets of your kind, or you managed to research your unusual heritage. You gain the trained proficiency rank in Medicine and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Boneyard Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.medicine.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +242,76 @@
       "name": "Duskwalker Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PxWdf4HAhZ8fUB3R",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duskwalker Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to psychopomps gives you the power to glimpse the near future and protect corpses from the ravages of undeath. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Augury] and @UUID[Compendium.pf2e.spells-srd.Item.Peaceful Rest] each once per day as 2nd-rank divine innate spells.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:augury",
+                    "item:slug:peaceful-rest"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:augury",
+                    "item:slug:peaceful-rest"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:duskwalker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +321,81 @@
       "name": "Duskwalker Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8rKlptZ7ArtJ6cI8",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duskwalker Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have familiarity with the bo staff, longbow, composite longbow, scythe, and staff—for the purpose of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:base:bo-staff",
+                    "item:base:staff",
+                    "item:base:scythe",
+                    "item:base:longbow",
+                    "item:base:composite-longbow"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialDuskwalkerWeapons",
+              "sameAs": "simple",
+              "slug": "martial-duskwalker-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:base:bo-staff",
+                    "item:base:staff",
+                    "item:base:scythe",
+                    "item:base:longbow",
+                    "item:base:composite-longbow"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +405,76 @@
       "name": "Ghost Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DGtUIMliflzGXc6E",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ghost Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to the Boneyard ensures that your blows strike true against spectral beings. Your weapon and unarmed Strikes against incorporeal creatures become magical. If they are already magical, they instead gain the effects of a <em>ghost touch</em> property rune.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TOTMToggle.Incorporeal",
+              "option": "target:trait:incorporeal",
+              "toggleable": "totm"
+            },
+            {
+              "definition": [
+                "item:magical"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "target:trait:incorporeal"
+              ],
+              "property": "property-runes",
+              "value": "ghost-touch"
+            },
+            {
+              "definition": [
+                {
+                  "not": "item:magical"
+                }
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "target:trait:incorporeal"
+              ],
+              "property": "weapon-traits",
+              "value": "magical"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +484,53 @@
       "name": "Gravesight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hxCqQPjlyVI57vQt",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gravesight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can see in the darkness as easily as a psychopomp. You gain darkvision.</p><hr /><p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "low-light vision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +540,52 @@
       "name": "Lifesense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iNrR4WOB1UO9iiNE",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lifesense",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a limited ability to sense life force, like your psychopomp forebears. You gain lifesense as an imprecise sense with a range of 10 feet. This allows you to sense the life force of living and undead creatures within the listed range. The sense can distinguish between the vitality energy animating living creatures and the void energy animating undead creatures, much as sight distinguishes colors.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "lifesense": {
+                "acuity": "imprecise",
+                "range": 10
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "divine",
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -88,6 +595,70 @@
       "name": "Quietus Strikes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S7z1LbnSRlBep8rO",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quietus Strikes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to the Boneyard empowers you to bring death to all forms of life and unlife, exploiting their weaknesses. All your weapon and unarmed Strikes are magical and deal 1 additional void damage to living creatures and 1 additional vitality damage to undead. The extra damage increases to 2 if the Strike has a <em>+3 potency rune</em>.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "damageType": "vitality",
+              "key": "FlatModifier",
+              "predicate": [
+                "target:mode:undead"
+              ],
+              "selector": "strike-damage",
+              "slug": "spirit-strikes-undead",
+              "value": "ternary(gte(@weapon.system.runes.potency,3),2,1)"
+            },
+            {
+              "damageType": "void",
+              "key": "FlatModifier",
+              "predicate": [
+                "target:mode:living"
+              ],
+              "selector": "strike-damage",
+              "slug": "spirit-strikes-living",
+              "value": "ternary(gte(@weapon.system.runes.potency,3),2,1)"
+            },
+            {
+              "key": "AdjustStrike",
+              "mode": "add",
+              "property": "traits",
+              "value": "magical"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -97,6 +668,71 @@
       "name": "Resist Ruin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FqZKSSBU7M4zhsXM",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resist Ruin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your duskwalker heritage allows you to extend protection against void energy. You gain resistance 5 to void, and once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.False Vitality] as a 5th-rank divine innate spell.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "void",
+              "value": 5
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:false-vitality",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:false-vitality",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:duskwalker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -106,6 +742,53 @@
       "name": "Spirit Soother",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2RmsQrLySNYQ4uIn",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spirit Soother",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are attuned to the minute sounds and sensations of restless spirits. Even if you aren't @UUID[Compendium.pf2e.actionspf2e.Item.Search]{Searching}, you can attempt a check to find haunts that normally require you to be Searching. You still need to meet any other requirements to find the haunt. You gain a +1 circumstance bonus to checks to disable haunts.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "origin:trait:haunt"
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -115,6 +798,81 @@
       "name": "Ward Against Corruption",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NFsQOa3ynthYLVj6",
+        "folder": "IulPPM6u6V9GJtD3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ward Against Corruption",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your soul is warded against the power of undeath and plague, as well as that of the evil former psychopomps known as sahkils. You gain a +1 circumstance bonus to saving throws against death effects, disease, and all effects from undead or sahkils. This bonus increases to +2 against an undead or sahkil's death effect or disease.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:death",
+                    "item:trait:disease",
+                    "origin:mode:undead",
+                    "origin:trait:sakhil"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:death"
+                  ]
+                },
+                {
+                  "or": [
+                    "origin:mode:undead",
+                    "origin:trait:sakhil"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "slug": "ward-against-corruption",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "duskwalker"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

@@ -7,6 +7,48 @@
       "name": "Clang!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xaYEUVetHiRgmVhd",
+        "folder": "fIpiz1pbBNI7yUpz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clang!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy critically misses a Strike or spell attack roll against your AC.</p><hr /><p>You make a foe pay for attacking you as its blow or spell glances off your armor. Either Strike the triggering enemy or Stride up to your Speed toward the triggering enemy. If you Stride and end your movement adjacent to the triggering enemy, it's @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +58,64 @@
       "name": "Clobber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nV9ykcwI4lSmD2PV",
+        "folder": "fIpiz1pbBNI7yUpz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clobber",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing medium or heavy armor.</p><hr /><p>With a mighty blow, you send an enemy flying backward and onto the ground. Strike a foe. This Strike deals an extra die of weapon damage. If you hit and deal damage, you can automatically @UUID[Compendium.pf2e.actionspf2e.Item.Shove] the target, with the same benefits as the Shove action (including the critical success effect, if your Strike was a critical hit). The target then falls @UUID[Compendium.pf2e.conditionitems.Item.Prone]. This counts as two attacks when calculating your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "domain": "strike-damage",
+              "key": "RollOption",
+              "option": "clobber",
+              "toggleable": true
+            },
+            {
+              "diceNumber": 1,
+              "key": "DamageDice",
+              "predicate": [
+                "clobber"
+              ],
+              "selector": "strike-damage",
+              "toggleable": true
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +125,58 @@
       "name": "Never!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xlZRdUyqjtdSYd8Q",
+        "folder": "fIpiz1pbBNI7yUpz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Never!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The idea that you would hurt your companions, even when you've lost your reason, is unthinkable. Each time you would attack an ally due to being @UUID[Compendium.pf2e.conditionitems.Item.Confused] or controlled, you can attempt another saving throw against the effect that caused you to be confused or controlled with a +4 circumstance bonus to the save. If you succeed, you don't make the attack, though you still expend any actions it would have taken. If your save ends the effect making you confused or controlled, you can take any remaining actions during your turn as normal. Failing or critically failing this additional save doesn't increase the effect's duration or otherwise worsen it.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "never"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 4
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

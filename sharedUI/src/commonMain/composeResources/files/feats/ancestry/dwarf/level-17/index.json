@@ -7,6 +7,76 @@
       "name": "Forge-Blessed Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9cq4j15EbVyrHKFX",
+        "folder": "js3DhVJpfMJAWh7w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Forge-Blessed Shot",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p>\n<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You attempt a ranged Strike.</p><hr /><p>You intone a prayer to the dwarven deities Torag or Angradd, willing a higher power to guide your aim in the heat of battle. On your next Strike with a ranged weapon before the end of your turn, you gain a +2 circumstance bonus to your attack roll and ignore your target's @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition, as well as your target's lesser, standard, and greater cover.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "worshipper of Torag or Angradd"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "forge-blessed-shot",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "forge-blessed-shot"
+              ],
+              "selector": "ranged-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "forge-blessed-shot"
+              ],
+              "selector": "ranged-attack-roll",
+              "text": "PF2E.SpecificRule.Dwarf.ForgeBlessedShot.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "divine",
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +86,70 @@
       "name": "Stonegate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UquGIEFKhutgJsEz",
+        "folder": "js3DhVJpfMJAWh7w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stonegate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Earthen barriers no longer impede your progress. You gain @UUID[Compendium.pf2e.spells-srd.Item.Magic Passage] as a 7th-rank divine innate spell that you can cast once per day. Unlike the spell, however, this ability can be used only to open passages through barriers of earth or stone.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Stonewalker"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:magic-passage",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:magic-passage",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dwarf"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -25,6 +159,49 @@
       "name": "Stonewall",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gLOLdDj21bTaLHp7",
+        "folder": "js3DhVJpfMJAWh7w",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stonewall",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy or hazard's effect hits you or you fail a Fortitude save against one.</p>\n<hr />\n<p>The strength of stone overcomes you so strongly that it replaces your stout body. You become @UUID[Compendium.pf2e.conditionitems.Item.Petrified] until the end of the current turn. You don't take any damage from the triggering effect or any other ill effects that couldn't affect stone.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf",
+              "earth",
+              "polymorph"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

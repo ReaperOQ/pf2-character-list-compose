@@ -7,6 +7,57 @@
       "name": "Alchemical Assessment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ypir96PNY6LBSIWT",
+        "folder": "PiL5s3HX82D61u1D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alchemical Assessment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can identify alchemical items quickly. When using the Crafting skill to @UUID[Compendium.pf2e.actionspf2e.Item.Identify Alchemy] on an alchemical item you hold, you can do so as a single action, rather than spending 10 minutes.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:identify-alchemy"
+              ],
+              "selector": "crafting",
+              "text": "PF2E.SpecificRule.Alchemist.AlchemicalAssessment.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +67,51 @@
       "name": "Alchemical Familiar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "loC0wIyIrsG43Zrd",
+        "folder": "PiL5s3HX82D61u1D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alchemical Familiar",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have used alchemy to create life, a simple creature formed from alchemical materials, reagents, and a bit of your own blood. You gain a familiar, which has the @UUID[Compendium.pf2e.familiar-abilities.Item.Construct] familiar ability; this is permanent, doesn't require the familiar to have the @UUID[Compendium.pf2e.familiar-abilities.Item.Tough] familiar ability, and doesn't count against your usual limit of familiar abilities (typically 2). The familiar uses your Intelligence modifier to determine its Perception, Acrobatics, and Stealth modifiers.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.familiarAbilities.value",
+              "priority": 9,
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +121,67 @@
       "name": "Blowgun Poisoner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QZ00D2xdJnbWFzml",
+        "folder": "PiL5s3HX82D61u1D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blowgun Poisoner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can capably deliver toxins with a @UUID[Compendium.pf2e.equipment-srd.Item.Blowgun]. Your blowgun @UUID[Compendium.pf2e.actionspf2e.Item.Strike]{Strikes} can apply injury poisons even if they deal no damage due to a creature's resistance. If you critically succeed at a blowgun Strike using a poisoned dart, the target's initial save against the poison is one degree of success worse than the creature rolls; this is a misfortune effect.</p>\n<p>In addition, if you make a blowgun Strike while @UUID[Compendium.pf2e.conditionitems.Item.Hidden] or @UUID[Compendium.pf2e.conditionitems.Item.Undetected], you don't automatically become @UUID[Compendium.pf2e.conditionitems.Item.Observed]. Instead, immediately attempt a @Check[stealth|against:perception] check against the Perception DC of the target. If you succeed, you don't become observed, and are hidden (if you were undetected, you still become hidden rather than remaining undetected).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "selector": "blowgun-attack",
+              "text": "PF2E.SpecificRule.Alchemist.BlowgunPoisoner.CriticalNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                {
+                  "or": [
+                    "self:condition:hidden",
+                    "self:condition:undetected"
+                  ]
+                }
+              ],
+              "selector": "blowgun-attack",
+              "text": "PF2E.SpecificRule.Alchemist.BlowgunPoisoner.StealthNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +191,53 @@
       "name": "Far Lobber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BJHsCiBLdjgJo6zM",
+        "folder": "PiL5s3HX82D61u1D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Far Lobber",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned how to throw a longer distance. When you throw an alchemical bomb, it has a range increment of 30 feet instead of the usual 20 feet.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:base:alchemical-bomb"
+              ],
+              "key": "AdjustStrike",
+              "mode": "upgrade",
+              "property": "range-increment",
+              "value": 30
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +247,43 @@
       "name": "Quick Bomber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xbg1scOIT7RI9Fij",
+        "folder": "PiL5s3HX82D61u1D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Bomber",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You keep your bombs and bomb-related reagents in easy-toreach pouches from which you draw without thinking. You Interact to draw a bomb, draw a versatile vial, or use @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy] to create a bomb, then @UUID[Compendium.pf2e.actionspf2e.Item.Strike] with the bomb. If you have the ability to create more than one bomb at a time with Quick Alchemy (such as from the double brew class feature), you can Strike with only one of the bombs you create with this action.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +293,43 @@
       "name": "Soothing Vials",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BAsKBwlbJAQ6sLhN",
+        "folder": "PiL5s3HX82D61u1D",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Soothing Vials",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The healing chemicals in your versatile vials also help calm a patient's mind. When a living creature affected by a mental effect regains Hit Points from one of your versatile vials, it can immediately attempt a new Will saving throw to end one mental effect of its choice. It gains a +1 item bonus to the saving throw.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Soothing Vials]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

@@ -1,0 +1,297 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "celestial-envoy-kitsune.json",
+      "id": "IFg2tqmAFFnU8UNU",
+      "name": "Celestial Envoy Kitsune",
+      "img": "icons/magic/holy/yin-yang-balance-symbol.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "IFg2tqmAFFnU8UNU",
+        "folder": "RQK8iClIsUamNc1W",
+        "img": "icons/magic/holy/yin-yang-balance-symbol.webp",
+        "name": "Celestial Envoy Kitsune",
+        "system": {
+          "ancestry": {
+            "name": "Kitsune",
+            "slug": "kitsune",
+            "uuid": "Compendium.pf2e.ancestries.Item.4BL5wf1VF9feC2rY"
+          },
+          "description": {
+            "value": "<p>Whether due to Daikitsu's grace or faithful forebears, you have a strong connection to the divine, affording you certain protections. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Invoke Celestial Privilege] reaction. Your alternate form is a common Medium humanoid ancestry prevalent where you grew up (typically human), called a tailless form.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Invoke Celestial Privilege"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "dark-fields-kitsune.json",
+      "id": "NWbdAN5gDse0ad7C",
+      "name": "Dark Fields Kitsune",
+      "img": "icons/creatures/mammals/wolf-shadow-black.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "NWbdAN5gDse0ad7C",
+        "folder": "RQK8iClIsUamNc1W",
+        "img": "icons/creatures/mammals/wolf-shadow-black.webp",
+        "name": "Dark Fields Kitsune",
+        "system": {
+          "ancestry": {
+            "name": "Kitsune",
+            "slug": "kitsune",
+            "uuid": "Compendium.pf2e.ancestries.Item.4BL5wf1VF9feC2rY"
+          },
+          "description": {
+            "value": "<p>You can exert your unsettling presence to subtly Demoralize others. When you do, Demoralize loses the auditory trait and gains the visual trait, and you don't take a penalty when you attempt to Demoralize a creature that doesn't understand your language. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Invigorating Fear] reaction. Your alternate form is a fox, which has the statistics of 1st-rank @UUID[Compendium.pf2e.spells-srd.Item.Pest Form].</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Invigorating Fear"
+            },
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.NPCAbility.ChangeShape.Label",
+              "mergeable": true,
+              "option": "change-shape",
+              "suboptions": [
+                {
+                  "label": "PF2E.NPCAbility.ChangeShape.Form.Animal.Specific.Fox",
+                  "value": "fox"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "option": "non-tailless-form",
+              "priority": 49
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "earthly-wilds-kitsune.json",
+      "id": "Wk4HyaZtC1j221i1",
+      "name": "Earthly Wilds Kitsune",
+      "img": "icons/creatures/abilities/mouth-teeth-sharp.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "Wk4HyaZtC1j221i1",
+        "folder": "RQK8iClIsUamNc1W",
+        "img": "icons/creatures/abilities/mouth-teeth-sharp.webp",
+        "name": "Earthly Wilds Kitsune",
+        "system": {
+          "ancestry": {
+            "name": "Kitsune",
+            "slug": "kitsune",
+            "uuid": "Compendium.pf2e.ancestries.Item.4BL5wf1VF9feC2rY"
+          },
+          "description": {
+            "value": "<p>You are a creature of the material world, with an affinity closer to the wilds than urban society. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the finesse and unarmed traits. Your alternate form is a fox, which has the statistics of 1st-rank @UUID[Compendium.pf2e.spells-srd.Item.Pest Form].</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "baseType": "jaws",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.jaws",
+              "range": null,
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.NPCAbility.ChangeShape.Label",
+              "mergeable": true,
+              "option": "change-shape",
+              "suboptions": [
+                {
+                  "label": "PF2E.NPCAbility.ChangeShape.Form.Animal.Specific.Fox",
+                  "value": "fox"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "option": "non-tailless-form",
+              "priority": 49
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "empty-sky-kitsune.json",
+      "id": "mBH1L01kYmB8EL56",
+      "name": "Empty Sky Kitsune",
+      "img": "icons/magic/light/hand-sparks-smoke-teal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "mBH1L01kYmB8EL56",
+        "folder": "RQK8iClIsUamNc1W",
+        "img": "icons/magic/light/hand-sparks-smoke-teal.webp",
+        "name": "Empty Sky Kitsune",
+        "system": {
+          "ancestry": {
+            "name": "Kitsune",
+            "slug": "kitsune",
+            "uuid": "Compendium.pf2e.ancestries.Item.4BL5wf1VF9feC2rY"
+          },
+          "description": {
+            "value": "<p>Your spirit is open to the secrets of beyond, granting you greater access to kitsune magic. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Kitsune Spell Familiarity] ancestry feat. Your alternate form is a common Medium humanoid ancestry prevalent where you grew up (typically human), called a tailless form.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Kitsune Spell Familiarity"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "frozen-wind-kitsune.json",
+      "id": "kHT9dFJt5yTjeYoB",
+      "name": "Frozen Wind Kitsune",
+      "img": "icons/magic/water/snowflake-ice-gray.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "kHT9dFJt5yTjeYoB",
+        "folder": "RQK8iClIsUamNc1W",
+        "img": "icons/magic/water/snowflake-ice-gray.webp",
+        "name": "Frozen Wind Kitsune",
+        "system": {
+          "ancestry": {
+            "name": "Kitsune",
+            "slug": "kitsune",
+            "uuid": "Compendium.pf2e.ancestries.Item.4BL5wf1VF9feC2rY"
+          },
+          "description": {
+            "value": "<p>Your ancestors crossed the Crown of the World or resided on snowy peaks. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on). Your alternate form is a common Medium humanoid ancestry prevalent where you grew up (typically human), called a tailless form.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "palace-echoes-kitsune.json",
+      "id": "SienSObWb4deLQig",
+      "name": "Palace Echoes Kitsune",
+      "img": "icons/creatures/mammals/humanoid-fox-cat-archer.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "SienSObWb4deLQig",
+        "folder": "RQK8iClIsUamNc1W",
+        "img": "icons/creatures/mammals/humanoid-fox-cat-archer.webp",
+        "name": "Palace Echoes Kitsune",
+        "system": {
+          "ancestry": {
+            "name": "Kitsune",
+            "slug": "kitsune",
+            "uuid": "Compendium.pf2e.ancestries.Item.4BL5wf1VF9feC2rY"
+          },
+          "description": {
+            "value": "<p>You descend from kitsune who possessed such compelling powers of persuasion that they could walk into a palace at sunrise and end up as the power behind the throne by nightfall. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Nudging Whisper] action.</p>\n<p>Your alternate form is a common Medium humanoid ancestry prevalent where you grew up (typically human) called a tailless form.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Nudging Whisper"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kitsune"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

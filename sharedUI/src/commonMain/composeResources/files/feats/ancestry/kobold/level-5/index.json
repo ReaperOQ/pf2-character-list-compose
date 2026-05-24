@@ -7,6 +7,48 @@
       "name": "Ally's Shelter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j0mlvJcuYGFuMG2S",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ally's Shelter",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You attempt a saving throw while adjacent to one or more allies, but you haven't rolled yet.</p><hr /><p>You follow your allies' example. Roll the save using an adjacent ally's modifier for that type of saving throw instead of your own.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +58,73 @@
       "name": "Benefactor's Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9tO7Kovo3Ugy0175",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Benefactor's Strike",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your benefactor's blood flows through your veins, and you channel their power into your body. When you critically hit with an unarmed Strike, the target takes an additional 1 persistent damage of the same type as the damage dealt by the breath of your draconic benefactor.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.GduFISQ6kzEB6sec#draconic-benefactors]{Draconic Benefactors}</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dragonscaled kobold heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:draconic-benefactor"
+                }
+              ],
+              "uuid": "Compendium.pf2e.ancestryfeatures.Item.Draconic Benefactor"
+            },
+            {
+              "critical": true,
+              "damageCategory": "persistent",
+              "damageType": "{actor|flags.system.draconicBenefactor.breathDamage}",
+              "key": "FlatModifier",
+              "selector": [
+                "unarmed-damage"
+              ],
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +134,61 @@
       "name": "Duck!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VHOsMzpzQUX7AEau",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duck!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your long experience with your erratic patrons and their peers has given you a lot of practice in hitting the deck when you hear the rumbling of a powerful entity. When you roll a critical failure on a Reflex saving throw against an ability that targets an area and was caused by a Huge or larger creature, you get a failure instead, and when you roll a success against such an effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better",
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "area-effect",
+                {
+                  "gte": [
+                    "origin:size",
+                    4
+                  ]
+                }
+              ],
+              "selector": "reflex"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +198,63 @@
       "name": "Friend of the Family",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UpHZIBq0ECtgUS6T",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Friend of the Family",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You come from a long line of imperial kobolds—if you meet a stranger who has some political standing in Tian Xia, they might know someone from your family line. You gain a +2 circumstance bonus to Diplomacy checks to Make an Impression or Request when speaking to politicians or other officials.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "heavenscribe kobold heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "target:tag:politician",
+                {
+                  "or": [
+                    "action:make-an-impression",
+                    "action:request"
+                  ]
+                }
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +264,51 @@
       "name": "Grovel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gS9FYlD0Vt8yyZkP",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grovel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You convince your foe you're less of a threat. You attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Feint] against a creature. Unlike a normal Feint, the creature can be within 30 feet instead of in your melee reach, and you make your check against its Will DC instead of its Perception DC.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "concentrate",
+              "emotion",
+              "kobold",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +318,52 @@
       "name": "Kobold Momentum",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pXwOIzZhfgJrhQxS",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kobold Momentum",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You possess the confidence of a dragon, and your success emboldens you to draw on power reserves you didn't know you had. You recharge your Kobold Breath whenever you score a critical hit with a Strike. In addition, if you score a critical hit with a Strike and then use your Kobold Breath on the same turn, you can reroll any 1s on the damage dice. You must use the new result, even if it's a 1.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kobold Breath"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +373,61 @@
       "name": "Snare Genius",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8DIzXO1YpsU3DpJw",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Snare Genius",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>If the snare normally takes 1 minute to Craft, you can Craft it with 3 Interact actions instead. Each day during your daily preparations, you can prepare three snares from your formula book for quick deployment (increasing to four snares if you're a master in Crafting and five if you're legendary). Snares prepared in this way don't cost you any resources to Craft.</p>\n<p>When a creature critically fails its saving throw against and takes damage from the initial effect of a snare you Crafted and deployed, that creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              },
+              {
+                "value": "Snare Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "craftableItems": [
+                "item:trait:snare"
+              ],
+              "isPrepared": true,
+              "key": "CraftingAbility",
+              "maxSlots": "1 + @actor.system.skills.crafting.rank",
+              "priority": 60,
+              "slug": "snare-genius"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -70,6 +437,48 @@
       "name": "Tip the Scales",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Dc5hLCC2qxCDWjX5",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tip the Scales",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're a cunning adversary in close quarters and are well-versed in hit-and-run tactics that exploit the advantages of your small stature. As part of your training, you learned what to do when you're @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained]. You gain a +1 circumstance bonus to checks to Escape, and after resolving a successful Escape action, you can immediately use your reaction to Step or to [[/act shove]] or [[/act trip]] the creature from whom you just Escaped.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -79,6 +488,43 @@
       "name": "Winglets",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "juLtvliSzYPCmMa3",
+        "folder": "UUTk1SFVEqGhW5le",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Winglets",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Through the lingering influence of your warren's patron, you've sprouted a small set of wings. While not suitable for full flight, these weak wings can help you jump further with a small flap. When Leaping horizontally, you move an additional 5 feet. This additional distance isn't cumulative with the increased @UUID[Compendium.pf2e.actionspf2e.Item.Leap] distance from the @UUID[Compendium.pf2e.feats-srd.Item.Powerful Leap] feat. In addition, when you attempt a @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump], you can jump a distance up to 10 feet farther than you normally would based on the result of your Athletics check, though you still can't jump farther than your Speed. You don't automatically fail your checks to @UUID[Compendium.pf2e.actionspf2e.Item.High Jump] or Long Jump if you don't Stride at least 10 feet first.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

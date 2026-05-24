@@ -7,6 +7,58 @@
       "name": "Advanced Monastic Weaponry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Sebm8u9jyKPRguNf",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Monastic Weaponry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your rigorous training regimen allows you to wield complex weaponry with ease. For the purposes of proficiency, you treat advanced monk weapons as if they were martial monk weapons.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monastic Weaponry"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:trait:monk",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedMonasticWeaponry",
+              "sameAs": "martial",
+              "slug": "advanced-monastic-weaponry"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +68,48 @@
       "name": "Advanced Qi Spells",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "10DbphslCihq8mxQ",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Qi Spells",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your talent at controlling your qi has reached new heights. You gain @UUID[Compendium.pf2e.spells-srd.Item.Qi Blast], @UUID[Compendium.pf2e.spells-srd.Item.Shrink the Span], or another 3rd-rank qi spell you have access to.</p><hr /><p><strong>Special</strong> You can select this feat more than once, choosing a different spell each time.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +119,51 @@
       "name": "Align Qi",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6iDd7CTzxkvMp6lB",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Align Qi",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You Cast a Spell that has the monk trait.</p><hr /><p>The power of your qi soothes your wounds and energizes you for battle. You @Damage[(@actor.abilities.wis.mod + @actor.level)[healing]]{regain Hit Points} equal to your level plus your Wisdom modifier.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +173,76 @@
       "name": "Crane Flutter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S14S52HjszTgIy4l",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crane Flutter",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are targeted with an attack by an observed attacker.</p>\n<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Crane Stance].</p><hr /><p>You interpose your arm between yourself and your opponent. Your circumstance bonus to AC from Crane Stance increases to +3 against the triggering attack. If the attack misses you and the attacker is within your reach, you can immediately make a crane wing Strike against the attacker at a -2 penalty.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crane Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:crane-stance"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "crane-flutter",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "crane-flutter"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 3
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "crane-flutter"
+              ],
+              "selector": "crane-wing-attack",
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +252,70 @@
       "name": "Culvert's Collapse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AsOVi8AqE3v10ee0",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Culvert's Collapse",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in Flood Stance and were damaged by an enemy since your previous turn.</p><hr /><p>Under your foes' onslaught, the water within your violent blood stirs. Your killing intent swells, your agonies marshaling your inevitable resurgence. Make a flooded river Strike against the enemy who dealt damage to you since your previous turn. That Strike deals an additional 1d8 bleed damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Flood Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "culverts-collapse",
+              "toggleable": true
+            },
+            {
+              "category": "persistent",
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d8",
+              "key": "DamageDice",
+              "predicate": [
+                "culverts-collapse"
+              ],
+              "selector": "flooded-river-damage"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "monk",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +325,73 @@
       "name": "Dragon Roar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SELSj1vvVLx5cP72",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon Roar",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Dragon Stance]</p><hr /><p>You bellow, instilling fear in your enemies. Enemies within a @Template[emanation|distance:15] must succeed at a @Check[will|against:intimidation|options:area-effect,inflicts:frightened] save against your Intimidation DC or be @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} on a critical failure). When a creature frightened by the roar begins its turn adjacent to you, it can't reduce its frightened value below 1 on that turn.</p>\n<p>Your first attack that hits a frightened creature after you roar and before the end of your next turn gains a +4 circumstance bonus to damage.</p>\n<p>After you use Dragon Roar, you can't use it again for [[/r 1d4 #Recharge Dragon Roar]]{1d4 rounds}. Its effects end immediately if you leave Dragon Stance. Creatures in the area are then temporarily immune for 1 minute.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dragon Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:dragon-stance"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Monk.DragonRoar.Label",
+              "option": "dragon-roar",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "dragon-roar"
+              ],
+              "selector": "attack-damage",
+              "type": "circumstance",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "emotion",
+              "fear",
+              "mental",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +401,47 @@
       "name": "Momentous Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QlBQEkFqiYsU2Y3x",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Momentous Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in @UUID[Compendium.pf2e.feats-srd.Item.Rushing Goat Stance].</p><hr /><p>You rush into your enemies with great and reckless force. You @UUID[Compendium.pf2e.actionspf2e.Item.Climb], Stride, or @UUID[Compendium.pf2e.actionspf2e.Item.Leap], then make a ramming horn Strike. On a success, the target of the Strike is pushed up to 10 feet directly away from you. On a critical success, the target is also @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rushing Goat Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +451,62 @@
       "name": "Mountain Stronghold",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n2hawNmzW7DBn1Lm",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mountain Stronghold",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Mountain Stance]</p>\n<hr />\n<p>You focus on your connection to the earth and call upon the mountain to block attacks against you. You gain a +2 circumstance bonus to AC until the beginning of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Mountain Stronghold]</p>\n<hr />\n<p><strong>Special</strong> If you have this feat, the Dexterity modifier cap to your AC while you're in @UUID[Compendium.pf2e.feats-srd.Item.Mountain Stance] increases from +0 to +1.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mountain Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "DexterityModifierCap",
+              "predicate": [
+                "self:effect:mountain-stance",
+                {
+                  "not": "feat:mountain-quake"
+                }
+              ],
+              "value": 1
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Mountain Stronghold",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Mountain Stronghold"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +516,101 @@
       "name": "One-Inch Punch",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jaAnxfXVmUQy0IKU",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "One-Inch Punch",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You put all your force into a single mighty, carefully controlled blow. Make an unarmed Strike. If you spend two actions and this Strike hits, you deal an extra die of weapon damage. You can instead spend 3 actions to perform an even more powerful attack, dealing a second additional die of weapon damage on a hit.</p>\n<p>If you're at least 10th level, the number of additional dice you add from this feat doubles, for a total of 2 additional dice if you spend 2 actions or 4 additional dice if you spend 3 actions.</p>\n<p>If you're at least 18th level, the number of additional dice you add from this feat triples, for a total of 3 additional dice if you spend 2 actions or 6 additional dice if you spend 3 actions.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert strikes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "one-inch-punch",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Actions.TwoActions",
+                  "value": "two"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Actions.ThreeActions",
+                  "value": "three"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "diceNumber": "ternary(gte(@actor.level, 18), 3, ternary(gte(@actor.level, 10), 2, 1))",
+              "key": "DamageDice",
+              "predicate": [
+                {
+                  "or": [
+                    "unarmed",
+                    {
+                      "and": [
+                        "feat:monastic-weaponry",
+                        "item:trait:monk"
+                      ]
+                    }
+                  ]
+                },
+                "one-inch-punch:two"
+              ],
+              "selector": "melee-strike-damage"
+            },
+            {
+              "diceNumber": "ternary(gte(@actor.level, 18), 6, ternary(gte(@actor.level, 10), 4, 2))",
+              "key": "DamageDice",
+              "predicate": [
+                {
+                  "or": [
+                    "unarmed",
+                    {
+                      "and": [
+                        "feat:monastic-weaponry",
+                        "item:trait:monk"
+                      ]
+                    }
+                  ]
+                },
+                "one-inch-punch:three"
+              ],
+              "selector": "melee-strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -88,6 +620,50 @@
       "name": "Return Fire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OINfbwNZGnlyMqPR",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Return Fire",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Monastic Archer Stance], are wielding a bow, and have a free hand.</p><hr /><p>Snatching an arrow out of the air, you instantly put it to your bow and return fire. When you successfully @UUID[Compendium.pf2e.feats-srd.Item.Deflect Projectile] that's an arrow, as part of that reaction you can immediately make a ranged bow Strike from your own bow by firing the arrow you deflected.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Deflect Projectile"
+              },
+              {
+                "value": "Monastic Archer Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +673,50 @@
       "name": "Stumbling Feint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kYA6LkDw4AzKI156",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stumbling Feint",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Stumbling Stance].</p>\n<hr />\n<p>You lash out confusingly with what seems to be a weak move but instead allows you to unleash a dangerous flurry of blows upon your unsuspecting foe.</p>\n<p>When you use @UUID[Compendium.pf2e.actionspf2e.Item.Flurry of Blows], you can attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.Feint] as a free action just before the first Strike.</p>\n<p>On a success, instead of making the target @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against your next attack, they become off-guard against both attacks from the Flurry of Blows.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Deception"
+              },
+              {
+                "value": "Stumbling Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -106,6 +726,77 @@
       "name": "Tiger Slash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6J2ZSGNsXPKPcJGV",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tiger Slash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Tiger Stance]</p>\n<hr />\n<p>You make a fierce swipe with both hands. Make a tiger claw Strike. It deals two extra weapon damage dice (three extra dice if you're 14th level or higher), and you can push the target 5 feet away as if you had successfully @UUID[Compendium.pf2e.actionspf2e.Item.Shove]{Shoved} them.</p>\n<p>If the attack is a critical success and deals damage, add your Strength modifier to the persistent bleed damage from your tiger claw.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Tiger Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:tiger-stance"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "tiger-slash",
+              "toggleable": true
+            },
+            {
+              "diceNumber": "match(when(lte(@actor.level, 13), 2), when(gte(@actor.level, 14), 3))",
+              "key": "DamageDice",
+              "predicate": [
+                "tiger-slash"
+              ],
+              "selector": "tiger-claw-damage"
+            },
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "key": "FlatModifier",
+              "predicate": [
+                "tiger-slash"
+              ],
+              "selector": "tiger-claw-damage",
+              "value": "@actor.abilities.str.mod"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -115,6 +806,43 @@
       "name": "Water Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6gLWr3xghsHSFwxc",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Water Step",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can Stride across liquid and surfaces that don't support your weight. This benefit lasts only during your movement. If you end your movement on a surface that can't support you, you fall in or it collapses as normal.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -124,6 +852,44 @@
       "name": "Whirling Throw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "w0nSRBNwexM5Dh0D",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whirling Throw",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You propel your enemy away. Attempt an @UUID[Compendium.pf2e.action-macros.Macro.Whirling Throw: Athletics]{Athletics} check against the foe's Fortitude DC. You take a –2 circumstance penalty to your check if the target is one size larger than you and a –4 circumstance penalty if it's larger than that. You gain a +2 circumstance bonus to your check if the target is one size smaller than you and a +4 circumstance bonus if it's smaller than that.</p><hr /><p><strong>Critical Success</strong> You throw the creature any distance up to 10 feet, plus 5 feet × your Strength modifier ([[/r 10+(5*@actor.abilities.str.mod)]] feet). It takes bludgeoning damage equal to your Strength modifier plus 1d6 per 10 feet you threw it (@Damage[((floor((10+(5*@actor.abilities.str.mod))/10))d6 + @actor.abilities.str.mod)[bludgeoning]] damage). If you threw the target at least 10 feet and into a solid obstacle, use the maximum distance you could have thrown it to calculate the damage. The creature falls @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Success</strong> As critical success, but the creature doesn't fall prone.</p>\n<p><strong>Failure</strong> You don't throw the creature.</p>\n<p><strong>Critical Failure</strong> You don't throw the creature, and it's no longer @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] by you.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -133,6 +899,84 @@
       "name": "Wolf Drag",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uJpghjJtNbqKUxRd",
+        "folder": "5fWVGjsONPZTddWC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wolf Drag",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Wolf Stance]</p>\n<hr />\n<p>You rip your enemy off their feet.</p>\n<p>Make a wolf jaw Strike. Your wolf jaw gains the fatal d12 trait for this Strike, and if the attack succeeds, you knock the target @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wolf Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:wolf-stance"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "wolf-drag",
+              "toggleable": true
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:wolf-jaws",
+                "wolf-drag"
+              ],
+              "property": "traits",
+              "value": "fatal-d12"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "item:slug:wolf-jaws",
+                "wolf-drag"
+              ],
+              "selector": "wolf-jaws-attack",
+              "text": "PF2E.SpecificRule.Monk.WolfDrag.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

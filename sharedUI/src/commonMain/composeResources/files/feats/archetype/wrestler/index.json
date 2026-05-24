@@ -7,6 +7,132 @@
       "name": "Aerial Piledriver",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UEqntGzFrFA7ncUO",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aerial Piledriver",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p>\n<hr />\n<p>Heaving both yourself and your opponent into the air, you bring them crashing to the ground. Make an unarmed melee Strike against the creature you have grabbed or restrained. This Strike deals 1d6 additional damage per weapon damage die, and it has the following additional effects on a success, failure, and critical failure.</p>\n<p><strong>Success</strong> The target lands @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Failure</strong> You lose your grip on the target, and it is no longer grabbed or restrained by you.</p>\n<p><strong>Critical Failure</strong> You lose both your grip on the target and your balance. You fall prone, and the target is no longer grabbed or restrained by you.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "aerial-piledriver",
+              "toggleable": true
+            },
+            {
+              "diceNumber": "@weapon.system.damage.dice",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "aerial-piledriver",
+                "item:category:unarmed",
+                "item:melee",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "aerial-piledriver",
+                "item:category:unarmed",
+                "item:melee",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.AerialPiledriver.SuccessText",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure"
+              ],
+              "predicate": [
+                "aerial-piledriver",
+                "item:category:unarmed",
+                "item:melee",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.AerialPiledriver.FailureText",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalFailure"
+              ],
+              "predicate": [
+                "aerial-piledriver",
+                "item:category:unarmed",
+                "item:melee",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.AerialPiledriver.CriticalFailureText",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "attack"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +142,47 @@
       "name": "Clinch Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "74PGpEAVNS5xUDA3",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clinch Strike",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature you had @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] successfully Escapes.</p>\n<hr />\n<p>Your opponents can't slip your grasp without receiving further punishment. Make an unarmed melee Strike against the triggering creature.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +192,47 @@
       "name": "Disengaging Twist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W7IfFi6MkTDfO2hb",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disengaging Twist",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature gives you the @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] condition.</p><hr /><p>Your ability to twist your opponents' bodies into painful locks and holds makes you particularly adept at escaping such predicaments. Attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] the triggering condition. You gain a +2 circumstance bonus to this check.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +242,47 @@
       "name": "Elbow Breaker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hENWnoZNljeJnZBR",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elbow Breaker",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You bend your opponent's body or limbs into agonizing positions that make it difficult for them to maintain their grip. Make an unarmed melee Strike against the creature you have grabbed or restrained. This Strike has the following effects in addition to its usual effects.</p><hr /><p><strong>Critical Success</strong> You knock one held item out of the creature's grasp. It falls to the ground in the creature's space.</p>\n<p><strong>Success</strong> You weaken your target's grasp on the item. Further attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] the target of that item gain a +2 circumstance bonus, and the target takes a –2 circumstance penalty to attacks with the item or other checks requiring a firm grasp on the item. The creature can end the effect by Interacting to change its grip on the item; otherwise, it lasts as long as the creature holds the item.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +292,49 @@
       "name": "Form Lock",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0EY2WQC3Hb6Mitgz",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Form Lock",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>Your ability to manipulate your enemy's entire body is potent enough that you can tear and break apart alternate forms. Attempt an Athletics check to counteract a polymorph effect currently affecting the creature you have grabbed or restrained. If the target is somehow under the effect of multiple polymorph effects, you can choose which one to attempt to counteract; the GM chooses randomly if the separate effects aren't obvious. The target is then temporarily immune for 1 day.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "attack",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -52,6 +344,47 @@
       "name": "Inescapable Grasp",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UxjAszOYAhUvCDt2",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inescapable Grasp",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your grasp has a supernatural quality to it, preventing your foes from easily escaping—with or without magical assistance. If a creature you have @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] attempts to use a teleportation spell or effect, it must succeed at a @Check[flat|dc:15] or the spell fails. If a creature you have grabbed attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] while under the effect of @UUID[Compendium.pf2e.spells-srd.Item.Unfettered Movement] or a similar effect, it must succeed at a @Check[flat|dc:15] or be forced to roll the Escape attempt normally, rather than automatically succeeding.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Inescapable Grasp]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +394,47 @@
       "name": "Running Tackle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "A981119DMdqE9Pg1",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Running Tackle",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You charge, throwing your body at your foe in a vicious tackle. Stride twice or make a @UUID[Compendium.pf2e.actionspf2e.Item.High Jump] or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump], then attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] or @UUID[Compendium.pf2e.actionspf2e.Item.Shove]. If you made a High Jump or Long Jump, you can make the [[/act grapple]] or [[/act shove]] at any point in the jump, but you can't travel any farther on the jump after you do.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +444,91 @@
       "name": "Spinebreaker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gxzTEt37M0z1WY1M",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spinebreaker",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You squeeze your opponent in a vicious bear hug, putting intense pressure on their nerves, joints, or other pain points. Attempt an Athletics check to [[/act grapple]] a creature you have grabbed or restrained, with the following additional effects if you succeed.</p><hr /><p><strong>Critical Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} until the end of its next turn and @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} for 1 minute.</p>\n<p><strong>Success</strong> The target is clumsy 1 until the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "spinebreaker",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:grapple",
+                "spinebreaker",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Wrestler.Spinebreaker.Note.Success",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:grapple",
+                "spinebreaker",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Wrestler.Spinebreaker.Note.CriticalSuccess",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -79,6 +538,62 @@
       "name": "Strangle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lMA3F9SGzGV79P5C",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strangle",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You squeeze the breath out of your foe. Make an unarmed melee Strike against the creature you have @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained]. On a success, you gain a circumstance bonus to damage equal to the number of weapon damage dice, and the target can barely speak until the start of your next turn or until it Escapes, whichever comes first. While it can barely speak, the target can't vocalize above a hoarse whisper, and it must succeed at a @Check[flat|dc:10] or lose any action that requires speech. For an action requiring speech that is also a manipulate action, like @UUID[Compendium.pf2e.actionspf2e.Item.Cast a Spell]{Casting a Spell} with the concentrate and manipulate trait, the target just rolls a single DC 10 flat check, rather than an additional DC 5 flat check for being grabbed.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Strangle]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "strangle",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "strangle"
+              ],
+              "selector": "unarmed-damage",
+              "type": "circumstance",
+              "value": "@weapon.system.damage.dice"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -88,6 +603,91 @@
       "name": "Submission Hold",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZXaDS4OJvsQYvhBZ",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Submission Hold",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>Your iron grip saps your opponent's strength. Attempt an Athletics check to [[/act grapple]] the creature you have grabbed or restrained, with the following additional effects if you succeed.</p><hr /><p><strong>Critical Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} until the end of its next turn and @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} for 1 minute.</p>\n<p><strong>Success</strong> The target is enfeebled 1 until the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "submission-hold",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:grapple",
+                "submission-hold",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Wrestler.SubmissionHold.Note.Success",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:grapple",
+                "submission-hold",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Wrestler.SubmissionHold.Note.CriticalSuccess",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -97,6 +697,85 @@
       "name": "Suplex",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9yko78REsaw7i2gr",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Suplex",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p>\n<hr />\n<p>Flexing your entire body, you heave your opponent over your head and slam them into the ground. Make an unarmed melee Strike against the creature you have grabbed or restrained; on a success, the target lands @UUID[Compendium.pf2e.conditionitems.Item.Prone], and on a critical success, the target lands prone and takes an additional @Damage[2d6[bludgeoning]] damage. Regardless of whether the Strike is successful, you immediately release your hold on the target.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wrestler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "suplex",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "suplex",
+                {
+                  "or": [
+                    "target:condition:grabbed",
+                    "target:condition:restrained"
+                  ]
+                }
+              ],
+              "selector": "unarmed-damage",
+              "text": "PF2E.SpecificRule.Wrestler.Suplex.Note",
+              "title": "{item|name}"
+            },
+            {
+              "critical": false,
+              "damageType": "bludgeoning",
+              "diceNumber": 2,
+              "dieSize": "d6",
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "check:outcome:critical-success",
+                "suplex"
+              ],
+              "selector": "unarmed-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -106,6 +785,76 @@
       "name": "Wrestler Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5npovgLMUlvtot2J",
+        "folder": "bcoviuaJ3aOakfIO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wrestler Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your training in the wrestling arts has made you particularly adept at moving, striking, and grappling while unencumbered. You become an expert in Athletics and gain the @UUID[Compendium.pf2e.feats-srd.Item.Titan Wrestler] skill feat. You don't take the -2 circumstance penalty for making a lethal attack with your nonlethal unarmed attacks. In addition, you gain a +2 circumstance bonus to your Fortitude DC when resisting an opponent's attempts to Grapple you or Swallow you Whole.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.drgCQcXZbIJU0Zhw]{Wrestler}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 2
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Titan Wrestler"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:grapple",
+                    "action:swallow-whole"
+                  ]
+                }
+              ],
+              "selector": [
+                "fortitude-dc",
+                "reflex-dc"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

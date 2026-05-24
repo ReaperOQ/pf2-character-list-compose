@@ -7,6 +7,45 @@
       "name": "Plot the Future",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N7CM5CmHuZ1cylV9",
+        "folder": "HML2Fc3Fs4NYFnW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plot the Future",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spend 10 minutes in contemplation to uncannily predict how events will play out. Choose a particular goal or activity you plan to engage in within 1 week, or an event you expect might happen within 1 week. You analyze whether it's likely to come to pass, learning whether it's highly likely, somewhat likely, somewhat unlikely, or highly unlikely. You also gain a piece of advice suggesting a course of action you or your allies could take that might make the chosen event more or less likely, whichever you prefer.</p>\n<p>The GM determines the likeliness of the event and the piece of advice you learn.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "investigator",
+              "prediction"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +55,57 @@
       "name": "Strategic Bypass",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NgUB5toKxBd8RJmm",
+        "folder": "HML2Fc3Fs4NYFnW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strategic Bypass",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your plans account for your foes' resistances, enabling you to strike a telling blow. When you hit with a Strike on which you substituted your attack roll due to @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem]{Devise a Strategem}, you ignore an amount of resistance equal to your Intelligence modifier for each resistance that applies against your attack.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "target:mark:devise-a-stratagem"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

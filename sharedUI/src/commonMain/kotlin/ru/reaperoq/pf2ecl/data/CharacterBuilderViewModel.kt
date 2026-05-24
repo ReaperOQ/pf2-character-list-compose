@@ -16,6 +16,19 @@ import co.touchlab.kermit.Logger
 import com.russhwolf.settings.Settings
 
 class CharacterBuilderViewModel : ViewModel() {
+    companion object {
+        const val MIN_LEVEL = 1
+        const val MAX_LEVEL = 20
+
+        fun proficiencyBonus(level: Int): Int = level.coerceIn(MIN_LEVEL, MAX_LEVEL) + 2
+
+        fun calculateMaxHp(state: CharacterState, conMod: Int): Int {
+            val ancestryHp = state.ancestry?.system?.hp ?: 0
+            val classHp = state.classData?.system?.hp ?: 0
+            return ancestryHp + state.level * classHp + state.level * conMod
+        }
+    }
+
     private val settings = Settings()
     private val json = Json { ignoreUnknownKeys = true }
 
@@ -43,6 +56,24 @@ class CharacterBuilderViewModel : ViewModel() {
     private val _featsLoading = MutableStateFlow(false)
     val featsLoading: StateFlow<Boolean> = _featsLoading.asStateFlow()
 
+    private val _heritagesLoading = MutableStateFlow(false)
+    val heritagesLoading: StateFlow<Boolean> = _heritagesLoading.asStateFlow()
+
+    private val _ancestryHeritages = MutableStateFlow<List<Heritage>>(emptyList())
+    val ancestryHeritages: StateFlow<List<Heritage>> = _ancestryHeritages.asStateFlow()
+
+    private val _versatileHeritages = MutableStateFlow<List<Heritage>>(emptyList())
+    val versatileHeritages: StateFlow<List<Heritage>> = _versatileHeritages.asStateFlow()
+
+    private val _cantripSpells = MutableStateFlow<List<Spell>>(emptyList())
+    val cantripSpells: StateFlow<List<Spell>> = _cantripSpells.asStateFlow()
+
+    private val _spellsByRank = MutableStateFlow<Map<Int, List<Spell>>>(emptyMap())
+    val spellsByRank: StateFlow<Map<Int, List<Spell>>> = _spellsByRank.asStateFlow()
+
+    private val _spellsLoading = MutableStateFlow(false)
+    val spellsLoading: StateFlow<Boolean> = _spellsLoading.asStateFlow()
+
     init {
         loadData()
         loadSavedCharacters()
@@ -53,6 +84,7 @@ class CharacterBuilderViewModel : ViewModel() {
             val serialized = settings.getString("characters_list", "")
             if (serialized.isNotEmpty()) {
                 val list = json.decodeFromString(ListSerializer(CharacterState.serializer()), serialized)
+                    .map { it.migrateLegacy() }
                 _savedCharacters.value = list
             }
         } catch (e: Exception) {
@@ -63,7 +95,7 @@ class CharacterBuilderViewModel : ViewModel() {
     fun saveCurrentCharacter() {
         viewModelScope.launch {
             try {
-                val current = _characterState.value
+                val current = _characterState.value.migrateLegacy()
                 val list = _savedCharacters.value.toMutableList()
 
                 val idx = list.indexOfFirst { it.name == current.name }
@@ -94,9 +126,13 @@ class CharacterBuilderViewModel : ViewModel() {
     }
 
     fun loadCharacter(character: CharacterState) {
-        _characterState.value = character
-        character.ancestry?.let { loadFeatsForAncestry(it) }
+        _characterState.value = character.migrateLegacy()
+        character.ancestry?.let {
+            loadHeritagesForAncestry(it)
+            loadFeatsForAncestry(it)
+        }
         character.classData?.let { loadFeatsForClass(it) }
+        loadBuilderSpells()
     }
 
     @OptIn(ExperimentalResourceApi::class)
@@ -107,10 +143,9 @@ class CharacterBuilderViewModel : ViewModel() {
                 val ancestryIndex = json.decodeFromString<IndexFile>(ancestryIndexBytes.decodeToString())
                 val loadedAncestries = ancestryIndex.files.mapNotNull { entry ->
                     try {
-                        val bytes = Res.readBytes("files/ancestries/${entry.fileName}")
-                        json.decodeFromString<Ancestry>(bytes.decodeToString())
+                        entry.data?.let { json.decodeFromJsonElement<Ancestry>(it) }
                     } catch (e: Exception) {
-                        Logger.e(e) { "Error loading ancestry ${entry.fileName}" }
+                        Logger.e(e) { "Error decoding ancestry ${entry.fileName} from index" }
                         null
                     }
                 }
@@ -120,10 +155,9 @@ class CharacterBuilderViewModel : ViewModel() {
                 val bgIndex = json.decodeFromString<IndexFile>(bgIndexBytes.decodeToString())
                 val loadedBgs = bgIndex.files.filter { !it.fileName.startsWith("_") }.mapNotNull { entry ->
                     try {
-                        val bytes = Res.readBytes("files/backgrounds/${entry.fileName}")
-                        json.decodeFromString<Background>(bytes.decodeToString())
+                        entry.data?.let { json.decodeFromJsonElement<Background>(it) }
                     } catch (e: Exception) {
-                        Logger.w(e) { "Error loading background ${entry.fileName}" }
+                        Logger.w(e) { "Error decoding background ${entry.fileName} from index" }
                         null
                     }
                 }
@@ -133,10 +167,9 @@ class CharacterBuilderViewModel : ViewModel() {
                 val classIndex = json.decodeFromString<IndexFile>(classIndexBytes.decodeToString())
                 val loadedClasses = classIndex.files.filter { !it.fileName.startsWith("_") }.mapNotNull { entry ->
                     try {
-                        val bytes = Res.readBytes("files/classes/${entry.fileName}")
-                        json.decodeFromString<ClassData>(bytes.decodeToString())
+                        entry.data?.let { json.decodeFromJsonElement<ClassData>(it) }
                     } catch (e: Exception) {
-                        Logger.w(e) { "Error loading class ${entry.fileName}" }
+                        Logger.w(e) { "Error decoding class ${entry.fileName} from index" }
                         null
                     }
                 }
@@ -149,27 +182,114 @@ class CharacterBuilderViewModel : ViewModel() {
     }
 
     @OptIn(ExperimentalResourceApi::class)
+    fun loadHeritagesForAncestry(ancestry: Ancestry) {
+        viewModelScope.launch {
+            _heritagesLoading.value = true
+            val slug = ancestrySlug(ancestry.name)
+            _ancestryHeritages.value = loadHeritagesFromFolder("files/heritages/$slug")
+            _versatileHeritages.value = loadHeritagesFromFolder("files/heritages/versatile-heritages")
+            _heritagesLoading.value = false
+        }
+    }
+
+    private fun ancestrySlug(name: String): String = name.lowercase().replace(" ", "-")
+
+    @OptIn(ExperimentalResourceApi::class)
+    private suspend fun loadHeritagesFromFolder(resourcePath: String): List<Heritage> {
+        return try {
+            val indexBytes = Res.readBytes("$resourcePath/index.json")
+            val index = json.decodeFromString<IndexFile>(indexBytes.decodeToJsonString())
+            index.files
+                .filter { it.fileName.endsWith(".json") && !it.fileName.startsWith("_") }
+                .mapNotNull { entry ->
+                    try {
+                        entry.data?.let { json.decodeFromJsonElement<Heritage>(it) }
+                    } catch (e: Exception) {
+                        Logger.w(e) { "Error decoding heritage ${entry.fileName} from index at $resourcePath" }
+                        null
+                    }
+                }
+                .sortedBy { it.name }
+        } catch (e: Exception) {
+            Logger.w(e) { "No heritages at $resourcePath" }
+            emptyList()
+        }
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
+    fun loadBuilderSpells() {
+        viewModelScope.launch {
+            _spellsLoading.value = true
+            val level = _characterState.value.level
+            val maxRank = CharacterProgression.maxSpellRank(level)
+            _cantripSpells.value = loadSpellsFromFolder("files/spells/spells/cantrip")
+            val byRank = mutableMapOf<Int, List<Spell>>()
+            for (rank in 1..maxRank) {
+                byRank[rank] = loadSpellsFromFolder("files/spells/spells/rank-$rank")
+            }
+            _spellsByRank.value = byRank
+            _spellsLoading.value = false
+        }
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
+    private suspend fun loadSpellsFromFolder(resourcePath: String): List<Spell> {
+        return try {
+            val indexBytes = Res.readBytes("$resourcePath/index.json")
+            val index = json.decodeFromString<IndexFile>(indexBytes.decodeToJsonString())
+            index.files
+                .filter { it.fileName.endsWith(".json") && !it.fileName.startsWith("_") }
+                .mapNotNull { entry ->
+                    try {
+                        entry.data?.let { json.decodeFromJsonElement<Spell>(it) }
+                    } catch (e: Exception) {
+                        Logger.w(e) { "Error decoding spell ${entry.fileName} from index at $resourcePath" }
+                        null
+                    }
+                }
+                .sortedBy { it.name }
+        } catch (e: Exception) {
+            Logger.w(e) { "No spells at $resourcePath" }
+            emptyList()
+        }
+    }
+
+    fun toggleCantrip(spell: Spell) {
+        toggleSpellSelection(spell, "Cantrip", isCantrip = true)
+    }
+
+    fun toggleRank1Spell(spell: Spell) {
+        toggleSpellSelection(spell, "Rank 1", isCantrip = false)
+    }
+
+    fun toggleRankSpell(spell: Spell, rank: Int) {
+        toggleSpellSelection(spell, "Rank $rank", isCantrip = false)
+    }
+
+    private fun toggleSpellSelection(spell: Spell, rankLabel: String, isCantrip: Boolean) {
+        _characterState.update { state ->
+            val ref = SpellRef(id = spell._id, name = spell.name, rankLabel = rankLabel)
+            if (isCantrip) {
+                val current = state.selectedCantrips.toMutableList()
+                val idx = current.indexOfFirst { it.id == ref.id }
+                if (idx >= 0) current.removeAt(idx) else current.add(ref)
+                state.copy(selectedCantrips = current.sortedBy { it.name })
+            } else {
+                val current = state.selectedSpells.toMutableList()
+                val idx = current.indexOfFirst { it.id == ref.id }
+                if (idx >= 0) current.removeAt(idx) else current.add(ref)
+                state.copy(selectedSpells = current.sortedBy { it.name })
+            }
+        }
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
     fun loadFeatsForAncestry(ancestry: Ancestry) {
         viewModelScope.launch {
             _featsLoading.value = true
             val path = ancestry.name.lowercase().replace(" ", "-")
-            try {
-                val indexBytes = Res.readBytes("files/feats/ancestry/$path/level-1/index.json")
-                val index = json.decodeFromString<IndexFile>(indexBytes.decodeToString())
-                val feats = index.files.filter { !it.fileName.startsWith("_") && it.fileName.endsWith(".json") }.mapNotNull { entry ->
-                    try {
-                        val bytes = Res.readBytes("files/feats/ancestry/$path/level-1/${entry.fileName}")
-                        json.decodeFromString<Feat>(bytes.decodeToString())
-                    } catch (e: Exception) {
-                        Logger.w(e) { "Error loading ancestry feat ${entry.fileName}" }
-                        null
-                    }
-                }
-                _ancestryFeats.value = feats
-            } catch (e: Exception) {
-                Logger.w(e) { "No ancestry feats for ${ancestry.name}" }
-                _ancestryFeats.value = emptyList()
-            }
+            val maxLevel = _characterState.value.level
+            _ancestryFeats.value = loadFeatsUpToLevel("files/feats/ancestry/$path", maxLevel)
             _featsLoading.value = false
         }
     }
@@ -179,25 +299,33 @@ class CharacterBuilderViewModel : ViewModel() {
         viewModelScope.launch {
             _featsLoading.value = true
             val path = classData.name.lowercase().replace(" ", "-")
-            try {
-                val indexBytes = Res.readBytes("files/feats/class/$path/level-1/index.json")
-                val index = json.decodeFromString<IndexFile>(indexBytes.decodeToString())
-                val feats = index.files.filter { !it.fileName.startsWith("_") && it.fileName.endsWith(".json") }.mapNotNull { entry ->
-                    try {
-                        val bytes = Res.readBytes("files/feats/class/$path/level-1/${entry.fileName}")
-                        json.decodeFromString<Feat>(bytes.decodeToString())
-                    } catch (e: Exception) {
-                        Logger.w(e) { "Error loading class feat ${entry.fileName}" }
-                        null
-                    }
-                }
-                _classFeats.value = feats
-            } catch (e: Exception) {
-                Logger.w(e) { "No class feats for ${classData.name}" }
-                _classFeats.value = emptyList()
-            }
+            val maxLevel = _characterState.value.level
+            _classFeats.value = loadFeatsUpToLevel("files/feats/class/$path", maxLevel)
             _featsLoading.value = false
         }
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
+    private suspend fun loadFeatsUpToLevel(basePath: String, maxLevel: Int): List<Feat> {
+        val feats = mutableListOf<Feat>()
+        for (lvl in MIN_LEVEL..maxLevel.coerceIn(MIN_LEVEL, MAX_LEVEL)) {
+            try {
+                val indexBytes = Res.readBytes("$basePath/level-$lvl/index.json")
+                val index = json.decodeFromString<IndexFile>(indexBytes.decodeToString())
+                index.files
+                    .filter { !it.fileName.startsWith("_") && it.fileName.endsWith(".json") }
+                    .forEach { entry ->
+                        try {
+                            entry.data?.let { feats.add(json.decodeFromJsonElement<Feat>(it)) }
+                        } catch (e: Exception) {
+                            Logger.w(e) { "Error decoding feat ${entry.fileName} from index at $basePath/level-$lvl" }
+                        }
+                    }
+            } catch (_: Exception) {
+                // No feats folder for this level
+            }
+        }
+        return feats.sortedWith(compareBy({ it.system.level?.value ?: 1 }, { it.name }))
     }
 
     fun setAncestry(ancestry: Ancestry) {
@@ -215,9 +343,12 @@ class CharacterBuilderViewModel : ViewModel() {
                 ancestryBoosts = fixedBoosts,
                 heritage = null,
                 freeBoosts = emptySet(),
+                attributeBoosts = emptyMap(),
+                selectedAncestryFeats = emptyList(),
                 ancestryFeat = null
             )
         }
+        loadHeritagesForAncestry(ancestry)
         loadFeatsForAncestry(ancestry)
     }
 
@@ -235,6 +366,7 @@ class CharacterBuilderViewModel : ViewModel() {
                 background = background,
                 backgroundBoosts = fixedBoosts,
                 freeBoosts = emptySet(),
+                attributeBoosts = emptyMap(),
                 extraTrainedSkills = emptySet()
             )
         }
@@ -247,7 +379,9 @@ class CharacterBuilderViewModel : ViewModel() {
                 classData = classData,
                 classBoost = keyBoost,
                 freeBoosts = emptySet(),
+                attributeBoosts = emptyMap(),
                 extraTrainedSkills = emptySet(),
+                selectedClassFeats = emptyList(),
                 classFeat = null
             )
         }
@@ -258,8 +392,35 @@ class CharacterBuilderViewModel : ViewModel() {
         _characterState.update { it.copy(name = name) }
     }
 
-    fun updateHeritage(heritage: String) {
-        _characterState.update { it.copy(heritage = heritage) }
+    fun setLevel(level: Int) {
+        val clamped = level.coerceIn(MIN_LEVEL, MAX_LEVEL)
+        _characterState.update { state -> trimStateForLevel(state, clamped) }
+        _characterState.value.ancestry?.let { loadFeatsForAncestry(it) }
+        _characterState.value.classData?.let { loadFeatsForClass(it) }
+        loadBuilderSpells()
+    }
+
+    private fun trimStateForLevel(state: CharacterState, level: Int): CharacterState {
+        val maxSpellRank = CharacterProgression.maxSpellRank(level)
+        val validBoostTiers = CharacterProgression.ATTRIBUTE_BOOST_LEVELS.filter { it <= level && it != 1 }.toSet()
+        return state.copy(
+            level = level,
+            selectedAncestryFeats = state.resolvedAncestryFeats()
+                .take(CharacterProgression.ancestryFeatSlots(level)),
+            selectedClassFeats = state.resolvedClassFeats()
+                .take(CharacterProgression.classFeatSlots(level)),
+            attributeBoosts = state.attributeBoosts.filterKeys { it in validBoostTiers },
+            selectedSpells = state.selectedSpells.filter { spellRef ->
+                val rank = spellRef.rankLabel.removePrefix("Rank ").toIntOrNull() ?: 1
+                rank <= maxSpellRank
+            },
+            ancestryFeat = null,
+            classFeat = null
+        )
+    }
+
+    fun updateHeritage(heritage: Heritage) {
+        _characterState.update { it.copy(heritage = heritage.name) }
     }
 
     fun setAncestryBoost(key: String, attribute: Attribute) {
@@ -283,16 +444,30 @@ class CharacterBuilderViewModel : ViewModel() {
     }
 
     fun toggleFreeBoost(attribute: Attribute) {
+        toggleAttributeBoostTier(1, attribute)
+    }
+
+    fun toggleAttributeBoostTier(tier: Int, attribute: Attribute) {
         _characterState.update { state ->
-            val newFree = state.freeBoosts.toMutableSet()
-            if (newFree.contains(attribute)) {
-                newFree.remove(attribute)
-            } else {
-                if (newFree.size < 4) {
+            if (tier == 1) {
+                val newFree = state.freeBoosts.toMutableSet()
+                if (newFree.contains(attribute)) {
+                    newFree.remove(attribute)
+                } else if (newFree.size < CharacterProgression.BOOSTS_PER_TIER) {
                     newFree.add(attribute)
                 }
+                state.copy(freeBoosts = newFree)
+            } else {
+                val current = state.attributeBoosts[tier].orEmpty().toMutableSet()
+                if (current.contains(attribute)) {
+                    current.remove(attribute)
+                } else if (current.size < CharacterProgression.BOOSTS_PER_TIER) {
+                    current.add(attribute)
+                }
+                val newMap = state.attributeBoosts.toMutableMap()
+                if (current.isEmpty()) newMap.remove(tier) else newMap[tier] = current
+                state.copy(attributeBoosts = newMap)
             }
-            state.copy(freeBoosts = newFree)
         }
     }
 
@@ -308,28 +483,36 @@ class CharacterBuilderViewModel : ViewModel() {
         }
     }
 
-    fun toggleExtraSkill(skillId: String) {
+    fun toggleAncestryFeat(feat: Feat) {
         _characterState.update { state ->
-            val autoSkills = getAutoTrainedSkills(state)
-            if (skillId in autoSkills) return@update state
-            val current = state.extraTrainedSkills.toMutableSet()
-            val available = getAvailableExtraSkillsCount(state)
-            if (current.contains(skillId)) {
-                current.remove(skillId)
-            } else if (current.size < available) {
-                current.add(skillId)
+            val current = state.resolvedAncestryFeats().toMutableList()
+            val idx = current.indexOfFirst { it.sameFeatAs(feat) }
+            if (idx >= 0) {
+                current.removeAt(idx)
+            } else {
+                val max = CharacterProgression.ancestryFeatSlots(state.level)
+                if (current.size < max) current.add(feat)
             }
-            state.copy(extraTrainedSkills = current)
+            state.copy(selectedAncestryFeats = current, ancestryFeat = null)
         }
     }
 
-    fun setAncestryFeat(feat: Feat) {
-        _characterState.update { it.copy(ancestryFeat = feat) }
+    fun toggleClassFeat(feat: Feat) {
+        _characterState.update { state ->
+            val current = state.resolvedClassFeats().toMutableList()
+            val idx = current.indexOfFirst { it.sameFeatAs(feat) }
+            if (idx >= 0) {
+                current.removeAt(idx)
+            } else {
+                val max = CharacterProgression.classFeatSlots(state.level)
+                if (current.size < max) current.add(feat)
+            }
+            state.copy(selectedClassFeats = current, classFeat = null)
+        }
     }
 
-    fun setClassFeat(feat: Feat) {
-        _characterState.update { it.copy(classFeat = feat) }
-    }
+    private fun Feat.sameFeatAs(other: Feat): Boolean =
+        (_id != null && other._id != null && _id == other._id) || name == other.name
 
     fun getAutoTrainedSkills(state: CharacterState = _characterState.value): Set<String> {
         val bgSkills = state.background?.system?.trainedSkills?.let {
@@ -341,16 +524,6 @@ class CharacterBuilderViewModel : ViewModel() {
             catch (e: Exception) { emptySet() }
         } ?: emptySet()
         return bgSkills + classSkills
-    }
-
-    fun getAvailableExtraSkillsCount(state: CharacterState = _characterState.value): Int {
-        val classAdditional = state.classData?.system?.trainedSkills?.let {
-            try { json.decodeFromJsonElement<ClassTrainedSkills>(it).additional }
-            catch (e: Exception) { 0 }
-        } ?: 0
-        val intScore = calculateAttributes(state)[Attribute.INT] ?: 10
-        val intModifier = (intScore - 10) / 2
-        return classAdditional + maxOf(0, intModifier)
     }
 
     fun calculateAttributes(state: CharacterState = _characterState.value): Map<Attribute, Int> {
@@ -381,6 +554,10 @@ class CharacterBuilderViewModel : ViewModel() {
             applyBoost(attr, 2)
         }
 
+        state.attributeBoosts.values.flatten().forEach { attr ->
+            applyBoost(attr, 2)
+        }
+
         return base
     }
 
@@ -389,7 +566,7 @@ class CharacterBuilderViewModel : ViewModel() {
     }
 
     fun resetClass() {
-        _characterState.update { it.copy(classData = null, classBoost = null, extraTrainedSkills = emptySet(), classFeat = null) }
+        _characterState.update { it.copy(classData = null, classBoost = null, extraTrainedSkills = emptySet(), selectedClassFeats = emptyList(), classFeat = null) }
         _classFeats.value = emptyList()
     }
 
@@ -397,5 +574,9 @@ class CharacterBuilderViewModel : ViewModel() {
         _characterState.value = CharacterState()
         _ancestryFeats.value = emptyList()
         _classFeats.value = emptyList()
+        _ancestryHeritages.value = emptyList()
+        _versatileHeritages.value = emptyList()
+        _cantripSpells.value = emptyList()
+        _spellsByRank.value = emptyMap()
     }
 }

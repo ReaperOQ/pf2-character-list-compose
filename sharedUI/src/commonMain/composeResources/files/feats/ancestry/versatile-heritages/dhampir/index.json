@@ -7,6 +7,56 @@
       "name": "Bloodletting Fangs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YDHr12qVA3XRjkLP",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloodletting Fangs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You emulate your vampiric parent's techniques for drawing blood from a victim. Your fangs Strikes deal an additional 1d4 persistent bleed damage on a critical hit.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "fangs unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "selector": "fangs-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +66,66 @@
       "name": "Enthralling Allure",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Zz5A8Yg0jGSK8GNu",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enthralling Allure",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The powers of domination employed by your progenitors have manifested in you as well. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Charm] as a divine innate spell once per day. Its spell rank is equal to half your level rounded up, but it doesn't increase its duration or number of targets at 4th and 8th rank.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:charm",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:charm",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dhampir"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +135,53 @@
       "name": "Eyes of Night",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5EpkOj9CFOjt8vsK",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eyes of Night",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can see in the darkness as easily as a true vampire. You gain darkvision.</p><hr /><p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "low-light vision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +191,63 @@
       "name": "Fangs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Y8sKn8NH1wC7Mrui",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fangs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your incisors have grown into true fangs: long, sharp, and well-suited to drawing blood. You gain a fangs unarmed attack that deals 1d6 piercing damage. Your fangs are in the brawling group and have the grapple and unarmed traits.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/fangs.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Fangs",
+              "range": null,
+              "traits": [
+                "grapple",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +257,50 @@
       "name": "Form of the Bat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "H965m1koFvY4FQkF",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Form of the Bat",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You can transform into a harmless bat. You gain the effects of a 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.Pest Form], except you always transform into a bat.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "dhampir",
+              "divine",
+              "polymorph"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -52,6 +310,63 @@
       "name": "Necromantic Physiology",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GgerQCCsGibaGWq0",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Necromantic Physiology",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your unusual physiology has developed in a way that makes it difficult for parasites and other infestations to prey upon you. You gain a +2 circumstance bonus to saving throws against diseases. If you roll a success on a saving throw against a disease, you get a critical success instead. If you have a different ability that would improve the save in this way (such as the @UUID[Compendium.pf2e.classfeatures.Item.Battle Hardened] fighter class feature), if you roll a critical failure on the save you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:disease"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:disease"
+              ],
+              "selector": "saving-throw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +376,76 @@
       "name": "Night Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iRpVW1DPKVxlzIzt",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Night Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can tap into the magic that runs through your blood. You gain @UUID[Compendium.pf2e.spells-srd.Item.Animal Form] (wolf only, using the statistics for a canine) and @UUID[Compendium.pf2e.spells-srd.Item.Mist] as 2nd-rank divine innate spells. You can cast each of these spells once per day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:animal-form",
+                    "item:slug:mist"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:animal-form",
+                    "item:slug:mist"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dhampir"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -70,6 +455,60 @@
       "name": "Straveika",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PVkAEBlRSJHe3JCz",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Straveika",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You descend from one of the truly ancient vampires, a nosferatu cursed to eternal life but not eternal youth. People call you straveika, or ancient-born. The vestiges of your forebear's powers of domination have left you with an understanding of how a creature's intentions change its behaviors. You gain a +1 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] and Perception DCs against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Lie] to you.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:sense-motive",
+                    "action:lie"
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +518,67 @@
       "name": "Svetocher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P1dk0LTWkQ1LT1ai",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Svetocher",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were born to a moroi, the most common vampires, and you share their supernatural fortitude and power of persuasion. When you have the @UUID[Compendium.pf2e.conditionitems.Item.Drained] condition, calculate the penalty to your Fortitude saves and your Hit Point reduction as though the condition value were 1 lower. You're trained in Diplomacy. If you would automatically be trained in it, you instead become trained in a skill of your choice.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "value": 1
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "selector": "fortitude",
+              "slug": "drained",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:condition:drained"
+              ],
+              "selector": "hp",
+              "value": "@actor.level"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +588,66 @@
       "name": "Symphony of Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nJRcbt72wRk5Rmc4",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Symphony of Blood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You call forth the blood of your foes to grant you vigor. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Vampiric Exsanguination] as a 7th-rank divine innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:vampiric-exsanguination",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:vampiric-exsanguination",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dhampir"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -97,6 +657,76 @@
       "name": "Undead Slayer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZOJsLNziWQ7Ri3x9",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Undead Slayer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your knowledge of your own not-quite-living anatomy, combined with your experience in combat, helps you take down undead foes with ease. Against undead creatures, you gain a circumstance bonus to damage with weapon and unarmed Strikes equal to the number of weapon damage dice for the Strike. This bonus increases to double the number of weapon damage dice if your target has the vampire trait.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "target:mode:undead"
+              ],
+              "selector": "strike-damage",
+              "slug": "undead-slayer",
+              "type": "circumstance",
+              "value": "@weapon.system.damage.dice"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "multiply",
+              "predicate": [
+                "target:trait:vampire"
+              ],
+              "selector": "strike-damage",
+              "slug": "undead-slayer",
+              "value": "2"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TOTMToggle.Undead",
+              "option": "target:mode:undead",
+              "toggleable": "totm"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TOTMToggle.Vampire",
+              "option": "target:trait:vampire",
+              "toggleable": "totm"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -106,6 +736,60 @@
       "name": "Vampire Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i0iyW1I7TylEgpV6",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vampire Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were raised by your vampiric parent, or you've invested substantial time and energy researching the secrets of your undead progenitors. You're trained in Religion and Society. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Vampire Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -115,6 +799,60 @@
       "name": "Voice of the Night",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5VkVWZq7ZqH6RaAW",
+        "folder": "ujjBTcgWjsAQJA9n",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Voice of the Night",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You hear and understand the words of creatures you share the darkness with. You can ask questions of, receive answers from, and use the Diplomacy skill with bats, rats, and wolves. You also gain a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on such animals.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression",
+                {
+                  "or": [
+                    "target:tag:bat",
+                    "target:tag:rat",
+                    "target:tag:wolf"
+                  ]
+                }
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dhampir"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

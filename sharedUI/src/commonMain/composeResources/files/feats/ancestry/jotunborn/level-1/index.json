@@ -7,6 +7,55 @@
       "name": "Caretaker's Intuition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZFDb4EsYReQUdBPG",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Caretaker's Intuition",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your forebears had a deep understanding of the natural world around them, and you've learned some of their knowledge and techniques. You are trained in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>Additionally, while outdoors, you can spend 10 minutes to read the sky and determine upcoming weather. You get a general impression of weather up to 8 hours in advance. You can use this to determine that clear skies or a rainstorm are ahead, but you can't determine specifics like wind speeds and direction, or that a tornado would be occurring later.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +65,52 @@
       "name": "Caretaker's Restoration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5lqVFVTA98M6E80o",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Caretaker's Restoration",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> An item you're holding, wearing, or wielding becomes @UUID[Compendium.pf2e.conditionitems.Item.Broken] but not destroyed.</p><hr /><p>The stewarding abilities of your forebears allows you to repair objects important to you. The triggering item is restored to a number of Hit Points that is 1 higher than its Broken Threshold. For example, a steel shield with a Broken Threshold of 10 is restored to 11 Hit Points.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +120,59 @@
       "name": "Jotunborn Grappler",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uPatc0BGdbn5M0Hl",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jotunborn Grappler",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Wrestling is a common pastime for jotunborn, and you've done your fair share. You are trained in Athletics. If you would automatically become trained in Athletics (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Titan Wrestler] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Titan Wrestler"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +182,72 @@
       "name": "Jotunborn Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IWQsYjk17aDAZ4eM",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jotunborn Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were taught the history of your people's planar travels as well as the skills necessary to thrive in sub-planar environments. You become trained in Occultism and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Jotunborn Lore.</p><hr /><p><strong>Special</strong> If you have the @UUID[Compendium.pf2e.heritages.Item.Sage Jotunborn] heritage, you gain the Additional Lore feat a second time for a lore of your choice.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.occultism.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            },
+            {
+              "key": "GrantItem",
+              "predicate": [
+                "heritage:sage-jotunborn"
+              ],
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +257,83 @@
       "name": "Jotunborn Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eQcR4pdNVOhGmPTn",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jotunborn Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain access to all uncommon weapons with the jotunborn trait. You have familiarity with weapons with the jotunborn trait plus the bola, greataxe, halberd, maul, longspear, and war flail—for the purpose of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:jotunborn",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:bola",
+                    "item:base:greataxe",
+                    "item:base:halberd",
+                    "item:base:maul",
+                    "item:base:longspear",
+                    "item:base:war-flail"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialJotunbornWeapons",
+              "sameAs": "simple",
+              "slug": "martial-jotunborn-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:jotunborn",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedJotunbornWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-jotunborn-weapons"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +343,61 @@
       "name": "Jotun's Eyes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RDRNtaFEq9p6KzEO",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jotun's Eyes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your vision has adapted to the darkness between planes. You gain darkvision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "low-light vision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {
+              "darkvision": {
+                "range": null,
+                "special": {
+                  "ancestry": false,
+                  "llv": false,
+                  "second": false
+                }
+              }
+            },
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +407,54 @@
       "name": "Plane-Stepping Dash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "s6C5jtru8j0sONa6",
+        "folder": "GgaQl7a4EHY42e3q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plane-Stepping Dash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You move with magical swiftness, treading between planar boundaries to shorten your journey. Stride once; this Stride does not trigger reactions normally triggered by movement.</p>\n<p>Once this Stride is complete, you gain a +5-foot status bonus to your Speed until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Plane-Stepping Dash]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn",
+              "occult",
+              "teleportation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

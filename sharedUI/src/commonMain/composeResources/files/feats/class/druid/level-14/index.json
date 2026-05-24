@@ -7,6 +7,79 @@
       "name": "Bizarre Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AV6KZvUed7GdhHzc",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bizarre Transformation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The forms you take on defy belief—chimerical sights of twisted antlers or acidic drool. If your next action is to cast @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form], you can change the damage type of a single unarmed attack granted by <em>untamed form</em> to one of the following: acid, bludgeoning, cold, electricity, fire, poison, piercing, or slashing. The chosen attack gains the appropriate trait.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:bizarre-transformation",
+                "item:untamed-form"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.BizzareTransformation"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "bizarre-transformation"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "manipulate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +89,47 @@
       "name": "Cleansing Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wS9a03TKVu8FQ8wC",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cleansing Transformation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn to cleanse bodily toxins alongside the transformations of your shape-changing magic. When you use Healing Transformation, your polymorph spell can also attempt to counteract one disease or poison afflicting the target. If you don't successfully counteract it, you can't use Cleansing Transformation against that specific affliction for 24 hours.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Healing Transformation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +139,50 @@
       "name": "Reactive Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4Q9Q41KLPYJMdV4b",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reactive Transformation",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> varies</p><hr /><p>You transform reflexively when in danger. You cast @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] to transform into one shape granted by one of the prerequisite feats you have, depending on the trigger. Your shape's resistances and weaknesses apply against the triggering damage.</p><hr /><p><strong>Trigger</strong> You fall 10 feet or more</p>\n<p><strong>Effect</strong> Choose a shape from @UUID[Compendium.pf2e.spells-srd.Item.Aerial Form].</p><hr /><p><strong>Trigger</strong> You take bludgeoning or poison damage</p>\n<p><strong>Effect</strong> Choose a primal dragon shape from @UUID[Compendium.pf2e.spells-srd.Item.Dragon Form] that resists the triggering damage.</p><hr /><p><strong>Trigger</strong> You take fire damage</p>\n<p><strong>Effect</strong> Choose a fire elemental shape from @UUID[Compendium.pf2e.spells-srd.Item.Elemental Form].</p><hr /><p><strong>Trigger</strong> You take poison damage</p>\n<p><strong>Effect</strong> Choose a shape from @UUID[Compendium.pf2e.spells-srd.Item.Plant Form].</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Untamed Form"
+              },
+              {
+                "value": "Dragon Shape, Elemental Shape, Plant Shape, or Soaring Shape"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +192,75 @@
       "name": "Sow Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TyWFsX9DliAdAVs8",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sow Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You fold your spell into a seed. If your next action is to Cast a Spell using 1 action or 2 actions, the spell instead plants itself in an adjacent square. You must make all decisions regarding the spell at the time you cast it. Within the next 10 minutes, you can direct your sown spell to sprout and produce the spell's effects as a reaction, which is triggered when a creature enters the sown spell's space or a square adjacent to it. You can have only one sown spell at a time, and if you don't trigger the spell within 10 minutes, it dissipates and the spell is lost. A creature can notice the sown spell with a successful @Check[perception|against:spell] check against your spell DC.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:sow-spell",
+                "spellshape:courageous-advance"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.SowSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "sow-spell"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "druid",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +270,48 @@
       "name": "Specialized Companion (Druid)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3r5rg0BCqSh5RBNS",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Specialized Companion (Druid)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your animal companion continues to grow in power and ability. It gains one specialization of your choice</p>\n<hr />\n<p><strong>Special</strong> You can select this feat up to three times. Each time, add a different specialization to your companion.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Incredible Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -52,6 +321,58 @@
       "name": "Timeless Nature",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TpWS2b9ISHnXVfZg",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Timeless Nature",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With primal magic sustaining you, you cease aging. The overflowing primal energy gives you a +2 status bonus to saves against diseases and primal magic.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "disease",
+                    "primal"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -61,6 +382,64 @@
       "name": "Verdant Metamorphosis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "orjVLLoziFTmf1mz",
+        "folder": "xt9f1I4xC53PVsAK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Verdant Metamorphosis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have turned into a plant version of yourself, gaining the plant trait and losing traits inappropriate for your new form (typically humanoid). You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Verdant Rest] action.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "leaf order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "add": [
+                "plant"
+              ],
+              "key": "ActorTraits",
+              "remove": [
+                "animal",
+                "beast",
+                "humanoid",
+                "construct"
+              ]
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Verdant Rest"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

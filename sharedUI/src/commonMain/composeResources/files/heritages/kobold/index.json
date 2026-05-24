@@ -1,0 +1,532 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "caveclimber-kobold.json",
+      "id": "5A1wMPdzN1OWE4cY",
+      "name": "Caveclimber Kobold",
+      "img": "icons/environment/wilderness/terrain-rocks-brown.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "5A1wMPdzN1OWE4cY",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "icons/environment/wilderness/terrain-rocks-brown.webp",
+        "name": "Caveclimber Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>You live in a vertically-oriented home, and you're a consummate climber. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] skill feat, even if you don't meet the prerequisites. You can use your clawed feet and tail to Climb, leaving your hands free. Additionally, if you succeed at an Athletics check to Climb, you critically succeed instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics",
+              "text": "When you roll a success to Climb, you get a critical success instead.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "cavernstalker-kobold.json",
+      "id": "35k2aujXYvqUCSS1",
+      "name": "Cavernstalker Kobold",
+      "img": "systems/pf2e/icons/features/ancestry/cavern-kobold.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "35k2aujXYvqUCSS1",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "systems/pf2e/icons/features/ancestry/cavern-kobold.webp",
+        "name": "Cavernstalker Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>You hatched in a warren with narrow tunnels that was also home to a being of primal earth energy, which has made you limber and flexible. When @UUID[Compendium.pf2e.actionspf2e.Item.Climb]{Climbing} rock walls, stalactites, and other natural stone features, you move at half your Speed on a success and at full Speed on a critical success (and you move at full Speed on a success if you have @UUID[Compendium.pf2e.feats-srd.Item.Quick Climb]). This doesn't affect you if you're using a climb Speed. If you roll a success on an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Squeeze], you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:climb",
+                "natural-stone"
+              ],
+              "selector": "athletics",
+              "text": "When you climb natural stone, you move at half your Speed on a success, and full speed on a critical success.",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:squeeze"
+              ],
+              "selector": "acrobatics",
+              "text": "When you roll a success to Squeeze, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:squeeze"
+              ],
+              "selector": "acrobatics",
+              "type": "skill"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "dragonscaled-kobold.json",
+      "id": "P8BP1un5BTrwXoBy",
+      "name": "Dragonscaled Kobold",
+      "img": "systems/pf2e/icons/features/ancestry/dragonscaled-kobold.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "P8BP1un5BTrwXoBy",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "systems/pf2e/icons/features/ancestry/dragonscaled-kobold.webp",
+        "name": "Dragonscaled Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>Thanks to your warren's association with a dragon, your scales are sturdier than other kobolds'. You gain 10 Hit Points from your ancestry instead of 6. You gain a +1 circumstance bonus to saves against dragon breath, effects with the sleep trait, and effects that would make you @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed].</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:sleep",
+                    "inflicts:paralyzed",
+                    {
+                      "and": [
+                        "action:breath-weapon",
+                        "origin:trait:dragon"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "elementheart-kobold.json",
+      "id": "dbj1cbkYeAAdkDSM",
+      "name": "Elementheart Kobold",
+      "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "dbj1cbkYeAAdkDSM",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+        "name": "Elementheart Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>When you hatched, you imprinted on a creature strongly associated with one of the Elemental Planes, such as an elemental or genie. Choose air, earth, fire, metal, water, or wood for your elemental benefactor. You gain resistance equal to half your level (minimum 1) to the damage type associated with your elemental benefactor: cold for air, electricity for earth, fire for fire, sonic for metal, acid for water, or poison for wood.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAir",
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitEarth",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitMetal",
+                  "value": "sonic"
+                },
+                {
+                  "label": "PF2E.TraitWater",
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitWood",
+                  "value": "poison"
+                }
+              ],
+              "flag": "element",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Element"
+            },
+            {
+              "key": "Resistance",
+              "type": "{item|flags.system.rulesSelections.element}",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "heavenscribe-kobold.json",
+      "id": "G61eBHmsQaPM4Xge",
+      "name": "Heavenscribe Kobold",
+      "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "G61eBHmsQaPM4Xge",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+        "name": "Heavenscribe Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>Your connection to wise and celestial imperial dragons has led others to seek your advice. You can speak Draconic. Whenever you critically fail a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] or @UUID[Compendium.pf2e.actionspf2e.Item.Request], you get a failure instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.build.languages.granted",
+              "value": {
+                "slug": "draconic",
+                "source": "{item|name}"
+              }
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "action:make-an-impression",
+                    "action:request"
+                  ]
+                }
+              ],
+              "selector": "diplomacy"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "mightyfall-kobold.json",
+      "id": "SPcTcZgUMy5J4kzs",
+      "name": "Mightyfall Kobold",
+      "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "SPcTcZgUMy5J4kzs",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+        "name": "Mightyfall Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>Your proximity to a mighty kaiju has caused you to grow strong and hardy. You gain 10 Hit Points from your ancestry instead of 6. Instead of the normal attribute boosts and flaws, you can choose to gain a boost to Strength, a boost to Charisma, and a flaw in Intelligence.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "spellhorn-kobold.json",
+      "id": "VRyX00OuPGsJSurM",
+      "name": "Spellhorn Kobold",
+      "img": "systems/pf2e/icons/features/ancestry/spellscale-kobold.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VRyX00OuPGsJSurM",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "systems/pf2e/icons/features/ancestry/spellscale-kobold.webp",
+        "name": "Spellhorn Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>Since hatching in the vicinity of a powerful source of magic, a trace of it flows through your veins. Choose one common cantrip from the arcane spell list. You can Cast this Spell as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. You are trained in the spell attack modifier and spell DC statistics, and your key spellcasting attribute is Charisma.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "strongjaw-kobold.json",
+      "id": "WaCn0mcivFv1omNK",
+      "name": "Strongjaw Kobold",
+      "img": "systems/pf2e/icons/features/ancestry/strongjaw-kobold.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "WaCn0mcivFv1omNK",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "systems/pf2e/icons/features/ancestry/strongjaw-kobold.webp",
+        "name": "Strongjaw Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>Your warren is noted for their powerful jaws and sharp teeth, either to help protect against natural predators or due to reverence of a mighty beast. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the finesse and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "baseType": "jaws",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.jaws",
+              "range": null,
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "tunnelflood-kobold.json",
+      "id": "ZW8GX14n3ZGievK1",
+      "name": "Tunnelflood Kobold",
+      "img": "icons/environment/creatures/fish-smooth-orange-red.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ZW8GX14n3ZGievK1",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "icons/environment/creatures/fish-smooth-orange-red.webp",
+        "name": "Tunnelflood Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>You grew up in a warren crisscrossed by underwater passages, whether natural or excavated, and were influenced by a powerful aquatic entity or being of primal water. You gain a swim Speed of 15 feet.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim-speed",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "venomtail-kobold.json",
+      "id": "m9rrlchS10xHFA2G",
+      "name": "Venomtail Kobold",
+      "img": "systems/pf2e/icons/features/ancestry/venomtail-kobold.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "m9rrlchS10xHFA2G",
+        "folder": "U6XqIM7a4BC1W4QM",
+        "img": "systems/pf2e/icons/features/ancestry/venomtail-kobold.webp",
+        "name": "Venomtail Kobold",
+        "system": {
+          "ancestry": {
+            "name": "Kobold",
+            "slug": "kobold",
+            "uuid": "Compendium.pf2e.ancestries.Item.7oQxL6wgsokD3QXG"
+          },
+          "description": {
+            "value": "<p>Thanks to the proximity of a venomous creature to your warren, you were born with a vestigial spur in your tail that secretes deadly venom. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Tail Toxin] action.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Tail Toxin"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

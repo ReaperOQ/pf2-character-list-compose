@@ -7,6 +7,47 @@
       "name": "Call the Hunt",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "syIPNelJTQSkErvu",
+        "folder": "UVu2yeNOpztWRnGY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call the Hunt",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are observing your hunted prey.</p><hr /><p>You instruct your allies on how best to defeat your prey. Until the start of your next turn, whenever your hunted prey is within reach of you and at least one of your allies, it is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to all melee attacks. If you are sanctified, the unarmed attacks and weapon Strikes of you and all your allies gain the benefits of your sanctification against your hunted prey.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Vindicator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +57,69 @@
       "name": "Interrogate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uFxUj8OgX04w5MXp",
+        "folder": "UVu2yeNOpztWRnGY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Interrogate",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You ask questions you know will be answered. Ask a question of a non-allied creature that you can see and have been conversing with. Attempt an Intimidation check against the creature's Will DC; if the creature is a member of the same religion as you, or is an undead or werecreature pretending to be a member of your faith, you get a +2 circumstance bonus on this check. The creature is then temporarily immune for 1 hour.</p><hr /><p><strong>Critical Success</strong> The target must directly answer your question. It doesn't have to answer truthfully, but you gain a +4 circumstance bonus to your Perception DC if the creature attempts to Lie to you.</p>\n<p><strong>Success</strong> As critical success, but the circumstance bonus is +2.</p>\n<p><strong>Failure</strong> The target can refuse to answer you and becomes unfriendly if they weren't already unfriendly or hostile.</p>\n<p><strong>Critical Failure</strong> The target refuses to answer you and becomes hostile if they weren't already. You can't use Interrogate on the target again for 24 hours.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Vindicator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Ranger.Vindicator.Interrogate",
+              "option": "interrogate",
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                "interrogate"
+              ],
+              "selector": "intimidation",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "concentrate",
+              "linguistic",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +129,73 @@
       "name": "Vindicator Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vU86WnzVmfTde7xc",
+        "folder": "UVu2yeNOpztWRnGY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vindicator Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your church ensures that you are cared for. You can use Religion to [[/act coerce skill=religion]]{Coerce}, [[/act gather-information skill=religion]]{Gather Information}, [[/act make-an-impression skill=religion]]{Make an Impression}, or [[/act request skill=religion]]{Request} as long as you are in a town or city with a church dedicated to your deity. If the target of the check is also a worshipper of your deity or is your hunted prey, you gain a +2 circumstance bonus to the check.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Aka7A3c28QqBeRxU]{Vindicator}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "location": "class-2",
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Vindicator"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:coerce",
+                    "action:gather-information",
+                    "action:make-an-impression",
+                    "action:request"
+                  ]
+                },
+                {
+                  "or": [
+                    "target:mark:hunted-prey",
+                    "target:deity:{actor|deity.system.slug}"
+                  ]
+                }
+              ],
+              "selector": "religion",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "class",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +205,50 @@
       "name": "Vindicator's Judgment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Z9hrpFRKfLGMJXFp",
+        "folder": "UVu2yeNOpztWRnGY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vindicator's Judgment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can pronounce judgment on your foes, making them magically susceptible to your attacks. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Vindicator's Judgment] focus spell.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Vindicator Dedication"
+              },
+              {
+                "value": "warden spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

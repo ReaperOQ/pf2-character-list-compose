@@ -7,6 +7,49 @@
       "name": "Alchemical Scholar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nyNsIePvpovlDAws",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alchemical Scholar",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.feats-srd.Item.Alchemical Crafting] feat. If you would automatically gain that feat (from your background or the alchemist class, for example), you instead gain a different 1st-level Crafting skill feat. Add an additional common 1st-level alchemical formula to your formula book when you take this feat. Each time you gain a level beyond 1st, add one common alchemical formula of that level to your formula book.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Alchemical Crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +59,59 @@
       "name": "Cantorian Reinforcement",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0qshtd4mBcjFAxA8",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cantorian Reinforcement",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The life energy that helped create the first hobgoblins is particularly potent in you, protecting you from ongoing maladies. If you roll a success on a saving throw against a disease or poison, you get a critical success instead. If you have a different ability that would improve the save in this way (such as the @UUID[Compendium.pf2e.classfeatures.Item.Battle Hardened] fighter class feature), if you roll a critical failure on the save you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +121,60 @@
       "name": "Hobgoblin Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "13zaW8ZHRWnRe2pj",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hobgoblin Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've studied traditional hobgoblin exercises and fieldcraft, all of which have a militaristic bent. You gain the trained proficiency rank in Athletics and Crafting. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Hobgoblin Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +184,96 @@
       "name": "Hobgoblin Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n9CBjyiB17srkyr4",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hobgoblin Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain access to all uncommon weapons with the hobgoblin trait. You have familiarity with weapons with the hobgoblin trait plus the composite longbow, composite shortbow, glaive, longbow, longsword, and shortbow—for the purpose of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:trait:hobgoblin",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedHobgoblinWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-hobgoblin-weapons"
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:trait:hobgoblin",
+                    "item:base:composite-longbow",
+                    "item:base:longbow",
+                    "item:base:composite-shortbow",
+                    "item:base:shortbow",
+                    "item:base:glaive",
+                    "item:base:longsword"
+                  ]
+                },
+                "item:category:martial"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialHobgoblinWeapons",
+              "sameAs": "simple",
+              "slug": "martial-hobgoblin-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:hobgoblin",
+                    "item:base:composite-longbow",
+                    "item:base:longbow",
+                    "item:base:composite-shortbow",
+                    "item:base:shortbow",
+                    "item:base:glaive",
+                    "item:base:longsword"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +283,43 @@
       "name": "Leech-Clip",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OZtoTusMmCJymObT",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leech-Clip",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are trained to capture deserters, or \"leeches.\" Make a melee Strike with weapon from the flail group. On a hit, the target takes a –10-foot status penalty to its Speed (or a –15-foot status penalty on a critical hit). The penalty lasts for 1 round. It applies only if the target has a land Speed and depends on legs or other targetable appendages to use its land Speed. As with all penalties to Speed, this can't reduce a creature's Speed below 5 feet.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Leech-Clip]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +329,58 @@
       "name": "Remorseless Lash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iRztLGEK5OfjZTPg",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Remorseless Lash",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're skilled at beating an enemy when their morale is already breaking. When you succeed at a melee weapon Strike against a @UUID[Compendium.pf2e.conditionitems.Item.Frightened] enemy, that enemy can't reduce their frightened condition below 1 until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "target:condition:frightened",
+                "item:melee"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +390,43 @@
       "name": "Sneaky",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "augNhQ51eSlZyead",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sneaky",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Stealth is an important tool in your arsenal. You can move 5 feet farther when you take the @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] action, up to your Speed.</p>\n<p>In addition, as long as you continue to use Sneak actions and succeed at your Stealth check, you don't become observed if you don't have cover or greater cover and aren't @UUID[Compendium.pf2e.conditionitems.Item.Concealed] at the end of the Sneak action, as long as you have cover or greater cover or are concealed at the end of your turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +436,63 @@
       "name": "Stone Face",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Nn80wBZYJZxcuKsJ",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stone Face",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've mastered the art of composure, even in the face of fear. You gain a +1 circumstance bonus to saves against effects with the fear trait and a +2 circumstance bonus to your Will DC against Intimidation skill actions, such as @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize].</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:fear"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "check:statistic:intimidation"
+              ],
+              "selector": "will-dc",
+              "slug": "stone-face-dc",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +502,43 @@
       "name": "Vigorous Health",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "D2tyUKQiDSq3JO1Z",
+        "folder": "xZvgIBJA7m0AH99M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vigorous Health",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can withstand blood loss startlingly well. Whenever you would gain the @UUID[Compendium.pf2e.conditionitems.Item.Drained] condition, you can attempt a @Check[flat|dc:17]. On a success, you don't gain the drained condition.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "hobgoblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

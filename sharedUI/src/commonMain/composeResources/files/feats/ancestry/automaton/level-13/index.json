@@ -7,6 +7,110 @@
       "name": "Arcane Locomotion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FI4MnH0KQfIKJRNT",
+        "folder": "pPEzRhbDLuuqWXZn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Locomotion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've modified your body to allow you to augment your movement. You gain either a climb Speed of 20 feet or a swim Speed of 20 feet, your choice.</p>\n<p><strong>Enhancement</strong> Your body allows for even further forms of movement. You can either select the option from this feat you haven't chosen yet (climb Speed or swim Speed), or you can increase your land Speed by 5 feet and increase the Speed you chose from this feat increase to be equal to your adjusted land Speed.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "locomotion:climb",
+                    "enhancement:arcane-locomotion:climb"
+                  ]
+                }
+              ],
+              "selector": "climb",
+              "value": 20
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Speed.Type.Climb",
+                  "value": "climb"
+                },
+                {
+                  "label": "PF2E.Actor.Speed.Type.Swim",
+                  "value": "swim"
+                }
+              ],
+              "flag": "speed",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Automaton.ArcaneLocomotion.Prompt",
+              "rollOption": "locomotion"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "or": [
+                    "locomotion:swim",
+                    "enhancement:arcane-locomotion:swim"
+                  ]
+                }
+              ],
+              "selector": "swim",
+              "value": 20
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneLocomotion",
+                "value": "arcane-locomotion"
+              }
+            },
+            {
+              "key": "FlatModifier",
+              "selector": [
+                "land-speed"
+              ],
+              "value": 5
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "enhancement:arcane-locomotion:increase"
+              ],
+              "selector": "{item|flags.system.rulesSelections.speed}",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +120,75 @@
       "name": "Astral Blink",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BTQj2N5erpJDWNFA",
+        "folder": "pPEzRhbDLuuqWXZn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Astral Blink",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've attuned your core to allow you to phase in and out of the Astral Plane, allowing you to teleport periodically. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Translocate] once per hour as a 4th-rank innate arcane spell.</p>\n<p><strong>Enhancement</strong> Your attunement allows you to teleport in a series of quick jumps rather than in one big leap. You can expend your hourly use of translocate as a free action when you begin your turn. If you do, your Strides are augmented until the end of your turn, allowing you to instantly teleport to any point you could reach with your Speed instead of traversing normally to the location. While augmented, your Strides gain the teleportation trait. Your augmented Strides don't trigger reactions that can be triggered by move actions or upon leaving or entering a square, unless those reactions trigger on teleportation.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.AstralBlink",
+                "value": "astral-blink"
+              }
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:translocate",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:translocate",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:automaton"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +198,57 @@
       "name": "Core Rejuvenation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uclbKFsrqCW6tQmB",
+        "folder": "pPEzRhbDLuuqWXZn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Core Rejuvenation",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You have the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition and are about to attempt a recovery check.</p><hr /><p>Your soul taps into your core's power to push against the grasp of death and allow you to recover consciousness. You're restored to 1 Hit Point, lose the dying and @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way.</p>\n<p><strong>Enhancement</strong> Your soul can draw even more power from your core, granting you additional benefits. When you use Core Rejuvenation, you also gain a number of temporary Hit Points equal to three times your level. These Hit Points remain for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.CoreRejuvenation",
+                "value": "core-rejuvenation"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -34,6 +258,84 @@
       "name": "Enlarged Chassis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WWCZef1PBliiot9Q",
+        "folder": "pPEzRhbDLuuqWXZn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enlarged Chassis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've empowered your core to support a larger body, granting you size and additional reach. You gain the effects of enlarge constantly.</p>\n<p><strong>Enhancement</strong> Your core's empowerment has stabilized, allowing for greater support. You are no longer clumsy due to the effects of enlarge.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Medium or Small size"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.EnlargedChassis",
+                "value": "enlarged-chassis"
+              }
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:melee"
+              ],
+              "selector": "strike-damage",
+              "type": "status",
+              "value": 2
+            },
+            {
+              "key": "CreatureSize",
+              "reach": {
+                "override": 10
+              },
+              "resizeEquipment": true,
+              "value": "large"
+            },
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "enhancement:enlarged-chassis"
+                }
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Clumsy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

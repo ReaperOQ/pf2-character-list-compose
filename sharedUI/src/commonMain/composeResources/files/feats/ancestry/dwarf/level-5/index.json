@@ -7,6 +7,75 @@
       "name": "Blast Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3fLfHrJbMy2ayLMQ",
+        "folder": "Fz6TXZp87MwO4SY6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blast Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>You're used to the clamor of steel, the crack of a firearm, and the thunderous blast of explosions. You gain resistance 3 to fire and sonic. If you roll a success on a saving throw against an effect that causes the @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] or @UUID[Compendium.pf2e.conditionitems.Item.Deafened] conditions, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "domain": "saving-throw",
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Dwarf.BlastResistance.RollOptionLabel",
+              "option": "blast-resistance-adjustment",
+              "toggleable": true
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "blast-resistance-adjustment",
+                    "inflicts:dazzled",
+                    "inflicts:deafened"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "key": "Resistance",
+              "type": [
+                "fire",
+                "sonic"
+              ],
+              "value": 3
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +85,47 @@
       "name": "Boulder Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZZxePfQkBPuTHkt1",
+        "folder": "Fz6TXZp87MwO4SY6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Boulder Roll",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your dwarven build allows you to push foes around, just like a mighty boulder tumbles through a subterranean cavern. Take a Step into the square of a foe that is your size or smaller, and the foe must move into the empty space directly behind it. The foe must move even if doing so places it in harm's way. The foe can attempt a @Check[fortitude|against:athletics] saving throw against your Athletics DC to block your Step. If the foe attempts this saving throw, it takes @Damage[(@actor.level + @actor.abilities.str.mod)[bludgeoning]]{bludgeoning damage} equal to your level plus your Strength modifier unless it critically succeeds.</p>\n<p>If the foe can't move into an empty space (if it is surrounded by solid objects or other creatures, for example), your Boulder Roll has no effect.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rock Runner"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +135,55 @@
       "name": "Defy the Darkness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "G1BPXzTzrUE4IndV",
+        "folder": "Fz6TXZp87MwO4SY6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defy the Darkness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Using ancient dwarven methods developed to fight enemies wielding magical darkness, you've honed your darkvision and sworn not to use such magic yourself. You gain greater darkvision, enabling you to see through magical darkness even if it normally hampers darkvision (such as the darkness created by a 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.Darkness] spell). You can't cast spells with the darkness trait, use item activations with the darkness trait, or use any other ability with the darkness trait.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "darkvision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "greater-darkvision": {
+                "acuity": "imprecise",
+                "range": 30
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +193,47 @@
       "name": "Dwarven Reinforcement",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FGrIFDobGRFBPOuM",
+        "folder": "Fz6TXZp87MwO4SY6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dwarven Reinforcement",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can use your knowledge of engineering and metalwork to temporarily strengthen thick objects and structures. By spending 1 hour working on an item, you can give it a +1 circumstance bonus to its Hardness for 24 hours. If you're a master in Crafting, the bonus is +2, and if you're legendary, the bonus is +3. You can reinforce a portion of a structure, though 1 hour usually reinforces only a door, a few windows, or another section that fits within a 10-foot cube.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +243,57 @@
       "name": "Spark Fist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BL2nLeClO30QoQGs",
+        "folder": "Fz6TXZp87MwO4SY6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spark Fist",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p>\n<p><strong>Frequency</strong> once per minute</p><hr /><p>You dust explosive black powder on your fist or glove before attacking, which combusts as you hit an opponent. The resulting pops of flame harm both you and your enemy. Until the end of your next turn, your fist loses the nonlethal trait and deals an additional 1 fire damage on a successful Strike. Each time you succeed on a fist Strike, you take 1 fire damage. If your fist would deal more than one weapon damage die, the fire damage dealt on a successful Strike, to both you and your opponent, is equal to the number of weapon damage dice.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Spark Fist",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Spark Fist"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf",
+              "fire",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

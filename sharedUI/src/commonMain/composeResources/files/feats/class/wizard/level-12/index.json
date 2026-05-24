@@ -7,6 +7,50 @@
       "name": "Clever Counterspell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IMPP5pa8AmvCby4W",
+        "folder": "fGeH3cCSG8zsPhgr",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clever Counterspell",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You creatively apply your prepared spells to @UUID[Compendium.pf2e.feats-srd.Item.Counterspell (Prepared)]{Counterspell} a much wider variety of your opponents' magic. Instead of being able to counter a foe's spell with Counterspell only if you have that same spell prepared, you can use Counterspell as long as you have the spell the foe is casting in your spellbook. When you use Counterspell in this way, you must still expend a prepared spell; the prepared spell you expend must share a trait with the triggering spell other than concentrate, manipulate, or its tradition trait. The GM might allow you to instead use a spell that has an opposing trait or that otherwise logically would counter the triggering spell (such as using a cold or water spell to counter @UUID[Compendium.pf2e.spells-srd.Item.Fireball] or using @UUID[Compendium.pf2e.spells-srd.Item.Clear Mind] to counter a fear spell).</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Counterspell"
+              },
+              {
+                "value": "Quick Recognition"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +60,84 @@
       "name": "Forcible Energy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UJafwv306v75Syy7",
+        "folder": "fGeH3cCSG8zsPhgr",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Forcible Energy",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You perform complex manipulations to make the energy from your spells so powerful that your enemies remain vulnerable to it afterward. If your next action is to Cast a Spell that deals acid, cold, electricity, fire, or sonic damage, you can select one target that was damaged to gain weakness 5 to that damage type until the end of your next turn. If a spell deals multiple types of energy damage, choose one that the target gains weakness to. This has no effect on creatures with resistance or immunity to the energy type you choose.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Forcible Energy]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:forcible-energy",
+                {
+                  "or": [
+                    "item:damage:acid",
+                    "item:damage:cold",
+                    "item:damage:electricity",
+                    "item:damage:fire",
+                    "item:damage:sonic"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.ForcibleEnergy"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "forcible-energy"
+                }
+              ],
+              "toggleable": true,
+              "value": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "spellshape",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +147,44 @@
       "name": "Keen Magical Detection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3WUL8ExEkZDRYeBu",
+        "folder": "fGeH3cCSG8zsPhgr",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Keen Magical Detection",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You sense magical dangers. When using the @UUID[Compendium.pf2e.actionspf2e.Item.Detect Magic] exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a magical effect or magic item and is in range of your @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

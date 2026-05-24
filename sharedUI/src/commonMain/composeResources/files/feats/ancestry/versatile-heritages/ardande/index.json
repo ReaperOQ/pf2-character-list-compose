@@ -7,6 +7,44 @@
       "name": "Ambersoul",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4fK5Ydicz76coNkj",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ambersoul",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your elemental heritage is reflected in the oils and fragrances of plants, in tree resin that fossilizes into amber, or in the gentle smell of a flower. Sticky, golden sap runs through your veins instead of blood. Each time a creature deals slashing or piercing damage to you with a melee Strike, your sap coats its weapon or unarmed attack. The creature takes a –1 circumstance penalty on attack rolls with that weapon or unarmed attack until the end of its turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +54,49 @@
       "name": "Flowering Path",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "V6b42u8dNn7K6FwJ",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flowering Path",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Vitality and elemental wood flows out from your body and into the earth, infusing it with a stream of new life. When you walk, you leave blooming flowers and sprouting vines in your wake. For the next minute, each time you Step or Stride, you create difficult terrain in each square you leave during your movement.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "plant",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +106,74 @@
       "name": "Grove-Harbored",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CWt2iIVRra0K3vT7",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grove-Harbored",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are accustomed to exploring thick woodlands and defending yourself against the attacks of magical plants. You gain a +1 circumstance bonus to saves against plant, poison, and wood effects, and if you roll a success on a save against a poison effect, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "plant",
+                    "poison",
+                    "wood"
+                  ]
+                }
+              ],
+              "selector": [
+                "fortitude",
+                "reflex",
+                "will"
+              ],
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "poison"
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +183,76 @@
       "name": "Kizidhar Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j7BhuP2ccnwpbQhw",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kizidhar Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can wield the arcane magic of a kizidhar, casting @UUID[Compendium.pf2e.spells-srd.Item.Entangling Flora] and @UUID[Compendium.pf2e.spells-srd.Item.One with Plants] once per day each as 2nd-rank arcane innate spells.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:enangling-flora",
+                    "item:slug:one-with-plants"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:enangling-flora",
+                    "item:slug:one-with-plants"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:ardande"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +262,54 @@
       "name": "Moldersoul",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i5VCpYIZYQEWgY5S",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Moldersoul",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to elemental wood asserts itself in the form of decay, like forgotten logs left to rot and the char that remains after a forest fire, cycles of devastation clearing away what was to make room for the next generation of life. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Decompose] action.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Decompose"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +319,46 @@
       "name": "Read the Roots",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tBRhYPGTb30qP34t",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Read the Roots",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are standing on the ground, and there are plants rooted in the ground within 100 feet of you.</p>\n<hr />\n<p>The root systems of trees are a far-reaching network of information, and you know how to access them and extract their secrets. You @UUID[Compendium.pf2e.actionspf2e.Item.Seek] within 30 feet using tremorsense, an imprecise sense, instead of one of your own senses. You can also detect subjects touching or burrowing through the surface you are standing on in this way.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "primal",
+              "scrying",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +368,67 @@
       "name": "Springsoul",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eeXyNpzNvPcuOflc",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Springsoul",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to elemental wood manifests as fresh blossoms, spring fruits, and the seeds of new life, and you harness this power to spread vitality and abundance. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Tangle Vine] cantrip as an innate primal or arcane spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:tangle-vine",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:tangle-vine",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:ardande"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +438,66 @@
       "name": "Summon Wood Elemental",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Mjt89h8hvZS4nl0P",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Summon Wood Elemental",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to the Plane of Wood allows you to summon elemental allies. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Summon Elemental] as a 5th-rank primal innate spell, but the elemental must be a wood elemental.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:summon-elemental",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:summon-elemental",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:ardande"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -79,6 +507,43 @@
       "name": "Sunlit Vitality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aBCvQ1x4W9bsrYPJ",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sunlit Vitality",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain nourishment through photosynthesis, like trees and other green plants. You typically don't need to pay for food, though you begin to starve if you go without sunlight for 1 week. You can derive nourishment from specially formulated bottles of sunlight instead of natural sunlight, but these bottles cost 10 times as much as standard rations (4 gp per week).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +553,47 @@
       "name": "Treespeech",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PtmaaJdutJwxHvfm",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Treespeech",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to elemental wood allows you to communicate with trees in the Universe in Muan, the language of wood elementals. You can ask questions of, receive answers from, and use the Diplomacy skill with woody plants like trees and shrubs.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You speak Muan"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -97,6 +603,49 @@
       "name": "Unbowed, Unbroken",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TZQUhuEjSPSVe0oS",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unbowed, Unbroken",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to elemental wood manifests as resilience—towering trees, rough bark, deep roots, and patient determination. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Unwavering Resilience] reaction.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Unwavering Resilience"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "ardande",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -106,6 +655,51 @@
       "name": "Wood Ward",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qW0E05GudC6bRA2Q",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wood Ward",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature targets you with an attack.</p>\n<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>With a sweep of your hand, vines and roots burst from the ground along the edge of your space between you and the attacker, creating a natural lattice of wood that grants standard cover. The circumstance bonus from the cover applies to your AC when you're determining the outcome of the triggering attack. If the triggering attack still hits and deals physical damage to you, the ward reduces the damage by 30 and is immediately destroyed. If the attack misses, the ward instead persists for 3 rounds before withering back into the earth. Creatures can cross the ward, but it's difficult terrain.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "concentrate",
+              "plant",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -115,6 +709,66 @@
       "name": "Wooden Mantle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9UD7TwyMIjbUun6U",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wooden Mantle",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to the magic of the Plane of Wood allows you to call upon the power of plants and trees to protect yourself. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Mantle of the Unwavering Heart] as a 5th-rank primal innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:mantle-of-the-unwavering-heart",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:mantle-of-the-unwavering-heart",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:ardande"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -124,6 +778,55 @@
       "name": "Woodworker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uofXCv2t8C2IRsr0",
+        "folder": "trRPGJ8GgzD1QpKf",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Woodworker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Denizens of the Plane of Wood take immense pride in the magnificent works of art they can craft from wood, and practicing your own woodcraft helps you feel a connection with your planar heritage. You gain the trained proficiency rank in Crafting. If you would automatically become trained in Crafting (from your background or class, for example), you instead become trained in a skill of your choice. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting] skill feat for woodworking.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Specialty Crafting"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

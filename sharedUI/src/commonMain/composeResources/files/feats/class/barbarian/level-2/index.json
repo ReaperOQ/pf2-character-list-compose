@@ -7,6 +7,53 @@
       "name": "Acute Scent",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dgmjiToPHC3Yf5I3",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Acute Scent",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When your anger is heightened, your sense of smell improves. While you're raging, you gain imprecise scent with a range of 30 feet.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "range": 30,
+              "selector": "scent"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +63,64 @@
       "name": "Bashing Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "A4sV0cRU9I8ztbHY",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bashing Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You smash, bust, and charge through solid obstacles without hesitation.</p>\n<p>Stride twice. Once during your movement, if your movement passes through or ends adjacent to a door, window, fence, wall, or similar obstacle, you can attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] the obstacle with a +1 circumstance bonus to the roll; on a failure, your movement ends at that obstacle.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "bashing-charge"
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "domain": "athletics",
+              "key": "RollOption",
+              "option": "bashing-charge",
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +130,263 @@
       "name": "Elemental Evolution",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XjoKCfvaSVaRHIV1",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elemental Evolution",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The elemental power within you is more mutable and versatile than most. Choose a second damage type for your element. Whenever you Rage, you can choose that type instead of the damage type you would normally gain. The new damage type can be the one you did not choose when you selected the element initially if you had multiple options available for your element, or one of the following types:</p>\n<p><strong>air</strong> cold</p>\n<p><strong>earth</strong> poison</p>\n<p><strong>fire</strong> cold</p>\n<p><strong>metal</strong> electricity</p>\n<p><strong>water</strong> acid</p>\n<p><strong>wood</strong> poison.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "elemental instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "predicate": [
+                    "elemental-instinct:water"
+                  ],
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitBludgeoning",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:earth",
+                        "elemental-instinct:water",
+                        "elemental-instinct:wood"
+                      ]
+                    },
+                    {
+                      "not": "elemental-instinct:damage:bludgeoning"
+                    }
+                  ],
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:water",
+                        "elemental-instinct:air",
+                        "elemental-instinct:fire"
+                      ]
+                    },
+                    {
+                      "not": "elemental-instinct:damage:cold"
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:air",
+                        "elemental-instinct:metal"
+                      ]
+                    },
+                    {
+                      "not": "elemental-instinct:damage:electricity"
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitPiercing",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:earth",
+                        "elemental-instinct:metal",
+                        "elemental-instinct:wood"
+                      ]
+                    },
+                    {
+                      "not": "elemental-instinct:damage:piercing"
+                    }
+                  ],
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.TraitPoison",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:wood",
+                        "elemental-instinct:earth"
+                      ]
+                    }
+                  ],
+                  "value": "poison"
+                },
+                {
+                  "label": "PF2E.TraitSlashing",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:air",
+                        "elemental-instinct:metal"
+                      ]
+                    },
+                    {
+                      "not": "elemental-instinct:damage:slashing"
+                    }
+                  ],
+                  "value": "slashing"
+                }
+              ],
+              "flag": "damage",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+              "rollOption": "elemental-instinct:evolution"
+            },
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Barbarian.Elemental.ElementalEvolutionLabel",
+              "option": "evolution-damage",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "predicate": [
+                    "elemental-instinct:evolution:acid"
+                  ],
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitBludgeoning",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:damage:bludgeoning",
+                        "elemental-instinct:evolution:bludgeoning"
+                      ]
+                    }
+                  ],
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:damage:cold",
+                        "elemental-instinct:evolution:cold"
+                      ]
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:damage:electricity",
+                        "elemental-instinct:evolution:electricity"
+                      ]
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "predicate": [
+                    "elemental-instinct:damage:fire"
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitPiercing",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:damage:piercing",
+                        "elemental-instinct:evolution:piercing"
+                      ]
+                    }
+                  ],
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.TraitPoison",
+                  "predicate": [
+                    "elemental-instinct:evolution:poison"
+                  ],
+                  "value": "poison"
+                },
+                {
+                  "label": "PF2E.TraitSlashing",
+                  "predicate": [
+                    {
+                      "or": [
+                        "elemental-instinct:damage:slashing",
+                        "elemental-instinct:evolution:slashing"
+                      ]
+                    }
+                  ],
+                  "value": "slashing"
+                }
+              ],
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "damageType": "{item|flags.system.rulesSelections.evolutionDamage}",
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "or": [
+                    "class:barbarian",
+                    "feat:instinct-ability"
+                  ]
+                }
+              ],
+              "priority": 99,
+              "selectors": [
+                "strike-damage"
+              ],
+              "slug": "rage",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +396,48 @@
       "name": "Furious Finish",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5gnBhockV7O32jTR",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Furious Finish",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Desperate to finish the fight, you pour all your rage into one final blow. Make a Strike. If it hits, you gain a circumstance bonus to damage equal to the number of rounds remaining in your Rage (maximum 10). After this Strike, your Rage immediately ends, and you are @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] until you rest for at least 10 minutes.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Furious Finish",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Furious Finish"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +447,44 @@
       "name": "No Escape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lT8XlX1Ig900BblS",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "No Escape",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy within reach attempts to move away from you.</p><hr /><p>You keep pace with a retreating foe. Stride up to your Speed, following the enemy and keeping it in reach throughout its movement until it stops moving or you've moved your full Speed. You can use No Escape to Burrow, Climb, Fly, or Swim instead of Stride if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +494,43 @@
       "name": "Second Wind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4bvoePh1p3ZGgqhP",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Second Wind",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can enter a second rage, but afterward you need to catch your breath. When you @UUID[Compendium.pf2e.actionspf2e.Item.Rage], you can choose to gain temporary HP from the Rage even if 1 minute hasn't passed (or a full turn if you have the @UUID[Compendium.pf2e.classfeatures.Item.Revitalizing Rage] class feature). If you do, once this Rage ends you become @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] until you rest for 10 minutes.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +540,45 @@
       "name": "Shake it Off",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "auv1lss6LxM0q3gz",
+        "folder": "BKRDTC8IQW7up3BL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shake it Off",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You concentrate on your rage, overcoming fear and fighting back sickness. Reduce your @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition value by 1, and attempt a @Check[fortitude] save to recover from the @UUID[Compendium.pf2e.conditionitems.Item.Sickened] condition as if you had spent an action retching; you reduce your sickened condition value by 1 on a failure (but not on a critical failure), by 2 on a success, or by 3 on a critical success.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

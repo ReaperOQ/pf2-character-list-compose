@@ -7,6 +7,50 @@
       "name": "Advanced First Aid",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "17FAYfreumeKbSGr",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced First Aid",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You use your medical training to ameliorate sickness or assuage fears. When you use Medicine to @UUID[Compendium.pf2e.actionspf2e.Item.Administer First Aid], instead of Stabilizing a character or Stopping Bleeding, you can reduce an ally's @UUID[Compendium.pf2e.conditionitems.Item.Frightened] or @UUID[Compendium.pf2e.conditionitems.Item.Sickened] condition by 2, or remove either of those conditions entirely on a critical success. You can remove only one condition at a time. The DC for the Medicine check is usually the DC of the effect that caused the condition.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "healing",
+              "manipulate",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -16,6 +60,59 @@
       "name": "Aerobatics Mastery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pKnX7MGZayqZui0Z",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aerobatics Mastery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You move with grace in flight and can perform amazing aerial stunts.</p>\n<p>You gain a +2 circumstance bonus to Acrobatics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Maneuver in Flight] and can combine two maneuvers into a single action, such as reversing direction while making a steep ascent or descent or hovering in gale-force winds. The DC of the Acrobatics check is equal to the DC of the most difficult maneuver + 5.</p>\n<p>If you're legendary in Acrobatics, you can combine three such maneuvers into a single action; the DC of the Acrobatics check is equal to the DC of the most difficult maneuver + 10. Regardless of the combination, these maneuvers rarely allow you to move farther than your @UUID[Compendium.pf2e.actionspf2e.Item.Fly] Speed.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Aerobatics Mastery (Maneuver in Flight)",
+              "predicate": [
+                "action:maneuver-in-flight"
+              ],
+              "selector": "acrobatics",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -25,6 +122,67 @@
       "name": "Battle Cry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ePObIpaJDgDb9CQj",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battle Cry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>When you roll initiative, you can yell a mighty battle cry and [[/act demoralize]] an observed foe as a free action. If you're legendary in Intimidation, you can use a reaction to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] your foe when you critically succeed at an attack roll.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "selector": "initiative",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "skill:intimidation:rank:4"
+              ],
+              "selector": "attack",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -34,6 +192,49 @@
       "name": "Biographical Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WqTqHPDbargixuej",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Biographical Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>In even a brief conversation or social interaction, you pick up on subtle social and visual cues to learn a great deal about a person's origin and history. You might notice bits of green under the person's fingernails and determine they're an herbalist, spy a pin indicating their membership in a secret society, or something similar. You pick up on only details that have to do with their societal role, so you might learn the city district where a vampire lives, but wouldn't learn any of their weaknesses, nor necessarily even that they are a vampire. Spend 1 minute in the presence of someone you haven't met before, or haven't met since you first gained Biographical Eye, then attempt a @Check[society|dc:30|immutable] check. You gain a +1 circumstance bonus to the check if you engaged the person in conversation during this time. If the person is deliberately trying to conceal their nature or present a false identity, you learn about their false biography rather than their true one unless the result of your Society check exceeds their Will DC.</p><hr /><p><strong>Critical Success</strong> You learn the creature's profession, their specialty within that profession, and a major accomplishment or controversy from their career. You also learn the nation and settlement where they live, as well as the district in a city large enough to have districts. In addition, you learn the nation or settlement where they spent their formative years.</p>\n<p><strong>Success</strong> You learn the creature's profession and specialty within that profession. You learn the nation or settlement where they normally live.</p>\n<p><strong>Failure</strong> You learn the creature's profession and the region of the world they hail from, but no more.</p>\n<p><strong>Critical Failure</strong> You learn a piece of erroneous information about the creature.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "secret",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -43,6 +244,48 @@
       "name": "Bizarre Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9o2VSlMQVPB4LN09",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bizarre Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can draw upon strange variations in your spellcasting, whether or not you can cast occult spells. The DCs to Recognize Spells you cast and Identify Magic you use increase by 5.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -52,6 +295,50 @@
       "name": "Break Curse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zGrUu3dUtqHrqGuo",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Break Curse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You spend 8 hours praying or performing occult rites over the target, weakening a curse's power over them. Attempt to counteract the curse, using @Check[occultism] or @Check[religion] for your counteract check and half your level rounded up for the counteract rank. Break Curse only takes 10 minutes of prayer and rites if you are legendary in Occultism or Religion.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Occultism or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "exploration",
+              "healing",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -61,6 +348,54 @@
       "name": "Consult the Spirits",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fvYwsHM9O1twQa5N",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Consult the Spirits",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You have learned rites or meditations that enable you to perceive minor, invisible spirits within a place. Choose Nature, Occultism, or Religion when you select this feat. Nature allows you to contact the spirits of nature that form leshies, who are born of pure life essence rather than spiritual energy and can answer questions about natural features like the location of nearby water or plant life. Religion reveals the presence of angelic, demonic, or other spirits in service to divine beings, who provide information about sources of powerful life energy or energy from the Void; sacred or profane influences; or the presence of undead. Occultism allows you to contact lingering spirits, psychic echoes of the departed dead, and spirits from beyond reality, who tell you about things like strange auras, effects, or the presence of unnatural occult beings. Spend 10 minutes and attempt a check to Recall Knowledge with the chosen skill; the DC is determined by the GM (usually a very high DC for the level of the highest-level creature you might encounter in the area). If you're legendary in the chosen skill, you can use this feat once per hour, instead of only once per day, but you can't use it again on any area that overlaps a previous area.</p><hr /><p><strong>Critical Success</strong> The spirits reveal themselves to you and have a helpful attitude toward you. Only you can perceive these spirits. They answer three simple questions about the environment within 100 feet of you, depending on the skill you chose and thus the type of spirits you contact. Their answers are almost always a single word, and their knowledge is limited to within their area of interest.</p>\n<p><strong>Success</strong> As with a critical success, but the spirits are indifferent to you and answer only one question.</p>\n<p><strong>Failure</strong> You are unable to contact the spirits of this place.</p>\n<p><strong>Critical Failure</strong> You contact one or more malevolent spirits. They are hostile toward you, though they may not immediately appear so. They answer up to three questions but give you information that is harmful to you in some way, as determined by the GM.</p><hr /><p><strong>Special</strong> You can select this feat multiple times, each time picking a different skill in which you have the master proficiency rank. You can use this feat with each skill once per day (or once per hour, if you're legendary).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 7
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Nature, Occultism, or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "secret",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -70,6 +405,108 @@
       "name": "Disturbing Knowledge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hkSuxXOc9qBleJbd",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disturbing Knowledge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You utter a litany of dreadful names, prophecies, and descriptions of realms beyond mortal comprehension, drawn from your study of forbidden tomes and scrolls. Even those who don't understand your language are unsettled by these dire secrets.</p>\n<p>Attempt an @Check[occultism|defense:will] check and compare the result to the Will DC of an enemy within 30 feet, or to the Will DCs of any number of enemies within 30 feet if you are legendary in Occultism. Those creatures are temporarily immune for 24 hours.</p><hr /><p><strong>Critical Success</strong> The target becomes @UUID[Compendium.pf2e.conditionitems.Item.Confused] for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Success</strong> The target becomes frightened 1.</p>\n<p><strong>Failure</strong> The target is unaffected.</p>\n<p><strong>Critical Failure</strong> You get overly caught up in your own words and become frightened 1.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:disturbing-knowledge"
+              ],
+              "selector": [
+                "occultism"
+              ],
+              "text": "PF2E.SpecificRule.Feat.DisturbingKnowledge.CriticalSuccess",
+              "title": "PF2E.Check.Result.Degree.Check.criticalSuccess"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:disturbing-knowledge"
+              ],
+              "selector": [
+                "occultism"
+              ],
+              "text": "PF2E.SpecificRule.Feat.DisturbingKnowledge.Success",
+              "title": "PF2E.Check.Result.Degree.Check.success"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure"
+              ],
+              "predicate": [
+                "action:disturbing-knowledge"
+              ],
+              "selector": [
+                "occultism"
+              ],
+              "text": "PF2E.SpecificRule.Feat.DisturbingKnowledge.Failure",
+              "title": "PF2E.Check.Result.Degree.Check.failure"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalFailure"
+              ],
+              "predicate": [
+                "action:disturbing-knowledge"
+              ],
+              "selector": [
+                "occultism"
+              ],
+              "text": "PF2E.SpecificRule.Feat.DisturbingKnowledge.CriticalFailure",
+              "title": "PF2E.Check.Result.Degree.Check.criticalFailure"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "emotion",
+              "fear",
+              "general",
+              "mental",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -79,6 +516,48 @@
       "name": "Doublespeak",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qibU5SZPFHMNnpAP",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Doublespeak",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You are skilled at saying one thing while meaning something different. You disguise your true meaning behind other words and phrases, relying on subtle emphasis and shared experience to convey meaning that only your allies understand.</p>\n<p>Any allies who have traveled alongside you for at least 1 full week automatically discern your meaning. Other observers must succeed at a Perception check against your Deception DC to realize you are passing a secret message, and they must critically succeed to understand the message itself.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master at Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -88,6 +567,48 @@
       "name": "Environmental Guide",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "u6tLp3zTBweq7CxO",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Environmental Guide",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can rapidly adapt to climates and help others do the same. After an hour in an environment, you and up to five allies can treat the natural temperature effects of an environment as one step less severe (treat extreme cold as severe cold or extreme heat as severe heat, for instance). This reduction in severity is cumulative with any equipment (such as cold-weather gear) or spells (such as environmental endurance). If you're legendary in Survival, you may protect yourself and up to five allies, and you treat temperature effects as two steps less severe.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -97,6 +618,111 @@
       "name": "Evangelize",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YgbcLfAEdi4xxvX5",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Evangelize",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You point out a detail that incontrovertibly supports your faith, causing a listener's mind to whirl. Attempt a @Check[diplomacy|against:will] check and compare the result to the Will DC of a single target that can hear you and understands your language; that target is then temporarily immune to Evangelize with respect to your deity or philosophy for 1 day. A creature that already agrees with you is unaffected, and at the GM's discretion, a target that genuinely changes its perspective to support your faith as a result of the argument is also otherwise unaffected.</p><hr /><p><strong>Critical Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} for 1 round.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for 1 round.</p>\n<p><strong>Failure</strong> The target is unaffected.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Diplomacy"
+              },
+              {
+                "value": "follower of a specific religion or philosophy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:evangelize"
+              ],
+              "selector": [
+                "diplomacy-check"
+              ],
+              "text": "PF2E.SpecificRule.Feat.Evangelize.CriticalSuccess",
+              "title": "PF2E.Check.Result.Degree.Check.criticalSuccess"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:evangelize"
+              ],
+              "selector": [
+                "diplomacy-check"
+              ],
+              "text": "PF2E.SpecificRule.Feat.Evangelize.Success",
+              "title": "PF2E.Check.Result.Degree.Check.success"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure"
+              ],
+              "predicate": [
+                "action:evangelize"
+              ],
+              "selector": [
+                "diplomacy-check"
+              ],
+              "text": "PF2E.SpecificRule.Feat.Evangelize.Failure",
+              "title": "PF2E.Check.Result.Degree.Check.failure"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalFailure"
+              ],
+              "predicate": [
+                "action:evangelize"
+              ],
+              "selector": [
+                "diplomacy-check"
+              ],
+              "text": "PF2E.SpecificRule.Feat.Evangelize.Failure",
+              "title": "PF2E.Check.Result.Degree.Check.criticalFailure"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "general",
+              "linguistic",
+              "mental",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -106,6 +732,48 @@
       "name": "Foil Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IJQJBnD5CjKvFYEx",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Foil Senses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You are adept at foiling creatures' special senses and cautious enough to safeguard against them at all times. Whenever you use the @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice], @UUID[Compendium.pf2e.actionspf2e.Item.Hide], or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] actions, you are always considered to be taking precautions against special senses.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -115,6 +783,53 @@
       "name": "Go with the Flow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "u96anl3ACNhBqnbT",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Go with the Flow",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature detects your attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate], and you're within 30 feet of at least one other creature.</p>\n<hr />\n<p>You have an occult connection to the world that helps you blend in with the cacophony of life around you. Attempt an @Check[occultism|defense:perception] check against the creature's Perception DC. On a success, the creature mistakenly identifies another creature within 30 feet of you as you instead.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "secret",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -124,6 +839,62 @@
       "name": "Impeccable Crafting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PiUe3tpv7UVtnfvS",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impeccable Crafting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You craft flawless creations with great efficiency. Whenever you roll a success at a Crafting check to make an item of the type you chose with @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting], you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Crafting"
+              },
+              {
+                "value": "Specialty Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:craft",
+                "speciality"
+              ],
+              "selector": "crafting",
+              "text": "Whenever you roll a success at a Crafting check to make an item of the type you chose with Specialty Crafting, you get a critical success instead.",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -133,6 +904,56 @@
       "name": "Inflame Crowd",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YRjv9cxUAkeOiNAM",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inflame Crowd",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your performances are a call to action for the crowds who listen to you. For 1 hour after you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] using Performance, you can make a Request of a member of the affected audience using [[/act make-an-impression skill=performance]]{Performance} instead of Diplomacy.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Performance"
+              },
+              {
+                "value": "Impressive Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -142,6 +963,49 @@
       "name": "Influence Nature",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "f5JOSyW1tKMpz6hU",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Influence Nature",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>With patience and time, you can make bird calls, leave game trails, and ultimately influence the behavior of a certain type of animals in the region to favor and even aid you in the days to come.</p>\n<p>The GM determines the DC of any check required and the amount of time your work requires (usually at least a day or two of downtime). While you can't directly control how you've influenced nature, you can hope for certain effects, such as easier hunts or birds falling silent whenever danger is approaching.</p>\n<p>If you're legendary in Nature, you can elicit these same adjustments to animal behavior in the area by spending only 10 minutes.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "downtime",
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -151,6 +1015,48 @@
       "name": "Kip Up",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gBSPbQRXdagZTUwY",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kip Up",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You stand up. This movement doesn't trigger reactions.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -160,6 +1066,47 @@
       "name": "Monster Crafting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kajI2r9RmtW5xYL7",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monster Crafting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can use the parts of monsters to aid in crafting. You can use the body of a monster to help @UUID[Compendium.pf2e.actionspf2e.Item.Craft] items, using Survival instead of Crafting for the Craft activity when you do so. If parts of the monster's body are valuable, you can expend them toward the item's raw material cost as well. (The GM makes the determination if the monster's entry doesn't list any valuable materials from its body.)</p>\n<p>If you spend additional days working on the item, reduce the Price using the monster's level instead of your own. Certain items may require specific creatures in their Craft requirement.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -169,6 +1116,51 @@
       "name": "Morphic Manipulation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wlbfINUTHDPqbV7v",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Morphic Manipulation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You've attuned your natural aura to that of plant life, coaxing it to grow faster than normal. You sit for 10 minutes with a small, natural non-creature plant—such as a lone flower, a small bush, or a potted succulent—while you bring your aura in tune through meditation. You coax the plant to advance one stage in its life cycle: from seed to sprout, sprout to plant, plant to flower, or flower to fruit. If the plant doesn't have proper nutrients (if you're sprouting a seed without soil or water, for example), the plant withers 5 minutes after you complete the activity. Performing this activity more than once per day renders you @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] and unable to use Morphic Manipulation until your next full night's rest.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "exploration",
+              "general",
+              "primal",
+              "skill",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -178,6 +1170,55 @@
       "name": "Paragon Battle Medicine",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xOMwuKCf02aFzyp3",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Paragon Battle Medicine",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Access</strong> You’re from Rahadoum.</p><hr /><p>Kassi Aziril taught you her techniques that originated the modern use of Battle Medicine. When you successfully use Battle Medicine, you can also reduce the target's @UUID[Compendium.pf2e.conditionitems.Item.Sickened], @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled], or @UUID[Compendium.pf2e.conditionitems.Item.Clumsy] condition by 1 (this has no effect if you are subject to an effect continually applying the clumsy condition, like enlarge).</p>\n<p>If you are legendary in Medicine, you can choose to reduce the target's @UUID[Compendium.pf2e.conditionitems.Item.Frightened] or @UUID[Compendium.pf2e.conditionitems.Item.Stunned] condition by 1 instead, and if you have the @UUID[Compendium.pf2e.feats-srd.Item.Godless Healing] feat, you can choose to reduce the target's @UUID[Compendium.pf2e.conditionitems.Item.Stupefied] or @UUID[Compendium.pf2e.conditionitems.Item.Drained] condition by 1 instead.</p>\n<p>If you have the @UUID[Compendium.pf2e.feats-srd.Item.Mortal Healing] feat, you can reduce all available conditions by 1 for a target who hasn't benefited from vitality or healing magic in the last 24 hours, and if you roll a critical success before applying the effects of the feat, you reduce all available conditions by 2 for that target instead.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Battle Medicine"
+              },
+              {
+                "value": "master in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "selected": {
+              "general": "General",
+              "skill": "Skill"
+            },
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -187,6 +1228,48 @@
       "name": "Planar Survival",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Yj4mpROEjdCjQzMd",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Planar Survival",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can Subsist using Survival on different planes, even those without resources or natural phenomena you normally need. For instance, you can forage for food without penalty even if the plane lacks food that could normally sustain you. A success on your check to Subsist also prevents damage done by the plane to you and anyone else you support with Subsist. This applies only to damage dealt by the general conditions of the plane, not smaller hazards.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -196,6 +1279,70 @@
       "name": "Quick Climb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P04Hw8E6WAWARKHP",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Climb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>When Climbing, you move 5 more feet on a success and 10 more feet on a critical success, up to your Speed. If you're legendary in Athletics, you gain a climb Speed equal to your Speed.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "skill:athletics:rank:4"
+              ],
+              "selector": "climb",
+              "value": "@actor.system.movement.speeds.land.value"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics",
+              "text": "PF2E.SpecificRule.Feat.QuickClimb.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -205,6 +1352,67 @@
       "name": "Quick Recognition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2rSyTfPgAmNAo01r",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Recognition",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You Recognize Spells swiftly. Once per round, you can @UUID[Compendium.pf2e.feats-srd.Item.Recognize Spell]{Recognize a Spell} using a skill in which you're a master as a free action.</p>"
+          },
+          "frequency": null,
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Master in Arcana, Nature, Occultism or Religion"
+              },
+              {
+                "value": "Recognize Spell"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:recognize-spell"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -214,6 +1422,48 @@
       "name": "Quick Setup",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bcEI0iIFhZXqjoaR",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Setup",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>If you reduce the setup time for a batch of consumables at least 6 levels lower than you to less than 1 day, you can set it up in just 2 hours (allowing you to do so during an adventuring day if you have access to your tools and materials). If you rush the setup of a permanent item at least 6 levels lower than you and reduce the setup time to less than 1 day, you can perform the setup in 4 hours.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -223,6 +1473,70 @@
       "name": "Quick Swim",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bFoh3267kNLk68cU",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Swim",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You Swim 5 feet farther on a success and 10 feet farther on a critical success, to a maximum of your Speed. If you're legendary in Athletics, you gain a swim Speed equal to your Speed.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "skill:athletics:rank:4"
+              ],
+              "selector": "swim",
+              "value": "@actor.system.movement.speeds.land.value"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:swim"
+              ],
+              "selector": "athletics",
+              "text": "PF2E.SpecificRule.Feat.QuickSwim.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -232,6 +1546,48 @@
       "name": "Quick Unlock",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7GmXKrkzmInkFyEr",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Unlock",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can @UUID[Compendium.pf2e.actionspf2e.Item.Pick a Lock] using 1 action instead of 2.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Thievery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -241,6 +1597,48 @@
       "name": "Rapid Affixture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "x9xA8P2Vlz98He7C",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Affixture",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You take only 1 minute to @UUID[Compendium.pf2e.actionspf2e.Item.Affix a Talisman]. If you're legendary in Crafting, you can Affix a Talisman as a 3-action activity.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -250,6 +1648,48 @@
       "name": "Shameless Request",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KIK2Eza9TK47MEb2",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shameless Request",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you Request something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your Request, you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a Request, they eventually tire of requests, even though they still have a positive attitude toward you.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -259,6 +1699,51 @@
       "name": "Signature Crafting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "niQY3XR2VWp3GWDx",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Signature Crafting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Magic items you create bear a stamp specific to your handiwork. When you successfully Craft a permanent magic item, roll a @Check[flat|dc:9] when the item is fully complete. Any benefit a creature gains from an item quirk applies only while the creature wears the item (for a worn item) or holds it (for a held item). The GM might allow custom quirks similar to those listed.</p><hr /><p><strong>Critical Success</strong> Choose an item quirk from the table and its specifics.</p>\n<p><strong>Success</strong> The item gains a random item quirk with any specifics selected by the GM.</p><table class=\"pf2-table\"><thead><tr><th>d10</th><th>Quirk</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>Cavorting</td><td>Dances in place when not in use.</td></tr><tr><td>2</td><td>Clean</td><td>Remains pristine despite filth.</td></tr><tr><td>3</td><td>Environmental</td><td>Appearance changes to match its environment.</td></tr><tr><td>4</td><td>Filthy</td><td>A layer of filth always remains.</td></tr><tr><td>5</td><td>Floating</td><td>Slowly descends when dropped.</td></tr><tr><td>6</td><td>Glittering</td><td>Shimmers and glows with light bright as a torch.</td></tr><tr><td>7</td><td>Invisible</td><td>The item is invisible, but becomes visible for 1 round after being used.</td></tr><tr><td>8</td><td>Loyal</td><td>Floats within 5 feet of its owner, as if on a tether (but can still be seized by someone else).</td></tr><tr><td>9</td><td>Mood coloration</td><td>User's mood affects the item's color.</td></tr><tr><td>10</td><td>Skillful</td><td>The item grants a +1 item bonus to one type of skill checks.</td></tr></tbody></table>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Crafting"
+              },
+              {
+                "value": "Magical Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -268,6 +1753,52 @@
       "name": "Skeptic's Defense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Jk9XEMfMXoPT0ua2",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Skeptic's Defense",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You are targeted by or are in the area of a mental spell or effect.</p><hr /><p>You don't believe in any mental twaddle, and you're certainly not afraid of it. You scoff and verbally refute the triggering effect, attempting a counteract check using your Intimidation modifier with a counteract rank of half your level rounded up. If you succeed, you ignore the triggering effect, though any other creatures that were also targeted or in the area are still affected.</p>\n<p>If the source of the effect you successfully counteracted has an Intelligence modifier of –3 or higher, that creature becomes stupefied for 1 round. This is an auditory linguistic effect.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -277,6 +1808,48 @@
       "name": "Slippery Secrets",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RiuZT3H4QZIIEQXJ",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slippery Secrets",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You elude and evade attempts to uncover your true nature or intentions. When a spell or magical effect tries to read your mind, detect whether you are lying, or reveal your identity, you can attempt a Deception check against the spell or effect's DC. If you succeed, the effect reveals nothing.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -286,6 +1859,48 @@
       "name": "Swift Sneak",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Imvu2RV2ggjJ2HZt",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Sneak",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can move your full Speed when you @UUID[Compendium.pf2e.actionspf2e.Item.Sneak]. You can use Swift Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -295,6 +1910,73 @@
       "name": "Talent Envy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RR6p9r8l1trcByl2",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Talent Envy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You give off a bedazzling glow with every performance, sparking feelings of severe envy and inadequacy in those who compare their talent to yours. Once per minute when you succeed at a check using the type of performance that you chose with Virtuosic Performer, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] an onlooker of your choice within 60 feet as a free action. If you critically succeeded on your Performance check, improve the degree of success for your Demoralize check by one step.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Performance"
+              },
+              {
+                "value": "Virtuosic Performer"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "talent-envy",
+              "toggleable": true
+            },
+            {
+              "adjustment": {
+                "all": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "talent-envy",
+                "action:demoralize"
+              ],
+              "selector": "intimidation"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -304,6 +1986,45 @@
       "name": "Temperature Adjustment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zzd2KYAqY1Ez6aBD",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Temperature Adjustment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Access</strong> Hwanggot origin</p><hr /><p>You learn Hwan temperature classifications for the elements—wood and water are cold elements, while fire, earth, and metal are hot elements. When you @UUID[Compendium.pf2e.feats-srd.Item.Prepare Elemental Medicine], you can alter the environmental effects on the recipient's body. If you created hot elemental medicine, the recipient ignores the effects of severe cold while the medicine lasts. If you created cold elemental medicine, the recipient ignores the effects of severe heat while the medicine lasts.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Crafting, Herbalism Lore, or Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -313,6 +2034,67 @@
       "name": "Terrified Retreat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dc8X2Mbtwq6kGp7F",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrified Retreat",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>When you critically succeed at the @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] action, if the target's level is lower than yours, the target is @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] for 1 round.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:demoralize",
+                {
+                  "gt": [
+                    "self:level",
+                    "target:level"
+                  ]
+                }
+              ],
+              "selector": "intimidation",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -322,6 +2104,63 @@
       "name": "Tumbling Theft",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "80AC6Q1m0eQiE7Et",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tumbling Theft",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You reach for an opponent's item as you move past a foe. If you critically succeed at your check to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] an enemy's space, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Steal] something from the enemy as a reaction. You gain a +1 circumstance bonus to your Thievery check to Steal as your tumbling make it difficult for your enemy to keep track of your movement. You can Steal any immediately accessible item of light or negligible Bulk on the enemy's person, such as a potion or coin purse hanging from a belt, but not anything inside a container or anything the enemy is holding. The GM has final say on what you can Steal.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Acrobatics and Thievery"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "tumbling-theft",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "tumbling-theft"
+              ],
+              "selector": "thievery",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -331,6 +2170,59 @@
       "name": "Vanish Into the Land",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tP9Hs6hHkeeCJctS",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vanish Into the Land",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You're adept at using the land's natural features to find places to hide. When in the difficult terrain you've selected for the Terrain Stalker feat, you can @UUID[Compendium.pf2e.actionspf2e.Item.Hide] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] even without cover or being @UUID[Compendium.pf2e.conditionitems.Item.Concealed].</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              },
+              {
+                "value": "trained in Survival"
+              },
+              {
+                "value": "Terrain Stalker"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -340,6 +2232,48 @@
       "name": "Wall Jump",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X8iSUF1m0eezmrjs",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wall Jump",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can use your momentum from a jump to propel yourself off a wall. If you're adjacent to a wall at the end of a jump (whether performing a @UUID[Compendium.pf2e.actionspf2e.Item.High Jump], @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump], or @UUID[Compendium.pf2e.actionspf2e.Item.Leap]), you don't fall as long as your next action is another jump. Your previous jump gives you momentum, letting you use High Jump or Long Jump as a single action, but you don't get to Stride as part of the activity.</p>\n<p>You can use Wall Jump only once in a turn, unless you're legendary in Athletics, in which case you can use it as many times as you can use consecutive jump actions in that turn.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -349,6 +2283,48 @@
       "name": "Water Sprint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MTO0spetPKyIa4sT",
+        "folder": "0EeSfNqcdzvZbL28",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Water Sprint",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Experience and training have taught you that water has just enough surface tension for a master sprinter to traverse the surface.</p>\n<p>When you Stride in a straight line, if you move at least half your Speed over ground, you can move any amount of the remaining distance across a level body of water. If you don't end your Stride on solid ground, you fall into the water.</p>\n<p>If you're legendary in Athletics, as long as you start on solid ground, any part of your Stride can cross the water's surface, even if you aren't moving a straight line, though you still fall into the water if you don't end your movement on solid ground.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     }

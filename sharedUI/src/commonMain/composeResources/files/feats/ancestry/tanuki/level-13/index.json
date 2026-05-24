@@ -7,6 +7,48 @@
       "name": "Combined Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rR8cnLpOqgSOgxLq",
+        "folder": "pbld5jMUUoG7AbMs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Combined Form",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally within 30 feet uses a polymorph effect.</p><hr /><p>Cooperation and coordination are the secrets to getting by in tanuki society. When the triggering ally transforms, you Stride to their square and join shape with them, melding into their transformation. While you're melded in this way, you grant them the effects of either a 2nd- or 4th-rank enlarge spell as well as temporary Hit Points equal to your level; if their polymorph effect would normally grant them temporary Hit Points, you increase the amount by your level instead. While you're melded, you can't be separately targeted and you can't act except to speak or to use Change Shape to exit the Combined Form, which ends the effects of enlarge on your ally and removes any remaining temporary Hit Points they received from this ability at the time. If the triggering ally becomes @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] or the triggering polymorph effect ends, you automatically exit the Combined Form.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "polymorph",
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +58,49 @@
       "name": "Ponpoko-Pon!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hDvjODvJXdFjZJ81",
+        "folder": "pbld5jMUUoG7AbMs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ponpoko-Pon!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Whether it's because you play especially vigorously or are simply off-key, the music of your belly drum can physically wound your foes. You deal @Damage[(ceil(@actor.level/2))d4[sonic]|options:area-damage] damage to all creatures in a @Template[type:cone|distance:30], with a @Check[fortitude|against:class-spell|basic] save equal to your spell DC or class DC, whichever is higher. Such vigorous drumming does leave your belly a bit sore, though, preventing you from using this ability again for [[/r 1d4 #rounds]]{1d4 rounds}.</p>\n<p>At 15th level and every 2 levels thereafter, the damage increases by 1d4.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ponpoko"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "sonic",
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +110,66 @@
       "name": "Splendid Illusion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bft7gWfibx3BY5BK",
+        "folder": "pbld5jMUUoG7AbMs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Splendid Illusion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You cover your surroundings in outlandish fantasy. You can cast 6th-rank @UUID[Compendium.pf2e.spells-srd.Item.Illusory Scene] as a primal innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:illusory-scene",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:illusory-scene",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tanuki"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

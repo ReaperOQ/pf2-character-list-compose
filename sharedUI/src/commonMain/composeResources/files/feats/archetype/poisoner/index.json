@@ -7,6 +7,48 @@
       "name": "Acquired Tolerance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nx2nB10rypAuspAa",
+        "folder": "0CCvmxP0UKs17wzC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Acquired Tolerance",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fail a save against a poison.</p><hr /><p>A small amount of poison, taken at nonlethal doses, can help the body build up resistance against a more deadly dosage. Reroll the triggering check and use the second result. Once you use Acquired Tolerance, you can continue to use it against the same type of poison that day, but you can't use it against a different type of poison until after you make your next daily preparations. For instance, if you used the reaction on a save against @UUID[Compendium.pf2e.equipment-srd.Item.Giant Scorpion Venom], you could use it again against giant scorpion venom even if it came from a different source, but you couldn't use it against @UUID[Compendium.pf2e.equipment-srd.Item.Wyvern Poison].</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Poisoner Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +58,55 @@
       "name": "Advanced Poisoncraft",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zeyo67DmTH0xMFa6",
+        "folder": "0CCvmxP0UKs17wzC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Poisoncraft",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can create up to 6 poisons per day with advanced alchemy.</p><hr /><p><strong>Special</strong> At 10th level or higher, you can select this feat a second time to increase the number to 8.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Poisoner Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.crafting.entries.advancedAlchemy.maxSlots",
+              "value": "4 + (2 * @item.timesTaken)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +116,52 @@
       "name": "Chemical Contagion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IA8p9oYmsCbipmhw",
+        "folder": "0CCvmxP0UKs17wzC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chemical Contagion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your injury poisons can spray onto creatures. You gain the toxicologist alchemist's @UUID[Compendium.pf2e.classfeatures.Item.Greater Field Discovery (Toxicologist)]{Greater Field Discovery}.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Poisoner Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Greater Field Discovery (Toxicologist)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +171,53 @@
       "name": "Poison Coat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eHkMcQQ4ejRAFJAt",
+        "folder": "0CCvmxP0UKs17wzC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Poison Coat",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>In nature, certain animals are covered in venomous spines, and just brushing against them can prove deadly. You expend a contact or injury poison and spend 10 minutes brushing that poison onto your clothing or weaving sharp, poisoned needles into the garment's fabric. You can have only one poison suffused into your clothing at a time. You can use the @UUID[Compendium.pf2e.actionspf2e.Item.Once Bitten] reaction while you have a poison suffused in this way.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Poisoner Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Once Bitten"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +227,65 @@
       "name": "Poisoner Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "y7DDs03GtDnmhxFp",
+        "folder": "0CCvmxP0UKs17wzC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Poisoner Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a point of always having a few toxins near at hand—you never know when some arsenic or the like might prove useful. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Jkl5KOZih7MoMqAJ#advanced-alchemy-benefits]{advanced alchemy benefits}. You can use advanced alchemy to create four alchemical poison consumables each day. You remember alchemical poison formulas and don't need a formula book for them.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.HvbDEgCsLbzuMRiR]{Poisoner}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "craftableItems": [
+                "item:trait:alchemical",
+                "item:trait:consumable",
+                "item:trait:poison"
+              ],
+              "isDailyPrep": true,
+              "key": "CraftingAbility",
+              "label": "PF2E.SpecificRule.Alchemist.AdvancedAlchemy",
+              "maxSlots": 4,
+              "slug": "advanced-alchemy"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Alchemical Crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +295,50 @@
       "name": "Poisoner's Twist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pKoW1X95LjmWn5Jq",
+        "folder": "0CCvmxP0UKs17wzC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Poisoner's Twist",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful melee Strike that dealt damage against a target afflicted by a poison, and you know which poison.</p>\n<p>Poisons attack specific parts of the body—one venom might target the lungs, another the circulatory system, while another deteriorates the nerves. You know how to take advantage of such weaknesses. You deal @Damage[1d6[untyped]] damage of the required Strike's damage type and @Damage[1d6[poison]] damage to the target. If you're at least 18th level, you deal @Damage[2d6[untyped]] damage of each type.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Poisoner Dedication"
+              },
+              {
+                "value": "trained in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

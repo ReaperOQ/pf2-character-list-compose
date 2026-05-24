@@ -7,6 +7,59 @@
       "name": "Bullseye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0XGLdVbEIISOOuuO",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bullseye",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You carefully take aim to avoid your foe's concealment and cover. On your next Strike with a thrown weapon before the end of your turn, you gain a +1 circumstance bonus to your attack roll and ignore your target's @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition, as well as the target's lesser cover or standard cover; if the target had greater cover, they instead have only standard cover against the Strike.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "option": "bullseye",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "bullseye"
+              ],
+              "selector": "attack",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +69,43 @@
       "name": "Delay Trap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ar6W97iun6yYI8Df",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Delay Trap",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A trap within your reach is triggered.</p>\n<hr />\n<p>You try to jam the workings of a trap to delay its effects. Attempt a Thievery check to @UUID[Compendium.pf2e.actionspf2e.Item.Disable a Device] on the trap with the following results instead of the normal ones for the action.</p>\n<hr />\n<p><strong>Critical Success</strong> You either prevent the trap from being triggered or delay the activation until the start or end of your next turn.</p>\n<p><strong>Success</strong> As above, but the GM chooses whichever is worse for you.</p>\n<p><strong>Failure</strong> No effect.</p>\n<p><strong>Critical Failure</strong> You're @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +115,47 @@
       "name": "Improved Poison Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9Eufa07qvXG41QmG",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improved Poison Weapon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You deliver poisons in ways that maximize their harmful effects. When you apply a simple poison with @UUID[Compendium.pf2e.feats-srd.Item.Poison Weapon], the poison deals @Damage[2d4[poison]] damage instead of 1d4 poison damage. You don't waste a poison you apply with Poison Weapon on a critically failed attack roll.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Poison Weapon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +165,48 @@
       "name": "Inspired Stratagem",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9pTQrhbeF348bYky",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inspired Stratagem",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>During your daily preparations, you can review stratagems for the day's adventures with up to five allies. Later, you can quickly advise them on your schemes using the @UUID[Compendium.pf2e.actionspf2e.Item.Inspired Stratagem] reaction.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Inspired Stratagem"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +216,57 @@
       "name": "Nimble Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F6ZAceuDpiM9bUiF",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nimble Roll",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You throw yourself into a roll to escape imminent danger. You can use @UUID[Compendium.pf2e.feats-srd.Item.Nimble Dodge] before attempting a Reflex save in addition to its original trigger. If you do, the circumstance bonus applies to your Reflex save against the triggering effect.</p>\n<p>When you use Nimble Dodge and the triggering attack fails or critically fails, or when you succeed or critically succeed at the saving throw, you can also Stride up to 10 feet as part of the reaction. If you do, the reaction gains the move trait. You can use Nimble Roll while Flying or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Nimble Dodge"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "nimble-dodge"
+              ],
+              "selector": "reflex",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +276,43 @@
       "name": "Opportune Backstab",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PuyvasWeofGMrhpu",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Opportune Backstab",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature within your melee reach is hit by a melee attack from one of your allies.</p>\n<hr />\n<p>When your enemy is hit by your ally, you capitalize upon the distraction. Make a Strike against the triggering creature.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +322,52 @@
       "name": "Predictive Purchase (Rogue)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Yw0qVCDu94Y5TgxQ",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Predictive Purchase (Rogue)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You somehow manage to have just the thing for the situation. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Prescient Planner] and @UUID[Compendium.pf2e.feats-srd.Item.Prescient Consumable] feats. When using Prescient Planner, you can draw the item from your backpack (or a similar container) as a 2-action activity, instead of taking 1 minute to do so.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Prescient Planner"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Prescient Consumable"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +377,48 @@
       "name": "Ricochet Stance (Rogue)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RsNvCSrCN7czHC0G",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ricochet Stance (Rogue)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You adopt a stance to rebound your thrown weapons toward you. While you are in this stance, any thrown weapons you use as part of a ranged Strike to deal bludgeoning or slashing damage immediately return to your hand, enabling you to use them for additional Strikes. You must be within the weapon's listed range increment and have a hand free to catch the weapon. If you make a ranged Strike with a thrown weapon outside of its listed range increment, it instead flies back toward you a number of feet equal to its listed range increment and then falls to the ground.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Ricochet Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Ricochet Stance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +428,43 @@
       "name": "Sidestep",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5d4AyZ0Y6Ht1OwIa",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sidestep",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> The attack roll for a Strike targeting you fails or critically fails.</p><hr /><p>You deftly step aside and gently redirect an attack. You redirect the triggering attack to a creature of your choice that is adjacent to you and within the attack's reach or maximum range. The attacker rerolls the Strike's attack roll against the new target.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -88,6 +474,61 @@
       "name": "Sly Striker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AbgHCPWOKULeXrJ2",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sly Striker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attacks deal more damage, even against creatures that aren't @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard]. When you succeed or critically succeed at a Strike against a creature that isn't off-guard, you also deal 1d6 precision damage. This applies only if you're using a weapon or unarmed attack you could deal sneak attack damage with.</p>\n<p>At 14th level, if you would normally deal 3d6 or more sneak attack damage to off-guard creatures, you deal 2d6 precision damage to creatures that aren't off-guard.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "sneak attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "category": "precision",
+              "diceNumber": "ternary(gte(@actor.level,14),ternary(gte(@actor.flags.system.sneakAttackDamage.number,3),2,1),1)",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "item:tag:sneak-attack",
+                {
+                  "not": "target:condition:off-guard"
+                }
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -97,6 +538,43 @@
       "name": "Swipe Souvenir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "efDtyZhdNjxt50PD",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swipe Souvenir",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] by a creature.</p>\n<hr />\n<p>When you wriggle free from an enemy's grasp, you take something of theirs with you. You attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] from being grabbed or restrained by a creature. If you succeed, you can also attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Steal] from the creature, even if the creature is in combat.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -106,6 +584,47 @@
       "name": "Tactical Entry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MhoGCLKI5zxQ4SFD",
+        "folder": "7Sq5svRHC6cnEFkC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tactical Entry",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You rolled Stealth for initiative in this encounter, and neither you nor any enemies have acted yet.</p>\n<hr />\n<p>You Stride. This movement doesn't trigger any reactions.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

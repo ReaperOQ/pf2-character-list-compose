@@ -1,0 +1,228 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "artisan-android.json",
+      "id": "VgL18yU7pysdoZZG",
+      "name": "Artisan Android",
+      "img": "icons/skills/trades/construction-mason-stonecutter-sculpture.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VgL18yU7pysdoZZG",
+        "folder": "SUr2V7rryBTohlSG",
+        "img": "icons/skills/trades/construction-mason-stonecutter-sculpture.webp",
+        "name": "Artisan Android",
+        "system": {
+          "ancestry": {
+            "name": "Android",
+            "slug": "android",
+            "uuid": "Compendium.pf2e.ancestries.Item.GfLwE884NoRC7cRi"
+          },
+          "description": {
+            "value": "<p>Your body was originally designed to create works of art, complex tools, or maintain advanced machinery. You become trained in Crafting (or another skill if you're already trained in Crafting), and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting] skill feat in a specialty of your choice.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Specialty Crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "impersonator-android.json",
+      "id": "Mmezbef0c1fbJaVV",
+      "name": "Impersonator Android",
+      "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "Mmezbef0c1fbJaVV",
+        "folder": "SUr2V7rryBTohlSG",
+        "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+        "name": "Impersonator Android",
+        "system": {
+          "ancestry": {
+            "name": "Android",
+            "slug": "android",
+            "uuid": "Compendium.pf2e.ancestries.Item.GfLwE884NoRC7cRi"
+          },
+          "description": {
+            "value": "<p>Your body was augmented with processes and an appearance intended to blend in with humans more easily.</p>\n<p>You become trained in Deception (or another skill if you're already trained in Deception). You don't require a disguise kit when attempting Deception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] a human.</p>\n<p>In addition, you gain a +4 circumstance bonus to Impersonate checks to pretend that you're a human version of yourself, rather than an android. This bonus doesn't apply to other checks to Impersonate humans.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Impersonator Android (to Impersonate a human version of yourself)",
+              "predicate": [
+                "action:impersonate",
+                "disguise:human-self"
+              ],
+              "selector": "deception",
+              "type": "circumstance",
+              "value": 4
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.deception.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "laborer-android.json",
+      "id": "MQx7miBXUmOHycqJ",
+      "name": "Laborer Android",
+      "img": "icons/skills/trades/mining-pickaxe-stone-black.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "MQx7miBXUmOHycqJ",
+        "folder": "SUr2V7rryBTohlSG",
+        "img": "icons/skills/trades/mining-pickaxe-stone-black.webp",
+        "name": "Laborer Android",
+        "system": {
+          "ancestry": {
+            "name": "Android",
+            "slug": "android",
+            "uuid": "Compendium.pf2e.ancestries.Item.GfLwE884NoRC7cRi"
+          },
+          "description": {
+            "value": "<p>Your body is adapted to endure physical hardships or perform hard labor for long periods of time. You become trained in Athletics (or another skill if you're already trained in Athletics), and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Hefty Hauler] skill feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Hefty Hauler"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "polyglot-android.json",
+      "id": "BjuZKA7lzFSjKbif",
+      "name": "Polyglot Android",
+      "img": "icons/skills/trades/academics-study-reading-book.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "BjuZKA7lzFSjKbif",
+        "folder": "SUr2V7rryBTohlSG",
+        "img": "icons/skills/trades/academics-study-reading-book.webp",
+        "name": "Polyglot Android",
+        "system": {
+          "ancestry": {
+            "name": "Android",
+            "slug": "android",
+            "uuid": "Compendium.pf2e.ancestries.Item.GfLwE884NoRC7cRi"
+          },
+          "description": {
+            "value": "<p>You were preprogrammed with a multitude of linguistic proficiencies, likely to act as a translator. You learn two new languages, chosen from common languages and any uncommon languages you have access to. These languages take the same form (signed or spoken) as your other languages. If you select the @UUID[Compendium.pf2e.feats-srd.Item.Multilingual] feat, you learn three new languages instead of two.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "warrior-android.json",
+      "id": "RuQSx0QsirIKxwKY",
+      "name": "Warrior Android",
+      "img": "icons/skills/melee/sword-echo-stylized-tan.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "RuQSx0QsirIKxwKY",
+        "folder": "SUr2V7rryBTohlSG",
+        "img": "icons/skills/melee/sword-echo-stylized-tan.webp",
+        "name": "Warrior Android",
+        "system": {
+          "ancestry": {
+            "name": "Android",
+            "slug": "android",
+            "uuid": "Compendium.pf2e.ancestries.Item.GfLwE884NoRC7cRi"
+          },
+          "description": {
+            "value": "<p>Your body was originally created to function as a security officer or soldier. You're a naturally gifted warrior preprogrammed for combat. You're trained in all simple and martial weapons.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.simple.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.martial.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,104 @@
       "name": "Mystery Conduit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eIW5p8qqvsx2MFkY",
+        "folder": "wpMcLDirC9ZCDjvb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mystery Conduit",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The power of your mystery enables you access to myriad magic. If your next action is to Cast a Spell of 5th rank or lower that has no duration, you do not expend a spell slot.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:mystery-conduit",
+                "item:duration:0",
+                {
+                  "lte": [
+                    "item:rank",
+                    5
+                  ]
+                },
+                {
+                  "not": "cantrip"
+                }
+              ],
+              "property": "traits",
+              "value": "cursebound"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:mystery-conduit",
+                "item:duration:0",
+                {
+                  "lte": [
+                    "item:rank",
+                    5
+                  ]
+                },
+                {
+                  "not": "cantrip"
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Oracle.MysteryConduit.Note"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "mystery-conduit"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "oracle",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +114,47 @@
       "name": "Oracular Providence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PExiZZTSP4p7TZaW",
+        "folder": "wpMcLDirC9ZCDjvb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oracular Providence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mystery grants you access to deep reserves of truly miraculous divine power. You gain an additional 10th-rank spell slot.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "oracular clarity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +164,47 @@
       "name": "Paradoxical Mystery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fMAUsLdBd5SDoHBz",
+        "folder": "wpMcLDirC9ZCDjvb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Paradoxical Mystery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The truest depths of your divine mystery are fathomless and contradictory, granting you changing powers that even you can barely begin to fathom. Each day during your daily preparations, choose one basic or advanced domain spell from any domain from <em>Player Core</em>, one of the domains granted by your mystery, another domain to which you have access, or any initial or advanced revelation spell from another mystery. You gain that spell as a revelation spell until your next daily preparations.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Greater Revelation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

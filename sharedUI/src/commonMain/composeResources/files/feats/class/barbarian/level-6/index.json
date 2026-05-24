@@ -7,6 +7,125 @@
       "name": "Animal Skin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZPclfDmiHzEqblry",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Skin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your proficiency in unarmored defense increases to expert. When you are raging and unarmored, your skin transforms into a thick hide. You gain a +2 item bonus to AC (+3 if you have the @UUID[Compendium.pf2e.classfeatures.Item.Greater Juggernaut] class feature). The thickness of your hide gives you a Dexterity modifier cap to your AC of +3. This item bonus to AC is cumulative with @UUID[Compendium.pf2e.equipment-srd.Item.Armor Potency (+1)]{Armor Potency} runes on your explorer's clothing, @UUID[Compendium.pf2e.spells-srd.Item.Mystic Armor], and @UUID[Compendium.pf2e.equipment-srd.Item.Bands of Force].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animal Instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "DexterityModifierCap",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "value": 3
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "flags.system.animalSkinBonus",
+              "priority": 19,
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "flags.system.animalSkinBonus",
+              "predicate": [
+                "feature:greater-juggernaut"
+              ],
+              "priority": 19,
+              "value": 3
+            },
+            {
+              "fromEquipment": false,
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "selector": "ac",
+              "type": "item",
+              "value": "@actor.flags.system.animalSkinBonus"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "relabel": "PF2E.SpecificRule.AnimalSkin.BracersOfArmor",
+              "selector": "ac",
+              "slug": "bands-of-force",
+              "value": "@actor.flags.system.animalSkinBonus"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "relabel": "PF2E.SpecificRule.AnimalSkin.ExplorersClothing",
+              "selector": "ac",
+              "slug": "explorers-clothing",
+              "value": "@actor.flags.system.animalSkinBonus"
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "relabel": "PF2E.SpecificRule.AnimalSkin.MageArmor",
+              "selector": "ac",
+              "slug": "mage-armor",
+              "value": "@actor.flags.system.animalSkinBonus"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "unarmored": {
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "morph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +135,69 @@
       "name": "Brutal Bully",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oUhwrijg4rClCplO",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brutal Bully",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You push your foes around and leave bruises. While raging, when you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Grapple], @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] an enemy, you deal that enemy @Damage[@actor.abilities.str.mod[bludgeoning]]{bludgeoning} damage equal to your Strength modifier; add this to the damage from a critical success to Trip.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "self:effect:rage",
+                {
+                  "or": [
+                    "action:disarm",
+                    "action:grapple",
+                    "action:shove",
+                    "action:trip"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +207,44 @@
       "name": "Cleave",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GE96a0UGPYM74qjI",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cleave",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your melee Strike reduces an enemy to 0 Hit Points, and another enemy is adjacent to that creature.</p><hr /><p>You swing clear through one foe and into another. Make a melee Strike against the second enemy.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +254,61 @@
       "name": "Dragon's Rage Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3uavnVbCsqTvzpgt",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon's Rage Breath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>You breathe deeply and exhale powerful energy in a @Template[cone|distance:30], dealing @Damage[(@actor.level)d6[@actor.flags.system.barbarian.instinct.dragon.damageType]|options:area-damage] damage to each creature in the area with a @Check[reflex|against:barbarian|basic|options:area-effect] save against your class DC. The damage type matches your instinct's dragon breath, and this action gains the trait of your dragon instinct's tradition.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dragon instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "{actor|flags.system.barbarian.instinct.dragon.tradition}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +318,58 @@
       "name": "Elemental Explosion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uHYQ0F7FzeMDNrAD",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elemental Explosion",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're raging, and you haven't used this ability since you last Raged.</p><hr /><p>You unleash the energy roiling within you, exploding elemental matter in a @Template[emanation|distance:15]. Each creature in the area takes @Damage[(@actor.level)d8[@actor.flags.system.elementalInstinctDamage]|options:area-damage]{1d8 damage per level you possess}, with the same type you chose for elemental rage. Each creature in the area must attempt a @Check[reflex|against:barbarian|basic|options:area-effect]. Elemental Explosion gains the trait of your element.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "elemental instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "{actor|flags.system.elementalInstinctElement}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "primal",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +379,54 @@
       "name": "Giant's Stature",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "W21jKAcG0GtEtBiK",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Giant's Stature",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are Medium or smaller.</p>\n<hr />\n<p>You grow to incredible size. You become Large, increasing your reach by 5 feet and gaining the @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} condition until you stop raging. Your equipment grows with you.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "giant instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Giant's Stature",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Giant's Stature"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "polymorph",
+              "primal",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +436,49 @@
       "name": "Inner Strength",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OY1Ewg0dbCp52Hl5",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inner Strength",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your strength is part of your rage. As long as your anger remains, you can gather your strength and rage to overcome any sort of enfeeblement.</p>\n<p>You reduce your @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled] condition's value by 1.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "spirit instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +488,48 @@
       "name": "Mage Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mqLPCNdCSNyY7gyI",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mage Hunter",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You've seen the target Cast a Spell</p><hr /><p>You use your hatred of magic to lash out at a known spellcaster. Make a melee Strike against the required creature. If you hit and deal damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1}, or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} on a critical hit, until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "superstition instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +539,65 @@
       "name": "Nocturnal Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "k0NNa5Ko4XhDdBYB",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nocturnal Senses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your senses gain even greater clarity. While raging, if you have low-light vision you gain darkvision, and if you have scent the range of your imprecise scent increases to 60 feet.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "low-light vision or scent"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "range": 60,
+              "selector": "scent"
+            },
+            {
+              "key": "Sense",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "selector": "darkvision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -88,6 +607,47 @@
       "name": "Scouring Rage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VqVgcqmG6xmYuDbK",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scouring Rage",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You @UUID[Compendium.pf2e.actionspf2e.Item.Rage].</p><hr /><p>You emit a powerful surge of instinctual energy when you unleash your anger. Each enemy within 20 feet takes @Damage[(@actor.level)|options:area-damage]{damage equal to your level} (@Check[fortitude|against:barbarian|basic|options:area-effect] save against your class DC) of the same type as your additional damage during that Rage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "an instinct that allows you to change your additional damage from Rage to a different damage type"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +657,70 @@
       "name": "Spirits' Interference",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hjApw8AvYVuqQk2W",
+        "folder": "7UuBmWl93axyEHUh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spirits' Interference",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You call forth protective spirits to ward off ranged attacks. Until your rage ends, anyone making a ranged attack against you must succeed at a @Check[flat|dc:5] or the attack misses with no effect.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "spirit instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:rage"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "spirits-interference",
+              "toggleable": true
+            },
+            {
+              "affects": "origin",
+              "key": "EphemeralEffect",
+              "predicate": [
+                "spirits-interference"
+              ],
+              "selectors": "ranged-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Spirits' Interference"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "divine",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

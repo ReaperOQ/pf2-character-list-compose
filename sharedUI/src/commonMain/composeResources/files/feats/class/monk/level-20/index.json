@@ -7,6 +7,63 @@
       "name": "Enduring Quickness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "txLcSHu6kEfmrJj1",
+        "folder": "lbiPSOkPyUfrQKUK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enduring Quickness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You move as fast and as high as the wind itself. You're permanently @UUID[Compendium.pf2e.conditionitems.Item.Quickened].</p>\n<p>You can use your extra action to Stride or @UUID[Compendium.pf2e.actionspf2e.Item.Leap], to provide one of the actions needed for a @UUID[Compendium.pf2e.actionspf2e.Item.High Jump] or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump]</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Quickened"
+            },
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:granter:id:{item|id}"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +73,50 @@
       "name": "Godbreaker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "07TYbc4cOQi5tduT",
+        "folder": "lbiPSOkPyUfrQKUK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Godbreaker",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You have mastered an ultimate grappling technique capable of breaking even the mightiest of foes. You hurl the creature 20 feet into the air, following behind it with a powerful jump, and then make an unarmed Strike. If the Strike is successful, you can repeat this process up to two more times, moving the creature an additional 20 feet directly up into the air with each Strike; the creature keeps the grabbed or restrained condition throughout the sequence. If you miss with any of the Strikes, Godbreaker and the grabbed or restrained condition immediately end and both you and the opponent fall, taking falling damage as normal for the total height of your jump.</p>\n<p>If all three Strikes are successful, you immediately grab the creature and bring it crashing to the ground, dealing your unarmed Strike damage plus falling damage to it. You land on your feet adjacent to the creature, you take no damage from the fall, and the creature remains grabbed or restrained by you.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Crushing Grab"
+              },
+              {
+                "value": "Whirling Throw"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +126,47 @@
       "name": "Immortal Techniques",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QuRhGFEhvF7z0Pz9",
+        "folder": "lbiPSOkPyUfrQKUK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Immortal Techniques",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You flow from technique to technique, renewing yourself as you embrace each style you have mastered. The first time each round that you use an action that has both the monk and stance traits, you gain 20 temporary Hit Points that last until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Master of Many Styles"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -34,6 +176,44 @@
       "name": "Impossible Technique",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "srWsvDDdz77yieY1",
+        "folder": "lbiPSOkPyUfrQKUK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impossible Technique",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy's attack hits you or you fail a saving throw against an enemy's ability.</p>\n<p><strong>Requirements</strong> You are not armored or fatigued.</p>\n<hr />\n<p>You execute a maneuver that defies possibility. If the triggering effect was an enemy's attack hitting you, the enemy rerolls the attack roll and uses the lower result. If the triggering effect was you failing a saving throw, you reroll the saving throw and use the higher result.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -43,6 +223,47 @@
       "name": "Lightning Qi",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZhiO6FDz68VCWybl",
+        "folder": "lbiPSOkPyUfrQKUK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lightning Qi",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> Once per 10 minutes</p><hr /><p>Qi flows freely from within you. If your next action is to cast a qi spell that takes at least two actions to cast, reduce the number of actions to cast it by 1 (minimum 1 action).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -52,6 +273,47 @@
       "name": "Wake of Devastation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U2yGfKU47VZYP071",
+        "folder": "lbiPSOkPyUfrQKUK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wake of Devastation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in @UUID[Compendium.pf2e.feats-srd.Item.Kaiju Stance].</p><hr /><p>Like a kaiju, you leave a trail of destruction in your wake. Your shattering earth attacks gain the razing trait. Whenever you succeed with a shattering earth attack while standing on the ground, the earth buckles under the force of the blow, and all the squares beneath you become difficult terrain.</p>\n<p>Whenever you critically succeed with a shattering earth attack against a creature standing on the ground in an area of difficult terrain, you pummel the creature into the earth; they become @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] until they succeed at an @UUID[Compendium.pf2e.actionspf2e.Item.Escape] attempt against your class DC.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kaiju Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Blood Ascendancy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VyErxNnOtzm9Vvkv",
+        "folder": "5GM4gX8yochbjcOU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood Ascendancy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you would benefit from a blood magic effect through Blood Rising, you can choose to benefit from two different blood magic effects you know. The effects follow the same rules as given in Blood Rising, and each effect can have a different target.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Blood Rising"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +57,81 @@
       "name": "Interweave Dispel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bjNeSAldeTzRcEaQ",
+        "folder": "5GM4gX8yochbjcOU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Interweave Dispel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You weave dispelling energy into a spell. If your next action is to cast a single-target spell against an enemy, and you either hit the enemy with the spell attack roll or the enemy fails its saving throw, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic] on the enemy as a free action, expending a spell slot as normal and targeting one spell effect affecting the enemy.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dispel magic in your spell repertoire"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:type:spell",
+                "spellshape:interweave-dispel",
+                {
+                  "not": "item:area"
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.InterweaveDispel"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "interweave-dispel"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +141,141 @@
       "name": "Reflect Harm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qy25HbkFgoUn4Vb3",
+        "folder": "5GM4gX8yochbjcOU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reflect Harm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can wrap your magic around you like a cloak that causes those who dare to target you with spells to suffer a similar fate. You know the following blood magic effect.</p>\n<p><strong>Blood Magic—Reflect Harm</strong> Your blood ensures that those who harm you with magic are harmed in return. The first time you take damage from a spell before the beginning of your next turn, attempt spell attack roll against the creature who cast the triggering spell. On a hit, the creature takes the same amount and type of damage that you just took. If you critically hit, the creature takes twice the damage.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mergeable": true,
+              "option": "blood-magic",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "reflect-harm"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Sorcerer.SecondBloodMagic",
+              "mergeable": true,
+              "option": "second-blood-magic",
+              "placement": "spellcasting",
+              "predicate": [
+                {
+                  "or": [
+                    "feat:blood-ascendancy",
+                    "feat:blood-sovereignty"
+                  ]
+                }
+              ],
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "reflect-harm"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mode": "add",
+              "predicate": [
+                "class:sorcerer",
+                "item:tag:blood-magic-spell",
+                {
+                  "or": [
+                    "blood-magic:reflect-harm",
+                    {
+                      "and": [
+                        "second-blood-magic:reflect-harm",
+                        "feat:blood-sovereignty"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.ReflectHarm",
+                  "title": "{item|name}"
+                }
+              ]
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mode": "add",
+              "predicate": [
+                "class:sorcerer",
+                "item:slug:blood-rising",
+                {
+                  "or": [
+                    "blood-magic:reflect-harm",
+                    {
+                      "and": [
+                        "second-blood-magic:reflect-harm",
+                        "feat:blood-ascendancy"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.ReflectHarm",
+                  "title": "{item|name}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +285,74 @@
       "name": "Spell Shroud",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DT1O80hPD7MX6oWp",
+        "folder": "5GM4gX8yochbjcOU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spell Shroud",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your spell shrouds you in a billowing cloud. If your next action is to Cast a Spell that targets you, you surround yourself in a @Template[emanation|distance:15] of dense magical mist that lasts until the start of your next turn. All creatures within the cloud become @UUID[Compendium.pf2e.conditionitems.Item.Concealed], and all creatures outside the cloud are concealed to creatures within it.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:spell-shroud"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.SpellShroud"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "spell-shroud"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "sorcerer",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

@@ -7,6 +7,59 @@
       "name": "Additional Ikon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "z8ZtBvlXQ4VGCpJr",
+        "folder": "R1p2ezxJKsQaiN74",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Additional Ikon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your story has grown rich enough that three ikons can't contain its full complexity. You gain a fourth ikon, which can be of any type.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:exemplar-ikon"
+                ]
+              },
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +69,63 @@
       "name": "As a Thousand Soldiers",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CrpntCPdBZMGhE9z",
+        "folder": "R1p2ezxJKsQaiN74",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "As a Thousand Soldiers",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>Though you may have stolen from the hive, you've nothing but respect for the armies guarding it, and you borrow their strength to overwhelm your foes. Your body transforms into a swarm of bees. You Fly up to twice your Speed; during this movement you can pass through any space that would be small enough for a single insect, and your movement does not trigger reactions. If you pass through an enemy's space, you can inflict a storm of stings that deals @Damage[(floor((@actor.level - 2)/ 2)d4)[piercing],(floor((@actor.level - 2)/ 2)d4)[poison]] damage, with a @Check[reflex|against:exemplar|basic] save against your class DC. At the end of your movement, you return to your original form. At 10th level and every two levels thereafter, the damage increases by 1d4 piercing damage and 1d4 poison damage.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "plunderer of the hive's riches"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #217: Death Sails a Wine-Dark Sea"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "divine",
+              "exemplar",
+              "polymorph"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +135,83 @@
       "name": "Battle Hymn to the Lost",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UZwIVbrXuaYSJ9FS",
+        "folder": "R1p2ezxJKsQaiN74",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battle Hymn to the Lost",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>Your movements in combat are an artistic dirge to those spirits who could not fight to see another day. You make a Strike. Regardless of whether the Strike succeeds, spirits of warriors who died gloriously in battle surge out to attack with you. They appear in a @Template[type:cone|distance:30] if you make a melee Strike or in a @Template[type:emanation|distance:10] around your target if you made a ranged Strike. Each enemy in the area takes @Damage[(floor(@actor.level/4))d10[untyped]|options:area-damage|shortLabel] damage with a @Check[reflex|against:exemplar|basic|options:area-effect] save against your class DC; you choose whether the damage is bludgeoning, piercing, or slashing. At 12th level and every 4 levels thereafter, the damage increases by 1d10.</p>\n<p>As they join the battle, the spirits call your fallen allies back to the fight. Any of your allies in the area who are @UUID[Compendium.pf2e.conditionitems.Item.Dying] regain Hit Points equal to the damage you rolled. This is a divine, healing, vitality effect.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "of verse unbroken or peerless under heaven"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "battle-hymn-to-the-lost",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitBludgeoning",
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.TraitPiercing",
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.TraitSlashing",
+                  "value": "slashing"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "property": "damage-type",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "value": "{item|flags.system.rulesSelections.battleHymnToTheLost}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "divine",
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +221,64 @@
       "name": "Forward Gaze Into Life",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ix1fhe9ttnvFLgmi",
+        "folder": "R1p2ezxJKsQaiN74",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Forward Gaze Into Life",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>Despite the constant cold of death at your back, you keep your gaze forward into the realm of life. You release two @Template[type:cone|distance:15]{15-foot cones}, aimed exactly opposite each other, one ahead of you that deals @Damage[5d10[vitality]|options:area-damage] damage and one behind you that deals @Damage[5d10[void]|options:area-damage] damage, each with a @Check[reflex|against:exemplar|basic|options:area-effect] save against your class DC. Creatures that critically fail also take 5 persistent damage, of the same damage type dealt (@Damage[5[persistent,vitality]] or @Damage[5[persistent,void]]).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trespasser in death's realm"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #217: Death Sails a Wine-Dark Sea"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "divine",
+              "exemplar",
+              "vitality",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +288,53 @@
       "name": "Raise Island",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7ZPm0P6vY9FlVtoy",
+        "folder": "R1p2ezxJKsQaiN74",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raise Island",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You churn the sea and fish up stone so your enemies together can receive their punishment. Each enemy in a @Template[type:emanation|distance:30] must succeed at a @Check[fortitude|against:exemplar] save against your class DC or be swept up to 15 feet to another location of your choice within the affected area and become @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the start of your next turn. Then, if you're on a surface, a pillar of earth rises underneath you and lasts for 1 minute. The pillar is 10 feet tall, and its surface includes your space and a @Template[type:emanation|distance:5] around you. After the pillar rises, you can attempt a melee Strike against one enemy in reach.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "born of the bones of the earth or restless as the tide"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "divine",
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +344,54 @@
       "name": "Rejoice in Solstice Storm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LFS9M737RCt0Jq8r",
+        "folder": "R1p2ezxJKsQaiN74",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rejoice in Solstice Storm",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You hold your arms out, and the fury of the seasons comes to your jubilant embrace. A storm spirals out from you, dealing 5d8 damage (see below) to each creature in a @Template[type:emanation|distance:30], with a @Check[reflex|against:exemplar|basic|options:area-effect] save against your class DC. At 10th level and every 2 levels thereafter, the damage increases by 1d8.</p>\n<p>The emanation is quartered into four non-overlapping cones, each of a different season, which must be arranged clockwise from spring, to summer, to fall, to winter. Each cone has different traits, damage type, and a different effect to a creature that critically fails its saving throw; a creature large enough to be in multiple seasons can choose which it is affected by.</p><ul><li><strong>Spring</strong> (electricity) Spring lightning deals @Damage[(ceil((1+@actor.level)/2))d8[electricity]|options:area-damage|traits:electricity]{electricity damage}. Creatures who critically fail are left numb, becoming @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} until the end of their next turn.</li><li><strong>Summer</strong> (water) A summer monsoon deals @Damage[(ceil((1+@actor.level)/2))d8[bludgeoning]|options:area-damage|traits:water]{bludgeoning damage}. Creatures who critically fail are knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone] by hurricane winds.</li><li><strong>Fall</strong> (emotion, mental, wood) Falling leaves deal @Damage[(ceil((1+@actor.level)/2))d8[slashing]|options:area-damage|traits:emotion,mental,wood]{slashing damage}. Creatures who critically fail are gripped by melancholy, becoming @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of their next turn.</li><li><strong>Winter</strong> (cold) A blizzard deals @Damage[(ceil((1+@actor.level)/2))d8[cold]|options:area-damage|traits:cold]{cold damage}. Creatures who critically fail are @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} until the end of their next turn as the cold numbs their senses.</li></ul>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "whose cry is thunder or dancer in the seasons"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "divine",
+              "exemplar",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

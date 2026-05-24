@@ -7,6 +7,58 @@
       "name": "Multifaceted Will",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LBfLDfLnCFn1iy5h",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Multifaceted Will",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Without the firm hand of a patron, your power begins to reflect deeper complexities, sometimes latching onto entirely unexpected sources of magical potency. When you cast or Sustain @UUID[Compendium.pf2e.spells-srd.Item.Manifest Will], you can choose any tradition's manifestation. While the spell is active, you and allies in its area gain a +1 status bonus to saves against spells with that tradition trait.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:manifest-will"
+              ],
+              "property": "other-tags",
+              "value": "multifaceted-will"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +68,56 @@
       "name": "Patron Reborn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5jsMIFF9uYekQZpU",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Patron Reborn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have fully realized the ability to serve as a patron.</p>\n<p>Your newfound abilities enhance your senses, rolling back the veil of a realm hidden to most mortals where great beings vie for unimaginable influence over vast worlds. You gain darkvision, constant @UUID[Compendium.pf2e.spells-srd.Item.Truesight], and the ability to see into all other transitive planes that overlap the one you are in.</p>\n<p>You can be a patron for other witches. Choose a single type of patron you represent, such as @UUID[Compendium.pf2e.classfeatures.Item.The Resentment] or @UUID[Compendium.pf2e.classfeatures.Item.Starless Shadow]. An allied witch you can observe who has that patron counts as and gains the benefits of your @UUID[Compendium.pf2e.feats-srd.Item.Witch's Charge] feat, even if you did not select them as your charge during your daily preparations.</p>\n<p>You learn the @UUID[Compendium.pf2e.spells-srd.Item.Wish] ritual and can impart that knowledge to your charges. Once per month, when one of your charges performs the <em>wish</em> ritual, you can roll the skill check in their place.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {},
+              "truesight": {
+                "acuity": "imprecise",
+                "range": 60
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +127,49 @@
       "name": "Patron's Glamour",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ejGRaQTZYWFSFIW0",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Patron's Glamour",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Gathering up threads of your old connection, you can temporarily disguise yourself as your missing patron. You gain @UUID[Compendium.pf2e.spells-srd.Item.Illusory Disguise] as an innate spell of your patron's tradition, automatically heightened to the rank of your witch cantrips, but you can use it only to disguise yourself as the humanoid representation of your patron. Detection spells of lower rank than this <em>illusory disguise</em> give your patron's information rather than your own.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "illusion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +179,48 @@
       "name": "Patron's Whisper",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "byLeVAcRoSWgT5DK",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Patron's Whisper",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the ability to speak to your charge over great distances. You gain @UUID[Compendium.pf2e.spells-srd.Item.Message] as an innate cantrip of your former patron's tradition. You can send a <em>message</em> to a creature regardless of range if they have ever been your charge. If you @UUID[Compendium.pf2e.actionspf2e.Item.Lie] as part of the message, the target receives a –2 circumstance penalty to their Perception DC and to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] checks to reveal the lie.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +230,87 @@
       "name": "Seneschal Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "b91gmCBK63u52VSj",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seneschal Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You can channel even complex spells through your connection to your charge. If your next action is to Cast a Spell and your charge is within 30 feet, you can have the spell originate from your charge instead. That creature can use their reaction to roughly complete the spell's incantation, which gives the spell the subtle trait for you (but not for them) as the manifestation appears solely around your charge.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "seneschal-spell"
+                }
+              ],
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:seneschal-spell"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.FeatDescription.Frequency.OncePerHour",
+                  "title": "PF2E.Frequency.Label"
+                },
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Spellshape.SeneschalSpell"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +320,56 @@
       "name": "Seneschal Witch Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HIu1miRRGvGvHevN",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seneschal Witch Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you work to understand the connection with your missing patron, it's increasingly easy to form bonds with those around you. Raw magical energy spills easily through the connection but, without a patron's control, it sometimes resists your demands for it to form proper spells.</p>\n<p>You gain the Witch's Charge feat, but can't choose your familiar or another creature with the minion trait as a charge. When you cast or Sustain manifest will, as long as your charge is within 30 feet, you can choose to center the spell's emanation on your charge instead of yourself.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.4goI7CCdYrtao62w]{Seneschal}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "location": "class-2",
+          "prerequisites": {
+            "value": [
+              {
+                "value": "seneschal witch"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Witch's Charge"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "class",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +379,100 @@
       "name": "Spiritual Secret",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F7zgzUn7ZLNSXhy4",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spiritual Secret",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You gain deeper insights into your patron's abandoned power, allowing you to draw on that power more directly. If your next action is to cast a witch cantrip or witch spell that deals damage, it deals spirit damage instead of its normal type. It also loses any traits related to its damage, such as the fire or mental trait, and gains the sanctified and spirit traits instead.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "spiritual-secret"
+                }
+              ],
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "predicate": [
+                "spellshape:spiritual-secret"
+              ],
+              "property": "damage-type",
+              "selectors": [
+                "spell-damage"
+              ],
+              "value": "spirit"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:spiritual-secret"
+              ],
+              "property": "traits",
+              "value": "sanctified"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:spiritual-secret"
+              ],
+              "property": "traits",
+              "value": "spirit"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +482,48 @@
       "name": "Unstable Patronage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "k4u6s0S8N7fBY2fi",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unstable Patronage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can act as a magical patron for your charges. When you finish your daily preparations, choose a spell your familiar knows and one of your charges. Once before your next daily preparations, that creature can Cast the Spell as an innate spell; this spell can be of no higher a rank than the highest rank of spells you can cast –2.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -79,6 +533,47 @@
       "name": "Watcher on the Wall",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FAO6p3pFiFF0QwCc",
+        "folder": "IeZQtve7rif8lAKY",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Watcher on the Wall",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You claim a patron's symbol that you can etch onto any surface. Etch a symbol onto an adjacent surface; you can see and hear what you could from the symbol's location as long as you are on the same plane. This effect lasts until you place another symbol or the surface is destroyed.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seneschal Witch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

@@ -7,6 +7,43 @@
       "name": "Defensive Dismissal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aJyNVKbTdpWFoM5z",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defensive Dismissal",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature you're aware of critically succeeds on a Strike against you.</p>\n<p><strong>Requirements</strong> You're under a polymorph effect that you can Dismiss.</p>\n<hr />\n<p>You change your form as a means of evading a potentially fatal blow. You Dismiss the polymorph effect you're under, and the result of the triggering Strike becomes a success instead of a critical success. If you would no longer fit in your space as a result of returning to your normal form, this action fails and you don't Dismiss the polymorph effect.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +53,59 @@
       "name": "Dragon Shape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "p0jZhb8PSswUsZaz",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon Shape",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can take on the shape of some of the world's most fearsome creatures. Add the shapes listed in @UUID[Compendium.pf2e.spells-srd.Item.Dragon Form] to your @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] list. Whenever you're polymorphed into another form using <em>untamed form</em>, you gain resistance 5 to your choice of bludgeoning or poison.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Soaring Shape"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dragon Form"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +115,44 @@
       "name": "Explosive Metamorphosis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IK6xmiKfmotl8Hm9",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Explosive Metamorphosis",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You use additional primal energy to transform, creating a burst of elemental energy to complement your transformation. If your next action is to cast a non-cantrip morph or polymorph spell, select acid, cold, electricity, or fire. Your transformation creates a @Template[emanation|distance:5] around your new form that deals 1d6 damage of that type per rank of the spell. Each creature in that area attempts a basic Reflex save against your spell DC.</p>\n<p>If your polymorph action had a trait corresponding to an energy type, you must select that one if possible. This action gains the trait corresponding to the energy type selected.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +162,84 @@
       "name": "Garland Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qUoAthRX9cNVHT9s",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Garland Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>If your next action is to Cast a Spell with the fungus or plant trait, a garland of plants grows in a @Template[burst|distance:10] in the spell's range. The plants are difficult terrain and hazardous terrain, covered in your choice of thorns or poisonous vines. Any creature that moves into one of these squares or ends its turn in one takes 2d6 damage (@Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]|options:area-damage] damage for thorns or @Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]|options:area-damage] for vines). A creature can take this damage only once per turn. You and your familiar are immune to this damage.</p>\n<p>The plants last for 1 minute or until you cast another Garland Spell, whichever comes first.</p>\n<p>The damage increases to 3d6 at 16th level and 4d6 at 20th level.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "leaf order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:garland-spell",
+                {
+                  "or": [
+                    "item:trait:fungus",
+                    "item:trait:plant"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.GarlandSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "garland-spell"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "manipulate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +249,43 @@
       "name": "Primal Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RSUmrIiFBEchdM8B",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your connection to nature is particularly strong, and the spirits of nature flock around you, helping you replenish your focus. Whenever you Refocus, completely refill your focus pool.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +295,47 @@
       "name": "Primal Summons",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I00uuseTfPypVgLQ",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Summons",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whenever you summon an ally, you can empower it with the elemental power of air, earth, fire, or water. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Primal Summons] order spell.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Call of the Wild"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +345,67 @@
       "name": "Uplifting Winds",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZaEK0IGhxqd1yH6Q",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Uplifting Winds",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The winds are eager to keep you aloft. When you are flying and Cast a Spell that has the air or electricity traits, you gain a +10 status bonus to your fly Speed, and you can immediately Fly up to half your Speed.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "storm order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:air",
+                    "item:trait:electricity"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -70,6 +415,47 @@
       "name": "Wandering Oasis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BlfgmJHjDyTVGdPs",
+        "folder": "xDATwQrlaPHzQ3tv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wandering Oasis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're surrounded by soothing energy. You and allies within 60 feet of you are protected from severe environmental heat and cold. If you're legendary in Survival, you and those allies are also protected from extreme environmental heat and cold.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

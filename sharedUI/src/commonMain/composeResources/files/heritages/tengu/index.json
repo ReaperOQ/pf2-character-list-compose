@@ -1,0 +1,328 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "dogtooth-tengu.json",
+      "id": "2hLDilS6qbjHxgVS",
+      "name": "Dogtooth Tengu",
+      "img": "icons/commodities/bones/bone-jaw-teeth-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "2hLDilS6qbjHxgVS",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "icons/commodities/bones/bone-jaw-teeth-white.webp",
+        "name": "Dogtooth Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>In addition to a beak, your mouth also features a number of vicious, pointed teeth. Some legends claim your powerful jaws can even bite through steel. While you aren't that strong yet, your fangs can still leave terrible wounds. Your beak unarmed attack gains the deadly d8 trait.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:beak"
+              ],
+              "property": "traits",
+              "value": "deadly-d8"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "jinxed-tengu.json",
+      "id": "g4FRxyuHndZu4KTo",
+      "name": "Jinxed Tengu",
+      "img": "systems/pf2e/icons/features/ancestry/jinxed-tengu.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "g4FRxyuHndZu4KTo",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "systems/pf2e/icons/features/ancestry/jinxed-tengu.webp",
+        "name": "Jinxed Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>Your lineage has been exposed to curse after curse, and now they slide off your feathers like rain. If you succeed at a saving throw against a curse or misfortune effect, you get a critical success instead. When you would gain the @UUID[Compendium.pf2e.conditionitems.Item.Doomed] condition, attempt a @Check[flat|dc:17]. On a success, reduce the value of the doomed condition you would gain by 1.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:curse",
+                    "item:trait:misfortune"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "mountainkeeper-tengu.json",
+      "id": "ptpK6H1rM4Bu3ry4",
+      "name": "Mountainkeeper Tengu",
+      "img": "systems/pf2e/icons/features/ancestry/mountainkeeper-tengu.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ptpK6H1rM4Bu3ry4",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "systems/pf2e/icons/features/ancestry/mountainkeeper-tengu.webp",
+        "name": "Mountainkeeper Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>You come from a line of tengu ascetics, leaving you with a link to the spirits of the world and the Great Beyond. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Vitality Lash] cantrip as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. Each time you cast a spell from a tengu heritage or ancestry feat, you can decide whether it's a divine or primal spell.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:vitality-lash",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:vitality-lash",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tengu"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "skyborn-tengu.json",
+      "id": "rKV11HWREwjjMIum",
+      "name": "Skyborn Tengu",
+      "img": "systems/pf2e/icons/features/ancestry/skyborn-tengu.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "rKV11HWREwjjMIum",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "systems/pf2e/icons/features/ancestry/skyborn-tengu.webp",
+        "name": "Skyborn Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>Your bones may be especially light, you may be a rare tengu with wings, or your connection to the spirits of wind and sky might be stronger than most, slowing your descent through the air. You take no damage from falling, regardless of the distance you fall.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "stormtossed-tengu.json",
+      "id": "7vHLPleFpSqKAjWG",
+      "name": "Stormtossed Tengu",
+      "img": "systems/pf2e/icons/features/ancestry/stormtossed-tengu.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "7vHLPleFpSqKAjWG",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "systems/pf2e/icons/features/ancestry/stormtossed-tengu.webp",
+        "name": "Stormtossed Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>Whether due to a blessing from Hei Feng or hatching from your egg during a squall, you are resistant to storms. You gain electricity resistance equal to half your level (minimum 1). You automatically succeed at the flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.Concealed] creature if that creature is concealed only by rain or fog.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "electricity",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "taloned-tengu.json",
+      "id": "qM566kCXljkOpocA",
+      "name": "Taloned Tengu",
+      "img": "systems/pf2e/icons/features/ancestry/taloned-tengu.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "qM566kCXljkOpocA",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "systems/pf2e/icons/features/ancestry/taloned-tengu.webp",
+        "name": "Taloned Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>Your talons are every bit as sharp and strong as your beak. You gain a talons unarmed attack that deals 1d4 slashing damage. Your talons are in the brawling group and have the agile, finesse, unarmed, and versatile P traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/talon.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Talon",
+              "range": null,
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed",
+                "versatile-p"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "wavediver-tengu.json",
+      "id": "WEzgrxBRFBGdj8Hx",
+      "name": "Wavediver Tengu",
+      "img": "icons/creatures/birds/dove-pigeon-flying-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "WEzgrxBRFBGdj8Hx",
+        "folder": "8YlY5IbHjjfW9Iur",
+        "img": "icons/creatures/birds/dove-pigeon-flying-white.webp",
+        "name": "Wavediver Tengu",
+        "system": {
+          "ancestry": {
+            "name": "Tengu",
+            "slug": "tengu",
+            "uuid": "Compendium.pf2e.ancestries.Item.18xDKYPDBLEv2myX"
+          },
+          "description": {
+            "value": "<p>You're one of the rare tengu who can cut through water like a bird through air, and you often lurk in rivers or oceans where few expect you. You gain a swim Speed of 15 feet.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

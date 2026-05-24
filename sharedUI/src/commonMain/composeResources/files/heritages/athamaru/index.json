@@ -1,0 +1,200 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "coral-athamaru.json",
+      "id": "4BczMv4EnLcgrEJE",
+      "name": "Coral Athamaru",
+      "img": "icons/magic/nature/plant-undersea-seaweed-glow-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "4BczMv4EnLcgrEJE",
+        "folder": "vFoprY1ySAh4Uldw",
+        "img": "icons/magic/nature/plant-undersea-seaweed-glow-green.webp",
+        "name": "Coral Athamaru",
+        "system": {
+          "ancestry": {
+            "name": "Athamaru",
+            "slug": "athamaru",
+            "uuid": "Compendium.pf2e.ancestries.Item.Cg1AMgp3zrGmimWd"
+          },
+          "description": {
+            "value": "<p>Coral covers patches of your body, which provides a natural layer of defense. Coral athamarus often choose Coral Symbiotes and other related ancestry feats. The coral plates are medium armor in the plate armor group that grant a +4 item bonus to AC, a Dex cap of +1, a check penalty of –2, a Speed penalty of –5 feet, a Strength value of +3, and have the aquadynamic and comfort traits. You can never wear other armor or remove the coral. You can etch armor runes onto the coral.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "hopeful-athamaru.json",
+      "id": "yEQSw61sNRvgPy4T",
+      "name": "Hopeful Athamaru",
+      "img": "icons/creatures/fish/deepsea-creature-glowing-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "yEQSw61sNRvgPy4T",
+        "folder": "vFoprY1ySAh4Uldw",
+        "img": "icons/creatures/fish/deepsea-creature-glowing-blue.webp",
+        "name": "Hopeful Athamaru",
+        "system": {
+          "ancestry": {
+            "name": "Athamaru",
+            "slug": "athamaru",
+            "uuid": "Compendium.pf2e.ancestries.Item.Cg1AMgp3zrGmimWd"
+          },
+          "description": {
+            "value": "<p>You have begun to prepare yourself to become an athamaru matriarch, and are likely stepping outside of your community to better prepare yourself as a leader. As part of the physical change, you are substantially taller than you once were. Instead of Medium, your size is Large. In addition, you instill your allies with a feeling of hopefulness. You have a 10-foot aura that grants any ally in it a +1 circumstance bonus to saving throws against fear; this is an emotion and mental effect.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "value": "large"
+            },
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Hopeful Athamaru"
+                }
+              ],
+              "key": "Aura",
+              "radius": 10,
+              "traits": [
+                "emotion",
+                "mental"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "kaleidoscopic-athamaru.json",
+      "id": "1w4npGmPzgdZw3Na",
+      "name": "Kaleidoscopic Athamaru",
+      "img": "icons/environment/creatures/fish-iridescent-orange-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "1w4npGmPzgdZw3Na",
+        "folder": "vFoprY1ySAh4Uldw",
+        "img": "icons/environment/creatures/fish-iridescent-orange-blue.webp",
+        "name": "Kaleidoscopic Athamaru",
+        "system": {
+          "ancestry": {
+            "name": "Athamaru",
+            "slug": "athamaru",
+            "uuid": "Compendium.pf2e.ancestries.Item.Cg1AMgp3zrGmimWd"
+          },
+          "description": {
+            "value": "<p>Your scales are a spectrum of color that shimmers in the light. In areas of bright light or dim light, you gain a +1 circumstance bonus to Performance checks. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Dazzle Seeker] reaction.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Dazzle Seeker"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "light:bright",
+                    "light:dim"
+                  ]
+                }
+              ],
+              "selector": "performance",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "quilled-athamaru.json",
+      "id": "CkrTRdLfDDDUOCqP",
+      "name": "Quilled Athamaru",
+      "img": "icons/environment/creatures/fish-horned-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "CkrTRdLfDDDUOCqP",
+        "folder": "vFoprY1ySAh4Uldw",
+        "img": "icons/environment/creatures/fish-horned-yellow.webp",
+        "name": "Quilled Athamaru",
+        "system": {
+          "ancestry": {
+            "name": "Athamaru",
+            "slug": "athamaru",
+            "uuid": "Compendium.pf2e.ancestries.Item.Cg1AMgp3zrGmimWd"
+          },
+          "description": {
+            "value": "<p>Sharp quills on your head can pierce your foes deeply. Most athamarus use such quills for defense, but a well-timed headbash can be devastatingly effective. You gain a quills melee unarmed attack that deals 1d6 piercing damage. Your quills are in the brawling group and have the agile, finesse, and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "img": "systems/pf2e/icons/unarmed-attacks/bone-shard.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Quill",
+              "range": null,
+              "slug": "quill",
+              "traits": [
+                "unarmed",
+                "agile",
+                "finesse"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,71 @@
       "name": "Deadly Simplicity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DfLkIIg2reyYW3a8",
+        "folder": "J4qk5NbwDuKa9WWz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deadly Simplicity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you are wielding your deity's favored weapon, increase the damage die size of that weapon by one step.</p>\n<p>If your deity's favored weapon is an unarmed attack (such as a fist, if you worship @UUID[Compendium.pf2e.deities.Item.Irori]) and its damage die is smaller than d6, instead increase its damage die size to d6.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "deity with a simple or unarmed attack favored weapon"
+              },
+              {
+                "value": "trained with your deity's favored weapon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "item:deity-favored",
+                {
+                  "or": [
+                    "item:category:simple",
+                    {
+                      "and": [
+                        "item:category:unarmed",
+                        "item:damage:die:faces:4"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "property": "damage-dice-faces"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +81,112 @@
       "name": "Divine Castigation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "142QRyK2aPIrJu48",
+        "folder": "J4qk5NbwDuKa9WWz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Castigation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your deity's grace doesn't extend to your sworn enemies. When you cast a @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] spell, you can add your holy or unholy trait to it. If you do, the spell deals damage to creatures with the opposing trait, even if it wouldn't normally damage them. The spell deals spirit damage when used this way. For example, if you are holy, you could add the holy trait to a <em>heal</em> spell and deal spirit damage to a fiend that has the unholy trait.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "holy or unholy trait"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "divine-castigation",
+              "placement": "spellcasting",
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "divine-castigation",
+                "self:trait:holy",
+                {
+                  "or": [
+                    "item:slug:harm",
+                    "item:slug:heal"
+                  ]
+                }
+              ],
+              "property": "traits",
+              "value": "holy"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "divine-castigation",
+                "self:trait:unholy",
+                {
+                  "or": [
+                    "item:slug:harm",
+                    "item:slug:heal"
+                  ]
+                }
+              ],
+              "property": "traits",
+              "value": "unholy"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "predicate": [
+                "divine-castigation",
+                {
+                  "or": [
+                    "self:trait:holy",
+                    "self:trait:unholy"
+                  ]
+                },
+                {
+                  "or": [
+                    "item:slug:harm",
+                    "item:slug:heal"
+                  ]
+                }
+              ],
+              "property": "damage-type",
+              "selectors": [
+                "spell-damage"
+              ],
+              "value": "spirit"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +196,57 @@
       "name": "Domain Initiate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hT4INKGtly4QY8KN",
+        "folder": "J4qk5NbwDuKa9WWz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Domain Initiate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your deity bestows a special spell related to their powers. Select one domain—a subject of particular interest to you within your religion—from your deity's list. You gain an initial domain spell for that domain, a spell unique to the domain and not available to other clerics.</p>\n<p>Domain spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to pray to your deity or do service toward their causes.</p>\n<p>Focus spells are automatically heightened to half your level rounded up, much like cantrips. Focus spells don't require spell slots, and can't be cast using spell slots. Your focus pool can hold one Focus Point for each focus spell you have, up to 3 points.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, selecting a different domain each time and gaining its domain spell.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": "system.details.deities.domains",
+              "flag": "domainInitiate",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.DeitysDomain"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.soulWarden.featCount",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +256,61 @@
       "name": "Harming Hands",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1W0a6YCyoYv8dm4e",
+        "folder": "J4qk5NbwDuKa9WWz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Harming Hands",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The mordant power of your void energy grows. When you cast @UUID[Compendium.pf2e.spells-srd.Item.Harm], you roll d10s instead of d8s.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "harmful font"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d10"
+              },
+              "predicate": [
+                "item:slug:harm"
+              ],
+              "selector": [
+                "spell-damage",
+                "spell-healing"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +320,61 @@
       "name": "Healing Hands",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zYhcEX4JnrZ08HfV",
+        "folder": "J4qk5NbwDuKa9WWz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Healing Hands",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your vitality is even more vibrant and restorative. When you cast @UUID[Compendium.pf2e.spells-srd.Item.Heal], you roll d10s instead of d8s.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "healing font"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d10"
+              },
+              "predicate": [
+                "item:slug:heal"
+              ],
+              "selector": [
+                "spell-damage",
+                "spell-healing"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +384,60 @@
       "name": "Premonition of Avoidance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KYl1rWFOHe0e6VqJ",
+        "folder": "J4qk5NbwDuKa9WWz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Premonition of Avoidance",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are about to roll a saving throw against a hazard.</p>\n<hr />\n<p>Your deity grants you a moment's foresight. You gain a +2 circumstance bonus to the triggering saving throw.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "saving-throw",
+              "key": "RollOption",
+              "option": "premonition-of-avoidance",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "origin:type:hazard",
+                "premonition-of-avoidance"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

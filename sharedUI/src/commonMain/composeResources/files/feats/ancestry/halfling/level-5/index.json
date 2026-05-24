@@ -7,6 +7,64 @@
       "name": "Cultural Adaptability",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Z56DtGBd3AcZOCeG",
+        "folder": "KlllIcsFs4rpd7z6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cultural Adaptability",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>During your adventures, you've honed your ability to adapt to the culture of the predominant ancestry around you. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Adopted Ancestry] general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the Adopted Ancestry feat.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Adopted Ancestry"
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:level:1",
+                  "item:trait:{actor|system.details.ancestry.adopted}"
+                ]
+              },
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneAncestryFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +74,43 @@
       "name": "Step Lively",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l3PosipTLXANeoT8",
+        "folder": "KlllIcsFs4rpd7z6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Step Lively",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A Large or larger enemy ends a move action adjacent to you.</p>\n<hr />\n<p>You are an expert at avoiding the lumbering footsteps of larger creatures. You Step to another space adjacent to the enemy.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

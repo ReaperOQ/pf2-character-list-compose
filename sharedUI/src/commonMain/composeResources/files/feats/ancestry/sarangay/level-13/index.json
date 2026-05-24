@@ -7,6 +7,76 @@
       "name": "Light-Bending Jewel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sSdlbJYQQD2TwIIb",
+        "folder": "WSphRJjFX3pZVaCx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Light-Bending Jewel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your ability to walk unseen through the world has given you the new moon's blessing. Once per day, while you possess your head gem, you can cast either @UUID[Compendium.pf2e.spells-srd.Item.Invisibility] or @UUID[Compendium.pf2e.spells-srd.Item.Translocate] as a 4th-rank innate occult spell.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:invisibility",
+                    "item:slug:translocate"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:invisibility",
+                    "item:slug:translocate"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:sarangay"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +86,43 @@
       "name": "Rejuvenating Embrace",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RXy1hARlhED1fZ5T",
+        "folder": "WSphRJjFX3pZVaCx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rejuvenating Embrace",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You rejuvenate your spirit by taking your rest where Mother Earth embraces Father Moon. When you rest outdoors, you can choose one of the following benefits, which lasts until your next sleep cycle and can't be changed.</p><ul><li><strong>Father Moon's Vigilance</strong> While sleeping, you don't take a penalty to Perception rolls for being @UUID[Compendium.pf2e.conditionitems.Item.Unconscious].</li><li><strong>Mother Earth's Care</strong> After 8 hours of sleep, you regain additional @Damage[(@actor.level + @actor.system.abilities.con.mod)[healing]]{Hit Points} equal to your Constitution modifier plus your level.</li></ul>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +132,66 @@
       "name": "Sheltering Jewel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "g9nHhqb8Bl1njopV",
+        "folder": "WSphRJjFX3pZVaCx",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sheltering Jewel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your head gem has accessed the power of the full moon through your determination to heal and protect your loved ones. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Vital Beacon] as a 5th-rank innate occult spell once per day, so long as you possess your head gem.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:vital-beacon",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:vital-beacon",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:sarangay"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

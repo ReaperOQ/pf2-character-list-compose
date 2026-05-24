@@ -18,7 +18,8 @@ data class IndexEntry(
     val img: String? = null,
     val type: String? = null,
     val level: Int? = null,
-    val category: String? = null
+    val category: String? = null,
+    val data: JsonElement? = null
 )
 
 @Serializable
@@ -136,6 +137,60 @@ enum class Attribute(val label: String, val ruLabel: String) {
 }
 
 @Serializable
+data class Heritage(
+    val _id: String,
+    val name: String,
+    val system: HeritageSystem
+) {
+    @Serializable
+    data class HeritageSystem(
+        val description: Description,
+        val ancestry: HeritageAncestryRef? = null
+    )
+
+    @Serializable
+    data class HeritageAncestryRef(
+        val name: String? = null,
+        val slug: String? = null
+    )
+}
+
+@Serializable
+data class Spell(
+    val _id: String,
+    val name: String,
+    val system: SpellSystem
+) {
+    @Serializable
+    data class SpellSystem(
+        val description: Description,
+        val level: SpellLevel? = null,
+        val traits: SpellTraits? = null,
+        val time: SpellValue? = null,
+        val range: SpellValue? = null
+    )
+
+    @Serializable
+    data class SpellLevel(val value: Int = 0)
+
+    @Serializable
+    data class SpellTraits(
+        val value: List<String> = emptyList(),
+        val traditions: List<String> = emptyList()
+    )
+
+    @Serializable
+    data class SpellValue(val value: String = "")
+}
+
+@Serializable
+data class SpellRef(
+    val id: String,
+    val name: String,
+    val rankLabel: String
+)
+
+@Serializable
 data class Feat(
     val _id: String? = null,
     val name: String,
@@ -169,6 +224,7 @@ data class Feat(
 @Serializable
 data class CharacterState(
     val name: String = "Новый герой",
+    val level: Int = 1,
     val ancestry: Ancestry? = null,
     val heritage: String? = null,
     val background: Background? = null,
@@ -177,8 +233,13 @@ data class CharacterState(
     val backgroundBoosts: Map<String, Attribute> = emptyMap(),
     val classBoost: Attribute? = null,
     val freeBoosts: Set<Attribute> = emptySet(),
+    val attributeBoosts: Map<Int, Set<Attribute>> = emptyMap(),
     val extraTrainedSkills: Set<String> = emptySet(),
+    val selectedAncestryFeats: List<Feat> = emptyList(),
+    val selectedClassFeats: List<Feat> = emptyList(),
     val ancestryFeat: Feat? = null,
     val classFeat: Feat? = null,
-    val enabledWidgets: Set<String> = setOf("attributes", "defenses", "skills", "strikes", "feats")
+    val selectedCantrips: List<SpellRef> = emptyList(),
+    val selectedSpells: List<SpellRef> = emptyList(),
+    val enabledWidgets: Set<String> = setOf("attributes", "defenses", "skills", "strikes", "feats", "spells")
 )

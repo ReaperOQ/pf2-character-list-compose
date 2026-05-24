@@ -7,6 +7,43 @@
       "name": "Aura Shaping",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pX3nHLodbT3BqwdC",
+        "folder": "8R0T2pWHePcfqAc3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aura Shaping",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You control the size of your kinetic aura. You can make your kinetic aura's emanation any size from a @Template[emanation|distance:5] to a @Template[emanation|distance:20] (you must choose a multiple of 5). You choose the size when you Channel Elements and can change it when you use a stance impulse that affects your kinetic aura. Increase the maximum size you can choose by 5 feet at 15th and 20th levels.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kineticist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +53,44 @@
       "name": "Chain Infusion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TubRPkKaPuqAlryS",
+        "folder": "8R0T2pWHePcfqAc3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chain Infusion",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The elemental matter in your blast keeps reconstituting itself to travel onward, no matter how many bodies it collides with. If your next action is an @UUID[Compendium.pf2e.actionspf2e.Item.Elemental Blast] and it hits, attempt a new ranged Elemental Blast from the target against a different creature that's within the blast's range, measuring from the creature you hit. You can keep chaining the blast in this way each time you hit. Your multiple attack penalty applies normally to any blasts in the chain after the first. You can make up to five blasts total, but you can't target the same creature more than once. Roll damage only once and apply it to each creature you hit. (If you start with a melee blast, you still add your Strength to only that blast, not the successive ranged blasts.)</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "infusion",
+              "kineticist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +100,54 @@
       "name": "Elemental Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KwYtlupIsQyx7n8Z",
+        "folder": "8R0T2pWHePcfqAc3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elemental Transformation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Your kinetic gate is deactivated.</p>\n<hr />\n<p>You open your kinetic gate, but rather than activating your kinetic aura, you instead become overwhelmed with transformative elemental energy. You're affected by an @UUID[Compendium.pf2e.spells-srd.Item.Elemental Form] spell with the same trait as your kinetic element. You can heighten it to any spell rank up to half your level rounded up.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day",
+            "value": 1
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "exactly one kinetic element"
+              }
+            ]
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kineticist",
+              "polymorph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

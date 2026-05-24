@@ -7,6 +7,64 @@
       "name": "Analyze Weakness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3PHHiZjX16Dwyt65",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Analyze Weakness",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have identified a creature with @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge].</p>\n<hr />\n<p>Your knowledge of a creature's physiology helps you attack with pinpoint accuracy. You carefully study a creature that you've identified to scope out particularly weak points in its positioning or physical form. The next time you deal sneak attack damage to the chosen creature with a Strike before the end of your turn, add an additional 2d6 precision damage.</p>\n<p>At 11th level, the additional damage becomes 3d6, and at 17th level it becomes 4d6.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "sneak attack 2d6"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "analyze-weakness",
+              "toggleable": true
+            },
+            {
+              "category": "precision",
+              "diceNumber": "match(when(lte(@actor.level, 10), 2), when(btwn(@actor.level, 11, 16), 3), when(gte(@actor.level, 17), 4))",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "analyze-weakness"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +74,48 @@
       "name": "Anticipate Ambush",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5N6rLz4mdJg0NrQH",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Anticipate Ambush",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You keep watch for any @UUID[Compendium.pf2e.conditionitems.Item.Hidden] creatures or dangerous sites, moving at half your travel Speed. If you're Anticipating an Ambush at the start of an encounter, you roll a Perception check for initiative, and all enemies rolling Stealth for initiative take a –2 circumstance penalty to their Stealth checks.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exploration",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +125,56 @@
       "name": "Far Throw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VYilg64xX9XpHeJr",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Far Throw",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you Strike with a thrown weapon, you take only a –1 penalty for each additional range increment between you and the target, rather than a –2 penalty.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "add",
+              "predicate": [
+                "item:trait:thrown"
+              ],
+              "selectors": [
+                "ranged-attack-roll"
+              ],
+              "slug": "range-penalty",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +184,50 @@
       "name": "Gang Up",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XRahcvEPEAEdGUn8",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gang Up",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your allies harry an opponent in concert. You can flank an enemy if it's within reach of both of you and an ally—you and your ally don't have to be on opposite sides. This benefits your allies as well as you, but only if they're flanking with you, not each other. The other requirements for flanking must still be met.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.flanking.canGangUp",
+              "value": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +237,43 @@
       "name": "Light Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4o9g5g12yyrfZ3Xd",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Light Step",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You aren't bothered by tricky footing. When you Stride or Step, you can ignore difficult terrain.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +283,47 @@
       "name": "Shove Down",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "z5fUX9jeqfAViOd8",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shove Down",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful @UUID[Compendium.pf2e.actionspf2e.Item.Shove].</p>\n<hr />\n<p>You leverage your weight to topple foes that you move. You attempt to [[/act trip]] the target, even if the target is no longer in your reach.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +333,43 @@
       "name": "Sly Disarm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "C9QVzHuUznMfFQ7C",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sly Disarm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] a creature through sleight of hand rather than brute force. You can use [[/act disarm skill=thievery]]{Thievery} instead of Athletics when you attempt a Disarm. When you use Thievery to attempt a Disarm and succeed, the target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the next attack you make before the end of your turn.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +379,43 @@
       "name": "Twist the Knife",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5Jc2ySGLVi053qpz",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twist the Knife",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a melee Strike that dealt sneak attack damage to an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] target.</p>\n<hr />\n<p>After stabbing your opponent in a weak spot, you tear the wound open. You deal @Damage[(@actor.flags.system.sneakAttackDamage.number)[bleed]]{persistent bleed} damage to the target equal to your number of sneak attack damage dice.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +425,50 @@
       "name": "Watch Your Back",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zZCyJhsaugHB6mZW",
+        "folder": "69PGBotBS1SkBKi0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Watch Your Back",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You menace the target, stoking their fears and drawing their attention. Attempt an @Check[intimidation|defense:will] check against the Will DC of a target within 30 feet. If you succeed, for 1 minute, that target gains a +2 status bonus to Perception checks against you, but it takes a –2 status penalty to Will saves against fear effects.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Watch Your Back]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "emotion",
+              "fear",
+              "mental",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

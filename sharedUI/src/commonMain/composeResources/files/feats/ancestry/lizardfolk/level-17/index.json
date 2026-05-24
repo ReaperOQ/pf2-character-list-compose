@@ -7,6 +7,70 @@
       "name": "Fossil Rider",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IOlvpmeIwlk0IACr",
+        "folder": "OvNrhc6iNaEeJ4ra",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fossil Rider",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Using your ancestors' bones, you manifest their spirits around you in a fossilized form. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Mask of Terror] on yourself as an innate spell once per day. When you do, you appear as a skeletal lizardfolk ancestor, twisted in a way that inspires the deepest fears of those who observe you.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bone Magic"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:mask-of-terror",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:mask-of-terror",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +80,71 @@
       "name": "Mooneater",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FKS9nLz07v9x49sE",
+        "folder": "OvNrhc6iNaEeJ4ra",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mooneater",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You call on the spirit of the dragon that devoured the moon to temporarily swallow a celestial body and blind onlookers with its visage. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Eclipse Burst] as a primal innate spell once per day. When you Cast the Spell, the sun or moon appears to eclipse to all creatures within 500 feet of you. For 1 round after Casting the Spell, the area is reduced to dim light.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "bakuwa lizardfolk heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:eclipse-burst",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:eclipse-burst",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "lizardfolk",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -25,6 +154,69 @@
       "name": "Scion Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wFtJlamwRc6rSQmj",
+        "folder": "OvNrhc6iNaEeJ4ra",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scion Transformation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You go into hibernation for twenty-four hours and perform a ritual dedicated to your ancestors, undergoing a one-time metamorphosis. You permanently gain the effects of @UUID[Compendium.pf2e.spells-srd.Item.Enlarge], and your maximum Hit Points increase by your level. The ritual transforms most of your gear to the appropriate size for your new body (though powerful items like artifacts or items strongly tied to their original size may not transform, at the GM's discretion).</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "@actor.level"
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "melee-strike-damage",
+              "type": "status",
+              "value": 2
+            },
+            {
+              "key": "CreatureSize",
+              "reach": {
+                "override": 10
+              },
+              "resizeEquipment": true,
+              "value": "large"
+            },
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Clumsy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

@@ -7,6 +7,57 @@
       "name": "Anchor Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9nT7E44aTosTrzhb",
+        "folder": "pI2uVWlFM90wUhx1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Anchor Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in or under water.</p><hr /><p>You tense your muscles to make yourself neutrally buoyant and more difficult to move. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to [[/act reposition]] or [[/act shove]] you. This bonus also applies to saving throws against spells or effects that attempt to force you to move. If any effect would force you to move 10 feet or more, attempt a @Check[flat|dc:11]. On a success, you move only 5 feet. Additionally, you don't have to take a Swim action each turn to avoid sinking or moving with the current.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Undersea Privateer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Anchor Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Anchor Stance"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +67,64 @@
       "name": "Fast Swimmer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JyXNe9gV7LVHIjxz",
+        "folder": "pI2uVWlFM90wUhx1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fast Swimmer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You move more quickly underwater. Your swim Speed increases by 5 feet.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Undersea Privateer Dedication"
+              },
+              {
+                "value": "you have a swim Speed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "fast-swimmer-bonus",
+              "selector": [
+                "swim-speed"
+              ],
+              "value": 5
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +134,58 @@
       "name": "Trained Swimmer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "w7qyBwVzAAL1ORDd",
+        "folder": "pI2uVWlFM90wUhx1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Trained Swimmer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Thanks to tireless practice, water has become a natural environment for you. You gain a swim Speed of 15 feet. If you already have a permanent swim Speed, swimming up or down isn’t difficult terrain.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Undersea Privateer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim-speed",
+              "value": 15
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

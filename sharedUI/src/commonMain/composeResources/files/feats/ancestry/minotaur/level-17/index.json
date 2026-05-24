@@ -7,6 +7,44 @@
       "name": "Begin Stampede",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e1Dc8fxK8NoSvYdT",
+        "folder": "smDWC3Vs65Nudzbi",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Begin Stampede",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The sight of you charging forward into battle emboldens your allies to follow. You Stride up to twice your Speed and make a horns melee Strike. If your Strike hits and damages an enemy, each ally within 60 feet who saw you hit can use a reaction to Stride up to twice their Speed, but each must end their Stride closer to you than where they started. Each such ally that Strides gains a +1 status bonus to their first Strike on their next turn.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +54,66 @@
       "name": "Into the Labyrinth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "krQcx7hANwaLjoy0",
+        "folder": "smDWC3Vs65Nudzbi",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Into the Labyrinth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Calling on your connection to minotaurs of myth, you shunt an enemy into a complex maze full of puzzles of your own devising. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Quandary] as an 8th-rank occult innate spell, which takes the form of a labyrinth instead of a puzzle room. Targets cannot attempt to use Occultism to escape the spell (as normal for <em>quandary</em>), but they can use Survival to find their way through the labyrinth's corridors.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:quandary",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:quandary",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:minotaur"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

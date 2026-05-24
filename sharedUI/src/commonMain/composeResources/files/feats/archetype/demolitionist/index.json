@@ -7,6 +7,47 @@
       "name": "Collapse Wall",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "n1t6foOyrN48OVPK",
+        "folder": "bPwF9HNwyz5zbQRa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Collapse Wall",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature moves into the bombs' splash area.</p>\n<p><strong>Requirements</strong> You're within 30 feet of an area where you rigged bombs on a wall, cliff face, or similar vertical surface with @UUID[Compendium.pf2e.actionspf2e.Item.Set Explosives] or @UUID[Compendium.pf2e.feats-srd.Item.Demolition Charge].</p><hr /><p>You detonate the required bombs in order to bring a wall down on a creature. If your bombs deal enough damage to reduce the wall's Hit Points below its Broken Threshold, the wall partially collapses on the creature. The creature takes bludgeoning damage equal to the damage dealt to the wall (basic Reflex save; the DC for this save is equal to your class DC or spell DC, whichever is higher). On a failure, they must spend an Interact action to dig themselves out of the collapse, and on a critical failure, they must spend 2 Interact actions to do so.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Demolitionist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +57,50 @@
       "name": "Controlled Blast",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yIDJTe4kimRoZN0L",
+        "folder": "bPwF9HNwyz5zbQRa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Controlled Blast",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You maximize the effectiveness of your explosives by controlling every possible parameter of the blast meticulously. If you have the @UUID[Compendium.pf2e.feats-srd.Item.Directional Bombs] feats, you can use it with @UUID[Compendium.pf2e.actionspf2e.Item.Set Explosives] or @UUID[Compendium.pf2e.feats-srd.Item.Demolition Charge], even though you didn't throw the bombs. If you have the @UUID[Compendium.pf2e.classfeatures.Item.Field Discovery (Bomber)]{Bomber's Field Discovery} or @UUID[Compendium.pf2e.feats-srd.Item.Expanded Splash] feats, you can apply the additional splash damage to one of the bombs when you Set Explosives or use Demolition Charge, and you can apply the increased splash area from Expanded Splash to all the bombs.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Demolitionist Dedication"
+              },
+              {
+                "value": "Bomber's field discovery, Directional Bombs, or Expanded Splash"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +110,49 @@
       "name": "Demolitionist Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "M0D2CQgASNfdZBrl",
+        "folder": "bPwF9HNwyz5zbQRa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demolitionist Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to set explosives to cause the maximum possible damage to buildings and other structures. You become trained in Engineering Lore or become an expert in it if you were already trained. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Set Explosives] action.</p>\n<p><strong>Set Explosives</strong> <span class=\"action-glyph\">2</span> (concentrate)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.vvYsE7OiSSCXhPdr inline]</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Mk7ECwe1a971WyWl]{Demolitionist}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Set Explosives"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +162,50 @@
       "name": "Explosive Entry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i6eWwJ67qBIPJZoK",
+        "folder": "bPwF9HNwyz5zbQRa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Explosive Entry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know exactly how to make a memorable entrance... by detonating a bomb to produce a devastating explosion, of course! You Set Explosives on a door, window, container, or heavy gate. When the explosives detonate, you can attempt an Engineering Lore check to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] the target. If a bomb would add an item bonus to attack rolls, add that item bonus to your Engineering Lore check. Since you're blasting your way in, you can't avoid breaking the object or structure. If you roll a critical success, you get a success instead.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Demolitionist Dedication"
+              },
+              {
+                "value": "master in Engineering Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "class"
     },
@@ -43,6 +215,47 @@
       "name": "Safety Measures",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Hzq8FOtaYWpur2BL",
+        "folder": "bPwF9HNwyz5zbQRa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Safety Measures",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're often careful to be sure you're not hoisted on your own petard, or anyone else's, for that matter. When you have cover from a bomb, you gain resistance to damage caused by that bomb equal to half your level, plus a value equal to the circumstance bonus to AC granted by the cover. You gain these benefits against your own bombs regardless of whether you have cover.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Demolitionist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

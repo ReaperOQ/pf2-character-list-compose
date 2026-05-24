@@ -7,6 +7,65 @@
       "name": "Close Formation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rOoQcydsTLhwE51g",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Close Formation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You practiced fan dance as a member of a large group, coordinating your moves together to create living art and heightening your sense of spatial awareness. When you wield two fans, each in a different hand, you gain tremorsense as an imprecise sense with a range of 20 feet.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              },
+              {
+                "value": "master in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "close-formation",
+              "toggleable": true
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "close-formation"
+              ],
+              "range": 20,
+              "selector": "tremorsense"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +75,50 @@
       "name": "Dizzying Spin Dance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rDrEZhs59LUxzjJu",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dizzying Spin Dance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a fan.</p><hr /><p>You're practiced in using your fans to spin with dizzying speed. @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] an opponent's space, and then Strike that opponent. If both the Tumble Through and Strike are successful, the opponent is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to the next attack made against it before the start of your next turn, and you can attempt to Tumble Through the space of a different opponent and Strike again with the same effect. If this second Tumble Through and Strike are successful, you can repeat these actions a third time against a third opponent.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              },
+              {
+                "value": "Twirling Strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +128,50 @@
       "name": "Dragon's Journey",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WRtf8xhjGM5Dy2RQ",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon's Journey",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding two fans, one in each hand.</p><hr /><p>Your movements are like that of a dragon weaving a serpentine path between your enemies and allies. Using your fans, you slice the air and create a path of least resistance, allowing you to move across the battlefield with an ethereal grace. You Stride, your movement doesn't trigger enemy reactions, and any allies you pass within 5 feet of can immediately use their reaction to Stride, moving in the same direction. Allies must end their movement as close as possible to you or another ally who benefited from this ability. During Dragon's Journey, ally movement doesn't trigger reactions.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype",
+              "flourish",
+              "move"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +181,55 @@
       "name": "Fan Dancer Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KXPPwGmoKsMa6Ytg",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fan Dancer Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>You sweep across the battlefield, manifesting both the gentle spring breeze and the crisp autumn gusts. You become an expert in Performance. At 7th level you become a master in Performance, and at 15th level, you become legendary in Performance. Whenever you Feint while holding a fan, you can give your Feint the air trait. If you do, you can Stride 10 feet before or after as part of the same action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.RK6AbtT26DHbHlLj]{Fan Dancer}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": "ternary(gte(@actor.level,15),4,ternary(gte(@actor.level,7),3,2))"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +239,49 @@
       "name": "Fluttering Distraction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hOImeMiRPIRKPPXY",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fluttering Distraction",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy attempts a ranged or melee Strike against an ally within 30 feet.</p>\n<p><strong>Requirements</strong> You're wielding two fans, one in each hand.</p><hr /><p>You're trained in snapping and fluttering your fans to draw the eyes of observers around you. You manipulate your fans to create a distraction. The enemy must roll its attack twice and take the lower result.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Fluttering Distraction]</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "manipulate",
+              "misfortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +291,67 @@
       "name": "Fluttering Misdirection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rgx0AJoX6k6HcC7Q",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fluttering Misdirection",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You've trained in drawing the eyes of your audience to specific aspects of your performance through the careful manipulation of your fans and body. While wielding a fan, you can snap open, flutter, or otherwise manipulate the fan to briefly distract observers around you, giving you and adjacent allies a constant +1 circumstance bonus to Stealth checks to secretly @UUID[Compendium.pf2e.actionspf2e.Item.Conceal an Object] and to Thievery checks to @UUID[Compendium.pf2e.actionspf2e.Item.Steal] or @UUID[Compendium.pf2e.actionspf2e.Item.Palm an Object].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:conceal-an-object",
+                    "action:palm-an-object",
+                    "action:steal"
+                  ]
+                }
+              ],
+              "selector": [
+                "stealth",
+                "thievery"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "skill"
     },
@@ -61,6 +361,49 @@
       "name": "Peony's Flourish",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jFdCLA9X9WloBvv3",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Peony's Flourish",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding two fans, one in each hand.</p><hr /><p>As you spin around and create wide arching circles with your fans, you manifest a mosaic of peonies that confuses your enemies. Stride twice and then attempt a @Check[performance|defense:will] check against the Will DC of each creature you passed adjacent to.</p><hr /><p><strong>Critical Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3} and @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for as long as they're stunned.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and dazzled for 1 round.</p>\n<p><strong>Failure</strong> The creature is dazzled for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature is unaffected and temporarily immune to further uses of Peony's Flourish for 24 hours.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "incapacitation",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +413,57 @@
       "name": "Petal Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2cygD6uy4AxJ7XCj",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Petal Step",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have a mastery over your own movement and can distribute your weight to dance lightly over the ground like petals drifting on the water. You gain a +1 circumstance bonus to your Stealth checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] and aren't detectable by tremorsense.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sneak"
+              ],
+              "selector": "stealth",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +473,49 @@
       "name": "Pushing Wind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GxkTe4VM7u26uZGI",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pushing Wind",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a fan.</p><hr /><p>As you spin and glide your fans alongside your allies, you kick up a mild wind that gently carries you all forward. So long as you're holding a fan, you and allies who start their turn in a 30- foot aura emanating around you gain a +5-foot circumstance bonus to land Speed for 1 round; you also gain this bonus to your fly Speed if you possess one, but it can't grant you the ability to fly if you wouldn't otherwise be able to.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pushing Wind]</p>\n<p>Additionally, the air impedes the movements of your foes. While holding a fan, the area in a 10-foot aura emanating around you is difficult terrain for all enemies.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype",
+              "aura"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -88,6 +525,71 @@
       "name": "Solo Dancer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0Rr1uS9pmYa5j9f9",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Solo Dancer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You often dance alone with a grace exceeding that of most other performers, carrying yourself with a poise and confidence that draws the attention of those around you. You can always roll Performance for initiative, and during the first round of combat, creatures that act after you are @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              },
+              {
+                "value": "expert in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "encounter:round:1",
+                {
+                  "lt": [
+                    "self:participant:initiative:rank",
+                    "target:participant:initiative:rank"
+                  ]
+                }
+              ],
+              "selectors": [
+                "strike-attack-roll",
+                "spell-attack-roll",
+                "strike-damage",
+                "attack-spell-damage"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -97,6 +599,64 @@
       "name": "Sweeping Fan Block",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dY8LGT6KDcGy93GY",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sweeping Fan Block",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're targeted by a ranged attack that uses ammunition.</p>\n<p><strong>Requirements</strong> You're wielding two fans, one in each hand.</p><hr /><p>You leap up on one leg, snapping your fans open alongside your head before sweeping them across your body. When you're the target of an attack using ammunition (such as arrows, bolts, sling bullets, and other objects of similar size) while wielding two fans, whirl your fans to disrupt the incoming attack with gusts of air, gaining a +2 circumstance bonus to AC against the triggering attack. If the triggering attack misses, you can redirect the ammunition into a nearby pocket or container where it can be retrieved and reused.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "sweeping-fan-block",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:ranged",
+                "sweeping-fan-block"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -106,6 +666,50 @@
       "name": "Sweeping Fan Redirection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0iMPIwHTprDS148r",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sweeping Fan Redirection",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding two fans, one in each hand.</p><hr /><p>You can redirect ammunition back at the creature that fired it with sweeping gusts of wind. When @UUID[Compendium.pf2e.feats-srd.Item.Sweeping Fan Block] prevents an attack from hitting you, instead of recovering the ammunition, you can make a ranged Strike against the triggering target using the normal attack bonus and damage of your fans as part of the same reaction. You also apply any special effects the ammunition might have.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              },
+              {
+                "value": "Sweeping Fan Block"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -115,6 +719,48 @@
       "name": "Twirl Through",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "B2sX3irC8DEH7JyY",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twirl Through",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You sweep across the battlefield in a fluttering of movement honed from years of coordinating perfectly spaced movements alongside fellow dancers. When you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] an enemy's space, you can use [[/act tumble-through skill=performance]]{Performance} instead of Acrobatics.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -124,6 +770,50 @@
       "name": "Twirling Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uT4zSkhziUQOZOD6",
+        "folder": "1Y90si8tqYe5zlv2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twirling Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a fan.</p><hr /><p>Your fans, one raised up alongside your head and the other alongside your hip, become a blur as you twirl across the battlefield. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] an enemy's space using [[/act tumble-through skill=performance]]{Performance}; on a success, you can make a melee Strike against the enemy with a fan you're wielding at any point during the movement. On a critical success, the enemy is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against this attack.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fan Dancer Dedication"
+              },
+              {
+                "value": "Twirl Through"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

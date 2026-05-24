@@ -7,6 +7,49 @@
       "name": "Call Wizardly Tools",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9j90iE61ZToFR8cu",
+        "folder": "DdSj7bLTKTUNThVt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call Wizardly Tools",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're mystically connected to your wizardly tools, ensuring you can always find them when you've misplaced them. You teleport your bonded item or spellbook to you. It arrives in your hand if you have a free hand or at your feet if you don't. The item must be within 1 mile and have 1 Bulk or less.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "arcane bond"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "teleportation",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +59,54 @@
       "name": "Linked Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JGfJPx6xkx11zHlW",
+        "folder": "DdSj7bLTKTUNThVt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Linked Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have linked your bonded item to the well of energy that powers your school spells. Once per day when you @UUID[Compendium.pf2e.actionspf2e.Item.Drain Bonded Item]{Drain your Bonded Item} to cast one of your arcane school's curriculum spells, you also regain 1 Focus Point.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "arcane bond"
+              },
+              {
+                "value": "curriculum spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +116,45 @@
       "name": "Spell Protection Array",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3CPKbiweBRzXAJA9",
+        "folder": "DdSj7bLTKTUNThVt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spell Protection Array",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You inscribe a circle of arcane runes that dampen enemies' magic. You create a glowing magic circle in a @Template[burst|distance:5] within 30 feet. Creatures in the circle gain a +1 status bonus to saving throws against magic. The circle lasts until the end of your next turn, and you can Sustain it, to a maximum duration of 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Spell Protection Array]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "arcane",
+              "manipulate",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

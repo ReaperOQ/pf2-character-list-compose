@@ -7,6 +7,80 @@
       "name": "Arcana of Iron",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4Ocw1VITuw3Or2Cc",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcana of Iron",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You eschew wands and staves for more advanced weaponry. You become trained in advanced weapons. If you gain the @UUID[Compendium.pf2e.classfeatures.Item.Weapon Expertise] class feature, your proficiency in martial and advanced weapons increases to expert. The extra damage you deal with @UUID[Compendium.pf2e.feats-srd.Item.Bespell Strikes] increases to 1d8.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              },
+              {
+                "value": "Bespell Strikes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.advanced.rank",
+              "predicate": [
+                "feature:weapon-expertise"
+              ],
+              "value": 2
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "property": "dice-faces",
+              "selectors": [
+                "strike-damage"
+              ],
+              "slug": "bespell-strikes",
+              "value": 8
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "advanced": {
+                "attribute": null,
+                "rank": 1
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +90,54 @@
       "name": "Battlefield Arcana",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SQ46dXVR0v4bZjQC",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battlefield Arcana",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have learned to safely cast spells even in the heat of battle. If the next action you use is to cast a wizard cantrip, or a wizard spell that is at least 2 ranks lower than the highest-rank wizard spell slot you have, that spell does not trigger reactions that normally trigger due to a spell being cast or someone using an action with the manipulate trait.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Steady Spellcasting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +147,87 @@
       "name": "Intimidating Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SQM1Rrqihn1IoJJD",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Intimidating Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The devastation wrought by your large-scale spells is particularly terrifying. If the next action you use is to Cast a Spell that deals damage in an area, any target who fails their saving throw is also @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} on a critical failure).</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "intimidating-spell"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:intimidating-spell",
+                "damaging-effect",
+                "item:area"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "emotion",
+              "mental",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +237,55 @@
       "name": "Mage's Field Dressing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "buUSr6Dh9md9WqJx",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mage's Field Dressing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your previous action was to Cast a Spell from a wizard spell slot, and the spell affected an ally within 60 feet.</p><hr /><p>As your spell takes hold on your ally, you use some of its magic to quickly dress their wounds. You use @UUID[Compendium.pf2e.feats-srd.Item.Battle Medicine] on one ally affected by the required spell. You do not need to be holding or wearing a @UUID[Compendium.pf2e.equipment-srd.Item.Healer's Toolkit], as you conjure glowing threads, bandages, or similar supplies out of pure magic, which adds the arcane trait to Battle Medicine.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              },
+              {
+                "value": "Battle Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +295,72 @@
       "name": "Secrets of Steel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "76MJ4dyEFim6dfoa",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Secrets of Steel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As your prowess with weapons increases, so does the ferocity of magic you channel through those weapons. When you use @UUID[Compendium.pf2e.feats-srd.Item.Bespell Strikes], you gain access to the critical specialization effect of the chosen weapon or unarmed attacks used with Bespell Strikes. If you critically hit with an attack modified by Bespell Strikes, you deal an additional 1d8 damage of the same type as the extra damage from Bespell Strikes; this damage is added after all other calculations and is not multiplied as part of the critical hit.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Arcana of Iron"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                "item:tag:bespell-strikes"
+              ]
+            },
+            {
+              "critical": true,
+              "damageType": "{actor|flags.system.bespellStrikesDamage}",
+              "diceNumber": 1,
+              "dieSize": "d8",
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "self:effect:bespell-strikes",
+                "item:tag:bespell-strikes"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +370,56 @@
       "name": "Shield Spell Reinforcement",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "V6RsK1B39FTgmYMv",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield Spell Reinforcement",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a shield.</p><hr /><p>You can empower your defensive magic by channeling it through a physical shield. If your next action is to cast the @UUID[Compendium.pf2e.spells-srd.Item.Shield] cantrip, you use your shield as a locus to cast the spell, raising a magical barrier in the form of a large force projection of your worn shield. You can choose for an adjacent ally to gain the benefits of the <em>shield</em> spell instead of yourself. If the ally would take damage from a physical attack while protected by your <em>shield</em> cantrip, you can use your reaction to @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] with the spell on their behalf.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              },
+              {
+                "value": "you can cast the shield cantrip"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +429,52 @@
       "name": "Shielding Formation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CXC2aNz4ir4VFtn2",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shielding Formation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have mastered unique magical techniques designed to protect your allies from harm. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Shielding Formation] focus spell.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +484,62 @@
       "name": "Siege Ritualist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L4PK2he79ikr4ToV",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Siege Ritualist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Sometimes, magical warfare requires the application of more complex arcana. When you attempt a Warfare Lore check as one of the casters of a ritual, you gain a +2 circumstance bonus to the check. You learn a siege ritual of 2nd rank or lower. You must meet all prerequisites to be the primary caster of a ritual to select it.</p>\n<p>At 8th level and every 4 levels thereafter, you learn another siege ritual with the same restriction and with a maximum rank of half that level.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "siege-ritualist"
+              ],
+              "selector": "warfare-lore",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +549,57 @@
       "name": "Spellshield",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8T4MRIKN6t5FBeyN",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spellshield",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your shield becomes a bonded item capable of storing your spells. You gain the @UUID[Compendium.pf2e.classfeatures.Item.Arcane Bond] class feature and the @UUID[Compendium.pf2e.actionspf2e.Item.Drain Bonded Item] action. You must select a shield as your bonded item. When you make your daily preparations, you can prepare one fewer wizard spell to infuse that magic into your bonded item. This spell must be at least 1 rank lower than the highest-rank wizard spell slot you have. When you Drain your Bonded Item to Cast a Spell, that spell is automatically heightened to the rank of spell you infused into your shield, no matter what rank you originally prepared it at.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "War Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Arcane Bond"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -88,6 +609,60 @@
       "name": "War Mage Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OlGO7dCLaghUXlQb",
+        "folder": "h3LLD3BmWA4ndNhV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "War Mage Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your studies into the battlefield applications of magic have made your spells particularly effective at disrupting enemy formations or manipulating enemy troops into positions where they are more vulnerable to wide-scale magical attacks. When you cast a non-cantrip spell that deals damage in an area, choose a number of targets equal to your Intelligence modifier who failed their saving throw against the effect. Move each one up to 10 feet from their original position after they take damage and any other effects from the spell. You can't move a creature into or through obstacles. A Medium or smaller creature counts as one target; a Large creature counts as two Medium creatures; and a Huge creature counts as four Medium creatures. You can't move Gargantuan creatures in this way.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Warfare Lore. If you were already trained in Warfare Lore, you become trained in a Lore skill of your choice.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.NkQidn5vlt6U1EFv]{War Mage (Class Archetype)}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "location": "class-2",
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a spellcasting class feature."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "class",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

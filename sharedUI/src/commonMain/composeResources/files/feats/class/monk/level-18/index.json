@@ -7,6 +7,94 @@
       "name": "Diamond Fists",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zTulA4sVXwLRm28Z",
+        "folder": "HFYMuS6hvJ5ewZS3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Diamond Fists",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your body hardens as you combine your attacks, making your finishing blows more damaging. Your unarmed attacks gain the forceful and deadly d10 traits. Any that already had one or both of these traits increase their weapon damage dice by one step.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:category:unarmed",
+                {
+                  "or": [
+                    "item:trait:deadly-d10",
+                    "item:trait:forceful"
+                  ]
+                }
+              ],
+              "property": "other-tags",
+              "value": "diamond-fists-dice-upgrade"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:category:unarmed"
+              ],
+              "priority": 121,
+              "property": "traits",
+              "value": "deadly-d10"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:category:unarmed"
+              ],
+              "priority": 121,
+              "property": "traits",
+              "value": "forceful"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "item:tag:diamond-fists-dice-upgrade"
+              ],
+              "property": "dice-faces",
+              "selectors": [
+                "unarmed-damage"
+              ],
+              "slug": "base"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +104,48 @@
       "name": "Grandmaster Qi Spells",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6GUl9WG7OKvfVQo4",
+        "folder": "HFYMuS6hvJ5ewZS3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grandmaster Qi Spells",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have unlocked a qi technique achievable only by those who attain complete mastery of both their body and their spirit. You gain @UUID[Compendium.pf2e.spells-srd.Item.Embrace Nothingness], @UUID[Compendium.pf2e.spells-srd.Item.Qi Form], or another 9th-rank qi spell you have access to.</p><hr /><p><strong>Special</strong> You can select this feat more than once, choosing a different spell each time.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +155,54 @@
       "name": "Qi Center",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wIRZDXOacqWfI670",
+        "folder": "HFYMuS6hvJ5ewZS3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Qi Center",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p><hr /><p>You center yourself with the universe and draw upon its vast power. You cast a single action qi spell with the stance trait, without spending a Focus Point.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Master of Many Styles"
+              },
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +212,43 @@
       "name": "Swift River",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IxggfXunfldeVOsQ",
+        "folder": "HFYMuS6hvJ5ewZS3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift River",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn ends and you have a status penalty to your Speed or are @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] or @UUID[Compendium.pf2e.conditionitems.Item.Slowed]</p>\n<hr />\n<p>You flow like water, avoiding all restraints. End one status penalty to your speed, or end one immobilized or slowed condition affecting you.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -43,6 +258,68 @@
       "name": "Triangle Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "62glnJI2o0KnHULB",
+        "folder": "HFYMuS6hvJ5ewZS3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Triangle Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Monastic Archer Stance] and wielding a bow usable with that stance.</p><hr /><p>You string three arrows to your bow and fire them all at once. Make three ranged Strikes against a single target with the required weapon, each using your current multiple attack penalty, and you take an additional –2 penalty. This counts as two attacks when calculating your multiple attack penalty, and you combine the attacks' damage for the purpose of resistances and weaknesses. Your Stunning Blows benefit applies to Triangle Shot, even though it isn't a Flurry of Blows. If all three Strikes hit, the target takes @Damage[3d6[persistent,bleed]] damage.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monastic Archer Stance"
+              },
+              {
+                "value": "Stunning Blows"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "label": "Triangle Shot (-2 penalty to attack)",
+              "option": "triangle-shot",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "triangle-shot"
+              ],
+              "selector": "ranged-attack-roll",
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "fortune",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

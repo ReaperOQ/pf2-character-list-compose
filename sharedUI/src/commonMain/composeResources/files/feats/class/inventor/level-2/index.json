@@ -7,6 +7,49 @@
       "name": "Collapse Armor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DFusBl7CyNkuDTRa",
+        "folder": "u4SQy7Sn2T7kCD3r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Collapse Armor",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing your armor innovation, or holding it in both hands in its compact form (see text).</p><hr /><p>You've modified your armor innovation to collapse into a more compact form so you can don or remove it in an instant. If you're wearing your innovation when you Collapse your Armor, you remove it instantly, and it compresses into its compact form, after which it latches onto your body, typically by attaching to a belt, bandolier, or other convenient carrying surface as a nondescript satchel. If your armor is stowed and carried on your person in its compact form when you take this action, it unfolds back into its armor form onto your body. In compact form, your armor innovation is easier to carry, with a Bulk 1 lower than the Bulk listed for it, to a minimum of light Bulk (carried armor normally has a Bulk 1 higher than listed in the armor entry).</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate",
+              "modification"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +59,49 @@
       "name": "Collapse Construct",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wKFQreilUASJkKzV",
+        "folder": "u4SQy7Sn2T7kCD3r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Collapse Construct",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've modified your construct companion and built it out of light materials, enabling you to collapse it into a carrying case or other compact and innocuous form. Either your construct or you (if you're adjacent to it) can Collapse your Construct to turn it into its compact form or back into its normal form.</p>\n<p>In compact form, your construct can't act but is easily carried, with a Bulk of 2 if it's Small, 4 if it's Medium, or 8 if it's Large. The compact form has wheels, so you can easily drag it behind you at half your Speed (rather than the usual slower Speed for dragging).</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "construct innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate",
+              "modification"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +111,50 @@
       "name": "Oil Fire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cexPKeX0kBKGd2TR",
+        "folder": "u4SQy7Sn2T7kCD3r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oil Fire",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a foe @UUID[Compendium.pf2e.conditionitems.Item.Grabbed].</p><hr /><p>Your armor includes flame-resistant gauntlets with oil-filled finger joints. These joints can split apart, dousing your opponent in flammable oil and then igniting it. The opponent must attempt a @Check[reflex|against:inventor] save against your class DC.</p><hr /><p><strong>Critical Success</strong> The grab ends.</p>\n<p><strong>Success</strong> The grab ends, and the target takes @Damage[1[persistent,fire]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[(floor(@actor.level/2))[persistent,fire]] damage equal to half your level.</p>\n<p><strong>Critical Failure</strong> The target takes @Damage[(@actor.level)[persistent,fire]] damage equal to your level.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fire",
+              "inventor",
+              "manipulate",
+              "unstable"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +164,57 @@
       "name": "Reverse Engineer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Na1qfHd6AFAXoN1A",
+        "folder": "u4SQy7Sn2T7kCD3r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reverse Engineer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are incredibly skilled at reverse engineering items to learn their formulas or disassembling them just to disable them. If you are using the Critical Crafting alternate rules and you get a critical success on your Crafting check to reverse engineer an item, you can reassemble the original item with one of the critical success crafting benefits (as determined by your GM).</p>\n<p>Furthermore, you can use Crafting instead of Thievery to [[/act disable-device skill=crafting]] or [[/act pick-a-lock skill=crafting]].</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:reverse-engineer"
+              ],
+              "selector": "crafting",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +224,47 @@
       "name": "Searing Restoration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "obGGzuPcgO5Xiz6P",
+        "folder": "u4SQy7Sn2T7kCD3r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Searing Restoration",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>They told you there was no way that explosions could heal people, but they were fools… Fools who didn't understand your brilliance! You create a minor explosion from your innovation, altering the combustion to cauterize wounds using vaporized medicinal herbs. You or a living creature adjacent to you regains @Damage[max(1,ceil(@actor.level/2))d10[healing]] Hit Points. In addition, the creature you heal can attempt an immediate flat check to recover from a single source of persistent bleed damage, with the DC reduction from appropriate assistance.</p>\n<p>At 3rd level, and every 2 levels thereafter, increase the healing by 1d10.</p><hr /><p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you, though because it's not a living creature, it can't use the ability on itself.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fire",
+              "healing",
+              "inventor",
+              "manipulate",
+              "unstable"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +274,49 @@
       "name": "Wukong Extension",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aJBnBvbwqxQRhNZF",
+        "folder": "u4SQy7Sn2T7kCD3r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wukong Extension",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin or worshipper of Sun Wukong</p><hr /><p>Invoking the name of Sun Wukong's extending cudgel, Ruyi Bang, you activate hidden levers and cranks in your innovation, making it swiftly extend outward like a battering ram. Make a melee Strike with your weapon innovation; your reach for that Strike is 30 feet.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "inventor",
+              "manipulate",
+              "unstable"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

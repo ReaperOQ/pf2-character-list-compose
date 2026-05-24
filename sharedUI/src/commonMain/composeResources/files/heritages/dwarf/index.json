@@ -1,0 +1,510 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ancient-blooded-dwarf.json",
+      "id": "yL6944LrPo2HNdEJ",
+      "name": "Ancient-Blooded Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/ancient-blooded-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "yL6944LrPo2HNdEJ",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/ancient-blooded-dwarf.webp",
+        "name": "Ancient-Blooded Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>Dwarven heroes of old could shrug off their enemies' magic, and some of that resistance manifests in you. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Call on Ancient Blood] reaction.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Call on Ancient Blood"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "anvil-dwarf.json",
+      "id": "kRDsVbhdBVeSlpBa",
+      "name": "Anvil Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/anvil-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "kRDsVbhdBVeSlpBa",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/anvil-dwarf.webp",
+        "name": "Anvil Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>You are a descendant of a famed crafter and have your own amazing talent. Other dwarves might consider this a blessing from your ancestors or from the Forgefather himself, depending on where you grew up. You become trained in Crafting (or another skill if you were already trained in Crafting) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting] skill feat, but you can pick two different specialties instead of one.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Specialty Crafting"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Specialty Crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "death-warden-dwarf.json",
+      "id": "VTtXwBxrfRUXSL38",
+      "name": "Death Warden Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/death-warden-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VTtXwBxrfRUXSL38",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/death-warden-dwarf.webp",
+        "name": "Death Warden Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>Your ancestors were tomb guardians, and their power to ward off death passed on to you. If you roll a success on a saving throw against an effect that has the void trait or was created by an undead creature, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                {
+                  "or": [
+                    "origin:trait:undead",
+                    "void"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "text": "PF2E.SpecificRule.Dwarf.DeathWardenDwarf.Note",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "origin:trait:undead",
+                    "void"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "elemental-heart-dwarf.json",
+      "id": "MeMAAtUlZmFgKSMF",
+      "name": "Elemental Heart Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/elemental-heat-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "MeMAAtUlZmFgKSMF",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/elemental-heat-dwarf.webp",
+        "name": "Elemental Heart Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>Whether through a connection to @UUID[Compendium.pf2e.deities.Item.Torag]{Torag's} forge, the azers of the Plane of Fire, or another source, you can exude a burst of energy. Mbe'ke and Taralu dwarves of the Mwangi Expanse believe this heritage is a gift from dragons or elemental spirits. Choose one of the following damage types: acid, cold, electricity, or fire. Once chosen, this can't be changed. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Energy Emanation] activity.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "value": "fire"
+                }
+              ],
+              "flag": "elementalHeartDwarf",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Dwarf.ElementalHeart.Prompt"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.elementalHeartDwarf.damageType",
+              "value": "{item|flags.system.rulesSelections.elementalHeartDwarf}"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Energy Emanation"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "forge-blessed-dwarf.json",
+      "id": "erZPj5701KiVAqoi",
+      "name": "Forge-Blessed Dwarf",
+      "img": "icons/tools/smithing/furnace-fire-metal-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "erZPj5701KiVAqoi",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "icons/tools/smithing/furnace-fire-metal-orange.webp",
+        "name": "Forge-Blessed Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>You are from a family in Highhelm that venerates a particular dwarven deity above all others. Your birth was blessed by your family's patron deity, granting you a fraction of their power. Choose one deity from the dwarven pantheon. You can cast the 1st-rank spell they grant clerics (such as @UUID[Compendium.pf2e.spells-srd.Item.Soothe] if your family's patron is Bolka) as an innate divine spell once per week.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Highhelm"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "forge-dwarf.json",
+      "id": "5CqsBKCZuGON53Hk",
+      "name": "Forge Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/forge-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "5CqsBKCZuGON53Hk",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/forge-dwarf.webp",
+        "name": "Forge Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>You have a remarkable adaptation to hot environments. This grants you fire resistance equal to half your level (minimum 1), and you treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "fire",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "oathkeeper-dwarf.json",
+      "id": "85tRKGZUTFa6pKpG",
+      "name": "Oathkeeper Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/oathkeeper-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "85tRKGZUTFa6pKpG",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/oathkeeper-dwarf.webp",
+        "name": "Oathkeeper Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>Growing up, you never tried to lie to get what you wanted, and even when necessary, lying makes you uncomfortable. The especially faithful might even have thought that you were blessed by the dwarven god of duty, @UUID[Compendium.pf2e.deities.Item.Kols].</p>\n<p>You gain a +1 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] and to Perception DCs against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Lie] to you.</p>\n<p>Furthermore, you gain a +2 circumstance bonus to Diplomacy checks to convince others you speak the truth when you are telling the truth, and you take a -4 circumstance penalty to lie and to your Deception DC against @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive].</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.SenseMotive",
+              "predicate": [
+                "action:sense-motive"
+              ],
+              "selector": "perception",
+              "slug": "oathkeeper-dwarf-to-sense-motive",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.TellTheTruth",
+              "predicate": [
+                "tell-truth"
+              ],
+              "selector": "diplomacy",
+              "slug": "oathkeeper-dwarf-tell-the-truth",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.Lie",
+              "predicate": [
+                "action:lie"
+              ],
+              "selector": "deception",
+              "slug": "oathkeeper-dwarf-lie",
+              "type": "circumstance",
+              "value": -4
+            },
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                "action:lie"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive"
+              ],
+              "selector": "deception",
+              "type": "circumstance",
+              "value": -4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "rock-dwarf.json",
+      "id": "VSyOvtgJ1ZNpIVgC",
+      "name": "Rock Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/rock-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VSyOvtgJ1ZNpIVgC",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/rock-dwarf.webp",
+        "name": "Rock Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>Your ancestors lived and worked among the ancient stones of the mountains or the depths of the earth. This makes you solid as a rock when you plant your feet. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] you. This bonus also applies to saving throws against spells or effects that attempt to force you to move or knock you @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p>In addition, if any effect would force you to move 10 feet or more, you are moved only half the distance.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.VsShoveOrTrip",
+              "predicate": [
+                {
+                  "or": [
+                    "action:shove",
+                    "action:trip",
+                    "action:reposition"
+                  ]
+                }
+              ],
+              "selector": [
+                "fortitude",
+                "reflex"
+              ],
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.VsProne",
+              "predicate": [
+                "inflicts:prone"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "strong-blooded-dwarf.json",
+      "id": "UV2sABrTC5teOXTE",
+      "name": "Strong-Blooded Dwarf",
+      "img": "systems/pf2e/icons/features/ancestry/strong-blooded-dwarf.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "UV2sABrTC5teOXTE",
+        "folder": "Z6Ve0qYfgLQLbcOs",
+        "img": "systems/pf2e/icons/features/ancestry/strong-blooded-dwarf.webp",
+        "name": "Strong-Blooded Dwarf",
+        "system": {
+          "ancestry": {
+            "name": "Dwarf",
+            "slug": "dwarf",
+            "uuid": "Compendium.pf2e.ancestries.Item.BYj5ZvlXZdpaEgA6"
+          },
+          "description": {
+            "value": "<p>Your blood runs hearty and strong, and you can shake off toxins. You gain poison resistance equal to half your level (minimum 1), and each of your successful saving throws against a poison affliction reduces its stage by 2, or by 1 for a virulent poison. Each critical success against an ongoing poison reduces its stage by 3, or by 2 for a virulent poison.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "poison"
+              ],
+              "selector": "saving-throw",
+              "text": "PF2E.SpecificRule.Dwarf.StrongBloodedDwarf.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Resistance",
+              "type": "poison",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

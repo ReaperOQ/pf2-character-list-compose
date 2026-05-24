@@ -7,6 +7,52 @@
       "name": "Banshee Cry Display",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jsbe2d9lYGJ2MksT",
+        "folder": "ZbKDHhoKk26BG7WF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Banshee Cry Display",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned how to unleash a sudden and disruptive noisemaker at just the right moment in your display, a technique that can cause a spellcaster to fumble the phrasing of their magic. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Banshee Cry] fireworks display.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Firework Technician Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Banshee Cry"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +62,52 @@
       "name": "Coughing Dragon Display",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qAVM65grmny3f8DP",
+        "folder": "ZbKDHhoKk26BG7WF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coughing Dragon Display",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>This display emits a cascade of loud bangs or glittering trails. While you initially designed the display to captivate your audience's attention, it turns out to have a surprisingly effective use in combat, suppressing auditory or visual effects behind your magnificent display.</p>\n<p>You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Coughing Dragon] fireworks display.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Firework Technician Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Coughing Dragon"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +117,57 @@
       "name": "Expert Fireworks Crafter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dDFQJem5K9Jzxgda",
+        "folder": "ZbKDHhoKk26BG7WF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expert Fireworks Crafter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're particularly adept at crafting fireworks, allowing you to create more fireworks than you otherwise could. Your number of versatile vials per day increases to 5.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Firework Technician Dedication"
+              },
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.resources.versatileVials.max",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +177,111 @@
       "name": "Firework Technician Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MVbNnjqQOK9d8Ki3",
+        "folder": "ZbKDHhoKk26BG7WF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Firework Technician Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned the secrets of making fire and sound bloom using black powder, metals, and paper. You most likely came by this knowledge through formal training with a fireworks house in Tian Xia or a fireworks company from Vudra, though perhaps you mastered fireworks completely by yourself after finding a secret stash in an old shipwreck.</p>\n<p>You become trained in Fireworks Lore or become an expert if you were already trained in it. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Jkl5KOZih7MoMqAJ#quick-alchemy-benefits]{quick alchemy benefits}, creating up to 4 pyrotechnic versatile vials during your daily preparations. These vials have the fire trait and deal fire damage instead of acid. You can use pyrotechnic versatile vials only to throw as bombs, for the @UUID[Compendium.pf2e.actionspf2e.Item.Launch Fireworks] action or with @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy] to create fireworks consumables, including @UUID[Compendium.pf2e.equipment-srd.Item.Black Powder (Dose)]{Doses} or rounds of black powder, the @UUID[Compendium.pf2e.equipment-srd.Item.Sparkler] item, and other items determined by the GM. You can replenish your versatile vials during exploration the same way an alchemist can.</p>\n<p>You can create fireworks displays to have distinctive effects you can use to make onlookers marvel and even to gain an advantage in combat. You gain the Launch Fireworks action and learn some basic effects. You can learn additional, more complex displays that use your versatile vials through other firework technician feats. These add a new fireworks display to your options for Launch Fireworks, each of which lists its number of actions and effects. The DC for Launch Fireworks is equal to your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Special</strong> If you have Quick Alchemy from another source (such as the @UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.Om4e4tsgNWrComie]{alchemist} class or multiclass archetype), you can use standard versatile vials to Launch Fireworks or create fireworks consumables. Each time you create a versatile vial, you choose whether it's a standard vial or pyrotechnic vial. Both types count toward your maximum number of versatile vials. You can replenish only pyrotechnic vials during exploration unless another ability lets you replenish standard versatile vials (such as the benefit of the alchemist class), in which case you can choose the type each time you replenish.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.S4BZW9c5n6CctDxl]{Firework Technician}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Alchemical Crafting"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Launch Fireworks"
+            },
+            {
+              "itemUUID": "Compendium.pf2e.equipment-srd.Item.Versatile Vial",
+              "key": "SpecialResource",
+              "label": "PF2E.SpecificRule.Alchemist.VersatileVials",
+              "level": "ternary(gte(@actor.level, 18), 18, ternary(gte(@actor.level, 12), 12, ternary(gte(@actor.level, 4), 4, 1)))",
+              "max": 4,
+              "slug": "versatile-vials"
+            },
+            {
+              "craftableItems": [
+                {
+                  "or": [
+                    "item:slug:black-powder-dose",
+                    "item:slug:sparkler"
+                  ]
+                }
+              ],
+              "key": "CraftingAbility",
+              "slug": "quick-alchemy"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Quick Alchemy"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:versatile-vial"
+              ],
+              "property": "traits",
+              "value": "fire"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "predicate": [
+                "item:slug:versatile-vial"
+              ],
+              "property": "traits",
+              "value": "acid"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:slug:versatile-vial"
+              ],
+              "property": "damage-type",
+              "value": "fire"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +291,52 @@
       "name": "Goblin Jubilee Display",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pI5cG6x49ZQLchuy",
+        "folder": "ZbKDHhoKk26BG7WF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Goblin Jubilee Display",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Flames and explosions sear the air in a riot of color and devastation that rivals that wrought by even the wildest goblin party. The display is both so beautiful and chaotic that, while mesmerizing, it poses a significant risk to the physical health, sight, and hearing of anyone who gets too close. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Goblin Jubilee] fireworks display.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Firework Technician Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Goblin Jubilee"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +346,52 @@
       "name": "Jumping Jenny Display",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "T6Twdesb5niBhHuZ",
+        "folder": "ZbKDHhoKk26BG7WF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jumping Jenny Display",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>This multi-sequence rocket blasts confetti at a series of altitudes. While the design is intended to delight children of all ages, you've found it has an unexpected side effect of confounding enemy fliers. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Jumping Jenny] fireworks display.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Firework Technician Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Jumping Jenny"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

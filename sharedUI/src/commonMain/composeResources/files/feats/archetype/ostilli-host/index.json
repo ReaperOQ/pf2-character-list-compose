@@ -7,6 +7,52 @@
       "name": "Cellular Reconstruction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "11mW5dOCpwROjyV9",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cellular Reconstruction",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli takes control of your nervous system and kicks your cellular functions into overdrive when you're about to die. You regain Hit Points equal to your level. For the next 2 rounds, at the start of your turn, you regain Hit Points equal to half your level. The first time you regain Hit Points at the start of your turn, you reduce your wounded condition by 1.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +62,47 @@
       "name": "Chaining Mutation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tnjXAYaYHO13jvMr",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chaining Mutation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The dart fired by your ostilli can ricochet to strike another creature. The first time each round that a target takes damage when you Spit Ambient Magic, you can choose a second target within 20 feet of the first; that target is also affected by Spit Ambient Magic.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +112,56 @@
       "name": "Cloaking Pulse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uNop7UN5OQX951l1",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cloaking Pulse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli can emit illusion magic to mask your position, granting you the @UUID[Compendium.pf2e.actionspf2e.Item.Drape Ambient Magic] action.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "feat:ostilli-host-dedication"
+              ],
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Drape Ambient Magic"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +171,47 @@
       "name": "Deadly Mutation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hga6Cq7gW6rL16Ra",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deadly Mutation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The dart fired by your ostilli is more dangerous. The damage dice of your Spit Ambient Magic increase to d8s, and when a target critically fails its save against the ability, it also takes 1d6 persistent bleed damage. If you dealt a type of energy damage with Spit Ambient Magic (such as when dealing fire damage with Versatile Mutation), the persistent damage is damage of that type instead of bleed.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +221,56 @@
       "name": "Deflecting Pulse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ohdWRVK6CNXSkETG",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deflecting Pulse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli can use its stored magic to protect you from other magic, granting you the @UUID[Compendium.pf2e.actionspf2e.Item.Turn Aside Ambient Magic] action.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "feat:ostilli-host-dedication"
+              ],
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Turn Aside Ambient Magic"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +280,65 @@
       "name": "Ostilli Host Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RxDq7SB7a97EMJbW",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ostilli Host Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> surki ancestry</p><hr /><p>You've bonded with an attached symbiote known as an ostilli. You can bond with only one ostilli at a time since the symbiote emits low-frequency magical pulses that repel other ostillis. You become trained in Ostilli Lore; if you were already trained, you become an expert.</p>\n<p>The ostilli is a Tiny creature grafted to your body. Like other grafts, it has no Hit Points or Speeds of its own and can't be targeted separately. It can't be removed and dies when you do; in the event of your demise and resurrection, you can bond to a new ostilli during a week of downtime, though you lose any abilities granted by your ostilli bond during that time. Your ostilli is obvious, unless you attempt to cover it with clothing or armor. In such a case, an onlooker can determine you're bonded to an ostilli with a successful Nature, Perception, or Surki Lore check against your Deception DC. Your ostilli must be visible for you to use any of the actions it grants.</p>\n<p>Your ostilli is constantly siphoning ambient magic from the surroundings, granting you the @UUID[Compendium.pf2e.actionspf2e.Item.Repel Ambient Magic] and @UUID[Compendium.pf2e.actionspf2e.Item.Spit Ambient Magic] actions.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.CLx4mTCUxUlPT7Zh]{Ostilli Host}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Arcana or Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "feat:ostilli-host-dedication"
+              ],
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Repel Ambient Magic"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "feat:ostilli-host-dedication"
+              ],
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Spit Ambient Magic"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +348,47 @@
       "name": "Propulsive Mutation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "u9n11htt3dtT6CfW",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Propulsive Mutation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli can fire its dart farther. When you Spit Ambient Magic, the range increases to 60 feet.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +398,55 @@
       "name": "Soothing Pulse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PlD0eY5fo50Wluva",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Soothing Pulse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli can use its stored magic to help staunch your wounds, granting you the @UUID[Compendium.pf2e.actionspf2e.Item.Administer Ambient Magic] action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                "feat:ostilli-host-dedication"
+              ],
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Administer Ambient Magic"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +456,55 @@
       "name": "Spell Swallow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "p1JxtebE9egaeTrC",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spell Swallow",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli has grown strong enough to completely consume a spell cast at you, granting you the @UUID[Compendium.pf2e.actionspf2e.Item.Devour Ambient Magic] action.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                "feat:ostilli-host-dedication"
+              ],
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Devour Ambient Magic"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +514,47 @@
       "name": "Spraying Mutation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vOM48z8wO5Mfp9IK",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spraying Mutation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli can launch a multitude of darts at once over a short distance. When you Spit Ambient Magic, you can have it affect all creatures within a @Template[cone|distance:15] instead of the normal target.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -97,6 +564,47 @@
       "name": "Tactile Magic Feedback",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "E13vR5nYbeo95nRC",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tactile Magic Feedback",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli can sense nearby spellcasters. You gain an imprecise sense known as spellsense, which has a range of 60 feet and detects only creatures capable of casting spells (including creatures with innate spells). You gain a +2 circumstance bonus to Recall Knowledge checks about creatures you're detecting with spellsense.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -106,6 +614,317 @@
       "name": "Versatile Mutation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oZLRpBqlzFxvf33I",
+        "folder": "EJraTIuJCbVEkArg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Versatile Mutation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ostilli's darts can deal different types of damage. When you Spit Ambient Magic, you can choose to have the ostilli deal bludgeoning or slashing damage instead of piercing damage. At 8th level, choose one of the following: acid, cold, electricity, fire, or sonic damage; when your ostilli Spits Ambient Magic, it can deal that damage type instead and adds that trait to the action.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat a second time at 16th level. When you do, choose two additional energy types from those available through this feat at 8th level; you can choose to have your ostilli deal that damage type when it Spits Ambient Magic.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ostilli Host Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "count": true,
+              "key": "RollOption",
+              "option": "versatile-mutation-taken"
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:acid"
+                    }
+                  ],
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:cold"
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:electricity"
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:fire"
+                    }
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:sonic"
+                    }
+                  ],
+                  "value": "sonic"
+                }
+              ],
+              "key": "ChoiceSet",
+              "predicate": [
+                "versatile-mutation-taken:1"
+              ],
+              "priority": 90,
+              "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+              "rollOption": "versatile-mutation"
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:acid"
+                    }
+                  ],
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:cold"
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:electricity"
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:fire"
+                    }
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:sonic"
+                    }
+                  ],
+                  "value": "sonic"
+                }
+              ],
+              "key": "ChoiceSet",
+              "predicate": [
+                "versatile-mutation-taken:2"
+              ],
+              "priority": 95,
+              "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+              "rollOption": "versatile-mutation"
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:acid"
+                    }
+                  ],
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:cold"
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:electricity"
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:fire"
+                    }
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "predicate": [
+                    {
+                      "not": "versatile-mutation:sonic"
+                    }
+                  ],
+                  "value": "sonic"
+                }
+              ],
+              "key": "ChoiceSet",
+              "predicate": [
+                "versatile-mutation-taken:2"
+              ],
+              "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+              "rollOption": "versatile-mutation"
+            },
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.OstilliHostDedication.VersatileMutation.RollOptionLabel",
+              "option": "versatile-mutation-damage",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitAcid",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        8
+                      ]
+                    },
+                    "versatile-mutation:acid"
+                  ],
+                  "value": "acid"
+                },
+                {
+                  "label": "PF2E.TraitBludgeoning",
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.TraitCold",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        8
+                      ]
+                    },
+                    "versatile-mutation:cold"
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        8
+                      ]
+                    },
+                    "versatile-mutation-second:electricity"
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        8
+                      ]
+                    },
+                    "versatile-mutation:fire"
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitPiercing",
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        8
+                      ]
+                    },
+                    "versatile-mutation:sonic"
+                  ],
+                  "value": "sonic"
+                },
+                {
+                  "label": "PF2E.TraitSlashing",
+                  "value": "slashing"
+                }
+              ],
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "property": "damage-type",
+              "selectors": [
+                "spit-ambient-magic-inline-damage"
+              ],
+              "value": "{item|flags.system.rulesSelections.versatileMutationDamage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

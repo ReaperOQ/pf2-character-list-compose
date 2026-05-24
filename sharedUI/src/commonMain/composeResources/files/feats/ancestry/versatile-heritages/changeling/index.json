@@ -7,6 +7,57 @@
       "name": "Accursed Claws",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KsFrWhIPVLOqxV07",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Accursed Claws",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your claws carry your mother's hag magic. When you critically hit with a claw Strike, the target takes an additional 1d4 persistent mental damage.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "claw unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "category": "persistent",
+              "critical": true,
+              "damageType": "mental",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "selector": "claw-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +67,69 @@
       "name": "Brine May",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jEJ6AWCctirMT7p0",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brine May",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your mother was a sea hag, granting you one sea-green or blue eye. You find comfort both in the sea and on the shore. Whenever you roll a success on an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Swim], you get a critical success instead. If you end your turn in water without having succeeded at a Swim action that round, you don't sink (but you might still be moved by the current).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "action:swim"
+              ],
+              "selector": "athletics",
+              "text": "When you roll a success on an Athletics check to swim, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:swim"
+              ],
+              "selector": "athletics",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +139,78 @@
       "name": "Called",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2vlQ09QIBli5u9Gz",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Called",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've heard the Call, and by resisting it, you've developed a bulwark against effects that target your mind. You gain a +1 circumstance bonus to Will saving throws against mental effects. If you roll a success on your saving throw against a mental effect that would make you @UUID[Compendium.pf2e.conditionitems.Item.Controlled], you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "mental"
+              ],
+              "selector": "will",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "mental",
+                "inflicts:controlled"
+              ],
+              "selector": "saving-throw",
+              "text": "When you roll a success on an saving throw against a mental effect that would make you controlled, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "mental",
+                "inflicts:controlled"
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +220,70 @@
       "name": "Callow May",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IFvjnLMw3ht8f84U",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Callow May",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are among the most common of changelings—those born to sweet hags—and a vibrant green eye signifies that parentage. Your mother's manipulative nature and versatile voice gives you an edge when deceiving others. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Charming Liar] skill feat. If you roll Deception for initiative, foes in that combat encounter that haven't acted yet are @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against you.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Charming Liar"
+            },
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "encounter:round:1",
+                "self:participant:initiative:stat:deception",
+                {
+                  "lt": [
+                    "self:participant:initiative:rank",
+                    "target:participant:initiative:rank"
+                  ]
+                }
+              ],
+              "selectors": [
+                "strike-attack-roll",
+                "spell-attack-roll",
+                "strike-damage",
+                "attack-spell-damage"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +293,60 @@
       "name": "Changeling Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4mLlHpD41101H0Iy",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Changeling Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>All too aware of your true nature, you've studied hags and their powers. You gain the trained proficiency rank in Deception and Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Hag Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.deception.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.occultism.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +356,66 @@
       "name": "Dream May",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kqnFdIhToKTnOpMl",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dream May",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are the child of a cuckoo hag, making one of your eyes violet or even black. Your mother's powers over sleep and dreams have given you a degree of resistance to those effects, granting you a +2 circumstance bonus to all saving throws against sleep effects and effects that cause or alter dreams.</p>\n<p>In addition, sleep is more restorative for you. You regain HP equal to your Constitution modifier × double your level (instead of just × your level), and you reduce any drained and doomed conditions you have by 2 instead of by 1.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "sleep",
+                    "dream"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.hp.recoveryMultiplier",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +425,65 @@
       "name": "Hag Claws",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qb25uu1gT5CDMSWb",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hag Claws",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When you came of age, your fingernails grew long and sharp. You gain a claw unarmed attack that deals 1d4 slashing damage. Your claws are in the brawling group and have the agile, finesse, and unarmed traits.</p>\n<hr />\n<p><strong>Special</strong> Hag claws can develop at any point in a changeling's life. You can select this feat anytime you would gain an ancestry feat, but you can't retrain out of it.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.claw",
+              "range": null,
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +493,138 @@
       "name": "Hag Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "t6GBBIwX7hvvxYyV",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hag Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Through your heritage, you can replicate a hag's magic. Choose one common spell of 4th rank or lower from those available to a coven, including the spells contributed to a coven by a hag of your mother's type. You can cast this spell once per day as a 4th-rank occult innate spell.</p>\n<p>Spells available to all covens are @UUID[Compendium.pf2e.spells-srd.Item.Augury], @UUID[Compendium.pf2e.spells-srd.Item.Charm], @UUID[Compendium.pf2e.spells-srd.Item.Clairaudience], @UUID[Compendium.pf2e.spells-srd.Item.Clairvoyance], @UUID[Compendium.pf2e.spells-srd.Item.Dream Message], and @UUID[Compendium.pf2e.spells-srd.Item.Illusory Disguise]. The eligible spells granted by the most prominent types of hag are:</p>\n<p><strong>Cuckoo Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.Nightmare], @UUID[Compendium.pf2e.spells-srd.Item.Spellwrack]</p>\n<p><strong>Iron Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.Earthbind], @UUID[Compendium.pf2e.spells-srd.Item.Spellwrack]</p>\n<p><strong>Sea Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.Humanoid Form], @UUID[Compendium.pf2e.spells-srd.Item.Mariner's Curse], @UUID[Compendium.pf2e.spells-srd.Item.Water Walk]</p>\n<p><strong>Sweet Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.Charm], @UUID[Compendium.pf2e.spells-srd.Item.Honeyed Words], @UUID[Compendium.pf2e.spells-srd.Item.Outcast's Curse]</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  {
+                    "or": [
+                      "item:slug:augury",
+                      "item:slug:charm",
+                      "item:slug:clairaudience",
+                      "item:slug:clairvoyance",
+                      "item:slug:dream-message",
+                      "item:slug:illusory-disguise",
+                      {
+                        "and": [
+                          "feat:brine-may",
+                          {
+                            "or": [
+                              "item:slug:humanoid-form",
+                              "item:slug:water-walk"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "and": [
+                          "feat:callow-may",
+                          {
+                            "or": [
+                              "item:slug:honeyed-words",
+                              "item:slug:outcasts-curse"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "and": [
+                          {
+                            "or": [
+                              "feat:dream-may",
+                              "feat:veil-may"
+                            ]
+                          },
+                          "item:slug:nightmare"
+                        ]
+                      },
+                      {
+                        "and": [
+                          "feat:slag-may",
+                          "item:slug:earthbind"
+                        ]
+                      },
+                      {
+                        "and": [
+                          "feat:snow-may",
+                          "item:slug:solid-fog"
+                        ]
+                      },
+                      {
+                        "and": [
+                          "feat:virga-may",
+                          "item:slug:hydraulic-torrent"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "itemType": "spell",
+                "slugsAsValues": true
+              },
+              "flag": "hagMagic",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellcasting:innate",
+                "item:slug:{item|flags.system.rulesSelections.hagMagic}"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellcasting:innate",
+                "item:slug:{item|flags.system.rulesSelections.hagMagic}"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:changeling"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -79,6 +634,48 @@
       "name": "Hag's Sight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WzJaArukCUf9hpeP",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hag's Sight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've nurtured the supernatural abilities gifted by your hag mother, particularly your sight. You gain darkvision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +685,43 @@
       "name": "Mist Child",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CXgTn2sE7Do11rlv",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mist Child",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You blend in with unnatural subtlety. When you are @UUID[Compendium.pf2e.conditionitems.Item.Concealed] or @UUID[Compendium.pf2e.conditionitems.Item.Hidden], increase the DC of the flat check to target you to 6 if you're concealed or 12 if you're hidden.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -97,6 +731,57 @@
       "name": "Occult Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zPJ2NyMv97AfkN3P",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Occult Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against occult effects.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:occult"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -106,6 +791,74 @@
       "name": "Slag May",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xTe8lNBp76jsrhYh",
+        "folder": "cDR2FASsFdASuyjW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slag May",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your mother was an iron hag known for physical prowess, and you have one violet or steel-gray eye. You have thick, sturdy claws made of cold iron that grow naturally from your body. You gain a claw unarmed attack that deals 1d6 slashing damage. Your claws are in the brawling group, have the unarmed and grapple traits, and are cold iron.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.claw",
+              "slug": "slag-may-claw",
+              "traits": [
+                "grapple"
+              ]
+            },
+            {
+              "definition": [
+                "item:slug:slag-may-claw"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "property": "materials",
+              "value": "cold-iron"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "changeling",
+              "lineage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

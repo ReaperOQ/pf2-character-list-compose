@@ -7,6 +7,101 @@
       "name": "Pirate Combat Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i86JRWsFRpfEJnZP",
+        "folder": "RogsPFVWrS0iRohO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pirate Combat Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're particularly skilled at wielding the weapons used traditionally by pirates. You gain either the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] or @UUID[Compendium.pf2e.feats-srd.Item.Underwater Marauder] skill feat, even if you do not meet its prerequisites. You have familiarity with the following weapons: @UUID[Compendium.pf2e.equipment-srd.Item.Hatchet], @UUID[Compendium.pf2e.equipment-srd.Item.Rapier], @UUID[Compendium.pf2e.equipment-srd.Item.Scimitar], and @UUID[Compendium.pf2e.equipment-srd.Item.Whip]—for the purposes of proficiency, you treat any of these weapons as simple weapons. Your GM may add additional martial weapons to this list as appropriate for your world or region.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pirate Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:base:hatchet",
+                    "item:base:rapier",
+                    "item:base:scimitar",
+                    "item:base:whip"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.PirateWeapons",
+              "sameAs": "simple",
+              "slug": "pirate-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:base:hatchet",
+                    "item:base:rapier",
+                    "item:base:scimitar",
+                    "item:base:whip"
+                  ]
+                }
+              ]
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Underwater Marauder"
+                }
+              ],
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Feat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +111,57 @@
       "name": "Pirate Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l1eCHNahsBb7rUkT",
+        "folder": "RogsPFVWrS0iRohO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pirate Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As a pirate, you sail the seas in search of enemy ships to plunder and great adventures to embark on. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Sailing Lore or for a specific coastal city you have a connection to (such as Port Peril Lore). You ignore the effects of difficult terrain or uneven ground caused by unstable ground (such as the deck of a ship). Additionally, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Boarding Assault] action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.O9P1YgtiCgHlPNp5]{Pirate}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Boarding Assault"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +171,94 @@
       "name": "Rope Runner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wpqKltAoJjRQgWow",
+        "folder": "RogsPFVWrS0iRohO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rope Runner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You run and climb across ropes and rigging almost as easily as on the ground. You gain a climb Speed of 15 feet, but only when climbing ropes and similar objects. Whenever you succeed at an Athletics check to Climb or an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Balance], you get a critical success instead. You aren't @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] while Climbing or Balancing on a rope or similar object.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Acrobatics"
+              },
+              {
+                "value": "trained in Athletics"
+              },
+              {
+                "value": "Pirate Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "rope-runner",
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "rope-runner"
+              ],
+              "selector": "climb",
+              "value": 15
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "rope-runner",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "action:balance",
+                        "check:statistic:acrobatics"
+                      ]
+                    },
+                    {
+                      "and": [
+                        "action:climb",
+                        "check:statistic:athletics"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "skill-check"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -34,6 +268,47 @@
       "name": "Walk the Plank",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TzBP8yiZQHNhei1V",
+        "folder": "RogsPFVWrS0iRohO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Walk the Plank",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You frighten a foe into moving where you want them, traditionally demanding they walk the plank.</p>\n<p>Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] an opponent. On a success, in addition to the normal effects, you can also force the target to Stride up to its Speed immediately. You choose the path the target takes, but you can't force it to move into an obviously harmful space (such as into hazardous terrain or a space where it would fall) unless your check was a critical success. As normal for forced movement, this movement doesn't trigger reactions.</p>\n<p>The target then becomes temporarily immune to Walk the Plank for 10 minutes.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pirate Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Beastmaster's Trance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ckglzh4dXcGWPNS3",
+        "folder": "o0E5YDtaIQIu0rb2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beastmaster's Trance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can enter a trance that allows you to briefly inhabit the body of one of your animal companions and share its senses. You gain the focus spell @UUID[Compendium.pf2e.spells-srd.Item.Beastmaster Trance]. Increase the number of Focus Points in your focus pool by 1.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +57,53 @@
       "name": "Bestial Protection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bHHBEVmrY61MIgsP",
+        "folder": "o0E5YDtaIQIu0rb2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bestial Protection",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your companion's mere presence is enough to rattle creatures that fall under its shadow. When a creature adjacent to your animal companion that's smaller than it targets you with an attack, that creature becomes @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              },
+              {
+                "value": "animal companion that's Large or greater"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "emotion",
+              "fear",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +113,50 @@
       "name": "Nature's Precision",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6B7ksTtpbfp114sA",
+        "folder": "o0E5YDtaIQIu0rb2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nature's Precision",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your companions pick at an enemy's weak points. When your companion strikes a @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] creature with an agile or finesse unarmed attack, it deals an additional 1d4 precision damage (2d4 if the animal companion is specialized). If the companion already deals precision damage, combine the precision damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              },
+              {
+                "value": "animal companion with an agile or finesse unarmed attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +166,51 @@
       "name": "Swift Guardian",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tOtrtDR7ftHhPFm4",
+        "folder": "o0E5YDtaIQIu0rb2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Guardian",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative.</p><hr /><p>When danger appears, you quickly send away your active companion and call in a different animal ally. You use @UUID[Compendium.pf2e.actionspf2e.Item.Call Companion]. The new animal companion typically arrives in the same location as the one that departed, though the GM might adjust this depending on the circumstances and Speeds of the animals. If you have @UUID[Compendium.pf2e.feats-srd.Item.Lead the Pack], you can swap one of your two active companions for an inactive companion.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              },
+              {
+                "value": "Call Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +220,49 @@
       "name": "Tenacious Endurance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LT5rw7JfemZSXUKB",
+        "folder": "o0E5YDtaIQIu0rb2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tenacious Endurance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You encourage your companion to refuse to yield, against even the mightiest of foes. When one of your animal companions is reduced to 0 Hit Points, if it isn't wounded, it can remain standing with 1 Hit Point and become @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 1}.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

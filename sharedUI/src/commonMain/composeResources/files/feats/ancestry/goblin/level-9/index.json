@@ -7,6 +7,49 @@
       "name": "Cave Climber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bo4JG09pkoS7ywSZ",
+        "folder": "uVuNZOUhwTF4tzU2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cave Climber",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>After years of clambering through caverns, you can climb easily anywhere you go. You gain a climb Speed of 10 feet.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "climb",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "goblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +59,43 @@
       "name": "Cling",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SiedJ6hnDLEGeeBj",
+        "folder": "uVuNZOUhwTF4tzU2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cling",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful Strike and you have a free hand.</p>\n<hr />\n<p>You hang onto a foe to harry them into submission. If your target moves while you're hanging onto it, you can choose to move with the target. The target is released if you choose not to move with it, at the start of your next turn, or if the target Escapes. Attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] from a Cling are made against your Acrobatics DC, but they end the Cling instead of the conditions normally ended by the Escape action.</p>\n<hr />\n<p><strong>Special</strong> You can use this action without a free hand if your preceding Strike was made with your jaws or a similar unarmed attack you could use to hang on. The GM determines which unarmed attacks apply. Hanging on in this way prevents you from using that unarmed attack.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "goblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +105,52 @@
       "name": "Goblin Club",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Oh2GaKh4Qc77xSoO",
+        "folder": "uVuNZOUhwTF4tzU2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Goblin Club",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You can summon a mass of magic energy in your hand that, naturally, you use to smack those who offend you. You conjure forth a spectral bangmangi club for 1 minute, which appears in your hands, though you can give it to another creature to wield. This weapon is a <em>+1 striking ghost touch club</em>.</p>\n<p>At 13th level, the bangmangi is a <em>+2 greater striking ghost touch club</em>.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dokkaebi goblin heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "goblin",
+              "occult"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +160,47 @@
       "name": "Skittering Scuttle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dtmLxbSy2H8h8e4N",
+        "folder": "uVuNZOUhwTF4tzU2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Skittering Scuttle",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can scuttle farther and faster when maneuvering alongside allies. When you use Goblin Scuttle, you can Stride up to half your Speed instead of Stepping.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Goblin Scuttle"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "goblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +210,80 @@
       "name": "Whispers in the Night",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qYJyzAk8TOWPjaAL",
+        "folder": "uVuNZOUhwTF4tzU2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whispers in the Night",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You weave your illusions with greater ability, allowing you to play tricks and slip through the night. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Darkness] and @UUID[Compendium.pf2e.spells-srd.Item.Ventriloquism] as 2nd-rank innate occult spells, each once per day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dokkaebi goblin heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:darkness",
+                    "item:slug:ventriloquism"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:darkness",
+                    "item:slug:ventriloquism"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:goblin"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "goblin"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

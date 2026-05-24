@@ -7,6 +7,84 @@
       "name": "Attacked from Within",
       "img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
       "type": "spell",
+      "data": {
+        "_id": "B4p4cD9Q71mHTpOP",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
+        "name": "Attacked from Within",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "nd3XNs3JZLTqgaDv": {
+              "applyMod": false,
+              "category": null,
+              "formula": "12d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "spirit"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>You assert your power over the target's own spirit as you reach deep into its soul in order to discover a moment of excruciating anguish, debilitating humiliation, or abject despair. The target takes 12d8 spirit damage and must attempt a Will save.</p><hr /><p><strong>Critical Success</strong> The target takes no damage, with a brief sensation of pain followed by a pleasant memory.</p>\n<p><strong>Success</strong> The target takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and is frightened 2 and @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] for 1 round.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 2d8.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "varies"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "nd3XNs3JZLTqgaDv": "2d8"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "spirit"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -15,6 +93,97 @@
       "name": "Beheading Buzz Saw",
       "img": "icons/environment/traps/saw-steel-grey.webp",
       "type": "spell",
+      "data": {
+        "_id": "dKWc83KKiXoIJkhp",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/environment/traps/saw-steel-grey.webp",
+        "name": "Beheading Buzz Saw",
+        "system": {
+          "area": {
+            "type": "line",
+            "value": 60
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "5d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "slashing"
+            },
+            "1": {
+              "applyMod": false,
+              "category": "persistent",
+              "formula": "4d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bleed"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You compress molten scraps pulled from the Plane of Metal into a spinning disc with gruesome blades protruding from its edges. It wheels forward, slicing through anyone in its path. Each creature in the area takes 5d10 slashing damage and 4d6 persistent bleed damage, with a Reflex save.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature takes full damage.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage. If the creature has a head, it must succeed at a @Check[fortitude|against:spell|traits:death,incapacitation] save or be decapitated; this kills any creature except ones that don't require a head to live. For creatures with multiple heads, this usually kills the creature only if you sever its last head. This second save has the death and incapacitation traits.</p><hr /><p><strong>Heightened (+1)</strong> The slashing damage increases by 1d10, and the persistent bleed damage increases by 1d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d10",
+              "1": "1d6"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "metal"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -23,6 +192,65 @@
       "name": "Chrysopoetic Curse",
       "img": "icons/commodities/metal/ingot-hammered-gold.webp",
       "type": "spell",
+      "data": {
+        "_id": "hvV6IruyW4MAr0Ub",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/commodities/metal/ingot-hammered-gold.webp",
+        "name": "Chrysopoetic Curse",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>You grant the target the gift of riches, giving them the power to turn anything they touch to gold. The target must attempt a Will save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target's skin turns their armor and clothing partially to gold. If the target is wearing any armor or clothing, they become @UUID[Compendium.pf2e.conditionitems.Item.Encumbered].</p>\n<p><strong>Failure</strong> As success, but the curse extends to the target's held weapons and other gear. If the target is holding any weapons or other objects, they become @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 3}, and the objects' Hardness is reduced by 5.</p>\n<p><strong>Critical Failure</strong> The curse becomes even stronger, extending to the surrounding terrain. As failure, and if the creature is standing on a solid surface, the ground in their space transmutes itself into a quagmire of liquid gold. The gold is greater difficult terrain. If the creature leaves its square (or when the curse ends), any affected terrain returns to its original shape and substance and the terrain in the new square transmutes to gold.</p>\n<p>Any objects that were turned to gold return to their previous form and original shape when they leave the target's possession or the spell ends. As long as the target did not critically succeed on their saving throw, 2d6 gp worth of gold flakes and dust are left behind as the curse recedes.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "one creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "divine"
+            ],
+            "value": [
+              "concentrate",
+              "curse",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -31,6 +259,58 @@
       "name": "Contingency",
       "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
       "type": "spell",
+      "data": {
+        "_id": "WG91Z5TiR6oO5FOw",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+        "name": "Contingency",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You prepare a spell that will trigger later. While casting contingency, you also cast another spell of 4th rank or lower with a casting time of no more than 3 actions. This companion spell must be one that can affect you. You must make any decisions for the spell when you cast contingency, such as choosing a damage type for resist energy. During the casting, choose a trigger under which the spell will be cast, using the same restrictions as for the trigger of a Ready action. Once contingency is cast, you can cause the companion spell to come into effect as a reaction with that trigger. It affects only you, even if it would affect more creatures. If you define complicated conditions, as determined by the GM, the trigger might fail. If you cast contingency again, the newer casting supersedes the older.</p>\n<hr />\n<p><strong>Heightened (8th)</strong> You can choose a spell of 5th rank or lower.</p>\n<p><strong>Heightened (9th)</strong> You can choose a spell of 6th rank or lower.</p>\n<p><strong>Heightened (10th)</strong> You can choose a spell of 7th rank or lower.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the next time you make your daily preparations"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "10 minutes"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -39,6 +319,79 @@
       "name": "Dancing Fountain",
       "img": "icons/magic/water/wave-water-explosion.webp",
       "type": "spell",
+      "data": {
+        "_id": "smiVuoFMSgY2FTOO",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/water/wave-water-explosion.webp",
+        "name": "Dancing Fountain",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "CMSE36W7SDcJjtPP": {
+              "applyMod": false,
+              "category": null,
+              "formula": "10d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p><strong>Area</strong> 30-foot burst centered on you</p>\n<hr />\n<p>Tapping the ground, you create a shallow pool of water that spreads over the affected area, and majestic sprays, jets, and mists of water erupt forth in a dazzling water show. When you Cast the Spell, and the first time each round you Sustain the spell, you can command the fountain to use one of the following displays, which is accompanied by a loud burst of music. The dancing fountain is somewhat fickle in its desire for novelty, meaning it can't be commanded to use the same display on two consecutive turns.</p>\n<ul>\n<li><strong>Chasing Jets</strong> A series of vertical jets shoot up in a chase sequence, forcing one creature within the fountain to move 15 feet in a direction of your choice unless it succeeds at a Reflex save against your spell DC. The fountain can't make a creature move outside its area.</li>\n<li><strong>Flashing Spray</strong> Diffuse fog fills the area of the emanation. All creatures within the fountain become @UUID[Compendium.pf2e.conditionitems.Item.Concealed], and all creatures outside the fountain become concealed to creatures within it. The spray persists until the beginning of your next turn.</li>\n<li><strong>Power Rings</strong> The fountain blasts a series of rings of water into the air that land with a crash in a @Template[burst|distance:10] centered on a location of your choice within the fountain. The falling torrent deals @Damage[10d6[bludgeoning]] damage to all creatures within the burst (basic Reflex).</li>\n</ul>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "water"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -47,6 +400,88 @@
       "name": "Devouring Void",
       "img": "icons/magic/death/skull-trio-badge-purple.webp",
       "type": "spell",
+      "data": {
+        "_id": "EAuUxxnDV4v3KDAC",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/death/skull-trio-badge-purple.webp",
+        "name": "Devouring Void",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "kCSMLZj2yQZnMN8b": {
+              "applyMod": false,
+              "category": null,
+              "formula": "7d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "void"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>Countless tears in space appear in the area, like hungry mouths. When the spell is cast and the first time each round it's sustained, living creatures in its area take 7d8 void damage (basic Fortitude save). A living creature using a move action to leave the area must succeed at a @Check[reflex] save or their action is disrupted at the edge of the area.</p><hr /><p><strong>Heightened (+1)</strong> The void damage increases by 1d8.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "kCSMLZj2yQZnMN8b": "1d8"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "occult",
+              "divine"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "void"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -55,6 +490,87 @@
       "name": "Divine Decree",
       "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
       "type": "spell",
+      "data": {
+        "_id": "sX2o0HH4RjJDAZ8C",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+        "name": "Divine Decree",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 40
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "7d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "spirit"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You utter a potent litany from your faith, a mandate that harms those who oppose your ideals. You deal 7d10 spirit damage to your enemies in the area; each enemy must attempt a Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is enfeebled 2 for 1 minute. If you're on your home plane and the creature is not, the creature is sent back to its home plane. A creature of 10th level or lower must also succeed at a Will save or be @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed] for 1 minute; if it critically fails, it dies (this is a death effect).</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d10, and the level of creatures that must attempt a second save on a critical failure increases by 2.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "varies"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d10"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "sanctified",
+              "spirit"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -63,6 +579,64 @@
       "name": "Duplicate Foe",
       "img": "systems/pf2e/icons/spells/duplicate-foe.webp",
       "type": "spell",
+      "data": {
+        "_id": "73rToy0v5Ra9NvL6",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/duplicate-foe.webp",
+        "name": "Duplicate Foe",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You create a temporary duplicate of an enemy to fight on your behalf. The target can attempt a Fortitude save to disrupt the spell. The duplicate appears in an unoccupied space adjacent to the target and has the target's attack modifier, AC, saving throw modifiers, Perception, and skill modifiers, but it has only 70 Hit Points and lacks the target's special abilities, including immunities, resistances, and weaknesses. It has no magic items except weapon potency runes.</p>\n<p>The duplicate gains the minion trait, and it can only Stride and Strike. Its Strikes deal the target's normal damage but don't apply added effects, since it doesn't have special abilities. The spell automatically ends if the duplicate's Hit Points drop to 0.</p>\n<p>The duplicate attacks your enemies to the best of its abilities. You can also try to give it additional instructions; when you Sustain the spell, you can also Command a Minion as part of your action, but the GM determines whether the duplicate follows your command.</p>\n<p>The duplicate is unstable, so each turn after it takes its actions, it loses 4d6 Hit Points. It's not a living creature, and it can never regain its lost Hit Points in any way.</p>\n<hr />\n<p><strong>Critical Success</strong> You fail to create a duplicate.</p>\n<p><strong>Success</strong> The duplicate deals half damage with its Strikes and the duration is reduced to a maximum of 2 rounds.</p>\n<p><strong>Failure</strong> The duplicate works as described.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The level of creature you can target increases by 2. The duplicate has 10 more HP.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 enemy of level 15 or lower"
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -71,6 +645,101 @@
       "name": "Eclipse Burst",
       "img": "systems/pf2e/icons/spells/eclipse-burst.webp",
       "type": "spell",
+      "data": {
+        "_id": "0jadeyQIItIuRgeH",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/eclipse-burst.webp",
+        "name": "Eclipse Burst",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 60
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "cold"
+            },
+            "v1pnjhfu6e9akqe0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "void"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>A globe of freezing darkness explodes in the area, dealing 8d10 cold damage to creatures in the area, plus an additional 8d4 void damage to living creatures. Each creature in the area must attempt a Reflex save.</p>\n<p>If the globe overlaps with an area of magical light or affects a creature affected by magical light, <em>eclipse burst</em> attempts to counteract the light effect.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Blinded] by the darkness for an unlimited duration.</p><hr /><p><strong>Heightened (+1)</strong> The cold damage increases by 1d10 and the void damage against the living increases by 1d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d10",
+              "v1pnjhfu6e9akqe0": "1d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "500 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "cold",
+              "concentrate",
+              "darkness",
+              "manipulate",
+              "void"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -79,6 +748,61 @@
       "name": "Energy Aegis",
       "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "m2xFMNyQiUKQDRaj",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+        "name": "Energy Aegis",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You protect the target with a powerful, long-lasting energy barrier. The target gains resistance 5 to acid, cold, electricity, fire, force, sonic, vitality, and void damage.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Energy Aegis]</p>\n<hr />\n<p><strong>Heightened (9th)</strong> The resistances increase to 10.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until your next daily preparations"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "touch"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "1 minute"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -87,6 +811,114 @@
       "name": "Execute",
       "img": "icons/magic/unholy/hand-claw-fog-green.webp",
       "type": "spell",
+      "data": {
+        "_id": "Z9OrRXKgAPv6Hn5l",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/unholy/hand-claw-fog-green.webp",
+        "name": "Execute",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "70",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "void"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You point at a creature and invoke the demise of all things. The target takes 70 void damage with a basic Fortitude save. If the target is undead or otherwise has void healing, the spell loses the death and void traits and gains the vitality trait, and the target takes 70 vitality damage with a basic Fortitude save.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 10.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "damage": {
+              "0": "10"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "overlays": {
+            "WTeek6DuuUC5uXiv": {
+              "_id": "WTeek6DuuUC5uXiv",
+              "name": "Execute (Void)",
+              "overlayType": "override",
+              "sort": 1,
+              "system": {}
+            },
+            "rZUgF7LFHu7N5MFK": {
+              "_id": "rZUgF7LFHu7N5MFK",
+              "name": "Execute (Vitality)",
+              "overlayType": "override",
+              "sort": 2,
+              "system": {
+                "damage": {
+                  "0": {
+                    "category": null,
+                    "type": "vitality"
+                  }
+                },
+                "traits": {
+                  "value": [
+                    "concentrate",
+                    "manipulate",
+                    "vitality"
+                  ]
+                }
+              }
+            }
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "death",
+              "manipulate",
+              "void"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -95,6 +927,61 @@
       "name": "Fiery Body",
       "img": "icons/magic/fire/elemental-fire-humanoid.webp",
       "type": "spell",
+      "data": {
+        "_id": "XS7Wyh5YC0NWeWyB",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+        "name": "Fiery Body",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You become living flame, giving you fire immunity, resistance 10 to precision damage, and weakness 5 to cold and to water. Any creature that touches you or damages you with an unarmed attack or non-reach melee weapon takes @Damage[3d6[fire]] damage.</p>\n<p>Your unarmed attacks deal an additional 1d4 fire damage, and your fire spells deal one additional die of fire damage (of the same damage die the spell uses). You can cast @UUID[Compendium.pf2e.spells-srd.Item.Ignition] as an innate spell; the casting is reduced from 2 actions to 1.</p>\n<p>In fire form, you have a fly Speed of 40 feet and don't need to breathe.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Fiery Body]</p>\n<hr />\n<p><strong>Heightened (9th)</strong> Creatures touching you take @Damage[4d6[fire]] damage instead of 3d6, your unarmed attacks deal 2d4 additional fire damage, and you have a fly Speed of 60 feet.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "fire",
+              "manipulate",
+              "polymorph"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -103,6 +990,84 @@
       "name": "Final Fate of the Locust Host",
       "img": "icons/creatures/invertebrates/fly-wasp-mosquito-green.webp",
       "type": "spell",
+      "data": {
+        "_id": "bIz6QnUIxu5Z7vEH",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/creatures/invertebrates/fly-wasp-mosquito-green.webp",
+        "name": "Final Fate of the Locust Host",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "MpZ5f5dp1t309Kpc": {
+              "applyMod": false,
+              "category": null,
+              "formula": "5d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "piercing"
+            },
+            "rQOvmXjYxlJ2tKPb": {
+              "applyMod": false,
+              "category": null,
+              "formula": "5d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "poison"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>You conjure the rotting corpse of Deskari, previously Lord of the Locust Hosts, to the battlefield. Deskari's corpse occupies the space of a Gargantuan creature. The corpse is riddled with vermin, including countless locusts, whose collective movement grants the corpse a Speed of 60 feet and a fly Speed of 60 feet.</p>\n<p><strong>Arrive</strong> <em>Behold the Rotten Lord</em> Deskari's corpse is unspeakably foul, emitting a putrid stench, and constantly twitches thanks to the movement of the millions of insects and vermin that consume it. A loud, persistent buzzing is created by the clouds of locusts surrounding it like a haze. Each living enemy creature within a @Template[type:emanation|distance:60] must attempt a Fortitude save with the following effects.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 2}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 3} and @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for the duration.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 4}, @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}, and deafened for the duration.</p><hr /><p><strong>Depart</strong> (poison) <em>Feast of the Locust Host</em> The millions of insects and vermin feasting on Deskari pour out of its corpse and surge across the battlefield, consuming your enemies. This swarm deals 5d8 piercing damage and 5d8 poison damage to enemy creatures in a @Template[type:emanation|distance:60] with a basic Reflex save. A creature that critically fails is additionally @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2}.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the end of your next turn"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "range": {
+            "value": "500 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "rare",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "incarnate",
+              "manipulate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -111,6 +1076,76 @@
       "name": "Heaving Earth",
       "img": "systems/pf2e/icons/spells/heaving-earth.webp",
       "type": "spell",
+      "data": {
+        "_id": "yWySiasyPZcRoe4d",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/heaving-earth.webp",
+        "name": "Heaving Earth",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "knLe6PF6xfJGMWzT": {
+              "applyMod": false,
+              "category": null,
+              "formula": "12d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You strike the ground, and unleash a wave that travels through the struck surface to the target. The effect ends as soon as it can't travel through a solid surface, such as a stone floor. Each creature in a line between you and the target is shaken by tremors and must attempt a Reflex saving throw against your spell DC. A creature that fails this save is pushed 10 feet away from you.</p>\n<p>The wave explodes once it reaches the target, showering the target with earth and stone and dealing @Damage[12d10[bludgeoning]] damage with a basic Reflex save. A target that fails its save against this explosion is also pushed back 10 feet and knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone]. A creature subject to the explosion doesn't need to save against the tremors.</p>\n<hr />\n<p><strong>Heightened (9th)</strong> The wave explodes on one additional target of your choice in the line to the final target.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature or object on the ground"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "earth",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -119,6 +1154,113 @@
       "name": "Hungry Depths",
       "img": "systems/pf2e/icons/spells/hungry-depths.webp",
       "type": "spell",
+      "data": {
+        "_id": "0EzLXIpPPH0LOKqt",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/hungry-depths.webp",
+        "name": "Hungry Depths",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 5
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "YsQUZm1QLMDCC7aJ": {
+              "applyMod": false,
+              "category": null,
+              "formula": "4d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "piercing"
+            },
+            "b6lTqa8nIkcnlb6B": {
+              "applyMod": false,
+              "category": null,
+              "formula": "4d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "void"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>A spiral of dark, corrupted water appears in the ground, plunging open a door to the depths that seems to descend for miles. Disembodied glowing eyes and gnashing teeth spin within the vortex, consuming anything that crosses their path.</p>\n<p>All creatures in the area take 4d8 piercing damage plus 4d4 void damage (basic Reflex save). Each time you Sustain the spell, you can increase the vortex's radius by 5 feet, to a maximum of 15 feet, or you can move the vortex up to 10 feet in a straight line. Each creature the vortex moves through takes the damage with a basic Reflex save. A creature can take damage from <em>hungry depths</em> only once per round.</p>\n<p>If cast underwater, <em>hungry depths</em> instead fills a 40-foot-tall cylinder with a 5-foot radius.</p>\n<hr />\n<p><strong>Heightened (9th)</strong> The vortex deals 5d8 piercing damage and 5d4 void damage.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "levels": {
+              "9": {
+                "damage": {
+                  "YsQUZm1QLMDCC7aJ": {
+                    "applyMod": false,
+                    "category": null,
+                    "formula": "5d8",
+                    "materials": [],
+                    "type": "piercing"
+                  },
+                  "b6lTqa8nIkcnlb6B": {
+                    "applyMod": false,
+                    "category": null,
+                    "formula": "5d4",
+                    "materials": [],
+                    "type": "void"
+                  }
+                }
+              }
+            },
+            "type": "fixed"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "void",
+              "water"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -127,6 +1269,89 @@
       "name": "Indolent Haze",
       "img": "icons/magic/air/weather-wind-gust.webp",
       "type": "spell",
+      "data": {
+        "_id": "xh6hPMDx2n4OaBU7",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/air/weather-wind-gust.webp",
+        "name": "Indolent Haze",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 20
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "DnKLI3UNhM9r5EwP": {
+              "applyMod": false,
+              "category": null,
+              "formula": "6d4",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "spirit"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>The faint scent of poppies and a soothing calm fill the area, urging creatures to lay down and take a rest, to do nothing at all, ever again. Creatures in the area when you Cast the Spell must attempt a Will save. Creatures who end their turn in the area must also attempt the save. You can Dismiss the spell.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature lies down to rest, becoming @UUID[Compendium.pf2e.conditionitems.Item.Prone]. If they were already prone, they instead drift off to sleep, becoming @UUID[Compendium.pf2e.conditionitems.Item.Unconscious].</p>\n<p><strong>Failure</strong> As success, except that the creature is so happy lying down that they cannot attempt to Stand or otherwise maneuver themself off of the ground on their next turn, though they can @UUID[Compendium.pf2e.actionspf2e.Item.Crawl] (potentially to escape the spell's area).</p>\n<p><strong>Critical Failure</strong> The creature immediately lies down and drifts off to sleep, becoming prone and unconscious. Any creature in the area who is already unconscious when you Cast the Spell (or whose turn ends in the spell's area while they are unconscious) takes 6d4 spirit damage as their life force is drained away through their dreams. This damage does not automatically wake them.</p><hr /><p><strong>Heightened (+1)</strong> The spirit damage increases by 2d4.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "DnKLI3UNhM9r5EwP": "2d4"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "incapacitation",
+              "manipulate",
+              "mental",
+              "sleep"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -135,6 +1360,62 @@
       "name": "Interplanar Teleport",
       "img": "icons/magic/lightning/bolt-strike-explosion-purple.webp",
       "type": "spell",
+      "data": {
+        "_id": "5bTt2CvYHPvaR7QQ",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/lightning/bolt-strike-explosion-purple.webp",
+        "name": "Interplanar Teleport",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a planar key for the destination plane, used as a locus</p>\n<hr />\n<p>You and your allies traverse the barriers between planes of existence. The targets move to another plane, such as the Plane of Fire, the Netherworld, or the Outer Rifts. You must know the destination plane exists and use a magic planar key created from material from that plane as a locus for the spell. While the planar keys for most prominent planes are uncommon, just like the spell <em>interplanar teleport</em>, more obscure planes and demiplanes often have rare or possibly even unique planar keys.</p>\n<p>The spell is highly imprecise, and you appear 1d20×25 miles from the last place one of the targets (of your choice) was located the last time that target traveled to the plane. If it's the first time traveling to a particular plane for all targets, you appear at a random location on the plane. <em>Interplanar teleport</em> doesn't provide a means of return travel, though casting <em>interplanar teleport</em> again allows you to return to your previous plane unless there are extenuating circumstances.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "5 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "up to 8 willing creatures"
+          },
+          "time": {
+            "value": "10 minutes"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "teleportation"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -143,6 +1424,69 @@
       "name": "Lifewood Cage",
       "img": "systems/pf2e/icons/spells/force-cage.webp",
       "type": "spell",
+      "data": {
+        "_id": "HES5jvGiNZZnJycK",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/force-cage.webp",
+        "name": "Lifewood Cage",
+        "system": {
+          "area": {
+            "type": "cube",
+            "value": 20
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You create an immobile, @UUID[Compendium.pf2e.conditionitems.Item.Invisible] prison of hardened wood suffused with vital energy from the Forge of Creation. The cage is a 20-foot cube made of wooden branches, each a half inch thick and a half inch apart. Each creature in the area where you create the cage must attempt a Reflex save. If such a creature fails, it becomes trapped inside the cage. If it succeeds, it's pushed outside the cage into a space of its choice. If a creature in the area is too big to fit inside the prison, the spell automatically fails.</p>\n<p>The cage has AC 10, Hardness 20, and 40 Hit Points, and it's immune to critical hits and precision damage, though it has weakness 5 to void damage. A creature capable of passing through the space between the bars (typically a Tiny creature) can leave; all others are confined within. The vitality energy suffusing the wood prevents incorporeal undead creatures from passing through the beams. Attacks with a weapon too large to fit between the bars can't pass through the cage, and the bars provide standard cover even against attacks that can pass through the gaps. Spells and most area effects (such as dragon breath) can pass through the cage uninhibited.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": "30 feet; 1 cube 20 feet on each side"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "vitality",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -151,6 +1495,66 @@
       "name": "Love's Sacrifice",
       "img": "icons/magic/life/heart-broken-red.webp",
       "type": "spell",
+      "data": {
+        "_id": "flKde7BHrZnRheMl",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/life/heart-broken-red.webp",
+        "name": "Love's Sacrifice",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p><strong>Trigger</strong> You take damage that would reduce you to 0 Hit Points.</p><hr /><p>You cry out for aid, and a creature near you feels compelled to throw itself in front of the threat as the ultimate expression of their love. A target that genuinely loves the caster without magical compulsion, at their player's or the GM's discretion, fails the save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The creature moves adjacent to you, moving further than its Speed if necessary as the magic compels it to exceed its limits. It takes half the damage you would have taken, while you take the rest. If you would be reduced to 0 Hit Points, you're reduced to 1 instead.</p>\n<p><strong>Failure</strong> As success, except they take the full damage. If the damage reduces them to 0 Hit Points, they immediately die; this is a death effect.</p><hr /><p><em>PFS Note:</em> This spell can only be cast on a friendly NPC with GM approval, and on a PC with their player's approval.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "one creature"
+          },
+          "time": {
+            "value": "reaction"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "divine"
+            ],
+            "value": [
+              "auditory",
+              "concentrate",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -159,6 +1563,70 @@
       "name": "Mask of Terror",
       "img": "icons/commodities/treasure/mask-wood-tan.webp",
       "type": "spell",
+      "data": {
+        "_id": "O6VQC1Bs4aSYDa6R",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/commodities/treasure/mask-wood-tan.webp",
+        "name": "Mask of Terror",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>The target appears to be a gruesome and terrifying creature. The effect is unique to each observer, so a human viewing the target might see a demon with bloody fangs, but a demon observing the target might see a glowing angelic visage.</p>\n<p>When any creature attempts a hostile action against the target, the creature must attempt a Will save. It is then temporarily immune until the end of its next turn.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} before using its action.</p>\n<p><strong>Critical Failure</strong> The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}, and its action fails and is wasted.</p>\n<hr />\n<p><strong>Heightened (8th)</strong> You can target up to 5 creatures. If a creature uses a hostile action or reaction that affects multiple targets simultaneously, it needs to attempt only one save against <em>mask of terror</em>.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "emotion",
+              "fear",
+              "illusion",
+              "manipulate",
+              "mental",
+              "visual"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -167,6 +1635,60 @@
       "name": "Momentary Recovery",
       "img": "systems/pf2e/icons/spells/momentary-recovery.webp",
       "type": "spell",
+      "data": {
+        "_id": "ggtZTxeyEnDYbt6f",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/momentary-recovery.webp",
+        "name": "Momentary Recovery",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You instantly teleport yourself and any items you're wearing or holding from your current space to a clear space within range that you can see. If this teleportation would bring another creature with you—even if you're carrying it in an extradimensional container—the spell is lost. After you vanish but before you arrive, you can take up to 2 actions (or the number of actions you spent to cast <em>momentary recovery</em>, if it was fewer than 2 actions). You can't target any other creatures or objects with anything during these actions and any effect with a duration that you create during these actions ends immediately when you arrive. After you arrive, you are @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} until the end of your next turn.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "teleportation"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -175,6 +1697,91 @@
       "name": "Moonburst",
       "img": "icons/magic/lightning/orb-ball-spiral-blue.webp",
       "type": "spell",
+      "data": {
+        "_id": "Shiuhdb2nO6Qgk3k",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/lightning/orb-ball-spiral-blue.webp",
+        "name": "Moonburst",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 60
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": true,
+          "damage": {
+            "8if8c4kjctnupcu8": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [
+                "silver"
+              ],
+              "type": "cold"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>A powerful globe of chilling moonlight explodes in the area, dealing 8d10 cold damage to all creatures in the area, plus an additional @Damage[(@item.rank+1)d10[vitality]] damage to undead creatures.</p>\n<p><em>Moonburst</em>'s cold damage is silver damage for the purposes of weaknesses, resistances, and the like. Each creature and object in the area must attempt a Reflex save.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage.</p>\n<p><strong>Critical Failure</strong> The creature takes full damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Blinded] permanently.</p>\n<p>If the globe overlaps with an area of magical darkness, <em>moonburst</em> attempts to counteract the darkness effect.</p><hr /><p><strong>Heightened (+1)</strong> The cold damage increases by 1d10, and the vitality damage against undead increases by 1d10.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "8if8c4kjctnupcu8": "1d10"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "range": {
+            "value": "500 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "cold",
+              "concentrate",
+              "light",
+              "manipulate",
+              "vitality"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -183,6 +1790,64 @@
       "name": "Orb of Twisting Fate",
       "img": "icons/magic/light/explosion-star-teal-purple.webp",
       "type": "spell",
+      "data": {
+        "_id": "qO4xOJ0kAvhVGDpX",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/light/explosion-star-teal-purple.webp",
+        "name": "Orb of Twisting Fate",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>The glass orb of an omen dragon erupts from your target's forehead, overwhelming their mind with alternative options.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> At the start of its turn, the target must decide whether to spend its first action to Stride in a random direction or to spend its first action doing nothing. The spell then ends.</p>\n<p><strong>Failure</strong> As success, but instead of ending automatically, the target attempts a new save at the end of each of its turns, ending the effect on a success.</p>\n<p><strong>Critical Failure</strong> As success, but instead of ending automatically, the spell lasts for the full duration.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "up to 1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "range": {
+            "value": "15 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "mental"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -191,6 +1856,60 @@
       "name": "Planar Palace",
       "img": "systems/pf2e/icons/spells/magnificent-mansion.webp",
       "type": "spell",
+      "data": {
+        "_id": "vPWMEyVTreMOoFnm",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/magnificent-mansion.webp",
+        "name": "Planar Palace",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You grow an extradimensional demiplane consisting of a spacious dwelling with a single entrance. The entrance connects to the plane where you Cast the Spell, appearing anywhere within the spell's range as a faint, shimmering, vertical rectangle 5 feet wide and 10 feet high. You designate who can enter when you Cast the Spell. Once inside, you can shut the entrance, making it @UUID[Compendium.pf2e.conditionitems.Item.Invisible]. You and the creatures you designated can reopen the door at will.</p>\n<p>Inside, the demiplane appears to be a mansion featuring a magnificent foyer and numerous opulent chambers. The mansion can have any floor plan you imagine as you Cast the Spell, provided it fits within a space 40 feet wide, 40 feet deep, and 30 feet tall. While the entrance to the mansion is closed, effects from outside the mansion fail to penetrate it, and vice versa, except for @UUID[Compendium.pf2e.spells-srd.Item.Interplanar Teleport], which can be used to enter the mansion. You can use scrying magic and similar effects to observe the outside only if they're capable of crossing planes.</p>\n<p>A staff of up to 24 servants attends to anyone within the mansion. These are like the servant created by the @UUID[Compendium.pf2e.spells-srd.Item.Phantasmal Minion] spell, though they're visible, with an appearance you determine during casting. The mansion is stocked with enough food to serve a nine-course banquet to 150 people.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the next time you make your daily preparations"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1 minute"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "extradimensional",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -199,6 +1918,63 @@
       "name": "Planar Seal",
       "img": "systems/pf2e/icons/spells/dimensional-lock.webp",
       "type": "spell",
+      "data": {
+        "_id": "XZE4BawIlTf88Yl9",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/dimensional-lock.webp",
+        "name": "Planar Seal",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 60
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": true,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You create a visible magical barrier that attempts to counteract teleportation effects and planar travel into or out of the area, including items that allow access to extradimensional spaces. <em>Planar seal</em> tries to counteract any attempt to summon a creature into the area but doesn't stop the creature from departing when the summoning ends.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until your next daily preparations"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -207,6 +1983,84 @@
       "name": "Pollen Pods",
       "img": "systems/pf2e/icons/spells/pollen-pods.webp",
       "type": "spell",
+      "data": {
+        "_id": "2uEuYmlyx1R7zQeH",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/pollen-pods.webp",
+        "name": "Pollen Pods",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "ajfWkaLEMJuneDnB": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "poison"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p><strong>Area</strong> four unoccupied 5-foot squares, each of which is at least 20 feet apart</p>\n<hr />\n<p>You cultivate four wooden bulbs, each filled with toxic pollen and sensitive to motion. When a creature enters a space adjacent to a bulb, or when a bulb is touched or damaged (each bulb has AC 5), the bulb blossoms and releases pollen in a @Template[emanation|distance:15]. Creatures in the area take 8d8 poison damage and must attempt a Fortitude save with the following results.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage, becomes dazzled for 1 round, and becomes @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is dazzled for 1 round, and becomes @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} for 1 minute.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d8.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "12 hours"
+          },
+          "heightening": {
+            "damage": {
+              "ajfWkaLEMJuneDnB": "2d8"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "100 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "plant",
+              "wood"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -215,6 +2069,66 @@
       "name": "Possession",
       "img": "systems/pf2e/icons/spells/possession.webp",
       "type": "spell",
+      "data": {
+        "_id": "wU6hNzK8Yfqdmc8m",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/possession.webp",
+        "name": "Possession",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>You send your mind and soul into the target's body, attempting to take control. The target must attempt a Will save. If you want to exert less control over the target, you can choose to use the effects of any degree of success more favorable to the target.</p>\n<p>While you're possessing a target, your own body is @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] and can't wake up normally. You can sense everything the possessed target does. You can Dismiss this spell. If the possessed body dies, the spell ends and you must succeed at a Fortitude save against your spell DC or be @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed] for 1 hour, or 24 hours on a critical failure. If the spell ends during an encounter, you act just before the possessed creature's initiative.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> You possess the target but can't control it. You ride along in the body while the spell lasts.</p>\n<p><strong>Failure</strong> You possess the target and take partial control of it. You no longer have a separate turn; instead, you might control the target. At the start of each of the target's turns, it attempts another Will save. If it fails, it's @UUID[Compendium.pf2e.conditionitems.Item.Controlled] by you on that turn; if it succeeds, it chooses its own actions; and if it critically succeeds, it forces you out and the spell ends.</p>\n<p><strong>Critical Failure</strong> You possess the target fully, and it can only watch as you manipulate it like a puppet. The target is controlled by you.</p><hr /><p><strong>Heightened (9th)</strong> The duration is 10 minutes, and you can physically enter the creature's body, protecting your physical body while the spell lasts.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 living creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "incapacitation",
+              "manipulate",
+              "mental",
+              "possession"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -223,6 +2137,61 @@
       "name": "Project Image",
       "img": "systems/pf2e/icons/spells/project-image.webp",
       "type": "spell",
+      "data": {
+        "_id": "0873MWM0qKDDv81O",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/project-image.webp",
+        "name": "Project Image",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You project an illusory image of yourself. You must stay within range of the image, and if at any point you can't see the image, the spell ends. Whenever you Cast a Spell other than one whose area is an emanation, you can cause the spell effect to originate from either yourself or the image. Because the image is an illusion, it can't benefit from spells, though visual manifestations of the spell appear. The image has the same AC and saves as you. If it is hit by an attack or fails a save, the spell ends.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The maximum duration you can Sustain the spell increases to 10 minutes.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "illusion",
+              "manipulate",
+              "mental"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -231,6 +2200,99 @@
       "name": "Ray of Corruption",
       "img": "icons/magic/light/beam-rays-yellow-blue-small.webp",
       "type": "spell",
+      "data": {
+        "_id": "nPxYYID5JARKouSV",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/light/beam-rays-yellow-blue-small.webp",
+        "name": "Ray of Corruption",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "8SyVNJyczWWZhieq": {
+              "applyMod": false,
+              "category": null,
+              "formula": "6d12",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "spirit"
+            },
+            "YqImozxRine8IeIZ": {
+              "applyMod": false,
+              "category": null,
+              "formula": "6d12",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "poison"
+            }
+          },
+          "defense": {
+            "passive": {
+              "statistic": "ac"
+            },
+            "save": {
+              "basic": true,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You unleash a sickly gray beam of toxic spores at your target. Make a spell attack against the target. If you hit a non-magical object that's made of organic material (such as a tree, wooden house, or massive skull), it melts away into a foul-smelling sludge. A single casting can destroy no more than a 10-foot cube of matter.</p>\n<p>If you hit a creature, it takes 6d12 poison damage and 6d12 spirit damage with a basic Fortitude save. If you critically hit, the target gets a result one degree of success worse than the outcome of its Fortitude save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage.</p>\n<p><strong>Failure</strong> The target takes full damage. Fungal tendrils swiftly digest the body and reduce it to sludge—the target takes @Damage[2d12[persistent,acid]] damage.</p>\n<p><strong>Critical Failure</strong> As failure, but the target takes double damage, plus @Damage[4d12[persistent,acid]] damage.</p><hr /><p><strong>Heightened (+1)</strong> The poison damage and spirit damage each increase by 1d12.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "8SyVNJyczWWZhieq": "1d12",
+              "YqImozxRine8IeIZ": "1d12"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #211: The Secret of Deathstalk Tower"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "one creature or object"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "rare",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "fungus",
+              "manipulate",
+              "poison"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -239,6 +2301,60 @@
       "name": "Recall Legacy",
       "img": "icons/commodities/treasure/statue-bust-stone-grey.webp",
       "type": "spell",
+      "data": {
+        "_id": "onvFdBWAsQp0CsAy",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/commodities/treasure/statue-bust-stone-grey.webp",
+        "name": "Recall Legacy",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You establish a mental link with the target, focusing on a piece of knowledge important to their culture, family (by birth or choice), or home settlement. Both you and the target must be aware this knowledge exists, even if you don't know the exact details.</p>\n<p>As your magic connects them to this legacy, the target gains a non-lineage ancestry feat from their ancestry. The feat must be of a level no higher than twice recall legacy's rank and the target must meet any prerequisites for the feat.</p>\n<p>The target is then immune to any further castings of recall legacy until their next daily preparations.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "Until the target's next daily preparations"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "range": {
+            "value": "touch"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 willing creature"
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "rare",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate",
+              "mental"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -247,6 +2363,61 @@
       "name": "Regenerate",
       "img": "icons/magic/life/cross-beam-green.webp",
       "type": "spell",
+      "data": {
+        "_id": "2Vkd1IxylPceUAAF",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/life/cross-beam-green.webp",
+        "name": "Regenerate",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>An infusion of vital energy grants a creature continuous healing. The target temporarily gains regeneration 15, which restores 15 Hit Points to it at the start of each of its turns. While it has regeneration, the target can't die from taking Hit Point damage and its @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition can't increase to a value that would kill it (this stops most creatures' dying condition at dying 3), though if its @UUID[Compendium.pf2e.conditionitems.Item.Wounded] value becomes 4 or higher, it stays @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] until its wounds are treated. If the target takes acid or fire damage, its regeneration deactivates until after the end of its next turn.</p>\n<p>Each time the creature regains Hit Points from regeneration, it also regrows one damaged or ruined organ (if any). During the spell's duration, the creature can also reattach severed body parts by spending an Interact action to hold the body part to the area it was severed from.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Regenerate]</p>\n<hr />\n<p><strong>Heightened (9th)</strong> The regeneration increases to 20.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "touch"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 willing living creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "healing",
+              "manipulate",
+              "vitality"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -255,6 +2426,63 @@
       "name": "Restore Ground",
       "img": "icons/magic/nature/plant-sproutdirt-green.webp",
       "type": "spell",
+      "data": {
+        "_id": "ljo9CEmnCMZXqfOQ",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/nature/plant-sproutdirt-green.webp",
+        "name": "Restore Ground",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You sense that this place yearns to throw off the shackles of civilization. You attempt to restore the area within the burst to a natural state, removing all artificial objects and buildings and encouraging the growth of plants on the ground that remains. Creatures are unaffected unless caught in a structural collapse.</p><ul><li><strong>Ground</strong> All ground within the area becomes greater difficult terrain for 1 round.</li><li><strong>Objects</strong> Any unattended object of Bulk 4 or less is destroyed, regardless of Hardness, unless it's an artifact or similarly hard to destroy.</li><li><strong>Plants</strong> Plants in the area become healthier and more fruitful for 1 year.</li><li><strong>Structures</strong> Structures within range are shaken and may collapse, as if affected by @UUID[Compendium.pf2e.spells-srd.Item.Earthquake].</li></ul>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "varies"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "earth",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -263,6 +2491,58 @@
       "name": "Retrocognition",
       "img": "icons/magic/lightning/projectile-tendrils-red.webp",
       "type": "spell",
+      "data": {
+        "_id": "rsZ5c0AUyywe5yoK",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/lightning/projectile-tendrils-red.webp",
+        "name": "Retrocognition",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>Opening your mind to mental echoes, you gain impressions from past events that occurred in your current location. <em>Retrocognition</em> reveals psychic impressions from events that occurred over the course of the last day throughout the first minute of the duration, followed by impressions from the next day back the next minute, and so on. These echoes don't play out like a vision but instead reveal impressions of emotions and metaphors that provide cryptic clues and details of the past. If you witness a traumatic or turbulent event through an impression, the spell ends unless you succeed at a Will save with a DC of at least 30 and possibly as much as 50, depending on the severity of the event. The GM determines whether an event is traumatic and chooses the DC.</p>\n<hr />\n<p><strong>Heightened (8th)</strong> You gain impressions of events that occurred over the previous year for each minute you concentrate, instead of the previous day, though the details diminish, making it harder to distinguish impressions from all but the most major events.</p>\n<p><strong>Heightened (9th)</strong> You gain impressions of events that occurred over the previous century for each minute you concentrate, instead of the previous day, though the details diminish, making it almost impossible to distinguish impressions from all but the most major events.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1 minute"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -271,6 +2551,82 @@
       "name": "Shock to the System",
       "img": "systems/pf2e/icons/spells/shock-to-the-system.webp",
       "type": "spell",
+      "data": {
+        "_id": "M5dp7ILSCKID9fDK",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/shock-to-the-system.webp",
+        "name": "Shock to the System",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "nnCp1s4ZCp3MyqM2": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d8",
+              "kinds": [
+                "healing"
+              ],
+              "materials": [],
+              "type": "untyped"
+            }
+          },
+          "defense": null,
+          "description": {
+            "value": "<p>A dense lightning cloud descends to fill the target's space, then fires a jolt of revitalizing lightning into the target. If the target is a corpse that died within the last round, the creature comes back to life with 0 Hit Points, and any effects and conditions it had when it died, with the exception of dying, and its wounded condition increases by 1. The creature's initiative is right before yours.</p>\n<p>Regardless of whether the creature came back to life or was already alive, it regains 8d8 Hit Points, and the bolt wakes it up if it was @UUID[Compendium.pf2e.conditionitems.Item.Unconscious]. For the duration of the spell, the target is supercharged. It becomes @UUID[Compendium.pf2e.conditionitems.Item.Quickened] and can use the extra action to Stand, Stride, Strike, or Fly (if it has a fly Speed). In addition, it can cast 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.Thunderstrike] as an innate spell at will, using your spell DC.</p>\n<p>The cloud that covered the creature remains until the end of the target's next turn. Any creature in the cloud is @UUID[Compendium.pf2e.conditionitems.Item.Hidden], and anything outside the cloud is hidden to any creature inside the cloud.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The healing increases by 2d8, and the thunderstrike rank increases by 1.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "damage": {
+              "nnCp1s4ZCp3MyqM2": "2d8"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 living creature or 1 corpse that died within the last round"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "occult",
+              "primal"
+            ],
+            "value": [
+              "air",
+              "concentrate",
+              "electricity",
+              "healing",
+              "manipulate",
+              "vitality"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -279,6 +2635,59 @@
       "name": "Spell Riposte",
       "img": "icons/magic/defensive/shield-barrier-deflect-gold.webp",
       "type": "spell",
+      "data": {
+        "_id": "9igi8LcrNQKwljK7",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/defensive/shield-barrier-deflect-gold.webp",
+        "name": "Spell Riposte",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're the target of a spell you're aware of.</p><hr /><p>You attempt to counteract the triggering spell. If the spell would be counteracted, it instead continues with the caster as a target instead of you. <em>Spell riposte</em> can't affect spells that aren't targeted (such as area spells).</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "reaction"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+              "arcane",
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -287,6 +2696,64 @@
       "name": "Summon Stampede",
       "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
       "type": "spell",
+      "data": {
+        "_id": "XWqxMJpCT95A0dZs",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+        "name": "Summon Stampede",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>You summon an unstoppable stampede of panicking beasts. Whether you conjure wild beasts or tamed cattle, the stampede is a force of nature that leaves behind nothing in its wake. The stampede occupies the space of a Gargantuan creature and has a Speed of 60 feet.</p>\n<p><strong>Arrive</strong>(emotion, fear, mental) <em>Foreboding Tremors</em> The sheer energy of a stampede can cause even apex predators to panic. Each creature within a @Template[emanation|distance:60] must attempt a Will save with the following effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] for 1 round.</p>\n<hr />\n<p><strong>Depart</strong><em>Flatten the Earth</em> The stampede Strides up to double its Speed, trampling each Large or smaller creature, hazard, and structure whose space it enters, dealing @Damage[(8d8)[bludgeoning]] damage (basic Reflex save). The stampede ignores and attempts to counteract all difficult terrain it enters caused by debris, overgrowth, rubble, or thick ground cover.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the end of your next turn"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "incarnate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -295,6 +2762,89 @@
       "name": "Sunburst",
       "img": "systems/pf2e/icons/spells/sunburst.webp",
       "type": "spell",
+      "data": {
+        "_id": "a3aQxCpoj1q1NQxC",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/sunburst.webp",
+        "name": "Sunburst",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 60
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": true,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "fire"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>A powerful globe of searing sunlight explodes in the area, dealing 8d10 fire damage to all creatures in the area, plus an additional @Damage[(@item.level+1)d10[vitality]] damage to undead creatures. Each creature in the area must attempt a Reflex save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage.</p>\n<p><strong>Critical Failure</strong> The creature takes full damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Blinded] permanently.</p>\n<p>If the globe overlaps with an area of magical darkness, <em>sunburst</em> attempts to counteract the darkness effect.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The fire damage increases by 1d10, and the vitality damage against undead increases by 1d10.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d10"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "500 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "divine",
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "fire",
+              "light",
+              "manipulate",
+              "vitality"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -303,6 +2853,116 @@
       "name": "Telekinetic Bombardment",
       "img": "icons/skills/trades/construction-mason-stonecutter-sculpture.webp",
       "type": "spell",
+      "data": {
+        "_id": "uc4I1diSSX6XYzb3",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/skills/trades/construction-mason-stonecutter-sculpture.webp",
+        "name": "Telekinetic Bombardment",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 10
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "zssli0njmyjito8c": {
+              "applyMod": false,
+              "category": null,
+              "formula": "14d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "bludgeoning"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p>You grasp a piece of the landscape—such as a tree, carriage, or piece of masonry—and lob it in your foe's direction. Your missile crashes down in either a @Template[type:burst|distance:10] (for most missiles) or a @Template[type:line|distance:30] (for something long and tall, like a tree or a ship's mast), dealing @Damage[14d6[bludgeoning]|options:area-damage] damage and turning its area into difficult terrain as it breaks into rubble. All creatures in the area must attempt a Reflex save. If the area is a line, it doesn't have to start from your square but can instead start anywhere in range, as long as the entire area remains within range.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is knocked prone, and is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p><hr /><p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "zssli0njmyjito8c": "2d6"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "overlays": {
+            "y9tYfMAFOxWWvgBi": {
+              "name": "10-foot Burst",
+              "overlayType": "override",
+              "sort": 1,
+              "system": {
+                "damage": {
+                  "zssli0njmyjito8c": {
+                    "category": null
+                  }
+                }
+              }
+            },
+            "ys8q58qeRiAyeRzV": {
+              "name": "30-foot Line",
+              "overlayType": "override",
+              "sort": 2,
+              "system": {
+                "area": {
+                  "type": "line",
+                  "value": 30
+                },
+                "damage": {
+                  "zssli0njmyjito8c": {
+                    "category": null
+                  }
+                }
+              }
+            }
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "range": {
+            "value": "500 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -311,6 +2971,58 @@
       "name": "Time Beacon",
       "img": "icons/magic/time/hourglass-yellow-green.webp",
       "type": "spell",
+      "data": {
+        "_id": "G56DJkxlUjFv0C4Z",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/time/hourglass-yellow-green.webp",
+        "name": "Time Beacon",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": true,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You create a beacon in time to return to it if things go wrong. You can cast <em>time beacon</em> only on your turn. Keep careful track of everything that happens this turn after you cast <em>time beacon</em>. At the end of your turn, you can choose to rewind time back to just after you cast <em>time beacon</em>, removing all effects of your turn since then. Curses, traps, and other harmful effects that happen during your turn might prevent you from returning to the beacon if they're powerful enough. If you were affected by any harmful effects during your turn after casting <em>time beacon</em>, in order to return to your beacon, <em>time beacon</em> attempts a counteract check against each such effect. If it fails at any of these checks, you can't return. After returning to the time beacon, the spell ends.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the end of your turn"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -319,6 +3031,60 @@
       "name": "True Target",
       "img": "systems/pf2e/icons/spells/true-target.webp",
       "type": "spell",
+      "data": {
+        "_id": "AlbpWWN87yGegoAF",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/true-target.webp",
+        "name": "True Target",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You delve into the possible futures of the next few seconds to understand all the ways your foe might avoid harm, then cast out a vision of that future to those around you. Designate a creature. The first time each target makes an attack roll against that creature during <em>true target</em>'s duration, the attacker rolls twice and uses the better result. The attacker also ignores circumstance penalties to the attack roll and any flat check required due to the designated creature being @UUID[Compendium.pf2e.conditionitems.Item.Concealed] or @UUID[Compendium.pf2e.conditionitems.Item.Hidden].</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: True Target]</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "until the start of your next turn"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "60 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "4 creatures"
+          },
+          "time": {
+            "value": "1"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "fortune",
+              "prediction"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -327,6 +3093,58 @@
       "name": "Unfettered Pack",
       "img": "systems/pf2e/icons/spells/unfettered-pack.webp",
       "type": "spell",
+      "data": {
+        "_id": "bVtkBJvGLP69qVGI",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/unfettered-pack.webp",
+        "name": "Unfettered Pack",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": null,
+          "description": {
+            "value": "<p>You free those who travel alongside you from environmental hindrances. Targets don't take circumstance penalties to Speed from vegetation, rubble, winds, or other properties of the environment, and they ignore difficult terrain from such environmental properties.</p>\n<hr />\n<p><strong>Heightened (9th)</strong> The targets also ignore greater difficult terrain from environmental properties.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 hour"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "30 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "up to 10 creatures"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -335,6 +3153,69 @@
       "name": "Vacuum",
       "img": "systems/pf2e/icons/spells/vacuum.webp",
       "type": "spell",
+      "data": {
+        "_id": "kk7JKox6MdGAWmCH",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/vacuum.webp",
+        "name": "Vacuum",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 15
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "fortitude"
+            }
+          },
+          "description": {
+            "value": "<p>You inhale all air in the surrounding area, stealing the breath of nearby creatures. During <em>vacuum</em>'s duration, you take a –1 circumstance penalty against inhaled threats, such as inhaled poisons. If you cast <em>vacuum</em> in an environment where you can't breathe, the spell fails and you immediately begin to suffocate.</p>\n<p>Creatures in the area must attempt a Fortitude save. A creature that's holding its breath gets a result one degree of success better than it rolled, and creatures that don't need to breathe air are immune to the spell. A creature that later enters the area or ceases holding its breath must attempt a save against the effect. On subsequent rounds, the first time each round you Sustain the spell, you can force each creature in the area to save against the effect.</p>\n<hr />\n<p><strong>Success</strong> The creature begins holding its breath.</p>\n<p><strong>Failure</strong> The creature wheezes and gasps as its breath is stolen, becoming @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}. The creature then begins holding its breath but has only half its normal number of rounds of remaining air.</p>\n<p><strong>Critical Failure</strong> The creature has all the air sucked out from its lungs and immediately starts to suffocate.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "primal"
+            ],
+            "value": [
+              "air",
+              "concentrate",
+              "incapacitation",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -343,6 +3224,89 @@
       "name": "Vibrant Vibrato",
       "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
       "type": "spell",
+      "data": {
+        "_id": "tPtTKe0X1dDwoDmQ",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+        "name": "Vibrant Vibrato",
+        "system": {
+          "area": {
+            "type": "emanation",
+            "value": 40
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "WzgWqijGIH6TU9Iv": {
+              "applyMod": false,
+              "category": null,
+              "formula": "5d10",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "sonic"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>Your voice trills in perfect vibrato. When casting the spell, you can make the area any radius you choose, up to 40 feet. The reverberations of your voice continue to shimmer and hang in the air as long as you Sustain the spell but can't be heard at all outside of the area. A creature must attempt a Will save if it's within the area when you Cast the Spell or as soon as it enters the area while the spell is in effect. Once a creature has attempted the save, it uses the same result for that casting of vibrant vibrato.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[5d10[persistent,sonic]] damage at the end of their turn as long as they remain within the aura's area of effect.</p>\n<p><strong>Failure</strong> As success, but if the creature leaves the area, or if you move far enough from the creature that they're no longer in the area, the creature hears a shattering sound and takes 5d10 sonic damage and is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}. The creature is then @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for the rest of the spell's duration.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature takes double the sonic damage and is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3}.</p><hr /><p><strong>Heightened (+1)</strong> The damage on a failed save increases by 1d10.</p>"
+          },
+          "duration": {
+            "sustained": true,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "WzgWqijGIH6TU9Iv": "1d10"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #205: Singer, Stalker, Skinsaw Man"
+          },
+          "range": {
+            "value": ""
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "rare",
+            "traditions": [
+              "divine",
+              "occult"
+            ],
+            "value": [
+              "auditory",
+              "aura",
+              "concentrate",
+              "manipulate",
+              "sonic"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -351,6 +3315,88 @@
       "name": "Visions of Danger",
       "img": "systems/pf2e/icons/spells/visions-of-danger.webp",
       "type": "spell",
+      "data": {
+        "_id": "jBGAYmR0BkkbpJvG",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/visions-of-danger.webp",
+        "name": "Visions of Danger",
+        "system": {
+          "area": {
+            "type": "burst",
+            "value": 30
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "8d8",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "mental"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": true,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>An illusion of horrific creatures fills the spell's area. The creatures look like Tiny swarming monsters with a specific appearance of your choice, such as fiendish flies or animated saw blades. The burst deals 8d8 mental damage with a basic Will save to each creature that's inside the burst when it's created, enters the burst, or starts its turn inside the burst. A creature that critically succeeds at its Will save can immediately attempt to disbelieve the illusion. A creature that tries to Interact with the monsters or observes one with a @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action can attempt to disbelieve the illusion. Creatures that disbelieve the illusion take no damage from the illusion thereafter.</p><hr /><p><strong>Heightened (+1)</strong> The mental damage increases by 1d8</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": "1 minute"
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "1d8"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "range": {
+            "value": "500 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "3"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "occult"
+            ],
+            "value": [
+              "auditory",
+              "concentrate",
+              "illusion",
+              "manipulate",
+              "visual"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -359,6 +3405,86 @@
       "name": "Volcanic Eruption",
       "img": "systems/pf2e/icons/spells/volcanic-eruption.webp",
       "type": "spell",
+      "data": {
+        "_id": "O7ZEqWjwdKyo2CUv",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/volcanic-eruption.webp",
+        "name": "Volcanic Eruption",
+        "system": {
+          "area": {
+            "type": "cylinder",
+            "value": 5
+          },
+          "cost": {
+            "value": ""
+          },
+          "counteraction": false,
+          "damage": {
+            "0": {
+              "applyMod": false,
+              "category": null,
+              "formula": "14d6",
+              "kinds": [
+                "damage"
+              ],
+              "materials": [],
+              "type": "fire"
+            }
+          },
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "reflex"
+            }
+          },
+          "description": {
+            "value": "<p><strong>Area</strong> 5-foot radius, 80-foot-tall cylinder</p>\n<hr />\n<p>The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 14d6 fire damage to creatures in the area. The lava rapidly cools and encases creatures in the area. A creature encased in rock is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} and takes a –10-foot status penalty to its Speeds. All normal terrain is difficult terrain to a flying creature, and such creatures immediately descend 20 feet the moment they're encased, but they don't take damage from this fall. A creature encased in rock can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock. Additionally, creatures in the area and those within 5 feet of the lava column automatically take @Damage[(@item.rank -4)d6[fire]] damage from the intense heat, regardless of the results of their saving throws.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Volcanic Eruption]</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is encased.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is encased.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage in the area increases by 2d6, and the damage from the intense heat increases by 1d6.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "heightening": {
+            "area": 0,
+            "damage": {
+              "0": "2d6"
+            },
+            "interval": 1,
+            "type": "interval"
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": ""
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "primal"
+            ],
+            "value": [
+              "concentrate",
+              "fire",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     },
     {
@@ -367,6 +3493,67 @@
       "name": "Warp Mind",
       "img": "systems/pf2e/icons/spells/warp-mind.webp",
       "type": "spell",
+      "data": {
+        "_id": "8kJbiBEjMWG4VUjs",
+        "folder": "xqlqJ6eeiNtWb7bq",
+        "img": "systems/pf2e/icons/spells/warp-mind.webp",
+        "name": "Warp Mind",
+        "system": {
+          "area": null,
+          "cost": {
+            "value": ""
+          },
+          "counteraction": true,
+          "damage": {},
+          "defense": {
+            "save": {
+              "basic": false,
+              "statistic": "will"
+            }
+          },
+          "description": {
+            "value": "<p>You scramble a creature's mental faculties and sensory input. The target must attempt a Will saving throw. Regardless of the result of that save, the target is then temporarily immune for 10 minutes. Warp mind's effects happen instantly, so @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic] and other effects that counteract spells can't counteract them. However, @UUID[Compendium.pf2e.spells-srd.Item.Wish] rituals and abilities that can remove non-magical effects can still counteract the effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target spends the first action on its next turn with the @UUID[Compendium.pf2e.conditionitems.Item.Confused] condition.</p>\n<p><strong>Failure</strong> The target is Confused for 1 minute.</p>\n<p><strong>Critical Failure</strong> The target is Confused permanently.</p>"
+          },
+          "duration": {
+            "sustained": false,
+            "value": ""
+          },
+          "level": {
+            "value": 7
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "range": {
+            "value": "120 feet"
+          },
+          "requirements": "",
+          "rules": [],
+          "target": {
+            "value": "1 creature"
+          },
+          "time": {
+            "value": "2"
+          },
+          "traits": {
+            "rarity": "common",
+            "traditions": [
+              "arcane",
+              "occult"
+            ],
+            "value": [
+              "concentrate",
+              "emotion",
+              "incapacitation",
+              "manipulate",
+              "mental"
+            ]
+          }
+        },
+        "type": "spell"
+      },
       "level": 7
     }
   ]

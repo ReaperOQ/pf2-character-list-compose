@@ -1,0 +1,543 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "cactus-leshy.json",
+      "id": "2cii5ZkBsJ4DYdd2",
+      "name": "Cactus Leshy",
+      "img": "icons/consumables/plants/aloe-succulent-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "2cii5ZkBsJ4DYdd2",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/plants/aloe-succulent-green.webp",
+        "name": "Cactus Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Spines cover your body. You gain a spine unarmed attack that deals 1d6 piercing damage. Your spines are in the brawling group and have the finesse and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/spine.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Spine",
+              "range": null,
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "chrysanthemum-leshy.json",
+      "id": "CpjsxaXYjlkCI5nc",
+      "name": "Chrysanthemum Leshy",
+      "img": "icons/commodities/flowers/lily-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "CpjsxaXYjlkCI5nc",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/commodities/flowers/lily-white.webp",
+        "name": "Chrysanthemum Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>You look like a human child, though with a grand crown of chrysanthemums growing from your head, ornate as an emperor's. These petals have medicinal properties, granting you a +1 circumstance bonus to saving throws against poison.</p>\n<p>Furthermore, during your daily preparations, you can harmlessly pluck a few petals from your head and steep them in fresh water to create a single @UUID[Compendium.pf2e.equipment-srd.Item.Antidote (Lesser)]{Lesser Antidote}, which takes the form of a tea. At level 6, you instead create a @UUID[Compendium.pf2e.equipment-srd.Item.Antidote (Moderate)]{Moderate Antidote}; at level 10, a @UUID[Compendium.pf2e.equipment-srd.Item.Antidote (Greater)]{Greater Antidote}; and at level 14, a @UUID[Compendium.pf2e.equipment-srd.Item.Antidote (Major)]{Major Antidote}. The tea loses its effectiveness if not consumed before your next daily preparations.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:posion"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "fruit-leshy.json",
+      "id": "L6zfGzLMDLHbZ7VV",
+      "name": "Fruit Leshy",
+      "img": "icons/consumables/fruit/nectarine-ripe-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "L6zfGzLMDLHbZ7VV",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/fruit/nectarine-ripe-orange.webp",
+        "name": "Fruit Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your body continually produces small fruits imbued with primal magic. At dawn each day, a new fruit ripens. You or an ally can remove this fruit as an Interact action. If a living creature that can derive sustenance from fruit consumes it as an Interact action within the next hour, they regain @Damage[(ceil(@actor.level/2))d8[vitality,healing]|shortLabel] Hit Points, plus an additional 1d8 Hit Points for every 2 of your levels beyond 1st. This effect has the healing and vitality traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "fungus-leshy.json",
+      "id": "87h0jepQuzIbN7jN",
+      "name": "Fungus Leshy",
+      "img": "systems/pf2e/icons/features/ancestry/fungus-leshy.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "87h0jepQuzIbN7jN",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "systems/pf2e/icons/features/ancestry/fungus-leshy.webp",
+        "name": "Fungus Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your body was made from fungi that grows in the shade of caves and trees, and you are at home in dark caverns and warrens. You gain darkvision. You lose the plant trait and gain the fungus trait.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "add": [
+                "fungus"
+              ],
+              "key": "ActorTraits",
+              "remove": [
+                "plant"
+              ]
+            },
+            {
+              "key": "Sense",
+              "selector": "darkvision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "gourd-leshy.json",
+      "id": "wNnsjird4OQe0s6p",
+      "name": "Gourd Leshy",
+      "img": "icons/consumables/vegetable/squash-pumpkin-rough-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "wNnsjird4OQe0s6p",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/vegetable/squash-pumpkin-rough-orange.webp",
+        "name": "Gourd Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>You have a large gourd for a skull, and since you don't have a physical brain, you can use the space inside your head. You can store a collection of up to 1 Bulk of objects within your head. The DC of checks to @UUID[Compendium.pf2e.actionspf2e.Item.Steal] objects from inside your head increases by 4. Additionally, if you store only one object within your head, you can draw it effortlessly into your hand as part of another action to use the object. Drawing the item grants this other action the manipulate trait.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.ToggleProperty.GourdHead",
+              "option": "gourd-head",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:steal",
+                "gourd-head"
+              ],
+              "selector": "perception-dc",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "leaf-leshy.json",
+      "id": "dQqurQys37aJYb26",
+      "name": "Leaf Leshy",
+      "img": "icons/consumables/plants/leaf-elm-glowing-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "dQqurQys37aJYb26",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/plants/leaf-elm-glowing-green.webp",
+        "name": "Leaf Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your body is made mostly from natural foliage, and like a leaf tumbling from a tree, you land from falls with particular grace. You take no damage from falling, regardless of the distance you fall.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "lotus-leshy.json",
+      "id": "ievKYUc53q0mroGp",
+      "name": "Lotus Leshy",
+      "img": "icons/commodities/flowers/lotus-pink.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ievKYUc53q0mroGp",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/commodities/flowers/lotus-pink.webp",
+        "name": "Lotus Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>You effortlessly float on the surface of water. You can walk on the surface of still water and other non-damaging liquids, moving at half your normal Speed. You can also attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] to move across the surface of flowing water, using the DC of a Swim check to move through the water. When you do this, you can't move faster than half your Speed, and if you fail or critically fail, you fall into the water rather than the normal effects.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "peachchild-leshy.json",
+      "id": "G5U7zxwxDmERm3EY",
+      "name": "Peachchild Leshy",
+      "img": "icons/consumables/fruit/apricot-ripe-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "G5U7zxwxDmERm3EY",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/fruit/apricot-ripe-orange.webp",
+        "name": "Peachchild Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your leshy spirit took hold in a massive peach fruit before your body split forth from it, possibly emulating a past hero who was born in the same manner. You look like a human child, though with a perpetual flush of pink to your complexion and perhaps a few peach leaves growing from your body. The nature spirit inside you puts certain animals at ease.</p>\n<p>You can ask questions of and receive answers from household animals and livestock, such as dogs or pheasants, as well as use Diplomacy to Make an Impression on and Request things of them. Most domesticated animals have an indifferent or friendly starting attitude toward you and give you time to make your case, though other animals react to you like any other adventurer.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "pine-leshy.json",
+      "id": "KaokXdiE3ewXprdL",
+      "name": "Pine Leshy",
+      "img": "icons/consumables/nuts/pine-cone-red.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "KaokXdiE3ewXprdL",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/nuts/pine-cone-red.webp",
+        "name": "Pine Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>You excrete a thick, sticky sap from your bark-like flesh, making it easier to climb and hold onto your gear. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] feat as a bonus feat, and you gain a +2 circumstance bonus to your Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] you.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder #176: Lost Mammoth Valley"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            },
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                "action:disarm"
+              ],
+              "selector": "reflex",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "root-leshy.json",
+      "id": "CZx9HMmoOwcpkLY8",
+      "name": "Root Leshy",
+      "img": "icons/consumables/plants/dried-stem-vine-root-bramble-brown.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "CZx9HMmoOwcpkLY8",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/consumables/plants/dried-stem-vine-root-bramble-brown.webp",
+        "name": "Root Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your body is made from hardy roots that attach you firmly to the ground. You gain 10 Hit Points from your ancestry instead of 8. You can go without sunlight for 2 weeks before you begin to starve. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] you. This bonus also applies to saving throws against spells or effects that attempt to move you or knock you @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            },
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.VsShoveOrTrip",
+              "predicate": [
+                {
+                  "or": [
+                    "action:shove",
+                    "action:trip",
+                    "action:reposition",
+                    "inflicts:prone",
+                    "forced-movement"
+                  ]
+                }
+              ],
+              "selector": [
+                "fortitude",
+                "reflex"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "seaweed-leshy.json",
+      "id": "hTl3uc6y1kTuo9ac",
+      "name": "Seaweed Leshy",
+      "img": "icons/magic/nature/plant-undersea-seaweed-glow-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "hTl3uc6y1kTuo9ac",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/magic/nature/plant-undersea-seaweed-glow-green.webp",
+        "name": "Seaweed Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your body is made from woven seaweed, and you're just as comfortable underwater as on land. You gain a swim Speed of 20 feet, and you can always breathe underwater. However, your land Speed is reduced by 5 feet (to 20 feet for most seaweed leshies).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim",
+              "value": 20
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": -5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "vine-leshy.json",
+      "id": "evXJISqyhl3fHE9u",
+      "name": "Vine Leshy",
+      "img": "icons/magic/nature/root-vines-entwined-leaves.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "evXJISqyhl3fHE9u",
+        "folder": "0oBTqNv5obCMbagQ",
+        "img": "icons/magic/nature/root-vines-entwined-leaves.webp",
+        "name": "Vine Leshy",
+        "system": {
+          "ancestry": {
+            "name": "Leshy",
+            "slug": "leshy",
+            "uuid": "Compendium.pf2e.ancestries.Item.cdhgByGG1WtuaK73"
+          },
+          "description": {
+            "value": "<p>Your prehensile vines grant you unmatched skill at climbing. You do not need to have any hands free to @UUID[Compendium.pf2e.actionspf2e.Item.Climb]. Additionally, if you roll a success on an Athletics check to Climb, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

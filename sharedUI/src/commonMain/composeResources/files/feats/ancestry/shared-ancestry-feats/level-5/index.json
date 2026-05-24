@@ -7,6 +7,45 @@
       "name": "Quick Root",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "it5yM6sbwJJysm9U",
+        "folder": "wLt7bt0bm08pRFKZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Root",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature successfully Shoves or Trips you, or you fail a saving throw against an effect that would move you or knock you @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<hr />\n<p>You react instinctively, sprouting roots from your legs and plunging them deep into the ground to keep your footing. If a force would move you, you move half that distance, to a minimum of 5 feet. If you would be knocked prone, resolve the effect, then you Stand.</p>\n<hr />\n<p><strong>Special</strong> This feat gains the trait for your ancestry.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "ardande trait, plant trait, or wood trait"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +55,81 @@
       "name": "Skillful Tail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aVRuchEAJIvnd70k",
+        "folder": "wLt7bt0bm08pRFKZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Skillful Tail",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Geniekin</strong> You were born with a tail, and with practice you've learned how to perform simple Interact actions with it, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items.</p><hr /><p><strong>Nephilim</strong> You've always had a tail, but with practice, you've learned to use it for more than signaling your mood. You can perform simple Interact actions with your tail, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "property": "description",
+              "value": [
+                {
+                  "predicate": [
+                    "self:heritage:nephilim"
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.SkillfulTail.Nephilim"
+                },
+                {
+                  "predicate": [
+                    {
+                      "or": [
+                        "self:ancestry:ardande",
+                        "self:ancestry:naari",
+                        "self:ancestry:oread",
+                        "self:ancestry:suli",
+                        "self:ancestry:sylph",
+                        "self:ancestry:talos",
+                        "self:ancestry:undine"
+                      ]
+                    }
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.SkillfulTail.Geniekin"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ardande",
+              "naari",
+              "nephilim",
+              "oread",
+              "suli",
+              "sylph",
+              "talos",
+              "undine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

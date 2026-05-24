@@ -7,6 +7,43 @@
       "name": "Double Poison",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FlZ5knPmyq4CEhl7",
+        "folder": "F8S3FEOThwaxKC8h",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Double Poison",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can apply two different infused injury poisons to the same weapon, though not to a piece of ammunition. Each poison's level must be 2 or more levels lower than your level. You have to apply the two poisons individually. Once you've applied both, the poisons merge into a double poison that uses the lower of the two poisons' DCs and number of stages. If the poisons require different types of saving throws (such as Fortitude and Will), choose which of them the double poison uses. This double poison is virulent only if both poisons were virulent. Combine the effects of each stage of the poison on any creature affected by it. For each stage of the poison, use the effects of both poisons and the longer interval for that stage among the two poisons.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +53,43 @@
       "name": "Mutant Innervation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mj1pVVFtqGLKgCQM",
+        "folder": "F8S3FEOThwaxKC8h",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mutant Innervation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Basic mutagens that affect your mind and thoughts can make you communicate telepathically, protect you from being detected, or let you communicate with anyone. While you're affected by one of the listed mutagens, you get an additional benefit.</p><ul><li><strong>@UUID[Compendium.pf2e.equipment-srd.Item.Cognitive Mutagen (Lesser)]{Cognitive Mutagen}</strong> You also gain the mutagen's item bonus to Deception, Diplomacy, Intimidation, Medicine, Nature, Performance, Religion, and Survival checks. In addition, you can communicate telepathically with creatures within 60 feet with whom you share a language. The communication is two-way once you establish it, so a creature you contact can also communicate with you.</li><li><strong>@UUID[Compendium.pf2e.equipment-srd.Item.Serene Mutagen (Lesser)]{Serene Mutagen}</strong> Detection, revelation, and scrying effects of 9th rank (or 17th level) or lower detect nothing from you or your possessions and auras. For instance, detect magic would still detect other magic in the area, but not any magic on you.</li><li><p><strong>@UUID[Compendium.pf2e.equipment-srd.Item.Silvertongue Mutagen (Lesser)]{Silvertongue Mutagen}</strong> Ignore circumstance penalties you would take to Deception, Diplomacy, Intimidation, and Performance checks. In addition, your words transcend linguistic barriers; everyone listening to you speak hears your words as if you were speaking in their own language (though you don't actually speak that language, nor does this ability allow you to understand any additional languages).</p></li></ul><hr /><p><strong>Special</strong> If you can be under the effects of multiple mutagens (with the @UUID[Compendium.pf2e.classfeatures.Item.Greater Field Discovery (Mutagenist)]{mutagenist greater field discovery}, for example), you get all relevant benefits.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +99,71 @@
       "name": "True Debilitating Bomb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2HMvAB6mIVwvwtjT",
+        "folder": "F8S3FEOThwaxKC8h",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "True Debilitating Bomb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have discovered increasingly devastating ways for your bombs to impede your foes. When you use @UUID[Compendium.pf2e.feats-srd.Item.Debilitating Bomb], add the following to the list of effects you can choose from: @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2}, @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2}, or a –15-foot status penalty to Speeds.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Greater Debilitating Bomb"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "debilitating-bomb"
+              ],
+              "selector": "alchemical-bomb-base-attack-roll",
+              "text": "PF2E.SpecificRule.Alchemist.DebilitatingBomb.TrueAttackRollNote",
+              "title": "{item|name}"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:base:alchemical-bomb"
+              ],
+              "property": "other-tags",
+              "value": "true-debilitating-bomb"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

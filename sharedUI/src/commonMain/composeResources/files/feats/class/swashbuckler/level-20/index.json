@@ -7,6 +7,67 @@
       "name": "Illimitable Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a5jZJPZO8RPQjqE7",
+        "folder": "DngzayqRV8sC4KGO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Illimitable Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your strikes flow endlessly. Step and attempt a single one-action finisher. This Strike gains the bravado trait, possibly replenishing your @UUID[Compendium.pf2e.classfeatures.Item.Panache]; if you regain panache, you can immediately attempt another finisher as part of this action, ignoring the restriction of using actions with the attack trait after a finisher.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "finisher"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "option": "finisher:illimitable",
+              "priority": 51,
+              "toggleable": true
+            },
+            {
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "finisher:illimitable"
+              ],
+              "property": "traits",
+              "value": "bravado"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "flourish",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +77,43 @@
       "name": "Inexhaustible Countermoves",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jG9YwAAvNbCShumf",
+        "folder": "DngzayqRV8sC4KGO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inexhaustible Countermoves",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can react whenever a foe leaves a gap in their defenses. At the start of each enemy's turn, you gain an extra reaction you can use only during that turn to perform an @UUID[Compendium.pf2e.classfeatures.Item.Opportune Riposte], or an @UUID[Compendium.pf2e.classfeatures.Item.Reactive Strike] if you have that reaction.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +123,63 @@
       "name": "Panache Paragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Oo3yRbmrgqi8dmVs",
+        "folder": "DngzayqRV8sC4KGO",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Panache Paragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You find opportunities to perform stylish feats in the moments between others' heartbeats and eye blinks. You are permanently @UUID[Compendium.pf2e.conditionitems.Item.Quickened]. You can use the extra action only to perform a bravado action.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Quickened"
+            },
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:granter:id:{item|id}"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

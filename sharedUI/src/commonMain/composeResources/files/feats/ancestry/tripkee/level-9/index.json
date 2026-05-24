@@ -7,6 +7,47 @@
       "name": "Absorb Toxin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vyb3BYDiIl2MiZp4",
+        "folder": "vGZqnzR6COi7ixii",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Absorb Toxin",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You attempt a saving throw against a disease or poison effect that affects an area.</p><hr /><p>Your skin readily absorbs poison and can consciously draw toxins into your body to spare others. Attempt a counteract check against the triggering effect; your counteract rank equals half your level (rounded up), and for the roll use either your class DC – 10 or your spellcasting attribute modifier plus your spellcasting proficiency bonus. If you counteract the triggering effect, you end the effect for all other creatures in the area; however, you must still save against the effect with a –2 penalty to the initial save.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You are not immune to diseases or poisons"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +57,52 @@
       "name": "Moisture Bath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IwETJ7fhszmlNo7X",
+        "folder": "vGZqnzR6COi7ixii",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Moisture Bath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> one per day</p><hr /><p>Your moist skin is especially resistant to damage from temperature-altering effects. Attempt a @Check[flat|dc:10]; on a success you recover from any ongoing persistent fire and persistent cold damage. Additionally, you gain fire and cold resistance equal to half your level for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Moisture Bath",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Moisture Bath"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +112,47 @@
       "name": "Ricocheting Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5S1nPoxHTgu9MGGV",
+        "folder": "vGZqnzR6COi7ixii",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ricocheting Leap",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You quickly use your momentum to topple and spring off of foes. You can use @UUID[Compendium.pf2e.feats-srd.Item.Wall Jump] to make additional jumps off of creatures larger than you as if they were walls. Once per turn when you make an additional jump off of a creature in this way, you can also attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] that creature as a free action.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wall Jump"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +162,47 @@
       "name": "Tongue Tether",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5j3nLvicUVmPqzA7",
+        "folder": "vGZqnzR6COi7ixii",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tongue Tether",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your tongue can momentarily latch on as readily as your hands. So long as you can freely open your mouth, you do not need free hands in order to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Grab an Edge], @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip]. If you have the @UUID[Compendium.pf2e.feats-srd.Item.Long Tongue] feat, you can Disarm, Grab an Edge, Reposition, and Trip with your tongue at a distance that is 5 feet beyond your normal reach.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "snaptongue tripkee"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

@@ -7,6 +7,87 @@
       "name": "Final Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "K9hM3AdWGbU3VE8L",
+        "folder": "udsAtWtPsdaYJdbo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Final Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirement</strong> You're wielding an unloaded firearm.</p><hr /><p>You jam a triple charge of black powder into your weapon to unleash a devastating but risky and inaccurate attack. Interact to reload, expending three doses of black powder in addition to your normal black powder or ammunition, then Strike with your firearm against a creature within the weapon's first range increment. If you roll a success, the attack is instead a critical success, but if you roll a failure, the weapon misfires. Regardless of your roll, after the attack you're @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the start of your next turn and @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "final-shot",
+              "toggleable": true
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "final-shot",
+                "item:group:firearm",
+                "target:range-increment:1"
+              ],
+              "selector": "strike-attack-roll"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "final-shot",
+                "item:group:firearm",
+                "target:range-increment:1"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Gunslinger.FinalShot.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure",
+                "criticalFailure"
+              ],
+              "predicate": [
+                "final-shot",
+                "item:group:firearm",
+                "target:range-increment:1"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Gunslinger.FinalShot.NoteFailure",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +97,61 @@
       "name": "Piercing Critical",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "G8iGrx1qBDwLk1HO",
+        "folder": "udsAtWtPsdaYJdbo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Piercing Critical",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attacks with your preferred weapons deal especially devastating wounds. When you Strike with a firearm or crossbow for which you have legendary proficiency, you critically succeed if you roll a 19 on the die, as long as that result is a success.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "check:roll:total:natural:19",
+                "item:proficiency:rank:4",
+                {
+                  "or": [
+                    "item:group:firearm",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +161,47 @@
       "name": "Reach for the Stars",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GWnQMjSAIG6qcV8J",
+        "folder": "udsAtWtPsdaYJdbo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reach for the Stars",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The sky's the limit, as long as you've got enough black powder. When you use @UUID[Compendium.pf2e.feats-srd.Item.Black Powder Boost], you can expend additional black powder or ammunition to boost yourself farther. For each dose of black powder or piece of firearm ammunition you spend in addition to your shot, you add another 10 feet to the height or distance of your @UUID[Compendium.pf2e.actionspf2e.Item.Leap], to a maximum of 5 boosts (a +50-foot status bonus). You must be wearing a dose of black powder or piece of ammunition, or have it in hand, to detonate it for a boost.</p>\n<p>You can choose at which points in your Leap you detonate each boost, allowing you to change direction each time. You must then move in a straight line until you boost again or end your Leap.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Black Powder Boost"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +211,57 @@
       "name": "Unerring Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JSkaMCO6pzKYZrZe",
+        "folder": "udsAtWtPsdaYJdbo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unerring Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your senses are finely tuned to the slightest variations in the air, so much that you can place your shot exactly where you intend to aim it from any range possible with your weapon. When attacking with a ranged weapon in which you have master or greater proficiency, ignore the penalty from its range increment. (The weapon's maximum range is unchanged.) In addition, if your target has cover against your attack with such a weapon, it doesn't gain the bonus to AC if it has lesser cover, gets only the bonus of lesser cover if it has standard cover, or gains only the bonus of standard cover if it has greater cover.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "ignore-range-penalty",
+              "phase": "beforeRoll",
+              "predicate": [
+                {
+                  "gte": [
+                    "item:proficiency:rank",
+                    3
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

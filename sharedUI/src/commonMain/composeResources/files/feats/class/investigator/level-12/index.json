@@ -7,6 +7,58 @@
       "name": "Empiricist's Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iKUtl2RCemX9NXOu",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Empiricist's Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Sharp and piercing, your eyes see all and convey more. Your @UUID[Compendium.pf2e.actionspf2e.Item.Point Out] actions lose the auditory trait, and you don't need to be heard to convey the information to your allies. In addition, a creature you Point Out is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to your allies until the start of your next turn.</p><hr /><p><strong>Special</strong> If you have the @UUID[Compendium.pf2e.feats-srd.Item.Blind-Fight] feat, your allies gain that feat's benefits against any creature that's off-guard due to Empiricist's Eye.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "empiricism methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "predicate": [
+                "item:slug:point-out"
+              ],
+              "property": "traits",
+              "value": "auditory"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +68,44 @@
       "name": "Foresee Danger",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pVDgiaqu1RbCOhuv",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Foresee Danger",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature targets you with an attack and you can see the attacker.</p><hr /><p>You perceive every possible way your foe's attack could land and attempt to avoid them all.</p>\n<p>The triggering attack roll targets your Perception DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn't remove any conditions or other effects causing such penalties.</p>\n<p>For example, an enemy with sneak attack would still deal extra damage to you for being @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], even though you wouldn't take the –2 circumstance penalty when defending against the attack.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +115,48 @@
       "name": "Just as Planned",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3My19Wif5ks29tyg",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Just as Planned",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>In the blink of an eye, you calculate your enemy's movements and know exactly where to aim your next blow. If your next action is to @UUID[Compendium.pf2e.actionspf2e.Item.Devise a Stratagem], you can roll the d20 twice and take the higher result.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +166,61 @@
       "name": "Make 'Em Sweat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SwkIcrtHO60FkhEH",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Make 'Em Sweat",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your line of questioning lets a suspect know you can see right through them, shaking them to the core. When you succeed at using @UUID[Compendium.pf2e.actionspf2e.Item.Pointed Question], the target is also @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} on a critical success). This added effect is an emotion and fear effect, but the other effects of Pointed Question still apply even if the target is immune to fear.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "interrogation methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:pointed-question"
+              ],
+              "selector": "diplomacy",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +230,43 @@
       "name": "Reason Rapidly",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pm9PS32YNLJ2wp4o",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reason Rapidly",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mind works through clues at an unbelievable speed. You instantly use up to five @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] actions. If you have any special abilities or free actions that would normally be triggered when you Recall Knowledge, you can't use them for these actions.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +276,47 @@
       "name": "Share Tincture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HCjPsXAYBqDhQSVW",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Share Tincture",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You use @UUID[Compendium.pf2e.actionspf2e.Item.Quick Tincture], and the item you create remains potent until the start of your next turn. Then you can Interact to pass the item to another creature. If you pass it by throwing it, your ranged attack automatically succeeds. You must have a versatile vial to use Quick Tincture, as normal.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "alchemical sciences methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +326,48 @@
       "name": "Surgical Shock",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zzjfENthtRBAjqjQ",
+        "folder": "pb7GzzVAlrtNCQ5H",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Surgical Shock",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a few well-placed jabs with your fist or weapon, you render your opponent disoriented or ungainly. Attempt a @Check[medicine|against:fortitude] check against the Fortitude DC of a target within your reach. The result of your check determines the severity of the condition you inflict.</p><hr /><p><strong>Critical Success</strong> The target is either @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 3} or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 3} until the end of your next turn. The target is then immune to Surgical Shock for 1 hour.</p>\n<p><strong>Success</strong> As critical success, but the target is either @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2}.</p>\n<p><strong>Failure</strong> The target is minorly inconvenienced. You gain a +1 circumstance bonus to the next attack action you attempt against it before the end of your turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Surgical Shock (Failure)]</p>\n<p><strong>Critical Failure</strong> The target is unaffected and you overextend yourself, triggering reactions as if you had used a manipulate action.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "forensic medicine methodology"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "investigator"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

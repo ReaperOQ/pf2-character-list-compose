@@ -1,0 +1,242 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "keeper-jotunborn.json",
+      "id": "m4kFMTu2sOSWgnAU",
+      "name": "Keeper Jotunborn",
+      "img": "icons/creatures/abilities/paw-print-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "m4kFMTu2sOSWgnAU",
+        "folder": "yJnvrcSz6PPOfFs8",
+        "img": "icons/creatures/abilities/paw-print-yellow.webp",
+        "name": "Keeper Jotunborn",
+        "system": {
+          "ancestry": {
+            "name": "Jotunborn",
+            "slug": "jotunborn",
+            "uuid": "Compendium.pf2e.ancestries.Item.gayvFCiQcGNCA7aM"
+          },
+          "description": {
+            "value": "<p>Your work as an iivlar keeper has granted you a greater understanding of these sacred creatures and the ability to track them, as elusive as they may be. You are trained in Survival, and you gain the @UUID[Compendium.pf2e.feats-srd.Item.Survey Wildlife] skill feat. You gain a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Track] animals.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Survey Wildlife"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:track",
+                "target:trait:animal"
+              ],
+              "selector": "survival",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "plane-hopper-jotunborn.json",
+      "id": "KDs97OkCmEYTLUp9",
+      "name": "Plane-Hopper Jotunborn",
+      "img": "icons/magic/movement/portal-vortex-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "KDs97OkCmEYTLUp9",
+        "folder": "yJnvrcSz6PPOfFs8",
+        "img": "icons/magic/movement/portal-vortex-orange.webp",
+        "name": "Plane-Hopper Jotunborn",
+        "system": {
+          "ancestry": {
+            "name": "Jotunborn",
+            "slug": "jotunborn",
+            "uuid": "Compendium.pf2e.ancestries.Item.gayvFCiQcGNCA7aM"
+          },
+          "description": {
+            "value": "<p>You were chosen for your smaller size that allows you to move between planar thresholds with ease. You generally serve as a messenger or scout, and planar exposure has granted you a spark of magical power. Instead of Large, your size is Medium. You gain one cantrip from the occult spell list. You can cast this spell as an occult innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "resizeEquipment": true,
+              "value": "medium"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sage-jotunborn.json",
+      "id": "NUUWs7jFwsIPmx3p",
+      "name": "Sage Jotunborn",
+      "img": "icons/magic/holy/meditation-chi-focus-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "NUUWs7jFwsIPmx3p",
+        "folder": "yJnvrcSz6PPOfFs8",
+        "img": "icons/magic/holy/meditation-chi-focus-blue.webp",
+        "name": "Sage Jotunborn",
+        "system": {
+          "ancestry": {
+            "name": "Jotunborn",
+            "slug": "jotunborn",
+            "uuid": "Compendium.pf2e.ancestries.Item.gayvFCiQcGNCA7aM"
+          },
+          "description": {
+            "value": "<p>You were tasked with keeping oral and stitched histories for your family, your clan, or even an entire settlement. You are trained in Society. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for a lore skill of your choice.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "warrior-jotunborn.json",
+      "id": "t9HOJelfwDo3RBii",
+      "name": "Warrior Jotunborn",
+      "img": "icons/weapons/swords/sword-broad-serrated-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "t9HOJelfwDo3RBii",
+        "folder": "yJnvrcSz6PPOfFs8",
+        "img": "icons/weapons/swords/sword-broad-serrated-blue.webp",
+        "name": "Warrior Jotunborn",
+        "system": {
+          "ancestry": {
+            "name": "Jotunborn",
+            "slug": "jotunborn",
+            "uuid": "Compendium.pf2e.ancestries.Item.gayvFCiQcGNCA7aM"
+          },
+          "description": {
+            "value": "<p>Your hardier body made you a perfect recruit for combat. The damage die for your fist increases to 1d6. You don't take a penalty when making a lethal attack with your fist.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "fist": true,
+              "img": "systems/pf2e/icons/features/classes/powerful-fist.webp",
+              "key": "Strike"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "property": "damage-dice-faces"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "weaver-jotunborn.json",
+      "id": "K0NerdkFnce9KeHw",
+      "name": "Weaver Jotunborn",
+      "img": "icons/commodities/cloth/thread-spindle-white-needle.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "K0NerdkFnce9KeHw",
+        "folder": "yJnvrcSz6PPOfFs8",
+        "img": "icons/commodities/cloth/thread-spindle-white-needle.webp",
+        "name": "Weaver Jotunborn",
+        "system": {
+          "ancestry": {
+            "name": "Jotunborn",
+            "slug": "jotunborn",
+            "uuid": "Compendium.pf2e.ancestries.Item.gayvFCiQcGNCA7aM"
+          },
+          "description": {
+            "value": "<p>You've mastered the art of iivlar silk weaving, a technique that requires a fine attention to detail. You are trained in Crafting. You gain a +1 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] when searching for hidden details like secret doors or traps.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:seek",
+                "secret-doors-or-traps"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

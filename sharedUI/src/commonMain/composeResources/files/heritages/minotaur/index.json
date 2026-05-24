@@ -1,0 +1,296 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ghost-bull-minotaur.json",
+      "id": "bHgGh3vtXL7fkhIy",
+      "name": "Ghost Bull Minotaur",
+      "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "bHgGh3vtXL7fkhIy",
+        "folder": "Ju1C4OBaEF5fhvGn",
+        "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+        "name": "Ghost Bull Minotaur",
+        "system": {
+          "ancestry": {
+            "name": "Minotaur",
+            "slug": "minotaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.3wQ49DoWFYQgVsq6"
+          },
+          "description": {
+            "value": "<p>Your fur is as pale as death, possibly from some connection you or your family has to the afterlife, which lets you supernaturally find your way. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Know the Way] as an occult innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. In addition, you gain a +1 circumstance bonus against spells or effects that cause the @UUID[Compendium.pf2e.conditionitems.Item.Confused] condition.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "inflicts:confused"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:know-the-way",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:know-the-way",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:minotaur"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "glacier-cavern-minotaur.json",
+      "id": "jP9ORt0jgY5VHyD3",
+      "name": "Glacier Cavern Minotaur",
+      "img": "icons/magic/water/ice-crystal-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "jP9ORt0jgY5VHyD3",
+        "folder": "Ju1C4OBaEF5fhvGn",
+        "img": "icons/magic/water/ice-crystal-white.webp",
+        "name": "Glacier Cavern Minotaur",
+        "system": {
+          "ancestry": {
+            "name": "Minotaur",
+            "slug": "minotaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.3wQ49DoWFYQgVsq6"
+          },
+          "description": {
+            "value": "<p>Your fur grows thick and warm, well suited to the frozen mountains in which you reside. You gain cold resistance equal to half your level (minimum of 1). Environmental cold effects are one step less extreme for you.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "littlehorn-minotaur.json",
+      "id": "23MEmXuyw75jiGKq",
+      "name": "Littlehorn Minotaur",
+      "img": "icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "23MEmXuyw75jiGKq",
+        "folder": "Ju1C4OBaEF5fhvGn",
+        "img": "icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp",
+        "name": "Littlehorn Minotaur",
+        "system": {
+          "ancestry": {
+            "name": "Minotaur",
+            "slug": "minotaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.3wQ49DoWFYQgVsq6"
+          },
+          "description": {
+            "value": "<p>Though no less powerful, your frame (and your horns) are smaller than those of most other minotaurs. Instead of Large, your size is Medium. Your horns unarmed attack deals 1d6 piercing damage instead of 1d8, but it has the agile trait.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d6"
+              },
+              "selector": "horns-damage"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:horns"
+              ],
+              "property": "traits",
+              "value": "agile"
+            },
+            {
+              "key": "CreatureSize",
+              "value": "medium"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "roaming-minotaur.json",
+      "id": "HAo0S8ysFipf6S2B",
+      "name": "Roaming Minotaur",
+      "img": "icons/environment/wilderness/terrain-river-road-gray.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "HAo0S8ysFipf6S2B",
+        "folder": "Ju1C4OBaEF5fhvGn",
+        "img": "icons/environment/wilderness/terrain-river-road-gray.webp",
+        "name": "Roaming Minotaur",
+        "system": {
+          "ancestry": {
+            "name": "Minotaur",
+            "slug": "minotaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.3wQ49DoWFYQgVsq6"
+          },
+          "description": {
+            "value": "<p>Your hooves are broad and powerful, perfect for clearing away rubble as you step. You become trained in Survival (or another skill if you were already trained in Survival) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Terrain Expertise] skill feat. You ignore difficult terrain caused by natural uneven ground while in the terrain chosen for your Terrain Expertise feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Expertise"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "slabsoul-minotaur.json",
+      "id": "mPVEc7hFZQhv0gqJ",
+      "name": "Slabsoul Minotaur",
+      "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "mPVEc7hFZQhv0gqJ",
+        "folder": "Ju1C4OBaEF5fhvGn",
+        "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
+        "name": "Slabsoul Minotaur",
+        "system": {
+          "ancestry": {
+            "name": "Minotaur",
+            "slug": "minotaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.3wQ49DoWFYQgVsq6"
+          },
+          "description": {
+            "value": "<p>Your deep connection with stone and walls allows you to conjure massive slabs of granite that collapse on your foes. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Raise Slabs] activity.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Raise Slabs"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "stalker-minotaur.json",
+      "id": "tYrb9KOv1etjE5wK",
+      "name": "Stalker Minotaur",
+      "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "tYrb9KOv1etjE5wK",
+        "folder": "Ju1C4OBaEF5fhvGn",
+        "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+        "name": "Stalker Minotaur",
+        "system": {
+          "ancestry": {
+            "name": "Minotaur",
+            "slug": "minotaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.3wQ49DoWFYQgVsq6"
+          },
+          "description": {
+            "value": "<p>Despite your heavy frame, you walk on shaggy hooves that muffle your footfalls, allowing you to surprise your prey. You become trained in Stealth (or another skill if you were already trained in Stealth) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Terrain Stalker] skill feat, except you must choose rubble and you can @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] no more than 10 feet instead of 5 feet without attempting a Stealth check.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.stealth.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Stalker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

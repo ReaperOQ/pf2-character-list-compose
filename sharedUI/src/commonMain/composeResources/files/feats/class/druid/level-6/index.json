@@ -7,6 +7,80 @@
       "name": "Current Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ajesR7y0jWzqjAgc",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Current Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you use your magic to manipulate air or water, you spin off some of its currents to form a barrier around you. If your next action is to @UUID[Compendium.pf2e.actionspf2e.Item.Cast a Spell] with the air or water trait, until the start of your next turn, you gain a +1 circumstance bonus to AC or a +2 circumstance bonus against ranged attacks. This effect has the air or water trait, or both, depending on the traits of the spell you cast. You also gain a +1 circumstance bonus to all saves against effects with the air trait, water trait, or both until the start of your next turn, depending on the spell's traits.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Current Spell]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:current-spell",
+                {
+                  "or": [
+                    "item:trait:air",
+                    "item:trait:water"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.CurrentSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "current-spell"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "druid",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +90,48 @@
       "name": "Fungal Exhalation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6y2rSSlCXUpk8DMY",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fungal Exhalation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can conjure toxic spores to infect enemies. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Fungal Exhalation] order spell.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "spore order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "druid",
+              "focus"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +141,47 @@
       "name": "Grown of Oak",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GmSY4YVyzgAZ4I78",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grown of Oak",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can make your skin take on the woody endurance of an ancient tree and have your familiar follow suit. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Oaken Resilience] at will as an innate primal spell with a spell rank one lower than the highest rank of spells you can cast. This spell targets you, as well as your leshy familiar if it's within 30 feet of you.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "leaf order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +191,48 @@
       "name": "Hedge Prison",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Uuvu1TojhHcDm7EV",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hedge Prison",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You cultivate plants to entrap your foes. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Hedge Prison] order spell.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "cultivation order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "druid",
+              "focus"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +242,114 @@
       "name": "Insect Shape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OWedlrKGsVZVkSnT",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Insect Shape",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your understanding of life expands, allowing you to mimic a wider range of creatures. Add the shapes in @UUID[Compendium.pf2e.spells-srd.Item.Insect Form] to your @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] list. Whenever you use <em>untamed form</em> to polymorph into the non-flying insect shapes listed in pest form, the duration is 24 hours instead of 10 minutes.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Insect Form (Ant)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Insect Form (Beetle)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Insect Form (Centipede)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Insect Form (Mantis)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Insect Form (Scorpion)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Insect Form (Spider)"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +359,47 @@
       "name": "Instinctive Support",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "buRSqam06r9jFAbB",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Instinctive Support",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You Cast a non-cantrip spell that targets only your animal companion.</p>\n<hr />\n<p>When you support your animal companion, your companion supports you in turn. After your spell takes place, your companion gains its actions for the turn, as if you Commanded it, and one of the actions must be Support. If the companion has used any other actions already, it can't Support you, as normal.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animal Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +409,48 @@
       "name": "Misty Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EOYxsteDMSSZovfV",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Misty Transformation",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p>\n<p><strong>Trigger</strong> You transform due to a polymorph effect. Wild mists cover your form.</p>\n<hr />\n<p>You create a hazy cloud in a @Template[burst|distance:5] centered on one corner of your space. If your new form is Large or larger, the cloud covers your entire space instead. All creatures within the area are @UUID[Compendium.pf2e.conditionitems.Item.Concealed], and all others are concealed to them. The cloud lasts until the beginning of your next turn but is immediately dispersed by a strong wind.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +460,50 @@
       "name": "Storm Retribution",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F1DVDJRARfdb1Kjz",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Storm Retribution",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An opponent adjacent to you critically hits you with a melee weapon or melee unarmed attack.</p>\n<p><strong>Requirements</strong> You have at least 1 available Focus Point.</p>\n<hr />\n<p>You lash out, directing a burst of storming fury toward a creature that has harmed you. You cast @UUID[Compendium.pf2e.spells-srd.Item.Tempest Surge] on the triggering opponent and push that creature, moving it 5 feet away from you if it fails its Reflex save, or 10 feet if it critically fails. This movement is forced movement.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "storm order"
+              },
+              {
+                "value": "tempest surge order spell"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +513,43 @@
       "name": "Toppling Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2hwNGs7WQnO6yv0Q",
+        "folder": "KN2J6CzNZruC0diG",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Toppling Transformation",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your size increases due to a polymorph effect.</p>\n<hr />\n<p>You use your body's expansion as leverage to displace a nearby creature. You attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] an adjacent creature. For the purposes of determining what size creature you can affect, use your final size after the triggering effect.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

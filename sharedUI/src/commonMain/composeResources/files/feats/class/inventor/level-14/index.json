@@ -7,6 +7,47 @@
       "name": "Explosive Maneuver",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NDbNNMouxnnwBqwm",
+        "folder": "qaFEReXeEWqOIgdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Explosive Maneuver",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful Strike against a foe using your weapon innovation.</p><hr /><p>Thanks to a hidden experimental feature you built into your weapon, your weapon explosively deploys levers, tangling hooks, or similar mechanisms to provide significant assistance when you perform a combat maneuver. When you use Explosive Maneuver, choose Grapple, Shove, or Trip. Your weapon innovation must have a weapon trait that matches the action you chose (for instance, to choose Grapple, your weapon must have the grapple trait). You take the chosen action against the same foe as your previous successful Strike, using the same multiple attack penalty as your previous successful Strike. You still increase your multiple attack penalty after the Grapple, Shove, or Trip, as normal.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +57,47 @@
       "name": "Paragon Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R5hdEbfKdIVAQs24",
+        "folder": "qaFEReXeEWqOIgdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Paragon Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your construct companion has reached the pinnacle of form and function. Your construct companion becomes a paragon construct companion.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Incredible Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +107,57 @@
       "name": "Soaring Armor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2wLfchKVDSKBOIpV",
+        "folder": "qaFEReXeEWqOIgdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Soaring Armor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whether through a release of jets of flame, propeller blades, sonic bursts, streamlined aerodynamic structure, electromagnetic fields, or some combination of the above, you've managed to free your innovation from the bonds of gravity! While wearing your innovation, you gain a fly Speed equal to your land Speed.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "armor:id:{actor|flags.system.innovationId}"
+              ],
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "modification"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +167,43 @@
       "name": "Unstable Redundancies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5zeKULjKDkiIenhu",
+        "folder": "qaFEReXeEWqOIgdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unstable Redundancies",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would attempt the flat check for an unstable action, but you haven't rolled the flat check yet.</p>\n<hr />\n<p>You've built triple redundancies into your innovation and added all sorts of buffers to protect it from the harm of your unstable experiments. You automatically succeed at the triggering flat check.</p>\n<p>You can't rely on your Unstable Redundancies again until you spend 10 minutes setting them back up. If you spend 10 minutes retuning your innovation so you can use unstable actions again, you can set up your Unstable Redundancies during the same time.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

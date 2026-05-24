@@ -7,6 +7,50 @@
       "name": "Harbinger's Caw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KRfZcToCc5nvcQRa",
+        "folder": "w5BkycSvKeGqWXkU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Harbinger's Caw",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature within 60 feet is about to attempt an attack roll or skill check.</p><hr /><p>You caw ominously, cursing the creature with misfortune. The target creature must roll the triggering check twice and take the lower result.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "divine",
+              "misfortune",
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +60,58 @@
       "name": "Jinx Glutton",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eGfYZoWC6cDa2XWd",
+        "folder": "w5BkycSvKeGqWXkU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jinx Glutton",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can @UUID[Compendium.pf2e.feats-srd.Item.Eat Fortune] once per hour, rather than once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eat Fortune"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:slug:eat-fortune"
+              ],
+              "property": "frequency-per",
+              "value": "PT1H"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +121,86 @@
       "name": "Thunder God's Fan",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1jZ7f4TJqiFH8Ied",
+        "folder": "w5BkycSvKeGqWXkU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thunder God's Fan",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your fan unleashes the fury of the storm. You can use the Wave Fan activation one additional time per day. Add a 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.Lightning Bolt] spell to the spells contained within your fan.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Tengu Feather Fan"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:lightning-bolt",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "tengu-fan"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:lightning-bolt",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tengu"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:rank:5",
+                "item:tag:tengu-fan",
+                "item:slug:lightning-bolt"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Tengu.TenguFan.LightningBolt"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tengu"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

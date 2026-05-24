@@ -7,6 +7,48 @@
       "name": "Forestall Curse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NNeRv9Gcua1kMp4s",
+        "folder": "dT3hHYULbJfZMyQD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Forestall Curse",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You've learned to hold back your curse. If the next action you use is a cursebound ability, your @UUID[Compendium.pf2e.conditionitems.Item.Cursebound] value doesn't increase</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +58,76 @@
       "name": "Lighter than Air",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Vcn3fPJU8HMEkON5",
+        "folder": "dT3hHYULbJfZMyQD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lighter than Air",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mysterious steps become even lighter, transcending the mortal world altogether. When you have the @UUID[Compendium.pf2e.conditionitems.Item.Cursebound] condition, you gain the effects of @UUID[Compendium.pf2e.spells-srd.Item.Fly]. If you are cursebound 3 or greater, you gain a +10-foot status bonus to your fly Speed.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Water Walker"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:condition:cursebound",
+                    1
+                  ]
+                }
+              ],
+              "selector": "fly",
+              "value": "max(20,@actor.system.movement.speeds.land.value)"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:condition:cursebound",
+                    3
+                  ]
+                }
+              ],
+              "selector": "fly-speed",
+              "type": "status",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "divine",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +137,43 @@
       "name": "Mysterious Repertoire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ek3nCIFRreqnSxAQ",
+        "folder": "dT3hHYULbJfZMyQD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mysterious Repertoire",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mystery holds unknowable depths of magic not always associated with the divine. You can have one spell in your spell repertoire not on the divine spell list, in addition to spells you've added to your spell list from abilities like divine access.</p>\n<p>You cast that spell as a divine spell. You can swap which spell you add and from which tradition as you could any other oracle spell, but you can't use this feat to have more than one spell from another tradition in your spell repertoire at the same time</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +183,43 @@
       "name": "Revelation's Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "47Vapyhg9icGV6ce",
+        "folder": "dT3hHYULbJfZMyQD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Revelation's Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The further extents of your mystery provide an endless wellspring of magic. When you Refocus, you regain all your Focus Points instead of 1.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

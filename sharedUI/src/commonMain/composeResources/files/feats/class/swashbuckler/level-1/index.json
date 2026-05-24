@@ -7,6 +7,61 @@
       "name": "Disarming Flair",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1MWL2uEmyiOfYtJn",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disarming Flair",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You knock weapons from the hands of your foes with style. When you @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], the action gains the bravado trait.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:disarm"
+              ],
+              "property": "traits",
+              "value": "bravado"
+            },
+            {
+              "key": "RollOption",
+              "option": "item:trait:bravado",
+              "predicate": [
+                "action:disarm"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +71,77 @@
       "name": "Elegant Buckler",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "C5tSxOwDILefw4zq",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elegant Buckler",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned a flexible way to position your @UUID[Compendium.pf2e.equipment-srd.Item.Buckler] to provide more protection. When you @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield] to gain a circumstance bonus to AC from a buckler, increase the bonus from +1 to +2.</p>\n<p>While you have a buckler raised, if a creature critically misses you with a Strike, you gain panache until the end of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache (Temporary)]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.ElegantBuckler.RollOptionLabel",
+              "option": "elegant-buckler",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "elegant-buckler"
+              ],
+              "selector": "ac",
+              "slug": "raised-shield",
+              "value": 2
+            },
+            {
+              "affects": "origin",
+              "alterations": [
+                {
+                  "mode": "add",
+                  "property": "other-tags",
+                  "value": "critical-failure-note"
+                }
+              ],
+              "key": "EphemeralEffect",
+              "predicate": [
+                "elegant-buckler",
+                "self:shield:raised"
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Panache (Ephemeral Note)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +151,47 @@
       "name": "Extravagant Parry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WcY7H7mRiK2VDquV",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Extravagant Parry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding one or more one-handed weapons</p><hr /><p>You use one-handed weapons to parry with style. You gain a +1 circumstance bonus to AC until the start of your next turn, or a +2 circumstance bonus if you have a free hand or are wielding a weapon with the parry trait. You lose this circumstance bonus if you no longer meet this feat's requirement. If a creature misses you with a Strike while you have this bonus, you gain panache until the end of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache (Temporary)]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Extravagant Parry",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Extravagant Parry"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +201,79 @@
       "name": "Flashy Dodge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TnYHtN9gQASqOnii",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flashy Dodge",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature you can see targets you with an attack.</p>\n<p><strong>Requirements</strong> You aren't @UUID[Compendium.pf2e.conditionitems.Item.Encumbered].</p><hr /><p>You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack. If the Strike misses, you gain panache until the end of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache (Temporary)]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "flashy-dodge",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "flashy-dodge"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "affects": "origin",
+              "alterations": [
+                {
+                  "mode": "add",
+                  "property": "other-tags",
+                  "value": "failure-note"
+                },
+                {
+                  "mode": "add",
+                  "property": "other-tags",
+                  "value": "critical-failure-note"
+                }
+              ],
+              "key": "EphemeralEffect",
+              "predicate": [
+                "flashy-dodge"
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Panache (Ephemeral Note)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +283,54 @@
       "name": "Flying Blade",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qgNc5XwjsaWET0Op",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flying Blade",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You apply your flashy techniques to thrown weapons as easily as melee attacks. You apply your @UUID[Compendium.pf2e.classfeatures.Item.Precise Strike] damage on ranged Strikes you make with a thrown weapon within that weapon's first range increment. The thrown weapon must be an agile or finesse weapon. This also allows you to make a thrown weapon ranged Strike for @UUID[Compendium.pf2e.actionspf2e.Item.Confident Finisher] and any other finisher that includes a Strike that can benefit from your precise strike.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "precise strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TOTMToggle.FirstRangeIncrement",
+              "option": "target:range-increment:1",
+              "toggleable": "totm"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +340,47 @@
       "name": "Focused Fascination",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5GqjEM22n78Vmdpe",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Focused Fascination",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you use @UUID[Compendium.pf2e.feats-srd.Item.Fascinating Performance] in a combat encounter, you need only a success, rather than a critical success, to @UUID[Compendium.pf2e.conditionitems.Item.Fascinated]{Fascinate} your target. This works only if you're attempting to fascinate one target. For example, if you were an expert in Performance, you could choose to target multiple creatures normally or target one creature and fascinate it on a success.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fascinating Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -61,6 +390,62 @@
       "name": "Goading Feint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hXYnwpi95E77qfAu",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Goading Feint",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your tricks make foes overextend their attacks. On a [[/act feint options=goading-feint]], you can use the following success and critical success effects instead of any other effects you would gain when you Feint; if you do, other abilities that adjust the normal effects of your Feint no longer apply. You can choose whether to use the Goading Feint benefits or the normal benefits each time you Feint a given foe.</p><hr /><p><strong>Critical Success</strong> The target takes a –2 circumstance penalty to all attack rolls against you before the end of its next turn.</p>\n<p><strong>Success</strong> The target takes a –2 circumstance penalty to its next attack roll against you before the end of its next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Goading Feint]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "action:feint",
+                "goading-feint"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Swashbuckler.GoadingFeint.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -70,6 +455,52 @@
       "name": "One for All",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bCizH4ByTwbLcYA1",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "One for All",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With precisely the right words of encouragement, you bolster an ally's efforts. Designate an ally within 30 feet; this action counts as sufficient preparation to @UUID[Compendium.pf2e.actionspf2e.Item.Aid] that ally. When you use the Aid reaction to help that ally, you can roll @Check[diplomacy|traits:action:aid,bravado] in place of the usual check and the action gains the bravado trait</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "concentrate",
+              "emotion",
+              "linguistic",
+              "mental",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -79,6 +510,56 @@
       "name": "Plummeting Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I9m5XxKzazrqDKu6",
+        "folder": "sFR0R8pEufzoKbfT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plummeting Roll",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through nimble movements, a graceful landing, and a bit of luck, you can manage to fall from spectacular heights without a scratch. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Cat Fall] skill feat and the @UUID[Compendium.pf2e.actionspf2e.Item.Plummeting Roll] reaction.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Cat Fall"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Plummeting Roll"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

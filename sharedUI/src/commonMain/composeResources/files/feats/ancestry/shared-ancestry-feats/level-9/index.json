@@ -7,6 +7,48 @@
       "name": "Grow Tool",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rf8md5eIOxV2m4nJ",
+        "folder": "2JXbeuu55XII1NsX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grow Tool",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You grow a simple tool from your own body, coaxing flowers, vines, roots, and wood to grow and sprout from your flesh into the desired shape. You create a one level 0 common simple tool with no intricate parts or written text, such as a crowbar, rope, or shovel. You can't replicate a tool kit or weapon with this ability. This item lasts for 1 minute, or until you create another tool with this ability, whichever comes first. When duration runs out, the item crumbles to mulch.</p>\n<hr />\n<p><strong>Special</strong> This feat gains the trait for your ancestry.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "ardande trait, plant trait, or wood trait"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "plant",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +58,45 @@
       "name": "Pollinate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JDH1AIUF0XpmXpYt",
+        "folder": "2JXbeuu55XII1NsX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pollinate",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You take bludgeoning damage.</p>\n<hr />\n<p>As you're hit, you emit a dense cloud of pollen, obscuring you from sight. You become @UUID[Compendium.pf2e.conditionitems.Item.Concealed] until the beginning of your next turn.</p>\n<hr />\n<p><strong>Special</strong> This feat gains the trait for your ancestry.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "ardande trait, plant trait, or wood trait"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +106,65 @@
       "name": "Solar Rejuvenation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "velPTcpjLXPnaYrm",
+        "folder": "2JXbeuu55XII1NsX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Solar Rejuvenation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Ghoran</strong> - The warmth and light of the sun gives you life. If you rest outdoors for 10 minutes during the day, you regain Hit Points equal to your @Damage[(floor(@actor.level/2)*@actor.abilities.con.mod)[healing]]{Constitution modifier × half your level}. You gain this benefit in addition to any healing from @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds].</p>\n<p><strong>Leshy</strong> - If you rest outdoors for 10 minutes during the day, you regain Hit Points equal to your @Damage[(floor(@actor.level/2)*@actor.abilities.con.mod)[healing]]{Constitution modifier × half your level}. You gain this benefit in addition to any healing from @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds]. Leshies whose plant nourishment does not rely on photosynthesis require a similarly suitable environment. For example, fungus leshies need dark, damp environments and a pile of decaying plant matter.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "property": "description",
+              "value": [
+                {
+                  "predicate": [
+                    "self:ancestry:ghoran"
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.SolarRejuvenation.Ghoran"
+                },
+                {
+                  "predicate": [
+                    "self:ancestry:leshy"
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.SolarRejuvenation.Leshy"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ghoran",
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

@@ -7,6 +7,48 @@
       "name": "Oversized Throw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tIE2umG4rQOxm8D8",
+        "folder": "BYCNizFJdYZq0Uf6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oversized Throw",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have one or more hands free.</p><hr /><p>With a great heave, you seize a piece of your surroundings, such as a boulder, log, table, wagon, or chunk of earth, and hurl it at your foes. The object must be your size or one size smaller than you, and it must not have too much Bulk for you to lift it in the first place. Make a ranged Strike with the object; regardless of the result, the object takes the same amount of damage it would deal on a success.</p>\n<p>The object is a simple ranged weapon that deals 1d10 bludgeoning damage, has a range increment of 20 feet, and has the thrown weapon trait. The damage increases to 2d10 bludgeoning damage if you have @UUID[Compendium.pf2e.classfeatures.Item.Weapon Specialization] in simple weapons, or 3d10 bludgeoning if you have @UUID[Compendium.pf2e.classfeatures.Item.Greater Weapon Specialization (Barbarian)]{Greater Weapon Specialization}.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Oversized Throw",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Oversized Throw"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +58,64 @@
       "name": "Raging Athlete",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sEWYOllJ6rYoXK4K",
+        "folder": "BYCNizFJdYZq0Uf6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raging Athlete",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Physical obstacles can't hold back your fury. While you are raging, you gain a climb Speed and swim Speed equal to your land Speed, the DC of your @UUID[Compendium.pf2e.actionspf2e.Item.High Jump]{High Jumps} and @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump]{Long Jumps} decreases by 10, and you increase your distance on a successful Long Jump by 10 feet. Your distance for a vertical @UUID[Compendium.pf2e.actionspf2e.Item.Leap] increases to 5 feet vertically, and your distance for a horizontal Leap increases to 15 feet if your Speed is at least 15 feet, and to 20 feet if your Speed is at least 30 feet.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "selector": "climb",
+              "value": "@actor.system.movement.speeds.land.value"
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "selector": "swim",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +125,66 @@
       "name": "Scars of Steel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j8ycCi7ghTtpRjEW",
+        "folder": "BYCNizFJdYZq0Uf6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scars of Steel",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> An opponent critically hits you with an attack that deals physical damage.</p><hr /><p>When you are struck with the mightiest of blows, you can flex your muscles to turn aside some of the damage. You gain resistance to the triggering attack equal to your Constitution modifier plus half your level.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fury Instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "scars-of-steel",
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "scars-of-steel"
+              ],
+              "type": "all-damage",
+              "value": "floor(@actor.level/2)+@actor.abilities.con.mod"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +194,53 @@
       "name": "Spiritual Guides",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cEu8BUS41dlPyPGW",
+        "folder": "BYCNizFJdYZq0Uf6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spiritual Guides",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You fail, but don't critically fail, a Perception check or a skill check.</p><hr /><p>Though no one sees them and only you can hear them, the spirits around you constantly chatter, save when you are raging. Sometimes they're even helpful, and their guidance can even cut through the haze of your rage. Reroll the triggering check, using the second result even if it's worse.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "spirit instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +250,48 @@
       "name": "Supernatural Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "so4v9xjBFaoJ8EQs",
+        "folder": "BYCNizFJdYZq0Uf6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Supernatural Senses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your scent is preternaturally sharp, and you can always rely on your sense of smell to help guide you when your vision is compromised. When you target a @UUID[Compendium.pf2e.conditionitems.Item.Concealed] or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] opponent while you are raging, you reduce the DC of the flat check to 3 for a concealed target or to 9 for a hidden one.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Acute Scent or scent"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +301,47 @@
       "name": "Wounded Rage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CLKlavik0540j5bl",
+        "folder": "BYCNizFJdYZq0Uf6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wounded Rage",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You take damage and are capable of entering a rage</p>\n<hr />\n<p>You roar in pain, awakening the rage within you. You Rage.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Rage",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Rage"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

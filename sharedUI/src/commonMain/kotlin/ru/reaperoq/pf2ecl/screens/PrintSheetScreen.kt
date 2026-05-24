@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -64,7 +65,11 @@ import kotlinx.coroutines.withContext
 import ru.reaperoq.pf2ecl.data.Attribute
 import ru.reaperoq.pf2ecl.data.CharacterBuilderViewModel
 import ru.reaperoq.pf2ecl.data.Translations
-import ru.reaperoq.pf2ecl.data.exportBitmap
+import ru.reaperoq.pf2ecl.data.exportPng
+import ru.reaperoq.pf2ecl.data.printOrExportPdf
+import ru.reaperoq.pf2ecl.data.resolvedAncestryFeats
+import ru.reaperoq.pf2ecl.data.resolvedClassFeats
+import ru.reaperoq.pf2ecl.ui.LevelSelector
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -84,10 +89,10 @@ fun PrintSheetScreen(
 
     val conMod = attributes[Attribute.CON] ?: 0
     val dexMod = attributes[Attribute.DEX] ?: 0
-    val level = 1
-    val profTrained = 2 + level
+    val level = characterState.level
+    val profTrained = CharacterBuilderViewModel.proficiencyBonus(level)
 
-    val baseHp = (characterState.ancestry?.system?.hp ?: 0) + (characterState.classData?.system?.hp ?: 0) + conMod
+    val baseHp = CharacterBuilderViewModel.calculateMaxHp(characterState, conMod)
 
     val fortSave = conMod + ((characterState.classData?.system?.savingThrows?.fortitude ?: 0) * profTrained)
     val refSave = dexMod + ((characterState.classData?.system?.savingThrows?.reflex ?: 0) * profTrained)
@@ -135,6 +140,11 @@ fun PrintSheetScreen(
                             singleLine = true
                         )
 
+                        LevelSelector(
+                            level = level,
+                            onLevelChange = { viewModel.setLevel(it) }
+                        )
+
                         HorizontalDivider()
 
                         Text("Выбор виджетов на листе:", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold))
@@ -169,6 +179,12 @@ fun PrintSheetScreen(
                             onCheckedChange = { viewModel.toggleWidget("feats") }
                         )
 
+                        WidgetToggleRow(
+                            label = "Заклинания",
+                            checked = characterState.enabledWidgets.contains("spells"),
+                            onCheckedChange = { viewModel.toggleWidget("spells") }
+                        )
+
                         Spacer(modifier = Modifier.height(16.dp))
 
                         Button(
@@ -177,9 +193,9 @@ fun PrintSheetScreen(
                                     val name = characterState.name.ifBlank { "hero" }.replace(" ", "_")
                                     val bitmap = graphicsLayer.toImageBitmap()
                                     withContext(Dispatchers.Default) {
-                                        exportBitmap(bitmap, name)
+                                        exportPng(bitmap, name)
                                     }
-                                    snackbarHostState.showSnackbar("Экспорт завершен!")
+                                    snackbarHostState.showSnackbar("PNG сохранен!")
                                 }
                             },
                             modifier = Modifier.fillMaxWidth(),
@@ -187,7 +203,25 @@ fun PrintSheetScreen(
                         ) {
                             Icon(Icons.Rounded.Print, contentDescription = null)
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text("Печать / Экспорт в PNG")
+                            Text("Экспорт в PNG")
+                        }
+
+                        Button(
+                            onClick = {
+                                scope.launch {
+                                    val name = characterState.name.ifBlank { "hero" }.replace(" ", "_")
+                                    val bitmap = graphicsLayer.toImageBitmap()
+                                    withContext(Dispatchers.Default) {
+                                        printOrExportPdf(bitmap, name)
+                                    }
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
+                        ) {
+                            Icon(Icons.Rounded.Print, contentDescription = null)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text("Печать / Экспорт в PDF")
                         }
                     }
 
@@ -253,18 +287,43 @@ fun PrintSheetScreen(
                         modifier = Modifier.fillMaxWidth()
                     )
 
+                    LevelSelector(
+                        level = level,
+                        onLevelChange = { viewModel.setLevel(it) }
+                    )
+
                     Button(
                         onClick = {
                             scope.launch {
                                 val name = characterState.name.ifBlank { "hero" }.replace(" ", "_")
                                 val bitmap = graphicsLayer.toImageBitmap()
                                 withContext(Dispatchers.Default) {
-                                    exportBitmap(bitmap, name)
+                                    exportPng(bitmap, name)
                                 }
-                                snackbarHostState.showSnackbar("Экспорт завершен!")
+                                snackbarHostState.showSnackbar("PNG сохранен!")
                             }
                         },
                         modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(Icons.Rounded.Print, contentDescription = null)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Экспорт в PNG")
+                    }
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    Button(
+                        onClick = {
+                            scope.launch {
+                                val name = characterState.name.ifBlank { "hero" }.replace(" ", "_")
+                                val bitmap = graphicsLayer.toImageBitmap()
+                                withContext(Dispatchers.Default) {
+                                    printOrExportPdf(bitmap, name)
+                                }
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
                     ) {
                         Icon(Icons.Rounded.Print, contentDescription = null)
                         Spacer(modifier = Modifier.width(8.dp))
@@ -317,7 +376,8 @@ fun PrintSheetScreen(
 
             Box(
                 modifier = Modifier
-                    .size(a4Width, a4Height)
+                    .width(a4Width)
+                    .wrapContentHeight()
                     .zIndex(-1f)
                     .graphicsLayer { alpha = 0f }
                     .drawWithContent {
@@ -327,9 +387,8 @@ fun PrintSheetScreen(
             ) {
                 Box(
                     modifier = Modifier
-                        .fillMaxSize()
+                        .fillMaxWidth()
                         .padding(24.dp)
-                        .verticalScroll(rememberScrollState())
                 ) {
                     A4SheetContent(
                         characterState = characterState,
@@ -403,7 +462,7 @@ fun A4SheetContent(
                 Text("Класс: $classLabel", color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp)
                 Text("Родословная: $ancestryLabel", color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp)
                 Text("Предыстория: $bgLabel", color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp)
-                Text("Уровень: 1", color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp)
+                Text("Уровень: ${characterState.level}", color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp)
             }
             if (characterState.heritage != null) {
                 Spacer(modifier = Modifier.height(2.dp))
@@ -570,7 +629,7 @@ fun A4SheetContent(
                     ) {
                         items(skillList) { (skillId, attr) ->
                             val attrVal = attributes[attr] ?: 0
-                            val allTrained = autoTrainedSkills + characterState.extraTrainedSkills
+                            val allTrained = autoTrainedSkills
                             val isTrained = skillId.lowercase() in allTrained
                             val attrMod = (attrVal - 10) / 2
                             val finalSkillVal = attrMod + (if (isTrained) profTrained else 0)
@@ -601,7 +660,9 @@ fun A4SheetContent(
         }
 
         if (characterState.enabledWidgets.contains("feats")) {
-            val hasFeat = characterState.ancestryFeat != null || characterState.classFeat != null
+            val ancestryFeats = characterState.resolvedAncestryFeats()
+            val classFeats = characterState.resolvedClassFeats()
+            val hasFeat = ancestryFeats.isNotEmpty() || classFeats.isNotEmpty()
             if (hasFeat) {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
@@ -611,17 +672,67 @@ fun A4SheetContent(
                     Column(modifier = Modifier.padding(12.dp)) {
                         Text("ЧЕРТЫ ПЕРСОНАЖА (FEATS)", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
                         Spacer(modifier = Modifier.height(6.dp))
-                        characterState.ancestryFeat?.let { feat ->
-                            FeatRow(label = "Черта родословной", featName = feat.name)
+                        ancestryFeats.forEach { feat ->
+                            FeatRow(
+                                label = "Черта родословной · Ур. ${feat.system.level?.value ?: 1}",
+                                featName = feat.name
+                            )
                         }
-                        characterState.classFeat?.let { feat ->
-                            FeatRow(label = "Черта класса", featName = feat.name)
+                        classFeats.forEach { feat ->
+                            FeatRow(
+                                label = "Черта класса · Ур. ${feat.system.level?.value ?: 1}",
+                                featName = feat.name
+                            )
                         }
                     }
                 }
             }
         }
+
+        if (characterState.enabledWidgets.contains("spells")) {
+            val hasSpells = characterState.selectedCantrips.isNotEmpty() || characterState.selectedSpells.isNotEmpty()
+            if (hasSpells) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFF9F9F9)),
+                    border = BorderStroke(1.dp, Color.Black)
+                ) {
+                    Column(modifier = Modifier.padding(12.dp)) {
+                        Text("ЗАКЛИНАНИЯ (SPELLS)", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        if (characterState.selectedCantrips.isNotEmpty()) {
+                            Text("Cantrips", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
+                            characterState.selectedCantrips.forEach { spell ->
+                                SpellRow(spellName = spell.name)
+                            }
+                            Spacer(modifier = Modifier.height(4.dp))
+                        }
+                        characterState.selectedSpells
+                            .groupBy { it.rankLabel }
+                            .entries
+                            .sortedBy { (rankLabel, _) -> rankLabel.removePrefix("Rank ").toIntOrNull() ?: 0 }
+                            .forEach { (rankLabel, spells) ->
+                                Text(rankLabel, fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
+                                spells.forEach { spell ->
+                                    SpellRow(spellName = spell.name)
+                                }
+                                Spacer(modifier = Modifier.height(4.dp))
+                            }
+                    }
+                }
+            }
+        }
     }
+}
+
+@Composable
+fun SpellRow(spellName: String) {
+    Text(
+        text = "• $spellName",
+        fontSize = 11.sp,
+        color = Color.Black,
+        modifier = Modifier.padding(start = 8.dp, top = 2.dp, bottom = 2.dp)
+    )
 }
 
 @Composable

@@ -23,12 +23,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ru.reaperoq.pf2ecl.data.CharacterBuilderViewModel
+import ru.reaperoq.pf2ecl.data.CharacterProgression
 import ru.reaperoq.pf2ecl.data.Feat
+import ru.reaperoq.pf2ecl.data.resolvedAncestryFeats
+import ru.reaperoq.pf2ecl.data.resolvedClassFeats
 
-private val CRIMSON     = Color(0xFF912020)
-private val CRIMSON_DIM = Color(0xFF2D0F0F)
-private val CRIMSON_MID = Color(0xFFE57373)
-private val GREEN       = Color(0xFF2E7D5E)
 
 private fun cleanPf2eText(raw: String): String = raw
     .replace(Regex("@[A-Za-z]+\\[[^\\]]*\\]\\{([^}]*)\\}"), "$1")
@@ -60,7 +59,13 @@ fun FeatsScreen(
     // feat + kind ("ancestry" / "class") — открыт в панели деталей
     var previewed by remember { mutableStateOf<Pair<Feat, String>?>(null) }
 
-    val selectedCount = listOfNotNull(characterState.ancestryFeat, characterState.classFeat).size
+    val selectedAncestry = characterState.resolvedAncestryFeats()
+    val selectedClass = characterState.resolvedClassFeats()
+    val ancestrySlots = CharacterProgression.ancestryFeatSlots(characterState.level)
+    val classSlots = CharacterProgression.classFeatSlots(characterState.level)
+    val selectedCount = selectedAncestry.size + selectedClass.size
+    val totalSlots = ancestrySlots + classSlots
+    val levelLabel = "до ур. ${characterState.level}"
 
     Scaffold(
         topBar = {
@@ -68,9 +73,9 @@ fun FeatsScreen(
                 title = {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         Text("Черты", style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold))
-                        if (selectedCount > 0) {
-                            Surface(shape = RoundedCornerShape(20.dp), color = if (selectedCount == 2) GREEN else CRIMSON) {
-                                Text("$selectedCount/2",
+                        if (totalSlots > 0) {
+                            Surface(shape = RoundedCornerShape(20.dp), color = if (selectedCount == totalSlots) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.secondary) {
+                                Text("$selectedCount/$totalSlots",
                                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                                     style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                                     color = Color.White)
@@ -85,7 +90,7 @@ fun FeatsScreen(
         bottomBar = {
             Surface(shadowElevation = 4.dp, color = MaterialTheme.colorScheme.surface) {
                 Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp), Arrangement.End) {
-                    Button(onClick = onContinue, colors = ButtonDefaults.buttonColors(containerColor = CRIMSON)) {
+                    Button(onClick = onContinue, colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)) {
                         Text("Атрибуты →", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     }
                 }
@@ -93,7 +98,7 @@ fun FeatsScreen(
         }
     ) { padding ->
         if (isLoading) {
-            Box(Modifier.fillMaxSize().padding(padding), Alignment.Center) { CircularProgressIndicator(color = CRIMSON) }
+            Box(Modifier.fillMaxSize().padding(padding), Alignment.Center) { CircularProgressIndicator(color = MaterialTheme.colorScheme.secondary) }
             return@Scaffold
         }
 
@@ -108,10 +113,10 @@ fun FeatsScreen(
                     // Сетка черт родословной
                     FeatGridSection(
                         modifier   = Modifier.weight(1f).fillMaxHeight(),
-                        title      = "Черта родословной",
-                        subtitle   = characterState.ancestry?.name?.let { "Черты $it · Уровень 1" } ?: "Выберите родословную",
+                        title      = "Черты родословной",
+                        subtitle   = characterState.ancestry?.name?.let { "Черты $it · $levelLabel · ${selectedAncestry.size}/$ancestrySlots" } ?: "Выберите родословную",
                         feats      = ancestryFeats,
-                        selected   = characterState.ancestryFeat,
+                        selected   = selectedAncestry,
                         previewed  = (previewed?.takeIf { it.second == "ancestry" })?.first,
                         onPreview  = { feat -> previewed = feat to "ancestry" }
                     )
@@ -123,10 +128,10 @@ fun FeatsScreen(
                     // Сетка черт класса
                     FeatGridSection(
                         modifier   = Modifier.weight(1f).fillMaxHeight(),
-                        title      = "Черта класса",
-                        subtitle   = characterState.classData?.name?.let { "Черты $it · Уровень 1" } ?: "Выберите класс",
+                        title      = "Черты класса",
+                        subtitle   = characterState.classData?.name?.let { "Черты $it · $levelLabel · ${selectedClass.size}/$classSlots" } ?: "Выберите класс",
                         feats      = classFeats,
-                        selected   = characterState.classFeat,
+                        selected   = selectedClass,
                         previewed  = (previewed?.takeIf { it.second == "class" })?.first,
                         onPreview  = { feat -> previewed = feat to "class" }
                     )
@@ -139,11 +144,11 @@ fun FeatsScreen(
                     FeatDetailPanel(
                         modifier       = Modifier.width(300.dp).fillMaxHeight(),
                         previewed      = previewed,
-                        ancestrySelected = characterState.ancestryFeat,
-                        classSelected  = characterState.classFeat,
-                        onSelect       = { feat, kind ->
-                            if (kind == "ancestry") viewModel.setAncestryFeat(feat)
-                            else viewModel.setClassFeat(feat)
+                        ancestrySelected = selectedAncestry,
+                        classSelected  = selectedClass,
+                        onToggle       = { feat, kind ->
+                            if (kind == "ancestry") viewModel.toggleAncestryFeat(feat)
+                            else viewModel.toggleClassFeat(feat)
                         }
                     )
                 }
@@ -153,10 +158,10 @@ fun FeatsScreen(
                     modifier       = Modifier.fillMaxSize().padding(horizontal = 12.dp),
                     ancestryFeats  = ancestryFeats,
                     classFeats     = classFeats,
-                    ancestrySelected = characterState.ancestryFeat,
-                    classSelected  = characterState.classFeat,
-                    onSelectAncestry = { viewModel.setAncestryFeat(it) },
-                    onSelectClass    = { viewModel.setClassFeat(it) }
+                    ancestrySelected = selectedAncestry,
+                    classSelected  = selectedClass,
+                    onToggleAncestry = { viewModel.toggleAncestryFeat(it) },
+                    onToggleClass    = { viewModel.toggleClassFeat(it) }
                 )
             }
         }
@@ -170,14 +175,17 @@ private fun FeatGridSection(
     title: String,
     subtitle: String,
     feats: List<Feat>,
-    selected: Feat?,
+    selected: List<Feat>,
     previewed: Feat?,
     onPreview: (Feat) -> Unit
 ) {
+    fun isFeatSelected(feat: Feat) = selected.any { s ->
+        (s._id != null && feat._id != null && s._id == feat._id) || s.name == feat.name
+    }
     Column(modifier = modifier) {
         // Заголовок раздела
         Column(Modifier.padding(bottom = 10.dp)) {
-            Text(title, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = CRIMSON))
+            Text(title, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary))
             Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
 
@@ -199,8 +207,9 @@ private fun FeatGridSection(
                         FeatGridCard(
                             modifier   = Modifier.weight(1f).fillMaxHeight(),
                             feat       = feat,
-                            isSelected = selected?.name == feat.name,
+                            isSelected = isFeatSelected(feat),
                             isPreviewed = previewed?.name == feat.name,
+                            featLevel = feat.system.level?.value ?: 1,
                             onClick    = { onPreview(feat) }
                         )
                     }
@@ -218,18 +227,19 @@ private fun FeatGridCard(
     feat: Feat,
     isSelected: Boolean,
     isPreviewed: Boolean,
+    featLevel: Int,
     onClick: () -> Unit
 ) {
     val traits = feat.system.traits?.value ?: emptyList()
     val cleanDesc = remember(feat.name) { cleanPf2eText(feat.system.description.value) }
 
     val bg = when {
-        isSelected  -> CRIMSON_DIM
+        isSelected  -> MaterialTheme.colorScheme.secondaryContainer
         isPreviewed -> MaterialTheme.colorScheme.surfaceVariant
         else        -> MaterialTheme.colorScheme.surface
     }
     val border = when {
-        isSelected  -> BorderStroke(1.5.dp, CRIMSON)
+        isSelected  -> BorderStroke(1.5.dp, MaterialTheme.colorScheme.secondary)
         isPreviewed -> BorderStroke(1.dp, MaterialTheme.colorScheme.outline)
         else        -> BorderStroke(0.5.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
     }
@@ -244,7 +254,7 @@ private fun FeatGridCard(
     ) {
         // Левая полоса для выбранной
         if (isSelected) {
-            Box(Modifier.width(3.dp).fillMaxHeight().background(CRIMSON).align(Alignment.CenterStart))
+            Box(Modifier.width(3.dp).fillMaxHeight().background(MaterialTheme.colorScheme.secondary).align(Alignment.CenterStart))
         }
 
         Column(
@@ -255,7 +265,7 @@ private fun FeatGridCard(
             // Трейты и галочка
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                 if (isSelected) {
-                    Icon(Icons.Rounded.Check, null, Modifier.size(14.dp), tint = CRIMSON_MID)
+                    Icon(Icons.Rounded.Check, null, Modifier.size(14.dp), tint = MaterialTheme.colorScheme.onSecondaryContainer)
                 }
                 traits.take(2).forEach { FeatTraitPill(it) }
             }
@@ -268,11 +278,18 @@ private fun FeatGridCard(
                 style = MaterialTheme.typography.titleSmall.copy(
                     fontWeight = FontWeight.Bold,
                     fontSize = 17.sp,
-                    color = if (isSelected) CRIMSON_MID else MaterialTheme.colorScheme.onSurface
+                    color = if (isSelected) MaterialTheme.colorScheme.onSecondaryContainer else MaterialTheme.colorScheme.onSurface
                 ),
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
+            )
+
+            Text(
+                "Ур. $featLevel",
+                fontSize = 11.sp,
+                fontWeight = FontWeight.Medium,
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Spacer(Modifier.height(4.dp))
@@ -282,7 +299,7 @@ private fun FeatGridCard(
                 cleanDesc.take(80).replace("\n", " ") + if (cleanDesc.length > 80) "…" else "",
                 fontSize = 13.sp,
                 lineHeight = 18.sp,
-                color = if (isSelected) CRIMSON_MID.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurfaceVariant,
+                color = if (isSelected) MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.7f) else MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
@@ -296,10 +313,14 @@ private fun FeatGridCard(
 private fun FeatDetailPanel(
     modifier: Modifier,
     previewed: Pair<Feat, String>?,
-    ancestrySelected: Feat?,
-    classSelected: Feat?,
-    onSelect: (Feat, String) -> Unit
+    ancestrySelected: List<Feat>,
+    classSelected: List<Feat>,
+    onToggle: (Feat, String) -> Unit
 ) {
+    fun isSelected(feat: Feat, kind: String): Boolean {
+        val list = if (kind == "ancestry") ancestrySelected else classSelected
+        return list.any { (it._id != null && feat._id != null && it._id == feat._id) || it.name == feat.name }
+    }
     Surface(
         modifier = modifier,
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
@@ -316,8 +337,7 @@ private fun FeatDetailPanel(
             }
         } else {
             val (feat, kind) = previewed
-            val isSelected = if (kind == "ancestry") ancestrySelected?.name == feat.name
-            else classSelected?.name == feat.name
+            val selected = isSelected(feat, kind)
             val traits    = feat.system.traits?.value ?: emptyList()
             val prereqs   = feat.system.prerequisites?.value?.filter { it.value.isNotBlank() } ?: emptyList()
             val cleanDesc = remember(feat.name) { cleanPf2eText(feat.system.description.value) }
@@ -346,13 +366,16 @@ private fun FeatDetailPanel(
                         feat.name,
                         style = MaterialTheme.typography.headlineSmall.copy(
                             fontWeight = FontWeight.Bold,
-                            color = if (isSelected) CRIMSON_MID else MaterialTheme.colorScheme.onSurface
+                            color = if (selected) MaterialTheme.colorScheme.onSecondaryContainer else MaterialTheme.colorScheme.onSurface
                         )
                     )
 
                     // Тип черты
                     Text(
-                        when (kind) { "ancestry" -> "Черта родословной · Уровень 1"; else -> "Черта класса · Уровень 1" },
+                        when (kind) {
+                            "ancestry" -> "Черта родословной · Ур. ${feat.system.level?.value ?: 1}"
+                            else -> "Черта класса · Ур. ${feat.system.level?.value ?: 1}"
+                        },
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -380,19 +403,19 @@ private fun FeatDetailPanel(
 
                 // Кнопка выбора
                 Button(
-                    onClick = { onSelect(feat, kind) },
+                    onClick = { onToggle(feat, kind) },
                     modifier = Modifier.fillMaxWidth(),
-                    colors = if (isSelected)
-                        ButtonDefaults.buttonColors(containerColor = CRIMSON.copy(0.3f), contentColor = CRIMSON_MID)
+                    colors = if (selected)
+                        ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary.copy(0.3f), contentColor = MaterialTheme.colorScheme.onSecondaryContainer)
                     else
-                        ButtonDefaults.buttonColors(containerColor = CRIMSON, contentColor = Color.White),
+                        ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = Color.White),
                     shape = RoundedCornerShape(8.dp),
                     contentPadding = PaddingValues(vertical = 14.dp)
                 ) {
-                    if (isSelected) Icon(Icons.Rounded.Check, null, Modifier.size(16.dp))
-                    if (isSelected) Spacer(Modifier.width(6.dp))
+                    if (selected) Icon(Icons.Rounded.Check, null, Modifier.size(16.dp))
+                    if (selected) Spacer(Modifier.width(6.dp))
                     Text(
-                        if (isSelected) "Выбрано ✓" else "Выбрать эту черту",
+                        if (selected) "Снять выбор" else "Выбрать эту черту",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp
                     )
@@ -408,28 +431,30 @@ private fun NarrowFeatsList(
     modifier: Modifier,
     ancestryFeats: List<Feat>,
     classFeats: List<Feat>,
-    ancestrySelected: Feat?,
-    classSelected: Feat?,
-    onSelectAncestry: (Feat) -> Unit,
-    onSelectClass: (Feat) -> Unit
+    ancestrySelected: List<Feat>,
+    classSelected: List<Feat>,
+    onToggleAncestry: (Feat) -> Unit,
+    onToggleClass: (Feat) -> Unit
 ) {
+    fun isAncestrySelected(feat: Feat) = ancestrySelected.any { (it._id != null && feat._id != null && it._id == feat._id) || it.name == feat.name }
+    fun isClassSelected(feat: Feat) = classSelected.any { (it._id != null && feat._id != null && it._id == feat._id) || it.name == feat.name }
     var expandedId by remember { mutableStateOf<String?>(null) }
 
     Column(modifier = modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(0.dp)) {
         NarrowSectionHeader("Черта родословной")
         ancestryFeats.forEach { feat ->
             val key = (feat._id ?: feat.name) + "_a"
-            NarrowFeatRow(feat, ancestrySelected?.name == feat.name, expandedId == key,
+            NarrowFeatRow(feat, isAncestrySelected(feat), expandedId == key,
                 onToggle = { expandedId = if (expandedId == key) null else key },
-                onSelect = { onSelectAncestry(feat) })
+                onSelect = { onToggleAncestry(feat) })
         }
         Spacer(Modifier.height(16.dp))
         NarrowSectionHeader("Черта класса")
         classFeats.forEach { feat ->
             val key = (feat._id ?: feat.name) + "_c"
-            NarrowFeatRow(feat, classSelected?.name == feat.name, expandedId == key,
+            NarrowFeatRow(feat, isClassSelected(feat), expandedId == key,
                 onToggle = { expandedId = if (expandedId == key) null else key },
-                onSelect = { onSelectClass(feat) })
+                onSelect = { onToggleClass(feat) })
         }
         Spacer(Modifier.height(16.dp))
     }
@@ -437,7 +462,7 @@ private fun NarrowFeatsList(
 
 @Composable
 private fun NarrowSectionHeader(title: String) {
-    Text(title, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = CRIMSON),
+    Text(title, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary),
         modifier = Modifier.padding(top = 16.dp, bottom = 8.dp))
 }
 
@@ -450,16 +475,16 @@ private fun NarrowFeatRow(feat: Feat, isSelected: Boolean, isExpanded: Boolean, 
     Column(
         modifier = Modifier.fillMaxWidth()
             .clip(RoundedCornerShape(8.dp))
-            .background(if (isSelected) CRIMSON_DIM else MaterialTheme.colorScheme.surface)
+            .background(if (isSelected) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surface)
             .border(BorderStroke(if (isSelected) 1.5.dp else 0.5.dp,
-                if (isSelected) CRIMSON else MaterialTheme.colorScheme.outline.copy(0.2f)), RoundedCornerShape(8.dp))
+                if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outline.copy(0.2f)), RoundedCornerShape(8.dp))
             .clickable { onToggle() }
             .padding(12.dp)
     ) {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            if (isSelected) { Icon(Icons.Rounded.Check, null, Modifier.size(14.dp), tint = CRIMSON_MID); Spacer(Modifier.width(4.dp)) }
+            if (isSelected) { Icon(Icons.Rounded.Check, null, Modifier.size(14.dp), tint = MaterialTheme.colorScheme.onSecondaryContainer); Spacer(Modifier.width(4.dp)) }
             Text(feat.name, style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.SemiBold, fontSize = 15.sp,
-                color = if (isSelected) CRIMSON_MID else MaterialTheme.colorScheme.onSurface), modifier = Modifier.weight(1f))
+                color = if (isSelected) MaterialTheme.colorScheme.onSecondaryContainer else MaterialTheme.colorScheme.onSurface), modifier = Modifier.weight(1f))
             traits.take(2).forEach { FeatTraitPill(it) }
         }
         if (isExpanded) {
@@ -470,8 +495,8 @@ private fun NarrowFeatRow(feat: Feat, isSelected: Boolean, isExpanded: Boolean, 
                 fontSize = 13.sp, lineHeight = 19.sp, color = MaterialTheme.colorScheme.onSurface)
             Spacer(Modifier.height(8.dp))
             Button(onClick = onSelect, modifier = Modifier.fillMaxWidth(),
-                colors = if (isSelected) ButtonDefaults.buttonColors(CRIMSON.copy(0.3f), CRIMSON_MID)
-                else ButtonDefaults.buttonColors(CRIMSON, Color.White),
+                colors = if (isSelected) ButtonDefaults.buttonColors(MaterialTheme.colorScheme.secondary.copy(0.3f), MaterialTheme.colorScheme.onSecondaryContainer)
+                else ButtonDefaults.buttonColors(MaterialTheme.colorScheme.secondary, Color.White),
                 shape = RoundedCornerShape(6.dp)) {
                 Text(if (isSelected) "Выбрано ✓" else "Выбрать", fontWeight = FontWeight.Bold)
             }
@@ -489,10 +514,10 @@ private fun FeatTraitPill(trait: String) {
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(3.dp))
-            .background(CRIMSON.copy(0.15f))
-            .border(BorderStroke(0.5.dp, CRIMSON.copy(0.5f)), RoundedCornerShape(3.dp))
+            .background(MaterialTheme.colorScheme.secondary.copy(0.15f))
+            .border(BorderStroke(0.5.dp, MaterialTheme.colorScheme.secondary.copy(0.5f)), RoundedCornerShape(3.dp))
             .padding(horizontal = 6.dp, vertical = 2.dp)
     ) {
-        Text(trait.replaceFirstChar { it.uppercase() }, fontSize = 10.sp, fontWeight = FontWeight.Medium, color = CRIMSON_MID, maxLines = 1)
+        Text(trait.replaceFirstChar { it.uppercase() }, fontSize = 10.sp, fontWeight = FontWeight.Medium, color = MaterialTheme.colorScheme.onSecondaryContainer, maxLines = 1)
     }
 }

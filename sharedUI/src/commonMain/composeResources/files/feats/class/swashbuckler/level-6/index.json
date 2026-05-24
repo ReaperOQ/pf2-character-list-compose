@@ -7,6 +7,47 @@
       "name": "Agile Maneuvers",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ba6SLqAghsZgqhua",
+        "folder": "KX33xkC90e8I47IT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Agile Maneuvers",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your easily maneuver against your foes. Your @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Grapple], @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], and @UUID[Compendium.pf2e.actionspf2e.Item.Trip] actions have a lower multiple attack penalty. Even if your weapon or unarmed attack doesn't have the agile trait, the penalty is –4 if the action is your second attack on your turn, or –8 if it's your third or subsequent attack. If your weapon or unarmed attack is agile and you have panache, the penalty is reduced further, to –3 if it's the second attack on your turn or –6 if it's the third or subsequent.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +57,64 @@
       "name": "Combination Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7KT4huf0iPaBGD7R",
+        "folder": "KX33xkC90e8I47IT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Combination Finisher",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You combine a series of attacks with a powerful finishing blow. Your finishers' Strikes have a lower multiple attack penalty: -4 (or -3 with an agile weapon) if it's the second attack on your turn, or -8 (or -6 with an agile weapon) if it's the third or subsequent attack on your turn, instead of -5 and -10, respectively.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "MultipleAttackPenalty",
+              "predicate": [
+                "agile",
+                "finisher"
+              ],
+              "selector": "attack",
+              "value": -3
+            },
+            {
+              "key": "MultipleAttackPenalty",
+              "predicate": [
+                {
+                  "not": "agile"
+                },
+                "finisher"
+              ],
+              "selector": "attack",
+              "value": -4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +124,98 @@
       "name": "Precise Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qeLpqH2cMSmIrILV",
+        "folder": "KX33xkC90e8I47IT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Precise Finisher",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Even when your foe avoids your @UUID[Compendium.pf2e.actionspf2e.Item.Confident Finisher], you can still hit a vital spot. On a failure with Confident Finisher, you apply your full precise strike damage instead of half.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Confident Finisher"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "failure"
+              ],
+              "predicate": [
+                {
+                  "or": [
+                    "finisher:confident",
+                    "eternal-confidence"
+                  ]
+                },
+                {
+                  "or": [
+                    "item:melee",
+                    {
+                      "and": [
+                        "feat:flying-blade",
+                        "item:thrown",
+                        {
+                          "or": [
+                            "target:range-increment:1",
+                            {
+                              "and": [
+                                "finisher:twirling-throw",
+                                {
+                                  "lte": [
+                                    "target:range-increment",
+                                    3
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:agile",
+                    "item:trait:finesse"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Swashbuckler.Finisher.PreciseNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +225,44 @@
       "name": "Vexing Tumble",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9CXQhg4YprPhqzoL",
+        "folder": "KX33xkC90e8I47IT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vexing Tumble",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You tumble around your foes, expertly avoiding their reactions. Stride up to half your Speed and roll an @Check[acrobatics] check. Compare the result to the Reflex DC of each enemy whose reach you began in or enter during the movement, in sequence.</p><hr /><p><strong>Critical Success</strong> This movement doesn't trigger reactions from the enemy, and the enemy is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you until the end of your turn</p>\n<p><strong>Success</strong> This movement doesn't trigger reactions from the enemy.</p>\n<p><strong>Critical Failure</strong> Your movement immediately stops when you enter the creature's reach; if you began in the creature's reach, you don't move.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bravado",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Deimatic Display",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UFVw57jWNC4UCfyN",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deimatic Display",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Imitating animal threat displays, you make yourself appear larger and more imposing. Attempt an Intimidation check to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] each enemy within 30 feet. This attempt has the visual trait, loses the auditory trait, and you don't take a penalty if the creature doesn't understand your language. Roll your check only once and compare it to the Will DC of each target. You gain a +2 circumstance bonus to the check against animal, fungus, and plant creatures and take a –2 circumstance penalty against other creatures. Each target is then temporarily immune for 1 minute.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +57,124 @@
       "name": "Ferocious Shape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Le30algCdKIsxmeK",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ferocious Shape",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've mastered the shape of dinosaurs. Add the shapes listed in @UUID[Compendium.pf2e.spells-srd.Item.Dinosaur Form] to your untamed form list. Whenever you use @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] to take a shape that grants you a specific Athletics modifier, you gain a +1 status bonus to your Athletics checks.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:untamed-form",
+                "battle-form:athletics"
+              ],
+              "selector": "athletics",
+              "type": "status",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dinosaur Form (Ankylosaurus)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dinosaur Form (Brontosaurus)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dinosaur Form (Deinonychus)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dinosaur Form (Stegosaurus)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dinosaur Form (Triceratops)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Dinosaur Form (Tyrannosaurus)"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +184,43 @@
       "name": "Fey Caller",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8rE5zLEVe4putosB",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fey Caller",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have learned some of the tricks the fey use to bend primal magic toward illusions and trickery. Add @UUID[Compendium.pf2e.spells-srd.Item.Illusory Disguise], @UUID[Compendium.pf2e.spells-srd.Item.Illusory Object], and @UUID[Compendium.pf2e.spells-srd.Item.Illusory Scene] to your spell list, which you cast as primal spells.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +230,53 @@
       "name": "Floral Restoration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ffLzfZIq7LoNXqWO",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Floral Restoration",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You request that nearby plants share their vitality with you to replenish your body and magic. You regain 1 Focus Point and @Damage[ceil(@item.level/2)d8[healing]] Hit Points.</p>\n<p>You must be in a location of at least 15 feet by 15 feet of healthy plant life, though this can be grass, lichen, seaweed, or any other form of naturally occurring flora. Using Floral Restoration on a given section of nature does not harm it, but it prevents that section of nature from giving its vitality to another use of Floral Restoration for 24 hours.</p>\n<p>At 9th level, and every 2 levels thereafter, increase the healing by 1d8.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "leaf order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "healing",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +286,43 @@
       "name": "Forgotten Presence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ASAXLrckAyTBYi8E",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Forgotten Presence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The world conspires to keep you forgotten and unnoticed—memories cloud, ink stains out your name in ledgers, and portraits of you crack and warp over your face. Characters attempting to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about you take a –2 circumstance penalty. Add @UUID[Compendium.pf2e.spells-srd.Item.Rewrite Memory] to your spell list as a primal spell.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +332,47 @@
       "name": "Incredible Companion (Druid)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qgW8uHJXJGl3DKBS",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incredible Companion (Druid)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your animal companion continues to grow and develop. It becomes either a nimble or savage animal companion, gaining additional capabilities determined by the type.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mature Animal Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +382,47 @@
       "name": "Raise Menhir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BuVIM4cV7qhVZ2WF",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raise Menhir",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You raise a druidic monument, such as a standing stone or warding tree, from the ground, creating a powerful primal ward that blocks other types of magic. The monument appears in an unoccupied square on the ground within 30 feet, making that square difficult terrain. Choose arcane, divine, or occult; all creatures within @Template[emanation|distance:15]{15 feet} of the monument gain a +2 status bonus to their saving throws against effects with that trait. The monument lasts for 1 round before crumbling back into the earth or wilting away into nothingness, but you can Sustain the monument for up to 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Raise Menhir]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +432,103 @@
       "name": "Soaring Shape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wNHUryoRzlfDCFAd",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Soaring Shape",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Wings free you from the shackles of the ground below. Add the bat and bird shapes in @UUID[Compendium.pf2e.spells-srd.Item.Aerial Form] to your @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] list. If you have @UUID[Compendium.pf2e.feats-srd.Item.Insect Shape], you also add the wasp shape to your <em>untamed form</em> list. If you have @UUID[Compendium.pf2e.feats-srd.Item.Ferocious Shape], you also add the pterosaur shape to your <em>untamed form</em> list. Whenever you use <em>untamed form</em> to take a shape that grants you a specific Acrobatics modifier, you gain a +1 status bonus to Acrobatics checks.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "battle-form:acrobatics"
+              ],
+              "selector": "acrobatics",
+              "type": "status",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Aerial Form (Bat)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Aerial Form (Bird)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form",
+                "feat:insect-shape"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Aerial Form (Wasp)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form",
+                "feat:ferocious-shape"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Aerial Form (Pterosaur)"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +538,85 @@
       "name": "Thunderclap Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vYfRgneZnHYBzUy5",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thunderclap Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your lightning splits the air, generating a booming shock wave. If your next action is to Cast a Spell that has the electricity trait or deals electricity damage, has no duration, and requires creatures to attempt a saving throw, the force of the spell's lightning creates a thunderclap, in addition to its other effects. Each creature that failed its Reflex save against the spell is @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for 1 round, and those who critically failed are also knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "storm order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:thunderclap-spell",
+                {
+                  "or": [
+                    "item:damage:type:electricity",
+                    "item:trait:electricity",
+                    "item:duration:0"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.ThunderclapSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "thunderclap-spell"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "sonic",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +626,47 @@
       "name": "Wind Caller",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Jj6sVfIX81tgvSY4",
+        "folder": "A3uR1mpLuGu1HA6M",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wind Caller",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You bid the winds to aid you, carrying you through the air and allowing you passage through the strongest headwinds. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Stormwind Flight] order spell.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "storm order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

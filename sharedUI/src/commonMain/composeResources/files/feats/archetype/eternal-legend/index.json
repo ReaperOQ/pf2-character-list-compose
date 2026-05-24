@@ -7,6 +7,71 @@
       "name": "Death from Above (Eternal Legend)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "95dHFM31VrUjn3d3",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Death from Above (Eternal Legend)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are adjacent to a climbable surface at least 10 feet tall.</p><hr /><p>Seemingly to defy gravity, you use a nearby vertical surface to propel yourself upward and then strike downward like the driving rain. Stride up to half your Speed upward on the required surface; if you have a climb Speed, you may use your full climb Speed instead. The surface does not need to span the full height of your Stride. You can then either make a ranged Strike at a target within your weapon's first range increment and land in the space you began (or an adjacent space) without taking falling damage, or you can land in a space adjacent to a creature within 10 feet of the required surface without taking falling damage and make a melee Strike against that creature. Either Strike deals an extra two dice of weapon damage. In addition, the target dealt damage by your Strike must succeed at a @Check[fortitude|against:class] saving throw against your class DC or become @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.EternalLegend.DeathFromAbove.Label",
+              "option": "death-from-above-eternal-legend",
+              "toggleable": true
+            },
+            {
+              "diceNumber": 2,
+              "key": "DamageDice",
+              "predicate": [
+                "death-from-above-eternal-legend"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "death-from-above-eternal-legend"
+              ],
+              "selector": "strike-damage",
+              "text": "PF2E.SpecificRule.EternalLegend.DeathFromAbove.Note",
+              "title": "PF2E.SpecificRule.EternalLegend.DeathFromAbove.Label"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +81,48 @@
       "name": "Demolishing Knockback",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X5SZIwtYpx0r9MPx",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demolishing Knockback",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a forceful attack that has the power to push your foe through walls. Spend a Mythic Point and make a Strike at mythic proficiency. If you hit and deal damage to the target, you push them up to 15 feet away from you. If this movement would cause the target to collide with an object that has a hardness of 5 or less, the object breaks and the target is pushed through the object's space for the remainder of the forced movement, taking an additional @Damage[2d6[bludgeoning]] damage (the GM can decide that this is a different type of damage depending on the object the target was pushed through; for instance, @Damage[2d6[slashing]]{slashing} damage if the target is pushed through a pane of glass).</p>\n<p>If the forced movement doesn't cause the target to collide with an object, the target must succeed at a @Check[reflex|against:class] saving throw against your class DC or be knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone] at the end of the movement.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +132,47 @@
       "name": "Earth to Heavens Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5WMoaM7cH9aw3iAc",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Earth to Heavens Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your blows hamper both a foe's mobility and cognitive functions by focusing first on their lower extremities and then their head. Make a Strike; if you hit and deal damage, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} until the end of your next turn. Then, make another Strike against the same creature. If that Strike hits and deals damage, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} until the end of your next turn. If both Strikes hit and deal damage, the duration of both conditions increases to 1 minute. Each Strike counts toward your multiple attack penalty, but you don't increase your multiple attack penalty until after you've made both Strikes.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +182,44 @@
       "name": "Eternal Legend Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZI7WQ1en8s5VG6fk",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eternal Legend Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As your renown as a fighter grows, your Calling comes to fruition. Almost nothing can keep you down. During your daily preparations, choose @UUID[Compendium.pf2e.conditionitems.Item.Clumsy], @UUID[Compendium.pf2e.conditionitems.Item.Drained], or @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]. For the remainder of the day, when you roll a success against an effect that would impose that condition on you, you get a critical success instead. In addition, anytime you gain the chosen condition, reduce its value by 1. You can change the chosen condition with a single action that has the concentrate trait.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.MsJGLtT0GScL8cI8]{Eternal Legend}</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "destiny",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +229,51 @@
       "name": "Exaltation Overwhelming",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IySKTSfPO0Lzfm8r",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exaltation Overwhelming",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Raising your weapon or fist aloft, you begin to gleam with dazzling radiance. You fulminate with power and glory, making it clear to all who see you that your legend is real and possibly even greater than purported. Spend a Mythic Point. All enemies who can see you must succeed at a @Check[will|against:class] saving throw against your class DC or become @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3} (@UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 4} on a critical failure). You and any ally who can see you may choose to Strike or Stride as a free action. Any of these Strikes are made at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "emotion",
+              "fear",
+              "mental",
+              "mythic",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +283,61 @@
       "name": "Faultless Defense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LZsVmDfGPGjWIoSS",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Faultless Defense",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would take damage from a Strike made by a creature.</p><hr /><p>As you are struck, your steely determination reminds those who fight you that they are destined to be no more than footnotes in your tale. Spend a Mythic Point to gain resistance equal to half your level to the triggering damage, and then attempt a Strike at mythic proficiency against the creature that attacked you. If the Strike hits and deals damage, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1}.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "faultless-defense",
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "faultless-defense"
+              ],
+              "type": "all-damage",
+              "value": "floor(@actor.level / 2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -61,6 +347,43 @@
       "name": "Fight Through Oblivion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fwdnRUW6TVwjiAoq",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fight Through Oblivion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Mortal wounds that would kill other warriors are no more than the flutter of butterfly wings to you. When you are reduced to 0 Hit Points, you aren't knocked @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] and you don't gain the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition. Until the start of your next turn, you become immune to all damage, but you also can't regain Hit Points in any way except the following. If you Strike and damage a foe on this turn, you regain @Damage[(4d8+30)[healing]] Hit Points. Otherwise, your @UUID[Compendium.pf2e.conditionitems.Item.Wounded] value increases by 1 and you remain immune to damage and healing. This cycle continues until you regain Hit Points by damaging a foe or until you reach wounded 4, at which point you lose the wounded condition, fall unconscious, and gain the dying condition.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -70,6 +393,100 @@
       "name": "Finish Their Story!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PAsFP9jcVcHkBoRd",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Finish Their Story!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Though your tale is immortal, your foes aren't afforded such an advantage and mainly serve only to further your legend. When the time is right, you can shepherd a weaker opponent off this mortal coil. Spend a Mythic Point and make a Strike at mythic proficiency against an enemy. This Strike counts as two attacks for your multiple attack penalty and either kills or damages the target depending on their level, as noted below. After you make this Strike, the target becomes temporarily immune to Finish Their Story!, for 1 hour.</p>\n<p><strong>16th Level or Lower</strong> If the Strike hits, the target dies instantly.</p>\n<p><strong>17th Level</strong> If the Strike hits, the target takes the Strike's normal damage plus an additional three damage die.</p>\n<p><strong>18th Level or Higher</strong> If the Strike hits, the target takes the Strike's normal damage plus an additional two damage die.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "finish-their-story",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "finish-their-story",
+                {
+                  "lte": [
+                    "target:level",
+                    16
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.EternalLegend.FinishTheirStory.Note",
+              "title": "{item|name}"
+            },
+            {
+              "diceNumber": 3,
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "finish-their-story",
+                "target:level:17"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "diceNumber": 2,
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "finish-their-story",
+                {
+                  "gte": [
+                    "target:level",
+                    18
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "eternal-legend-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -79,6 +496,55 @@
       "name": "Immovable Object",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R8MaoG7CzHZmQYtM",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Immovable Object",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You plant your feet in a wide stance, resisting all movement not of your own volition. While in this stance and on the ground, you are immune to forced movement and if an effect would knock you @UUID[Compendium.pf2e.conditionitems.Item.Prone], you aren't knocked prone and can Step as a free action.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              },
+              {
+                "value": "master in Fortitude or Reflex saves"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Immovable Object",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Immovable Object"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -88,6 +554,47 @@
       "name": "Leaping Hedgehog Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "omhB14HQxJUZQvjj",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leaping Hedgehog Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You pounce toward an enemy and then barrel them over with one fluid movement, ending this maneuver with an attack that may catch them off-balance. @UUID[Compendium.pf2e.actionspf2e.Item.Leap] horizontally toward an enemy you can see; treat your Speed as 30 feet or more for this Leap if it is less than 30 feet. If you end this movement adjacent to that enemy, attempt an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] that enemy's space. On a success, the target is also knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone]. You then Strike that same enemy. If the target has been knocked prone, you can spend 1 Mythic Point as part of this Strike to make it at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -97,6 +604,52 @@
       "name": "Legend of Combat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iUds1xfU9WtKGPMf",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Legend of Combat",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can deliver a lightning-fast series of blows and strikes, bringing all the strength of your legend to bear against those who have yet to experience your prowess. Spend a Mythic Point. For the next minute, you gain an extra reaction at the start of each of your turns. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Speed of Arms] reaction.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Speed of Arms"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -106,6 +659,47 @@
       "name": "Living Epic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NKsNDA8rS9R5MmAX",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Living Epic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are a living legend, a being who cannot be claimed by death, as death has already passed you. You are beyond whatever they wish to make you. When you would be killed, you instead disappear. You reappear anywhere where your name is spoken in the next week. Your name must be said in the context of recounting one of your exploits, including your death. If the person speaking your name is a close ally (such as another PC), you return to life with only 1 Hit Point. However, if a stranger speaks your name, you return to life with full Hit Points and you gain a +1 status bonus to attack rolls, Perception, saving throws, and skill checks for 1 week.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Living Epic]</p>\n<p>If no one speaks your name within a week of your death, your soul enters the River of Souls, and you can be brought back to life using other means.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -115,6 +709,50 @@
       "name": "Mythic Weapon Specialization",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XHRD9gpm58gURMLP",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Weapon Specialization",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you fully embrace your Calling, your blows hit with incredible force that can fell even the mightiest of creatures. When you make a Strike with mythic proficiency, your additional damage from weapon specialization increases to 12.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              },
+              {
+                "value": "greater weapon specialization"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -124,6 +762,66 @@
       "name": "Pierce the Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "18eGaH5rWEXpDlgk",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pierce the Eye",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon.</p><hr /><p>You aim a shot from your weapon directly at a foe's eye, blinding them in the process. Make a ranged Strike. On a hit, the target additionally takes 2d8 persistent bleed damage. The target must also attempt a @Check[fortitude|against:class] save against your class DC with the following effects.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Blinded] until the end of its next turn.</p>\n<p><strong>Failure</strong> The target is blinded for as long as they are taking the persistent bleed damage and for 1 additional round thereafter.</p>\n<p><strong>Critical Failure</strong> As failure, but the target also takes a –2 circumstance penalty to the flat check to remove the persistent bleed damage; a creature Administering First Aid to stop this persistent bleed damage takes a –2 circumstance penalty to the Medicine check.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pierce the Eye]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "domain": "weapon-damage",
+              "key": "RollOption",
+              "option": "pierce-the-eye",
+              "toggleable": true
+            },
+            {
+              "damageType": "bleed",
+              "diceNumber": 2,
+              "dieSize": "d8",
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "pierce-the-eye",
+                "item:ranged"
+              ],
+              "selector": "weapon-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -133,6 +831,47 @@
       "name": "Scattering Shout",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FvhVk79sEnSDTDtq",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scattering Shout",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a flex of your mighty thews and a guttural bellow that can make ears bleed, you drive back any enemies surrounding you. Each enemy within a @Template[type:emanation|distance:10] must attempt a @Check[fortitude|against:class|options:area-effect] saving throw against your class DC.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed 5 feet away from you.</p>\n<p><strong>Failure</strong> The creature is pushed 10 feet away from you and takes @Damage[8d6[sonic]|options:area-damage] damage.</p>\n<p><strong>Critical Failure</strong> The creature is pushed 15 feet away from you and takes @Damage[16d6[sonic]|options:area-damage] damage.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -142,6 +881,50 @@
       "name": "Terrifying Mien",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Egx5NWOVhoaij7a3",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrifying Mien",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whether they have heard of your legend or seen your prowess on the field of battle, those already quaking in their boots grow weak when forced to stand against you. You gain resistance against bludgeoning, piercing, and slashing damage against Strikes made by creatures with the @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition. This resistance is equal to four times the value of that creature's frightened condition.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Terrifying Mien]</p>\n<p>When this resistance applies to at least one of a creature's Strikes during their turn, that creature doesn't reduce the value of their frightened condition at the end of their turn.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              },
+              {
+                "value": "master in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -151,6 +934,50 @@
       "name": "Unstoppable Force",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6xLDfQYA1pHzGRG2",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unstoppable Force",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While you are in the stance provided by @UUID[Compendium.pf2e.feats-srd.Item.Immovable Object], you ignore difficult terrain and greater difficult terrain. Once per 10 minutes, if you Dismiss your Immovable Object stance, you can Stride as a free action. At the end of that Stride, your final footfall causes an explosion of energy. Each creature within a @Template[type:emanation|distance:20] takes @Damage[14d6[force]|options:area-damage] damage (@Check[reflex|against:class|basic|options:area-effect] save against your class DC). Creatures that fail the save are also knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              },
+              {
+                "value": "Immovable Object"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -160,6 +987,47 @@
       "name": "Weft and Warp",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iqAN2AqnQ6UqpQX6",
+        "folder": "9RVLSsImTz2H6DtS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weft and Warp",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With graceful poise, you perform a dance of dangerous attacks. Stride up to half your speed toward an enemy; if you end this movement adjacent to them make a melee Strike against that foe. If you hit, you can @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] the target into your square at the same time that you Step into their square. You then make another Strike against the same target, who is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to the attack. Finally, you can Step away from that enemy.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eternal Legend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

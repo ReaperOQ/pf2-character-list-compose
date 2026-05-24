@@ -7,6 +7,47 @@
       "name": "Elite Dracomancer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I9cJYC7anz7HmpcJ",
+        "folder": "cXfmpyLQnPNLWBC7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elite Dracomancer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your draconic power equals that of a lesser dragon. Choose one 3rd-rank spell and one 4th-rank spell from those listed for a dragon spellcaster of your draconic benefactor's type (for example, @UUID[Compendium.pf2e.spells-srd.Item.Clairvoyance] and @UUID[Compendium.pf2e.spells-srd.Item.Paralyze] for a conspirator dragon benefactor). You can cast each of these spells once per day as innate spells of the same tradition as your draconic benefactor.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dracomancer"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +57,50 @@
       "name": "Imperial Dragon Potion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BoLeT3uNl7iikQuI",
+        "folder": "cXfmpyLQnPNLWBC7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Imperial Dragon Potion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>During your daily preparations, you can spend 10 minutes to create a variant <em>energy breath potion</em>, which has the kobold trait in addition to its normal traits. The variant potion is influenced by imperial dragon magic, granting it the effect corresponding to your dragon benefactor; the DC for the breath is the higher of your class DC or spell DC. The potion becomes inert if not used by your next daily preparations, so it has no value if sold.</p><table class=\"pf2-table\"><thead><tr><th>Dragon</th><th>Effect (Save)</th></tr></thead><tbody><tr><td>Forest</td><td>Insects dealing piercing damage in a @Template[cone|distance:15] (@Check[reflex|against:class-spell])</td></tr><tr><td>Sea</td><td>Water dealing bludgeoning damage in a @Template[line|distance:30] (@Check[reflex|against:class-spell])</td></tr><tr><td>Sky</td><td>Lightning dealing electricity damage in a @Template[line|distance:30] (@Check[reflex|against:class-spell])</td></tr><tr><td>Sovereign</td><td>A psychic roar dealing mental damage in a @Template[cone|distance:15] (@Check[will|against:class-spell])</td></tr><tr><td>Underworld</td><td>Flames that deal fire damage in a @Template[cone|distance:15] (@Check[reflex|against:class-spell])</td></tr></tbody></table>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "heavenscribe kobold heritage"
+              },
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +110,70 @@
       "name": "Kaiju's Footfalls",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1i2Ms9egpbnzuUjQ",
+        "folder": "cXfmpyLQnPNLWBC7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kaiju's Footfalls",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You channel the might and mass of a kaiju. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Enlarge] as an innate primal spell twice per day, targeting yourself. The first time each turn you @UUID[Compendium.pf2e.actionspf2e.Item.High Jump], @UUID[Compendium.pf2e.actionspf2e.Item.Leap], or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump] while affected by this spell, creatures of your size or smaller adjacent to where you land must attempt a @Check[reflex|against:class-spell] save against your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Failure</strong> The creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Critical Failure</strong> The creature is knocked prone and takes @Damage[2d6[bludgeoning]|options:area-damage] damage.</p>\n<p>At 17th level, you can choose to heighten this innate <em>enlarge</em> spell to 4th rank.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "mightyfall kobold heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:enlarge",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:enlarge",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:kobold"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -34,6 +183,47 @@
       "name": "Resplendent Spellhorn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OP5OZFXJwxCTtJyK",
+        "folder": "cXfmpyLQnPNLWBC7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resplendent Spellhorn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your magic continues to flourish. Choose one common 3rd-rank arcane spell and one common 4th-rank arcane spell. You can cast each of these spells once per day as arcane innate spells.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Evolved Spellhorn"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -43,6 +233,47 @@
       "name": "Tumbling Diversion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7QNc7FnfT7GZa5w3",
+        "folder": "cXfmpyLQnPNLWBC7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tumbling Diversion",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] an opponent's space. If you succeed or critically succeed and don't end your movement adjacent to that opponent, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion] to distract that opponent. You gain a +1 circumstance bonus to the Deception check (or a +2 circumstance bonus if you critically succeeded at the Acrobatics check to Tumble Through) to Create a Diversion. If you succeed or critically succeed to Create a Diversion, you become @UUID[Compendium.pf2e.conditionitems.Item.Hidden] to only the creature whose space you Tumbled Through.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Acrobatics and Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -52,6 +283,50 @@
       "name": "Vicious Snares",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QjHZN1uAxl2hSbej",
+        "folder": "cXfmpyLQnPNLWBC7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vicious Snares",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You deal an additional 1d6 precision damage with damage snares you craft. This increases to 2d6 additional precision damage if you're legendary in Crafting.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Crafting"
+              },
+              {
+                "value": "Snare Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

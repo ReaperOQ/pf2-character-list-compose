@@ -7,6 +7,46 @@
       "name": "Annihilating Swing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7QLLwcSKNGPWdOGG",
+        "folder": "l5xS4Vw1f83WiXCt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Annihilating Swing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have embraced brute destructive power. You make a melee Strike that ignores any resistances the target has. If you target a solid unattended object or surface with your Strike, you might automatically destroy it without an attack roll. If you target any object or surface with Hardness 20 or less that isn't a magic item or the effect of a spell, you destroy it.</p>\n<p>If the target object or surface is a magic item or the effect of a spell, you attempt to counteract it using your attack bonus with the Strike for the counteract check. Your counteract rank is 10th. On a successful counteract check, you destroy the object or surface unless it has Hardness greater than 20, in an artifact, or is similarly difficult to destroy.</p>\n<p>You destroy up to a 5-foot cube of an object or surface larger than Medium.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "barbarian": "Barbarian"
+            },
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -16,6 +56,50 @@
       "name": "Contagious Rage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nJe8eQUrIpKWLXh5",
+        "folder": "l5xS4Vw1f83WiXCt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Contagious Rage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can drive your allies into a frenzy, granting them incredible benefits. You can ignore the requirements of Share Rage, using it multiple times in a Rage. Allies affected by @UUID[Compendium.pf2e.feats-srd.Item.Share Rage] can choose to gain your instinct ability and the specialization ability it gains from weapon specialization, but not greater weapon specialization. They must abide by any restrictions of your instinct if they do so (such as the anathema of the superstition instinct).</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Share Rage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "barbarian",
+              "rage",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -25,6 +109,49 @@
       "name": "Quaking Stomp",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FMjihpGLn9eQ14Gw",
+        "folder": "l5xS4Vw1f83WiXCt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quaking Stomp",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>You stomp the ground with such force that it creates a minor earthquake, with the effects of the @UUID[Compendium.pf2e.spells-srd.Item.Earthquake] spell using your class DC.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "manipulate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -34,6 +161,49 @@
       "name": "Unstoppable Juggernaut",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YCqHaqn0TxdiGxiW",
+        "folder": "l5xS4Vw1f83WiXCt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unstoppable Juggernaut",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have become a brutal, unstoppable force of nature, able to shrug off mortal wounds with ease. You gain resistance equal to 3 + your Constitution modifier to all damage, and your resistance from raging increases to 8 + your Constitution modifier.</p>\n<p>In addition, if you are reduced to 0 Hit Points while raging, you can end your rage as a reaction to stay at 1 Hit Point. If you do, you become @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 2} (or increase your wounded condition by 2 if you are already wounded).</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "all-damage",
+              "value": "@actor.abilities.con.mod+3"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

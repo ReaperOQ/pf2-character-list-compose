@@ -7,6 +7,45 @@
       "name": "All in My Head",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wqAdzjRUOvTpKFKq",
+        "folder": "3pguF7VMwD7fMPdt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "All in My Head",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would take damage from a Strike or spell that doesn't have the death trait or otherwise cause instant death (such as @UUID[Compendium.pf2e.spells-srd.Item.Disintegrate]).</p>\n<hr />\n<p>Using your occult connections and incredible powers of persuasion, you convince yourself that the triggering damage is a figment of your imagination. The damage changes from its usual damage type to mental damage, and the damaging effect gains the nonlethal trait. You can't use this reaction if you are immune to mental effects or mental damage.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "illusion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +55,50 @@
       "name": "Deep Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iTtnN49D8ZJ2Ilur",
+        "folder": "3pguF7VMwD7fMPdt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deep Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your repertoire is vast, containing far more spells than usual. Add one spell to your repertoire of each spell rank you can cast.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "enigma muse"
+              },
+              {
+                "value": "legendary in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +108,53 @@
       "name": "Discordant Voice",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8JMOgtB3XG7o6ffW",
+        "folder": "3pguF7VMwD7fMPdt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Discordant Voice",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your @UUID[Compendium.pf2e.spells-srd.Item.Courageous Anthem] lets loose a discordant shriek that imbues your allies' attacks with powerful sonic reverberations. While your allies are affected by your <em>courageous anthem</em>, their weapon Strikes and unarmed attacks deal an additional 1d6 sonic damage.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "courageous anthem"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "self:discordant-voice"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "sonic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +164,67 @@
       "name": "Eternal Composition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yFoBVSOCnC2R2r8s",
+        "folder": "3pguF7VMwD7fMPdt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eternal Composition",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The world is a stage upon which you are always playing. You are permanently @UUID[Compendium.pf2e.conditionitems.Item.Quickened]; you can use your extra action only to cast a composition cantrip that requires 1 action to cast. While in exploration mode, you can declare that you are performing an eligible composition cantrip while using any exploration tactic. Even before your first turn in a combat encounter, that cantrip is active as if you had cast it on your previous turn.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "maestro muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Quickened"
+            },
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:granter:id:{item|id}"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -43,6 +234,50 @@
       "name": "Impossible Polymath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L5n4PvQYhpl2WM9e",
+        "folder": "3pguF7VMwD7fMPdt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impossible Polymath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your esoteric formulas are so unusual that they allow you to dabble in magic from diverse traditions that other bards don't understand. As long as you're trained in Arcana, you can add arcane spells to your book from @UUID[Compendium.pf2e.feats-srd.Item.Esoteric Polymath]; as long as you're trained in Nature, you can add primal spells to your book; and as long as you are trained in Religion, you can add divine spells to your book.</p>\n<p>Like your other spells in your book, you can add one of these spells from another tradition to your repertoire as an occult spell each day using Esoteric Polymath, but you can't retain any spells from another tradition when you prepare again, even if you have @UUID[Compendium.pf2e.feats-srd.Item.Eclectic Polymath].</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Arcana, Nature, or Religion"
+              },
+              {
+                "value": "Esoteric Polymath"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +287,47 @@
       "name": "Pack Performance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CGvN4xaahJegFwnX",
+        "folder": "3pguF7VMwD7fMPdt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pack Performance",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature counteracts or disrupts the spell you're casting.</p>\n<p><strong>Requirements</strong> You have an animal minion within 30 feet of you.</p>\n<hr />\n<p>When you and animals sing together, your words ring even brighter and bolder, cutting through disruptions. The animal assisting you can Stride and Strike the triggering creature. If the attack succeeds, your action isn't counteracted or disrupted.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "zoophonia muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

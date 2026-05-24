@@ -7,6 +7,51 @@
       "name": "Adamantine Body",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GIr0i1ucWnMSLwJo",
+        "folder": "HUXXR8xZ66tDY3Hs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Adamantine Body",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An attack or effect would deal damage to you.</p><hr /><p>With your strong will and even stronger body, you shrug off an otherwise devastating blow. You gain resistance equal to 2 + half your level against all damage from the triggering attack or effect.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Martial Artist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Adamantine Body",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Adamantine Body"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +61,53 @@
       "name": "Echoing Violence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DaW1Ugz0a24jhWLY",
+        "folder": "HUXXR8xZ66tDY3Hs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Echoing Violence",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p>\n<p><strong>Trigger</strong> You critically succeed with an unarmed Strike against an opponent.</p><hr /><p>Your powerful attack causes damage that reverberates through your opponent's body, shaking muscle from bone. The creature takes @Damage[10d6[bludgeoning]] damage with a @Check[fortitude|against:class|basic] save against your class DC. If it critically fails, it immediately dies as your blow tears apart its body internally.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Martial Artist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "death",
+              "incapacitation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +117,48 @@
       "name": "Follow-Up Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "m0ot9Qydb9SYWHis",
+        "folder": "HUXXR8xZ66tDY3Hs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Follow-Up Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a missed Strike with a melee unarmed attack.</p><hr /><p>You have trained rigorously to use all parts of your body as a weapon, and when you miss with an attack, you can usually continue the attack with a different body part and still deal damage. Make another Strike with a melee unarmed attack, using the same multiple attack penalty as the missed Strike, if any.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Martial Artist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +168,74 @@
       "name": "Grievous Blow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "C3zKTQecexSbezhT",
+        "folder": "HUXXR8xZ66tDY3Hs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grievous Blow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to deliver focused, powerful blows that bypass your enemies' resistances. Make an unarmed melee Strike. If this Strike hits, it deals two additional weapon damage dice and ignores an amount of resistance to physical damage (or to a specific physical damage type) equal to your level. This Strike counts as two attacks when calculating your multiple attack penalty.</p>\n<p>If you are at least 18th level, increase the additional damage to three weapon damage dice.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Martial Artist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "unarmed-damage",
+              "key": "RollOption",
+              "option": "grievous-blow",
+              "toggleable": true
+            },
+            {
+              "diceNumber": "ternary(gte(@actor.level,18),3,2)",
+              "key": "DamageDice",
+              "predicate": [
+                "grievous-blow",
+                "item:melee"
+              ],
+              "selector": "unarmed-damage"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "item:melee",
+                "grievous-blow"
+              ],
+              "selector": "unarmed-damage",
+              "text": "PF2E.SpecificRule.MartialArtist.GrievousBlow.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +245,55 @@
       "name": "Martial Artist Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zn7arorE3VJLNYsb",
+        "folder": "HUXXR8xZ66tDY3Hs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Martial Artist Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have trained to use your fists as deadly weapons and can deliver devastatingly powerful blows with them. The damage die for your fist unarmed attacks becomes 1d6 instead of 1d4. You don't take the –2 circumstance penalty for making a lethal attack with your nonlethal unarmed attacks.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.N01RLMQPaSeoHEuL]{Martial Artist}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "fist": true,
+              "key": "Strike"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "property": "damage-dice-faces"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +303,52 @@
       "name": "Path of Iron",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S450JMWfF90oOcv9",
+        "folder": "HUXXR8xZ66tDY3Hs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Path of Iron",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p><hr /><p>With a burst of effort and speed, you weave a nimble path through your many enemies, striking each in turn as you move past them. You Stride; this movement doesn't trigger reactions. You can attempt a melee Strike up to three times at any point during your movement, each against a different enemy. Each attack counts toward your multiple attack penalty, but your multiple attack penalty doesn't increase until you have made all your attacks.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Martial Artist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

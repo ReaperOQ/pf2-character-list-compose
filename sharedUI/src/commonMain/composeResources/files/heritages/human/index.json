@@ -1,0 +1,314 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ambitious-human.json",
+      "id": "qiYOFL32pzWFJcDG",
+      "name": "Ambitious Human",
+      "img": "icons/skills/movement/arrow-upward-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "qiYOFL32pzWFJcDG",
+        "folder": "O7DVLyyF05fGfpdo",
+        "img": "icons/skills/movement/arrow-upward-blue.webp",
+        "name": "Ambitious Human",
+        "system": {
+          "ancestry": {
+            "name": "Human",
+            "slug": "human",
+            "uuid": "Compendium.pf2e.ancestries.Item.IiG7DgeLWYrSNXuX"
+          },
+          "description": {
+            "value": "<p>You're ambitious, having accomplished more than your peers and always moving forward. You get two class abilities earlier than you normally could. Because you gain these abilities early, you can't select them again at a later level. One ability is the @UUID[Compendium.pf2e.feats-srd.Item.Fleet] general feat. The second ability depends on your class.</p><ul><li><strong>Barbarian:</strong> @UUID[Compendium.pf2e.feats-srd.Item.Raging Intimidation]</li><li><strong>Bard:</strong> @UUID[Compendium.pf2e.feats-srd.Item.Well-Versed]</li><li><strong>Monk:</strong> @UUID[Compendium.pf2e.feats-srd.Item.Toughness]</li><li><strong>Sorcerer:</strong> @UUID[Compendium.pf2e.feats-srd.Item.Cantrip Expansion]</li></ul><p><em>Note: This heritage is from the Beginner Box and features non-standard heritage features</em></p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Beginner Box: Secrets of the Unlit Star"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Fleet"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "battle-trained-human-bb.json",
+      "id": "d7NC4C19AgkspQQg",
+      "name": "Battle-Trained Human (BB)",
+      "img": "icons/weapons/swords/sword-guard-steel-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "d7NC4C19AgkspQQg",
+        "folder": "O7DVLyyF05fGfpdo",
+        "img": "icons/weapons/swords/sword-guard-steel-green.webp",
+        "name": "Battle-Trained Human (BB)",
+        "system": {
+          "ancestry": {
+            "name": "Human",
+            "slug": "human",
+            "uuid": "Compendium.pf2e.ancestries.Item.IiG7DgeLWYrSNXuX"
+          },
+          "description": {
+            "value": "<p>Your family has trained for battle for generations, granting you advantages against your enemies. You gain a +1 bonus to initiative rolls. In addition, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Diehard] feat.</p>\n<p><em>Note: This heritage is from the Beginner Box and features non-standard heritage features</em></p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Beginner Box: Secrets of the Unlit Star"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            },
+            {
+              "key": "FlatModifier",
+              "selector": [
+                "initiative"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "skilled-human.json",
+      "id": "zVf0Hlp5xG0Q7kmc",
+      "name": "Skilled Human",
+      "img": "icons/tools/navigation/map-chart-tan.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "zVf0Hlp5xG0Q7kmc",
+        "folder": "O7DVLyyF05fGfpdo",
+        "img": "icons/tools/navigation/map-chart-tan.webp",
+        "name": "Skilled Human",
+        "system": {
+          "ancestry": {
+            "name": "Human",
+            "slug": "human",
+            "uuid": "Compendium.pf2e.ancestries.Item.IiG7DgeLWYrSNXuX"
+          },
+          "description": {
+            "value": "<p>Your ingenuity allows you to train in a wide variety of skills. You become trained in one skill of your choice. At 5th level, you become an expert in the chosen skill.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": {
+                "config": "skills"
+              },
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": "ternary(gte(@actor.level,5),2,1)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "versatile-human.json",
+      "id": "hFBwsVcSnNCJoimo",
+      "name": "Versatile Human",
+      "img": "icons/environment/people/group.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "hFBwsVcSnNCJoimo",
+        "folder": "O7DVLyyF05fGfpdo",
+        "img": "icons/environment/people/group.webp",
+        "name": "Versatile Human",
+        "system": {
+          "ancestry": {
+            "name": "Human",
+            "slug": "human",
+            "uuid": "Compendium.pf2e.ancestries.Item.IiG7DgeLWYrSNXuX"
+          },
+          "description": {
+            "value": "<p>Humanity's versatility and ambition have fueled its ascendance to be the most common ancestry in most nations throughout the world. Select a general feat of your choice for which you meet the prerequisites (as with your ancestry feat, you can select this general feat at any point during character creation).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:level:1",
+                  "item:trait:general"
+                ],
+                "itemType": "feat"
+              },
+              "flag": "versatileHeritage",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.GeneralTraining.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.versatileHeritage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "warden-human-bb.json",
+      "id": "0Iv6LfT3UEt8taj5",
+      "name": "Warden Human (BB)",
+      "img": "icons/equipment/shield/buckler-boss-iron-wood-brown.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "0Iv6LfT3UEt8taj5",
+        "folder": "O7DVLyyF05fGfpdo",
+        "img": "icons/equipment/shield/buckler-boss-iron-wood-brown.webp",
+        "name": "Warden Human (BB)",
+        "system": {
+          "ancestry": {
+            "name": "Human",
+            "slug": "human",
+            "uuid": "Compendium.pf2e.ancestries.Item.IiG7DgeLWYrSNXuX"
+          },
+          "description": {
+            "value": "<p>You and your family members are survivors, and you've learned how to take care of yourself. Pick one of the following benefits.</p>\n<ul>\n<li>Add 4 to your maximum Hit Points.</li>\n<li>You become an expert in Fortitude saving throws.</li>\n<li>You become trained in medium armor.</li>\n</ul>\n<p><em>Note: This heritage is from the Beginner Box and features non-standard heritage features</em></p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Beginner Box"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.WardenHuman.HitPoints",
+                  "value": "hp"
+                },
+                {
+                  "label": "PF2E.SpecificRule.WardenHuman.Fortitude",
+                  "value": "fortitude"
+                },
+                {
+                  "label": "PF2E.SpecificRule.WardenHuman.MediumArmor",
+                  "value": "armor"
+                }
+              ],
+              "flag": "wardenHumanBB",
+              "key": "ChoiceSet",
+              "label": "PF2E.UI.RuleElements.ChoiceSet.Prompt",
+              "rollOption": "heritage:warden-human"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "heritage:warden-human:hp"
+              ],
+              "selector": "hp",
+              "value": 4
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.medium.rank",
+              "predicate": [
+                "heritage:warden-human:armor"
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.saves.fortitude.rank",
+              "predicate": [
+                "heritage:warden-human:fortitude"
+              ],
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "wintertouched-human.json",
+      "id": "KO33MNyY9VqNQmbZ",
+      "name": "Wintertouched Human",
+      "img": "systems/pf2e/icons/features/ancestry/wintertouched-human.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "KO33MNyY9VqNQmbZ",
+        "folder": "O7DVLyyF05fGfpdo",
+        "img": "systems/pf2e/icons/features/ancestry/wintertouched-human.webp",
+        "name": "Wintertouched Human",
+        "system": {
+          "ancestry": {
+            "name": "Human",
+            "slug": "human",
+            "uuid": "Compendium.pf2e.ancestries.Item.IiG7DgeLWYrSNXuX"
+          },
+          "description": {
+            "value": "<p>The power of winter flows through you. This heritage is most common among the Jadwiga of Irrisen, due to their descent from Baba Yaga, and certain Erutaki touched by the spirits. You gain cold resistance equal to half your level (minimum 1), and you treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

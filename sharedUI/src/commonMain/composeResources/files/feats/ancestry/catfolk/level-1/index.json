@@ -7,6 +7,49 @@
       "name": "Cat Nap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zvtYsz9jk8tPvlpS",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cat Nap",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You can regain your energy quickly with a brief nap. You sleep for 10 minutes, after which you gain temporary Hit Points equal to your level that last for 1 hour.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Cat Nap]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk",
+              "concentrate",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +59,43 @@
       "name": "Catfolk Dance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Iqv8qj7ym63YjexN",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Catfolk Dance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a habit of always being in the way when other creatures attempt to move. Attempt an @Check[acrobatics|defense:reflex] check against an adjacent creature's Reflex DC.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Catfolk Dance]</p>\n<hr />\n<p><strong>Critical Success</strong> The target creature gains a -2 circumstance penalty to Reflex saves and is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the start of your next turn.</p>\n<p><strong>Success</strong> The target creature gains a -2 circumstance penalty to Reflex saves until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +105,60 @@
       "name": "Catfolk Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eqBWab1J5Be24YAl",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Catfolk Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Growing up among catfolk has taught you the traditional values of freedom, stewardship, and quick reactions to trouble. You gain the trained proficiency rank in Acrobatics and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Catfolk Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.acrobatics.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +168,91 @@
       "name": "Catfolk Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bEh5qUgX5eFaQwzU",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Catfolk Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain access to all uncommon weapons with the catfolk trait. You have familiarity with weapons with the catfolk trait plus the kama, kukri, scimitar, and sickle—for the purpose of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:trait:catfolk",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedCatfolkWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-catfolk-weapons"
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:trait:catfolk",
+                    "item:base:kama",
+                    "item:base:kukri",
+                    "item:base:scimitar"
+                  ]
+                },
+                "item:category:martial"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialCatfolkWeapons",
+              "sameAs": "simple",
+              "slug": "martial-catfolk-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:catfolk",
+                    "item:base:kama",
+                    "item:base:kukri",
+                    "item:base:scimitar",
+                    "item:base:sickle"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +262,48 @@
       "name": "Cat's Luck",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7qBuzHY8kEG8SdEP",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cat's Luck",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You fail a Reflex saving throw.</p>\n<hr />\n<p>You instinctively twist away from danger. You can reroll the triggering saving throw and use the better result.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +313,63 @@
       "name": "Saber Teeth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AL2KD88ddEl5AetZ",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Saber Teeth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have long fangs, natural or augmented. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the unarmed trait.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "baseType": "jaws",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.jaws",
+              "range": null,
+              "traits": [
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +379,54 @@
       "name": "Well-Met Traveler",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9t4x8vRmQikEl4vP",
+        "folder": "W1TAr06mFZSjKsCs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Well-Met Traveler",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You naturally adopt a pleasant and affable demeanor when meeting others. You are trained in Diplomacy. If you would automatically become trained in Diplomacy (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>In addition, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Hobnobber] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Hobnobber"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "catfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

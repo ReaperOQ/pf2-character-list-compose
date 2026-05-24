@@ -7,6 +7,48 @@
       "name": "Head Gem",
       "img": "icons/commodities/gems/gem-rough-cushion-red.webp",
       "type": "feat",
+      "data": {
+        "_id": "HYefFkddD9lOhFM8",
+        "folder": "CSLkFa25kUQd0Tg0",
+        "img": "icons/commodities/gems/gem-rough-cushion-red.webp",
+        "name": "Head Gem",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>Upon your brow is a gem that houses your soul. When casting any spell or ritual to return you to life, your intact @UUID[Compendium.pf2e.equipment-srd.Item.Head Gem] can be substituted for your body. While you can freely remove your head gem, it's typically impossible for another creature to forcibly remove or destroy your head gem unless you're killed or permanently incapacitated first; at the GM's discretion, powerful magic or abilities can circumvent this restriction. If your head gem is removed or destroyed, it can be regrown using a day-long ritual. When this occurs, any remains of the previous gem immediately crumble to dust.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Head Gem"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestryfeature"
     },
@@ -16,6 +58,73 @@
       "name": "Horns (Sarangay)",
       "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
       "type": "feat",
+      "data": {
+        "_id": "LhgVj9GhPsXGfwAM",
+        "folder": "CSLkFa25kUQd0Tg0",
+        "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+        "name": "Horns (Sarangay)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>Your powerful horns are formidable weapons. You have a horns unarmed attack that deals 1d6 piercing damage and has the shove trait. Your horns are in the brawling group.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/horn.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Horns",
+              "slug": "horns",
+              "traits": [
+                "unarmed",
+                "shove"
+              ]
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:id:{item|id}"
+              ],
+              "property": "other-tags",
+              "value": "sarangay-horns"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestryfeature"
     }

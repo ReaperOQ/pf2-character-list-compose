@@ -7,6 +7,52 @@
       "name": "Awakened Power",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mXp6G4YWCXGvp7Qd",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Awakened Power",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your power spontaneously evolves or reconfigures itself. You gain one awakening benefit for a deviant feat of 4th level or lower.</p><hr /><p><strong>Special</strong> You can take this feat multiple times. Each time you do, choose a different deviant feat of 4th level or lower, and gain one of its awakening benefits.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.deviantAbilities.awakenedChoices.lesser",
+              "flag": "awakenedPower",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.DeviantAbilities.AwakenedPower.Prompt",
+              "rollOption": "awakening"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +62,56 @@
       "name": "Blasting Beams",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TtAvM02UvfNaXeXd",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blasting Beams",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a free hand.</p><hr /><p>A directed beam of heat or an arc of lightning is one of the simplest ways to project energy. You fire a blast or beam from one hand. Make an @Check[deviant|defense:ac]{attack roll} against a creature within 30 feet. If you succeed, the beam deals @Damage[(floor(@actor.level/2)d6)[@actor.flags.system.deviantAbilities.dragon.damageType]]{1d6 damage for every 2 levels} you have to the target, or double damage on a critical success.</p><hr /><p><strong>Awakening</strong> Your beams blast through targets. Instead of making an attack roll to damage a single creature within 30 feet, you can use Blasting Beams as a 2-action activity to damage all creatures in a @Template[line|distance:60], with a @Check[reflex|against:class-spell|basic|options:area-effect] save.</p><hr /><p><strong>Awakening</strong> You can choose to launch smaller, quicker beams from your eyes instead. These deal @Damage[(floor(@actor.level/2)d4)[@actor.flags.system.deviantAbilities.dragon.damageType]]{d4s} instead of d6s, but the attack has the agile trait, and you don't need a hand free to make it, though your eyes must be uncovered.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:dragon-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Dragon Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "attack",
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +121,59 @@
       "name": "Bone Spikes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cy9jqlHz75GTjg7l",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bone Spikes",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Sharp shards of bone tear forth from your elbows, wrists, or other parts of your body. For 1 minute, you can make bone spike unarmed Strikes, which deal 1d6 piercing damage and have the versatile S and sweep traits. When you take the Bone Spikes action, you can choose one weapon on your person and duplicate its weapon runes onto your bone spikes (with the exception of any runes that couldn't apply to the bone spears).</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Bone Spikes]</p>\n<hr />\n<p><strong>Awakening</strong> Your bones grow longer, lashing flexibly at range. While you have bone spikes, you can Interact to give your bone spikes reach 10 feet until the end of the current turn.</p>\n<hr />\n<p><strong>Awakening</strong> Grooves in your bone spikes form a channel for venom. Your bone spikes deal 1d4 persistent poison damage, which increases to 2d4 at 10th level and 3d4 at 18th level.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:troll-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Troll Deviant Classification"
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Bone Spikes",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Bone Spikes"
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +183,61 @@
       "name": "Borrowed Ability",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "v4N0tTGjKGMwjqUG",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Borrowed Ability",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your touch opens a conduit into the mind of your target, the emptiness within you pulling skills and memories through. You touch an adjacent creature and choose any skill you believe they are trained or better in. If you choose a skill that they are trained or better in, you borrow their proficiency in that skill, becoming trained in that skill for 1 minute. If they are not trained in the skill you choose, the GM chooses the next most applicable skill (for instance, choosing Acrobatics instead of Athletics). At 12th level, you can become an expert in the skill if the target is as well.</p>\n<p>If the target of Borrowed Ability is unwilling, the effects depend on the target's Will save.</p><hr /><p><strong>Critical Success</strong> The target resists your touch completely.</p>\n<p><strong>Success</strong> Your borrowing is unstable. At the beginning of each of your turns, you must either relinquish your hold on the borrowed skill (as a free action), or attempt another backlash check for your deviation; the ability ends if you fail.</p>\n<p><strong>Failure</strong> Borrowed Ability lasts for its full duration.</p><hr /><p><strong>Awakening</strong> You gain some of the target's defensive abilities. When you use Borrowed Ability, you also gain a +1 circumstance bonus to one of your saving throws for the duration, matching the target's highest saving throw. You can choose to apply a –1 circumstance penalty to the target's saving throw when you do so.</p>\n<p><strong>Awakening</strong> Your touch establishes a lingering link through which you can sense what your target does. When you use Borrowed Ability, you gain any special senses—such as darkvision, scent, or tremorsense—that the target possesses. If the target does not have a sense that you normally have (for instance, an ooze that has no vision), you lose those senses as well. Your senses remain altered for the duration of Borrowed Ability.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:leech-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Leech Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +247,56 @@
       "name": "Consume Energy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9Jbl71C5C6MnOqxV",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Consume Energy",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy within 60 feet uses an ability that has the trait corresponding to your deviation damage type.</p><hr /><p>Your connection to energy is so much stronger than the offending display in front of you, allowing you to claim it for yourself. Attempt a @Check[deviant]{counteract check} against the triggering effect as you draw it into your body. If you successfully counteract the ability, you gain temporary Hit Points equal to double the counteract rank of the ability, which last for 1 minute.</p><hr /><p><strong>Awakening</strong> The energy you consume helps empower your abilities. The next ability from the dragon classification that you use increases its range by 30 feet if it has a range, or increases its area by 10 feet if it's a cone or line. If you don't use this benefit within 1 minute, it fades.</p>\n<p>@Template[cone|distance:40]</p>\n<p>@Template[line|distance:70]</p><hr /><p><strong>Awakening</strong> You channel some of the seized energy into your next attack. Choose one of your weapons or unarmed attacks. Until the end of your next turn, Strikes with the chosen weapon or unarmed attack deal an additional 1d6 damage of a type matching the energy you consumed.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Consume Energy (Augment Strike)]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "dragonDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:dragon-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Dragon Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +306,58 @@
       "name": "Defensive Growth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pGjSh6qk9kQLznKn",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defensive Growth",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're the target of a physical attack.</p>\n<hr />\n<p>You grow a shield of woven flowers and branches, then Raise that Shield to defend yourself from the triggering attack. If you would take damage from the attack, you immediately @UUID[Compendium.pf2e.feats-srd.Item.Shield Block]. This is a @UUID[Compendium.pf2e.equipment-srd.Item.Wooden Shield] (Hardness 3, HP 12, BT 6). The shield remains in your possession for a number of rounds equal to your level, or until it's destroyed.</p>\n<p><strong>Awakening</strong> The shield becomes stronger. It has Hardness 5, HP 40, BT 20.</p>\n<p><strong>Awakening</strong> The shield takes on a mind of its own and lashes out vengefully when destroyed. When the shield is destroyed, is explodes, dealing @Damage[4d6[piercing]] damage to your attacker, with a @Check[reflex|against:class-spell|basic] save.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "verdantCoreDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:verdant-core-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Verdant Core Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical",
+              "plant",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +367,58 @@
       "name": "Disperse Into Petals",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vUHDuKLKKZHzAqvZ",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disperse Into Petals",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You merge with the blossoms sprouting from you and disperse, becoming a visible cloud of blossoms and petals. You're amorphous. You lose any item bonus to AC and all other effects and bonuses from armor, and you use your proficiency modifier for unarmored defense. You gain resistance to physical damage equal to half your level and are immune to precision damage. You can't cast spells, activate items, or use actions that have the attack or manipulate trait. You gain a fly Speed of 10 feet. You can remain in this form for up to 1 minute. You can Dismiss this effect.</p>\n<p><strong>Awakening</strong> You can maintain your form for a longer time. You can remain in this form for up to 1 hour.</p>\n<p><strong>Awakening</strong> You've learned to harm others, even while in your blossom state. You can occupy the same space as someone else. While occupying someone else's space, you can spend 1 action to spin around in a vortex of blossoms, dealing @Damage[(floor(@actor.level/5)d4)[slashing]]{1d4 slashing} damage for every 5 levels you have to the creature, with a basic Reflex save.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "verdantCoreDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:verdant-core-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Verdant Core Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical",
+              "plant",
+              "polymorph"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -70,6 +428,54 @@
       "name": "Distant Wandering",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YFPmD8BHv0XaF55G",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distant Wandering",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your body falls @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] and your spirit projects out of it. While in spirit form, you can't consciously move your body, and you are @UUID[Compendium.pf2e.conditionitems.Item.Invisible] and inaudible, though a creature still might notice the signs of your presence and passing, just like for an invisible creature affected by @UUID[Compendium.pf2e.spells-srd.Item.Silence], or a @UUID[Compendium.pf2e.spells-srd.Item.Scouting Eye]. You can freely move about, though you can't touch or move anything, cast spells, attack, or otherwise affect anything around you. Despite your ghostly form, you are not incorporeal and can't pass through barriers you couldn't in your body. Most effects can't harm your spirit form, though some spells, like @UUID[Compendium.pf2e.spells-srd.Item.Spirit Blast] and @UUID[Compendium.pf2e.spells-srd.Item.Spirit Song], explicitly damage a creature's spirit.</p>\n<p>You can return to your body as a free action. If you are in spirit form at the beginning of your turn, you must attempt another backlash check for your deviation, returning to your body if you fail.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Distant Wandering]</p><hr /><p><strong>Awakening</strong> Your spirit moves at the speed of thought. You gain a fly Speed and a +20-foot status bonus to your Speed while in spirit form.</p>\n<p><em>Note: No specific fly speed was given by Paizo for this ability. A fly speed equal to your land speed has been used in the effect.</em></p><hr /><p><strong>Awakening</strong> Time seems to pass more slowly while you are projecting your spirit, letting you notice things around you. When you enter spirit form, you can Recall Knowledge or Seek. You are @UUID[Compendium.pf2e.conditionitems.Item.Quickened] while in spirit form and can use the extra action only to Recall Knowledge or @UUID[Compendium.pf2e.actionspf2e.Item.Seek].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:wraith-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Wraith Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -79,6 +485,62 @@
       "name": "Draining Touch",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fFVqsMseN4zA9R24",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draining Touch",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You reach out your arm, grasping hungrily for a source of energy. Attempt a melee Strike. If you succeed, you deal 1d8 cold damage for every 2 levels you have to the target (@Damage[(floor(@actor.level/2))d8[cold]]), or double damage on a critical success.</p>\n<p><strong>Awakening</strong> You drain enough energy from a creature to leave it with lingering aftereffects. Your Draining Touch also leaves a creature @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1}, or @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} if your attack was a critical success.</p>\n<p><strong>Awakening</strong> You can pull away not just physical energy, but a creature's spirit as well. Your Draining Touch can deal your choice of cold, spirit, or void damage, changing the cold trait to spirit or void as appropriate.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:leech-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Leech Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "attack",
+              "cold",
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -88,6 +550,54 @@
       "name": "Eerie Flicker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jPWF8Xe0UqVvbeyv",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eerie Flicker",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy's Strike would hit you and you weren't already @UUID[Compendium.pf2e.conditionitems.Item.Concealed], @UUID[Compendium.pf2e.conditionitems.Item.Hidden], or @UUID[Compendium.pf2e.conditionitems.Item.Undetected] by that enemy.</p>\n<hr />\n<p>Your body flickers momentarily into the Ethereal Plane. You become concealed for 1 round, and the flat check for concealment applies to the Strike that would have hit you. If the flat check fails, the Strike misses you.</p>\n<hr />\n<p><strong>Awakening</strong> When your body flickers, you momentarily assume a terrifying form. If a creature fails the flat check against concealment from your Eerie Flicker, it becomes @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}, and it doesn't reduce the frightened condition from this effect at the end of the same turn it gained the condition.</p>\n<hr />\n<p><strong>Awakening</strong> You can choose to compress your flickering movement into a single moment, increasing your chance to avoid the triggering attack in exchange for a shorter-lived effect. If you choose to do so, the flat check for concealment against the triggering attack increases to @Check[flat|dc:9], but the concealment affects only the triggering Strike.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:wraith-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Wraith Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -97,6 +607,55 @@
       "name": "Enervating Wail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VAxtUenSWEBWYBRt",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enervating Wail",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You release a terrible wail that tears at the spirits of all nearby. All living creatures in a @Template[emanation|distance:20] take @Damage[((@actor.level - 2)d6)[void]|options:area-damage] damage with a @Check[fortitude|against:class-spell|basic|options:area-effect] save. The damage is 4d6, plus 1d6 for every level you have beyond 6th.</p><hr /><p><strong>Awakening</strong> Your scream echoes in the mind. You can choose to emit a silent psychic wail instead, which changes the damage type to @Damage[(@actor.level - 2)d6[mental]|options:area-damage], changes the save to a @Check[will|against:class-spell|basic|traits:mental,deviant,magical|overrideTraits|options:area-effect] save, removes the auditory trait, and adds the mental trait.</p><hr /><p><strong>Awakening</strong> Your wail saps your foes' strength. In addition to the normal effects, living creatures in the area are @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} for 1 round on a success (but not a critical success), enfeebled 1 for 1 minute on a failure, and @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} for 1 minute on a critical failure.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:wraith-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Wraith Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "auditory",
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -106,6 +665,63 @@
       "name": "Feed the Void",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F8rtjsojGLaRuU5l",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feed the Void",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The void within you manages to manifest itself temporarily, a black hole opening over your heart and threatening to draw everything in. A @Template[type:cone|distance:60] becomes filled with screaming winds that rush in toward you. All creatures in the cone must attempt a Fortitude saving throw.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pulled 10 feet toward you.</p>\n<p><strong>Failure</strong> The creature is pulled 20 feet toward you.</p>\n<p><strong>Critical Failure</strong> The creature is pulled 30 feet toward you.</p>\n<p>Creatures that would be pulled into your square contact the void, which deals @Damage[5d6[spirit]|options:area-damage] damage with no saving throw, and are then spat back out in a square adjacent to you of your choice. At 12th level, and every 2 levels thereafter, the damage increases by 1d6.</p>\n<p><strong>Awakening</strong> The void feeds upon the creature's spirit, transferring you some of their vitality. If one or more creatures are pulled into the void, you gain temporary Hit Points equal to the level of the highest-level creature pulled in. These temporary Hit Points last for 10 minutes.</p>\n<p><strong>Awakening</strong> The void's suction draws in heat and light as well. The first 30 feet of the cone becomes covered in ice as temperatures drop, making the area difficult terrain, and is also plunged into darkness, with the effects of darkness heightened to half your level. Both effects last until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:leech-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Leech Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "extradimensional",
+              "magical",
+              "mental",
+              "spirit"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -115,6 +731,54 @@
       "name": "Ghostly Grasp (Deviant)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "C3ukUk4Js10o5IBA",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ghostly Grasp (Deviant)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>An invisible arm extends from you to grab and manipulate objects. The arm reaches up to 15 feet, grabs an unattended object of 1 Bulk or less, and immediately deposits it in one of your free hands or at your feet. Alternatively, it reaches up to 15 feet and performs a simple Interact action like pushing open a window, though it can't perform actions that require significant mechanical dexterity. For every 5 levels you have, the amount the hand can lift increases by 1 Bulk, and the arm's range increases by 15 feet. Being ghostly, the arm can affect ghosts, spirits, and other incorporeal entities, though in most cases, you need an awakening for this to be useful.</p><hr /><p><strong>Awakening</strong> Your invisible arm can grab on to an unsuspecting target. You can modify the power's target to be 1 creature within range. You make an @Check[deviant|defense:fortitude]{attack roll} against the creature's Fortitude DC and add the attack trait to the action. On a success, the target is @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] by the arm (or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] on a critical success). This lasts for 1 round or until the creature Escapes.</p><hr /><p><strong>Awakening</strong> You summon additional ghostly arms that entwine together to push targets. You can modify the power's target to be 1 creature within range. You make an @Check[deviant|defense:fortitude]{attack roll} against the creature's Fortitude DC and add the attack trait to the action. On a success, you can move the target 5 feet in any direction (10 feet on a critical success).</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:wraith-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Wraith Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -124,6 +788,52 @@
       "name": "Greater Awakened Power",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Km6YO7Ky2bEwhAFD",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Awakened Power",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your power undergoes yet another awakening. You gain one awakening benefit for a deviant feat of 10th level or lower.</p><hr /><p><strong>Special</strong> You can take this feat multiple times. Each time you do, choose a different deviant feat of 10th level or lower, and gain one of its awakening benefits.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.deviantAbilities.awakenedChoices.greater",
+              "flag": "greaterAwakenedPower",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.DeviantAbilities.AwakenedPower.Prompt",
+              "rollOption": "awakening"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -133,6 +843,56 @@
       "name": "High-Speed Regeneration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xDTjr415ZZM8x2WW",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "High-Speed Regeneration",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn begins.</p><hr /><p>Your wounds knit together with barely a thought. You regain @Damage[(2*@actor.level)[healing]]{Hit Points equal to double your level}. When you gain this deviation, the GM secretly selects one type of energy damage or precious material, such as fire or cold iron. When you take damage of that type, your wound smokes until the end of your next turn, preventing you from using High-Speed Regeneration.</p><hr /><p><strong>Awakening</strong> Your regeneration can automatically save you from the brink of death. Once per day, you can use High-Speed Regeneration when your Hit Points would be reduced to 0 instead of the usual trigger. You avoid being knocked out and remain at the number of HP you regained.</p><hr /><p><strong>Awakening</strong> Regrowth invigorates you. You gain a +10-foot status bonus to your Speed until the end of your turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: High-Speed Regeneration Speed Boost]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:troll-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Troll Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "healing",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -142,6 +902,57 @@
       "name": "Irradiate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "79GUhBznFfYqdwgO",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Irradiate",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You exude an aura of radiation, making everyone around you ill. All creatures in a @Template[emanation|distance:15] must succeed at a @Check[fortitude|against:class-spell] save or become @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1}. On a critical failure, they're also @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] for 1 minute. You're immune to your own radiation. The value of this sickened condition increases by 1 for every 5 levels you have beyond 6th.</p>\n<p><strong>Awakening</strong> You become more efficient at exuding this aura of radiation. The radius of the emanation becomes @Template[emanation|distance:60]{60 feet}.</p>\n<p><strong>Awakening</strong> Your radiation becomes more potent. Creatures in the area take an additional @Damage[(floor(@actor.level/2))d4[poison]|options:area-damage]{1d4 poison} damage for every 2 levels you have, with a @Check[fortitude|against:class-spell|basic|options:area-effect] save (roll this Fortitude save once and apply it to both the damage and the sickened condition).</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "blightSoulDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:blight-soul-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Blight Soul Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical",
+              "poison"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -151,6 +962,60 @@
       "name": "Kinetic Dampening",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "stsCnc8hR6db1Get",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kinetic Dampening",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You feed off energy in your immediate surroundings, allowing you to dampen the force imparted by incoming blows. Until the beginning of your next turn, you gain resistance 5 to physical damage. At 10th level, and every 4 levels thereafter, the resistance increases by 5. Any blows that strike you during this time make no sound as their energy is drained.</p>\n<p><strong>Awakening</strong> You can extend your dampening field around you to create a safe haven for your allies. If you spend an additional action when using Kinetic Dampening, your field extends in a @Template[type:emanation|distance:15] around you. You can choose which creatures within the emanation are affected.</p>\n<p><strong>Awakening</strong> You dampen a greater variety of wavelengths. When you use this feat, you also gain resistance to your choice of fire, electricity, or sonic damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:leech-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Leech Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -160,6 +1025,60 @@
       "name": "Lightspeed Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZugnuBQu3RNcQmLv",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lightspeed Assault",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You zoom from enemy to enemy, striking each in an instant. Stride to an enemy and attempt a Strike against it. If successful, you can add another action to Lightspeed Assault. Stride again and attempt another Strike; if this second Strike is successful, you can spend another action to Stride again and attempt a third Strike. You can use Lightspeed Assault while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type. You attempt a backlash check for your deviation only once, regardless of how many actions you end up spending on your Lightspeed Assault.</p>\n<p><strong>Awakening</strong> Your speed allows you to slip the bonds of space. Instead of Striding, you simply teleport to your desired destination. Lightspeed Assault gains the teleportation trait.</p>\n<p><strong>Awakening</strong> You move so quickly that you might as well be in multiple places at once. When you use Lightspeed Assault, you can decide to spend one, two, or three actions up front, selecting your targets ahead of time. You can flank with yourself for any of these Strikes, and if you deal damage to a target more than once, you can add all the damage together for the purpose of overcoming resistances, if it would be more beneficial to you.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:flicker-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Flicker Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -169,6 +1088,64 @@
       "name": "Overclock Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xCi23uEFef9jhtlM",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Overclock Senses",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your senses speed up to the point that time seems to stand still, allowing you to catch details and incoming attacks. You @UUID[Compendium.pf2e.actionspf2e.Item.Seek]. After you Seek, you gain a +2 circumstance bonus to your AC against ranged attacks and to Reflex saving throws until the beginning of your next turn.</p>\n<p><strong>Awakening</strong> When you use Overclock Senses, you can focus even more on the present moment, allowing you more apparent time to observe and plot at the expense of defense. When you use Overclock Senses, you do so with the benefits of darkvision, or if you are at least 14th level, with the benefits of truesight. You can attempt a @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] check as a free action after Seeking. Your senses spent, you then do not gain the normal bonuses to AC and Reflex saving throws.</p>\n<p><strong>Awakening</strong> You hone your senses even further, letting you react to attacks almost before they happen. While you have the bonuses from Overclock Senses, if you would be hit by a ranged attack, you can spend a reaction to have the attacker roll the attack again (this is a misfortune effect), and if you would fail a Reflex save, you can spend a reaction to roll the save again (this is a fortune effect). You must take the second result, even if it is worse.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:flicker-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Flicker Deviant Classification"
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Overclock Senses",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Overclock Senses"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -178,6 +1155,60 @@
       "name": "Propulsive Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "q8c0LINVNcJrdK91",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Propulsive Leap",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By expelling flames from your feet or levitating through electrical repulsion, you propel yourself through the air. For 1 minute, you gain a fly Speed equal to your Speed or 20 feet, whichever is greater. If you aren't on solid ground at the end of your turn, you must attempt another backlash check for your deviation, though you remain airborne even if you fail your check unless the damage from the check renders you @UUID[Compendium.pf2e.conditionitems.Item.Unconscious].</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Propulsive Leap]</p>\n<hr />\n<p><strong>Awakening</strong> You blast through the air at great speed, gaining a +15-foot status bonus to your Fly speed from Propulsive Leap.</p>\n<hr />\n<p><strong>Awakening</strong> You can use your propulsion as a makeshift weapon. The first time each round you Fly starting from the ground, all creatures adjacent to you take [[/r (floor(@actor.level/2)d4)]]{1d4 damage for every 2 levels} you have, with a @Check[reflex|against:class-spell|basic] save.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "dragonDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:dragon-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Dragon Deviant Classification"
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Propulsive Leap",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Propulsive Leap"
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -187,6 +1218,58 @@
       "name": "Release Spores",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YePPw9Oc4JlDAmYD",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Release Spores",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You create a miasma of spores. These spores fill a @Template[burst|distance:20] within 100 feet and remain for 1 round per level you have. All creatures within the spores become @UUID[Compendium.pf2e.conditionitems.Item.Concealed], and all creatures outside the spores become concealed to creatures within it. You can see through the spores without difficulty. You can Dismiss the spores.</p>\n<p><strong>Awakening</strong> The spores smell disgusting. Creatures in the area are @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} for as long as they remain in the area, plus 2 rounds.</p>\n<p><strong>Awakening</strong> The spores are toxic. The miasma deals @Damage[(floor(@actor.level/2))[poison]|options:area-damage] damage per 2 levels you have to creatures in the area when you Release Spores, to creatures who begin their turn in the area, and to creatures who enter the area.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "blightSoulDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:blight-soul-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Blight Soul Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "fungus",
+              "magical",
+              "poison"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -196,6 +1279,57 @@
       "name": "Rotten Slurry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZJSkCrud1FZ7PMFk",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rotten Slurry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You expel a glob of rotten, foul-smelling slurry from your torso, hand, or mouth at a foe. Make a ranged @Check[deviant|defense:ac]{attack roll} against a creature within 30 feet. If you succeed, the slurry deals @Damage[(floor(@actor.level/2)d4)[bludgeoning]] damage to the target for every two levels you have, or double damage on a critical success. A creature that's damaged by the attack is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 2} on a critical success).</p>\n<p><strong>Awakening</strong> The slurry bursts, showering bystanders. The attack deals an additional @Damage[((floor(@actor.level/4)d4)[splash])[poison]]{1d4 poison splash} damage for every four levels you have.</p>\n<p><strong>Awakening</strong> The slurry is caustic, and bores into the flesh of those it touches. The attack deals an additional @Damage[1d4[persistent,acid]] damage.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "blightSoulDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:blight-soul-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Blight Soul Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "attack",
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -205,6 +1339,60 @@
       "name": "Sonic Dash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SC5oZbyvLO5CQwhl",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sonic Dash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You bounce up and down once, then sprint forward. You Stride twice in a straight line. You can use Sonic Dash while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>\n<p><strong>Awakening</strong> Your Sonic Dash generates a sonic boom, dealing 1d4 sonic damage for every two levels you have (@Damage[floor(@actor.level/2)d4[sonic]|options:area-damage]) to all creatures other than you in a @Template[type:emanation|distance:5] at the point you end your Sonic Dash, with a @Check[fortitude|against:deviant|basic]save. Creatures that fail are @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for 1 round, or 1 minute on a critical failure.</p>\n<p><strong>Awakening</strong> Your speed generates a slipstream that allows you to reposition your allies. You can dash through a willing ally's space during your Sonic Dash, causing them to be drawn by winds alongside you. You deposit them in any unoccupied space adjacent to you at the end of your Sonic Dash.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:flicker-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Flicker Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -214,6 +1402,58 @@
       "name": "Sprout Fruit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WxnCYjr02usmMN1q",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sprout Fruit",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The plants covering your body sprout a single, ripe fruit. A creature other than you who eats this fruit as a three-action activity (1 Interact action to pluck the fruit and 2 Interact actions to eat it) is healed @Damage[(floor(@actor.level/2)d4)[healing]] Hit Points for every 2 levels you have.</p>\n<p><strong>Awakening</strong> The fruit is more potent. Increase the healing from d4s to d6s (@Damage[(floor(@actor.level/2)d6)[healing]]).</p>\n<p><strong>Awakening</strong> The fruit is plentiful. You sprout one additional fruit for every 5 levels you have beyond 2. Also, those who eat a fruit may reduce a condition affecting them by 1.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "verdantCoreDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:verdant-core-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Verdant Core Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "healing",
+              "magical",
+              "plant"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -223,6 +1463,55 @@
       "name": "Storming Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EBmZyzDWhFSLydlM",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Storming Breath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spit out a freezing breath or sonic scream. You deal 4d6 damage, plus 1d6 damage for every level you have beyond 6th (@Damage[(-2+@actor.level)d6[untyped]|options:area-damage]), to all creatures in a @Template[cone|distance:30], with a @Check[reflex|against:class-spell|basic|options:area-effect,damaging-effect] save.</p><hr /><p><strong>Awakening</strong> Your blast powerfully batters your foes. A creature that critically fails its save is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p><hr /><p><strong>Awakening</strong> The kickback of your blast helps you make a speedy escape. When you use this ability, you Fly backward 15 feet in a straight line directly opposite your blast. This movement doesn't trigger reactions based on movement.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "flag": "dragonDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:dragon-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Dragon Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -232,6 +1521,54 @@
       "name": "Tectonic Stomp",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9XXtDeRF2egCCzcx",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tectonic Stomp",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You cause minor tremors that topple your enemies. All creatures in a @Template[emanation|distance:30] who are standing on the ground take @Damage[(floor(@actor.level/2)d6)[bludgeoning]|options:area-damage]{1d6 bludgeoning damage for every 2 levels} you have, with a @Check[reflex|against:class-spell|basic|options:area-effect,inflicts:prone,inflicts:stunned] save. A creature that fails its save also falls @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p><hr /><p><strong>Awakening</strong> Your stomp also ejects large fragments from the ground. You raise up to three stone chunks from the ground in unoccupied squares in the emanation; the stones can't be adjacent to one another. The chunks are 5 feet tall, block movement, and are large enough to @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover] behind. They have AC 10, Hardness 8, and Hit Points equal to your level. They are immune to critical hits and precision damage. A stone chunk crumbles away when it has 0 Hit Points, and all of them crumble after 1 minute or when you use Tectonic Stomp again.</p><hr /><p><strong>Awakening</strong> Your stomp rattles those who fail horribly. A creature that critically fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:troll-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Troll Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -241,6 +1578,150 @@
       "name": "Titan Swing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QN7y2CQeiJ2iPioM",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Titan Swing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your limbs tense as you deliver a mighty swing. Make a melee Strike. If it hits, you deal an extra die of weapon damage and push the target back by 5 feet. If you're at least 10th level, increase this to two extra dice and push the target by 10 feet, and if you're at least 18th level, increase it to three extra dice and push the target by 15 feet.</p>\n<hr />\n<p><strong>Awakening</strong> On a critical hit, you push the target back double the normal distance and knock it @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<hr />\n<p><strong>Awakening</strong> On a hit, you deal 1d6 bleed damage. This increases to 2d6 at 10th level and 3d6 at 18th level.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "diceNumber": "ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,10),2,1))",
+              "key": "DamageDice",
+              "predicate": [
+                "item:melee",
+                "titan-swing"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "titan-swing",
+              "toggleable": true
+            },
+            {
+              "category": "persistent",
+              "damageType": "bleed",
+              "diceNumber": "ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,10),2,1))",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "titan-swing",
+                "item:melee",
+                "awakening:titan-swing:bleed"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "titan-swing",
+                {
+                  "lte": [
+                    "self:level",
+                    9
+                  ]
+                },
+                "item:melee"
+              ],
+              "selector": "strike-damage",
+              "text": "PF2E.SpecificRule.DeviantAbilities.TitanSwing.NoteFiveFeet",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "titan-swing",
+                {
+                  "gte": [
+                    "self:level",
+                    10
+                  ]
+                },
+                {
+                  "lt": [
+                    "self:level",
+                    18
+                  ]
+                },
+                "item:melee"
+              ],
+              "selector": "strike-damage",
+              "text": "PF2E.SpecificRule.DeviantAbilities.TitanSwing.NoteTenFeet",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "titan-swing",
+                {
+                  "gte": [
+                    "self:level",
+                    18
+                  ]
+                },
+                "item:melee"
+              ],
+              "selector": "strike-damage",
+              "text": "PF2E.SpecificRule.DeviantAbilities.TitanSwing.NoteFifteenFeet",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "titan-swing",
+                "awakening:titan-swing:prone",
+                "item:melee"
+              ],
+              "selector": "strike-damage",
+              "text": "PF2E.SpecificRule.DeviantAbilities.TitanSwing.NoteProne",
+              "title": "PF2E.SpecificRule.DeviantAbilities.AwakenedPower.AwakenedLabel"
+            },
+            {
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:troll-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Troll Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -250,6 +1731,57 @@
       "name": "Unleash the Blight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PycaQsgfgOQc86UX",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unleash the Blight",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You unleash the rot infecting you, spreading the blight to those nearby. All living creatures in a @Template[emanation|distance:60] take @Damage[(floor(@actor.level/2)d6)[void]|options:area-damage]{1d6 void} damage for every 2 levels you have, with a @Check[fortitude|against:class-spell|basic|options:area-effect] save.</p>\n<p><strong>Awakening</strong> The blight is infectious. Creatures damaged by your blight take an additional @Damage[1d6[persistent,void]] damage, as they begin to decompose.</p>\n<p><strong>Awakening</strong> The blight is debilitating. Creatures damaged become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1} for one round on a success, drained 1 for 1 minute on a failure, and @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2} for 1 minute on a critical failure.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "blightSoulDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:blight-soul-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Blight Soul Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -259,6 +1791,60 @@
       "name": "Unstable Gearshift",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ePQXFTRQORKWP9KH",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unstable Gearshift",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You shift your body into a higher gear, your speed compounding further and further. You gain a +10-foot status bonus to all your Speeds, which lasts until the end of your next turn. At any time during your next turn, you can use Unstable Gearshift again, increasing the status bonus by another 5 feet and prolonging the effect for another round. You can keep using Unstable Gearshift in this way until you can no longer use your deviant abilities.</p>\n<p><strong>Awakening</strong> When moving at high speed, your form blurs. You have concealment for the duration of any move action you take while you are affected by Unstable Gearshift.</p>\n<p><strong>Awakening</strong> Your high-speed form has become partially out of phase with reality. While you are affected by Unstable Gearshift, you are not affected by physical difficult terrain (such as rubble), you do not trigger traps that use weight or pressure plates as a trigger, and you can move through enemy spaces without making checks to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through], as you simply phase through them.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Gatewalkers Player's Guide (Remastered)"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:flicker-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Flicker Deviant Classification"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "deviant",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -268,6 +1854,58 @@
       "name": "Vine Lash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fYD0SrZhMyJVQgvl",
+        "folder": "0xnakREinRcowzlH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vine Lash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a free hand.</p><hr /><p>A long vine sprouts from your arm, which you can temporarily wield like a whip. Make a melee @Check[deviant|defense:ac]{attack roll} against a creature within 30 feet. If you succeed, the vine deals @Damage[(floor(@actor.level/2)d6)[slashing]] damage for every 2 levels you have to the target, or double damage on a success.</p>\n<p><strong>Awakening</strong> The vine coils around your foes, squeezing them lifeless. On a successful hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] by the vine. The DC to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] the vine is equal to your Class DC or Spell DC, whichever is higher. Each round on your turn, if the target is still grabbed, the vine squeezes them, dealing @Damage[(floor(@actor.level/2)d6)[bludgeoning]] damage for every 2 levels you have.</p>\n<p><strong>Awakening</strong> Rather than lash at your foes with a single vine, dozens of writhing vines emerge from your hands, lashing all creatures in a large area. You can use Vine Lash as a 2-action activity to damage all creatures in a @Template[cone|distance:30], with a @Check[reflex|against:class-spell|basic|options:area-effect] save.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "flag": "verdantCoreDeviantClassification",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:verdant-core-deviant-classification"
+                }
+              ],
+              "uuid": "Compendium.pf2e.classfeatures.Item.Verdant Core Deviant Classification"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "attack",
+              "deviant",
+              "magical",
+              "plant"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

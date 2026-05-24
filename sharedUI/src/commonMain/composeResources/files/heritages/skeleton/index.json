@@ -1,0 +1,325 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "compact-skeleton.json",
+      "id": "mZqaKQkvadBbNubM",
+      "name": "Compact Skeleton",
+      "img": "icons/commodities/bones/skull-weird.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "mZqaKQkvadBbNubM",
+        "folder": "YACufOijY4x2rPUz",
+        "img": "icons/commodities/bones/skull-weird.webp",
+        "name": "Compact Skeleton",
+        "system": {
+          "ancestry": {
+            "name": "Skeleton",
+            "slug": "skeleton",
+            "uuid": "Compendium.pf2e.ancestries.Item.58rL5sg2y4arW1i5"
+          },
+          "description": {
+            "value": "<p>For tasks that require a lighter touch, gnome, goblin, and halfling remains are more suitable than a larger creature's. These smaller, nimbler skeletons fit well in a traveling chest, can be forced through tight spaces, and more easily avoid detection. Your size is Small instead of Medium. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Quick Squeeze] feat, even if you aren't trained in Acrobatics. Tight spaces not tight enough to require the Squeeze activity aren't difficult terrain for you.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Book of the Dead"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "value": "small"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Quick Squeeze"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "fodder-skeleton.json",
+      "id": "RZHr0olieS6YdYE9",
+      "name": "Fodder Skeleton",
+      "img": "icons/commodities/bones/bones-stack-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "RZHr0olieS6YdYE9",
+        "folder": "YACufOijY4x2rPUz",
+        "img": "icons/commodities/bones/bones-stack-yellow.webp",
+        "name": "Fodder Skeleton",
+        "system": {
+          "ancestry": {
+            "name": "Skeleton",
+            "slug": "skeleton",
+            "uuid": "Compendium.pf2e.ancestries.Item.58rL5sg2y4arW1i5"
+          },
+          "description": {
+            "value": "<p>Humans, and those who are physically closest to them, are the favored material of necromancers. They are readily available, and their physiology has been studied the most extensively, so these skeletons can be easily mass-produced. Despite their name, fodder skeletons make rather mobile foot soldiers due to how efficiently they transfer necromantic energy within their bodies. You have a base Speed of 30 feet, instead of 25 feet.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Book of the Dead"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "land",
+              "value": 30
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "monstrous-skeleton.json",
+      "id": "wB8xiQB4RDbzOOvR",
+      "name": "Monstrous Skeleton",
+      "img": "icons/commodities/bones/skull-feline-grey.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "wB8xiQB4RDbzOOvR",
+        "folder": "YACufOijY4x2rPUz",
+        "img": "icons/commodities/bones/skull-feline-grey.webp",
+        "name": "Monstrous Skeleton",
+        "system": {
+          "ancestry": {
+            "name": "Skeleton",
+            "slug": "skeleton",
+            "uuid": "Compendium.pf2e.ancestries.Item.58rL5sg2y4arW1i5"
+          },
+          "description": {
+            "value": "<p>Inhuman skeletons are often created for both their deadly physical attacks and their terrifying appearances. Beasts and monstrous humanoids with the strangest skeletons tend to be the centerpiece of the collection of a necromancer skilled enough to raise one. You gain a claw, horn, tail, or wing unarmed attack that deals 1d6 damage. A claw deals slashing damage, a horn deals piercing damage, and a tail or wing deals bludgeoning damage. This unarmed attack is in the brawling group and has the finesse and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Book of the Dead"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.BattleForm.Attack.Claw",
+                  "value": "claw"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Horn",
+                  "value": "horn"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Tail",
+                  "value": "tail"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Wing",
+                  "value": "wing"
+                }
+              ],
+              "flag": "primaryStrike",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Automaton.AutomatonArmament.Prompt",
+              "rollOption": "ancestry:skeleton:monstrous"
+            },
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                "ancestry:skeleton:monstrous:claw"
+              ],
+              "range": null,
+              "slug": "claw",
+              "traits": [
+                "unarmed",
+                "finesse"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/horn.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Horn",
+              "predicate": [
+                "ancestry:skeleton:monstrous:horn"
+              ],
+              "range": null,
+              "slug": "horn",
+              "traits": [
+                "unarmed",
+                "finesse"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/creatures/abilities/tail-swipe-green.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tail",
+              "predicate": [
+                "ancestry:skeleton:monstrous:tail"
+              ],
+              "range": null,
+              "slug": "tail",
+              "traits": [
+                "unarmed",
+                "finesse"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/wing.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Wing",
+              "predicate": [
+                "ancestry:skeleton:monstrous:wing"
+              ],
+              "range": null,
+              "slug": "wing",
+              "traits": [
+                "unarmed",
+                "finesse"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shifting-skeleton.json",
+      "id": "idJ2lSKEmmwqG5eT",
+      "name": "Shifting Skeleton",
+      "img": "icons/commodities/bones/bones-stack-brown.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "idJ2lSKEmmwqG5eT",
+        "folder": "YACufOijY4x2rPUz",
+        "img": "icons/commodities/bones/bones-stack-brown.webp",
+        "name": "Shifting Skeleton",
+        "system": {
+          "ancestry": {
+            "name": "Skeleton",
+            "slug": "skeleton",
+            "uuid": "Compendium.pf2e.ancestries.Item.58rL5sg2y4arW1i5"
+          },
+          "description": {
+            "value": "<p>Constructed from the bones of various shapechanging creatures, shifting skeletons retain a measure of reconfigurability, allowing them to shift forms. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Rearrange Bones] action.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Wake the Dead #4"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Rearrange Bones"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sturdy-skeleton.json",
+      "id": "P8Rl3dUsq8AzXLHC",
+      "name": "Sturdy Skeleton",
+      "img": "icons/commodities/bones/bone-foot-bird-brown.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "P8Rl3dUsq8AzXLHC",
+        "folder": "YACufOijY4x2rPUz",
+        "img": "icons/commodities/bones/bone-foot-bird-brown.webp",
+        "name": "Sturdy Skeleton",
+        "system": {
+          "ancestry": {
+            "name": "Skeleton",
+            "slug": "skeleton",
+            "uuid": "Compendium.pf2e.ancestries.Item.58rL5sg2y4arW1i5"
+          },
+          "description": {
+            "value": "<p>Certain hazardous conditions are not suitable for the average skeleton, so a necromancer might choose to reanimate the bones of a dwarf, orc, or other creature with a reputation for sturdiness. You have 10 Hit Points instead of 6 and gain the @UUID[Compendium.pf2e.feats-srd.Item.Diehard] feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Book of the Dead"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

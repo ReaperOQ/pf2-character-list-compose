@@ -7,6 +7,257 @@
       "name": "Boost Modulation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U9uRb2TezYlQPNJd",
+        "folder": "e8h8K0U4deg3831r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Boost Modulation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You aren't satisfied with keeping to just one kind of boost from your constant tinkering, so you've learned to modulate between several possibilities at once. Choose two additional offensive boosts. You can use an Interact action to change the offensive boost currently affecting your weapon, choosing between the one you chose for the class feature and the two you chose for this modification. If your weapon has the modular trait, you can swap the offensive boost as part of the Interact action you take to use that trait.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "offensive boost"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "boost-modulation",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Chill",
+                  "predicate": [
+                    "offensive-boost:cold"
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Ignition",
+                  "predicate": [
+                    "offensive-boost:fire"
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Jolt",
+                  "predicate": [
+                    "offensive-boost:electricity"
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Momentum",
+                  "predicate": [
+                    "offensive-boost:bludgeoning"
+                  ],
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Saws",
+                  "predicate": [
+                    "offensive-boost:slashing"
+                  ],
+                  "value": "slashing"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Spike",
+                  "predicate": [
+                    "offensive-boost:piercing"
+                  ],
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Vitriol",
+                  "predicate": [
+                    "offensive-boost:acid"
+                  ],
+                  "value": "acid"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Chill",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:cold"
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Ignition",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:fire"
+                    }
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Jolt",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:electricity"
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Momentum",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:bludgeoning"
+                    }
+                  ],
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Saws",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:slashing"
+                    }
+                  ],
+                  "value": "slashing"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Spike",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:piercing"
+                    }
+                  ],
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Vitriol",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:acid"
+                    }
+                  ],
+                  "value": "acid"
+                }
+              ],
+              "flag": "boostModulationFirst",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Inventor.BoostModulation.Prompt",
+              "rollOption": "offensive-boost"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Chill",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:cold"
+                    }
+                  ],
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Ignition",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:fire"
+                    }
+                  ],
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Jolt",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:electricity"
+                    }
+                  ],
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Momentum",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:bludgeoning"
+                    }
+                  ],
+                  "value": "bludgeoning"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Saws",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:slashing"
+                    }
+                  ],
+                  "value": "slashing"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Spike",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:piercing"
+                    }
+                  ],
+                  "value": "piercing"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Inventor.OffensiveBoost.Vitriol",
+                  "predicate": [
+                    {
+                      "not": "offensive-boost:acid"
+                    }
+                  ],
+                  "value": "acid"
+                }
+              ],
+              "flag": "boostModulationSecond",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Inventor.BoostModulation.Prompt",
+              "rollOption": "offensive-boost"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.inventor.offensiveBoost",
+              "priority": 51,
+              "value": "{item|flags.system.rulesSelections.boostModulation}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +267,81 @@
       "name": "Celestial Cacophony",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zWbPmIQfv9VTYwwH",
+        "folder": "e8h8K0U4deg3831r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Celestial Cacophony",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>Your weapon contains a detonation chamber that launches fireworks, sparklers, and black powder pellets that sizzle, twist, and scatter on the ground in a cacophonous manner liable to annoy the entire Celestial Court. All creatures in a @Template[type:cone|distance:15] extending from your innovation take @Damage[(max(3,(floor(@actor.level / 2) - 3)))d4[fire],(max(3,(floor(@actor.level / 2) - 3)))d4[sonic]|options:area-damage] damage with a @Check[fortitude|against:inventor|basic] save against your class DC; both the fire and sonic damage increase by 1d4 at 14th level and every 2 levels thereafter. The area affected by the cone becomes difficult terrain until the start of your next turn. Creatures moving through this area must succeed at a @Check[reflex|against:inventor] save against your class DC or take @Damage[2d4[persistent,fire]] damage.</p>\n<p><strong>Unstable Function</strong> You rattle your weapon violently to make it belch out even more pyrotechnics. Add the unstable trait to Celestial Cacophony. The area increases to a @Template[type:cone|distance:30], and all damage dice increase from d4s to d8s.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "weapon innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "dice-faces",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "slug": "base",
+              "value": 8
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "fire",
+              "inventor",
+              "manipulate",
+              "sonic",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +351,47 @@
       "name": "Contingency Gadgets",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4st3fSYSrJrxwHOP",
+        "folder": "e8h8K0U4deg3831r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Contingency Gadgets",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are too brilliant to be caught off guard, and you always have just the right gadget for the situation. When you prepare your gadgets during your daily preparations, you can choose to leave one of them as a contingency gadget that you keep ready for just this situation, rather than declaring which gadget you're making. You can pull the contingency gadget out using an Interact action, at which point you must choose which gadget you had prepared as a contingency.</p>\n<p>If you're legendary in Crafting, you can leave two contingency gadgets during your daily preparations, instead of just one.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gadget Specialist"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +401,62 @@
       "name": "Deep Freeze",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jNzjecRGyyAqkkrm",
+        "folder": "e8h8K0U4deg3831r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deep Freeze",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You vent a jet of supercooled fluid from your innovation, damaging a foe and slowing it down. Target one creature within 60 feet. That creature takes @Damage[@actor.level[cold]]{cold damage equal to your level}, with effects depending on its @Check[reflex|against:inventor] save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> The target takes full damage and takes a –10-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for 1 round, and takes a –15-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Deep Freeze]</p>\n<p><strong>Unstable Function</strong> Your innovation discharges an enormous cone of supercooled fluid, potentially causing cascading failures. Add the unstable trait to Deep Freeze. The ability affects all creatures within a @Template[cone|distance:60] instead of a single target, and it deals @Damage[(2*@actor.level)[cold]|traits:unstable|options:area-damage]{cold damage equal to double your level} instead of equal to your level.</p>\n<p>If you have the revolutionary innovation class feature, you can choose a @Template[cone|distance:60] or a @Template[cone|distance:90] when you use an unstable Deep Freeze.</p><hr /><p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cold",
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +466,47 @@
       "name": "Gigavolt",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lv8jRWK7bv7dR6SM",
+        "folder": "e8h8K0U4deg3831r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gigavolt",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you unleash electricity from your innovation, you can bounce it off obstacles, creating a field of electric death. When you use Megavolt, each time your line of electricity hits a solid barrier, such as a wall, it bounces off at an angle of your choice and continues until you have reached the full length of the line. Even if a creature is in the area from multiple bounces, it takes the damage only once.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Megavolt"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +516,47 @@
       "name": "Shared Overdrive",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U0XX0Mm2MbZcuNK2",
+        "folder": "e8h8K0U4deg3831r",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shared Overdrive",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've experimented enough on your teammates to transfer a substantial number of powered-up gizmos to them, enabling one of your allies to benefit from the full effects and duration of your Overdrive. The first time you use Overdrive Ally during a given Overdrive, the effect lasts for the remainder of the duration of your Overdrive, instead of just until the end of the target's next turn. Any further uses of Overdrive Ally during the same Overdrive have their normal duration, per Overdrive Ally.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Overdrive Ally (Shared Overdrive)]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Overdrive Ally"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

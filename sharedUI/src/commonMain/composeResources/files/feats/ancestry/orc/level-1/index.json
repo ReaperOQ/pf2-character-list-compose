@@ -7,6 +7,68 @@
       "name": "Beast Trainer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wtTye8OrC9cuK7YP",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beast Trainer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have an impressive innate ability to tame and command ferocious beasts. You become trained in the Nature skill and gain your choice of the @UUID[Compendium.pf2e.feats-srd.Item.Pet] general feat or the @UUID[Compendium.pf2e.feats-srd.Item.Train Animal] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Pet"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Train Animal"
+                }
+              ],
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Feat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +78,141 @@
       "name": "Hold Mark",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aQNsD2t0Tb4vToA4",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hold Mark",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You bear scars or tattoos enhanced by the mark of your community's prowess. When you select this feat, choose one of the options from the below table. You are trained in the listed skill and gain a +1 status bonus to saves against spells from the listed tradition. You gain a large brand or tattoo in the shape of the chosen emblem or a similar concept (for example, the Burning Sun could be a torch, sun, volcano, or other fiery symbol, while the Empty Hand could be a fist or claw).</p>\n<table class=\"pf2e\">\n<thead>\n<tr>\n<th>Hold Mark Emblem</th>\n<th>Skill</th>\n<th>Tradition</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Burning Sun</td>\n<td>Diplomacy</td>\n<td>Arcane</td>\n</tr>\n<tr>\n<td>Death's Head</td>\n<td>Survival</td>\n<td>Primal</td>\n</tr>\n<tr>\n<td>Defiled Corpse</td>\n<td>Religion</td>\n<td>Divine</td>\n</tr>\n<tr>\n<td>Empty Hand</td>\n<td>Intimidation</td>\n<td>Occult</td>\n</tr>\n</tbody>\n</table>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Orc.HoldMark.BurningSun",
+                  "value": "burning-sun"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Orc.HoldMark.DeathsHead",
+                  "value": "deaths-head"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Orc.HoldMark.DefiledCorpse",
+                  "value": "defiled-corpse"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Orc.HoldMark.EmptyHand",
+                  "value": "empty-hand"
+                }
+              ],
+              "flag": "holdMark",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Orc.HoldMark.Prompt",
+              "rollOption": "hold-mark"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "predicate": [
+                "hold-mark:burning-sun"
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "predicate": [
+                "hold-mark:deaths-head"
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "predicate": [
+                "hold-mark:defiled-corpse"
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "predicate": [
+                "hold-mark:empty-hand"
+              ],
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:type:spell",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "arcane",
+                        "hold-mark:burning-sun"
+                      ]
+                    },
+                    {
+                      "and": [
+                        "hold-mark:deaths-head",
+                        "primal"
+                      ]
+                    },
+                    {
+                      "and": [
+                        "divine",
+                        "hold-mark:defiled-corpse"
+                      ]
+                    },
+                    {
+                      "and": [
+                        "hold-mark:empty-hand",
+                        "occult"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +222,63 @@
       "name": "Iron Fists",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JP5pptkl1Fx1JK4m",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Iron Fists",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your fists have been forged by battle, your naturally tough skin and dense bone further hardened by conflict. Your fist unarmed attacks no longer have the nonlethal trait and gain the shove weapon trait.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "fist": true,
+              "img": "systems/pf2e/icons/features/classes/powerful-fist.webp",
+              "key": "Strike"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "shove"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "property": "traits",
+              "value": "nonlethal"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +288,47 @@
       "name": "Orc Ferocity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PlhPpdwIV0rIAJ8K",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Orc Ferocity",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You would be reduced to 0 Hit Points but not immediately killed.</p>\n<hr />\n<p>Fierceness in battle runs through your blood, and you refuse to fall from your injuries no matter how terrible they may be. You avoid being knocked out and remain at 1 Hit Point, and your @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition increases by 1.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +338,60 @@
       "name": "Orc Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "254C4rqrE8APDfCf",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Orc Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The hold elders taught you your people's histories, told tales of great athletic feats, and shared with you the hardships your ancestors endured so that you can pass this wisdom down to future generations. You become trained in Athletics and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Orc Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +401,73 @@
       "name": "Orc Superstition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EFhh3AenX7wtAmrs",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Orc Superstition",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You attempt a saving throw against a spell or magical effect, and have not yet rolled.</p>\n<hr />\n<p>You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or magical effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "orc-superstition",
+              "predicate": [
+                {
+                  "not": "feat:pervasive-superstition"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "orc-superstition",
+                {
+                  "or": [
+                    "arcane",
+                    "divine",
+                    "primal",
+                    "occult",
+                    "magical"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +477,92 @@
       "name": "Orc Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1tVC0mcxl8sTCg4U",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Orc Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>In combat, you favor the brutal weapons that are traditional for your orc ancestors. You gain access to all uncommon weapons with the orc trait. You have familiarity with weapons with the orc trait plus the falchion and greataxe—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:orc",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:falchion",
+                    "item:base:greataxe"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialOrcWeapons",
+              "sameAs": "simple",
+              "slug": "martial-orc-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:orc",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedOrcWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-orc-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:orc",
+                    "item:base:falchion",
+                    "item:base:greataxe"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +572,64 @@
       "name": "Tusks (Orc)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "M5195FvfCN3X7gi9",
+        "folder": "QW4FChLa1LOdbE1j",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tusks (Orc)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have particularly long, jagged tusks perfect for tearing meat from bone. You gain a tusks unarmed attack that deals 1d6 piercing damage. Your tusks are in the brawling group and have the finesse and unarmed traits.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain into this feat. You can retrain out of this feat only through drastic measures, such as breaking, filing, or extracting your tusks.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/tusk.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tusk",
+              "range": null,
+              "traits": [
+                "unarmed",
+                "finesse"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "orc"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

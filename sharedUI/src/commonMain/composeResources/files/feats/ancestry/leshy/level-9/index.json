@@ -7,6 +7,76 @@
       "name": "Bark and Tendril",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2kAyZ3LB28BDhXKa",
+        "folder": "8TUJh2bMFkSRrUiQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bark and Tendril",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You wield primal magic. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Entangling Flora] and @UUID[Compendium.pf2e.spells-srd.Item.Oaken Resilience] as 2nd-rank primal innate spells once per day each.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:entangling-flora",
+                    "item:slug:oaken-resilience"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:entangling-flora",
+                    "item:slug:oaken-resilience"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:leshy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +86,62 @@
       "name": "Green Dash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KMbNfO3Ljg1vY3fH",
+        "folder": "8TUJh2bMFkSRrUiQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Green Dash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> Once per 10 minutes</p>\n<p><strong>Requirements</strong> You're adjacent to a tree, shrub, or plant that occupies at least a 5-foot square.</p><hr /><p>The spirits of vegetation send you on your way, letting you move in a burst of speed. You Stride with a +15-foot status bonus to your Speed. You can Burrow, Climb, Fly, or Swim instead if you have the corresponding movement type.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "green-dash",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "green-dash"
+              ],
+              "selector": "all-speeds",
+              "type": "status",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +151,70 @@
       "name": "Kodama Call",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qp6O9QBifW9bj7IV",
+        "folder": "8TUJh2bMFkSRrUiQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kodama Call",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>The small spirits known as kodama pride themselves in taking care of trees and other vegetation, and they'll happily come to your aid as well. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Helpful Wood Spirits] as a 2nd-rank innate primal spell twice per day</p>"
+          },
+          "frequency": {
+            "max": 2,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:helpful-wood-spirits",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:helpful-wood-spirits",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:leshy"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +224,52 @@
       "name": "Lucky Keepsake",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zsubK6PaY58fOYCb",
+        "folder": "8TUJh2bMFkSRrUiQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lucky Keepsake",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a @UUID[Compendium.pf2e.equipment-srd.Item.Lucky Keepsake]{Keepsake} that grants you luck. You gain a +1 circumstance bonus to saves against spells and magical effects at all times, not just when you use @UUID[Compendium.pf2e.feats-srd.Item.Leshy Superstition]. If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Leshy Superstition"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Lucky Keepsake"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +279,70 @@
       "name": "Sash of the Wind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e8DABlCNZ0h0i9OA",
+        "folder": "8TUJh2bMFkSRrUiQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sash of the Wind",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>At your request, the nature spirits of the air and wind spin themselves into an iridescent sash loosely draped around your shoulders that buoys you through the sky. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Fly] on yourself as a 4th-rank innate primal spell once per day. If the sash created by this feat is removed, the spell immediately ends.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:fly",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:fly",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:fly"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +352,57 @@
       "name": "Thorned Seedpod",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TRC4DgVq07cZO65B",
+        "folder": "8TUJh2bMFkSRrUiQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thorned Seedpod",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When your seedpods strike a felling blow, they burst into viciously thorny vines. When you critically succeed at a seedpod Strike, vines twist and stab your foe, dealing 1d4 persistent piercing damage.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Seedpod"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "category": "persistent",
+              "critical": true,
+              "damageType": "piercing",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "selector": "seedpod-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

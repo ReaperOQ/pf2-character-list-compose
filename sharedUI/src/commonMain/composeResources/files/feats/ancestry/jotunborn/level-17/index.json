@@ -7,6 +7,88 @@
       "name": "Jotun's Heart",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dnqTx5rziTrcgS3B",
+        "folder": "FiYm47E918RTO73a",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jotun's Heart",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have unlocked the power of a true giant within you. Your size becomes Huge. You have a 10-foot reach. Your maximum Hit Points increase by your level.</p><hr /><p><strong>Special</strong> When you enter @UUID[Compendium.pf2e.feats-srd.Item.Jotun's Battle Stance], instead of its previous effects, it now increases the reach of any weapon you are wielding, or your fist unarmed attack, by 5 feet.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Jotun's Battle Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "reach": {
+                "override": 10
+              },
+              "resizeEquipment": true,
+              "value": "huge"
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "@actor.level"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Jotunborn.JotunsHeart.ToggleLabel",
+              "option": "jotuns-heart-reach",
+              "phase": "afterDerived",
+              "predicate": [
+                "self:effect:jotuns-battle-stance"
+              ],
+              "priority": 19,
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.reach.base",
+              "phase": "afterDerived",
+              "predicate": [
+                "jotuns-heart-reach"
+              ],
+              "value": 5
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +98,71 @@
       "name": "Jotun's Transposition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TH4mB4nyHqmBAOnR",
+        "folder": "FiYm47E918RTO73a",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jotun's Transposition",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned to fully move across planes, beginning with the Ethereal Plane. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Interplanar Teleport] twice per week as an occult innate spell that can target only yourself. Your body serves as the locus for the spell and allows you to travel between the Ethereal Plane, the Universe, or the space between the planes known as the Fray without needing a planar key. You can use these castings to travel to other planes if you have the appropriate planar keys, as normal.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:interplanar-teleport",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:interplanar-teleport",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:jotunborn"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -25,6 +172,56 @@
       "name": "Planar Traveler",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iA3i19eFiGt4GTF3",
+        "folder": "FiYm47E918RTO73a",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Planar Traveler",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> Your turn begins.</p><hr /><p>You concentrate on the spaces between planes, allowing you to enhance your movement for a short period. Your Strides become augmented until the end of your turn, allowing you to instantly teleport to any point you could reach with your Speed instead of traversing normally to the location. While augmented, your Strides gain the teleportation trait. Your augmented Strides don't trigger reactions that can be triggered by move actions or upon leaving or entering a square, unless those reactions are specifically triggered by teleportation.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Plane Hop"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "jotunborn"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

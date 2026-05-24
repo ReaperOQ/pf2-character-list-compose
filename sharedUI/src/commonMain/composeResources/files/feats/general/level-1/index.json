@@ -7,6 +7,70 @@
       "name": "Adopted Ancestry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ihN8gkHSdPG9Trte",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Adopted Ancestry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You're fully immersed in another ancestry's culture and traditions, whether born into them, earned through rite of passage, or bonded through a deep friendship or romance. Choose a common ancestry or another ancestry to which you have access. You can select ancestry feats from the ancestry you chose, in addition to your character's own ancestry, as long as the ancestry feats don't require any physiological feature that you lack, as determined by the GM.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  {
+                    "not": "item:slug:{actor|system.details.ancestry.trait}"
+                  }
+                ],
+                "itemType": "ancestry",
+                "slugsAsValues": true
+              },
+              "flag": "ancestry",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.AdoptedAncestry.Prompt"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.details.ancestry.adopted",
+              "value": "{item|flags.system.rulesSelections.ancestry}"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.details.ancestry.countsAs",
+              "value": "{item|flags.system.rulesSelections.ancestry}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -16,6 +80,85 @@
       "name": "Armor Proficiency",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BStw1cANwx5baL6d",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Armor Proficiency",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You become trained in light armor. If you already were trained in light armor, you gain training in medium armor. If you were trained in both, you become trained in heavy armor. If you are at least 13th level, you become an expert in this armor type.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time, you become trained in the next type of armor, as detailed above.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.LightShort",
+                  "predicate": [
+                    "defense:light:rank:0"
+                  ],
+                  "value": "light"
+                },
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.MediumShort",
+                  "predicate": [
+                    "defense:medium:rank:0",
+                    {
+                      "not": "defense:light:rank:0"
+                    }
+                  ],
+                  "value": "medium"
+                },
+                {
+                  "label": "PF2E.Actor.Character.Proficiency.Defense.HeavyShort",
+                  "predicate": [
+                    {
+                      "nor": [
+                        "defense:light:rank:0",
+                        "defense:medium:rank:0"
+                      ]
+                    }
+                  ],
+                  "value": "heavy"
+                }
+              ],
+              "key": "ChoiceSet"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.{item|flags.system.rulesSelections.armorProficiency}.rank",
+              "value": "ternary(gte(@actor.level,13),2,1)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -25,6 +168,69 @@
       "name": "Breath Control",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aJUXbe9HJVvv0Mxa",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Breath Control",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You can breathe even in hazardous or sparse air. You can hold your breath for 25 times as long as usual before suffocating. You gain a +1 circumstance bonus to saving throws against inhaled threats, such as inhaled poisons, and if you roll a success on such a saving throw, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:inhaled"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:inhaled"
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "flags.system.remainingAir.rounds",
+              "value": "25 * (5 + @actor.abilities.con.mod)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -34,6 +240,72 @@
       "name": "Canny Acumen",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i4yRvVwvXbGZDsD1",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Canny Acumen",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>Your avoidance or observation is beyond the ken of most in your profession. Choose Fortitude saves, Reflex saves, Will saves, or Perception. You become an expert in your choice. At 17th level, you become a master in your choice.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.SavesFortitude",
+                  "value": "system.saves.fortitude.rank"
+                },
+                {
+                  "label": "PF2E.SavesReflex",
+                  "value": "system.saves.reflex.rank"
+                },
+                {
+                  "label": "PF2E.SavesWill",
+                  "value": "system.saves.will.rank"
+                },
+                {
+                  "label": "PF2E.PerceptionLabel",
+                  "value": "system.perception.rank"
+                }
+              ],
+              "flag": "cannyAcumen",
+              "key": "ChoiceSet"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "{item|flags.system.rulesSelections.cannyAcumen}",
+              "value": "ternary(gte(@actor.level,17),3,2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -43,6 +315,50 @@
       "name": "Diehard",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I0BhPWqYf1bbzEYg",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Diehard",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>It takes more to kill you than most. You die from the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition at dying 5, rather than dying 4.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.dying.max",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -52,6 +368,73 @@
       "name": "Fast Recovery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N8Xz5fuW6o7GW124",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fast Recovery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>Your body quickly bounces back from afflictions. You regain twice as many Hit Points from resting. Each time you succeed at a Fortitude save against an ongoing disease or poison, you reduce its stage by 2, or by 1 against a virulent disease or poison. Each critical success you achieve against an ongoing disease or poison reduces its stage by 3, or by 2 against a virulent disease or poison. In addition, you reduce the severity of your drained condition by 2 when you rest for a night instead of by 1.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Constitution +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "ongoing",
+                {
+                  "or": [
+                    "disease",
+                    "poison"
+                  ]
+                }
+              ],
+              "selector": "fortitude",
+              "text": "PF2E.SpecificRule.Feat.FastRecovery.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.hp.recoveryMultiplier",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -61,6 +444,47 @@
       "name": "Feather Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c9fHUSI5lRdXu1Ic",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feather Step",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You step carefully and quickly. You can Step into difficult terrain.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dexterity +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -70,6 +494,49 @@
       "name": "Fleet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ux73dmoF8KnavyUD",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fleet",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You move more quickly on foot. Your Speed increases by 5 feet.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -79,6 +546,50 @@
       "name": "Incredible Initiative",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2kwXTUjYYhoAGySr",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incredible Initiative",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -88,6 +599,51 @@
       "name": "Pet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6yPrvbSDaa8glLjn",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pet",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You have a pet—a Tiny animal of a type you choose, such as a cat, bird, or rodent. It has the minion trait, meaning it gains 2 actions during your turn if you use the Command an Animal action to command it; this replaces the usual effects of @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal], and you don't need to attempt a Nature check. A pet can't take attack actions except to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] or @UUID[Compendium.pf2e.actionspf2e.Item.Force Open].</p>\n<p><strong>Level</strong> Your pet's level is equal to yours.</p>\n<p><strong>Modifiers and AC</strong> Your pet's save modifiers and AC are equal to yours before applying circumstance or status bonuses or penalties. It uses 3 + your level as its modifier for Perception, Acrobatics, and Stealth, and just your level as its modifier for other skill checks. It doesn't have or use its own attribute modifiers and can never benefit from item bonuses.</p>\n<p><strong>Hit Points</strong> Your pet has 5 Hit Points per level.</p>\n<p><strong>Senses</strong> Your pet has low-light vision and can gain additional senses from pet abilities.</p>\n<p><strong>Speed</strong> Your pet has a Speed of 25 feet. You can choose to instead have an aquatic pet, which breathes in water instead of air and has the aquatic trait, no land Speed, and a swim Speed of 25 feet.</p>\n<p><strong>Pet Abilities</strong> When you gain your pet, choose two of the following abilities. If your pet is an animal that naturally has one of these abilities (for instance, an owl has a fly Speed), you must select that ability. Your pet can't be an animal that naturally has more pet abilities than the maximum. In some cases, the GM might add some familiar abilities to the pet abilities you can choose.</p><ul><li><strong>Amphibious</strong> It gains the amphibious trait, allowing it to breathe in both air and water, and has both a land Speed and a swim Speed, each equal to its highest land Speed or swim Speed.</li><li><strong>Burrower</strong> It gains a burrow Speed of 5 feet, allowing it to dig Tiny holes.</li><li><strong>Climber</strong> It gains a climb Speed of 25 feet.</li><li><strong>Darkvision</strong> It gains darkvision.</li><li><strong>Echolocation</strong> Your pet can use hearing as a precise sense within 20 feet.</li><li><strong>Fast</strong> Movement Increase one of the pet's Speeds from 25 feet to 40 feet.</li><li><strong>Flier</strong> It gains a fly Speed of 25 feet.</li><li><strong>Manual Dexterity</strong> It can use up to two of its limbs as if they were hands to perform manipulate actions.</li><li><strong>Scent</strong> Your pet can use scent as an imprecise sense within 30 feet</li><li><strong>Tough</strong> Your pet's max HP increase by 2 per level.</li></ul><hr /><p><strong>Special</strong> You can gain a new pet by retraining this feat, releasing any previous pet you have. If you later gain a familiar or other companion that uses the Pet feat, you can immediately retrain this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.familiarAbilities.value",
+              "priority": 19,
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -97,6 +653,43 @@
       "name": "Ride",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rq5wkA8DtsmbzoGV",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ride",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>When you @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] you're mounted on to take a move action (such as Stride), you automatically succeed instead of needing to attempt a check. Any animal you're mounted on acts on your turn, like a minion. If you @UUID[Compendium.pf2e.actionspf2e.Item.Mount] an animal in the middle of an encounter, it skips its next turn and then acts on your next turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -106,6 +699,43 @@
       "name": "Shield Block",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jM72TjJ965jocBV8",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield Block",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p><strong>Trigger</strong> While you have your shield raised, you would take physical damage (bludgeoning, piercing, or slashing) from an attack.</p>\n<hr />\n<p>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -115,6 +745,46 @@
       "name": "Speedrun Strats",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8NnIrUijGD2Chl55",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Speedrun Strats",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Whenever you take a move action to Stride, you can attempt a @Check[acrobatics|dc:15] check to roll forward.</p><hr /><p><strong>Critical Success</strong> You gain 5 extra feet of movement to your Speeds and can move through solid obstacles such as walls until the end of your Stride action.</p>\n<p><strong>Success</strong> You gain 5 extra feet of movement to your Speeds until the end of your Stride action.</p>\n<p><strong>Failure</strong> You lose 5 feet of movement from your Speeds until the end of your Stride action.</p>\n<p><strong>Critical Failure</strong> Your character softlocks and is @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed] permanently. Only a @UUID[Compendium.pf2e.spells-srd.Item.Wish] ritual or similar magic can reverse this effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Paizo Blog: Foolish Housekeeping and Other Articles"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "skill"
     },
@@ -124,6 +794,55 @@
       "name": "Toughness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AmP0qu7c5dlBSath",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Toughness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>Your body can withstand more punishment than most before succumbing. Increase your maximum Hit Points by your level. You reduce the DC of recovery checks by 1.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "@actor.level"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "subtract",
+              "path": "system.attributes.dying.recoveryDC",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     },
@@ -133,6 +852,66 @@
       "name": "Weapon Proficiency",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "x9wxQ61HNkAVbDHr",
+        "folder": "68m1OED3fDU3fIfR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weapon Proficiency",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You become trained in all martial weapons. If you were already trained in all martial weapons, you become trained in one advanced weapon of your choice. If you are at least 11th level, you also become an expert in these weapons.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you do, you become trained in an advanced weapon.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.attacks.martial.rank",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    11
+                  ]
+                }
+              ],
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "martial": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "general"
     }

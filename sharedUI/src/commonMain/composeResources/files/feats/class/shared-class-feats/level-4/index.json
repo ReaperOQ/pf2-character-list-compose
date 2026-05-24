@@ -7,6 +7,49 @@
       "name": "Barreling Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "to6s7QanfhHukW5r",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Barreling Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You rush forward, moving enemies aside to reach your foe. You Stride, attempting to move through your enemies' spaces. Roll an @Check[athletics|defense:fortitude] check and compare the result to the Fortitude DC of each creature whose space you attempt to move through during your Stride, moving through its space on a success but ending your movement before entering its space on a failure. You can then Strike, regardless of how your Stride ended. You can use Barreling Charge to Burrow, Climb, Fly, or Swim instead of Stride if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +59,105 @@
       "name": "Bespell Strikes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tWBK7Zbt80JlPryC",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bespell Strikes",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per turn</p>\n<p><strong>Requirements</strong> Your most recent action was to cast a non-cantrip spell.</p><hr /><p><strong>Oracle</strong> You siphon spell energy into one weapon you're wielding, or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra 1d6 force damage and gains the divine trait if it didn't have it already. If the spell dealt a different type of damage, the Strike deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage).</p>\n<p><strong>Sorcerer</strong> You siphon spell energy into one weapon you're wielding or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra 1d6 force damage and gains the trait of your bloodline's magical tradition if it didn't have it already. If the spell dealt a different type of damage, the Strike deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage).</p>\n<p><strong>Wizard</strong> You siphon spell energy into one weapon you're wielding, or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra 1d6 force damage and gains the arcane trait if it didn't have it already. If the spell dealt a different type of damage, the Strike deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "turn",
+            "value": 1
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.FeatDescription.Frequency.OncePerTurn",
+                  "title": "PF2E.Frequency.Label"
+                },
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Feat.BespellStrikes.Requirements",
+                  "title": "PF2E.FeatDescription.Requirements.Label"
+                },
+                {
+                  "predicate": [
+                    {
+                      "or": [
+                        "class:oracle",
+                        "feat:oracle-dedication"
+                      ]
+                    }
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.BespellStrikes.Oracle"
+                },
+                {
+                  "predicate": [
+                    {
+                      "or": [
+                        "class:sorcerer",
+                        "feat:sorcerer-dedication"
+                      ]
+                    }
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.BespellStrikes.Sorcerer"
+                },
+                {
+                  "predicate": [
+                    {
+                      "or": [
+                        "class:wizard",
+                        "feat:wizard-dedication"
+                      ]
+                    }
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.BespellStrikes.Wizard"
+                }
+              ]
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Bespell Strikes",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Bespell Strikes"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "oracle",
+              "sorcerer",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +167,49 @@
       "name": "Brutal Crush",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OIrBqz2nIdyu5NKR",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brutal Crush",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action dealt bludgeoning damage using an unarmed Strike granted by a morph or polymorph effect.</p>\n<hr />\n<p>You've learned how to cloud your foes' minds with the brutal impact of your repeated attacks. Make an unarmed Strike against the same target. If the Strike hits and deals bludgeoning damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} for 1 round (@UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 3} on a critical hit).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "animal instinct or untamed order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "druid",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +219,48 @@
       "name": "Creature Comforts",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "E6fkmjX6b8Nz5B0y",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Creature Comforts",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You become frightened.</p>\n<p><strong>Requirements</strong> You're under a morph or polymorph effect.</p>\n<hr />\n<p>You've found comfort in the forms of other creatures, insulating yourself from feelings of fear. Reduce your frightened condition value by 1 (to a minimum of 0).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "animal instinct or untamed order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +270,46 @@
       "name": "Haft Striker Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pKNnFOuHBkJEvmS1",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Haft Striker Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a two-handed hammer, spear, or polearm.</p><hr /><p>You enter a stance that allows you to leverage the haft of your weapon to brutal effect as an effective and frighteningly efficient weapon in its own right. You treat the haft of your wielded weapon as a simple weapon dealing @Damage[1d4[bludgeoning]] damage. The haft is in the club group and has the agile and finesse traits. The haft shares any fundamental runes attached to the main weapon, so long as it would normally qualify for them.</p>\n<p>While in Haft Striker Stance, you can use feats and abilities that normally require you to be wielding two melee weapons each in a different hand, treating the haft as the second weapon, but you can't use abilities that require you to be wielding a two-handed weapon.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "ranger",
+              "rogue",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +319,64 @@
       "name": "Rip and Tear",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EDZ1MwbNM9EcdTsh",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rip and Tear",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action dealt piercing or slashing damage using an unarmed Strike granted by a morph or polymorph effect.</p><hr /><p>You've learned to debilitate your enemies in the same way a hunter tears at their prey. Make an unarmed Strike against the same target. If the Strike hits and deals piercing or slashing damage, the target takes an additional 1d6 persistent bleed damage. If you're at least 12th level, increase this to 2d6 persistent bleed damage.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "animal instinct or untamed order"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "rip-and-tear",
+              "toggleable": true
+            },
+            {
+              "damageType": "bleed",
+              "diceNumber": "ternary(gte(@actor.level,12),2,1)",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "rip-and-tear"
+              ],
+              "selector": "unarmed-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +386,44 @@
       "name": "Running Reload",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "meQJfsKVar9tm6c9",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Running Reload",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can reload your weapon on the move. You Stride, Step, or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak], then Interact to reload.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +433,69 @@
       "name": "Sacral Lord",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wbS8f7R7KqHkwOzM",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sacral Lord",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By right of ritual or sheer stubbornness, you have claimed rulership of the land. Claim a defined territory, such as a small section of forest or river, or a district of a larger city. Within its borders, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic], @UUID[Compendium.pf2e.spells-srd.Item.Guidance], and @UUID[Compendium.pf2e.spells-srd.Item.Sigil] as innate divine cantrips, and you gain a +1 circumstance bonus to [[/act make-an-impression]] on creatures that have the celestial, fiend, fey, monitor, or spirit traits.</p><hr /><p><strong>Special</strong> You and your land are linked. Changes to one mirror themselves on the other—if you're depressed, gray rain and clammy mist might set in. These effects have no immediate mechanical impact, but they might give clues about problems afflicting the land.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Occultism or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression",
+                {
+                  "or": [
+                    "target:trait:celestial",
+                    "target:trait:fiend",
+                    "target:trait:fey",
+                    "target:trait:monitor",
+                    "target:trait:spirit"
+                  ]
+                }
+              ],
+              "selector": [
+                "skill-check"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "champion",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +505,44 @@
       "name": "Scout's Warning",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Tpcq3Lk7qEOZ3LDP",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scout's Warning",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are about to roll a Perception, Stealth, or Survival check for initiative.</p><hr /><p>You visually or audibly warn your allies of danger, granting them each a +1 circumstance bonus to their initiative rolls, or a +2 circumstance bonus if you're using the @UUID[Compendium.pf2e.actionspf2e.Item.Scout] exploration activity. Depending on whether you use gestures or call out, this action gains either the visual or the auditory trait, respectively.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Scout's Warning]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -88,6 +552,45 @@
       "name": "Swipe",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JbrVcOf82oFXk3mY",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swipe",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a wide, arcing swing. Make a single melee Strike and compare the attack roll result to the ACs of up to two enemies, each of whom must be within your melee reach and adjacent to the other. Roll damage only once and apply it to each creature you hit. A Swipe counts as two attacks for your multiple attack penalty.</p>\n<p>If you're using a weapon with the sweep trait, its modifier applies to all your Swipe attacks.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -97,6 +600,73 @@
       "name": "Twin Parry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Y8LHfkzGyOhPlUou",
+        "folder": "VbOcCDHxrwwWbIzz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twin Parry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding two melee weapons, one in each hand.</p><hr /><p>You use your two weapons to parry attacks. You gain a +1 circumstance bonus to AC until the start of your next turn, or a +2 circumstance bonus if either weapon has the parry trait. You lose this circumstance bonus if you no longer meet this feat's requirement.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "or": [
+                    {
+                      "gte": [
+                        "hands-free",
+                        1
+                      ]
+                    },
+                    "parry-bonus-upgrade:yes"
+                  ]
+                }
+              ],
+              "selector": "ac",
+              "slug": "parry-bonus",
+              "value": 2
+            },
+            {
+              "key": "RollOption",
+              "option": "weapon-parry"
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Parry",
+            "uuid": "Compendium.pf2e.equipment-effects.Item.Effect: Parry"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

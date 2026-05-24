@@ -7,6 +7,52 @@
       "name": "Army of One",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0UhZ3UtSXx9qyoiZ",
+        "folder": "zuiUcpN5o6pf4AJw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Army of One",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your nimbus is active.</p><hr /><p>Even alone, you're a force to be reckoned with—an army of one, so long as you have your celestial armaments. Spend 1 Mythic Point. If you're not currently wielding your celestial armament, it immediately teleports into your hand. With a gesture and a whispered prayer, you launch your celestial armament into the air, where it flies with a mind of its own, attacking every enemy within your nimbus. Make a Strike with that weapon against each enemy in the bright light of your nimbus. Each attack counts toward your multiple attack penalty, but your penalty doesn't increase until you have made all your attacks. After these attacks are complete, your weapon returns to your hand.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              },
+              {
+                "value": "Celestial Armaments"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "flourish",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +62,72 @@
       "name": "Eyes Unclouded",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UHCWlIUcI3Sy9oaS",
+        "folder": "zuiUcpN5o6pf4AJw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eyes Unclouded",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your senses are enhanced by your divine spark, enabling you to see things as they truly are, piercing through illusions, transformations, and lies. You're affected by a constant @UUID[Compendium.pf2e.spells-srd.Item.Truesight] spell. Additionally, you gain a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] and to Perception DCs against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Lie] to you. When a creature attempts to Lie to you, they roll the Deception check to Lie twice and use the worse result; this is a misfortune effect.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:lie",
+                    "action:sense-motive"
+                  ]
+                }
+              ],
+              "selector": [
+                "perception"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "truesight": {
+                "acuity": "imprecise",
+                "range": 60
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +137,159 @@
       "name": "Scouring Spark",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "v9HgQBsBiVmU5wAA",
+        "folder": "zuiUcpN5o6pf4AJw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scouring Spark",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you unleash your divine spark, you become a being of living light that scours away the darkness. While @UUID[Compendium.pf2e.feats-srd.Item.Channel Divine Spark]{Channeling your Divine Spark}, you become immune to the @UUID[Compendium.pf2e.conditionitems.Item.Confused] and @UUID[Compendium.pf2e.conditionitems.Item.Frightened] conditions. Any creature that touches you or damages you with an unarmed melee attack or a non-reach melee weapon takes @Damage[3d6[fire]] damage, your unarmed attacks deal 1d6 additional fire damage, and your fire spells deal one additional die of fire damage (of the same damage die the spell uses). This damage is doubled against creatures with the aberration, fiend, or undead trait.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              },
+              {
+                "value": "Channel Divine Spark"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "damageType": "fire",
+              "diceNumber": 1,
+              "dieSize": "d6",
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "self:effect:channel-divine-spark"
+              ],
+              "selector": "unarmed-damage"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:fire"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "spell-damage"
+              ],
+              "value": 1
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "dice:slug:scouring-spark",
+                {
+                  "or": [
+                    "target:trait:aberration",
+                    "target:trait:fiend",
+                    "target:trait:undead"
+                  ]
+                }
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "unarmed-damage"
+              ],
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "self:effect:channel-divine-spark",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "action:strike",
+                        {
+                          "or": [
+                            "target:trait:aberration",
+                            "target:trait:fiend",
+                            "target:trait:undead"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "and": [
+                        "item:type:spell",
+                        "item:trait:fire"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": [
+                "unarmed-damage",
+                "spell-damage"
+              ],
+              "text": "PF2E.SpecificRule.AscendedCelestial.ScouringSpark.DoubleDamageNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "self:effect:channel-divine-spark",
+                {
+                  "not": "item:trait:reach"
+                },
+                "item:melee"
+              ],
+              "selector": "damage-received",
+              "text": "PF2E.SpecificRule.AscendedCelestial.ScouringSpark.DamageReceivedNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "self:effect:channel-divine-spark",
+                {
+                  "not": "item:trait:reach"
+                },
+                "item:melee",
+                {
+                  "or": [
+                    "origin:trait:aberration",
+                    "origin:trait:fiend",
+                    "origin:trait:undead"
+                  ]
+                }
+              ],
+              "selector": "damage-received",
+              "text": "PF2E.SpecificRule.AscendedCelestial.ScouringSpark.DoubleDamageNote"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +299,48 @@
       "name": "Shining Glory",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tKC06HYkt1XaWk78",
+        "folder": "zuiUcpN5o6pf4AJw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shining Glory",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your nimbus is active.</p><hr /><p>With a righteous word, your divine aura inspires your allies to great heroics and causes foes to tremble. Spend 1 Mythic Point. All allies in the bright light of your nimbus gain a +3 status bonus to attack rolls and skill checks, and the status bonus they receive to saving throws against fear increases to +3. These bonuses last for 1 minute or as long as they remain in the bright light of your nimbus, whichever comes first.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Shining Glory]</p>\n<p>Each enemy in the bright light of your nimbus attempts a @Check[will|against:class-spell] saving throw against your class DC or spell DC (whichever is higher) with the following effects. For the next minute, an enemy can't reduce its frightened condition below 1 while it remains in the bright light of your nimbus.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}, but can immediately Step as long it moves away from you.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} and you are @UUID[Compendium.pf2e.conditionitems.Item.Concealed] to that creature while it has the frightened condition.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3} and you are @UUID[Compendium.pf2e.conditionitems.Item.Hidden] to that creature while it has the frightened condition.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

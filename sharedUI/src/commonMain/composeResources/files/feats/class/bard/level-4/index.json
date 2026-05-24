@@ -7,6 +7,44 @@
       "name": "Combat Reading",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kqW6d3Dfk4nApd7y",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Combat Reading",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You use a performer's cold reading techniques, aura reading, and other tricks to discover your foe's strengths and weaknesses. The GM rolls a secret @Check[occultism] check for you against the Deception or Stealth DC (whichever is higher) of an enemy of your choice who is not @UUID[Compendium.pf2e.conditionitems.Item.Concealed] from you, @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from you, or @UUID[Compendium.pf2e.conditionitems.Item.Undetected] by you, and who is engaged in combat. The GM might apply a penalty for the distance between you and the enemy. The enemy is then temporarily immune to your Combat Reading for 1 day.</p><hr /><p><strong>Critical Success</strong> The GM chooses and tells you two of the following pieces of information about the enemy: which of the enemy's weaknesses is highest, which of the enemy's saving throws has the lowest modifier, one immunity the enemy has, or which of the enemy's resistances is highest. In the event of a tie, the GM should pick one at random.</p>\n<p><strong>Success</strong> The GM chooses one piece of information from the above list to tell you about the enemy.</p>\n<p><strong>Critical Failure</strong> The GM gives you false information (the GM makes up the information).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "secret"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +54,80 @@
       "name": "Courageous Advance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sv3ywEHaab9oZ3Nj",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Courageous Advance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a rousing call, you exhort an ally to advance. If your next action is to cast the @UUID[Compendium.pf2e.spells-srd.Item.Courageous Anthem] composition cantrip, one ally of your choice who gains a status bonus from the spell can immediately use their reaction to Stride.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "warrior muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:courageous-anthem",
+                "spellshape:courageous-advance"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.CourageousAdvance"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "courageous-advance"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "bard",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +137,78 @@
       "name": "In Tune",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6FCWkhOo9NqfLKqV",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "In Tune",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You attune your great skill in performing to another, granting them a small measure of your skill as though anyone could do it. If your next action is casting a composition spell with an emanation area, its area spreads from a willing ally of your choice within 60 feet instead of you.</p>\n<p>If you have @UUID[Compendium.pf2e.feats-srd.Item.Directed Audience], you can have that cone originate from the ally instead.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "maestro muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:in-tune"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.InTune"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "in-tune"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +218,87 @@
       "name": "Melodious Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kh4bTBgi3C9CjwHK",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Melodious Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You subtly weave your spellcasting into a performance. If the next action you use is to Cast a Spell, the spell gains the subtle trait, hiding the shining runes, sparks of magic, and other manifestations that would usually give away your spellcasting. The trait hides only the spell's spellcasting actions and manifestations, not its effects, so an observer might still see a ray streak out from you or see you vanish into thin air.</p>\n<p>As part of using Melodious Spell, you can choose to @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion], @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize], @UUID[Compendium.pf2e.actionspf2e.Item.Perform], or @UUID[Compendium.pf2e.actionspf2e.Item.Request]. If you do so, the spell you cast must have the auditory, emotion, sonic, or visual trait to gain the subtle trait.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:melodious-spell"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.MelodiousSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "melodious-spell"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:melodious-spell"
+              ],
+              "property": "traits",
+              "value": [
+                "subtle"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "concentrate",
+              "manipulate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +308,43 @@
       "name": "Rallying Anthem",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sahJHnojXO9eEXVE",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rallying Anthem",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn the @UUID[Compendium.pf2e.spells-srd.Item.Rallying Anthem] composition cantrip, which protects you and allies.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +354,66 @@
       "name": "Ritual Researcher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DUuCOQ9FiZf7vS5b",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ritual Researcher",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Careful research into the art of rituals has made you better at performing them. You gain a +2 circumstance bonus to all primary and secondary checks you attempt as part of casting a ritual.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "enigma muse"
+              },
+              {
+                "value": "expert in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "ritual",
+                {
+                  "or": [
+                    "primary-check",
+                    "secondary-check"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +423,43 @@
       "name": "Triple Time",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "B0T6p3kcrOfSvLqQ",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Triple Time",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn the @UUID[Compendium.pf2e.spells-srd.Item.Triple Time] composition cantrip, which speeds up you and your allies for a round.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +469,47 @@
       "name": "Versatile Signature",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "toFhkS9QbObxg6cp",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Versatile Signature",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While most bards are known for certain signature performances and spells, you're always tweaking your available repertoire. When you make your daily preparations, you can change one of your signature spells to a different spell of that rank from your repertoire.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "polymath muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +519,51 @@
       "name": "Zoophonic Composition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bVPsAMxvUsSPHC1D",
+        "folder": "8NP5rgqAkIYrv0kp",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Zoophonic Composition",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your most recent action was to cast a composition spell.</p>\n<hr />\n<p>When the inspiration strikes, you can weave messages for animals into your compositions. You Sustain a summon animal spell or @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal].</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "zoophonia muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

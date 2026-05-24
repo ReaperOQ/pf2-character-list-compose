@@ -7,6 +7,60 @@
       "name": "Merfolk Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CLSRqsf3BDhLfku6",
+        "folder": "tBtd62U0tvrKnnsh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Merfolk Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You paid close attention to your lessons in school. You gain the trained proficiency rank in Arcana and Society. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] feat for Merfolk Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +70,98 @@
       "name": "Merfolk Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nmmN8AXhIGSj4GGL",
+        "folder": "tBtd62U0tvrKnnsh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Merfolk Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were taught the most effective weapons of the sea. You gain access to all uncommon weapons with the merfolk trait. You have familiarity with crossbows, heavy crossbows, longspears, spears, and tridents—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:merfolk",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:crossbow",
+                    "item:base:heavy-crossbow",
+                    "item:base:longspear",
+                    "item:base:spear",
+                    "item:base:trident"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialMerfolkWeapons",
+              "sameAs": "simple",
+              "slug": "martial-dwarf-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:merfolk",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedMerfolkWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-merfolk-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:merfolk",
+                    "item:base:crossbow",
+                    "item:base:heavy-crossbow",
+                    "item:base:longspear",
+                    "item:base:spear",
+                    "item:base:trident"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +171,67 @@
       "name": "Ocean's Bite",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vLFA0hxCCwINsDL9",
+        "folder": "tBtd62U0tvrKnnsh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ocean's Bite",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your jaws open wider than a humanoid mouth should, showing off multiple rows of serrated shark teeth or a viperfish-like nest of needles. You gain a jaws unarmed attack that deals 1d8 piercing damage. Your jaws are in the brawling group.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "abyssal or carcharodon merfolk heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "baseType": "jaws",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "slug": "jaws",
+              "traits": [
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +241,57 @@
       "name": "Seasong",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dwleUePjjZAFRxRg",
+        "folder": "tBtd62U0tvrKnnsh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seasong",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Sound carries far beneath the waves, and your people have strong, enchanting voices. You become trained in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice. In addition, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Virtuosic Performer] skill feat for singing, and your voice carries equally well above and below water.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "preselectChoices": {
+                "performanceType": "singing"
+              },
+              "uuid": "Compendium.pf2e.feats-srd.Item.Virtuosic Performer"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +301,43 @@
       "name": "Swimmer's Guidance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uHuKvex8wUrGKdCj",
+        "folder": "tBtd62U0tvrKnnsh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swimmer's Guidance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're always ready to help those floundering in the water. Any ally who starts their turn within 30 feet of you and in the same body of water gains a 10-foot swim Speed until the end of their turn. If any ally affected by Swimmer's Guidance rolls a critical failure on an Athletics check to Swim, they get a failure instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +347,43 @@
       "name": "Wave Speaker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JBOYcMSa7PoKLaar",
+        "folder": "tBtd62U0tvrKnnsh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wave Speaker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Being part fish yourself, you can speak the language of the sea. You can ask questions of, receive answers from, and use the Diplomacy skill with animals that have the amphibious trait, aquatic trait, or a swim Speed, such as fish, crabs, and some seabirds (like penguins). The GM determines which animals count for this ability.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

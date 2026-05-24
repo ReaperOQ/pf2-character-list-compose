@@ -1,0 +1,312 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "cataphract-fleshwarp.json",
+      "id": "PQuJEYI0UFl8W7fH",
+      "name": "Cataphract Fleshwarp",
+      "img": "icons/commodities/biological/shell-tan.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "PQuJEYI0UFl8W7fH",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/commodities/biological/shell-tan.webp",
+        "name": "Cataphract Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>Your battle-hardened skeleton is laced with additional cartilage and muscle to help bear armor across vast areas of operation, and your skin is bedecked with tiny spurs of pliable, resilient keratin to optimize the grip and weight distribution of your armor. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Armor Proficiency] feat.</p>\n<p>If your class makes you trained in all types of armor, you instead become trained in Athletics (or a skill of your choice if you're already trained in Athletics) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Armor Assist] skill feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Armor Proficiency"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "created-fleshwarp.json",
+      "id": "iY2CCqoMc2bRdoas",
+      "name": "Created Fleshwarp",
+      "img": "icons/magic/control/encase-creature-monster-hold.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "iY2CCqoMc2bRdoas",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/magic/control/encase-creature-monster-hold.webp",
+        "name": "Created Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>You were created through occult or alchemical processes, such as being grown in a vat or stitched together from the body parts of other creatures by a scientist in Ustalav. Your manufactured body is durable; you don't need to eat and can't starve. You gain a +2 circumstance bonus to saving throws against diseases.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.VsDiseases",
+              "predicate": [
+                "disease"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "discarded-fleshwarp.json",
+      "id": "OtqOC3ElpF444qMe",
+      "name": "Discarded Fleshwarp",
+      "img": "icons/creatures/slimes/slime-face-skull-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "OtqOC3ElpF444qMe",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/creatures/slimes/slime-face-skull-green.webp",
+        "name": "Discarded Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>The biomancers and mutagenists who warped your form labeled you a \"discard on discovery\"—a euphemism for destroying you on sight. An anomaly among anomalies, your body stubbornly repudiates the efforts of fleshcrafters seeking to mold you to their grandiose visions, and your immune responses blunt the worst effects of unwanted fleshwarping attempts. If you roll a success on a saving throw against a transmutation effect, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "outcome": [
+                "success"
+              ],
+              "predicate": [
+                "item:trait:transmutation"
+              ],
+              "selector": "saving-throw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "mutated-fleshwarp.json",
+      "id": "CCwTBSNTw0caN1jd",
+      "name": "Mutated Fleshwarp",
+      "img": "icons/creatures/tentacles/tentacle-eyes-yellow-pink.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "CCwTBSNTw0caN1jd",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/creatures/tentacles/tentacle-eyes-yellow-pink.webp",
+        "name": "Mutated Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>Transformed by uncontrolled magic, you originated in a the Mana Wastes or another region similarly devastated by uncontrolled magic. Due to your toughened or redundant organs, the DC for your checks to recover from persistent bleed damage is 10 instead of 15, and it's reduced to @Check[flat|dc:5] instead of 10 if you have particularly effective assistance recovering from the persistent damage.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "item:damage:type:bleed"
+              ],
+              "property": "pd-recovery-dc",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shapewrought-fleshwarp.json",
+      "id": "uxtcKTkD62SmrUoh",
+      "name": "Shapewrought Fleshwarp",
+      "img": "icons/commodities/biological/organ-heart-black.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "uxtcKTkD62SmrUoh",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/commodities/biological/organ-heart-black.webp",
+        "name": "Shapewrought Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>A victim of fleshwarping, you likely bear loose flesh, bony spurs, or features of inhuman creatures sprouting from your skin. You have nevertheless turned the psychic toll of your transformation into a strength. You gain resistance to mental damage equal to half your level (minimum 1).</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "mental",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "surgewise-fleshwarp.json",
+      "id": "hzW7VoRDYsKJB8ku",
+      "name": "Surgewise Fleshwarp",
+      "img": "icons/creatures/magical/spirit-poison-smoke-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "hzW7VoRDYsKJB8ku",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/creatures/magical/spirit-poison-smoke-green.webp",
+        "name": "Surgewise Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>The undulations of your body's cilia are hyper-attuned to wellsprings of magic; they trill and thrum with insights into occult energies, and their vibrations alert you to the presence of secrets. You gain the trained proficiency rank in Occultism. If you're trained in Occultism, you instead become trained in another skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Oddity Identification] skill feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.occultism.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Oddity Identification"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "technological-fleshwarp.json",
+      "id": "n2DKA0OQQcfvZRly",
+      "name": "Technological Fleshwarp",
+      "img": "icons/environment/creatures/golem-stone-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "n2DKA0OQQcfvZRly",
+        "folder": "QQZUt7HueTnGqQlB",
+        "img": "icons/environment/creatures/golem-stone-purple.webp",
+        "name": "Technological Fleshwarp",
+        "system": {
+          "ancestry": {
+            "name": "Fleshwarp",
+            "slug": "fleshwarp",
+            "uuid": "Compendium.pf2e.ancestries.Item.FXlXmNBFiiz9oasi"
+          },
+          "description": {
+            "value": "<p>Your transformation is due to manipulation by advanced technology, like that found in Numeria. Your emotions are dulled and hard to influence. When you roll a success on a saving throw against an emotion effect, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:emotion"
+              ],
+              "selector": "saving-throw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

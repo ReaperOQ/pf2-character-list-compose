@@ -7,6 +7,49 @@
       "name": "Awesome Blow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rCnaBbk0M1gBVHjG",
+        "folder": "sX0BQMahmUY6dFQk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Awesome Blow",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attacks are so powerful, they can flatten your opponents. When you use @UUID[Compendium.pf2e.feats-srd.Item.Knockback], you can attempt an @Check[athletics|against:fortitude] check against your target's Fortitude DC.</p><hr /><p><strong>Critical Success</strong> You gain the critical success effect of a @UUID[Compendium.pf2e.actionspf2e.Item.Shove], then the critical success effect of a @UUID[Compendium.pf2e.actionspf2e.Item.Trip] against the target.</p>\n<p><strong>Success</strong> You gain the success effect of a Shove, then the success effect of a Trip against the target.</p>\n<p><strong>Failure</strong> You gain the normal effect of Knockback.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Knockback"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +59,53 @@
       "name": "Giant's Lunge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MFqFvuiYDAoADcft",
+        "folder": "sX0BQMahmUY6dFQk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Giant's Lunge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You extend your body and prepare to attack foes outside your normal reach. Until your rage ends, all your melee weapons and unarmed attacks gain a reach of 10 feet. This doesn't increase the reach of any weapon or unarmed attack that already has the reach trait, but it does combine with abilities that increase your reach due to increased size, such as Giant's Stature.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "giant instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Giant's Lunge",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Giant's Lunge"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +115,44 @@
       "name": "Impaling Thrust",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "guSjEQS3WuXJqQxf",
+        "folder": "sX0BQMahmUY6dFQk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impaling Thrust",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a melee weapon that deals piercing damage.</p><hr /><p>You impale your enemy and hold it in place with your weapon, and leave it bleeding when it gets free. Make a melee Strike with a melee weapon that deals piercing damage. If the Strike hits and deals damage, your target is @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] until it successfully Escapes, you attack with the weapon again, or you Release the required weapon, whichever comes first. When the target is no longer grabbed, it takes persistent bleed damage equal to the weapon's number of weapon damage dice.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +162,52 @@
       "name": "Meditate on This!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Q9tL7cRTpPD04iPa",
+        "folder": "sX0BQMahmUY6dFQk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Meditate on This!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>You meditate to alter your qi, coloring it with your resentment and anger. Until the start of your next turn, whenever you hit a creature with an unarmed Strike, or an adjacent creature deals piercing, slashing, or bleed damage to you, the creature that you hit or that damaged you must attempt a @Check[will|against:barbarian|options:inflicts:fleeing,inflicts:frightened] save against your class DC. The creature is then temporarily immune for 1 minute.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] until the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Medicine or Tian Xia Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "emotion",
+              "incapacitation",
+              "mental",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +217,47 @@
       "name": "Sunder Enchantment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RpXWOgLWQLGdx74I",
+        "folder": "sX0BQMahmUY6dFQk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sunder Enchantment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can focus your superstition to break the magic of an item, in addition to destroying freestanding spells and those active on creatures. When you @UUID[Compendium.pf2e.feats-srd.Item.Sunder Spell]{Sunder a Spell}, you can instead attempt to counteract either an unattended magic item or one of your target's magic items. If your counteract attempt succeeds, the item becomes a mundane item of its type for 10 minutes. If you target an artifact, an intelligent item, or a similarly particularly powerful item, your counteract attempt automatically fails.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sunder Spell"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -52,6 +267,48 @@
       "name": "Vengeful Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0kkiE74cyHyxdPe6",
+        "folder": "sX0BQMahmUY6dFQk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vengeful Strike",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature within your reach succeeds at an attack against you.</p>\n<p><strong>Requirements</strong> You're under the effect of @UUID[Compendium.pf2e.feats-srd.Item.Come and Get Me].</p><hr /><p>When struck by an enemy, you respond in turn. Make a melee Strike against the triggering creature. If the triggering attack was a critical success, you can use Vengeful Strike as a free action instead of a reaction.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Come and Get Me"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

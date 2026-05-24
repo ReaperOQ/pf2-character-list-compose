@@ -7,6 +7,52 @@
       "name": "Eye for Weakness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yEf1fHurgE7dMRcT",
+        "folder": "wzHTzcSBw5LhNIx6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eye for Weakness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about a creature you can see, you automatically learn if it has a weakness to holy or unholy in addition to any other results. If you critically succeed at the check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge], that creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you until the end of your turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sister of the Golden Erinys Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +62,57 @@
       "name": "Golden Erinys Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BE5YNJooh0jfVVfM",
+        "folder": "wzHTzcSBw5LhNIx6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Golden Erinys Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whether you're a keen student of vengeance or you picked up techniques after being a common target for the sisters' punishment, you've learned to dig painfully into your opponent's flesh. In this stance, you can make fury's fang unarmed attacks. These deal 1d6 piercing damage; are in the brawling group; and have the agile, backstabber, finesse, forceful, nonlethal, and unarmed traits.</p>\n<p>While in the stance, if you critically hit with a melee Strike that deals piercing damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} (with a DC to remove equal to your class DC); this is in addition to any critical specialization effect you might gain from the attack.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sister of the Golden Erinys Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Golden Erinys Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Golden Erinys Stance"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

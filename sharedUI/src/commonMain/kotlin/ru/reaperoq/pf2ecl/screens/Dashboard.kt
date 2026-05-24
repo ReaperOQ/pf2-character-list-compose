@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import ru.reaperoq.pf2ecl.data.CharacterBuilderViewModel
 import ru.reaperoq.pf2ecl.data.CharacterState
+import ru.reaperoq.pf2ecl.data.Translations
 import org.jetbrains.compose.resources.painterResource
 import pathfinder_2e_character_list.sharedui.generated.resources.Res
 import pathfinder_2e_character_list.sharedui.generated.resources.allDrawableResources
@@ -163,12 +164,13 @@ fun CharacterCard(
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
+            val ancestryKey = character.ancestry?.name?.let { Translations.getAncestryDrawableKey(it) } ?: ""
             val classKey = character.classData?.name?.lowercase() ?: ""
-            val resourceId = Res.allDrawableResources["class_$classKey"]
+            val resourceId = Res.allDrawableResources[ancestryKey] ?: Res.allDrawableResources["class_$classKey"]
             if (resourceId != null) {
                 Image(
                     painter = painterResource(resourceId),
-                    contentDescription = classLabel,
+                    contentDescription = character.name,
                     modifier = Modifier.size(56.dp)
                 )
             } else {
@@ -197,7 +199,7 @@ fun CharacterCard(
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "$ancestryLabel • $classLabel",
+                    text = "Ур. ${character.level} · $ancestryLabel · $classLabel",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,

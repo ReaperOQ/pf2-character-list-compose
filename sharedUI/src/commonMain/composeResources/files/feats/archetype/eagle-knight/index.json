@@ -7,6 +7,74 @@
       "name": "Aura of Confidence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RXs4YB6Kie4MbgDs",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aura of Confidence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your will and your faith in your nation is unassailable, and the feeling is contagious. You gain resistance to mental damage equal to half your level. You and all allies within 15 feet gain a +2 status bonus to saving throws against mental effects.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "mental",
+              "value": "floor(@actor.level/2)"
+            },
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Aura of Confidence"
+                }
+              ],
+              "key": "Aura",
+              "radius": 15,
+              "traits": [
+                "emotion",
+                "mental"
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +84,57 @@
       "name": "Bolster Ally",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "f0reqV8eqnCycDWk",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bolster Ally",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> One of your allies within 30 feet is targeted by a spell or ability that allows a saving throw.</p><hr /><p>You shout encouragement to your embattled ally. The ally can use your saving throw modifier instead of their own against the triggering spell.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +144,58 @@
       "name": "Commitment to Equality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TMwqXqqggiblvEGZ",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Commitment to Equality",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You help an ally shake off any impediment that would give an enemy an unfair advantage. You rally a creature within 30 feet in an attempt to reduce its @UUID[Compendium.pf2e.conditionitems.Item.Frightened] or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied] condition. If a creature has multiple conditions from this list, choose one. When you're a master in Diplomacy, add @UUID[Compendium.pf2e.conditionitems.Item.Clumsy] and @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled] to the list of conditions. When you're legendary in Diplomacy, add @UUID[Compendium.pf2e.conditionitems.Item.Stunned] to the list of conditions; if the stunned condition has a duration instead of a value, you can't use Commitment to Equality to reduce it.</p>\n<p>Attempt a @Check[diplomacy] check against the saving throw DC of the effect that caused the condition; if there was no saving throw DC, use the hard DC for the level of the creature, hazard, or item that caused the effect. You can't treat a condition that came from an artifact or effect above 20th level unless you're legendary in Diplomacy; even if you can, the counteract DC increases by 10. You can't treat a condition that is part of a curse or disease or is a natural state of the target. Once you attempt to treat a target's condition, that target is immune to further attempts for 1 hour, regardless of the result.</p><hr /><p><strong>Critical Success</strong> Reduce the condition's value by 2.</p>\n<p><strong>Success</strong> Reduce the condition's value by 1.</p>\n<p><strong>Critical Failure</strong> Increase the condition's value by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              },
+              {
+                "value": "expert in Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "mental",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -34,6 +205,68 @@
       "name": "Commitment to Justice",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OMiIO6BzaXZTKjTt",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Commitment to Justice",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You witnessed a creature kill or reduce an ally to 0 Hit Points since your last turn.</p><hr /><p>When your allies are harmed, you deliver retribution. Make a Strike against the required creature. If this Strike hits, you gain a circumstance bonus to damage equal to three times the number of weapon damage dice.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "commitment-to-justice",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "commitment-to-justice"
+              ],
+              "selector": "strike-damage",
+              "type": "circumstance",
+              "value": "3*@weapon.system.damage.dice"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +276,53 @@
       "name": "Commitment to Liberty",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "97twoPOGsPa7pnWu",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Commitment to Liberty",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> A creature has an ally @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You can't abide when a foe has one of your allies in its grip. Make a Strike against the required creature. If this Strike hits, the grabbed or restrained ally can immediately attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] as a free action. If the Strike was a critical hit, that ally gains a +2 circumstance bonus to their Escape attempt.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +332,78 @@
       "name": "Eagle Knight Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2shqQYK6l3RUEqiQ",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eagle Knight Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're invited by a current member of the Eagle Knights or the People's Council.</p><hr /><p>Eagle Knights are the marshals and envoys of Andoran and are committed to keeping the peace. On the first round of combat, if you roll Diplomacy for initiative, creatures that haven't acted are @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat for Politics Lore. If you were already trained in Politics Lore, you also become trained in a Lore skill of your choice. You can use Politics Lore to [[/act make-an-impression skill=politics-lore]] on or make a [[/act request skill=politics-lore]] of government officials (or similar figures) or to [[/act gather-information skill=politics-lore]] about them. If you critically succeed at a check to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] with Politics Lore, you know the information without having to spend any time gathering it.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.gVipISIgPjNbOUhk]{Eagle Knight}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Diplomacy and Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "encounter:round:1",
+                {
+                  "lt": [
+                    "self:participant:initiative:rank",
+                    "target:participant:initiative:rank"
+                  ]
+                },
+                "self:participant:initiative:stat:diplomacy"
+              ],
+              "selectors": [
+                "strike-attack-roll",
+                "spell-attack-roll",
+                "strike-damage",
+                "attack-spell-damage"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +413,57 @@
       "name": "Even the Odds (Eagle Knight)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ccLpjnWjl62Ehegc",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Even the Odds (Eagle Knight)",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Even when overpowered, Eagle Knights hold out hope. If your next action is to use @UUID[Compendium.pf2e.feats-srd.Item.Commitment to Equality], you roll the Diplomacy check twice and take the higher result. If you succeed, the target also gains 25 temporary Hit Points that last for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Even the Odds (Eagle Knight)]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Commitment to Equality"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +473,70 @@
       "name": "Immediate Rebuke",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i5mNsZjIXfLAaoP8",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Immediate Rebuke",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can use @UUID[Compendium.pf2e.actionspf2e.Item.Reactive Strike] when a creature within your reach Strikes one of your allies.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Commitment to Justice"
+              },
+              {
+                "value": "Reactive Strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:reactive-strike"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -79,6 +546,53 @@
       "name": "Interpose",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wnV0H8GB0FlpdCGo",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Interpose",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You put yourself between an ally and danger. Stride up to your Speed. You must end your movement adjacent to an ally. You and your ally then swap positions with each other. After changing positions, you can make a melee Strike against an enemy within your reach.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -88,6 +602,54 @@
       "name": "Stir Allies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lMIh84yjIA7f7xG8",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stir Allies",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You shout a command for your allies to scramble. Allies within 30 feet can use a reaction to Step. If you're legendary in Diplomacy, they can instead Stride.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -97,6 +659,59 @@
       "name": "Talmandor's Shout",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j305O6rhKvx4sT38",
+        "folder": "GwVL9jInifkR7Euo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Talmandor's Shout",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You witnessed a creature deal damage to an ally within 30 feet since your last turn.</p><hr /><p>After seeing an enemy harm one of your allies, you deliver a righteous shout in the name of the celestial Talmandor. Attempt an Intimidation check to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize], comparing the result to the Will DC of each enemy within a @Template[type:emanation|distance:60]; this Demoralize attempt doesn't take any penalty for not sharing a language. It's possible to get a different degree of success for each target.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eagle Knight Dedication"
+              },
+              {
+                "value": "master in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

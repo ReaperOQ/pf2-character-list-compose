@@ -7,6 +7,55 @@
       "name": "Advanced Kata",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TYP0Ee4o3p9LDodd",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Kata",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one monk feat. For the purpose of meeting its prerequisites, your monk level is equal to half your character level.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another monk feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Kata"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +65,77 @@
       "name": "Basic Kata",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BridkNEysTuSOOLM",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Kata",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level monk feat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monk Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:monk",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicKata",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicKata}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +145,118 @@
       "name": "Monk Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "renUpSO6MJXPSXow",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monk Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become trained in unarmed attacks and gain the @UUID[Compendium.pf2e.classfeatures.Item.Powerful Fist] class feature. You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you become trained in a skill of your choice. You become trained in monk class DC.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.5v7k1XWQxaP0DoGX]{Monk}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Strength +2"
+              },
+              {
+                "value": "Dexterity +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Powerful Fist"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.AbilityStr",
+                  "value": "str"
+                },
+                {
+                  "label": "PF2E.AbilityDex",
+                  "value": "dex"
+                }
+              ],
+              "flag": "attribute",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.ClassDCAbilityScore"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.proficiencies.classDCs.monk.ability",
+              "value": "{item|flags.system.rulesSelections.attribute}"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Acrobatics",
+                  "value": "acrobatics"
+                },
+                {
+                  "label": "PF2E.Skill.Athletics",
+                  "value": "athletics"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "monk": {
+                "attribute": null,
+                "rank": 1
+              },
+              "unarmed": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +266,60 @@
       "name": "Monk Moves",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TGFbFyv0AUi5gAGO",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monk Moves",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a +10-foot status bonus to your Speed when you're not wearing armor.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monk Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "type": "status",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +329,62 @@
       "name": "Monk Resiliency",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nc5G99d20PI9JKCK",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monk Resiliency",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain 3 additional Hit Points for each monk archetype class feat you have. As you continue selecting monk archetype class feats, you continue to gain additional Hit Points in this way.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monk Dedication"
+              },
+              {
+                "value": "class granting no more Hit Points per level than 8 + your Constitution modifier"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "3*@actor.flags.system.monkDedicationCount"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +394,58 @@
       "name": "Monk's Flurry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bBORql3kKsSyXllk",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monk's Flurry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Flurry of Blows] action. Your fists' power, however, exceeds your conditioning; once you use Flurry of Blows, you can't use it again for [[/r 1d4 #Recharge it]]{1d4 rounds} as your muscles recover.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monk Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Flurry of Blows"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -61,6 +455,76 @@
       "name": "Perfection's Path",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1ZbLYY5m2YALrrgA",
+        "folder": "O4rSejyxkTbAfGZq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Perfection's Path",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Choose one saving throw (Fortitude, Reflex, or Will) in which you are an expert. Your proficiency rank in the chosen saving throw increases to master.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monk Dedication"
+              },
+              {
+                "value": "expert in at least one saving throw"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.monkDedicationCount",
+              "value": 1
+            },
+            {
+              "choices": {
+                "config": "saves",
+                "predicate": [
+                  "save:{choice|value}:rank:2"
+                ]
+              },
+              "flag": "save",
+              "key": "ChoiceSet"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.saves.{item|flags.system.rulesSelections.save}.rank",
+              "value": 3
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {}
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

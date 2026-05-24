@@ -7,6 +7,52 @@
       "name": "Contact With the Enemy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FaNRkgN6q2QTXCmk",
+        "folder": "NGZrhBsPXOvYDKGj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Contact With the Enemy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know that even the best-laid plans rarely survive contact with the enemy, and you have prepared your allies to adapt with a wide array of contingencies. When you use @UUID[Compendium.pf2e.feats-srd.Item.Adaptive Stratagem], you can replace any master tactics or legendary tactics you have prepared with any other tactics in your folio.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Adaptive Stratagem"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +62,57 @@
       "name": "Desperate Resuscitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZO37MZEQVNNtg46b",
+        "folder": "NGZrhBsPXOvYDKGj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Desperate Resuscitation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding a @UUID[Compendium.pf2e.equipment-srd.Item.Healer's Toolkit] or are wearing one and have a free hand; the target's body is mostly intact; the target was not killed by a death effect.</p><hr /><p>You can use your training in combat medicine to revive the recently deceased. Attempt a @Check[medicine|dc:40|showDC:all] check to revive a dead creature that has been dead for no more than 3 rounds. If you succeed, the target returns to life with the effects of @UUID[Compendium.pf2e.spells-srd.Item.Raise Dead], except it still has the wounded condition it had before dying, increased by 1 (or @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 1} if it wasn't wounded before dying). Whether you succeed or fail, the target is temporarily immune to Desperate Resuscitation for 1 day.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Medicine"
+              },
+              {
+                "value": "Officer's Medical Training"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander",
+              "healing",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +122,54 @@
       "name": "Quickening Banner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l0pcURfMUGwnJgeU",
+        "folder": "NGZrhBsPXOvYDKGj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quickening Banner",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>The sight of your banner urges your allies to strike now. Each ally within the aura of your commander's banner is @UUID[Compendium.pf2e.conditionitems.Item.Quickened] for 1 round and can use this extra action to Strike or Stride.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "brandish",
+              "commander",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

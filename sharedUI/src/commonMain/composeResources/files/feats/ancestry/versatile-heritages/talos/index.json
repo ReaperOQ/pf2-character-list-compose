@@ -7,6 +7,43 @@
       "name": "Conductor's Redirection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "q2SlRECDwGBtlMl9",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Conductor's Redirection",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are hit by an attack, spell, or other effect that deals electricity damage.</p>\n<hr />\n<p>You conduct the damage through your body, taking damage as normal (if applicable) and redirecting it at one target within 10 feet that you can see. That target takes an equal amount of damage with a @Check[fortitude|against:class-spell|basic] save against the higher of your class DC or spell DC. The damage they take is based on the triggering damage, not modified by your degree of success, resistances, and so forth.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +53,69 @@
       "name": "Ferrousoul",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "y48ig9zN5ZvPbB9o",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ferrousoul",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Whether in their pure elemental forms or as part of an alloy such as steel, the elemental metal in your soul resonates strongly with iron, bronze, and other sturdy, practical metals suitable for weaponry. Your fist attacks gain the modular B, P, or S trait and lose the nonlethal trait. Your fist's damage die increases to 1d6.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "fist": true,
+              "key": "Strike"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "property": "damage-dice-faces"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "modular"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "property": "traits",
+              "value": "nonlethal"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +125,82 @@
       "name": "Gildedsoul",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VeTrBvxupaS4uo1B",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gildedsoul",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your elemental lineage manifests in the polished gleam of precious metals, such as silver and gold, or even rare and valuable skymetals like adamantine or orichalcum. This natural luster enhances your charm; you become trained in your choice of Diplomacy or Society. If you would automatically become trained in both these skills (from your background or class, for example), you instead become trained in a skill of your choice. If you're trained in Society, you also gain the @UUID[Compendium.pf2e.feats-srd.Item.Courtly Graces] skill feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "value": "system.skills.diplomacy.rank"
+                },
+                {
+                  "label": "PF2E.Skill.Society",
+                  "value": "system.skills.society.rank"
+                }
+              ],
+              "flag": "gildedsoul",
+              "key": "ChoiceSet",
+              "priority": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "{item|flags.system.rulesSelections.gildedsoul}",
+              "priority": 2,
+              "value": 1
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "gte": [
+                    "skill:society:rank",
+                    1
+                  ]
+                }
+              ],
+              "priority": 99,
+              "uuid": "Compendium.pf2e.feats-srd.Item.Courtly Graces"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +210,53 @@
       "name": "Metallic Skin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "syyT2xBA4H72TpOt",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Metallic Skin",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Duration</strong> 1 minute</p>\n<hr />\n<p>You fortify your natural resistances with elemental metal, covering your skin with thick metal. You gain a +2 status bonus to AC and resistance 10 to physical damage (except adamantine), but you take a –10-foot penalty to Speed. If you take fire damage while this ability is active, until the end of your next turn, you deal an additional @Damage[2d6[fire]] damage with all your unarmed melee Strikes.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Metallic Skin",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Metallic Skin"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "primal",
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -43,6 +266,88 @@
       "name": "Natural Magnetism",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "S6ilPkeroXoGgZXm",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Natural Magnetism",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection with elemental iron grants you a natural field of weak magnetic attraction. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Magnetic Attraction] and @UUID[Compendium.pf2e.spells-srd.Item.Magnetic Repulsion] once per day each as 2nd-rank primal innate spells.</p>\n<hr />\n<p><strong>Special</strong> If you chose the gildedsoul lineage, you can replace one of the above spells with @UUID[Compendium.pf2e.spells-srd.Item.Enthrall].</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:magnetic-attraction",
+                    "item:slug:magnetic-repulsion",
+                    {
+                      "and": [
+                        "feat:gildedsoul",
+                        "item:slug:enthrall"
+                      ]
+                    }
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:magnetic-attraction",
+                    "item:slug:magnetic-repulsion",
+                    {
+                      "and": [
+                        "feat:gildedsoul",
+                        "item:slug:enthrall"
+                      ]
+                    }
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:talos"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +357,121 @@
       "name": "Precious Alloys",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2UhnxV2RWMmmgKja",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Precious Alloys",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Choose cold iron or silver. Your melee unarmed attacks have the special properties of a weapon made of that metal. If you are at least 13th level, you can choose adamantine instead of just cold iron or silver.</p>\n<hr />\n<p><strong>Special</strong> You can take this ancestry feat multiple times, choosing a different metal each time.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.PreciousMaterialAdamantine",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        13
+                      ]
+                    },
+                    {
+                      "not": "precious-alloys:adamantine"
+                    }
+                  ],
+                  "value": "adamantine"
+                },
+                {
+                  "label": "PF2E.PreciousMaterialColdIron",
+                  "predicate": [
+                    {
+                      "not": "precious-alloys:cold-iron"
+                    }
+                  ],
+                  "value": "cold-iron"
+                },
+                {
+                  "label": "PF2E.PreciousMaterialSilver",
+                  "predicate": [
+                    {
+                      "not": "precious-alloys:silver"
+                    }
+                  ],
+                  "value": "silver"
+                }
+              ],
+              "flag": "material",
+              "key": "ChoiceSet",
+              "predicate": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        {
+                          "gte": [
+                            "self:level",
+                            13
+                          ]
+                        },
+                        {
+                          "not": "precious-alloys:adamantine"
+                        }
+                      ]
+                    },
+                    {
+                      "nand": [
+                        "precious-alloys:cold-iron",
+                        "precious-alloys:silver"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "rollOption": "precious-alloys"
+            },
+            {
+              "definition": [
+                "item:category:unarmed",
+                "item:melee"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "property": "materials",
+              "selector": "strike-damage",
+              "value": "{item|flags.system.rulesSelections.material}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +481,56 @@
       "name": "Quicksoul",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2piYyNIoMJAZeOOW",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quicksoul",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The elemental metal in your bloodline literally courses through your veins in the form of liquid metals like mercury, rubidium, gallium, and djezet, giving your actions a languid fluidity. You gain the trained proficiency rank in Acrobatics. If you would automatically become trained in Acrobatics (from your background or class, for example), you instead become trained in a skill of your choice. As these metals are largely toxic to organic life, you also gain the Toxic Touch action.</p>\n<p><strong>Toxic Touch</strong> <span class=\"action-glyph\">1</span> (poison)</p>\n<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Your most recent action was to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through], and you successfully moved through an enemy's space</p>\n<hr />\n<p><strong>Effect</strong> Make a melee unarmed Strike against the enemy whose space you moved through. On a hit, the target takes @Damage[1d6[persistent,poison]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} (or takes 2d6 persistent poison and is @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 2} on a critical hit).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day",
+            "value": 1
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.acrobatics.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lineage",
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +540,48 @@
       "name": "Reflective Defense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Bi79QIvSE9JxJGkp",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reflective Defense",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> A creature within 30 feet of you targets you, and you can see the attacker.</p>\n<p><strong>Requirements</strong> You are in dim or bright light.</p>\n<hr />\n<p>Your body's natural luster has been polished to a gleaming shine. You use this to reflect light back into your enemy's eyes, disrupting its aim and focus; it must succeed at a Reflex save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] until the end of your next turn.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "light",
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +591,66 @@
       "name": "Summon Metal Elemental",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j5AFlrvDipO0s7UW",
+        "folder": "rHS9A3MjldAHisqC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Summon Metal Elemental",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can summon an elemental ally. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Summon Elemental] as a 5th-rank primal innate spell, but the elemental summoned must be a metal elemental.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:summon-elemental",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:summon-elemental",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:talos"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "talos"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

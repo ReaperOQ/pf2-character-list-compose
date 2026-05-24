@@ -7,6 +7,64 @@
       "name": "Blood Sovereignty",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WkHZbd79yfn15xod",
+        "folder": "EnD5yeoAsfP0ywPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blood Sovereignty",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You wield blood magic masterfully. When you would benefit from a blood magic effect, you can choose to lose Hit Points equal to twice the spell's rank as the energy of your blood is drawn out. This takes no extra action, and you benefit from two different blood magic effects you know as a result. The two effects can have different targets.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "second-blood-magic",
+                "item:tag:blood-magic-spell"
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.BloodSovereignty.Description"
+                },
+                {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Blood Sovereignty]"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +74,47 @@
       "name": "Bloodline Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zSTPB1FFWMfA1JPi",
+        "folder": "EnD5yeoAsfP0ywPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloodline Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By listening to the beating of your heart, your focus recovers faster. Whenever you Refocus, completely refill your focus pool.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "bloodline spell"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +124,47 @@
       "name": "Greater Physical Evolution",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "O1qdoz5N3G4yvHcH",
+        "folder": "EnD5yeoAsfP0ywPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Physical Evolution",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You change form readily. Once per day, you can use a sorcerer spell slot to cast any common polymorph battle form spell of the spell slot's rank as if it were a signature spell in your repertoire. You can use the extra spell slot from @UUID[Compendium.pf2e.feats-srd.Item.Primal Evolution] instead of a sorcerer spell slot.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Arcane Evolution or Primal Evolution"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +174,53 @@
       "name": "Greater Spiritual Evolution",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gVLICIDQMvWN5D89",
+        "folder": "EnD5yeoAsfP0ywPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Greater Spiritual Evolution",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your magical blood allows your spells to be fully effective against incorporeal creatures. Your spells have the effects of a @UUID[Compendium.pf2e.equipment-srd.Item.Ghost Touch] property rune. They can target or affect a creature projecting its consciousness (such as via @UUID[Compendium.pf2e.spells-srd.Item.Project Image]) or possessing another creature, even if its body is elsewhere, though you must know about the possession or projection and choose to do so. Your spells can affect creatures on the Ethereal Plane, though this doesn't grant you the ability to locate them.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Divine Evolution or Occult Evolution"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "spell-damage",
+              "key": "RollOption",
+              "option": "item:rune:property:ghost-touch"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +230,143 @@
       "name": "Terraforming Trickery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AmKUbCrBUImXNP0Z",
+        "folder": "EnD5yeoAsfP0ywPq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terraforming Trickery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to channel the transformative aspects of your blood magic to alter your surroundings. You know the following blood magic effect.</p>\n<p><strong>Blood Magic—Terraforming Trickery</strong> Either each space adjacent to you becomes difficult terrain, or each space adjacent to you is no longer difficult terrain. This doesn't have any effect on greater difficult terrain and doesn't remove the damaging effects of hazardous terrain.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mergeable": true,
+              "option": "blood-magic",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "terraforming-trickery"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Sorcerer.SecondBloodMagic",
+              "mergeable": true,
+              "option": "second-blood-magic",
+              "placement": "spellcasting",
+              "predicate": [
+                {
+                  "or": [
+                    "feat:blood-ascendancy",
+                    "feat:blood-sovereignty"
+                  ]
+                }
+              ],
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "terraforming-trickery"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mode": "add",
+              "predicate": [
+                "class:sorcerer",
+                "item:tag:blood-magic-spell",
+                {
+                  "or": [
+                    "blood-magic:terraforming-trickery",
+                    {
+                      "and": [
+                        "second-blood-magic:terraforming-trickery",
+                        "feat:blood-sovereignty"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.TerraformingTrickery",
+                  "title": "{item|name}"
+                }
+              ]
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "label": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Title",
+              "mode": "add",
+              "predicate": [
+                "class:sorcerer",
+                "item:slug:blood-rising",
+                {
+                  "or": [
+                    "blood-magic:terraforming-trickery",
+                    {
+                      "and": [
+                        "second-blood-magic:terraforming-trickery",
+                        "feat:blood-ascendancy"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 121,
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.TerraformingTrickery",
+                  "title": "{item|name}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "earth",
+              "sorcerer"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

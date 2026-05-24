@@ -7,6 +7,58 @@
       "name": "Advanced Glory",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cNYfClpqqGDC4j7A",
+        "folder": "fMZErEAbpOHB44Y5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Glory",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain an exemplar feat. For the purpose of meeting its prerequisites, your exemplar level is equal to half your character level.</p><hr /><p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another exemplar feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Glory"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.exemplar.archetypeFeatCount",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {}
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +68,77 @@
       "name": "Basic Glory",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MzlfDSCx4fLJEVS2",
+        "folder": "fMZErEAbpOHB44Y5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Glory",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level exemplar feat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Exemplar Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.exemplar.archetypeFeatCount",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:exemplar",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicGlory",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicGlory}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +148,93 @@
       "name": "Exemplar Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qvWmW5JWpVBDyGqe",
+        "folder": "fMZErEAbpOHB44Y5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exemplar Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A spark of inherent divine power has lit itself within you. You become trained in martial weapons. You gain one ikon, the ability to use the ikon's immanence and transcendence actions and effects, and the @UUID[Compendium.pf2e.actionspf2e.Item.Shift Immanence] action. Because you have only a single ikon, when you Spark Transcendence, your divine spark recedes back to the depths of your soul and must be recalled with Shift Immanence to re-empower your ikon. You become trained in exemplar class DC.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.IBJrhr3Sj6CSIBWo]{Exemplar}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Strength +2 or Dexterity +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.exemplar.archetypeFeatCount",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Divine Spark and Ikons"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.AbilityStr",
+                  "value": "str"
+                },
+                {
+                  "label": "PF2E.AbilityDex",
+                  "value": "dex"
+                }
+              ],
+              "flag": "attribute",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.ClassDCAbilityScore"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.proficiencies.classDCs.exemplar.attribute",
+              "value": "{item|flags.system.rulesSelections.attribute}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "exemplar": {
+                "attribute": null,
+                "rank": 1
+              },
+              "martial": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +244,62 @@
       "name": "Exemplar Expertise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Nkt6q2fxoiCRNKsK",
+        "folder": "fMZErEAbpOHB44Y5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exemplar Expertise",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your soul has been further tempered in divine power. Your proficiency in exemplar class DC increases to expert.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Exemplar Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.exemplar.archetypeFeatCount",
+              "value": 1
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "exemplar": {
+                "attribute": null,
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +309,62 @@
       "name": "Exemplar Resiliency",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "s19qwrEmJRgEsZxn",
+        "folder": "fMZErEAbpOHB44Y5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exemplar Resiliency",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain 3 additional Hit Points for each exemplar archetype class feat you have. As you continue selecting exemplar archetype class feats, you continue to gain additional Hit Points in this way.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Exemplar Dedication"
+              },
+              {
+                "value": "class granting no more Hit Points per level than 8 + your Constitution modifier"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.exemplar.archetypeFeatCount",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "3 * @actor.flags.system.exemplar.archetypeFeatCount"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +374,69 @@
       "name": "Second Ikon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mE1MF5CvZUS1b0lq",
+        "folder": "fMZErEAbpOHB44Y5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Second Ikon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain an additional ikon. When you Spark Transcendence, your spark moves automatically from the ikon you just used to the other ikon.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Exemplar Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.exemplar.archetypeFeatCount",
+              "value": 1
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:exemplar-ikon"
+                ]
+              },
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

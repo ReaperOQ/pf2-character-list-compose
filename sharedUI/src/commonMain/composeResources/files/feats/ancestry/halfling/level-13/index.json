@@ -7,6 +7,47 @@
       "name": "Ceaseless Shadows",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PfHvTR0L9ShjhWiP",
+        "folder": "8or9hUgGJnobQHnP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ceaseless Shadows",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You excel at going unnoticed, especially among a crowd. You no longer need to have cover or be @UUID[Compendium.pf2e.conditionitems.Item.Concealed] to @UUID[Compendium.pf2e.actionspf2e.Item.Hide] or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak]. If you would have lesser cover from a creature, you gain standard cover instead and can @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover]; if you would have standard cover from a creature, you gain greater cover instead.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Distracting Shadows"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +57,64 @@
       "name": "Toppling Dance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l78KwojlT0AWvS4l",
+        "folder": "8or9hUgGJnobQHnP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Toppling Dance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>While sharing a creature's space using Dance Underfoot, your melee weapons and unarmed attacks gain the trip trait, but only against the creature whose space you share. You can be in the same space as a Large or larger @UUID[Compendium.pf2e.conditionitems.Item.Prone] creature, even if it's not your ally.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dance Underfoot"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "toppling-dance",
+              "toggleable": true
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:melee",
+                "toppling-dance"
+              ],
+              "property": "traits",
+              "value": "trip"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "halfling"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

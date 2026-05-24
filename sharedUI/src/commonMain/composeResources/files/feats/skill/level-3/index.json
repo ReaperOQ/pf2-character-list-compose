@@ -7,6 +7,66 @@
       "name": "Aurochs-Headed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nTHhkHfAItjrO9d9",
+        "folder": "cwovNv7sZfbA6yns",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aurochs-Headed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your words and body language can subconsciously unsettle orcs, giving you an advantage when convincing them to see things your way. Many with this feat use it to travel freely between holds, warning all but the toughest orcs to waylay weaker prey. You gain a +1 circumstance bonus to skill checks to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] or @UUID[Compendium.pf2e.actionspf2e.Item.Coerce] creatures with the orc trait. Enemy orcs who can see you at the start of combat take a –1 penalty to initiative rolls.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Diplomacy or Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #207: The Resurrection Flood"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "target:trait:orc",
+                {
+                  "or": [
+                    "action:make-an-impression",
+                    "action:coerce"
+                  ]
+                }
+              ],
+              "selector": [
+                "diplomacy",
+                "intimidation"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "skill"
     },
@@ -16,6 +76,48 @@
       "name": "Folk Dowsing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FbGPETHJR9VKxf9i",
+        "folder": "cwovNv7sZfbA6yns",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Folk Dowsing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can find what you're looking for using a dowsing rod or pendulum. If you @UUID[Compendium.pf2e.actionspf2e.Item.Search] while wielding a dowsing rod or pendulum, in addition to the normal checks for Searching, the GM rolls a secret Survival check for you to detect the largest source of water, oil, or another natural non-bodily fluid in the area. Even if the liquid is @UUID[Compendium.pf2e.conditionitems.Item.Concealed] from you—for example, if it stems from an underground spring or is piped through a wall—this technique points you in the right direction. The GM determines the DC, which is usually the trained simple DC with a hard or very hard adjustment if the source of water is small.</p>\n<p>If you're an expert in Survival, the GM also makes a Survival check for you to detect sizable deposits of metal, minerals, and nearby graves. The DC is usually the expert simple DC, with DC adjustments for smaller deposits.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "skill"
     },
@@ -25,6 +127,58 @@
       "name": "Graft Technician",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9OaF7Lkrtvusg5AA",
+        "folder": "cwovNv7sZfbA6yns",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Graft Technician",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can create and implant grafts. When you select this feat, you gain the formulas for four common grafts of 3rd level or lower. You gain a +1 circumstance bonus to Medicine checks to implant grafts. If you're a master in Medicine, this bonus increases to +2.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:implant-graft"
+              ],
+              "selector": "medicine",
+              "type": "circumstance",
+              "value": "ternary(gte(@actor.system.skills.medicine.rank,3),2,1)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "skill"
     }

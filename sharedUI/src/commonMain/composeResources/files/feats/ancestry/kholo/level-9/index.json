@@ -7,6 +7,43 @@
       "name": "Ambush Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VWGoFBdfvIkG5T4i",
+        "folder": "DAkHZkEnJ0AgLHzo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ambush Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are always searching for the perfect opportunity to ambush your enemies. You can perform the @UUID[Compendium.pf2e.actionspf2e.Item.Scout] exploration activity at the same time as the @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] exploration activity.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +53,99 @@
       "name": "Breath Like Honey",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FZZXgmVMAmvKHWIo",
+        "folder": "DAkHZkEnJ0AgLHzo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Breath Like Honey",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You smell of honey and savory things. Your circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] if the target can smell your breath increases to +2. In addition, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Enthrall] as a 3rd-rank occult innate spell once per day, except the spell has a range of 30 feet and the olfactory trait instead of the auditory trait. Targets don't gain any circumstance bonus for disagreeing with you.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "sweetbreath kholo heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "selector": "diplomacy",
+              "slug": "sweetbreath-kholo",
+              "value": 2
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:enthrall",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:enthrall",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:kholo"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:enthrall",
+                "spellcasting:innate"
+              ],
+              "property": "traits",
+              "value": "olfactory"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "predicate": [
+                "item:slug:enthrall",
+                "spellcasting:innate"
+              ],
+              "property": "traits",
+              "value": "auditory"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +155,66 @@
       "name": "Grandmother's Wisdom",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mU8vTzrWX9fIlG0d",
+        "folder": "DAkHZkEnJ0AgLHzo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grandmother's Wisdom",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You carry the bones of your ancestors with you, and you can ask them for counsel. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Augury] twice per day as a 2nd-rank occult innate spell.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:augury",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:augury",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:kholo"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +224,52 @@
       "name": "Laughing Kholo",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QNgnwkKZmJR5jT7K",
+        "folder": "DAkHZkEnJ0AgLHzo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Laughing Kholo",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your sinister giggle is a sound of warning and threat. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Battle Cry] skill feat. You don't take a penalty when you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a creature that doesn't understand your language.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Battle Cry"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

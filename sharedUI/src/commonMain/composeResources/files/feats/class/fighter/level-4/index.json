@@ -7,6 +7,61 @@
       "name": "Double Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PwcmmJOLY8C9JHau",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Double Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon with reload 0.</p>\n<hr />\n<p>You shoot twice in blindingly fast succession. Make two Strikes, each against a separate target and with a –2 penalty. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both of them.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "ranged-attack-roll",
+              "key": "RollOption",
+              "option": "double-shot",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "double-shot",
+                "item:reload:0"
+              ],
+              "selector": "ranged-attack-roll",
+              "slug": "double-shot",
+              "value": -2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +71,135 @@
       "name": "Dual-Handed Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HHAGiBYVv8nyUEsd",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dual-Handed Assault",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a one-handed melee weapon and have a free hand.</p>\n<hr />\n<p>You snap your free hand over to grip your weapon just long enough to add momentum and deliver a more powerful blow to your opponent. Make a Strike with the required weapon. You quickly switch your grip during the Strike in order to make the attack with two hands. If the weapon doesn't normally have the two-hand trait, increase its weapon damage die by one step for this attack. If the weapon has the two-hand trait, you gain the benefit of that trait and a circumstance bonus to damage equal to the weapon's number of damage dice. When the Strike is complete, you resume gripping the weapon with only one hand. This action doesn't end any stance or fighter feat effect that requires you to have one hand free.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "dual-handed-assault",
+              "toggleable": true
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "upgrade": true
+              },
+              "predicate": [
+                "dual-handed-assault",
+                "item:hands-held:1",
+                {
+                  "nor": [
+                    "two-hand-d6",
+                    "two-hand-d8",
+                    "two-hand-d10",
+                    "two-hand-d12"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "dual-handed-assault",
+                "item:hands-held:1",
+                {
+                  "or": [
+                    "two-hand-d6",
+                    "two-hand-d8",
+                    "two-hand-d10",
+                    "two-hand-d12"
+                  ]
+                }
+              ],
+              "selector": "strike-damage",
+              "type": "circumstance",
+              "value": "@weapon.system.damage.dice"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d6"
+              },
+              "predicate": [
+                "dual-handed-assault",
+                "item:hands-held:1",
+                "item:trait:two-hand-d6"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d8"
+              },
+              "predicate": [
+                "dual-handed-assault",
+                "item:hands-held:1",
+                "item:trait:two-hand-d8"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d10"
+              },
+              "predicate": [
+                "dual-handed-assault",
+                "item:hands-held:1",
+                "item:trait:two-hand-d10"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d12"
+              },
+              "predicate": [
+                "dual-handed-assault",
+                "item:hands-held:1",
+                "item:trait:two-hand-d12"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +209,43 @@
       "name": "Parting Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4PvmSnyp3URIqJUM",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Parting Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a loaded ranged weapon or a ranged weapon with reload 0.</p>\n<hr />\n<p>You jump back and make a quick shot that catches your opponent by surprise. You Step and then make a ranged Strike with the required weapon. Your target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the attack.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +255,47 @@
       "name": "Powerful Shove",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oIE88rIDEFNm83Mr",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Powerful Shove",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can push larger foes around with your attack. You can use @UUID[Compendium.pf2e.feats-srd.Item.Aggressive Block] or @UUID[Compendium.pf2e.feats-srd.Item.Brutish Shove] against a creature up to two sizes larger than you.</p>\n<p>When a creature you Shove or knock back with a shield, polearm, or club's critical specialization effect has to stop moving because it would hit an object, it takes @Damage[@actor.abilities.str.mod]{damage} equal to your Strength modifier (minimum 1).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aggressive Block or Brutish Shove"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +305,45 @@
       "name": "Quick Reversal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SnIx3FhBuuq6AZD0",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Reversal",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are flanked by at least two enemies.</p>\n<hr />\n<p>You turn your foes' flanking against them with a quick reverse. Make a melee Strike against one of the flanking enemies and make a second Strike with the same weapon or unarmed attack against a different enemy that is flanking you. This second Strike has the same multiple attack penalty of the initial attack and doesn't count toward your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +353,43 @@
       "name": "Shielded Stride",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tHqlcgcxHXzqLHPZ",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shielded Stride",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When your shield is up, your enemies' blows can't touch you. When you have your shield raised, you can Stride to move half your Speed without triggering reactions that are triggered by your movement (such as Reactive Strikes). You can use Shielded Stride while Flying or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +399,48 @@
       "name": "Slam Down",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "39CqlOzlHjEhh0E4",
+        "folder": "EfAhkeT2DBo6O7NS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slam Down",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make an attack to knock a foe off balance, then follow up immediately with a sweep to topple them. Make a melee Strike. If it hits and deals damage, you can attempt an Athletics check to [[/act trip]] the creature you hit. If you're wielding a two-handed melee weapon, you can ignore Trip's requirement that you have a hand free. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both of them.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

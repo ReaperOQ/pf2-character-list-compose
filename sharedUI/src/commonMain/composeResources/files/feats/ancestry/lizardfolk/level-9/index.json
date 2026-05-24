@@ -7,6 +7,74 @@
       "name": "Ancestral Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UWOSRX6FH6MZDlEw",
+        "folder": "vhR3q5qq1LHwTypP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ancestral Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Casting your memory back deep into the past, you take the form of an ancestral guardian. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Animal Form] on yourself as a 3rd-rank primal innate spell once per day. You must choose the crocodile form.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "bakuwa lizardfolk heritage or makari lizardfolk heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:animal-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:animal-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +84,43 @@
       "name": "Dangle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AGznaQpn2cE6jz9H",
+        "folder": "vhR3q5qq1LHwTypP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dangle",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can hang by your tail from any suitable anchor point, such as a tree branch, balcony, or rocky outcropping (subject to the GM's discretion), typically while climbing. While hanging, you have free use of all your other limbs, so you can perform tasks that require both hands, such as firing a bow or swinging a greatsword.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +130,55 @@
       "name": "Hone Claws",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GU3EQVOMjD9S2YWj",
+        "folder": "vhR3q5qq1LHwTypP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hone Claws",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You grind or gnaw a particularly wicked edge onto your claws. The next claws Strike you hit and deal damage with deals an additional 1d6 bleed damage. You cannot have more than one instance of Hone Claws active at a time.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Iruxi Armaments (Claws)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Hone Claws",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Hone Claws"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +188,70 @@
       "name": "River Adaptation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ruRhslwl9ReaVcY4",
+        "folder": "vhR3q5qq1LHwTypP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "River Adaptation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Webbing sprouts on your legs and tail as you shift to a more aquatic form. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Feet to Fins] as an innate divine spell once per day. This innate magic relies on your makari heritage, limiting the effect to yourself but allowing you to cast it more easily than a common mage; you can target only yourself with the spell, but you can Cast the Spell as a free action if you're within a body of water when you cast it.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "makari lizardfolk heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:feet-to-fins",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:feet-to-fins",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +261,43 @@
       "name": "Terrain Advantage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FrzskqwNWexKY5BA",
+        "folder": "vhR3q5qq1LHwTypP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrain Advantage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Non-lizardfolk creatures in difficult terrain are @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you. If you have a swim Speed, non-lizardfolk creatures that are in water and lack a swim Speed are also off-guard to you.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

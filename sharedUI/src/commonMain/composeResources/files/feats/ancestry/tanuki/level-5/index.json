@@ -7,6 +7,80 @@
       "name": "False Priest Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UJdKgw8rbpkyoaeR",
+        "folder": "YHCCGslaBcYUW7Ba",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "False Priest Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Nobody respects tanuki, but most everyone respects an esteemed priest, so what better form to take if you want to get by a little easier? When you Change Shape, you can assume the shape of a priest or other religious official from a religion of your choosing. While in your false priest form, you can attempt Deception checks to [[/act recall-knowledge skill=deception]]{Recall Knowledge} about Religion, and you can cast @UUID[Compendium.pf2e.spells-srd.Item.Divine Lance] and @UUID[Compendium.pf2e.spells-srd.Item.Haunting Hymn] as primal innate cantrips. If you critically fail at a Deception check while in your false priest form, your transformation is broken, returning you to your tanuki form, and you're so embarrassed that you can't resume your False Priest Form until your next daily preparations, after you've taken a night to sleep on it.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Everyday Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:divine-lance",
+                    "item:slug:haunting-hymn"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:divine-lance",
+                    "item:slug:haunting-hymn"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:tanuki"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +90,49 @@
       "name": "Hasty Celebration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Rb3ndqSyDUa6KvOL",
+        "folder": "YHCCGslaBcYUW7Ba",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hasty Celebration",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You critically succeed at an attack roll against an enemy, or an enemy critically fails their saving throw against one of your effects.</p><hr /><p>After even the briefest success, you get caught up in the moment and begin to party, cheering your allies on. You grant all allies within 60 feet a +2 circumstance bonus to attack rolls and damage until the end of your next turn. Unfortunately, while you sing and dance, you aren't keeping an eye on your surroundings like you should, making you @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to all enemies until the end of your next turn as well.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Hasty Celebration]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "emotion",
+              "tanuki",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +142,54 @@
       "name": "Leaf Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gB5H7vnYOlq2Ycv0",
+        "folder": "YHCCGslaBcYUW7Ba",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leaf Transformation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You know how to run an enterprise that others would never be able to get off the ground—some say it's your savvy acumen or jovial manner, but you know it's because you can cut costs by transforming leaves into money. You can use Deception to @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income], and you gain a +1 status bonus to your check if you do so. The illusion doesn't hold long, though! The GM rolls a secret d20; that many hours after concluding your check, the money transforms back, likely inviting consequences depending on how far the bills traveled from you in the time they were transformed.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:earn-income"
+              ],
+              "selector": "deception",
+              "type": "status",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "illusion",
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +199,43 @@
       "name": "Ponpoko",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lqZzStaRrX6WqQtd",
+        "folder": "YHCCGslaBcYUW7Ba",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ponpoko",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>No true tanuki would ever be caught without a musical instrument to play under the full moon. You can attempt Performance checks and cast spells by drumming on your belly; this requires that you have at least one hand free, and like playing an instrument, it grants the @UUID[Compendium.pf2e.actionspf2e.Item.Perform] action the auditory and manipulate traits. When Casting a Spell, your gestures can include drumming your belly. If you do, any attempt to recognize a spell cast this way gains a -2 circumstance penalty.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +245,47 @@
       "name": "Statue Form",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0WPoejtMjqsahdyW",
+        "folder": "YHCCGslaBcYUW7Ba",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Statue Form",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>An inconspicuous statue in front of a shop is the perfect form to wait for things to blow over. When you Change Shape, you can assume the form of a statue, shop sign, or other heavy object of up to Large size. Using statue form counts as setting up a disguise for the Impersonate use of Deception, except that you can Impersonate an object instead of a creature, it gives you a +4 status bonus to Deception checks to prevent others from seeing through your disguise, and you add your level even if you're untrained. Your weight increases to match the object you're impersonating while in statue form, allowing you to use your spell DC or your class DC instead of the relevant DC to resist forced movement (usually Fortitude), if they're higher. You can speak while in statue form, but you can't attack, cast spells, or move.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Teakettle Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tanuki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

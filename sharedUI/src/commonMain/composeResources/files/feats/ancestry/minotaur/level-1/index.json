@@ -7,6 +7,54 @@
       "name": "Artisanal Crafter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5myj1WCLzifR2ev6",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Artisanal Crafter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Like many minotaurs, you take pride in creating items made from stone or metal. You become trained in Crafting (or another skill of your choice, if you're already trained in Crafting) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Specialty Crafting] skill feat in your choice of blacksmithing, leatherworking, or stonemasonry.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Specialty Crafting"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +64,43 @@
       "name": "Cattle Speech",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "646yQ0IDwe9BqHtv",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cattle Speech",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can understand the lowing of cattle and similar animals as its own language. You can ask questions of, receive answers from, and use the Diplomacy skill with cattle, bison, antelopes, and other grazing mammals that travel in herds. The GM determines which other animals count for this ability.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +110,71 @@
       "name": "Eye for Masonry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ULa46pgES3yWw3NJ",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eye for Masonry",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your familiarity with architecture allows you to easily spot subtle stonework. You gain a +2 circumstance bonus to Perception checks to notice unusual stonework. This bonus applies to checks to discover mechanical traps made of stone or hidden within stone, as well as secret doors in stone.</p>\n<p>When using Athletics to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] a stone door or Thievery to @UUID[Compendium.pf2e.actionspf2e.Item.Disable a Device] made primarily of stone, you gain a +1 circumstance bonus to that check.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "unusual-stonework"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:force-open",
+                    "action:disable-a-device"
+                  ]
+                },
+                "stonework"
+              ],
+              "selector": [
+                "athletics",
+                "thievery"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +184,47 @@
       "name": "Friendly Nudge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8PmPjoqqbOzvUmO2",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Friendly Nudge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You don't always have time to wait for your allies to make room, so it's best to politely move them yourself. Attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] an ally. You don't need to have a free hand to attempt this check. If your ally is willing, treat the result as one degree of success higher.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +234,60 @@
       "name": "Keen Nose",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nkU7tWNTNaQKK1iU",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Keen Nose",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Accustomed to the foul air of underground tunnels, your sense of smell is sharpened, and noxious scents are less offensive. You gain scent as an imprecise sense with a range of 30 feet. You also gain a +1 circumstance bonus to Fortitude saves against olfactory effects that cause the sickened condition.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:olfactory",
+                "inflicts:sickened"
+              ],
+              "selector": "fortitude",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +297,60 @@
       "name": "Minotaur Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Aw0kevD364Kqu1qB",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Minotaur Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were raised in a minotaur enclave or have spent a great deal of time studying your culture and ancestry. You become trained in Society and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Minotaur Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.stealth.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +360,79 @@
       "name": "Minotaur Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gMWDVkLZMZz7Zy8F",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Minotaur Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your elders taught you to wield weapons that can split skulls and smash through shields. You have familiarity with the battle axe, falchion, glaive, and greataxe—for the purposes of proficiency, you treat these martial weapons as simple weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:base:battle-axe",
+                    "item:base:falchion",
+                    "item:base:glaive",
+                    "item:base:greataxe"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MinotaurWeapons",
+              "sameAs": "simple",
+              "slug": "minotaur-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:base:battle-axe",
+                    "item:base:falchion",
+                    "item:base:glaive",
+                    "item:base:greataxe"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +442,43 @@
       "name": "Pantheon Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "O8FRS2PI66r73fBZ",
+        "folder": "tsnB4XzrYWgVwbAz",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pantheon Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The touch of divine meddling still runs through you, whether you want it or not. Choose one cantrip from the divine spell list. You can cast this cantrip as a divine innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

@@ -7,6 +7,78 @@
       "name": "Contagious Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ad5MsrMMu721NH59",
+        "folder": "XT232pR8455wHNVH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Contagious Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your magic can bring devastation to more individuals. Spend a Mythic Point. If your next action is to Cast a Spell that inflicts damage or debilitating conditions and targets a specific number of creatures, you can target one additional creature.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "contagious-spell"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:contagious-spell"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "mythic",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +88,67 @@
       "name": "Deathless Servant",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "faIuxgeMG60cEa9J",
+        "folder": "XT232pR8455wHNVH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deathless Servant",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "classfeature",
+          "description": {
+            "value": "<p>The servants of apocalypse know that it is impossible to cheat death, but your will is sufficient to help you outlive even your strongest enemies. The first time each day you would be reduced to 0 Hit Points but not immediately killed, you avoid being knocked out and instead of taking the damage, you regain a number of Hit Points equal to @Damage[(2*@actor.level)[healing]]{twice your level}. Your @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition increases by 1.</p>\n<p>In addition, whenever you have the wounded condition, you gain a status bonus to your Armor Class equal to your wounded condition value and a status bonus to the damage of your Strikes equal to twice your wounded condition value.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:condition:wounded"
+              ],
+              "selector": "ac",
+              "type": "status",
+              "value": "@actor.conditions.wounded.value"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:condition:wounded"
+              ],
+              "selector": "strike-damage",
+              "type": "status",
+              "value": "2*@actor.conditions.wounded.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "healing",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "classfeature"
     },
@@ -25,6 +158,49 @@
       "name": "Memory of Nothing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4F7suRtLfcurHqFI",
+        "folder": "XT232pR8455wHNVH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Memory of Nothing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a look and a gesture, you turn a thinking creature's mind against itself, causing the creature to struggle to remember how to perform more complex actions. Choose a target within 30 feet and spend a Mythic Point. The target must attempt a @Check[will|against:class-spell] save against your class DC or spell DC (whichever is higher) at mythic proficiency.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> For the next 3 rounds, if the target performs an activity that requires three or more actions, they take @Damage[12d8[mental]] damage.</p>\n<p><strong>Failure</strong> For the next 3 rounds, if the target performs an activity that requires two or more actions, they take 12d8 mental damage.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is also @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} as its mind struggles to function.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "mental",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +210,47 @@
       "name": "Soul Vessel Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "drcZf55HVsTnnTcF",
+        "folder": "XT232pR8455wHNVH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Soul Vessel Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mount has a supernatural hunger for mortal souls that you can feed. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Seize Soul] as a divine innate spell. The spell gains a cost of 1 Mythic Point but you can use your apocalypse mount as the item in which you store the soul. Your apocalypse mount counts as an artifact for the purpose of the spell. At any point while your apocalypse mount contains a soul, you can Sustain the spell to allow your apocalypse mount to consume the soul. It regains a number of Hit Points equal to @Damage[(2*@actor.level)[healing]]{twice your level}. For the next minute, it also gains a +20-foot status bonus to its Speed and its unarmed attack Strikes are made at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Apocalypse Rider Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

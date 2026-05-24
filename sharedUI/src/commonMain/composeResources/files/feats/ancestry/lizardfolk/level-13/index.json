@@ -7,6 +7,70 @@
       "name": "Bone Investiture",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XuL3g2ExgadFtWbb",
+        "folder": "RtEreMaZZjvRWRvh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bone Investiture",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You encase yourself in spiritual dinosaur bones to become a Huge dinosaur. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Dinosaur Form] on yourself as a 5th-rank innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bone Magic"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:dinosaur-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:dinosaur-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +80,47 @@
       "name": "Ferry Through Waves",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "b4YmWetKmNww6r9j",
+        "folder": "RtEreMaZZjvRWRvh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ferry Through Waves",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><span class=\"action-glyph\">2</span> or <span class=\"action-glyph\">3</span></p>\n<p><strong>Requirements</strong> You are swimming and have a free hand.</p><hr /><p>The waters around you permit you passage, a privilege you can share with a willing ally. You hold on to an adjacent ally and Swim, carrying them along with you. If you spend three actions Ferrying through Waves, you instead Swim twice. If your ally would need to attempt any Athletics checks to Swim while you're Ferrying through Waves, you roll the check and your result applies to them.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "River Adaptation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +130,59 @@
       "name": "Iruxi Spirit Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pivX2SxPQjKDyvHU",
+        "folder": "RtEreMaZZjvRWRvh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Iruxi Spirit Strike",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your iruxi unarmed attacks channel the spiritual energy of your ancestors. Any unarmed attacks you acquire from the lizardfolk ancestry, lizardfolk heritages, or lizardfolk ancestry feats gain the effects of a <em>ghost touch</em> property rune.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:slug:claws",
+                    "item:slug:fangs",
+                    "item:slug:tail"
+                  ]
+                }
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "property": "property-runes",
+              "value": "ghost-touch"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -34,6 +192,76 @@
       "name": "Primal Rampage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X1SPiYJqWzqwzPTs",
+        "folder": "RtEreMaZZjvRWRvh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Rampage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain @UUID[Compendium.pf2e.spells-srd.Item.Unfettered Movement] and @UUID[Compendium.pf2e.spells-srd.Item.Mountain Resilience] as 4th-rank primal innate spells that you can cast once per day. As a 3-action activity, you can Cast a Spell twice to cast both of these innate spells, as long as they are both still available for the day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:unfettered-movement",
+                    "item:slug:mountain-resilience"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:unfettered-movement",
+                    "item:slug:mountain-resilience"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -43,6 +271,70 @@
       "name": "Spiritual Headhunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Y5w2BOMeZpbSC6Ss",
+        "folder": "RtEreMaZZjvRWRvh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spiritual Headhunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your spirit coffin can temporarily detain the spirits of those you kill, allowing you to ask them one last question before they pass on. If you kill a creature with a slashing weapon, you can decapitate it and trap the spirit of its head in your spirit coffin. Once before your next daily preparations, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Talking Corpse] as a primal innate spell, which targets the spiritual head trapped in your coffin, not its physical corpse. A ghostly version of the head manifests from the coffin to answer the questions, taking a –2 status penalty to its Will save to resist the spell. After the spell resolves, or 1 day later, the head is released and rejoins its spiritual body. You can trap only one spirit in this way at a time.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Coffin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:talking-corpse",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:talking-corpse",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

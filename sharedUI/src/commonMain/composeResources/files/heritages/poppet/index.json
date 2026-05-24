@@ -1,0 +1,271 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ghost-poppet.json",
+      "id": "Je15UGsLWYaaGJSW",
+      "name": "Ghost Poppet",
+      "img": "icons/creatures/magical/spirit-mischief-fire-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "Je15UGsLWYaaGJSW",
+        "folder": "vffrEPtm1AQ4oRK4",
+        "img": "icons/creatures/magical/spirit-mischief-fire-blue.webp",
+        "name": "Ghost Poppet",
+        "system": {
+          "ancestry": {
+            "name": "Poppet",
+            "slug": "poppet",
+            "uuid": "Compendium.pf2e.ancestries.Item.6F2fSFC1Eo1JdpY4"
+          },
+          "description": {
+            "value": "<p>You awakened when a bit of another person's life force and a fragment of their soul-possibly, but not always, at the moment of their death-found its way into your constructed body. You don't remember anything more than vague flashes of your \"before life,\" but that life essence still protects you. You gain resistance to void damage equal to half your level (minimum 1).</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Grand Bazaar"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "void",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "stuffed-poppet.json",
+      "id": "7kHg780SAsu2FNfP",
+      "name": "Stuffed Poppet",
+      "img": "icons/magic/control/voodoo-doll-pain-damage-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "7kHg780SAsu2FNfP",
+        "folder": "vffrEPtm1AQ4oRK4",
+        "img": "icons/magic/control/voodoo-doll-pain-damage-purple.webp",
+        "name": "Stuffed Poppet",
+        "system": {
+          "ancestry": {
+            "name": "Poppet",
+            "slug": "poppet",
+            "uuid": "Compendium.pf2e.ancestries.Item.6F2fSFC1Eo1JdpY4"
+          },
+          "description": {
+            "value": "<p>You have little inside you other than cotton, sawdust, or dried leaves. You take no damage from falling, regardless of the distance you fall.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Grand Bazaar"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "toy-poppet.json",
+      "id": "EHDYVhJcZ9uPUjfZ",
+      "name": "Toy Poppet",
+      "img": "icons/environment/creatures/golem-stone-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "EHDYVhJcZ9uPUjfZ",
+        "folder": "vffrEPtm1AQ4oRK4",
+        "img": "icons/environment/creatures/golem-stone-purple.webp",
+        "name": "Toy Poppet",
+        "system": {
+          "ancestry": {
+            "name": "Poppet",
+            "slug": "poppet",
+            "uuid": "Compendium.pf2e.ancestries.Item.6F2fSFC1Eo1JdpY4"
+          },
+          "description": {
+            "value": "<p>You have the form of a child's tiny toy or doll, but you don't let your small size impede your joy of life. Instead of Small, your size is Tiny. Like other Tiny creatures, you don't automatically receive lesser cover from being in a larger creature's space, but circumstances might allow you to Take Cover. You can purchase weapons, armor, and other items for your size with the same statistics as normal gear, except that melee weapons have a reach of 0 for you (or a reach 5 feet shorter than normal if they have the reach trait). You can enter another creature's space, which is important because you must usually enter a creature's space to attack it with melee Strikes! Remember to adjust the Bulk of items and your Bulk limit for Tiny size.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Grand Bazaar"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "value": "tiny"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "tsukumogami-poppet.json",
+      "id": "cKgxEWnRVazFPi3M",
+      "name": "Tsukumogami Poppet",
+      "img": "icons/tools/hand/saw-surgical-steel-grey.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "cKgxEWnRVazFPi3M",
+        "folder": "vffrEPtm1AQ4oRK4",
+        "img": "icons/tools/hand/saw-surgical-steel-grey.webp",
+        "name": "Tsukumogami Poppet",
+        "system": {
+          "ancestry": {
+            "name": "Poppet",
+            "slug": "poppet",
+            "uuid": "Compendium.pf2e.ancestries.Item.6F2fSFC1Eo1JdpY4"
+          },
+          "description": {
+            "value": "<p>You have the form and memories of a common tool. Choose one Lore skill related to what kind of tool you were; for instance, Cooking Lore for a kitchen knife or spoon. You're trained in this skill, and you gain a +2 circumstance bonus to checks to Aid with this skill. If you take the @UUID[Compendium.pf2e.feats-srd.Item.Helpful Poppet] feat, the bonus increases to +3.</p>\n<p>While most poppets are made of stuffing, cloth, or soft metals, some tsukumogami are made of other materials, changing the poppet weakness to fire. If your body is primarily wood or cloth, you have the normal poppet weakness to fire. If your body is primarily metal, you're instead weak to electricity; if its primarily ceramic, you're instead weak to cold.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Poppet.Tsukumogami.Cloth",
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitMetal",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Poppet.Tsukumogami.Ceramic",
+                  "value": "cold"
+                }
+              ],
+              "flag": "weakness",
+              "key": "ChoiceSet",
+              "label": "PF2E.SpecificRule.Prompt.Material",
+              "rollOption": "tsukumogami-poppet"
+            },
+            {
+              "key": "Weakness",
+              "predicate": [
+                {
+                  "not": "feat:insulated-poppet"
+                }
+              ],
+              "type": "{item|flags.system.rulesSelections.weakness}",
+              "value": "max(1,floor(@actor.level/3))"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "poppet"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "windup-poppet.json",
+      "id": "Cv7BOjuziOQ0PO9r",
+      "name": "Windup Poppet",
+      "img": "icons/commodities/tech/crank.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "Cv7BOjuziOQ0PO9r",
+        "folder": "vffrEPtm1AQ4oRK4",
+        "img": "icons/commodities/tech/crank.webp",
+        "name": "Windup Poppet",
+        "system": {
+          "ancestry": {
+            "name": "Poppet",
+            "slug": "poppet",
+            "uuid": "Compendium.pf2e.ancestries.Item.6F2fSFC1Eo1JdpY4"
+          },
+          "description": {
+            "value": "<p>You're made primarily of soft metals, such as tin or silver, and your life force dwells within an exceptional array of clockworks deep in your body. Provided you wind metal tabs on your body a few times each day, you don't need food or water to survive. You must still breathe to ventilate your internal mechanisms and sleep to give your mechanisms rest, just like other poppets.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Grand Bazaar"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "wishborn-poppet.json",
+      "id": "w5801ArZQCU8IXnU",
+      "name": "Wishborn Poppet",
+      "img": "icons/magic/control/voodoo-doll-pain-damage-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "w5801ArZQCU8IXnU",
+        "folder": "vffrEPtm1AQ4oRK4",
+        "img": "icons/magic/control/voodoo-doll-pain-damage-green.webp",
+        "name": "Wishborn Poppet",
+        "system": {
+          "ancestry": {
+            "name": "Poppet",
+            "slug": "poppet",
+            "uuid": "Compendium.pf2e.ancestries.Item.6F2fSFC1Eo1JdpY4"
+          },
+          "description": {
+            "value": "<p>You were wished to life, either by a powerful spellcaster or by the earnest desire of an innocent person who loved you very much. You're living proof that a hopeful spirit can overcome any obstacle. If you roll a success on a saving throw against an emotion or fear effect, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Grand Bazaar"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "emotion",
+                    "fear"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "save"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

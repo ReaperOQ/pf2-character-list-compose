@@ -7,6 +7,77 @@
       "name": "Colugo's Traversal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xlPT1vT8pkgV3iCp",
+        "folder": "1GKSUHrpvIqyuncu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Colugo's Traversal",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Forbidding valleys and sheer cliffs can't curb your vows to reunite the lost. You can cast your choice of @UUID[Compendium.pf2e.spells-srd.Item.Gentle Landing] or @UUID[Compendium.pf2e.spells-srd.Item.Jump] as a primal innate spell once per day. At 9th level, these spells are heightened to 3rd rank.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:gentle-landing",
+                    "item:slug:jump"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:gentle-landing",
+                    "item:slug:jump"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:yaksha"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +87,43 @@
       "name": "Nourishing Symbiosis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pXoDLlV18D0eGhdj",
+        "folder": "1GKSUHrpvIqyuncu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nourishing Symbiosis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>As you recuperate from your wounds, life energy flows from you to the land and back to you again. During downtime mode, when you take the @UUID[Compendium.pf2e.actionspf2e.Item.Long-Term Rest] activity, you regain an additional @Damage[24[healing]]{24 Hit Points} after the first 24 hours of rest. You can use the @UUID[Compendium.pf2e.actionspf2e.Item.Subsist] activity during a long-term rest and don't need to spend any additional time to do so. When you do so, fruits, nuts, and vegetables sufficient to feed 5 people flourish overnight around you, ripe for the picking.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +133,67 @@
       "name": "Stem the Tide",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aW6Fg2Nowl4oB3qP",
+        "folder": "1GKSUHrpvIqyuncu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stem the Tide",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can cast @UUID[Compendium.pf2e.spells-srd.Item.Protector Tree] as a 1st-rank primal innate spell once per day. At 7th level, the spell is heightened to 2nd rank, and every 2 levels thereafter, the spell is heightened an additional spell rank.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:protector-tree",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:protector-tree",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:yaksha"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +203,83 @@
       "name": "Withstand the Storm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hUVedLw6mkY4e24v",
+        "folder": "1GKSUHrpvIqyuncu",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Withstand the Storm",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You would take cold, electricity, fire, poison, or sonic damage.</p><hr /><p>Your skin hardens like bark and gains the sheen of glazed clay, lessening the wild's ruinous sting against your body. You gain resistance equal to your level against the triggering damage type.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "withstand-the-storm",
+              "suboptions": [
+                {
+                  "label": "PF2E.TraitCold",
+                  "value": "cold"
+                },
+                {
+                  "label": "PF2E.TraitElectricity",
+                  "value": "electricity"
+                },
+                {
+                  "label": "PF2E.TraitFire",
+                  "value": "fire"
+                },
+                {
+                  "label": "PF2E.TraitPoison",
+                  "value": "poison"
+                },
+                {
+                  "label": "PF2E.TraitSonic",
+                  "value": "sonic"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "withstand-the-storm"
+              ],
+              "type": "{item|flags.system.rulesSelections.withstandTheStorm}",
+              "value": "@actor.level"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "yaksha"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

@@ -7,6 +7,74 @@
       "name": "Electrogenesis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "20JPwspLZ0r28Jnf",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Electrogenesis",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>Some animals and beasts have electric organs in their body that they can use to jolt their prey. You may not have the requisite physiology to do the same, but a touch of primal magic can achieve the same effect. Make a melee unarmed Strike against a creature. If the Strike hits, it deals an additional 1d12 electricity damage, and the creature must make a @Check[fortitude|against:class-spell|options:inflicts:clumsy] save against the higher of your class DC or spell DC.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} for 1 round.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 3} for 1 round.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have seen a creature deal electricity damage with an unarmed Strike or have identified a creature capable of dealing electricity damage with an unarmed Strike in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "electrogenesis",
+              "toggleable": true
+            },
+            {
+              "damageType": "electricity",
+              "diceNumber": 1,
+              "dieSize": "d12",
+              "key": "DamageDice",
+              "predicate": [
+                "electrogenesis",
+                "item:category:unarmed"
+              ],
+              "selector": "melee-strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "electricity",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +84,57 @@
       "name": "Emergency Regeneration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wlBDcATuqTwjOIY2",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Emergency Regeneration",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You're reduced to 0 hit points from damage that's neither acid nor fire.</p><hr /><p>You have battled against foes whose bodies naturally regenerate, and while yours doesn't do so all the time, it can happen in a pinch. You gain the effects of a 7th-rank @UUID[Compendium.pf2e.spells-srd.Item.Regenerate] spell. At 20th level, you gain the effects of a 9th-rank <em>regenerate</em> instead.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have deactivated a creature's regeneration for at least 1 round or have identified a creature with regeneration in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "primal",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +144,48 @@
       "name": "Environmental Adaptability",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tZLixgaZKeWwPXKW",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Environmental Adaptability",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Having experienced the harshest environs that nature has to offer, your body is able to adapt to intense heat and cold. During your daily preparations, you can choose to become protected from the effects of severe cold or severe heat until the next time you make your daily preparations. Starting at 12th level, this activity also protects you from the effects of extreme cold or extreme heat.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +195,54 @@
       "name": "Ferocity Mimicry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P10KdjTbRcgXG0JM",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ferocity Mimicry",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You would be reduced to 0 Hit Points but not immediately killed.</p><hr /><p>You have trained yourself to continue fighting even when your body is screaming for you to stop. You avoid being knocked out and remain at 1 Hit Point, and your @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition increases by 1.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have encountered a creature who has kept fighting or dealt damage after being reduced to 0 Hit Points (such as via death throes or Ferocity) or have identified a creature with such an ability in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +252,54 @@
       "name": "Petrifying Gaze Mimicry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KnaKxKP3eCUcCZC7",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Petrifying Gaze Mimicry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Either by witnessing or surviving the petrifying stare of a medusa or similar creature, you have learned to petrify those you lock eyes with. You stare at a creature you can see within 30 feet. The creature attempts a @Check[fortitude|against:class-spell] save against the higher of your class DC or spell DC. You must wait [[/r 1d4 #rounds]]{1d4 rounds} before using this ability again.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected and temporarily immune to your Petrifying Gaze Mimicry for 24 hours.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for 1 round.</p>\n<p><strong>Failure</strong> The creature is slowed 1 for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] for 1 round or until it @UUID[Compendium.pf2e.actionspf2e.Item.Escape]{Escapes}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 2} for 1 round and immobilized until it Escapes.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have attempted a saving throw against a creature's petrifying gaze or a similar ability or have identified a creature with such an ability in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "incapacitation",
+              "primal",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +309,51 @@
       "name": "Pounce Mimicry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2LvdYMXTIRkTQO42",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pounce Mimicry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're unarmored or wearing light armor.</p>\n<hr />\n<p>You have mastered the art of stalking your prey and striking when they are most vulnerable. You Stride and then Strike. If you began this action @UUID[Compendium.pf2e.conditionitems.Item.Hidden], you remain hidden until after the Strike. You can use Pounce Mimicry while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have seen a creature use an ability that lets them Stride and Strike as a single action (such as Pounce) or have identified a creature with such an ability in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -61,6 +363,48 @@
       "name": "Primal Proportions",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sif4YKLU414BBNis",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Proportions",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can mimic the sheer mass of the largest beasts. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Enlarge], targeting yourself once per 10 minutes as an innate 2nd-rank primal spell. At 12th level, the spell is heightened to 4th rank.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +414,51 @@
       "name": "Rend Mimicry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9gEVyUjYrDLUWieq",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rend Mimicry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have hit the same enemy with two consecutive melee Strikes that each dealt slashing damage.</p><hr /><p>Taking advantage of the brutal efficiency of hacking away at a target with two slashing attacks, you've mastered the art of punishing a foe caught between your slices. You deal @Damage[(ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,10),2,1)))d6[slashing]] damage to the target. This damage increases to 2d6 at 10th level and to 3d6 at 16th level.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have seen a creature use Rend or have identified a creature that has Rend in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +468,56 @@
       "name": "Roar Mimicry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vwOU1t8Fd5dDEYia",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Roar Mimicry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>You unleash a roar so loud that it's felt as deeply as it's heard. All creatures within a @Template[emanation|distance:15] take @Damage[(max(8,(floor(@actor.level/2)*2)-4))d6[sonic]|options:area-damage] damage and must attempt a @Check[fortitude|against:class-spell|options:area-effect,damaging-effect] save against the higher of your class DC or spell DC. This damage increases by 2d6 at 14th level and every 2 levels thereafter.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}. If the creature is adjacent to you, they're also @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 2}. If the creature is adjacent to you, they're also deafened for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have been targeted by a creature's auditory ability that affects an area or have identified a creature with an auditory ability that affects an area"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "primal",
+              "sonic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -88,6 +527,50 @@
       "name": "Trample Mimicry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1DIuPtx7FEm7F7WE",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Trample Mimicry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You Stride up to double your speed and can move through the spaces of creatures at least one size smaller, trampling each creature whose space you enter. You can attempt to trample the same creature only once in a single use of Trample Mimicry. You deal @Damage[(ternary(gte(@actor.level,18),5,ternary(gte(@actor.level,14),4,3)))d12[bludgeoning]|options:area-damage] damage to each trampled creature (@Check[reflex|against:class-spell|basic|options:area-effect] save against the higher of your class DC or spell DC). This damage increases by 1d12 at levels 14 and 18.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "you have seen a creature use Trample or have identified a creature with Trample in combat"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -97,6 +580,48 @@
       "name": "Wild Mimic Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U9mK9TXbGriGeMOW",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wild Mimic Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Fighting in the wilds has honed your understanding of the unique abilities many creatures have. You're trained in Wild Mimic Lore, a special Lore skill that can be used only to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about creatures to learn their abilities. If you have legendary proficiency in Nature, you gain expert proficiency in Wild Mimic Lore, but you can't increase your proficiency in Wild Mimic Lore by any other means. When you succeed at a Wild Mimic Lore to Recall Knowledge, you gain a +1 circumstance bonus to your saving throws against the next attack or ability that the subject of your Recall Knowledge targets you with.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Wild Mimic Dedication]</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.l4isOHQIdkrWLch0]{Wild Mimic}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -106,6 +631,68 @@
       "name": "Wild Speech",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sdDOkl7IZZ0o0dix",
+        "folder": "lb4aHoL5i5UyEfTa",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wild Speech",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your connection to the denizens of the wilds grows ever stronger, and you find yourself able to speak with animals like you would in your native tongue. You can speak with all animals and beasts. If you have Animal Empathy, you gain a +1 circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on animals.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wild Mimic Dedication"
+              },
+              {
+                "value": "Animal Empathy or the ability to speak with a type of animal"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression",
+                "target:trait:animal",
+                {
+                  "or": [
+                    "feat:animal-empathy",
+                    "feat:animal-empathy-ranger"
+                  ]
+                }
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

@@ -7,6 +7,76 @@
       "name": "Flourish and Ruin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U9nJy5suyYDE0b20",
+        "folder": "pA7PPZVpq6alVSq7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flourish and Ruin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can call upon the vital essence of your spirit to restore life to your allies and call forth vines to ensnare and bludgeon your foes. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Field of Life] and @UUID[Compendium.pf2e.spells-srd.Item.Tangling Creepers] as 6th-rank primal innate spells once per day each.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:field-of-life",
+                    "item:slug:tangling-creepers"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:field-of-life",
+                    "item:slug:tangling-creepers"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:leshy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +86,66 @@
       "name": "Regrowth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ffjoPXtAoIR2Drwe",
+        "folder": "pA7PPZVpq6alVSq7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Regrowth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your command over your vital essence allows you or an ally to recover from grievous wounds. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Regenerate] as a 7th-rank primal innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:regenerate",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:regenerate",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:leshy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -25,6 +155,47 @@
       "name": "Return to the Seed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "daVIABU0UzyMnoiA",
+        "folder": "pA7PPZVpq6alVSq7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Return to the Seed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Once per month, when you die, you can instead choose to fade away. Your corpse is swallowed by the earth, leaving behind only a seed. This seed is very fragile with an AC of 10 and only 1 Hit Point. Another creature can spend 1 minute to plant the seed in a safe space and water it. If so cared for, the next morning a tree grows from it with a single large fruit or flower bud that splits open to reveal you, alive and returned to maximum Hit Points.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "P1M"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

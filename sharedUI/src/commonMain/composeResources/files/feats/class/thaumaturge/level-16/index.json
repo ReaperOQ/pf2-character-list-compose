@@ -7,6 +7,53 @@
       "name": "Implement's Flight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AObopXQkCIsaBAID",
+        "folder": "gkQXhmM2rKoX1cAv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Implement's Flight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By weakening your relation to the ground and strengthening your relation to the sky, you've learned to soar through the air, your implement carrying you as surely as any broomstick or pestle. As long as you're holding a thaumaturge implement, you gain a fly Speed equal to your land Speed.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "implement-held"
+              ],
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "primal",
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +63,47 @@
       "name": "Seven-Part Link",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UgZDirfFb4CFhuWh",
+        "folder": "gkQXhmM2rKoX1cAv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seven-Part Link",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Many traditions hold the number seven as significant. By exchanging pieces of a seven-part set of esoterica, you create a magical web by which your allies can affect each other at a distance. When you use @UUID[Compendium.pf2e.feats-srd.Item.Paired Link] during your daily preparations, you can exchange linking esoterica with up to six willing allies, keeping one piece for yourself. In addition to the normal effects of Paired Link, if a linked ally casts a spell with a range of touch, they can target linked allies within 30 feet with that spell.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Paired Link"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +113,45 @@
       "name": "Sever Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IevdA9OVFZE6FOVK",
+        "folder": "gkQXhmM2rKoX1cAv",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sever Magic",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're holding an implement.</p>\n<hr />\n<p>You apply a frayed thread, a pinch of fulu ash, or a similar undone charm to your weapon, and swing to break a spell. Make a Strike against an enemy. If you hit and deal damage, you attempt to counteract a single spell active on the target (your choice). Your counteract rank is equal to half your level (rounded up), and your counteract check modifier is equal to your class DC - 10.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "arcane",
+              "esoterica",
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

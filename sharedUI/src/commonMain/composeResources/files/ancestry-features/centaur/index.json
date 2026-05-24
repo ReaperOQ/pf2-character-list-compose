@@ -7,6 +7,43 @@
       "name": "Mount",
       "img": "icons/environment/people/cavalry.webp",
       "type": "feat",
+      "data": {
+        "_id": "VX267tc1uwocRu39",
+        "folder": "J5Yl2JgTn4Nvg39I",
+        "img": "icons/environment/people/cavalry.webp",
+        "name": "Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>Your equine body is well suited for carrying trusted allies. A PC can ride you if they are one size category smaller than you (Medium size, for most centaurs), rather than needing to be two size categories smaller.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestryfeature"
     },
@@ -16,6 +53,56 @@
       "name": "Robust",
       "img": "icons/skills/movement/arrows-up-trio-red.webp",
       "type": "feat",
+      "data": {
+        "_id": "S5XriNcxiVvqZEu0",
+        "folder": "J5Yl2JgTn4Nvg39I",
+        "img": "icons/skills/movement/arrows-up-trio-red.webp",
+        "name": "Robust",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>You increase your maximum and encumbered Bulk limits by 2.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.encumberedAfterAddend",
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.maxAddend",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestryfeature"
     }

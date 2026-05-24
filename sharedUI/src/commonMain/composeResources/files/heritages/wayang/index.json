@@ -1,0 +1,208 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "shadow-of-the-courtier.json",
+      "id": "GvtOzLp4kIuYfx1R",
+      "name": "Shadow of the Courtier",
+      "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "GvtOzLp4kIuYfx1R",
+        "folder": "CrHaY0KxLmVmLQog",
+        "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+        "name": "Shadow of the Courtier",
+        "system": {
+          "ancestry": {
+            "name": "Wayang",
+            "slug": "wayang",
+            "uuid": "Compendium.pf2e.ancestries.Item.8FpI46oVxYVku04u"
+          },
+          "description": {
+            "value": "<p>Your shadow dances alongside you. You gain the Impressive Performance skill feat, allowing you to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] using Performance instead of Diplomacy. Once per day, if you fail, but not critically fail, a check to Make an Impression, you can play it off as part of a performance, allowing you to reroll the check; this is a fortune effect.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalFailure"
+              ],
+              "predicate": [
+                "action:make-an-impression"
+              ],
+              "selector": "diplomacy",
+              "text": "PF2E.SpecificRule.Wayang.ShadowOfTheCourtier",
+              "title": "{item|name}"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Impressive Performance"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wayang"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shadow-of-the-hermit.json",
+      "id": "yxZtNE87im9yZFXk",
+      "name": "Shadow of the Hermit",
+      "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "yxZtNE87im9yZFXk",
+        "folder": "CrHaY0KxLmVmLQog",
+        "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+        "name": "Shadow of the Hermit",
+        "system": {
+          "ancestry": {
+            "name": "Wayang",
+            "slug": "wayang",
+            "uuid": "Compendium.pf2e.ancestries.Item.8FpI46oVxYVku04u"
+          },
+          "description": {
+            "value": "<p>Your shadow seems somehow full of secrets and mysteries—secrets that it shares with you. Choose one cantrip from the occult spell list. You can cast this spell as an occult innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wayang"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shadow-of-the-sailor.json",
+      "id": "5apoJtHGL0lIz1cz",
+      "name": "Shadow of the Sailor",
+      "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "5apoJtHGL0lIz1cz",
+        "folder": "CrHaY0KxLmVmLQog",
+        "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+        "name": "Shadow of the Sailor",
+        "system": {
+          "ancestry": {
+            "name": "Wayang",
+            "slug": "wayang",
+            "uuid": "Compendium.pf2e.ancestries.Item.8FpI46oVxYVku04u"
+          },
+          "description": {
+            "value": "<p>Your shadow flits across the surface of the water, and so do you. You can walk on the surface of still water and other non-damaging liquids, moving at half your normal Speed. You can attempt to walk along the surface of flowing water as well, still moving at half Speed, but to do so, you must succeed at an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] using the DC of a Swim check to move through the water; on a failure, you fall into the water. This Acrobatics check doesn't use an action.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wayang"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shadow-of-the-smith.json",
+      "id": "VHln8G1GNaSzNNHq",
+      "name": "Shadow of the Smith",
+      "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VHln8G1GNaSzNNHq",
+        "folder": "CrHaY0KxLmVmLQog",
+        "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+        "name": "Shadow of the Smith",
+        "system": {
+          "ancestry": {
+            "name": "Wayang",
+            "slug": "wayang",
+            "uuid": "Compendium.pf2e.ancestries.Item.8FpI46oVxYVku04u"
+          },
+          "description": {
+            "value": "<p>Your shadow is thick and liquid, like it could quench the finest ore. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Inscribe Shadow Pamor] action.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wayang"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "shadow-of-the-wanderer.json",
+      "id": "fcsYmaIfMR9iXv06",
+      "name": "Shadow of the Wanderer",
+      "img": "icons/magic/unholy/silhouette-light-fire-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "fcsYmaIfMR9iXv06",
+        "folder": "CrHaY0KxLmVmLQog",
+        "img": "icons/magic/unholy/silhouette-light-fire-blue.webp",
+        "name": "Shadow of the Wanderer",
+        "system": {
+          "ancestry": {
+            "name": "Wayang",
+            "slug": "wayang",
+            "uuid": "Compendium.pf2e.ancestries.Item.8FpI46oVxYVku04u"
+          },
+          "description": {
+            "value": "<p>Your shadow blazes out ahead of you, clearing your path. Your Speed increases by 5 feet.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "wayang"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,49 @@
       "name": "Chastise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "m8g005RYjH7BAoyT",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chastise",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With but a mere word from your deity, you exploit a foe's fear to see their inner being brought low. You chastise the spirit of a foe within 30 feet that has the frightened condition. The target must attempt a @Check[will|against:class-spell] saving throw against the higher of your class DC or spell DC. The target is then temporarily immune for 1 hour.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[2[persistent,spirit]] damage. The first time the creature fails their flat check to recover from this, the persistent spirit damage doubles.</p>\n<p><strong>Failure</strong> The target takes @Damage[4[persistent,spirit]] damage. The first time the creature fails their flat check to recover from this, the persistent spirit damage doubles.</p>\n<p><strong>Critical Failure</strong> The target takes @Damage[6[persistent,spirit]] damage. The first time the creature fails their flat check to recover from this, the persistent spirit damage doubles.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fear of God"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "sanctified"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +59,53 @@
       "name": "Declare Anathema",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7P5aKtFoPVJJPPEV",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Declare Anathema",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>You declare a creature you are aware of within 30 feet anathema, causing their friends and strangers to shy away from them. Attempt a @Check[religion|against:will] check against the target's Will DC.</p><hr /><p><strong>Critical Success</strong> Any creature that attempts to target the anathema creature with a beneficial effect must succeed at a @Check[flat|dc:5|showDC:all] or the action is disrupted. This curse remains until removed by @UUID[Compendium.pf2e.spells-srd.Item.Cleanse Affliction] or a similar effect, or an atone ritual. In addition, the creature gains weakness 10 to spirit damage for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Declare Anathema]</p>\n<p><strong>Success</strong> As critical success, but the curse lasts for 1 minute.</p>\n<p><strong>Failure</strong> As critical success, but the curse lasts for 1 round and the target doesn't gain weakness to spirit damage.</p>\n<p><strong>Critical Failure</strong> The target is unaffected.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "curse",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +115,52 @@
       "name": "Deific Font",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CjafX7d1XktxeyTa",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deific Font",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>Your life force can fuel the stuff of miracles. You become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1} or increase the value of your drained condition by 1 if you already have the drained condition. Before the end of your next turn, if you Cast a Spell of 4th rank or lower, you don't expend the spell's slot when you cast it, or if you cast a focus spell, it does not cost a Focus Point. The spell loses whatever tradition trait it would normally have and gains the divine trait.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +170,52 @@
       "name": "Dive of the Divine",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Y5fO1ooNuCFPCB0s",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dive of the Divine",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are at least 20 feet above the ground.</p><hr /><p>You dive from the sky, bringing down the might of the divine with you. You Fly straight down, landing safely in the nearest unoccupied space directly below you. When you land, all creatures in a @Template[type:emanation|distance:10] take @Damage[(ternary(gte(@actor.level,20),10,8))d10[spirit]|options:area-damage] damage (@Check[type:fortitude|basic|against:class-spell|options:area-effect] save against the higher of your class DC or spell DC). On a failure, the target is pushed 5 feet (or 10 feet on a critical failure).</p>\n<p>At 20th level, the spirit damage increases to 10d10.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              },
+              {
+                "value": "fly Speed of at least 20 feet"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "sanctified"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +225,54 @@
       "name": "Divine Presence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2uYigDgvlfCZVg9e",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Presence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your spirit becomes one with your deity, granting you the bearing of a god. As long as you are in this stance, you have a 5-foot emanation that has the aura trait. Whenever you take an action, you can take it from your space or any space within the emanation as if it were the space you occupy. An enemy that ends its turn completely within the emanation is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to your Strikes. You can Sustain the emanation to increase its radius by 5 feet, up to a maximum of 15 feet.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Divine Presence",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Divine Presence"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "divine",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +282,54 @@
       "name": "Domain Embodiment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MLWizLC44RZ3bYAN",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Domain Embodiment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your deity contains multitudes, and you can express any aspect of them you desire. During your daily preparations, you can gain two initial or advanced domain spells from any of your deity's domains or alternate domains. You can cast these as innate spells until your next daily preparations.</p>\n<p>Domain spells are a type of focus spell. Casting any of your focus spells costs you 1 Focus Point. The maximum number of Focus Points in your pool is equal to the number of focus spells you know or 3, whichever is lower. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to pray to your deity or do service toward their causes. Your domain spells are divine spells. If you were not already, you become trained in spell attacks and spell DCs. Your spellcasting attribute for domain spells is Wisdom.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -61,6 +339,52 @@
       "name": "Ease the Burden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bDVx7hVyxjwRAxxG",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ease the Burden",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You wash away a creature's pain with a touch. An adjacent creature regains @Damage[100[healing]] Hit Points and reduces their @UUID[Compendium.pf2e.conditionitems.Item.Drained], @UUID[Compendium.pf2e.conditionitems.Item.Clumsy], @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled], @UUID[Compendium.pf2e.conditionitems.Item.Frightened], and @UUID[Compendium.pf2e.conditionitems.Item.Stupefied] conditions by 1 (to a minimum of 0).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -70,6 +394,47 @@
       "name": "Enter Divine Realm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4KxG9QC6jPn2CJeZ",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enter Divine Realm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are granted access to your deity's realm and can travel there quickly. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Interplanar Teleport] once per day as an innate divine spell with a casting time of only 1 minute. You act as the planar key for the destination, and you can only travel to your deity's realm. You and the other targets of the spell always appear in the center of your deity's realm, and you (but not necessarily your allies) are immune to all the realm's harmful conditions (such as toxic air or extreme temperatures) while there. You can return to your previous location by spending 1 minute picturing your destination; you can bring up to 8 willing creatures back with you in this way, and they need not be the same targets of the previous casting of interplanar teleport.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -79,6 +444,68 @@
       "name": "Eyes of God",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EfIh3sGokwzAwYpQ",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eyes of God",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can see things as they truly are. You are constantly under the effect of 8th-rank @UUID[Compendium.pf2e.spells-srd.Item.See the Unseen] and @UUID[Compendium.pf2e.spells-srd.Item.Truesight] spells. Additionally, you gain a +4 status bonus to your @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] checks and to your Perception DC against Lies.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive"
+              ],
+              "selector": "perception",
+              "slug": "eyes-of-god-sense-motive",
+              "type": "status",
+              "value": 4
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:lie"
+              ],
+              "selector": "perception-dc",
+              "slug": "eyes-of-god-lie",
+              "type": "status",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -88,6 +515,56 @@
       "name": "Fear of God",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9OVRsU45zCOvRQ9q",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fear of God",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You successfully @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] an enemy.</p><hr /><p>You embed a divine fear into the triggering foe that lasts for 10 minutes. During that time, you ignore that creature's temporary immunity to your Demoralize attempts and whenever you successfully Demoralize the triggering enemy, you can instead increase their existing frightened condition by 1 (or 2 on a critical success) to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 4}.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              },
+              {
+                "value": "expert in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "skill"
     },
@@ -97,6 +574,49 @@
       "name": "Flash of Omnipotence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "v6d1N3yygUccisQL",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flash of Omnipotence",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn begins.</p><hr /><p>For but a moment you hold the power of a god. You spend a Mythic Point. Until the end of your turn, any damage you deal ignores all the target's resistance and immunities or triggers the target's highest weakness if they have no resistance or immunities.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -106,6 +626,53 @@
       "name": "Flash of Omnipresence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N9kJPSRz1Ax9eFdD",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flash of Omnipresence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>Empowered with divine energy, you can be at an ally's side in the blink of an eye. You teleport to an empty space adjacent to an ally within 100 feet. If you spend a Mythic Point as part of this action, you can teleport to anywhere within a mile, and when you arrive, any enemies adjacent to you must succeed at a @Check[will|against:class-spell] saving throw against your class DC or spell DC or be @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "mythic",
+              "teleportation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -115,6 +682,49 @@
       "name": "Flash of Omniscience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VnpI3sPgwLlcCJy3",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flash of Omniscience",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You turn begins.</p><hr /><p>You briefly see the world as your deity does, recognizing the truth of those around you for a moment. You spend a Mythic Point to immediately learn the resistances, weaknesses, and immunities, including the amounts of the resistances and weaknesses and any unusual weaknesses or vulnerabilities of a single creature you can see.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -124,6 +734,49 @@
       "name": "Following Smite",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uyZ3gY7gtKCLiywR",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Following Smite",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a Strike made with a weapon or unarmed attack empowered by @UUID[Compendium.pf2e.feats-srd.Item.Herald's Weapon].</p><hr /><p>You call upon your deity's power and channel it through your weapon. The creature you hit in your previous action must attempt a @Check[reflex|against:class-spell] saving throw against the higher of your class DC or your spell DC.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[(floor(@actor.level/2))[spirit]]{spirit damage equal to half your level}.</p>\n<p><strong>Failure</strong> The target takes @Damage[(@actor.level)[spirit]]{spirit damage equal to your level} and is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Critical Failure</strong> The target takes @Damage[(2*@actor.level)[spirit]]{spirit damage equal to twice your level}, is knocked prone, and becomes @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Herald's Weapon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "sanctified"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -133,6 +786,47 @@
       "name": "Free from Bonds",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YIzADuxb5AV1kUvK",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Free from Bonds",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As a mortal herald, you cannot easily be captured, nor can your allies. If you are @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] when you use @UUID[Compendium.pf2e.feats-srd.Item.Flash of Omnipresence], the creature or effect that is imparting that condition on you takes @Damage[(@actor.level)[spirit]]{spirit damage} equal to your level.</p>\n<p>If you teleport adjacent to a grabbed or restrained ally using Flash of Omnipresence, attempt a @Check[religion] check against the hard DC for the level of the creature or effect that is imparting that condition. on a success, your ally no longer has that condition.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Flash of Omnipresence"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -142,6 +836,52 @@
       "name": "Glory on High",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mgbCNt7MgEVbMlJ7",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Glory on High",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You take to the skies to unveil the full magnificence of your deity's power. Fly straight upward up to your fly Speed and Interact to draw a weapon or to gesture with your hand or a worn holy symbol. Each enemy within a @Template[type:emanation|distance:60] must attempt a @Check[will|against:class-spell|options:area-effect,damaging-effect] save against the higher of your class DC or spell DC. Regardless of the result, the target becomes immune to Glory on High for 1 hour.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 minute.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Blinded] for 1 round, dazzled for 1 minute, and takes @Damage[10d6[mental]|options:area-damage] damage.</p>\n<p><strong>Critical Failure</strong> The creature is blinded for 1 minute, dazzled for 1 hour, and takes @Damage[20d6[mental]|options:area-damage] damage.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              },
+              {
+                "value": "fly Speed of at least 20 feet"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "mental",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -151,6 +891,59 @@
       "name": "Guiding Words",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LmsjuqB3rrZTqqa6",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guiding Words",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>Your words speak divine truth, guiding blades and arrows to their mark. Choose an ally within 30 feet and attempt a @Check[diplomacy] check. The DC is equal to the hard difficulty DC of the level of your ally. On a success, the first time the targeted ally makes an attack roll before the end of their next turn, they roll the attack twice and use the better result.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Guiding Words]</p>\n<p>Regardless of the result, the target becomes immune to Guiding Words for 10 minutes.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              },
+              {
+                "value": "master in Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "concentrate",
+              "divine",
+              "fortune",
+              "linguistic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -160,6 +953,48 @@
       "name": "Healing Sanctuary",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cD5EsurWVYekIXkz",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Healing Sanctuary",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you call upon your deity's power, you also radiate a sense of safety that fortifies your allies. An ally who begins their turn in your Shield the Faithful aura gains 10 temporary Hit Points that last for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Healing Sanctuary]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Shield the Faithful"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -169,6 +1004,90 @@
       "name": "Heraldic Proclamation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5uzu5u5UFSfRRBSs",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Heraldic Proclamation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You proclaim your spell with the might of your god behind you. If the next action you use is to Cast a non-cantrip Spell, then all allies within 30 feet gain Hit Points equal to double the rank of the spell, and all enemies within 30 feet take spirit damage equal to double the rank of the spell (basic Will save against your spell DC).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "heraldic-proclamation"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "not": "item:trait:cantrip"
+                },
+                "spellshape:heraldic-proclamation"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Spellshape.HeraldicProclamation"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine",
+              "healing",
+              "sanctified",
+              "spellshape",
+              "spirit",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -178,6 +1097,49 @@
       "name": "Herald's Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P07YFQCp3hT3OgJE",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Herald's Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The power of your blows can send your victim hurling through your deity's realm for a fragment of a second. You activate Herald's Weapon, ignoring the frequency, and make a Strike with your transformed weapon or unarmed attack against a creature. If you hit and deal damage, the target must attempt a @Check[will|against:class-spell] save against the higher of your class DC or spell DC. If your Strike was a critical hit, the creature uses the outcome for one degree of success worse than the result of their saving throw. Regardless of the result, the target becomes immune to Herald's Strike for 10 minutes.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[3d10[spirit]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d10[spirit]] damage and becomes dazzled for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The target takes @Damage[12d10[spirit]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Blinded] for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2}.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Herald's Weapon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "sanctified",
+              "spirit"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -187,6 +1149,56 @@
       "name": "Herald's Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5ELeiNtEDgXfBcwt",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Herald's Weapon",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>Your weapon becomes a wrathful instrument of your deity's power. Choose a weapon you are currently wielding or an unarmed attack, which is wreathed in pure spiritual energy for 1 minute. For the duration, the chosen weapon and unarmed attack deals spirit damage instead of its regular damage. In addition, the chosen weapon or unarmed attack gains the sanctified trait and deals an additional 2d4 spirit damage.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Herald's Weapon",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Herald's Weapon"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -196,6 +1208,51 @@
       "name": "Invisible Hand",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BxMMITENS6tncpCk",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Invisible Hand",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Sometimes your deity requires you to act in the shadows, accomplishing things without drawing attention to yourself—or them.</p>\n<p>Once per day, when you roll Stealth for initiative at the start of a combat, you can choose to be @UUID[Compendium.pf2e.conditionitems.Item.Invisible] for 1 minute. If you spend a Mythic Point while beginning the @UUID[Compendium.pf2e.actionspf2e.Item.Avoid Notice] exploration activity, you are invisible for as long as you continue to Avoid Notice.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              },
+              {
+                "value": "master in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -205,6 +1262,82 @@
       "name": "Marked for Rebuke",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "k8c0E7YyeIQJjRzB",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Marked for Rebuke",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You declare that an enemy is fit for further punishment in the sight of your deity. If the next action you perform is to Cast a Spell that deals damage, one creature of your choice that takes damage from the spell is marked for rebuke until the end of your next turn. A creature marked this way gains weakness 10 to all damage and becomes immune to Marked for Rebuke for 24 hours.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "marked-for-rebuke"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "damaging-effect",
+                "spellshape:marked-for-rebuke"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "{item|description}"
+                },
+                {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Marked for Rebuke]"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -214,6 +1347,47 @@
       "name": "Moment of Apotheosis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ju03TtaUBaaJ0Yq7",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Moment of Apotheosis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>For a small moment, you can assume the form of your god. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Avatar] once per day as an innate divine spell.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -223,6 +1397,53 @@
       "name": "Mortal Ascension",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fZFdoqeSQGBPDgai",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mortal Ascension",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your power uplifts you, breaking the bonds between you and the ground. You gain a fly Speed equal to your Speed.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -232,6 +1453,139 @@
       "name": "Mortal Herald Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XmvIQ4iJ2euOgLYb",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mortal Herald Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become a mortal herald of your deity, gaining power in return for your service. Others intuitively sense your connection with your deity, which subtly influences the way they act around you. You become bound by your deity's anathema. Depending on your deity, their sanctification can make you holy or unholy. This gives you the holy or unholy trait, which commits you to one side of a struggle over the souls of the planes and can be referenced in other abilities. If you \"can be\" holy or unholy according to your deity, you make that choice, and if you \"must be\" holy or unholy you gain the trait automatically. If you gain the opposing trait in some way, you lose the previous trait until you complete an @UUID[Compendium.pf2e.spells-srd.Item.Atone] ritual.</p>\n<p>In addition, once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Heal] as a 6th-rank innate divine spell. You can only target yourself with the spell, but you gain the benefits of the 2-action version when you spend 1 action to cast it. In addition, if you would be reduced to 0 Hit Points but not immediately killed, you can cast the spell as a free action before you become @UUID[Compendium.pf2e.conditionitems.Item.Unconscious]. This spell is automatically heightened to a rank equal to half your level.</p><hr /><p><strong>Special</strong> If you have void healing, you instead cast @UUID[Compendium.pf2e.spells-srd.Item.Harm].</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.n787ifCmIxuhtcMG]{Mortal Herald}</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "worshipper of a specific deity"
+              },
+              {
+                "value": "master in Religion or your deity's divine skill"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:deity"
+                ],
+                "itemType": "deity"
+              },
+              "flag": "deity",
+              "key": "ChoiceSet",
+              "predicate": [
+                {
+                  "not": "deity"
+                }
+              ],
+              "prompt": "PF2E.SpecificRule.Prompt.Deity"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "deity"
+                }
+              ],
+              "uuid": "{item|flags.system.rulesSelections.deity}"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.TraitHoly",
+                  "predicate": [
+                    {
+                      "or": [
+                        "deity:primary:sanctification:can:holy",
+                        "deity:primary:sanctification:must:holy"
+                      ]
+                    }
+                  ],
+                  "value": "holy"
+                },
+                {
+                  "label": "PF2E.TraitUnholy",
+                  "predicate": [
+                    {
+                      "or": [
+                        "deity:primary:sanctification:can:unholy",
+                        "deity:primary:sanctification:must:unholy"
+                      ]
+                    }
+                  ],
+                  "value": "unholy"
+                }
+              ],
+              "key": "ChoiceSet",
+              "predicate": [
+                {
+                  "nor": [
+                    "deity:primary:sanctification:none",
+                    "sanctification:holy",
+                    "sanctification:unholy"
+                  ]
+                }
+              ],
+              "prompt": "PF2E.SpecificRule.Prompt.Sanctification",
+              "rollOption": "sanctification",
+              "slug": "sanctification"
+            },
+            {
+              "add": [
+                "holy"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "sanctification:holy"
+              ]
+            },
+            {
+              "add": [
+                "unholy"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "sanctification:unholy"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -241,6 +1595,58 @@
       "name": "Shield the Faithful",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VYwWqm5LZOU7irhY",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield the Faithful",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You and those closest to you are protected by your deity's power. For 1 minute, you and all allies within 10 feet of you gain a +1 item bonus to AC and resistance 10 to spirit damage. In addition, when a creature adjacent to you hits you with a melee attack, or when a creature touches you or hits you with an unarmed attack, that creature takes @Damage[(ternary(gte(@actor.level,20),10,5))[spirit]] damage.</p>\n<p>At 20th level, the spirit resistance increases to 15 and the spirit damage increases to 10.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Shield the Faithful",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Shield the Faithful"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "aura",
+              "divine",
+              "sanctified"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -250,6 +1656,48 @@
       "name": "Spark of Immortality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R4GhrpXtcRIo6Cxx",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spark of Immortality",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have become a divine entity, no longer entirely mortal. You no longer age, and you die only when you reach dying 5 (dying 6 if you have @UUID[Compendium.pf2e.feats-srd.Item.Diehard]). Upon your death, your body and soul are transported to bask in the presence of your deity. Your god can decide to rebuild your mortal form and return you to the point of your death or some other safe location, or allow you to rest as an honored guest in their realm until you are needed once more. Typically, your god restores you if whatever quest you're undertaking, such as defeating a malevolent tyrant or returning a stolen artifact, remains incomplete.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     },
@@ -259,6 +1707,64 @@
       "name": "Stand for the Fallen",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qTxgIym89ehgW684",
+        "folder": "5S0CMZTDzgFfC0iN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stand for the Fallen",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally takes damage that would bring them to 0 Hit Points</p><hr /><p>You protect your allies at the cost of your own blood, but your deity shields you from the worst of the harm. Stride twice to be adjacent to the triggering ally. You can Burrow, Climb, Fly, or Swim instead of Striding if you have the corresponding movement type. You then take the damage that would have brought your ally to 0 Hit Points, though you gain resistance to all damage against that damage equal to your level.</p>"
+          },
+          "frequency": null,
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mortal Herald Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "stand-for-the-fallen",
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "stand-for-the-fallen"
+              ],
+              "type": "all-damage",
+              "value": "@actor.level"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

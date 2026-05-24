@@ -7,6 +7,49 @@
       "name": "Cursed Effigy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kPjBGlHMvBqFXNq2",
+        "folder": "RMuBdvzGgqgLbONM",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cursed Effigy",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful Strike against the target of your @UUID[Compendium.pf2e.actionspf2e.Item.Exploit Vulnerability], and the Strike dealt physical damage.</p><hr /><p>After your attack, you grab a bit of blood, cut hair, or other piece of the creature's body. You incorporate the material into a premade doll, paper figure, or other effigy to create a sympathetic link that makes it harder to resist your abilities. As long as you are Exploiting Vulnerability against that creature, it takes a –2 status penalty to its saving throws against thaumaturge abilities or items that use your thaumaturge class DC.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Exploit Vulnerability"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "curse",
+              "esoterica",
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +59,56 @@
       "name": "Elaborate Talisman Esoterica",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VO8HbMQ79NULE4FQ",
+        "folder": "RMuBdvzGgqgLbONM",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elaborate Talisman Esoterica",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you continue to collect talismanic esoterica, you improve your ability to create temporary talismans. You can create four temporary talismans each day instead of two.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat a second time if you are 14th level or higher, allowing you to create six talismans each day instead of four.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Talisman Esoterica"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.crafting.entries.talismanEsoterica.maxSlots",
+              "phase": "beforeDerived",
+              "value": "2*(@item.timesTaken + 1)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "thaumaturge"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

@@ -7,6 +7,52 @@
       "name": "Don Thy Fervor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hbDHgTwKsXiGFT1Z",
+        "folder": "AV1cBUEqNsNgi0Co",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Don Thy Fervor",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a thought, the passion of your fiendish desires becomes evident in your eyes and posture. For the next minute, you gain a +2 circumstance bonus to Deception, Diplomacy, and Intimidation skill checks. In addition, you gain a +2 circumstance bonus to counteract checks. At 18th level, these circumstance bonuses increase to +3.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Archfiend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Don Thy Fervor",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Don Thy Fervor"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +62,51 @@
       "name": "Lord of the Fiends",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "apz0n3Q3gWvQVChT",
+        "folder": "AV1cBUEqNsNgi0Co",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lord of the Fiends",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You consider every fiend a future subject and can assess them at a glance. Spend a Mythic Point. Attempt a check at mythic proficiency to Recall Knowledge about every fiend you can see. For the next hour, whenever you roll a success on a Deception, Diplomacy, or Intimidation check against a fiend, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Archfiend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Lord of the Fiends",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Lord of the Fiends"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +116,60 @@
       "name": "Manipulate Realm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mrHrIrZQkGMfnl1j",
+        "folder": "AV1cBUEqNsNgi0Co",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Manipulate Realm",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Thanks to your continued belief in your ultimate transformation, you have learned greater control over your manifested realm. If you spend a Mythic Point when you Manifest your Realm, you can use the @UUID[Compendium.pf2e.actionspf2e.Item.Drain Realm], @UUID[Compendium.pf2e.actionspf2e.Item.Spread Realm], and @UUID[Compendium.pf2e.actionspf2e.Item.Unleash Realm] free actions.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Archfiend Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Drain Realm"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Spread Realm"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Unleash Realm"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }
