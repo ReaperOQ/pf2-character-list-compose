@@ -7,6 +7,66 @@
       "name": "Call of the Green Man",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uDFgL6uCwJsaTHi3",
+        "folder": "X2aMqmGcWMo5zCjj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call of the Green Man",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can call forth nearby nature spirits to augment your body. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Plant Form] as a 5th-rank primal innate spell. When you reach 17th level, you can heighten the spell to 6th rank when you cast it.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:plant-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:plant-form",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:leshy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +76,48 @@
       "name": "Cloak of Poison",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fnMT0AsZXFW9Ppyp",
+        "folder": "X2aMqmGcWMo5zCjj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cloak of Poison",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You secrete a cloak of concentrated poison that harms any who dare attack you. For 1 minute, any creature that touches you or damages you with an unarmed attack or melee weapon without the reach trait takes @Damage[3d6[poison]] damage.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "leshy",
+              "poison"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +127,66 @@
       "name": "Flower Chimera",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F6bfZLBMS9fUtQiQ",
+        "folder": "X2aMqmGcWMo5zCjj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flower Chimera",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>You call on a guardian of the wild to burst forth from the land to aid you. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Spiritual Guardian] as a 5th-rank innate primal spell once per day, even if you don't have a deity; this guardian manifests as a kami or other nature spirit. When you reach 17th level, you can heighten this spell to 7th rank.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:spiritual-guardian",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:spiritual-guardian",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:leshy"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "leshy"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

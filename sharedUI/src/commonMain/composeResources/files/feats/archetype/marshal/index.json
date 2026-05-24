@@ -7,6 +7,47 @@
       "name": "Back to Back",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "E7eceezD3NDmBVBb",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Back to Back",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You excel at watching your allies' backs and helping them watch yours. Any ally adjacent to you can't be @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] due to flanking unless you're also flanked. Similarly, while you're adjacent to at least one ally, you can't be off-guard due to flanking unless at least one ally you're adjacent to is flanked as well.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +57,53 @@
       "name": "Cadence Call",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a9zzu4kb7vstq0HQ",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cadence Call",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p><hr /><p>You call out a quick cadence, guiding your allies into a more efficient rhythm. Each willing ally in your marshal's aura is @UUID[Compendium.pf2e.conditionitems.Item.Quickened] until the end of their next turn, and they can use the extra action only to Stride.</p>\n<p>If an ally uses this extra action, at the end of its turn that ally becomes @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} until the end of its following turn.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +113,48 @@
       "name": "Coordinated Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KYF9e4oeSjHKgbwM",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coordinated Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You heroically dash into the fray, inspiring your allies to follow. You Stride up to your Speed and make a melee Strike. If your Strike hits and damages an enemy, each ally within 60 feet who saw you hit can use a reaction to Stride, but they each must end their Stride closer to the creature you hit than where they started.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +164,51 @@
       "name": "Dread Marshal Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R7c4PyTNkZb0yvoT",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dread Marshal Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Putting on a grim face for the battle ahead, you encourage your allies to strike fear into their foes with vicious attacks. When you use this action, attempt an @Check[intimidation|dc:@self.level|adjustment:-2|roller:self] check. The DC is usually an easy DC of your level, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Stance: Dread Marshal Stance]</p><hr /><p><strong>Success</strong> Your marshal's aura grants you and your allies in the aura a +1 status bonus to damage rolls. When you or an ally in the aura critically hit an enemy with a Strike, that enemy is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}. If you're wielding a weapon that has more than one damage die (typically due to a striking rune), you can have the status bonus equal the weapon's number of damage dice instead of +1.</p>\n<p><strong>Failure</strong> You fail to enter the stance.</p>\n<p><strong>Critical Failure</strong> You fail to enter the stance and can't take this action again for 1 minute.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              },
+              {
+                "value": "trained in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +218,49 @@
       "name": "Form Up!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UpnXrLhJZ06HTaJh",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Form Up!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've trained in battle formations for a plethora of situations. Choose a formation. Allies within your aura can use their reaction to Stride up to their Speed and take a place in the chosen formation. Allies can't benefit from this movement if there isn't room for them in the chosen formation. If there are more eligible allies than there are available spaces in the chosen formation, you choose which allies benefit.</p><ul><li><strong>Line</strong> Your allies gather adjacent to you and each other to form a straight line in a direction of your choosing.</li><li><strong>Wedge</strong> Your allies gather into any space that would be covered by a @Template[type:cone|distance:15] originating from you in a direction of your choosing.</li><li><strong>Cluster</strong> Your allies gather into any space that would be covered by a @Template[type:emanation|distance:15] in an aura around you.</li></ul>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +270,50 @@
       "name": "General's Gambit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HX67CcR59JO2RJXI",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "General's Gambit",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You move strategically forward to draw the enemy's attention away from your allies. You Stride toward an enemy and attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion], except you can use Society or Warfare Lore instead of Deception.</p>\n<p>On a success, in addition to the normal outcome for Creating a Diversion, the enemy becomes @UUID[Compendium.pf2e.conditionitems.Item.Fascinated] with you until the start of your next turn and can't use reactions against allies in your aura. On a critical success, the enemy becomes fascinated with you until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              },
+              {
+                "value": "Strategist Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +323,51 @@
       "name": "Inspiring Marshal Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bvOsJNeI0ewvQsFa",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inspiring Marshal Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You become a brilliant example of dedication and poise in battle, encouraging your allies to follow suit. When you spend this action, attempt a @Check[diplomacy|dc:@self.level|adjustment:-2|roller:self] check. The DC is usually an easy DC of your level, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Stance: Inspiring Marshal Stance]</p><hr /><p><strong>Success</strong> Your marshal's aura grants you and allies a +1 status bonus to attack rolls and saves against mental effects.</p>\n<p><strong>Failure</strong> You fail to enter the stance.</p>\n<p><strong>Critical Failure</strong> You fail to enter the stance and can't take this action again for 1 minute.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              },
+              {
+                "value": "trained in Diplomacy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +377,50 @@
       "name": "Know Your Enemy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tlqz29fgp45bjSg6",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Know Your Enemy",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in @UUID[Compendium.pf2e.feats-srd.Item.Strategist Stance].</p><hr /><p>You aim to turn knowledge into power against your foes. Attempt a Recall Knowledge check against an enemy you're observing. Any ally within your aura who's trained in the skill you use to attempt the Recall Knowledge check can use their reaction to Aid you on the check without having prepared to help first.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              },
+              {
+                "value": "Strategist Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +430,155 @@
       "name": "Marshal Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MYzRfNExDYp25rro",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Marshal Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've combined your social skills and combat training to become a talented combat leader. Choose Diplomacy or Intimidation. You become trained in that skill or become an expert if you were already trained in it.</p>\n<p>In addition, you're surrounded by a marshal's aura in a @Template[emanation|distance:15]. Your aura has the emotion, mental, and visual traits and grants you and allies within the aura a +1 status bonus to saving throws against fear.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.1F84oh5hoG86mZIw]{Marshal}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in martial weapons and either Diplomacy or Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "effects": [
+                {
+                  "affects": "allies",
+                  "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Marshal's Aura"
+                }
+              ],
+              "key": "Aura",
+              "radius": 15,
+              "slug": "marshals-aura",
+              "traits": [
+                "emotion",
+                "mental",
+                "visual"
+              ]
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "predicate": [
+                    "skill:diplomacy:rank:0"
+                  ],
+                  "value": "diplomacy-trained"
+                },
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "predicate": [
+                    "skill:diplomacy:rank:1"
+                  ],
+                  "value": "diplomacy-expert"
+                },
+                {
+                  "label": "PF2E.Skill.Intimidation",
+                  "predicate": [
+                    "skill:intimidation:rank:0"
+                  ],
+                  "value": "imtimidation-trained"
+                },
+                {
+                  "label": "PF2E.Skill.Intimidation",
+                  "predicate": [
+                    "skill:intimidation:rank:1"
+                  ],
+                  "value": "intimidation-expert"
+                }
+              ],
+              "key": "ChoiceSet",
+              "predicate": [
+                {
+                  "or": [
+                    {
+                      "lte": [
+                        "skill:intimidation:rank",
+                        1
+                      ]
+                    },
+                    {
+                      "lte": [
+                        "skill:diplomacy:rank",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "prompt": "PF2E.SpecificRule.Prompt.Skill",
+              "rollOption": "marshal-skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "predicate": [
+                "marshal-skill:diplomacy-trained"
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "predicate": [
+                "marshal-skill:diplomacy-expert"
+              ],
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "predicate": [
+                "marshal-skill:intimidation-trained"
+              ],
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "predicate": [
+                "marshal-skill:intimidation-expert"
+              ],
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -88,6 +588,48 @@
       "name": "Rallying Charge (Marshal)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "df4cBV3qZn3qNUmP",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rallying Charge (Marshal)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your fearless charge into battle reinvigorates your allies to carry on the fight. You Stride up to your Speed and make a melee Strike. If your Strike hits and damages an enemy, each ally within 60 feet who saw you hit gains temporary Hit Points equal to your Charisma modifier. These temporary Hit Points last until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Rallying Charge (Marshal)]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +639,50 @@
       "name": "Snap Out of It! (Marshal)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zbnL5OP4zVaNFcq8",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Snap Out of It! (Marshal)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You give a quick shout, hoping to shake the fog clouding your ally's thoughts.</p>\n<p>Choose one target ally in your marshal's aura who is affected by a mental effect that allowed a Will save and has a duration of no longer than 1 minute. That ally can immediately attempt a Will save with a +1 circumstance bonus against the effect's DC, ending the effect on a success. This can't end the effect for any creatures other than your target ally.</p>\n<p>Regardless of the result of the save, your ally is temporarily immune to Snap Out of It! for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Snap Out of It! (Marshal)]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -106,6 +692,50 @@
       "name": "Steel Yourself!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4Y7wKFogGB0LZ5ZA",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Steel Yourself!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You encourage an ally to toughen up, giving them a fighting chance. Choose one ally in your marshal's aura. The ally gains temporary Hit Points equal to your Charisma modifier and a +2 circumstance bonus to Fortitude saves. Both benefits last until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Steel Yourself!]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -115,6 +745,51 @@
       "name": "Strategist Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fJwsZM6WXwP8EStV",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strategist Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You find the most strategic options for you and your allies. When you use this action, attempt a @Check[society|dc:@self.level|roller:self] or @Check[warfare-lore|dc:@self.level|roller:self] check. The DC is usually a standard-difficulty DC of your level, but the GM can assign a different DC based on the circumstances.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Stance: Strategist Stance]</p><hr /><p><strong>Critical Success</strong> Your marshal's aura increases to a @Template[type:emanation|distance:20], and it grants you and allies a +1 status bonus to Reflex saving throws. Once per turn, when you succeed or critically succeed at a Recall Knowledge check to gain information about an enemy creature, the target of the Recall Knowledge check becomes @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to the next attack made against it by you or an ally in your aura.</p>\n<p><strong>Success</strong> As critical success, but your aura's size doesn't increase.</p>\n<p><strong>Failure</strong> You fail to enter the stance.</p>\n<p><strong>Critical Failure</strong> You fail to enter the stance and can't take this action again for 1 minute.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              },
+              {
+                "value": "trained in Society or Warfare Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -124,6 +799,47 @@
       "name": "Tactical Cadence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4dQcLroKQ13QYIT3",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tactical Cadence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your remarkable breath control and concise instructions allow you to coordinate your allies more effectively, even in desperate situations. When you grant allies the @UUID[Compendium.pf2e.conditionitems.Item.Quickened] condition using Cadence Call, they can use the extra action to either Stride or Strike, and they aren't @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} on their following turn if they use the extra action.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cadence Call"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -133,6 +849,48 @@
       "name": "Target of Opportunity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2FJwXMTJycSZY80Q",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Target of Opportunity",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally succeeds at a ranged Strike against an opponent in your weapon's first range increment.</p>\n<p><strong>Requirements</strong> You have a ranged or thrown weapon in hand.</p><hr /><p>You capitalize on your ally's attack and use the opportunity to secure a blow of your own, adding to the oncoming barrage. Make a ranged Strike with a –2 penalty against the opponent targeted by the triggering attack. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike. If this Strike is successful, combine the damage from the attack with the damage from your ally's attack for the purpose of resistances and weaknesses.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -142,6 +900,49 @@
       "name": "To Battle!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cU5NdcwnMkFQNPjh",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "To Battle!",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a resounding cry, you rally your ally to take the offensive. Choose one ally in your marshal's aura who has a reaction available. If you spend 1 action, that ally can use their reaction to immediately Stride. If you spend 2 actions, that ally can use their reaction to immediately Strike.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -151,6 +952,50 @@
       "name": "Topple Foe",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7x1r2w7C7A4Uy7wG",
+        "folder": "Ji2CbKYOXGa69X7A",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Topple Foe",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally succeeds at a melee Strike against an enemy you are both adjacent to.</p><hr /><p>You take advantage of the opening created by your ally to tip your foe off their feet. Attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Trip] the target of the triggering attack.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Marshal Dedication"
+              },
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

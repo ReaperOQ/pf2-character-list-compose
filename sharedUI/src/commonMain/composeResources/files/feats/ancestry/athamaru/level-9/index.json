@@ -7,6 +7,66 @@
       "name": "Coral Detoxification",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6jSRLRk7XkKHJqy2",
+        "folder": "L88elBam86egkeZk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coral Detoxification",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>The coral colony that you've tended has merged with your kidneys to add an additional layer of filtration. Attempt a saving throw against a single poison affecting you with a +2 circumstance bonus.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Coral Symbiotes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "coral-detoxification",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "coral-detoxification"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +76,76 @@
       "name": "Emissary Assistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4Pttzj49WiROm3ua",
+        "folder": "L88elBam86egkeZk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Emissary Assistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>As an emissary, you have assisted land-bound creatures in journeying underwater to visit your settlements. You gain @UUID[Compendium.pf2e.spells-srd.Item.Feet to Fins] and @UUID[Compendium.pf2e.spells-srd.Item.Water Breathing] as 3rd-rank primal innate spells. You can cast each of these spells once per day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:feet-to-fins",
+                    "item:slug:water-breathing"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:feet-to-fins",
+                    "item:slug:water-breathing"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:athamaru"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +155,48 @@
       "name": "Moray Eel Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P1ADxNv3AcoM9o50",
+        "folder": "L88elBam86egkeZk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Moray Eel Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have either trained a giant moray eel since its hatching or have tamed one in the wild. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Bonded Animal] skill feat, even if you don't meet the prerequisites, to bond with a giant moray eel. When you @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal]{Command this Animal} while you are mounted on it to take a move action, you automatically succeed instead of needing to attempt a check.</p>\n<hr />\n<p><strong>Special</strong> If you have the Elver Pet or Growing Eel Friend ancestry feats, you can choose to have that pet become your bonded animal. You don't need to spend 7 days of downtime to bond with the eel, and you automatically succeed at the Nature check. You can then retrain those feats.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Bonded Animal"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +206,62 @@
       "name": "Persistent Odor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "czFQyDI8Wur7F8bO",
+        "folder": "L88elBam86egkeZk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Persistent Odor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your pheromones now linger on creatures. When a target fails its save against your Emit Defensive Odor ability, they also take @Damage[(floor((@actor.level -1)/4) - 1)d6[persistent,poison]] damage. The damage increases to 2d6 at 13th level and 3d6 at 17th level.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Emit Defensive Odor"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:emit-defensive-odor"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

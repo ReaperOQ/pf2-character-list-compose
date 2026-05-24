@@ -7,6 +7,50 @@
       "name": "Familiar Ritualist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MXWUkpPJsLPrqmJO",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Familiar Ritualist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your familiar's magical presence can serve as an aspect of a ritual. When you cast a ritual, your familiar can serve as a secondary caster, fulfilling any requirements for the secondary caster as well as a secondary check. You can't replace a secondary caster who's the target of the spell.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              },
+              {
+                "value": "ability to cast a ritual"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +60,56 @@
       "name": "Familiar Sage Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YKBDNQEqYPKE8dlH",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Familiar Sage Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've forged an empowered mystical bond with your familiar. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Enhanced Familiar] feat, increasing your familiar's number of abilities.</p><hr /><p><strong>Special</strong> You can take Familiar Sage Dedication even if you haven't yet gained three feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.yaR8E2drX6pFUFCK]{Familiar Master} archetype, and you can take Familiar Master Dedication even if you haven't yet gained three feats from the familiar sage archetype. You can't select another dedication feat until you've gained two other feats from the familiar master or @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.bi4WaRQzrOwuEILM]{Familiar Sage} archetypes.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a familiar"
+              },
+              {
+                "value": "you're able to cast spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Enhanced Familiar"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +119,77 @@
       "name": "Familiar's Resolve",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BQ50m0Jb9qyoPchi",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Familiar's Resolve",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you weave magic, your familiar traces symbols that throw off fear and doubt. If the next action you use is to Cast a Spell, you or an ally within 30 feet gain a +2 status bonus to saving throws against effects that would cause you to be doomed or frightened for 1 round. At 14th level, you or an ally gain a +3 status bonus to saving throws against these effects instead.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:familiars-resolve"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.FamiliarsResolve"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "familiars-resolve"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +199,56 @@
       "name": "Fulu Familiar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BcYmYMUU8HDwGthh",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fulu Familiar",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can imprint your familiar's spiritual essence into a fulu, a small paper charm that can be affixed to objects, creatures, or structures. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Create Familiar Fulu] action, which you can use once per day; at 12th level, this increases to twice per day, and at 18th level, it increases to three times per day.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              },
+              {
+                "value": "expert in Occultism or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Create Familiar Fulu"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "talisman"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +258,97 @@
       "name": "Golden Dragon's Bounty",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HvbVV8wjJmVmkYt7",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Golden Dragon's Bounty",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your familiar alters the material of a spell into that of a precious metal. If the next action you use is to Cast a Spell that deals bludgeoning, piercing, or slashing damage, that damage is your choice of cold iron, silver, or steel for the purposes of weaknesses, resistances, vulnerabilities, and the like. At 14th level, adamantine is added to the list of metal choices. The spell gains the metal trait.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "golden-dragons-bounty"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "alwaysActive": true,
+              "domain": "spell-damage",
+              "key": "RollOption",
+              "label": "PF2E.PreciousMaterialLabel",
+              "option": "damage:material",
+              "placement": "spellcasting",
+              "predicate": [
+                "spellshape:golden-dragons-bounty"
+              ],
+              "suboptions": [
+                {
+                  "label": "PF2E.PreciousMaterialColdIron",
+                  "value": "cold-iron"
+                },
+                {
+                  "label": "PF2E.PreciousMaterialSilver",
+                  "value": "silver"
+                },
+                {
+                  "label": "PF2E.PreciousMaterialAdamantine",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        14
+                      ]
+                    }
+                  ],
+                  "value": "adamantine"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +358,49 @@
       "name": "Lightning Rings' Intervention",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7275FFz5qWQO3j0s",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lightning Rings' Intervention",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your familiar learns to empower spells with an electrical discharge. Your familiar gains the @UUID[Compendium.pf2e.familiar-abilities.Item.Lightning Needles] ability.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "electricity",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +410,52 @@
       "name": "Lightning Rings' Overcharge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "06wbX1YStavp4Fq4",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lightning Rings' Overcharge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your familiar can adopt an electrical form to empower weapon strikes. Your familiar gains the @UUID[Compendium.pf2e.familiar-abilities.Item.Lightning Armillary] ability.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              },
+              {
+                "value": "Lightning Rings' Intervention"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "electricity",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -70,6 +465,47 @@
       "name": "Phoenix's Flight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "l80R1OduACbaeKtR",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Phoenix's Flight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're adjacent to or sharing the same space as your familiar.</p><hr /><p>You and your familiar learn the secrets of elemental fire, allowing you to merge together to become a legendary creature—a phoenix. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Monstrosity Form] as an innate occult spell once per day, except you can transform only into a phoenix, and your familiar must be adjacent to you before you Cast the Spell. When you Cast the Spell, your familiar merges into your form. While transformed, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Blazing Conflagration] action.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -79,6 +515,51 @@
       "name": "Seal of the Golden Dragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JCnTkz7Ad11rZKrL",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seal of the Golden Dragon",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You would take acid, cold, electricity, poison, fire, or sonic damage.</p>\n<p><strong>Requirements</strong> Your familiar has the resistance ability and is adjacent to you.</p><hr /><p>Your familiar coils around you, protecting you with its magical resistance. You gain the benefits of your familiar's resistance ability until the start of your next turn. If your familiar has any upgrades to this ability, such as major resistance, you gain them as well. Once per day, if your familiar's resistance is a different damage type, your familiar's resistance ability changes to the appropriate type. If you already have resistance of the same type, choose the higher of the two.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              },
+              {
+                "value": "Golden Dragon's Bounty"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +569,49 @@
       "name": "Tempest Cloud's Speed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DrZqTPcqSsmw55kb",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tempest Cloud's Speed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You aren't encumbered.</p><hr /><p>You and your familiar coordinate to channel elemental air. Your familiar gains the @UUID[Compendium.pf2e.familiar-abilities.Item.Path of the Tempest] ability.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +621,82 @@
       "name": "Vexing Tempest",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IsWrDVtDsWDKTPSi",
+        "folder": "B76a7EIYngopXFoj",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vexing Tempest",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your familiar channels elemental air around it to unleash a disruptive gust that sends creatures flying. If the next action you use is to Cast a Spell that has the air trait, all creatures within a @Template[type:emanation|distance:15] of your familiar must attempt a Reflex save against your spell DC or be pushed 10 feet away. On a critical failure, they're also knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Familiar Sage Dedication"
+              },
+              {
+                "value": "Tempest Cloud's Speed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:air",
+                "spellshape:vexing-tempest"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "vexing-tempest"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

@@ -7,6 +7,81 @@
       "name": "Demolish Defenses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ogsVovr4LxFVi42V",
+        "folder": "ZRYi6MAwifJQmFqX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demolish Defenses",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a powerful blow, you crack a foe's armor or tough hide, opening it up for further attacks. Make a melee Strike. This Strike deals one additional weapon die of damage; if the target is your taunted enemy, this increases to two additional weapon die of damage. This counts as two attacks for the purposes of calculating your multiple attack penalty. If you hit and deal damage, the target must attempt a @Check[fortitude|against:guardian|options:inflicts:clumsy,inflicts:off-guard] saving throw against your class DC.</p><hr /><p><strong>Critical Success</strong> The target takes no additional effect.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} until the end of your next turn. Once it loses this clumsy condition, it's off-guard for 1 round.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 3}.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "domain": "strike-damage",
+              "key": "RollOption",
+              "option": "demolish-defenses",
+              "toggleable": true
+            },
+            {
+              "diceNumber": 1,
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "demolish-defenses",
+                {
+                  "not": "target:effect:taunt:{actor|signature}"
+                }
+              ],
+              "selector": "strike-damage",
+              "slug": "demolish-defenses",
+              "toggleable": true
+            },
+            {
+              "diceNumber": 2,
+              "hideIfDisabled": true,
+              "key": "DamageDice",
+              "predicate": [
+                "demolish-defenses",
+                "target:effect:taunt:{actor|signature}"
+              ],
+              "selector": "strike-damage",
+              "slug": "demolish-defenses-against-taunted",
+              "toggleable": true
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +91,102 @@
       "name": "Perfect Protection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oYzkopbXguiwfNTx",
+        "folder": "ZRYi6MAwifJQmFqX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Perfect Protection",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your armor protects you from the deadliest hits. Each time you're critically hit while wearing the medium or heavy armor, attempt a @Check[flat|dc:14|showDC:all]. On a success, it becomes a normal hit.</p><hr /><p><strong>Special</strong> If your armor has a @UUID[Compendium.pf2e.equipment-srd.Item.Fortification] rune, you roll only one flat check, but the DC is 12 (or 10 if it's a @UUID[Compendium.pf2e.equipment-srd.Item.Fortification (Greater)]{Greater Fortification} rune).</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "affects": "origin",
+              "alterations": [
+                {
+                  "mode": "add",
+                  "property": "other-tags",
+                  "value": "dc-14"
+                }
+              ],
+              "key": "EphemeralEffect",
+              "predicate": [
+                {
+                  "nor": [
+                    "armor:rune:property:fortification",
+                    "armor:rune:property:greater-fortification"
+                  ]
+                }
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Perfect Protection"
+            },
+            {
+              "affects": "origin",
+              "alterations": [
+                {
+                  "mode": "add",
+                  "property": "other-tags",
+                  "value": "dc-12"
+                }
+              ],
+              "key": "EphemeralEffect",
+              "predicate": [
+                "armor:rune:property:fortification"
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Perfect Protection"
+            },
+            {
+              "affects": "origin",
+              "alterations": [
+                {
+                  "mode": "add",
+                  "property": "other-tags",
+                  "value": "dc-10"
+                }
+              ],
+              "key": "EphemeralEffect",
+              "predicate": [
+                "armor:rune:property:greater-fortification"
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Perfect Protection"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +196,81 @@
       "name": "Quick Vengeance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VeejX9bGhI9di1eL",
+        "folder": "ZRYi6MAwifJQmFqX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Vengeance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Indignant at any who would strike you or your allies, you get your revenge. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Intercept Attack] or @UUID[Compendium.pf2e.feats-srd.Item.Shield Block], you are @UUID[Compendium.pf2e.conditionitems.Item.Quickened] on your next turn. You can use the extra action only to Stride closer to the enemy whose attack triggered that reaction or to Strike that enemy.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Intercept Attack or Shield Block"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:intercept-attack"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:shield-block"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +280,77 @@
       "name": "Shield from Spells",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ueQoFDPHUe3dqmS1",
+        "folder": "ZRYi6MAwifJQmFqX",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield from Spells",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your prowess with a shield allows you to block magic and more. You can use @UUID[Compendium.pf2e.feats-srd.Item.Shield from Arrows] against ranged spell attacks and other ranged attacks, not just physical ranged Strikes.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Shield from Arrows"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:shield-from-arrows"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:shield-from-arrows"
+              ],
+              "property": "other-tags",
+              "value": "shield-from-spells"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

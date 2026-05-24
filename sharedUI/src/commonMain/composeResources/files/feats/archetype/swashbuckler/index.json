@@ -7,6 +7,48 @@
       "name": "Advanced Flair",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SHhiLn0OSILEXNOj",
+        "folder": "SpFs2eB7ZLtAw5AN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Flair",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain one swashbuckler feat. For the purpose of meeting its prerequisites, your swashbuckler level is equal to half your character level.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another swashbuckler feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Flair"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +58,71 @@
       "name": "Basic Flair",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sE7x3QAel4VGdkgn",
+        "folder": "SpFs2eB7ZLtAw5AN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Flair",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level swashbuckler feat of your choice.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swashbuckler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:swashbuckler",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "basicFlair",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.basicFlair}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +132,62 @@
       "name": "Finishing Precision",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X5gNhaYNx1xu6NoH",
+        "folder": "SpFs2eB7ZLtAw5AN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Finishing Precision",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned how to land daring blows when you have @UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache]{Panache}.</p>\n<p>You gain the @UUID[Compendium.pf2e.classfeatures.Item.Precise Strike] class feature but you deal 1 addition damage on a hit and 1d6 damage on a finisher. This damage doesn't increase as you gain levels. In addition, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Basic Finisher] action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swashbuckler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "flags.system.swashbuckler.preciseStrike",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Basic Finisher"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Precise Strike"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +197,133 @@
       "name": "Swashbuckler Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eAlrvPVb8qt8Lruw",
+        "folder": "SpFs2eB7ZLtAw5AN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swashbuckler Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Choose a swashbuckler's style. You gain the @UUID[Compendium.pf2e.classfeatures.Item.Panache] and @UUID[Compendium.pf2e.classfeatures.Item.Stylish Combatant] class features, and you apply the bravado trait to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] and any actions indicated in your swashbuckler style, allowing you to gain panache. You become trained in Acrobatics or the skill associated with your style. If you were already trained in both skills, you instead become trained in a skill of your choice. You also become trained in swashbuckler class DC. You don't gain any other effects of your chosen style.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.k9Ebp52kt0ZLHtMl]{Swashbuckler}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Charisma +2"
+              },
+              {
+                "value": "Dexterity +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:tag:swashbuckler-style",
+                  {
+                    "not": "item:tag:class-archetype"
+                  }
+                ]
+              },
+              "flag": "swashbucklersStyle",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Swashbuckler.Style.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.swashbucklersStyle}"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Acrobatics",
+                  "value": "acrobatics"
+                },
+                {
+                  "label": "PF2E.Skill.Intimidation",
+                  "predicate": [
+                    "feature:braggart"
+                  ],
+                  "value": "intimidation"
+                },
+                {
+                  "label": "PF2E.Skill.Deception",
+                  "predicate": [
+                    "feature:fencer"
+                  ],
+                  "value": "deception"
+                },
+                {
+                  "label": "PF2E.Skill.Athletics",
+                  "predicate": [
+                    "feature:gymnast"
+                  ],
+                  "value": "athletics"
+                },
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "predicate": [
+                    "feature:wit"
+                  ],
+                  "value": "diplomacy"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Panache"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Stylish Combatant"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "swashbuckler": {
+                "attribute": "dex",
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +333,52 @@
       "name": "Swashbuckler's Riposte",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lZ0swL9EEUgbAuaZ",
+        "folder": "SpFs2eB7ZLtAw5AN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swashbuckler's Riposte",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned to riposte against ill-conceived attacks. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Opportune Riposte] reaction.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swashbuckler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Opportune Riposte"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +388,70 @@
       "name": "Swashbuckler's Speed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RU86cGTryRAdaEqx",
+        "folder": "SpFs2eB7ZLtAw5AN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swashbuckler's Speed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You move faster, with or without @UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache]{Panache}. Increase the status bonus to your Speeds when you have panache to a +10-foot status bonus; you also gain a +5-foot status bonus to your Speeds when you don't have panache.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Swashbuckler Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:panache"
+              ],
+              "selector": "all-speeds",
+              "slug": "swashbucklers-speed-panache",
+              "type": "status",
+              "value": 10
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "selector": "all-speeds",
+              "slug": "swashbucklers-speed-no-panache",
+              "type": "status",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

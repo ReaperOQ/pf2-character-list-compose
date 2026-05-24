@@ -7,6 +7,45 @@
       "name": "Apparition Stabilization",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wEMZv0MIBktiwgxH",
+        "folder": "vBgIbTFHJPNjzk9l",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Apparition Stabilization",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attuned apparition ensures that even if you would be distracted or disrupted, your magic does not go to waste. If a reaction would disrupt your spellcasting action, attempt a @Check[flat|showDC:all|dc:15]. If you succeed, your action isn't disrupted. When you gain the third apparition class feature, this DC is reduced to 13, and when you gain the fourth apparition class feature, this DC is reduced to 10.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "wandering"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +55,65 @@
       "name": "Blazing Spirit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kRERboV7vHN6EiTt",
+        "folder": "vBgIbTFHJPNjzk9l",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blazing Spirit",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> A creature damages you with a melee attack.</p>\n<p><strong>Requirements</strong> Your attuned apparition grants Battlegrounds Lore or Volcano Lore as an apparition skill.</p><hr /><p>Your apparition grants fiery defenses. You gain resistance equal to your level against the triggering damage, and the triggering creature takes @Damage[(ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,12),2,1)))d6[fire],(ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,12),2,1)))[persistent,fire]] damage. This damage increases to 2d6 fire damage and 2 persistent fire damage at 12th level, and 3d6 fire damage and 3 persistent fire damage at 18th level.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "blazing-spirit",
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "blazing-spirit"
+              ],
+              "type": "all-damage",
+              "value": "@actor.level"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "divine",
+              "fire",
+              "wandering"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +123,84 @@
       "name": "Grudge Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ii7aCMN4WPQo3N3l",
+        "folder": "vBgIbTFHJPNjzk9l",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grudge Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your attuned apparition grants Heraldry Lore or Underworld Lore as an apparition skill.</p><hr /><p>You channel the spiritual power of spiteful grudges. Make a melee Strike against a creature within your reach. You gain a +2 circumstance bonus to your attack roll and deal an additional @Damage[2d6[void]] damage to the target; if the target is undead or otherwise has void healing, this Strike instead deals an additional @Damage[2d6[vitality]] damage. This ability gains the vitality trait if it deals vitality damage, or the void trait if it deals void damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "grudge-strike",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "grudge-strike"
+              ],
+              "selector": "strike-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "damageType": "void",
+              "diceNumber": 2,
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "grudge-strike"
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "predicate": [
+                "dice:slug:grudge-strike",
+                "target:negative-healing"
+              ],
+              "property": "damage-type",
+              "selectors": [
+                "strike-damage"
+              ],
+              "value": "vitality"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "divine",
+              "wandering"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +210,61 @@
       "name": "Medium's Awareness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "laAcB3bauWQxxdAo",
+        "folder": "vBgIbTFHJPNjzk9l",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Medium's Awareness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your apparitions watch over you. You gain a +2 status bonus to Perception checks made to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] and when using Perception for your initiative roll. At 12th level, this status bonus increases to +3, and at 20th level, to +4.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:seek",
+                    "check:type:initiative"
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "type": "status",
+              "value": "ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,12),3,2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "divine",
+              "wandering"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +274,46 @@
       "name": "Roaring Heart",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F6TIEmYYJGmVhMXl",
+        "folder": "vBgIbTFHJPNjzk9l",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Roaring Heart",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your attuned apparition grants Mountain Lore as an apparition skill.</p><hr /><p>You surge forward inexorably. You Stride twice. At any point during this movement, you can @UUID[Compendium.pf2e.actionspf2e.Item.Shove] up to two creatures you pass adjacent to. When you end the movement, the turbulent spirits you're attuned to reward you for acting in an appropriately fierce manner: you and each ally in a @Template[type:emanation|distance:30] gain temporary Hit Points equal to half your level if you successfully Shoved at least one enemy, or equal to your level if you succeeded at Shoving both. These temporary Hit Points last until the beginning of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Roaring Heart]</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "divine",
+              "wandering"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

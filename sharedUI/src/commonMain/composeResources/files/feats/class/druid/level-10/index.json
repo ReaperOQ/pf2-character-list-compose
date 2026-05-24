@@ -7,6 +7,70 @@
       "name": "Elemental Shape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F0MYBfiyOD8YHq5t",
+        "folder": "M2EenC2ORmGp1gYw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elemental Shape",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You understand the fundamental elements of nature such that you can imbue them into your body and manifest as a living embodiment of those elements. Add the shapes in @UUID[Compendium.pf2e.spells-srd.Item.Elemental Form] to your @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] list. Whenever you're polymorphed into another shape using <em>untamed form</em>, you gain resistance 5 to fire.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "predicate": [
+                "self:effect:untamed-form",
+                {
+                  "not": "self:effect:elemental-form"
+                }
+              ],
+              "type": "fire",
+              "value": 5
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Elemental Form"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +80,77 @@
       "name": "Healing Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "85V3vdew0gykEtmu",
+        "folder": "M2EenC2ORmGp1gYw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Healing Transformation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can take advantage of shapechanging magic to close wounds and patch injuries. If your next action is to cast a non-cantrip polymorph spell that targets only one creature, your polymorph spell also restores 1d6 Hit Points per spell rank to that creature. This is a healing effect.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:healing-transformation",
+                "item:trait:polymorph",
+                {
+                  "not": "item:trait:cantrip"
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.HealingTransformation"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "healing-transformation"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +160,92 @@
       "name": "Plant Shape",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "I9rSWQyueWHQyNxe",
+        "folder": "M2EenC2ORmGp1gYw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plant Shape",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can take the shape of a plant creature. If you don't have untamed form, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Plant Form] once per day, heightened to the same rank as your highest-rank druid spell slot.</p>\n<p>If you do have @UUID[Compendium.pf2e.feats-srd.Item.Untamed Form], add the shapes listed in @UUID[Compendium.pf2e.spells-srd.Item.Plant Form] to your @UUID[Compendium.pf2e.spells-srd.Item.Untamed Form] list, and whenever you're polymorphed into another shape using untamed form, you gain resistance 5 to poison.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "leaf order or Untamed Form"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "predicate": [
+                "self:effect:untamed-form",
+                {
+                  "not": "self:effect:plant-form"
+                }
+              ],
+              "type": "poison",
+              "value": 5
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Plant Form (Arboreal)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Plant Form (Flytrap)"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.wildShapeForms",
+              "predicate": [
+                "feat:untamed-form"
+              ],
+              "value": {
+                "value": "Compendium.pf2e.spell-effects.Item.Spell Effect: Plant Form (Shambler)"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +255,47 @@
       "name": "Primal Howl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Cp7UttoCxTyO1pDg",
+        "folder": "M2EenC2ORmGp1gYw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Howl",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your companion can let out a howl laced with your primal magic. It gains the @UUID[Compendium.pf2e.actionspf2e.Item.Primal Howl] advanced maneuver, in addition to any advanced maneuvers it already knows.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Incredible Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +305,47 @@
       "name": "Pristine Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nWxNV9pFeBHV671W",
+        "folder": "M2EenC2ORmGp1gYw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pristine Weapon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your verdant weapon can cut through the resistances of magical creatures. The weapon is treated as cold iron and silver. If you critically hit a creature that has a weakness to cold iron or silver, the target takes @Damage[1d6[bleed]] damage as the primal energies within your weapon slow its natural healing.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Verdant Weapon"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +355,54 @@
       "name": "Side by Side (Druid)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j5Xjr8vZuBhCixIr",
+        "folder": "M2EenC2ORmGp1gYw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Side by Side (Druid)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your animal companion fight in tandem, distracting your foes and keeping them off balance. Whenever you and your animal companion are adjacent to the same foe, you are both flanking that foe with each other, regardless of your actual positions.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animal Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.flanking.canGangUp",
+              "value": "animal-companion"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

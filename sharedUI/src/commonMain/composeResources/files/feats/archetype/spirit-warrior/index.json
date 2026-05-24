@@ -7,6 +7,47 @@
       "name": "Cutting Heaven, Crushing Earth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pe8a7WDz0MIY45uO",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cutting Heaven, Crushing Earth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your skill in combining fist and blade has grown into a seamless art where each attack makes an opponent more vulnerable to the next. As long as you have invested and are wearing a set of handwraps of mighty blows, you also apply their runes to a single weapon you're wielding that can be used with your @UUID[Compendium.pf2e.actionspf2e.Item.Overwhelming Combination] ability. You gain the following benefits.</p><ul><li>When you successfully Strike an opponent with this weapon, it's @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to the next Strike you make against it with a fist unarmed attack before the end of your next turn.</li><li>When you successfully Strike an opponent with your fist unarmed attack, it's off-guard to the next Strike you make against it with a one-handed, agile, or finesse melee weapon before the end of your next turn.</li></ul>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +57,60 @@
       "name": "Flowing Palm Deflection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "74WUIwtTHHFrw0CM",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flowing Palm Deflection",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The simple and precise movements of your hands allow you to deflect blows with the same efficacy as a raised shield. When you parry with your fist, increase the circumstance bonus to AC it grants from +1 to +2.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "not": "hands-free:0"
+                }
+              ],
+              "selector": "ac",
+              "slug": "parry-bonus",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +120,67 @@
       "name": "Gods' Palm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZuKEEP4S4b4fbgAt",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gods' Palm",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You control your spirit energy when you attack, using it to reinforce yourself or to thrust past your enemy's physical defenses. Make a fist Strike; on a success, you can choose to either deal all damage from the attack as spirit damage, or deal damage as normal but gain a number of temporary Hit Points equal to half your level that last for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: God's Palm (Temporary Hit Points)]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.SpiritWarrior.SpiritDamage",
+              "option": "spirit-warrior-spirit-damage",
+              "toggleable": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "predicate": [
+                "spirit-warrior-spirit-damage"
+              ],
+              "property": "damage-type",
+              "selectors": [
+                "fist-damage"
+              ],
+              "value": "spirit"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +190,63 @@
       "name": "Intercepting Hand",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oyE933TmrbRyYqJY",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Intercepting Hand",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your particular martial art includes various defensive actions designed to remove your opponent's ability to cause harm. Your fist unarmed attack gains the disarm trait. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Disarming Interception] action.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Disarming Interception"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:fist"
+              ],
+              "property": "traits",
+              "value": "disarm"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +256,127 @@
       "name": "Kaiju Defense Oath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9MbeKaIV8Xa7H4Of",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Kaiju Defense Oath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've sworn an oath to defend the helpless from dangerous titanic beasts, including kaiju that roam the surface of Golarion. Attacks made as part of your @UUID[Compendium.pf2e.actionspf2e.Item.Overwhelming Combination] ability gain a +4 circumstance bonus to damage against a creature at least 2 sizes larger than you, or +6 if you have master proficiency with the weapon you used. You also gain a +2 circumstance bonus to saving throws and DCs against kaiju hazards. You gain the following edict.</p>\n<p><strong>Edict</strong> You must do everything within your power to protect others from massive creatures they can't defend themselves from; in the event the victims are evil or actively trying to harm you or other innocents, you don't have to save them.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "overwhelming-combination",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "self:size:0",
+                        {
+                          "gte": [
+                            "target:size",
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "and": [
+                        "self:size:1",
+                        {
+                          "gte": [
+                            "target:size",
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "and": [
+                        "self:size:2",
+                        {
+                          "gte": [
+                            "target:size",
+                            4
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "and": [
+                        "self:size:3",
+                        "target:size:5"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "strike-damage",
+              "slug": "kaiju-defense-oath-damage-bonus",
+              "type": "circumstance",
+              "value": 4
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                {
+                  "gte": [
+                    "item:proficiency:rank",
+                    3
+                  ]
+                }
+              ],
+              "selector": "strike-damage",
+              "slug": "kaiju-defense-oath-damage-bonus",
+              "value": 6
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "origin:type:hazard",
+                "origin:trait:kaiju"
+              ],
+              "selector": "saving-throw",
+              "slug": "kaiju-defense-oath-save-bonus",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +386,64 @@
       "name": "Sacred Wilds Oath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZXkVo5iTTT8Uc8jv",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sacred Wilds Oath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've sworn an oath to protect the holy places within nature and the spirits that dwell within, from ancient trees to primordial wild guardians. You can use Diplomacy to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on animals and to make very simple Requests of them. In most cases, wild animals will give you time to make your case. You gain a +2 circumstance bonus to Diplomacy checks to Make an Impression when interacting with a beast, fey, or kami. You gain the following edict.</p>\n<p><strong>Edict</strong> You must aid any animal or nature spirit in need unless it violates your other tenets or puts someone else at risk of immediate harm.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression",
+                {
+                  "or": [
+                    "target:trait:beast",
+                    "target:trait:fey",
+                    "target:trait:kami"
+                  ]
+                }
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +453,48 @@
       "name": "Sheltering Pulse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HP1DKj4FLwtStzYq",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sheltering Pulse",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You thrust your hand or weapon into the ground and release a pulse that creates a sheltering nexus of energy for you and your allies. Choose an unoccupied square within 15 feet. The nexus appears in a @Template[type:emanation|distance:15] around that square and lasts for 3 rounds. You and your allies gain a +1 status bonus to AC while in the area.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Sheltering Pulse]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +504,64 @@
       "name": "Spirit of the Blade",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ho5qkbgW4XxvkXuC",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spirit of the Blade",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You charge your blade with spiritual energy, allowing it to cut through spirits and fiends with fearsome efficiency. The next Strike you make with a melee weapon or fist unarmed attack deals an additional 1d6 spirit damage. This bonus damage is lost if you don't attempt a Strike before the start of your next turn.</p>\n<p>At 10th level, you deal an additional 2d6 spirit damage with this ability, and at 18th level, you deal an additional 3d6 spirit damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "spirit-of-the-blade",
+              "toggleable": true
+            },
+            {
+              "damageType": "spirit",
+              "diceNumber": "ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,10),2,1))",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "spirit-of-the-blade"
+              ],
+              "selector": "melee-strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +571,71 @@
       "name": "Spirit Warrior Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lxfVXvlOK8id3MqA",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spirit Warrior Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p><hr /><p>You're a warrior who trains your spirit and body to work in perfect harmony, enhancing your attacks with your spiritual energy while fighting with a ferocious martial technique that combines blade and fist.</p>\n<p>The damage die for your fist changes to 1d6 instead of 1d4, and your fist gains the parry trait. You don't take the normal –2 circumstance penalty when making a lethal attack with your fist or any other unarmed attacks. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Overwhelming Combination] action.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.bT2NuSZ1h02PFhpJ]{Spirit Warrior}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Overwhelming Combination"
+            },
+            {
+              "fist": true,
+              "img": "systems/pf2e/icons/features/classes/powerful-fist.webp",
+              "key": "Strike"
+            },
+            {
+              "itemId": "xxxxxxFISTxxxxxx",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "property": "damage-dice-faces"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:fist"
+              ],
+              "property": "traits",
+              "value": "parry"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -88,6 +645,66 @@
       "name": "Sword-Light Wave",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8M7iQfVBRuucR6hJ",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sword-Light Wave",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You channel spiritual energy through your weapon, unleashing it as a torrent of devastating power. Make a ranged Strike against an opponent within 60 feet using a one-handed, agile, or finesse melee weapon, or your fist unarmed attack. The attack is made at your normal proficiency with the chosen weapon or fist unarmed attack and has the same traits, damage dice, and runes, but all damage dealt by the attack is spirit damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.SpiritWarrior.SpiritDamage",
+              "option": "spirit-warrior-spirit-damage",
+              "toggleable": true
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "predicate": [
+                "spirit-warrior-spirit-damage"
+              ],
+              "property": "damage-type",
+              "selectors": [
+                "strike-damage"
+              ],
+              "value": "spirit"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -97,6 +714,47 @@
       "name": "Sword of Sealing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Mocz2YVO5cuPVUXC",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sword of Sealing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your spiritual power pierces both body and soul, pinning your foe in place. Make a melee Strike with a one-handed, agile, or finesse weapon, or your fist unarmed attack. On a successful hit, the target must succeed at a @Check[fortitude|against:class-spell] save against the higher of your class DC or your spell DC, or become @UUID[Compendium.pf2e.conditionitems.Item.Immobilized]. The target can end this immobilization with a successful @UUID[Compendium.pf2e.actionspf2e.Item.Escape] attempt using the higher of your class DC or your spell DC as the Escape DC.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -106,6 +764,51 @@
       "name": "Transcendent Deflection",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WglDQlEtHnZ2eFhW",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Transcendent Deflection",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> An enemy within your reach would damage you or your ally with an attack.</p>\n<p><strong>Requirements</strong> You're wielding a one-handed, agile, or finesse melee weapon.</p><hr /><p>You charge your weapon with spiritual energy and intercept the attack. The weapon becomes broken, and the target is unharmed by the attack. If you're carrying another one-handed, agile, or finesse melee weapon, you can immediately Swap it for the broken weapon.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -115,6 +818,74 @@
       "name": "Tricksterbane Oath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VT94b8incDrn91ga",
+        "folder": "HT7OP376Zi9Bd0QI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tricksterbane Oath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've sworn an oath to ferret out and destroy malevolent shapechangers who pose as mortals with evil intent. You gain a +4 circumstance bonus to Perception checks to detect a shapechanged creature's disguise, and a +2 circumstance bonus to attempts to Recall Knowledge about shapechangers. Whenever you use @UUID[Compendium.pf2e.actionspf2e.Item.Overwhelming Combination] against a shapechanged creature, you attempt to counteract one polymorph effect on that creature. The counteract rank is half your level rounded up, and the counteract check modifier is your Charisma modifier + your proficiency bonus with the weapon used to Strike as part of your Overwhelming Combination. You gain the following edict.</p>\n<p><strong>Edict</strong> You must reveal and slay evil or predatory shapechangers you discover or encounter, as long as you have a reasonable chance of success.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Spirit Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "tricksterbane-oath",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "tricksterbane-oath"
+              ],
+              "selector": "perception",
+              "slug": "tricksterbane-oath-perception",
+              "type": "circumstance",
+              "value": 4
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "tricksterbane-oath"
+              ],
+              "selector": "skill-check",
+              "slug": "tricksterbane-oath-recall-knowledge",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

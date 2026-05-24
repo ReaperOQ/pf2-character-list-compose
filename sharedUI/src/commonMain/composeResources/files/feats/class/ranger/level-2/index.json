@@ -7,6 +7,43 @@
       "name": "Animal Empathy (Ranger)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "54BhwBHyp2jp3e26",
+        "folder": "Lxkp4ikwiFOUiNa6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Empathy (Ranger)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have a connection to the creatures of the natural world that allows you to communicate with them on a rudimentary level. You can use Diplomacy to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] on animals and to make very simple @UUID[Compendium.pf2e.actionspf2e.Item.Request]{Requests} of them. In most cases, wild animals will give you time to make your case.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +53,43 @@
       "name": "Favored Terrain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sgo7J9BVofBqwlsF",
+        "folder": "Lxkp4ikwiFOUiNa6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Favored Terrain",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have studied a specific terrain to overcome its challenges. Choose aquatic, arctic, desert, forest, mountain, plains, sky, swamp, or underground as your favored terrain. When in that terrain, you can ignore the effects of non-magical difficult terrain. If you have the unimpeded journey class feature, you gain a second benefit while in your favored terrain, depending on your choice:</p>\n<ul>\n<li><strong>Aquatic</strong> You gain a swim Speed equal to your Speed. If you already had a swim Speed, you instead gain a +10-foot status bonus to your swim Speed.</li>\n<li><strong>Arctic</strong> You need to eat and drink only one-tenth as much as usual, you aren't affected by severe or extreme cold, and you can walk across ice and snow at full Speed without needing to @UUID[Compendium.pf2e.actionspf2e.Item.Balance].</li>\n<li><strong>Desert</strong> You need to eat and drink only one-tenth as much as usual, you aren't affected by severe or extreme heat, and you can walk along sand at full Speed without needing to Balance.</li>\n<li><strong>Forest, Mountain, or Underground</strong> You gain a climb Speed equal to your Speed. If you already had a climb Speed, you instead gain a +10-foot status bonus to your climb Speed.</li>\n<li><strong>Plains</strong> You gain a +10-foot status bonus to your land Speed.</li>\n<li><strong>Sky</strong> You gain a +10-foot status bonus to your fly Speed, if you have one.</li>\n<li><strong>Swamp</strong> You can move across bogs at full Speed, even if they are deep enough to be greater difficult terrain or to normally require you to Swim.</li>\n</ul>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Favored Terrain (Gain Climb Speed)]</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Favored Terrain (Increase Climb Speed)]</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Favored Terrain (Gain Swim Speed)]</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Favored Terrain (Increase Swim Speed)]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +99,85 @@
       "name": "Hunter's Aim",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GFtNQvpzuqtsdOTG",
+        "folder": "Lxkp4ikwiFOUiNa6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hunter's Aim",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you focus on aiming, your attack becomes particularly accurate. Make a ranged weapon Strike against your hunted prey. On this Strike, you gain a +2 circumstance bonus to the attack roll and ignore your prey's @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition and any lesser cover.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "ranged-strike-attack-roll",
+              "key": "RollOption",
+              "option": "hunters-aim",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "hunters-aim",
+                "target:mark:hunted-prey"
+              ],
+              "selector": "ranged-strike-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "hunters-aim",
+                "target:mark:hunted-prey",
+                {
+                  "or": [
+                    "target:condition:concealed",
+                    "target:cover-level:lesser"
+                  ]
+                }
+              ],
+              "selector": "ranged-strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            },
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "target:cover-level:lesser"
+              ],
+              "selectors": "ranged-strike-attack-roll",
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Hunter's Aim"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +187,62 @@
       "name": "Monster Warden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2yq3l8e2Vzz34yRV",
+        "folder": "Lxkp4ikwiFOUiNa6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monster Warden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You understand how to defend against your prey. When you grant bonuses from @UUID[Compendium.pf2e.feats-srd.Item.Monster Hunter], each creature who benefits also gains a +2 circumstance bonus either to their AC the next time the creature attacks them or to their next saving throw against an effect from that particular creature (whichever comes first.)</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Monster Warden]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monster Hunter"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:monster-hunter"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

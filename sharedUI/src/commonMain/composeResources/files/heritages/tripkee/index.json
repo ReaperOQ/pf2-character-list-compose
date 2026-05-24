@@ -1,0 +1,278 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "poisonhide-tripkee.json",
+      "id": "bmA9JK06rnOKpNLr",
+      "name": "Poisonhide Tripkee",
+      "img": "icons/creatures/amphibians/bullfrog-glass-teal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "bmA9JK06rnOKpNLr",
+        "folder": "TuBpBzbE1ZRVisOU",
+        "img": "icons/creatures/amphibians/bullfrog-glass-teal.webp",
+        "name": "Poisonhide Tripkee",
+        "system": {
+          "ancestry": {
+            "name": "Tripkee",
+            "slug": "tripkee",
+            "uuid": "Compendium.pf2e.ancestries.Item.hXM5jXezIki1cMI2"
+          },
+          "description": {
+            "value": "<p>You may be small, but the poison glands concealed across your body hide a deadly defense. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Toxic Skin] reaction.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Toxic Skin"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "riverside-tripkee.json",
+      "id": "87Eej7uEvTxXeli7",
+      "name": "Riverside Tripkee",
+      "img": "icons/creatures/amphibians/treefrog-leaf-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "87Eej7uEvTxXeli7",
+        "folder": "TuBpBzbE1ZRVisOU",
+        "img": "icons/creatures/amphibians/treefrog-leaf-green.webp",
+        "name": "Riverside Tripkee",
+        "system": {
+          "ancestry": {
+            "name": "Tripkee",
+            "slug": "tripkee",
+            "uuid": "Compendium.pf2e.ancestries.Item.hXM5jXezIki1cMI2"
+          },
+          "description": {
+            "value": "<p>Your ancestors live in and on the water. You gain a 15-foot swim Speed.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "snaptongue-tripkee.json",
+      "id": "2kSzKDtwbcILZTIe",
+      "name": "Snaptongue Tripkee",
+      "img": "icons/commodities/biological/tongue-pink.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "2kSzKDtwbcILZTIe",
+        "folder": "TuBpBzbE1ZRVisOU",
+        "img": "icons/commodities/biological/tongue-pink.webp",
+        "name": "Snaptongue Tripkee",
+        "system": {
+          "ancestry": {
+            "name": "Tripkee",
+            "slug": "tripkee",
+            "uuid": "Compendium.pf2e.ancestries.Item.hXM5jXezIki1cMI2"
+          },
+          "description": {
+            "value": "<p>Your tongue is especially long, and you can launch it with extraordinary range and precision. You can use your tongue to deliver spells with a range of touch and perform extremely simple Interact actions, such as opening some types of unlocked doors. Your tongue can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "stickytoe-tripkee.json",
+      "id": "rFdVYKtHsZzRCsSd",
+      "name": "Stickytoe Tripkee",
+      "img": "systems/pf2e/icons/features/ancestry/stickeytoe-tripkee.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "rFdVYKtHsZzRCsSd",
+        "folder": "TuBpBzbE1ZRVisOU",
+        "img": "systems/pf2e/icons/features/ancestry/stickeytoe-tripkee.webp",
+        "name": "Stickytoe Tripkee",
+        "system": {
+          "ancestry": {
+            "name": "Tripkee",
+            "slug": "tripkee",
+            "uuid": "Compendium.pf2e.ancestries.Item.hXM5jXezIki1cMI2"
+          },
+          "description": {
+            "value": "<p>Your hands and feet exude a film that helps them adhere to surfaces. You gain a +2 circumstance bonus to your Fortitude and Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] you. When ascending trees, vines, and other foliage, if you roll a success on the Athletics check to Climb, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:disarm",
+                    "action:shove",
+                    "action:trip",
+                    "action:reposition"
+                  ]
+                }
+              ],
+              "selector": [
+                "fortitude-dc",
+                "reflex-dc"
+              ],
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb",
+                {
+                  "or": [
+                    "terrain:forest",
+                    "terrain:foliage"
+                  ]
+                }
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "thickskin-tripkee.json",
+      "id": "2QLKvmCimT9ai0Bi",
+      "name": "Thickskin Tripkee",
+      "img": "icons/creatures/amphibians/bullfrog-glowing-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "2QLKvmCimT9ai0Bi",
+        "folder": "TuBpBzbE1ZRVisOU",
+        "img": "icons/creatures/amphibians/bullfrog-glowing-green.webp",
+        "name": "Thickskin Tripkee",
+        "system": {
+          "ancestry": {
+            "name": "Tripkee",
+            "slug": "tripkee",
+            "uuid": "Compendium.pf2e.ancestries.Item.hXM5jXezIki1cMI2"
+          },
+          "description": {
+            "value": "<p>Your thick leathery skin resembles that of a toad. You gain 8 Hit Points from your ancestry instead of 6. You gain a +1 circumstance bonus to saves against diseases and poisons.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.ancestryhp",
+              "priority": 51,
+              "value": 8
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "windweb-tripkee.json",
+      "id": "xaTTN5anLEBzWCzv",
+      "name": "Windweb Tripkee",
+      "img": "icons/commodities/biological/foot-amphibian-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "xaTTN5anLEBzWCzv",
+        "folder": "TuBpBzbE1ZRVisOU",
+        "img": "icons/commodities/biological/foot-amphibian-green.webp",
+        "name": "Windweb Tripkee",
+        "system": {
+          "ancestry": {
+            "name": "Tripkee",
+            "slug": "tripkee",
+            "uuid": "Compendium.pf2e.ancestries.Item.hXM5jXezIki1cMI2"
+          },
+          "description": {
+            "value": "<p>Tough webbing along your hands and toes can slow any fall. As long as you have one hand free, you take no falling damage, regardless of the distance you fall.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

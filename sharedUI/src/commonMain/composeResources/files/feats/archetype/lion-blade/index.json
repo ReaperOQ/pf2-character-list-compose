@@ -7,6 +7,47 @@
       "name": "Crowd Mastery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DR6vessIpXTLM6Xa",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crowd Mastery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You use the crowd to your advantage, diverting your foes' attention to potential hidden dangers in the crowd. When determining if your foe is flanked, treat all squares occupied by a crowd as if they were occupied by an ally with a melee reach of 5 feet.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lost in the Crowd"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +57,62 @@
       "name": "Expeditious Advance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0Gao1ez4dGH6dIZ2",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expeditious Advance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are unarmored or wearing light armor.</p>\n<hr />\n<p>You advance and retreat quickly. You gain a +10-foot status bonus to your speed.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "armor:category:unarmored",
+                    "armor:category:light"
+                  ]
+                }
+              ],
+              "selector": "land-speed",
+              "type": "status",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +122,47 @@
       "name": "Flickering Twirl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SyxXnSk2R0AM9HSn",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flickering Twirl",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You use your movements and disguises to make yourself a flickering blur. You gain @UUID[Compendium.pf2e.conditionitems.Item.Concealed]{Concealment} until your next turn. As usual for concealment involving an obvious visual manifestation, you can't use this concealment to @UUID[Compendium.pf2e.actionspf2e.Item.Hide].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +172,63 @@
       "name": "Inspiring Recitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c2UuV5n5leFx9vlU",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Inspiring Recitation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You quietly speak or recall coded phrases and metaphors whose meanings inspire you to complete your mission. You gain a +1 status bonus to one skill of your choice until the beginning of your next turn. You can Sustain this effect for up to 1 minute. If you're an expert in Performance, the bonus increases to +2. If you're a master in Performance, the bonus is +3, and if you're legendary, the bonus is +4.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Inspiring Recitation",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Inspiring Recitation"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "emotion",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +238,52 @@
       "name": "Interposing Crowd",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cELaMZVilk3vkrrM",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Interposing Crowd",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your enemies can't stop you when there's a host of people between you. Your movement actions don't trigger reactions as long as you remain in a crowd for the entire duration of the action.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lost in the Crowd"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +293,78 @@
       "name": "Lion Blade Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zNxbsYgQgPVxdTLV",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lion Blade Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're from Taldor.</p><hr /><p>Your Lion Blade spy training helps you conceal yourself and your identity. You become trained in your choice of Deception or Stealth; if you were already trained in that skill, you become an expert instead. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat for Espionage Lore. If you were already trained in Espionage Lore, you also become trained in a Lore skill of your choice.</p>\n<p>You never take circumstance penalties for attempting to take a disguise of a different ancestry, age, and so on, as long as the disguised form is appropriate for your size.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.COTDddn4psjIoWry]{Lion Blade}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "member of the Lion Blades"
+              },
+              {
+                "value": "trained in Performance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Deception",
+                  "value": "deception"
+                },
+                {
+                  "label": "PF2E.Skill.Stealth",
+                  "value": "stealth"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +374,52 @@
       "name": "Lion's Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hh0e2aeFjQOwu51T",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lion's Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Many Lion Blades enhance their words with a bit of magic. You can cast a 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.Suggestion] as an occult innate spell once per day. At 12th level, you can also cast a 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.Subconscious Suggestion] once per day.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +429,47 @@
       "name": "Lost in the Crowd",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d8RfatiK9UOQANLz",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lost in the Crowd",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've learned how to move as one with crowds and hide among them, vanishing into a busy street in the flicker of an eye. You move at full Speed in crowds and can use cover from crowds to @UUID[Compendium.pf2e.actionspf2e.Item.Hide] and @UUID[Compendium.pf2e.actionspf2e.Item.Sneak], gaining a +2 circumstance bonus to your Stealth checks when in a crowd of at least 10 creatures and a +4 circumstance bonus to your Stealth checks when in a crowd of at least 100 creatures.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Lost in the Crowd]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +479,56 @@
       "name": "Slowing Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "v2AScyQidSsrfm6z",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Slowing Strike",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Trigger</strong> Your Strike hits an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] creature and deals damage.</p><hr /><p>You wound your enemy so they can't move nimbly. The target must attempt a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes a –10-foot status penalty to its Speeds until the beginning of your next turn.</p>\n<p><strong>Failure</strong> As success, but the penalty lasts for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -88,6 +538,47 @@
       "name": "Spy's Countermeasures",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2xxFg9yRuCDpME3z",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spy's Countermeasures",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You succeed at a save against a detection, mental, or scrying effect.</p><hr /><p>You've learned how to analyze and fake your responses to the most common magic used against spies. You can attempt to identify the effect via @UUID[Compendium.pf2e.actionspf2e.Item.Identify Magic] using the magical tradition skill of the effect or Espionage Lore, even if you didn't notice the spell being cast.</p>\n<p>If you successfully identify the triggering effect, and it would normally fail or have no effect, you can make the caster of the triggering effect think the effect or spell succeeded. If they would obtain a result, such as receive a piece of information, you decide what that result is. If the effect would influence you to take certain actions, you can make it appear as if you were affected and attempt to play along; if the effect normally establishes a mental link, it functions normally, but you can disregard any commands you receive through the link.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -97,6 +588,53 @@
       "name": "Stunning Surprise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lM9WNBFmOyoCJblW",
+        "folder": "bviEMqBLpX2bzyPl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stunning Surprise",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You must be undetected by the target creature.</p><hr /><p>You quickly move in to bring your foe down with a single blow. You move up to your Speed then make a melee Strike. If you hit and deal damage, your foe must attempt a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher. Regardless of the save outcome, the creature then becomes immune to your Stunning Surprise for 24 hours.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and can't use reactions until its next turn.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3} and can't use reactions until its next turn.</p>\n<p><strong>Critical Failure</strong> The creature falls @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] for 1 minute.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lion Blade Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "incapacitation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

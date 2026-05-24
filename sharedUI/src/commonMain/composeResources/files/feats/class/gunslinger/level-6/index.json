@@ -7,6 +7,80 @@
       "name": "Advanced Shooter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HBZSP3ABqmsV9FXH",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Shooter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've dedicated your training to mastering even the most complex and weird firearms and crossbows from across the world. You gain proficiency with all advanced firearms as if they were martial firearms and with all advanced crossbows as if they were martial crossbows.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:category:advanced",
+                {
+                  "or": [
+                    "item:group:crossbow",
+                    "item:group:firearm"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedFirearmsCrossbows",
+              "predicate": [
+                "class:gunslinger"
+              ],
+              "priority": 50,
+              "value": "@actor.system.proficiencies.attacks.martial-firearms-crossbows.rank"
+            },
+            {
+              "definition": [
+                "item:category:advanced",
+                {
+                  "or": [
+                    "item:group:crossbow",
+                    "item:group:firearm"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedFirearmsCrossbows",
+              "predicate": [
+                "feat:gunslinger-dedication"
+              ],
+              "priority": 15,
+              "sameAs": "simple"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +90,44 @@
       "name": "Cauterize",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9p4oFIn791VAmzUn",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cauterize",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded firearm and you or an adjacent ally are taking persistent bleed damage.</p>\n<hr />\n<p>You use the smoking barrel of your firearm to sear shut a bleeding wound. Make a Strike with your firearm. You then press the heated barrel to the wounds of you or an ally within reach that is taking persistent bleed damage, giving an immediate flat check to end the bleed with the lower DC for particularly effective assistance.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +137,48 @@
       "name": "Drifter's Juke",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FNO2hfGmxqJngD4A",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Drifter's Juke",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a firearm or crossbow in one hand, and your other hand is either wielding a melee weapon or is empty.</p>\n<hr />\n<p>You move in and out of range to complement your attacks. You Step, make a Strike, Step, and make another Strike. One Strike must be a ranged Strike using your firearm or crossbow, and the other must be a melee Strike using your melee weapon or unarmed attack. You can choose not to take one or both Steps.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Way of the Drifter"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +188,76 @@
       "name": "Munitions Machinist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lh3STEvbGnP7jVMr",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Munitions Machinist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Jkl5KOZih7MoMqAJ#quick-alchemy-benefits] benefits, creating up to 4 versatile vials during your daily preparations. You can use @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy] only to create bombs or alchemical ammunition. Using Quick Alchemy to create alchemical ammunition also counts as 1 action toward activating that ammunition.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Munitions Crafter"
+              },
+              {
+                "value": "expert in Crafting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Quick Alchemy"
+            },
+            {
+              "itemUUID": "Compendium.pf2e.equipment-srd.Item.Versatile Vial",
+              "key": "SpecialResource",
+              "label": "PF2E.SpecificRule.Alchemist.VersatileVials",
+              "level": "ternary(gte(@actor.level, 18), 18, ternary(gte(@actor.level, 12), 12, ternary(gte(@actor.level, 4), 4, 1)))",
+              "max": 4,
+              "slug": "versatile-vials"
+            },
+            {
+              "craftableItems": [
+                "item:trait:alchemical",
+                {
+                  "or": [
+                    "item:group:bomb",
+                    "item:type:ammo"
+                  ]
+                }
+              ],
+              "key": "CraftingAbility",
+              "slug": "quick-alchemy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +267,47 @@
       "name": "Phalanx Breaker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BkEOwv3SRtefczpO",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Phalanx Breaker",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a two-handed firearm or a two-handed crossbow.</p>\n<hr />\n<p>You know that to take out an enemy formation, you must punch a hole through its center. Make a ranged Strike with the required weapon against a target within the weapon's first range increment. The target is pushed directly back 10 feet (20 feet on a critical hit), and if this pushes the target into an obstacle, the target takes bludgeoning damage equal to half your level.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Way of the Vanguard"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +317,51 @@
       "name": "Pistolero's Challenge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yOyMlFGAgLfRas8m",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pistolero's Challenge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a stern call, carefully chosen barb, or some other challenging declaration, you demand your foe's attention in a duel. Choose an opponent within 30 feet who you can perceive and can hear you, and make your choice of a @Check[deception|defense:will] or @Check[intimidation|defense:will] check against the target's Will DC. No matter the result of the check, the foe is temporarily immune to your Pistolero's Challenge until noon the next day.</p>\n<p><strong>Success</strong> Both you and the opponent gain a +2 status bonus to damage rolls with Strikes made against each other. If you're a master in the skill you used for the check, the status bonus to damage rolls increases to +3, and if you're legendary, it increases to +4.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Pistolero's Challenge]</p>\n<p>You can have only one challenge in effect at a time; challenging a new opponent ends this effect on any current target. Otherwise, the effect lasts until one of you is defeated, flees, or the encounter ends.</p>\n<p><strong>Critical Failure</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} and can't use this ability again for 1 minute.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Way of the Pistolero"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "flourish",
+              "gunslinger",
+              "linguistic",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +371,43 @@
       "name": "Scatter Blast",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L9sRaFl0tHT5AFIQ",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scatter Blast",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded firearm that has the scatter trait.</p>\n<hr />\n<p>You pack your weapon with additional shot and powder, creating a risky but devastating wave of destruction. Make a ranged Strike with the firearm. The firearm's range increment increases by 20 feet and the radius of its scatter increases by 20 feet. The Strike gains the following failure conditions.</p>\n<p><strong>Failure</strong> The firearm misfires, but it doesn't cause the other critical failure effects listed below.</p>\n<p><strong>Critical Failure</strong> The firearm misfires and also explodes. It becomes broken, and it deals its normal weapon damage to all creatures in a @Template[burst|distance:20] centered on the firearm, with a basic Reflex save against your class DC. This damage includes any from the weapon's fundamental and property runes.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -70,6 +417,81 @@
       "name": "Sniper's Aim",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Wn3DWAXo2TRxrhI6",
+        "folder": "L530Sm40Wd1WZ334",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sniper's Aim",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You take an extra moment to carefully sync your aim and breathing, then fire a shot with great accuracy. Make a ranged weapon Strike. You gain a +2 circumstance bonus to this Strike's attack roll and ignore the target's concealment. If you're using a kickback firearm, you don't take the normal circumstance penalty on this Strike for not having the required Strength modifier or firing without using a stabilizer.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Way of the Sniper"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "snipers-aim",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "snipers-aim"
+              ],
+              "selector": "ranged-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "target:condition:concealed"
+              ],
+              "selector": "ranged-attack-roll",
+              "text": "PF2E.SpecificRule.SnipersAim.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                "snipers-aim"
+              ],
+              "selector": "strike-attack-roll",
+              "slug": "kickback",
+              "suppress": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

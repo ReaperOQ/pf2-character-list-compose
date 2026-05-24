@@ -1,0 +1,338 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "budding-speaker-centaur.json",
+      "id": "1FmcZqnmDm8H0DRB",
+      "name": "Budding Speaker Centaur",
+      "img": "icons/magic/nature/symbol-moon-stars-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "1FmcZqnmDm8H0DRB",
+        "folder": "MORwBv0P0zPrX27k",
+        "img": "icons/magic/nature/symbol-moon-stars-white.webp",
+        "name": "Budding Speaker Centaur",
+        "system": {
+          "ancestry": {
+            "name": "Centaur",
+            "slug": "centaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.pJkQlFTvpQ5GjZ5e"
+          },
+          "description": {
+            "value": "<p>You were born with a spark of magic that could set you on the path to becoming a Greenspeaker or Faithspeaker. Select divine or primal. If you selected divine, you're a Faithspeaker. If you selected primal, you're a Greenspeaker. This choice can't be changed. You gain one cantrip from the chosen spell list. You can cast this spell as an innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.TraitDivine",
+                  "value": "faithspeaker"
+                },
+                {
+                  "label": "PF2E.TraitPrimal",
+                  "value": "greenspeaker"
+                }
+              ],
+              "key": "ChoiceSet",
+              "rollOption": "centaur-speaker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "fleetwind-centaur.json",
+      "id": "z16zRyLCeTXan0Ae",
+      "name": "Fleetwind Centaur",
+      "img": "icons/skills/movement/arrow-upward-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "z16zRyLCeTXan0Ae",
+        "folder": "MORwBv0P0zPrX27k",
+        "img": "icons/skills/movement/arrow-upward-yellow.webp",
+        "name": "Fleetwind Centaur",
+        "system": {
+          "ancestry": {
+            "name": "Centaur",
+            "slug": "centaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.pJkQlFTvpQ5GjZ5e"
+          },
+          "description": {
+            "value": "<p>You're sleek of frame and capable of reaching incredible speeds on hooves alone. Your Speed increases by 5 feet.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "ironhoof-centaur.json",
+      "id": "XQp3uReCgoXS8hCJ",
+      "name": "Ironhoof Centaur",
+      "img": "icons/sundries/misc/horseshoe-iron.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "XQp3uReCgoXS8hCJ",
+        "folder": "MORwBv0P0zPrX27k",
+        "img": "icons/sundries/misc/horseshoe-iron.webp",
+        "name": "Ironhoof Centaur",
+        "system": {
+          "ancestry": {
+            "name": "Centaur",
+            "slug": "centaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.pJkQlFTvpQ5GjZ5e"
+          },
+          "description": {
+            "value": "<p>Your hooves are incredibly strong and serve as formidable weapons. You gain a hoof unarmed attack that deals 1d6 bludgeoning damage. Your hooves are in the brawling group and have the finesse and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/sundries/misc/horseshoe-iron.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Hoof",
+              "slug": "hoof",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "mottle-coat-centaur.json",
+      "id": "3aKeX3q9hRdxgP1J",
+      "name": "Mottle-Coat Centaur",
+      "img": "icons/commodities/leather/fur-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "3aKeX3q9hRdxgP1J",
+        "folder": "MORwBv0P0zPrX27k",
+        "img": "icons/commodities/leather/fur-white.webp",
+        "name": "Mottle-Coat Centaur",
+        "system": {
+          "ancestry": {
+            "name": "Centaur",
+            "slug": "centaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.pJkQlFTvpQ5GjZ5e"
+          },
+          "description": {
+            "value": "<p>Your coat is mottled or striped, granting you natural camouflage in your home environment. Select a terrain from the following: arctic, desert, forest, mountain, plains, or swamp. In your selected terrain, you gain a +1 circumstance bonus to Stealth checks to @UUID[Compendium.pf2e.actionspf2e.Item.Hide] or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak] and to Deception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Feint].</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Terrain.Arctic",
+                  "value": "arctic"
+                },
+                {
+                  "label": "PF2E.Terrain.Desert",
+                  "value": "desert"
+                },
+                {
+                  "label": "PF2E.Terrain.Forest",
+                  "value": "forest"
+                },
+                {
+                  "label": "PF2E.Terrain.Mountain",
+                  "value": "mountain"
+                },
+                {
+                  "label": "PF2E.Terrain.Plains",
+                  "value": "plain"
+                },
+                {
+                  "label": "PF2E.Terrain.Swamp",
+                  "value": "swamp"
+                }
+              ],
+              "flag": "terrain",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.TerrainExpertise.Prompt"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "terrain:{item|flags.system.rulesSelections.terrain}",
+                {
+                  "or": [
+                    "action:hide",
+                    "action:sneak",
+                    "action:feint"
+                  ]
+                }
+              ],
+              "selector": [
+                "stealth",
+                "deception"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "ponygait-centaur.json",
+      "id": "2GmWdSNbH4yx9pzY",
+      "name": "Ponygait Centaur",
+      "img": "icons/environment/creatures/horses.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "2GmWdSNbH4yx9pzY",
+        "folder": "MORwBv0P0zPrX27k",
+        "img": "icons/environment/creatures/horses.webp",
+        "name": "Ponygait Centaur",
+        "system": {
+          "ancestry": {
+            "name": "Centaur",
+            "slug": "centaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.pJkQlFTvpQ5GjZ5e"
+          },
+          "description": {
+            "value": "<p>You are smaller than most other centaurs, though no less fleet of foot. Instead of Large, your size is Medium. You gain a +1 circumstance bonus to Reflex saving throws.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "value": "medium"
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "reflex",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "stoutheart-centaur.json",
+      "id": "raDHBXYpc2MvWWgh",
+      "name": "Stoutheart Centaur",
+      "img": "icons/magic/life/heart-glowing-red.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "raDHBXYpc2MvWWgh",
+        "folder": "MORwBv0P0zPrX27k",
+        "img": "icons/magic/life/heart-glowing-red.webp",
+        "name": "Stoutheart Centaur",
+        "system": {
+          "ancestry": {
+            "name": "Centaur",
+            "slug": "centaur",
+            "uuid": "Compendium.pf2e.ancestries.Item.pJkQlFTvpQ5GjZ5e"
+          },
+          "description": {
+            "value": "<p>You're a hardy centaur, firm of stance and strong of heart. You gain 10 Hit Points from your ancestry instead of 8 and gain a +1 circumstance bonus to Acrobatics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] and to your Reflex DC to avoid being tripped.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.ancestryhp",
+              "priority": 51,
+              "value": 10
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:balance"
+              ],
+              "selector": "acrobatics",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:trip"
+              ],
+              "selector": "reflex-dc",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

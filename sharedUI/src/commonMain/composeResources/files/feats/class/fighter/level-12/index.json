@@ -7,6 +7,72 @@
       "name": "Brutal Finish",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tGXJU6yx7bYuyLvd",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brutal Finish",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a melee weapon in two hands.</p>\n<hr />\n<p>Your final blow can make an impact even if it rebounds off a foe's defenses. Make a Strike with a melee weapon you're wielding in two hands. After the Strike, your turn ends. The Strike deals one additional weapon damage die, or two additional weapon damage dice if you're at least 18th level. The Strike also gains the following failure effect.</p>\n<p><strong>Failure</strong> You deal damage equal to one weapon damage die of the required weapon. Increase this to two dice if you're at least 18th level.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "brutal-finish",
+              "toggleable": true
+            },
+            {
+              "diceNumber": "ternary(gte(@actor.level,18),2,1)",
+              "key": "DamageDice",
+              "predicate": [
+                "item:type:weapon",
+                "brutal-finish"
+              ],
+              "selector": "melee-strike-damage"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure"
+              ],
+              "predicate": [
+                "brutal-finish",
+                "item:type:weapon"
+              ],
+              "selector": "melee-strike-attack-roll",
+              "text": "PF2E.SpecificRule.Fighter.BrutalFinish.Note",
+              "title": "PF2E.Check.Result.Degree.Check.failure"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +82,44 @@
       "name": "Dashing Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d1jQ0HyIOyUdCCaN",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dashing Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are adjacent to an enemy.</p>\n<hr />\n<p>Springing away from one foe, you Strike at another. Stride up to your Speed, but you must end that movement within melee reach of a different enemy. At the end of your movement, make a melee Strike against an enemy now within reach. You can use Dashing Strike while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +129,52 @@
       "name": "Dueling Dance (Fighter)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FYz5eQeTox9IDkSd",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dueling Dance (Fighter)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a single one-handed melee weapon and hold nothing else in your hands.</p>\n<hr />\n<p>Using a free hand as pivot and balance, you both attack and defend with your weapon. While you are in this stance, you constantly have the benefits of @UUID[Compendium.pf2e.feats-srd.Item.Dueling Parry].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dueling Parry"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Dueling Dance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Dueling Dance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +184,47 @@
       "name": "Flinging Shove",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d6Vb8D9yOX93mdUI",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Flinging Shove",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Whether you're shoving opponents with a shield or a large weapon, you've learned to push them even further. Increase the distance you @UUID[Compendium.pf2e.actionspf2e.Item.Shove] your opponent with @UUID[Compendium.pf2e.feats-srd.Item.Aggressive Block] or @UUID[Compendium.pf2e.feats-srd.Item.Brutish Shove] to 10 feet on a success or 20 feet on a critical success. When you use Aggressive Block, you can choose whether the target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] or Shoved. When you make a Brutish Shove, you also Shove the target 5 feet on a failure.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aggressive Block or Brutish Shove"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +234,47 @@
       "name": "Improved Dueling Riposte",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mgs7vxq6d3hQoswa",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improved Dueling Riposte",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your weapon whirls and darts, striking foes whenever the slightest opening or moment of weakness presents itself. You can use @UUID[Compendium.pf2e.feats-srd.Item.Dueling Riposte] even if you aren't benefiting from @UUID[Compendium.pf2e.feats-srd.Item.Dueling Parry] (though you must be wielding a single one-handed weapon and nothing else). At the start of each of your turns, you gain an additional reaction that you can use only to make a Dueling Riposte.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dueling Riposte"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +284,49 @@
       "name": "Incredible Ricochet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fCDC53WOOYrsyVIR",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incredible Ricochet",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>After your first shot singles out your opponent's position, you direct another that ricochets around obstacles and strikes unerringly. Make a ranged weapon Strike against a creature you previously attacked this turn. You ignore the target's @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition and all cover.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Incredible Aim"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "fighter",
+              "press"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +336,55 @@
       "name": "Lunging Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZghzLmYgeE19GqjP",
+        "folder": "SfCEEVMYOlucYEYb",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lunging Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a melee weapon.</p>\n<hr />\n<p>Your body coiled to strike, you can lash out at distant enemies. While you are in this stance, you can use @UUID[Compendium.pf2e.actionspf2e.Item.Reactive Strike] against a creature that is outside your reach but within the reach you would have with a @UUID[Compendium.pf2e.feats-srd.Item.Lunge]. If you do, you increase your range with the Strike by 5 feet.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Lunge"
+              },
+              {
+                "value": "Reactive Strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Lunging Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Lunging Stance"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

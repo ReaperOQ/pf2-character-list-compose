@@ -7,6 +7,52 @@
       "name": "Awaken Others",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IsQEDgcyM10kyHTq",
+        "folder": "R1390QyyGfVg3bqU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Awaken Others",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can awaken others just through contact and communication. You learn the @UUID[Compendium.pf2e.spells-srd.Item.Awaken Animal] ritual. You use your own nature to supplement the ritual, so it costs 1/10 the value on the Creature Creation Rituals table instead of 1/5. If you would get a critical failure on the check, you instead get a failure.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.spells-srd.Item.Awaken Animal"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +62,53 @@
       "name": "Digger",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fPYf0uKRz3ce29PR",
+        "folder": "R1390QyyGfVg3bqU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Digger",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are used to building homes and defenses underground. You gain a burrow Speed of 15 feet.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "running animal or climbing animal heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "burrow",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +118,47 @@
       "name": "Sharpened Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jP0D4CIyloiBaEh4",
+        "folder": "R1390QyyGfVg3bqU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sharpened Senses",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p>Your senses have become so sharp that you notice changes subconsciously. You @UUID[Compendium.pf2e.actionspf2e.Item.Seek]. If you use one of your senses from Natural Senses, you gain a +2 circumstance bonus to the check.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

@@ -7,6 +7,83 @@
       "name": "Brutal Critical",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oNHmfpe8ezZ3eKDD",
+        "folder": "YKhcT1u59YeMzBdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brutal Critical",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your critical hits are particularly devastating. On a critical hit with a melee Strike, add one extra damage die. This is in addition to any extra dice you gain if the weapon is deadly or fatal. The target also takes persistent bleed damage equal to two damage dice.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "critical": true,
+              "diceNumber": 1,
+              "key": "DamageDice",
+              "predicate": [
+                {
+                  "or": [
+                    "item:melee",
+                    {
+                      "and": [
+                        "item:trait:thrown",
+                        "feat:raging-thrower"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "critical": true,
+              "damageType": "bleed",
+              "diceNumber": 2,
+              "key": "DamageDice",
+              "predicate": [
+                {
+                  "or": [
+                    "item:melee",
+                    {
+                      "and": [
+                        "item:trait:thrown",
+                        "feat:raging-thrower"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +93,64 @@
       "name": "Perfect Clarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JkQjKyzfhMWLr9Gs",
+        "folder": "YKhcT1u59YeMzBdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Perfect Clarity",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fail or critically fail an attack roll or Will save.</p><hr /><p>You burn out all your rage to ensure that your attack lands and your mind remains free. Reroll the triggering attack roll or Will save with a +2 circumstance bonus, and use the better result. You then immediately stop raging.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "perfect-clarity",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "perfect-clarity"
+              ],
+              "selector": [
+                "attack-roll",
+                "will"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "fortune",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +160,44 @@
       "name": "Vicious Evisceration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i3hALsjbjk9FdbGN",
+        "folder": "YKhcT1u59YeMzBdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vicious Evisceration",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a vicious strike that maims your enemy. Make a melee Strike. If the Strike hits and deals damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}, or @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2} on a critical success.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +207,48 @@
       "name": "Whirlwind Toss",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XenKYUBMWZQQ7niM",
+        "folder": "YKhcT1u59YeMzBdB",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whirlwind Toss",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You whirl a foe to smash into all nearby creatures before throwing them far away. You @UUID[Compendium.pf2e.feats-srd.Item.Thrash]. During this Thrash, your @UUID[Compendium.pf2e.feats-srd.Item.Collateral Thrash] feat applies to all other enemies adjacent to you. You can then throw the @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] creature 10 feet, where they fall @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p>If the enemy you choose for Collateral Thrash is also adjacent to you, it attempts only one save and takes the damage only once.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Collateral Thrash"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

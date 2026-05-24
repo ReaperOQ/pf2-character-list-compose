@@ -7,6 +7,62 @@
       "name": "Brilliant Flash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BA7fzRbqpmeWrgqg",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brilliant Flash",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your light cleanses souls of fear. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Flash of Grandeur], the attacker is also @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] for 1 round.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "grandeur cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:flash-of-grandeur"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +72,50 @@
       "name": "Deity's Domain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FXKIALDXAzEBfj5A",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deity's Domain",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You embody an aspect of your deity. Choose one of your deity's domains. You gain the domain's initial domain spell as a devotion spell.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "choices": "system.details.deities.domains",
+              "flag": "deitysDomain",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.DeitysDomain"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +125,47 @@
       "name": "Desperate Prayer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WYaKRREZUSH0jel5",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Desperate Prayer",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You begin your turn and have no Focus Points.</p><hr /><p>You call out to your deity in a plea for their aid. You gain 1 Focus Point, which you can spend only to cast a devotion spell. If you don't spend this Focus Point by the end of this turn, it is lost</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +175,43 @@
       "name": "Faithful Steed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9umJBQEcV1Fax4bd",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Faithful Steed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the service of a young animal companion as a mount. See Animal Companions. If you have the holy or unholy trait, your mount gains it as well, as do the mount's Strikes. Typically, the steed is an animal companion with the mount ability (such as a horse). The GM might allow another animal companion option, or allow the creature to have a different appearance that thematically fits your deity.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +221,68 @@
       "name": "Iron Repercussions",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XttSGDuAsRDTuvgS",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Iron Repercussions",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Disobeying your @UUID[Compendium.pf2e.actionspf2e.Item.Iron Command] has lasting consequences. If an enemy refuses to kneel to you, you can deal @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[persistent,mental]]{persistent mental damage} instead of normal mental damage. You must decide whether the mental damage will be persistent before your enemy chooses whether to kneel or not. The amount of damage is unchanged.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "obedience cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "iron-repercussions",
+              "toggleable": true
+            },
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:iron-command",
+                "iron-repercussions"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Champion.IronRepercussions.Description"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +292,63 @@
       "name": "Nimble Reprisal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iTdbkP07UFMOo1rI",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nimble Reprisal",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can use @UUID[Compendium.pf2e.actionspf2e.Item.Retributive Strike] at greater distance. You can use a ranged weapon to make a ranged Strike instead of a melee Strike for Retributive Strike. The enemy needs to be in range, but not in reach, and it must still be in your champion's aura.</p>\n<p>You can also make melee Strikes against enemies a bit farther away. If the enemy that triggered your reaction is outside your reach but is within 5 feet of your reach, as part of your reaction you can Step to put the enemy in your reach before making a melee Retributive Strike.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "justice cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:retributive-strike"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Champion.RangedReprisal.Description"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -61,6 +358,57 @@
       "name": "Ongoing Selfishness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MRMW0EiuOO20pzG2",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ongoing Selfishness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your powerful personality and incredible ego demand that you protect yourself above all else. After you use @UUID[Compendium.pf2e.actionspf2e.Item.Selfish Shield], you gain resistance to all further damage from the triggering enemy until the end of the turn on which you used the reaction. This resistance is equal to half your Selfish Shield resistance.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "desecration cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "self:effect:selfish-shield"
+              ],
+              "selector": "damage-received",
+              "text": "PF2E.SpecificRule.Champion.OngoingSelfishness.Description",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -70,6 +418,62 @@
       "name": "Unimpeded Step",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "epfQ2PwNDLwyY31t",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unimpeded Step",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a burst of divine liberation, your ally's movement from your @UUID[Compendium.pf2e.actionspf2e.Item.Liberating Step] is unaffected by difficult terrain, greater difficult terrain, narrow surfaces, and uneven ground. If you have the exalted reaction benefit, this applies to everyone who Steps.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "liberation cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:liberating-step"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Champion.UnimpededStep.Description"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -79,6 +483,57 @@
       "name": "Vicious Vengeance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KaCpXuYuho3nnDUy",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vicious Vengeance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While your vengeance is painful for both you and your foe, none can doubt that your enemies suffer more. You gain a circumstance bonus to the damage you deal from @UUID[Compendium.pf2e.actionspf2e.Item.Destructive Vengeance] equal to the number of damage dice from the reaction. This only applies to the damage the enemy takes, not the damage to yourself or the extra damage you gain after using the reaction.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "iniquity cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "destructive-vengeance:enemy"
+              ],
+              "selector": "destructive-vengeance-inline-damage",
+              "type": "circumstance",
+              "value": "ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1)))))"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -88,6 +543,68 @@
       "name": "Weight of Guilt",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2c9awqDem5OLK47S",
+        "folder": "QExIdYAlTXJbOXwF",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weight of Guilt",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Guilt clouds the minds of those who ignore your @UUID[Compendium.pf2e.actionspf2e.Item.Glimpse of Redemption]. Instead of making the triggering creature enfeebled 2, you can make it @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} for the same duration.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "redemption cause"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "weight-of-guilt",
+              "toggleable": true
+            },
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "weight-of-guilt",
+                "item:slug:glimpse-of-redemption"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Champion.WeightOfGuilt.Description"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

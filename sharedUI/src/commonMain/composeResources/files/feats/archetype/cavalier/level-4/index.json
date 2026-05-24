@@ -7,6 +7,50 @@
       "name": "Cavalier's Banner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CAaXGhHDMRM3Pt4J",
+        "folder": "IuIPGmNZ63y8yWxq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cavalier's Banner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have pledged your service to a specific organization or ideal (see Cavalier Pledges, below).</p><hr /><p>You fly the banner of your pledge from your mount, raising your allies' spirits. You and all allies within 30 feet gain a +1 circumstance bonus to Will saves and DCs against fear effects. If your banner is destroyed or removed, allies within 30 feet become @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Cavalier's Banner]</p><hr /><p><strong>CAVALIER PLEDGES</strong></p>\n<p>Many cavaliers pledge themselves in service to a specific organization or individual, such as a noble family or sovereign ruler, a knightly order or another organization, or a particular ideal. A cavalier pledged to an order or ideal must uphold its edicts and is beholden to any anathema it has; for example, a cavalier pledged to the druid's animal order would be tied to that anathema, while a cavalier pledged to the church of Abadar would be held to the same standards as a cleric of that god. If you pledge yourself to an entity or cause without a stated anathema, you should work with your GM to determine the edicts and anathema associated with your pledge.</p>\n<p>Cavaliers who have pledged themselves can gain access to certain abilities related to that pledge, such as Cavalier's Banner. If you violate the anathema of your pledge, you lose access to those feats until you benefit from an @UUID[Compendium.pf2e.spells-srd.Item.Atone] ritual. Changing the subject of your pledge is equivalent to retraining a class feature.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cavalier Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "emotion",
+              "mental",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +60,48 @@
       "name": "Cavalier's Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Vab3XIirjs3KQh3t",
+        "folder": "IuIPGmNZ63y8yWxq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cavalier's Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are riding your mount.</p><hr /><p>You @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] to order your mount to @UUID[Compendium.pf2e.actionspf2e.Item.Stride] twice. At any point during this movement, you can @UUID[Compendium.pf2e.actionspf2e.Item.Strike] one enemy within reach or within the first range increment of a ranged weapon. You gain a +1 circumstance bonus to your attack roll.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cavalier Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +111,56 @@
       "name": "Cushion Landing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YXyoBZFpOj3WRX3l",
+        "folder": "IuIPGmNZ63y8yWxq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cushion Landing",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fall from a height of 15 feet or higher.</p>\n<p><strong>Requirements</strong> Your mount can reach your landing location with a single Stride.</p><hr /><p>As you fall, your mount dashes to your rescue. Your mount Strides up to its Speed, positioning itself below you. Rather than falling on your mount, you @UUID[Compendium.pf2e.actionspf2e.Item.Mount] your mount. Treat the triggering fall as if it were 15 feet shorter, and you don't land @UUID[Compendium.pf2e.conditionitems.Item.Prone] (though both you and your mount both take damage from the fall based on what you would normally take for any remaining distance).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cavalier Dedication"
+              },
+              {
+                "value": "trained in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -34,6 +170,47 @@
       "name": "Impressive Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Nxke8WzifQafSa4I",
+        "folder": "IuIPGmNZ63y8yWxq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impressive Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've trained your mount to become a powerful force on the battlefield. The mount you gained through the @UUID[Compendium.pf2e.feats-srd.Item.Cavalier Dedication] feat becomes a mature animal companion, granting it additional capabilities.</p>\n<p>Your mount has greater independence. During an encounter, even if you don't use the Command an Animal action, your mount can still use 1 action that round on your turn to Strike or Stride (or Burrow, Climb, Fly, or Swim if it has that Speed). It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cavalier Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +220,56 @@
       "name": "Mounting Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4k80lxXishAcELDg",
+        "folder": "IuIPGmNZ63y8yWxq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mounting Leap",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're within 10 feet of a creature that is at least one size larger than you and is willing to be your mount.</p><hr /><p>You jump atop your mount from afar, landing comfortably astride it. @UUID[Compendium.pf2e.actionspf2e.Item.Leap] toward the creature and @UUID[Compendium.pf2e.actionspf2e.Item.Mount] it.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cavalier Dedication"
+              },
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -52,6 +279,51 @@
       "name": "Quick Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "G9l2g7sDpPVbZJza",
+        "folder": "IuIPGmNZ63y8yWxq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Mount",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.</p>\n<hr />\n<p>You and your mount can spring into action at a moment's notice. You @UUID[Compendium.pf2e.actionspf2e.Item.Mount] the creature and @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] to issue it an order of your choice.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cavalier Dedication"
+              },
+              {
+                "value": "expert in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     }

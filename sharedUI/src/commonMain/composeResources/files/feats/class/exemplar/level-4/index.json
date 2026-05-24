@@ -7,6 +7,72 @@
       "name": "Follow the Threads of Fate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KlqL2QCGvcf6vbta",
+        "folder": "mQJdT9ciubzEIHPD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Follow the Threads of Fate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a worn ikon made of cloth or a weapon ikon with a tassel, wrapping, or similar feature.</p><hr /><p>A norn's thread—spun from fate itself—runs through or wraps around your ikon.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Unravel the Future]</strong> <span class=\"action-glyph\">1</span> (fortune, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.TIIM35m8aDUEU4gF inline]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #217: Death Sails a Wine-Dark Sea"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Unravel the Future"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "uncommon",
+            "value": [
+              "exemplar",
+              "fortune",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +82,44 @@
       "name": "Only the Worthy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OoEkGGDBoNOJ9XFP",
+        "folder": "mQJdT9ciubzEIHPD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Only the Worthy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can designate your ikons as movable by only your own hand, leaving them fixed in place as surely as if they were lodged in stone. Whenever you Release an ikon, you can spend an action to command it to remain motionless. While motionless, the ikon can be moved only if 8,000 pounds of pressure are applied to it or if a creature uses Athletics to @UUID[Compendium.pf2e.actionspf2e.Item.Force Open] the ikon with a DC equal to your class DC. You can Release your ikon over an adjacent @UUID[Compendium.pf2e.conditionitems.Item.Prone] enemy to hold them down with the ikon's motionlessness—while so Released, you can't use the ikon, but the enemy must succeed at the Athletics check to Stand or to move. The ikon automatically flies back to your hand when the effect is broken or if you spend an Interact action to hold out a hand and draw it back.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +129,66 @@
       "name": "Steel on Steel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0WKTvyN5nkNRed6e",
+        "folder": "mQJdT9ciubzEIHPD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Steel on Steel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a melee weapon ikon or worn ikon made of metal, stone, or a similarly hard material</p><hr /><p>The ring of divinely empowered steel assails your enemies.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Ringing Challenge]</strong> <span class=\"action-glyph\">2</span> (sonic, spirit, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.mBqZ2IahMT9Jvo7k inline]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Ringing Challenge"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +198,65 @@
       "name": "Through the Needle's Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qrATFcnSEmEcD6bJ",
+        "folder": "mQJdT9ciubzEIHPD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Through the Needle's Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a weapon ikon</p><hr /><p>Your weapon strikes with the perfection your will demands.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Blinding of the Needle]</strong> <span class=\"action-glyph\">2</span> (transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.Y6ee2ZvIE2fzzvAY inline]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Blinding of the Needle"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +266,56 @@
       "name": "Topple The Titans",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F8V4dN91JmHIOQCv",
+        "folder": "mQJdT9ciubzEIHPD",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Topple The Titans",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> Once per minute</p>\n<p><strong>Requirements</strong> Your previous action was a successful or critically successful @UUID[Compendium.pf2e.actionspf2e.Item.Trip] against a creature at least one size larger than you, and the enemy became @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p><hr /><p>Even the greatest titans of the world are easier to kill when they're lying on the ground. You've made it your mission to topple such giants and can make others fall with a force that shakes the very earth. The triggering creature's toppling body shakes the ground, emitting a quake in a @Template[type:emanation|distance:10] from their space. Apply the result of your triggering Athletics check against the Reflex DC of each creature in the emanation to Trip them as well. You do not need to have a hand free, and you do not lose your balance if any of your attempts to Trip are a critical failure.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #217: Death Sails a Wine-Dark Sea"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "uncommon",
+            "value": [
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

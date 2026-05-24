@@ -7,6 +7,60 @@
       "name": "Athamaru Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IK0WZloS3Hiqn4Uc",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Athamaru Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've immersed yourself in community learning, particularly around navigating the waters and tending to animals. You gain the trained proficiency rank in Athletics and Nature. If you automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Athamaru Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.athletics.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +70,96 @@
       "name": "Athamaru Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gtUU8CmyUMzsU5eX",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Athamaru Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You wield weapons designed to work underwater with ease. You have familiarity with weapons with the athamaru trait and with crossbows, heavy crossbows, longspears, spears, and tridents—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:trait:athamaru",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:crossbow",
+                    "item:base:heavy-crossbow",
+                    "item:base:longspear",
+                    "item:base:spear",
+                    "item:base:trident"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialAthamaruWeapons",
+              "sameAs": "simple",
+              "slug": "martial-athamaru-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:athamaru",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedAthamaruWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-athamaru-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:dwarf",
+                    "item:base:battle-axe",
+                    "item:base:pick",
+                    "item:base:warhammer"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +169,59 @@
       "name": "Community-Minded",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a4iFLiSDBO4fzCvu",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Community-Minded",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are familiar with all the members of your community and their typical movements, and you have learned how to apply these patterns outside those circles. You gain a +1 circumstance bonus to your Perception DC against someone attempting to @UUID[Compendium.pf2e.actionspf2e.Item.Lie] to you and to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] or to detect a creature trying to @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] someone they are not.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:lie",
+                    "action:sense-motive",
+                    "action:impersonate"
+                  ]
+                }
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +231,63 @@
       "name": "Coral Symbiotes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1UPzQIIa4i1dsg68",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coral Symbiotes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've tended to your coral jewelry so well that you have formed a symbiotic relationship with it. The powerful filtration properties of this coral protect you from impurities. You gain a +1 status bonus to saving throws against poisons, and your flat check to remove persistent poison damage is DC 10 instead of DC 15, which is reduced to DC 5 if another creature uses a particularly appropriate action to help. You must submerge yourself in water once every 24 hours to hydrate your coral or you lose the bonuses granted by the symbiotes.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:poison"
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 1
+            },
+            {
+              "itemType": "condition",
+              "key": "ItemAlteration",
+              "mode": "downgrade",
+              "predicate": [
+                "item:damage:type:poison"
+              ],
+              "property": "pd-recovery-dc",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +297,48 @@
       "name": "Elver Pet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aBa7dGY2TuDE4R7A",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elver Pet",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Athamarus have bonded with eels more closely than any other fish. You have formed a strong connection with a young eel that serves as your pet. Typically, these eels are tended until they grow large enough to serve as a mount. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Pet] general feat. Instead of the normal choice of pet abilities, your eel has aquatic, @UUID[Compendium.pf2e.familiar-abilities.Item.Fast Movement], and the @UUID[Compendium.pf2e.familiar-abilities.Item.Damage Avoidance] familiar ability for Reflex saves. The aquatic ability means it gains the aquatic trait, breathes water instead of air, and has a swim Speed instead of a land Speed.</p>\n<p>When you aren't in an aquatic environment, you can easily carry your pet eel around in a small water-filled globe that has light Bulk.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Pet"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +348,49 @@
       "name": "Emit Defensive Odor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dpwUwH1xX48ufXVy",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Emit Defensive Odor",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>While athamarus' natural pheromones are typically used for communication, you have developed yours into a defense mechanism to ward off foes. You emit a thick spray of defensive pheromones at an adjacent creature, who takes @Damage[(floor((@actor.level +1)/2)+1)d6[poison]] damage with a @Check[fortitude|against:class|basic] save against your class DC.</p>\n<p>At 3rd level and every 2 levels thereafter, the damage increases by 1d6.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru",
+              "inhaled",
+              "poison"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +400,61 @@
       "name": "Ocean Wariness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OuUQDwoQaubig5VL",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ocean Wariness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Stories about those who have mistreated your people in the past (particularly stories about alghollthu mind control) left you untrusting of those outside your community. You gain a +1 circumstance bonus to your defenses against Deception, Diplomacy, Intimidation, and Performance checks.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "hideIfDisabled": true,
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "check:statistic:deception",
+                    "check:statistic:diplomacy",
+                    "check:statistic:intimidation",
+                    "check:statistic:performance"
+                  ]
+                }
+              ],
+              "selector": "all",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +464,44 @@
       "name": "Pheromonal Message",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "baVAW4IDiCyKN8Q1",
+        "folder": "uRFIvEiCaUKlRZQU",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pheromonal Message",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your communicative pheromones are particularly well developed from years of living with other athamarus. You send a brief message to one ally within 60 feet, or 120 feet in water. No other creature can understand the message. The message must be short and simple, and can't convey ideas that would require complex or novel wording if spoken, such a creature's name or proper nouns.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru",
+              "olfactory"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

@@ -7,6 +7,51 @@
       "name": "Acute Vision",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YdpGPLN0QFTZIhbk",
+        "folder": "FTKVfX0Vtqfac5CL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Acute Vision",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you are raging, your visual senses improve, granting you darkvision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "selector": "darkvision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +61,80 @@
       "name": "Adrenaline Rush",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BBj6jrdyff7QOgjH",
+        "folder": "FTKVfX0Vtqfac5CL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Adrenaline Rush",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>In the heat of battle, you are capable of amazing feats of strength.</p>\n<p>While you are @UUID[Compendium.pf2e.actionspf2e.Item.Rage]{Raging}, increase your encumbered and maximum Bulk limits by 2; you also gain a +1 status bonus to Athletics checks to lift heavy objects, @UUID[Compendium.pf2e.actionspf2e.Item.Escape], and @UUID[Compendium.pf2e.actionspf2e.Item.Force Open].</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.EscapeForceOpenOrLift",
+              "predicate": [
+                "self:effect:rage",
+                {
+                  "or": [
+                    "action:escape",
+                    "action:force-open",
+                    "action:lift-heavy-object"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "status",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.encumberedAfterAddend",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.maxAddend",
+              "predicate": [
+                "self:effect:rage"
+              ],
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +144,60 @@
       "name": "Draconic Arrogance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EOmTf95t03y4IGdp",
+        "folder": "FTKVfX0Vtqfac5CL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Arrogance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Few can sway you from your goals while the fury of combat fills you. While raging, you gain a +2 status bonus to saving throws against emotion effects.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dragon instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SkillVariant.VsEmotion",
+              "predicate": [
+                "self:effect:rage",
+                "item:trait:emotion"
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +207,45 @@
       "name": "Moment of Clarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vRXPsMbyuvoPvbAQ",
+        "folder": "FTKVfX0Vtqfac5CL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Moment of Clarity",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You push back your rage for a moment in order to think clearly. Until the end of this turn, you can use actions with the concentrate trait even if those actions don't have the rage trait.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +255,89 @@
       "name": "Raging Intimidation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XseJI9XhKNtZN8pv",
+        "folder": "FTKVfX0Vtqfac5CL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raging Intimidation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your fury fills your foes with fear. While you are raging, your @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] and @UUID[Compendium.pf2e.feats-srd.Item.Scare to Death] actions (from the Intimidation skill and an Intimidation skill feat, respectively) gain the rage trait, allowing you to use them while raging. As soon as you meet the prerequisites for the skill feats @UUID[Compendium.pf2e.feats-srd.Item.Intimidating Glare] and Scare to Death, you gain these feats.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "flag": "intimidatingGlare",
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "gte": [
+                    "skill:intimidation:rank",
+                    1
+                  ]
+                }
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.feats-srd.Item.Intimidating Glare"
+            },
+            {
+              "flag": "scareToDeath",
+              "key": "GrantItem",
+              "predicate": [
+                "skill:intimidation:rank:4"
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.feats-srd.Item.Scare to Death"
+            },
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:demoralize",
+                "self:effect:rage"
+              ],
+              "property": "traits",
+              "value": "rage"
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:scare-to-death",
+                "self:effect:rage"
+              ],
+              "property": "traits",
+              "value": "rage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +347,43 @@
       "name": "Raging Thrower",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5pGMffGKkBTZKvjw",
+        "folder": "FTKVfX0Vtqfac5CL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raging Thrower",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Thrown weapons become especially deadly in your fury. You apply the additional damage from @UUID[Compendium.pf2e.actionspf2e.Item.Rage] to your thrown weapon attacks. If you have the @UUID[Compendium.pf2e.feats-srd.Item.Brutal Critical] feat or the @UUID[Compendium.pf2e.classfeatures.Item.Devastator] class feature, apply their benefits to thrown weapon attacks.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

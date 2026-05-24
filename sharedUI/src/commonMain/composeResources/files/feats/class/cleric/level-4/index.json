@@ -7,6 +7,44 @@
       "name": "Channel Smite",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "o5q9FBrPsAYqEl5w",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Channel Smite",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Cost</strong> Expend a @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] spell.</p>\n<hr />\n<p>You siphon the energies of life and death through a melee attack and into your foe. Make a melee Strike. On a hit, you cast the 1-action version of the expended spell to damage the target, in addition to the normal damage from your Strike. The target automatically gets a failure on its save (or a critical failure if your Strike was a critical hit). The spell doesn't have the manipulate trait when cast this way.</p>\n<p>The spell is expended with no effect if your Strike fails or hits a creature that isn't damaged by that energy type (such as if you hit a non-undead creature with a <em>heal</em> spell).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +54,64 @@
       "name": "Directed Channel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iojlXjVdbzi1fZGt",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Directed Channel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can shape the energy you channel in a single direction. When you cast a version of @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] that has an area, you can make its area a @Template[cone|distance:60] instead of a @Template[emanation|distance:30].</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:heal",
+                    "item:slug:harm"
+                  ]
+                },
+                "item:cast:actions:3"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Cleric.DirectedChannel.ItemAlterationNote"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +121,80 @@
       "name": "Divine Infusion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JcXzKwrdMkNszrJQ",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divine Infusion",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You pour energy into the subject of your healing to empower its attacks. If the next action you use is to cast @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] to restore Hit Points to a single creature, the target then deals an additional 1d6 damage with its melee weapons and unarmed attacks until the end of its next turn. The damage type is void if you cast <em>harm</em> and vitality if you cast <em>heal</em>.</p>\n<p>If the spell cast is at least 5th rank, this damage increases to 2d6, and if the spell is at least 8th rank, the damage increases to 3d6.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:divine-infusion",
+                {
+                  "or": [
+                    "item:slug:harm",
+                    "item:slug:heal"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.DivineInfusion"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "divine-infusion"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +204,57 @@
       "name": "Expanded Domain Initiate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vQ4DNfpktmaqdgdM",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expanded Domain Initiate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have long venerated one of your deity's lesser-known aspects. Select one domain from your deity's alternate domains. You gain access to that domain and an initial domain spell for that domain.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Domain Initiate"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.soulWarden.featCount",
+              "predicate": [
+                "feat:soul-warden-dedication"
+              ],
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +264,60 @@
       "name": "Raise Symbol",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "koER7gKf6CnW5O0s",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raise Symbol",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a religious symbol.</p>\n<hr />\n<p>You present your religious symbol emphatically. You gain a +2 circumstance bonus to saving throws until the start of your next turn. While it's raised, if you roll a success at a saving throw against a vitality or void effect, you get a critical success instead. If the religious symbol you're raising is a shield, such as with @UUID[Compendium.pf2e.feats-srd.Item.Emblazon Armament]{Emblazon Armaments}, you gain the effects of Raise a Shield when you use this action and the effects of this action when you Raise a Shield.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Cleric.RaiseSymbol.RollOptionLabel",
+              "option": "shield-religious-symbol",
+              "predicate": [
+                "self:shield:equipped",
+                {
+                  "not": "emblazon-armament:item:shield"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Raise Symbol",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Raise Symbol"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +327,47 @@
       "name": "Restorative Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xUlRLkWnfZ7reej6",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Restorative Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] spell you can cast.</p>\n<hr />\n<p>You balance both sides of the scales, restoring yourself while striking a foe. Cast a 1-action <em>harm</em> or <em>heal</em> spell to heal yourself, expending the spell normally. It loses the manipulate trait when cast this way. Then make a melee Strike. If you make this Strike with your deity's favored weapon, you gain a +1 status bonus to the attack roll.</p>\n<p>If the Strike hits, you can target a second willing creature to heal the same amount from the spell. This creature can be outside of the spell's range, provided it's adjacent to the enemy you hit.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Restorative Strike",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Restorative Strike"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +377,85 @@
       "name": "Sacred Ground",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cnTPUQS7zRiZMUdI",
+        "folder": "pC8dQPctCUzx96WH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sacred Ground",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You pray continuously for 1 minute to call a subtle shadow of your deity's realm over a @Template[burst|distance:30] centered on you. It lasts for 10 minutes, and a creature that remains in the area for the entire 10 minutes regains Hit Points equal to your level. If you have a healing font, this activity has the healing and vitality traits and heals living creatures. If you have a harmful font, this activity has the healing and void traits and heals undead creatures (or other creatures with void healing). Clerics with Versatile Font can choose either or both. It can't damage creatures in any case.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "harmful font or healing font"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "divine-font:heal"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Cleric.SacredGround.Healing",
+                  "title": "PF2E.SpecificRule.Cleric.DivineFont.Healing"
+                }
+              ]
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "divine-font:harm"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Cleric.SacredGround.Harmful",
+                  "title": "PF2E.SpecificRule.Cleric.DivineFont.Harmful"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "consecration",
+              "divine",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

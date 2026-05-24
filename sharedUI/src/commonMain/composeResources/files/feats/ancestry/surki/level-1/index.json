@@ -7,6 +7,43 @@
       "name": "Sequestered Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2hwI3i6YKWUPZrDu",
+        "folder": "HsCR2fdALwbEuxJ6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sequestered Spell",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You consumed so much of a type of magic as a larva that you can now cast it purely on instinct. Choose one cantrip from the spell list of your magiphage ability. You can cast this cantrip as an innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +53,43 @@
       "name": "Small Speak",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qwwq282yeMkAC0Fp",
+        "folder": "HsCR2fdALwbEuxJ6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Small Speak",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You understand the languages of most small insects and can speak to them. You can ask questions of, receive answers from, and use the Diplomacy skill with insects, arthropods, and terrestrial invertebrates. The GM determines which creatures count for this ability.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +99,60 @@
       "name": "Surki Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P9KuYKeaH2Scpkgy",
+        "folder": "HsCR2fdALwbEuxJ6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Surki Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Either through the tales of elders in your settlement or through the messages thumped by those who oversaw your generation dig, you hold the knowledge of many surkis before you. You become trained in Survival and the skill associated with the magical tradition from your magiphage ability (Arcana for arcane, Nature for primal, Occultism for occult, or Religion for divine). If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Surki Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{actor|flags.system.magiphage.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +162,128 @@
       "name": "Surki Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Hx4DeunGyzMsoWqv",
+        "folder": "HsCR2fdALwbEuxJ6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Surki Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Surki weapons favor utility and practicality over grace and brutality. You have familiarity with picks, light hammers, sickles, scythes, and one additional common weapon of your choice from the axe or hammer group—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:rarity:common",
+                  {
+                    "or": [
+                      "item:group:axe",
+                      "item:group:hammer"
+                    ]
+                  },
+                  {
+                    "not": "item:base:light-hammer"
+                  }
+                ],
+                "itemType": "weapon",
+                "slugsAsValues": true
+              },
+              "flag": "weapon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:group:pick",
+                        "item:category:martial"
+                      ]
+                    },
+                    {
+                      "and": [
+                        "item:base:{item|flags.system.rulesSelections.weapon}",
+                        "item:category:martial"
+                      ]
+                    },
+                    "item:base:light-hammer",
+                    "item:base:sickle",
+                    "item:base:scythe"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialSurkiWeapons",
+              "sameAs": "simple",
+              "slug": "martial-surki-weapons"
+            },
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:group:pick",
+                    "item:base:{item|flags.system.rulesSelections.weapon}"
+                  ]
+                },
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedSurkiWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-surki-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:group:pick",
+                    "item:base:{item|flags.system.rulesSelections.weapon}",
+                    "item:base:light-hammer",
+                    "item:base:sickle",
+                    "item:base:scythe"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +293,43 @@
       "name": "Vestigial Magicsense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3GjfoEl3lbmhLin5",
+        "folder": "HsCR2fdALwbEuxJ6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vestigial Magicsense",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>While most surkis' ability to taste magic fades once they metamorphose into their adult form—replaced by keener darkvision—you've retained some of this sense. You gain magicsense as a vague sense that has a range of 30 feet—like all vague senses, it's only about as precise as an average human's sense of smell, meaning you generally can predict only if magic is present; however, each tradition of magic has a unique taste to you, allowing you to identify the tradition of magic present.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

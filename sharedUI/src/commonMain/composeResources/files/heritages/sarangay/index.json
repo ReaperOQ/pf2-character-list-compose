@@ -1,0 +1,251 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "full-moon-sarangay.json",
+      "id": "6gK4A6dtN4LCpCXS",
+      "name": "Full Moon Sarangay",
+      "img": "icons/environment/settlement/watchtower-moonlit-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "6gK4A6dtN4LCpCXS",
+        "folder": "gliBhRgOfcs7bTjE",
+        "img": "icons/environment/settlement/watchtower-moonlit-blue.webp",
+        "name": "Full Moon Sarangay",
+        "system": {
+          "ancestry": {
+            "name": "Sarangay",
+            "slug": "sarangay",
+            "uuid": "Compendium.pf2e.ancestries.Item.7mpMGhVoaPANJnZ8"
+          },
+          "description": {
+            "value": "<p>You were raised in a shamanic tradition transcending a single sarangay community or heritage. You spent your youth under the guidance of a shaman elder, who taught you to commune with spirits in the hope that you'll one day use that knowledge to advise and guide your people. Those from your tradition are priests or shamans who channel the spirits and see things others can't. You gain an ancestry attribute boost to Wisdom instead of Strength, and you gain an attribute flaw in Constitution instead of Wisdom. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Folk Healer] ancestry feat.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Folk Healer"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "half-moon-sarangay.json",
+      "id": "ImdAt4Ma9GfaNuZW",
+      "name": "Half Moon Sarangay",
+      "img": "icons/environment/settlement/city-night-spire.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ImdAt4Ma9GfaNuZW",
+        "folder": "gliBhRgOfcs7bTjE",
+        "img": "icons/environment/settlement/city-night-spire.webp",
+        "name": "Half Moon Sarangay",
+        "system": {
+          "ancestry": {
+            "name": "Sarangay",
+            "slug": "sarangay",
+            "uuid": "Compendium.pf2e.ancestries.Item.7mpMGhVoaPANJnZ8"
+          },
+          "description": {
+            "value": "<p>You come from one of many traveling communities that migrate seasonally along Tian Xia's vast rivers and mountains, bringing news and tidings to villages along their path. Your people connect sarangay communities to one another across vast distances and are symbolized by the half moon, which conjoins the light and dark; so too do you conjoin the dark from the bright, the red from the blue, the wind from the sea. Your ancestors were tall and burly with shiny black fur, light spots or markings, and short, tightly curved horns. You become trained in two Lore skills of your choice, and you gain a +1 circumstance bonus to Recall Knowledge checks using those skills.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "new-moon-sarangay.json",
+      "id": "H2mbY3aypl6ikaSR",
+      "name": "New Moon Sarangay",
+      "img": "icons/commodities/gems/pearl-swirl-teal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "H2mbY3aypl6ikaSR",
+        "folder": "gliBhRgOfcs7bTjE",
+        "img": "icons/commodities/gems/pearl-swirl-teal.webp",
+        "name": "New Moon Sarangay",
+        "system": {
+          "ancestry": {
+            "name": "Sarangay",
+            "slug": "sarangay",
+            "uuid": "Compendium.pf2e.ancestries.Item.7mpMGhVoaPANJnZ8"
+          },
+          "description": {
+            "value": "<p>Some people call you a dwarf sarangay and your kind \"hiding ones.\" Others whisper you go out with the moon when the moon \"goes hunting\"—a common folk saying for when the new moon vanishes from the sky. Your elusive ancestors built their lodgings in the shade of bamboo thickets, and your ancestral communities valued caution and independence, passing down the knowledge of walking lightly and moving like smoke through bamboo. Your ancestors had dark brown or gray fur with white markings and a V-shaped pair of flat, triangular horns. Your size is Small instead of Medium. You gain 10 Hit Points from your ancestry instead of 8 and gain a +2 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Shove].</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "CreatureSize",
+              "value": "small"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:shove"
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "waning-moon-sarangay.json",
+      "id": "MNeg7vI854rB6fmz",
+      "name": "Waning Moon Sarangay",
+      "img": "icons/magic/nature/moon-crescent.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "MNeg7vI854rB6fmz",
+        "folder": "gliBhRgOfcs7bTjE",
+        "img": "icons/magic/nature/moon-crescent.webp",
+        "name": "Waning Moon Sarangay",
+        "system": {
+          "ancestry": {
+            "name": "Sarangay",
+            "slug": "sarangay",
+            "uuid": "Compendium.pf2e.ancestries.Item.7mpMGhVoaPANJnZ8"
+          },
+          "description": {
+            "value": "<p>Your ancestors were named for the moon in transition, ever-changing and ephemeral. They're the keepers of secret arts, just as the waning moon hides its face, and their communities were highly regarded for their storytellers, performers, and artists. You lived among your community on the outskirts of forests or rivers, where many answers came as riddles, and you learned to see the world from different perspectives. Your people are often red or fawn colored, with prominent eyes and flat, compact horns. You become trained in your choice of Acrobatics, Crafting, or Performance.</p>\n<p>Once per day, when you roll a critical failure with the chosen skill, you can reroll the check, taking the new result, even if it's worse. Rerolling in this way is a fortune effect.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Acrobatics",
+                  "value": "acrobatics"
+                },
+                {
+                  "label": "PF2E.Skill.Crafting",
+                  "value": "crafting"
+                },
+                {
+                  "label": "PF2E.Skill.Performance",
+                  "value": "performance"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "waxing-moon-sarangay.json",
+      "id": "BHiOV3ETYSv6k7kF",
+      "name": "Waxing Moon Sarangay",
+      "img": "icons/environment/settlement/graveyard-tombstone-night.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "BHiOV3ETYSv6k7kF",
+        "folder": "gliBhRgOfcs7bTjE",
+        "img": "icons/environment/settlement/graveyard-tombstone-night.webp",
+        "name": "Waxing Moon Sarangay",
+        "system": {
+          "ancestry": {
+            "name": "Sarangay",
+            "slug": "sarangay",
+            "uuid": "Compendium.pf2e.ancestries.Item.7mpMGhVoaPANJnZ8"
+          },
+          "description": {
+            "value": "<p>Your ancestors dwelled in the swamps, fens, and flooded forests, where they contended with fierce predators and formed raiding parties to claim scarce resources. Blessed by the growing crescent, you're one of the eviscerators, and you can overcome threats that lurk in murky waters as well as those that hunt on land. You're a powerful swimmer with brown or gray fur and backward- or downward-curving horns. You gain a +2 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump] or @UUID[Compendium.pf2e.actionspf2e.Item.Swim].</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:high-jump",
+                    "action:swim"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

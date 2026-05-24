@@ -7,6 +7,47 @@
       "name": "Debilitating Dichotomy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iy9XKih5jIAdv67c",
+        "folder": "jjrwTCUWKX7Qybve",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Debilitating Dichotomy",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You reveal a glimpse of the impossible conflicts between the divine anathema behind your curse, forcing you to reckon with another's conflicts as well. You and one creature within 30 feet each take @Damage[(3*(floor((@actor.level - 2)/2)))d6[mental]] damage with a @Check[will|against:class-spell|basic] save, and the target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} if it critically fails its save. You get a degree of success one better than you rolled for your saving throw. At 10th level, and every 2 levels thereafter, the damage increases by 3d6.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "cursebound",
+              "divine",
+              "mental",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +57,45 @@
       "name": "Read Disaster",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HLC9g1pwluDl6vy7",
+        "folder": "jjrwTCUWKX7Qybve",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Read Disaster",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spend 10 minutes and open yourself to the divine mysteries of the world, peering into the most sinister portents of the future.</p>\n<p>You gain the effects of @UUID[Compendium.pf2e.spells-srd.Item.Augury], except you learn only about the dangers ahead; any results of \"good\" are instead \"nothing,\" and results of \"mixed\" are instead \"bad.\" If you are legendary in Religion, you take only 1 minute to Read Disaster.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exploration",
+              "oracle",
+              "prediction"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +105,74 @@
       "name": "Surging Might",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YV4X9u5Yuf0xvoCh",
+        "folder": "jjrwTCUWKX7Qybve",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Surging Might",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You focus the power of your spell to overcome enemies' resistances. If the next action you use is to Cast a Spell, the spell ignores an amount of the target's resistance equal to your level against the following types of damage: spirit, vitality, and void.</p>\n<p>This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell. This doesn't cause the spell to ignore immunities, only resistances.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:surging-might"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.SurgingMight"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "surging-might"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "oracle",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +182,43 @@
       "name": "Water Walker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fX0ipO6YSSeMv9DR",
+        "folder": "jjrwTCUWKX7Qybve",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Water Walker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When in the throes of your curse, your steps take on a supernatural buoyancy. When you are @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 1}, you can Stride across liquids that don't support your weight, but you must end your movement on a surface that can support you or you fall into the liquid as normal. When you are cursebound 2 or worse, you gain the effects of water walk.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Eternal Elixir",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "giOEclnMp8txkRSU",
+        "folder": "9CBLW19gOXhjuFeZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eternal Elixir",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your body readily accepts and retains minor changes. When you drink one of your alchemical items that has the elixir and infused traits and a duration of 1 minute or more, you can make the elixir's duration indefinite. This can exceed the 10-minute limit of an item made with @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy]. You can do so only if the elixir's level is half your level or lower. If you later consume a different elixir and make it indefinite, the effect of the previous indefinite elixir ends.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Extend Elixir"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +57,62 @@
       "name": "Exploitive Bomb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hr9maYUbtrNxpBPw",
+        "folder": "9CBLW19gOXhjuFeZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Exploitive Bomb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can mix a refractile substance into an alchemical bomb to foil resistances. Choose one damage type the bomb can deal. Any damage dealt by the bomb—including initial, splash, and persistent damage—ignores an amount of that resistance equal to your level.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "alchemical",
+                "bomb",
+                "explotive-bomb"
+              ],
+              "selector": "attack-roll",
+              "text": "The bomb reduces one resistance the enemy has to its damage type by an amount equal to your level, but only for that attack.",
+              "title": "{item|name}"
+            },
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "option": "exploitive-bomb",
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "additive",
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +122,47 @@
       "name": "Persistent Mutagen",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GKP2dHkgQw1o0k8g",
+        "folder": "9CBLW19gOXhjuFeZ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Persistent Mutagen",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've trained your physical form to remain stable. Once per day, when you consume an alchemical item with the infused and mutagen traits, you can extend its duration to last until the next time you make your daily preparations instead of its normal duration. Unlike with the normal extension from @UUID[Compendium.pf2e.feats-srd.Item.Extend Elixir], this can exceed the duration of an item created with @UUID[Compendium.pf2e.actionspf2e.Item.Quick Alchemy] beyond its normal 10-minute limit.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Extend Elixir"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "alchemist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

@@ -7,6 +7,56 @@
       "name": "Combat Assessment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5FyvwI24mnROzh61",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Combat Assessment",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a telegraphed attack to learn about your foe. Make a melee Strike. On a hit, you can immediately attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about the target. On a critical hit, you gain a +2 circumstance bonus to the check to Recall Knowledge. The target is temporarily immune to Combat Assessment for 1 day.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:recall-knowledge",
+                "critical-assessment"
+              ],
+              "selector": "skill-check",
+              "slug": "combat-assessment",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander",
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +66,44 @@
       "name": "Counterspell (Prepared)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EpBG4CFMNSZQx7vI",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Counterspell (Prepared)",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature Casts a Spell that you have prepared</p>\n<hr />\n<p>When a foe Casts a Spell and you can see its manifestations, you can use your magic to disrupt it. You expend a prepared spell to counter the triggering creature's casting of that same spell. You lose your spell slot as if you had cast the triggering spell. You then attempt to counteract the triggering spell.</p>\n<hr />\n<p><strong>Special</strong> This feat has the trait corresponding to the tradition of spells you cast (arcane, divine, primal, or occult).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "witch",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +113,45 @@
       "name": "Defensive Advance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "117d4Me9nAn1GMry",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defensive Advance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With the protection of your shield, you dive into battle! You Raise your Shield and Stride. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</p>\n<p>You can use Defensive Advance while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +161,51 @@
       "name": "Familiar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bcxIg7wi8ZAhvhOD",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Familiar",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Magus, Sorcerer</strong> An animal serves you and assists your spellcasting.</p>\n<p><strong>Wizard</strong> You make a pact with a creature that serves you and assists your spellcasting.</p>\n<p><strong>Thaumaturge</strong> Whether by following occult rituals, piecing together scraps of arcane theory, or some other method, you've called forth a creature that now serves as your constant companion in your studies of the supernatural.</p>\n<hr />\n<p>You gain a familiar.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Pet"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "magus",
+              "sorcerer",
+              "thaumaturge",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +215,80 @@
       "name": "Reach Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BWomK7EVY0WXxWgh",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reach Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can extend your spells' range. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:reach-spell"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.ReachSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "reach-spell"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "cleric",
+              "concentrate",
+              "druid",
+              "oracle",
+              "sorcerer",
+              "spellshape",
+              "witch",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +298,47 @@
       "name": "Reactive Shield",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "w8Ycgeq2zfyshtoS",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reactive Shield",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy hits you with a melee Strike.</p>\n<p><strong>Requirements</strong> You are wielding a shield.</p><hr /><p>You can snap your shield into place just as you would take a blow, avoiding the hit at the last second. You immediately use the @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield] action and gain your shield's bonus to AC. The circumstance bonus from the shield applies to your AC when you're determining the outcome of the triggering attack.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "fighter": "Fighter"
+            },
+            "value": [
+              "fighter",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -61,6 +348,48 @@
       "name": "Splinter Faith",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dGFQvkDRmyvvf4IQ",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Splinter Faith",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your faith in your deity is represented in an extremely unusual way that some might call heretical. When you select this feat, you should detail the fundamental tenets of your splinter faith, though it shouldn't affect the deity's edicts or anathema. Choose four domains. These domains must be chosen from among your deity's domains, your deity's alternate domains, and up to one domain that isn't on either list and isn't anathematic to your deity. Any domain spell you cast from a domain that isn't on either of your deity's lists is always heightened to 1 rank lower than usual for a focus spell. For the purpose of abilities that depend on your deity's domains, the four domains you chose are your deity's domains, and any of your deity's domains you didn't choose are now among your deity's alternate domains.</p><hr /><p><strong>Special</strong> Unless you take this feat at 1st level, changing the way you relate to your deity requires retraining, as described in the Changing Faith section below. If you take this feat and previously benefited from any effect that requires a domain your splinter faith doesn't include, such as a domain spell from Domain Initiate, you lose that effect.</p>\n<p>At the GM's discretion, you can take this feat with other classes or archetypes that gain access to domains through a deity.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Divine Mysteries"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "champion": "Champion",
+              "cleric": "Cleric"
+            },
+            "value": [
+              "champion",
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -70,6 +399,45 @@
       "name": "Sudden Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qQt3CMrhLkUV1wCv",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sudden Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a quick sprint, you dash up to your foe and swing. Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy. You can use Sudden Charge while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "fighter",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -79,6 +447,79 @@
       "name": "Trap Finder",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oA866uVEFu1OrAX0",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Trap Finder",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have an intuitive sense that alerts you to the dangers and presence of traps. You gain a +1 circumstance bonus to Perception checks to find traps, to AC against attacks made by traps, and to saves against traps. Even if you aren't Searching, you get a check to find traps that normally require you to be Searching. You still need to meet any other requirements to find the trap. You can disable traps that require a proficiency rank of master in Thievery. If you have master proficiency in Thievery, you can disable traps that require a proficiency rank of legendary instead, and your circumstance bonuses against traps increase to +2.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "domain": "perception",
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TrapFinder.SearchLabel",
+              "option": "trap-finder",
+              "toggleable": true
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TrapFinder.DefendingLabel",
+              "option": "origin:trait:trap",
+              "toggleable": "totm"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "origin:trait:trap"
+              ],
+              "selector": [
+                "saving-throw",
+                "ac"
+              ],
+              "type": "circumstance",
+              "value": "ternary(gte(@actor.system.skills.thievery.rank,3),2,1)"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "trap-finder"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": "ternary(gte(@actor.system.skills.thievery.rank,3),2,1)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "investigator",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -88,6 +529,130 @@
       "name": "Widen Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FoWO4RnHRwfEIC7Q",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Widen Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You manipulate the energy of your spell, causing it to spread out and affect a wider area. If the next action you use is to Cast a Spell that has an area of a burst, cone, or line and does not have a duration, increase the area of that spell. Add 5 feet to the radius of a burst that normally has a radius of at least 10 feet (a burst with a smaller radius is not affected). Add 5 feet to the length of a cone or line that is normally 15 feet long or smaller, and add 10 feet to the length of a larger cone or line.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "widen-spell"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:duration:0",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:area:type:burst",
+                        {
+                          "gte": [
+                            "item:area:size",
+                            10
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "and": [
+                        {
+                          "or": [
+                            "item:area:type:cone",
+                            "item:area:type:line"
+                          ]
+                        },
+                        {
+                          "lte": [
+                            "item:area:size",
+                            15
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "spellshape:widen-spell"
+              ],
+              "property": "area-size",
+              "value": 5
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:duration:0",
+                {
+                  "or": [
+                    "item:area:type:line",
+                    "item:area:type:cone"
+                  ]
+                },
+                {
+                  "gt": [
+                    "item:area:size",
+                    15
+                  ]
+                },
+                "spellshape:widen-spell"
+              ],
+              "priority": 119,
+              "property": "area-size",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "druid",
+              "manipulate",
+              "oracle",
+              "sorcerer",
+              "spellshape",
+              "witch",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -97,6 +662,98 @@
       "name": "You're Next",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gjec0ts3wkFbjvHN",
+        "folder": "F3ue3RXoxcXCoqfP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You're Next",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You reduce an enemy to 0 Hit Points.</p><hr /><p><strong>Rogue</strong> After downing a foe, you menace another. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a creature within 60 feet, with a +2 circumstance bonus. If you have legendary proficiency in Intimidation, you can use this as a free action with the same trigger.</p>\n<p><strong>Swashbuckler</strong> After downing a foe, you promise another that you're coming after them next. Attempt an Intimidation check with a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a single creature that you can see and that can see you. If you're legendary in Intimidation, you can use this as a free action with the same trigger.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:demoralize",
+                "youre-next"
+              ],
+              "selector": "intimidation",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Feat.YoureNext.Trigger",
+                  "title": "PF2E.FeatDescription.Trigger.Label"
+                },
+                {
+                  "divider": true,
+                  "predicate": [
+                    {
+                      "or": [
+                        "feat:rogue-dedication",
+                        "class:rogue"
+                      ]
+                    }
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.YoureNext.Rogue"
+                },
+                {
+                  "divider": true,
+                  "predicate": [
+                    {
+                      "or": [
+                        "feat:swashbuckler-dedication",
+                        "class:swashbuckler"
+                      ]
+                    }
+                  ],
+                  "text": "PF2E.SpecificRule.Feat.YoureNext.Swashbuckler"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "emotion",
+              "fear",
+              "mental",
+              "rogue",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

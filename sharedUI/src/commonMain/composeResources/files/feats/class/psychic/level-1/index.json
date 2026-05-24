@@ -7,6 +7,43 @@
       "name": "Ancestral Mind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PGi1EtcZMolnNA1M",
+        "folder": "CHQgDKK3irizXyT5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ancestral Mind",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>By unraveling memories and connections passed down from your progenitors and buried within your unconscious mind, you learn to convert your inherent magic into psychic power. You can cast any innate spells you know from an ancestry feat or heritage using your psychic spellcasting and thoughtforms. When you do so, the spell's tradition becomes occult, if it wasn't already, and you can use your psychic spellcasting attribute modifier instead of Charisma to determine your spell attack modifier and spell DC.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +53,44 @@
       "name": "Counter Thought",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QKC9iiR4Epj1Lyc7",
+        "folder": "CHQgDKK3irizXyT5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Counter Thought",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature Casts a Spell with the mental trait.</p>\n<p><strong>Requirements</strong> You have an unexpended spell slot you could use to Cast a Spell with the mental trait.</p><hr /><p>When a foe Casts a Spell that has the mental trait and you can see its manifestations, you can use your own mental magic to disrupt it. You expend one of your spell slots to counter the triggering creature's casting of a spell with the mental trait. You lose your spell slot as if you had cast the triggering spell; this spell slot must be one for which you could Cast a Spell with the mental trait. You then attempt to counteract the triggering spell.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +100,57 @@
       "name": "Mental Buffer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UtRW3hYBTFG8HQLh",
+        "folder": "CHQgDKK3irizXyT5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mental Buffer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mind deflects some amount of harm from attacks that induce pain or manipulate your mind directly. You gain resistance to mental damage equal to half your level (minimum 1). This resistance increases to equal to your level while your Psyche is Unleashed.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "mental",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "self:effect:unleash-psyche"
+              ],
+              "type": "mental",
+              "value": "@actor.level"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +160,61 @@
       "name": "Psychic Rapport",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9oKtrUzXixj58hOg",
+        "folder": "CHQgDKK3irizXyT5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Psychic Rapport",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your telepathic sensitivity intensifies when you're affected by mental magic, making it easier for you to link to other creatures. After you Cast a Spell with the mental trait, until the start of your next turn, you gain a +1 circumstance bonus to Deception, Diplomacy, and Intimidation checks, and to Perception checks to Sense Motive.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Psychic Rapport]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:mental"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Psychic.SpellModification.PsychicRapport"
+                },
+                {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Psychic Rapport]"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

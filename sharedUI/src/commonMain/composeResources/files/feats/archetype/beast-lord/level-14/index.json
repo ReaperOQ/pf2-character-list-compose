@@ -7,6 +7,47 @@
       "name": "Chosen Ward",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kTl67PlYRIOz5ptI",
+        "folder": "kN66TEOTlfRQWqin",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chosen Ward",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have designated an ally to be you and your companion's ward, making it your primary directive to shield them from harm. During your daily preparations, choose an ally who isn't your united companion. While either you or your united companion are adjacent to your ward, you grant them a +1 circumstance bonus to their AC and Reflex saves.</p>\n<p>When your ward attempts a Reflex saving throw while adjacent to either you or your united companion, you can spend a Mythic Point as a reaction to allow your ward to roll that Reflex save twice and take the better result. This is a fortune effect.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Chosen Ward]</p><hr /><p><strong>Special</strong> If you have the @UUID[Compendium.pf2e.feats-srd.Item.Defend Our Union] feat, it can also be triggered when a foe successfully Strikes your ward; if used in this way, the damage to your ward is reduced if your Strike is successful instead.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beast Lord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +57,47 @@
       "name": "Guarded Domain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9odEaNZQYeOnZC0e",
+        "folder": "kN66TEOTlfRQWqin",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guarded Domain",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your united companion have elected to become guardians of a particular location or domain. If you spend 1 week of downtime within a settlement or natural area with a 5-mile radius, you and your companion can become guardians of the area and consider it to be your guarded domain. Your guarded domain remains under your protection until you spend more than 1 month outside of your domain, after which you must spend another week of downtime to re-attune to your guarded domain. You can only have one guarded domain at a time, and selecting a new guarded domain immediately ends your protection over the previous guarded domain.</p>\n<p>If a creature has been in your guarded domain for at least 1 hour while you or your companion are also inside your domain, you or your companion can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] about the target by spending 1 minute communing with the land or its residents. You attempt this check at mythic proficiency.</p>\n<p>In addition, once per day as a 3-action activity you can spend a Mythic Point to instantly teleport yourself and your united companion to a location you are aware of within your domain. This is a teleportation effect.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beast Lord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +107,63 @@
       "name": "We Are One",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N46mQi4Av0HDJmfS",
+        "folder": "kN66TEOTlfRQWqin",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "We Are One",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You and your companion move as one, never tripping each other up. This fluid movement throws your enemies off balance. You and your united companion can share each other's spaces. When you do so, both you and your united companion provide @UUID[Compendium.pf2e.other-effects.Item.Effect: Cover]{Lesser Cover} to one another. You and your united companion also count as being adjacent to one another when sharing each other's spaces. A target is automatically @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the first Strike each round each of you and your united companion make while sharing one another's spaces; this benefit also applies if you are mounted on your united companion.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beast Lord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "domain": "strike-attack-roll",
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.BeastLord.WeAreOne.OffGuardToggle",
+              "option": "we-are-one",
+              "toggleable": true
+            },
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "we-are-one"
+              ],
+              "selectors": "strike-attack-roll",
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

@@ -7,6 +7,48 @@
       "name": "Chronomancer's Secrets",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gHcVxdMksOaGaiCx",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chronomancer's Secrets",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The secrets of time peel back, revealing deeper truths. You gain either the @UUID[Compendium.pf2e.spells-srd.Item.Stasis] domain spell or the @UUID[Compendium.pf2e.spells-srd.Item.Path of Least Resistance] focus spell.</p><hr /><p><strong>Special</strong> You can take this feat a second time, gaining the focus spell that you didn't gain the first time.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +58,47 @@
       "name": "Future Spell Learning",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yg1ZTjHuSiQJFO0i",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Future Spell Learning",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>More future memories of time magic percolate back to the present, teaching you spells you've yet to learn. Add @UUID[Compendium.pf2e.spells-srd.Item.Behold the Weave], @UUID[Compendium.pf2e.spells-srd.Item.Cast into Time], @UUID[Compendium.pf2e.spells-srd.Item.Haste], @UUID[Compendium.pf2e.spells-srd.Item.Loose Time's Arrow], @UUID[Compendium.pf2e.spells-srd.Item.Quicken Time], @UUID[Compendium.pf2e.spells-srd.Item.Slow], and @UUID[Compendium.pf2e.spells-srd.Item.Stagnate Time] to your spell list. If you have a repository of spells, like a witch's familiar or a spellbook, add these spells to it. If you have a spell repertoire, when you gain this feat you can retrain one spell in it, replacing it with one of the added spells.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +108,84 @@
       "name": "Into the Future",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wuMa6iJyZ83LYJXH",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Into the Future",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know your spell will be needed not now but in a few moments, so you cast your magic into the future. If your next action is to Cast a Spell that takes 1 or 2 actions to cast, the spell's effects occur 1 round later, at the beginning of your next turn, rather than immediately. Targets and choices about the spell must be determined when the spell is cast, and requirements, such as line of sight and line of effect, must be valid both when the spell is cast and when its effects occur. Consequences for the action of Casting the Spell itself, such as a Reactive Strike reaction or ending a foe's @UUID[Compendium.pf2e.conditionitems.Item.Fascinated] condition by taking a hostile action, aren't delayed.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "into-the-future"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:into-the-future",
+                {
+                  "lte": [
+                    "item:cast:actions",
+                    2
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.IntoTheFuture"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +195,52 @@
       "name": "Purge of Moments",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hKemfam7Hvkllsgp",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Purge of Moments",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>All things eventually end, a truth that you can put into practice by accelerating your passage through time to shake off harmful effects. Five rounds of apparent time occur for you. No one, including you, can act during this time, but effects on you run their course, including beneficial effects, negative effects, afflictions, conditions, and persistent damage. Roll saving throws, flat checks, damage, and any other rolls for those effects normally as if the time had passed. Excessive use of this technique is responsible for more than a few premature gray hairs among time mages.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +250,57 @@
       "name": "Spell Acceleration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "udGP9jMEOyipkA7n",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spell Acceleration",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Special time-weaving techniques let you compress your spellcasting gestures and incantations into a short burst so you can cast with incredible speed—though it causes temporal strain. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Quickened Casting] feat. It applies to your cantrips and spells from the class you used to qualify for the @UUID[Compendium.pf2e.feats-srd.Item.Time Mage Dedication].</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Quickened Casting"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +310,48 @@
       "name": "Time Mage Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bTQVvkEuPj9QAiAi",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Time Mage Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You might be a novice in the temporal arts now, but in the future, you'll hold time in the palm of your hand. As some of your future knowledge leaks back to your present self, you gain the @UUID[Compendium.pf2e.spells-srd.Item.Delay Consequence] domain spell. You can Refocus by revisiting moments from your past and contemplating futures yet to come. If you already knew <em>delay consequence</em> from a feat or ability that allows you to gain your choice of domain spell, such as the @UUID[Compendium.pf2e.feats-srd.Item.Domain Initiate] feat, then when you take Time Mage Dedication, you can retrain that option to select a different domain spell instead as your personal timeline rearranges itself. You also gain @UUID[Compendium.pf2e.spells-srd.Item.Time Sense] as an innate cantrip usable at will. This innate spell and your focus spells from the time mage archetype are of the same tradition as the spells you used to meet the archetype's prerequisites.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.ydELQFQq0lGLTvrA]{Time Mage}</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a spellcasting class feature."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +361,53 @@
       "name": "Timeline-Splitting Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ky7ZEtt4TchQNmFc",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Timeline-Splitting Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You invest in two futures, then choose the one to make a reality. You Cast two Spells that each take 1 or 2 actions to cast. These can't be the same spell heightened to two different ranks. You expend the resources for both spells, such as spell slots, Focus Points, and costs, such as gp or valuables. Determine the immediate results for both spells, including attack rolls, saving throws, damage, and any other dice rolls. Then, choose which of the two spells takes effect, using the previously attempted rolls. The other spell's resources are still expended, but the spell has no effect as the magic disappears to the other timeline.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -70,6 +417,79 @@
       "name": "What Could Have Been",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TDaf3DbWymxPmHrO",
+        "folder": "Z2psjbexrXEv0Dk6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "What Could Have Been",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Rather than conjuring creatures from elsewhere in the world or the planes, you can temporarily pull a much different version of yourself from an alternate timeline—for instance, instead of summoning a generic or random troll with @UUID[Compendium.pf2e.spells-srd.Item.Summon Giant], you summon a troll version of yourself from a timeline where you're a troll. If your next action is to Cast a Spell that summons a creature, that creature is another version of you. This creature remains the type of creature you summoned and has largely the same abilities (plus the following adjustments), but it clearly resembles you, likely sharing some distinguishing features, such as mannerisms, speech patterns, tattoos, or clothing. The summoned creature gains a +1 status bonus to any skill check in which you're trained, a +2 status bonus if you're an expert, a +3 status bonus if you're a master, or a +4 status bonus if you're legendary. The creature also takes a –2 penalty to all skills in which you're untrained.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Time Mage Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:summon",
+                "spellshape:what-could-have-been"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.WhatCouldHaveBeen"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "what-could-have-been"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

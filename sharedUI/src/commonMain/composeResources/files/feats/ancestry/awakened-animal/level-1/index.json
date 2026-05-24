@@ -7,6 +7,60 @@
       "name": "Awakened Animal Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0faPAjBozoKxMAo3",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Awakened Animal Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have taken the time to learn about the process of awakening and the experiences of your fellow awakened animals. You gain the trained proficiency rank in Arcana and Nature. If you would automatically become trained in one of those skills, you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Awakened Animal Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +70,43 @@
       "name": "Awakened Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LaThPZtOGJ1VTNxl",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Awakened Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When you awakened, primal magic was released within you. Choose one cantrip from the primal spell list. You can cast this spell as an primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +116,50 @@
       "name": "Fascinated by Society",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NB8AiwWXLbOsKhOE",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fascinated by Society",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Just as some humanoids find themselves driven to study nature, you are obsessed with the artificial constructs of society and can't get enough. You are trained in Society. If you would automatically become trained in Society, you instead become trained in a skill of your choice.</p>\n<p>As a newcomer, sometimes your understanding is a bit off target. When you fail, but don't critically fail, a Society check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] or @UUID[Compendium.pf2e.actionspf2e.Item.Decipher Writing], you learn the correct information (as you would on a success) and erroneous information (as you would on a critical failure). You don't have any way to differentiate which is which.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +169,53 @@
       "name": "Land Legs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PcFzyNEYnw3pqI9H",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Land Legs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are comfortable on land for a short time. You gain a land Speed of 20 and can breathe air for 10 minutes.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "swimming animal heritage, aquatic"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "land",
+              "value": 20
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +225,69 @@
       "name": "Learn by Watching",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Z3zahFC7SzzkX6Cs",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Learn by Watching",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Before your awakening, you watched humanoids performing some skill near you frequently. You didn't know it at the time, but your curiosity led to you picking up the skill. You become trained in your choice of Crafting, Medicine, or Performance. In addition, when you @UUID[Compendium.pf2e.actionspf2e.Item.Follow the Expert] in exploration mode, you add 2 + your level as your proficiency bonus if you're untrained instead of adding your level alone.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Crafting",
+                  "value": "crafting"
+                },
+                {
+                  "label": "PF2E.Skill.Medicine",
+                  "value": "medicine"
+                },
+                {
+                  "label": "PF2E.Skill.Performance",
+                  "value": "performance"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +297,114 @@
       "name": "Natural Senses",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZTVvk5HgcWbXegZ6",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Natural Senses",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have retained your sharp animal senses even after awakening. Choose one of the following senses appropriate to your kind of animal: darkvision, echolocation 10 feet, low-light vision, scent (imprecise) 30 feet, or tremorsense (imprecise) 30 feet. (Echolocation allows you to use hearing as a precise sense at the listed range.) If your animal kind doesn't typically have a specific type of sense, you can't gain that sense with this feat.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times, choosing a different sense each time.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": 5,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Actor.Creature.Sense.Type.Darkvision",
+                  "value": "darkvision"
+                },
+                {
+                  "label": "PF2E.Actor.Creature.Sense.Type.Echolocation",
+                  "value": "echolocation"
+                },
+                {
+                  "label": "PF2E.Actor.Creature.Sense.Type.LowLightVision",
+                  "value": "low-light-vision"
+                },
+                {
+                  "label": "PF2E.Actor.Creature.Sense.Type.Scent",
+                  "value": "scent"
+                },
+                {
+                  "label": "PF2E.Actor.Creature.Sense.Type.Tremorsense",
+                  "value": "tremorsense"
+                }
+              ],
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.AwakenedAnimal.NaturalSenses.Prompt",
+              "rollOption": "natural-senses"
+            },
+            {
+              "key": "Sense",
+              "predicate": [
+                "natural-senses:darkvision"
+              ],
+              "selector": "darkvision"
+            },
+            {
+              "key": "Sense",
+              "predicate": [
+                "natural-senses:low-light-vision"
+              ],
+              "selector": "low-light-vision"
+            },
+            {
+              "acuity": "precise",
+              "key": "Sense",
+              "predicate": [
+                "natural-senses:echolocation"
+              ],
+              "range": 10,
+              "selector": "echolocation"
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "natural-senses:scent"
+              ],
+              "range": 30,
+              "selector": "scent"
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "natural-senses:tremorsense"
+              ],
+              "range": 30,
+              "selector": "tremorsense"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +414,53 @@
       "name": "Sea Legs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZYNpncz5wwJmduf2",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sea Legs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are comfortable on the water for short bursts. You gain a swim Speed of 10 feet and can breathe underwater for 5 minutes.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You don't have a swim Speed."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +470,70 @@
       "name": "Take Flight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "agvMFNvvuQFAveP8",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Take Flight",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p>Though it's not fully effective, much of your ability to fly has stayed with you. You Fly. If you don't normally have a fly Speed, you gain a fly Speed of 15 feet for this movement. If you aren't on solid ground at the end of this movement, you fall.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "flying animal heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "take-flight",
+              "predicate": [
+                {
+                  "not": "feat:full-flight"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "take-flight"
+              ],
+              "selector": "fly",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +543,382 @@
       "name": "Tooth and Claw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hLJgvbq1uJwMMl0C",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tooth and Claw",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've become adept with your born weapons. Choose a second animal attack appropriate to your animal type and heritage.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.BattleForm.Attack.Antler",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:antler"
+                    }
+                  ],
+                  "value": "antler"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Beak",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:beak"
+                    }
+                  ],
+                  "value": "beak"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Claw",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:claw"
+                    }
+                  ],
+                  "value": "claw"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Fangs",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:fangs"
+                    }
+                  ],
+                  "value": "fangs"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Fist",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:fist"
+                    }
+                  ],
+                  "value": "fist"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Horn",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:horn"
+                    }
+                  ],
+                  "value": "horn"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Jaws",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:jaws"
+                    }
+                  ],
+                  "value": "jaws"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Tail",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:tail"
+                    }
+                  ],
+                  "value": "tail"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Talon",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:talon"
+                    }
+                  ],
+                  "value": "talon"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Tongue",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:tongue"
+                    }
+                  ],
+                  "value": "tongue"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Wing",
+                  "predicate": [
+                    {
+                      "not": "animal-attack:wing"
+                    }
+                  ],
+                  "value": "wing"
+                }
+              ],
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.UnarmedAttack",
+              "rollOption": "tooth-and-claw"
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/antler.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Antler",
+              "predicate": [
+                "tooth-and-claw:antler"
+              ],
+              "slug": "antler",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/beak.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Beak",
+              "predicate": [
+                "tooth-and-claw:beak"
+              ],
+              "slug": "beak",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/claw.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                "tooth-and-claw:claw"
+              ],
+              "slug": "claw",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/fangs.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Fangs",
+              "predicate": [
+                "tooth-and-claw:fangs"
+              ],
+              "slug": "fangs",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "fist": true,
+              "key": "Strike",
+              "predicate": [
+                "tooth-and-claw:fist"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/horn.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Horn",
+              "predicate": [
+                "tooth-and-claw:horn"
+              ],
+              "slug": "horn",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/jaws.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Jaws",
+              "predicate": [
+                "tooth-and-claw:jaws"
+              ],
+              "slug": "jaws",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/tail.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tail",
+              "predicate": [
+                "tooth-and-claw:tail"
+              ],
+              "slug": "tail",
+              "traits": [
+                "finesse",
+                "trip",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/talon.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Talon",
+              "predicate": [
+                "tooth-and-claw:talon"
+              ],
+              "slug": "talon",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/tongue.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tongue",
+              "predicate": [
+                "tooth-and-claw:tongue"
+              ],
+              "slug": "tongue",
+              "traits": [
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/wing.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Wing",
+              "predicate": [
+                "tooth-and-claw:wing"
+              ],
+              "slug": "wing",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +928,63 @@
       "name": "You're So Cute!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "z5meCd4ZidBAPtUt",
+        "folder": "JJJyxblJvkrgKQmg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You're So Cute!",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You know how to put on the charm, doing playful tricks to win favor. You are trained in Performance and gain the @UUID[Compendium.pf2e.feats-srd.Item.Impressive Performance] feat. When performing for humanoids, you gain a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] with Performance.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Impressive Performance"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression"
+              ],
+              "selector": "performance",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

@@ -7,6 +7,60 @@
       "name": "Between the Scales",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zL6zUrt44tZYyuh4",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Between the Scales",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned to take advantage of slips in your foes' defenses. When you Strike an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] creature using a melee weapon or unarmed attack that has the agile and finesse traits, it gains the backstabber trait.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                "item:trait:agile",
+                "item:trait:finesse",
+                {
+                  "not": "item:ranged"
+                }
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "target:condition:off-guard"
+              ],
+              "property": "weapon-traits",
+              "value": "backstabber"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +70,81 @@
       "name": "Breath Unleashed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BaVO8UU5ZkL8OZZj",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Breath Unleashed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're able to channel more of your draconic benefactor's power and focus it into your @UUID[Compendium.pf2e.feats-srd.Item.Kobold Breath], increasing its effectiveness but requiring more time to recover. When you use Kobold Breath, you can increase the damage dice to d8s and increase the area to @Template[cone|distance:30]{30 feet for a cone} or @Template[line|distance:60]{60 feet for a line}. If you do, you can't use Kobold Breath again for 1 hour. During this time, Kobold Breath cannot be recharged using Kobold Momentum.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Kobold Breath"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "breath-unleashed",
+              "toggleable": true
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:kobold-breath",
+                "breath-unleashed"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "item:slug:kobold-breath",
+                "breath-unleashed"
+              ],
+              "property": "dice-faces",
+              "selectors": [
+                "kobold-breath-inline-damage"
+              ],
+              "value": 8
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +154,43 @@
       "name": "Briar Battler",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xM8IWff5yfbQGk4s",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Briar Battler",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When you're in difficult terrain from an environmental feature, you can @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover], even if the feature wouldn't ordinarily be large enough for you to Take Cover.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +200,43 @@
       "name": "Close Quarters",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rU9Aw05FFLVq0MTV",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Close Quarters",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>If you're Small or smaller, you can end your movement in the same square as a Small or smaller ally. No more than two creatures can share the same space when using this ability or a similar one.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +246,54 @@
       "name": "Dracomancer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lbiFj4At5BxotaNY",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dracomancer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The power infused into you by your draconic benefactor's presence allows you to manifest their most iconic spells. Choose one 1st-rank spell and one 2nd-rank spell from those listed for a dragon spellcaster of your draconic benefactor's type, (for example, @UUID[Compendium.pf2e.spells-srd.Item.Fear] and @UUID[Compendium.pf2e.spells-srd.Item.Invisibility] for a conspirator dragon benefactor). You can cast each of these spells once per day as innate spells of the same tradition as your draconic benefactor. You gain the trained proficiency rank in the spell attack modifier and spell DC statistics, and your key spellcasting attribute is Charisma.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dragonscaled kobold heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +303,84 @@
       "name": "Draconic Paragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PF8qHT4zd0loLQeJ",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Paragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to your draconic benefactor becomes especially pronounced. You gain additional effects for the prerequisite kobold feat. If you have more than one of the prerequisite feats, you gain the appropriate additional effects.</p><ul><li><strong>Benefactor's Strike</strong> Your unarmed strikes made with your jaws, claws, or tail gain the deadly d6 trait.</li><li><strong>Dracomancer</strong> Increase the number of times per day you can cast each of the granted 1st- and 2nd-rank innate spells by 1.</li><li><p><strong>Kobold Breath</strong> Creatures that critically fail their save against your Kobold Breath take 3d4 persistent damage of the type dealt by your draconic benefactor.</p>\n</li></ul>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Benefactor's Strike, Dracomancer, or Kobold Breath"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:base:claw",
+                    "item:base:jaws",
+                    "item:base:tail"
+                  ]
+                },
+                "feat:benefactors-strike"
+              ],
+              "property": "traits",
+              "value": "deadly-d6"
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:kobold-breath"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Kobold.DraconicParagon.KoboldBreath.Addendum"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -61,6 +390,43 @@
       "name": "Evolved Spellhorn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ELbjdZtAGppc1b30",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Evolved Spellhorn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your inborn arcane power grows. Choose one common 1st-rank arcane spell and one common 2nd-rank arcane spell. You can cast each of these spells once per day as arcane innate spells.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -70,6 +436,49 @@
       "name": "Fleeing Shriek",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oOicdaf3WvT1i5ft",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fleeing Shriek",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You let out an ear-piercing screech. Each creature in a @Template[emanation|distance:10] takes @Damage[ceil(@actor.level/2)d6[sonic]|options:area-damage] damage, with a @Check[fortitude|against:class-spell|basic|options:area-effect] saving throw against the higher of your class DC or spell DC. You then Stride, and this movement doesn't trigger reactions from any creature that failed or critically failed its saving throw.</p>\n<p>At 11th level and every 2 levels thereafter, the damage increases by 1d6.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "kobold",
+              "sonic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -79,6 +488,69 @@
       "name": "Winglet Flight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kBnsLuh3eBLjwGpN",
+        "folder": "HuUvevadVxKumpH6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Winglet Flight",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p><hr /><p>Intense use and exercise have made your winglets more powerful. You Fly. If you don't normally have a fly Speed, you gain a fly Speed of 20 feet for this movement. If you aren't on solid ground at the end of this movement, you fall.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round",
+            "value": 1
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winglets"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "winglet-flight",
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "winglet-flight",
+                {
+                  "not": "feat:wyrmling-flight"
+                }
+              ],
+              "selector": "fly",
+              "value": 20
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kobold"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

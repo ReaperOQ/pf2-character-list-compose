@@ -7,6 +7,51 @@
       "name": "Distracting Flattery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jzflcD1XnBp2bSZI",
+        "folder": "MyG6Mg5pwihDfpy2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distracting Flattery",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You observe a target's attitude toward yourself or your allies decrease as a result of an ally's behavior.</p>\n<hr />\n<p>You know how to maintain a good impression and manage your image, even while keeping uncouth company.</p>\n<p>Make a @Check[deception|defense:will] check against the target's Will DC. Regardless of your result, the target is temporarily immune to your Distracting Flattery for 10 minutes.</p>\n<hr />\n<p><strong>Success</strong> The target's attitude doesn't decrease as a result of your ally's social blunder.</p>\n<p><strong>Failure</strong> The target's attitude decreases, as normal.</p>\n<p><strong>Critical Failure</strong> Your attempt makes matters worse, decreasing the target's attitude toward you by one step, in addition to any changes from the behavior that triggered this reaction.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dandy Dedication"
+              },
+              {
+                "value": "expert in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -16,6 +61,47 @@
       "name": "Gossip Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7jqBwXq9jVsghCva",
+        "folder": "MyG6Mg5pwihDfpy2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gossip Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your time gossiping in fashionable salons keeps you informed on every topic.</p>\n<p>You are trained in Gossip Lore, a special Lore skill that can be used only to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge], but on any topic. If you fail a check to Recall Knowledge with Gossip Lore, you get the effects of the @UUID[Compendium.pf2e.feats-srd.Item.Dubious Knowledge] skill feat.</p>\n<p>If you have legendary proficiency in Society, you gain expert proficiency in Gossip Lore, but you can't increase your proficiency rank in Gossip Lore by any other means.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dandy Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +111,93 @@
       "name": "Ivy Playhouse Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0VOzclP73W0txuvF",
+        "folder": "MyG6Mg5pwihDfpy2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ivy Playhouse Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've spent so many hours at the Ivy Playhouse or sparring with the Street Performers and Actors' Guild that you've picked up some stage combat techniques. In a fight, you can apply these approaches to make an attack less harmful but more confounding to your foes. Make a melee Strike. If you hit, you take a circumstance penalty to damage equal to the number of weapon damage dice, and the damage gains the nonlethal trait. However, the target is perplexed by the theatricality of your attack and becomes @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dandy Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "ivy-playhouse-strike",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "ivy-playhouse-strike",
+                "item:melee"
+              ],
+              "selector": [
+                "melee-strike-damage"
+              ],
+              "type": "circumstance",
+              "value": "-1*(@weapon.system.damage.dice)"
+            },
+            {
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "ivy-playhouse-strike",
+                "item:melee"
+              ],
+              "property": "weapon-traits",
+              "value": "nonlethal"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "ivy-playhouse-strike",
+                "item:melee"
+              ],
+              "selector": [
+                "melee-strike-damage"
+              ],
+              "text": "The target becomes @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} until the end of your next turn.",
+              "title": "{item|name}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +207,53 @@
       "name": "Such a Disgrace!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ACVze8hUm9L5Slrg",
+        "folder": "MyG6Mg5pwihDfpy2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Such a Disgrace!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally within 30 feet fails a Will saving throw against a mental effect.</p><hr /><p>You expect the same level of urbane sophistication from your allies as you possess, so whenever one of them succumbs to egregious behavior from a mental effect, you're immediately mortified. How dare they make you look bad! Whether you respond with noisy contempt or quiet distress, your reaction gives your ally a second chance to shake off the effect and save the moment, at least socially. Your ally rerolls the triggering Will saving throw with a +1 circumstance bonus and uses the higher result. Regardless of the result of the save, your ally is temporarily immune to Such a Disgrace! for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Such a Disgrace!]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dandy Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Hellfire Dispatches"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

@@ -7,6 +7,50 @@
       "name": "Bloody Debilitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QicYF43HqgpOBLzo",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloody Debilitation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attacks slice arteries and veins. Add the following debilitation to the list you can choose from when you use Debilitating Strike.</p>\n<ul>\n<li><strong>Debilitation</strong> The target takes @Damage[3d6[bleed]] damage.</li>\n</ul>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Medicine"
+              },
+              {
+                "value": "Debilitating Strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +60,48 @@
       "name": "Critical Debilitation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lPTcPIshChHWz4J6",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Critical Debilitation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your debilitations are especially effective on your most powerful attacks. Whenever you critically succeed at an attack roll against an enemy and use Debilitating Strike, add the following debilitation to the list you can choose from.</p>\n<ul>\n<li><p><strong>Debilitation</strong> The target attempts a @Check[fortitude|against:rogue] save against your class DC with the following effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} until the end of your next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 2} until the end of your next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Paralyzed] until the end of your next turn.</p>\n</li>\n</ul>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Debilitating Strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "incapacitation",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +111,43 @@
       "name": "Fantastic Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qI5ZyuNVME95iXhJ",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fantastic Leap",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You launch yourself through the air at a foe. Attempt a @UUID[Compendium.pf2e.actionspf2e.Item.High Jump] or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump]. If you attempt a High Jump, determine the height of your jump as though determining the length of a Long Jump. At the end of your jump, you can make a melee Strike.</p>\n<p>After your Strike, you fall to the ground if you're in the air. If the distance of your fall is no more than the height of your jump, you take no damage and land upright.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +157,43 @@
       "name": "Felling Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ij6BBPzZvOFZ3prs",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Felling Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your ranged attacks can shoot an unprepared foe right out of the air. Make a ranged Strike against an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] creature. If the Strike is a success and deals damage, the target must attempt a @Check[reflex|against:rogue] save against your class DC.</p>\n<hr />\n<p><strong>Success</strong> The target is unaffected.</p>\n<p><strong>Failure</strong> The target falls up to 120 feet. If it hits the ground, it takes no damage from the fall.</p>\n<p><strong>Critical Failure</strong> As failure, and the target can't fly, jump, levitate, or otherwise leave the ground until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +203,44 @@
       "name": "Preparation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zzMugLCUkQQPa2qT",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Preparation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You survey the battlefield, calculating the possibilities. You gain one additional reaction, which you can use before the beginning of your next turn for any rogue reaction.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +250,47 @@
       "name": "Ricochet Feint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VIjI8PtkTFjeAA6a",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ricochet Feint",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While in @UUID[Compendium.pf2e.feats-srd.Item.Ricochet Stance (Rogue)]{Ricochet Stance}, you can bounce a thrown weapon off a foe to distract them. You can attempt a @UUID[Compendium.pf2e.actionspf2e.Item.Feint] against a creature within the first range increment of a thrown weapon you are wielding, rather than only creatures within your melee reach.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ricochet Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +300,44 @@
       "name": "Spring from the Shadows",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "emjWa77ltL5FytvA",
+        "folder": "wF1N40hxWEAJiPnJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spring from the Shadows",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You leap from hiding and assail your target. You Stride up to your Speed, but you must end your movement next to an enemy you're @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from or @UUID[Compendium.pf2e.conditionitems.Item.Undetected] by. You then Strike that enemy; you remain hidden from or undetected by that creature until after you Strike. You can use Spring from the Shadows while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

@@ -7,6 +7,54 @@
       "name": "Accursed Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fhwO3N3VoZ0ZpfjU",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Accursed Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When the curse within you spills out, you can lay curses on others and claim them for yourself with ease. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Claim Curse]. At 10th level, you can also cast @UUID[Compendium.pf2e.spells-srd.Item.Seal Fate], and at 12th level, you can also cast @UUID[Compendium.pf2e.spells-srd.Item.Inevitable Disaster]. You can cast these spells once per day as occult innate spells, but only while within your curse maelstrom state. If you couldn't already cast occult spells, these spells use Wisdom as your spellcasting attribute, and you become trained in the spell attack modifier and spell DC statistics.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Curse Maelstrom Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +64,47 @@
       "name": "Counter Curse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3xkFb2qlAdgLmdSf",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Counter Curse",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You or an ally within 30 feet is targeted by or in the emanation of a curse or misfortune effect from an opponent or object of which you're aware.</p>\n<p><strong>Requirements</strong> You're in a curse maelstrom state.</p><hr /><p>You gather the energy of your maelstrom and fling its unleashed power into the enemy's curse, attempting to neutralize it. Attempt a counteract check against the triggering effect, using half your level rounded up as your counteract rank and the higher of your class DC – 10 or spell DC – 10 as the counteract modifier. On a success, you neutralize the curse or misfortune effect. If the effect was constant, such as a misfortune aura, it returns automatically at the beginning of the creature or object's next turn. Whether you succeed or fail, your curse maelstrom state ends.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Curse Maelstrom Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +114,48 @@
       "name": "Curse Maelstrom Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LJzk4Xxxs9IlbWz6",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Curse Maelstrom Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A horrible curse has left a lingering stain on your soul, and its effects continue to plague you even if the curse's other effects have ended. You can choose to suppress it, but if you instead let it manifest, you can channel its power in your favor. During an encounter, when you succeed at a check, the GM can offer to have you roll again, taking the second result. This is a misfortune effect. If you do so, you enter a curse maelstrom state. If the misfortune effect is somehow canceled or negated (by a fortune effect, for example), you don't enter a curse maelstrom state.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Curse Maelstrom State]</p>\n<p>In addition, the curse is jealous of its place within your soul and gladly lashes out whenever others dare to usurp that position, granting you its power without the usual price. If a foe places a misfortune effect on your roll and the effect applies to your roll, you enter a curse maelstrom state, and if you fail a saving throw against a foe's curse effect and are affected by the curse, you also enter a curse maelstrom state. No matter the source, you can only enter a curse maelstrom state during an encounter, and if you don't end the state on your own, it ends at the end of the encounter. Once it ends, you can't enter a curse maelstrom state again for 1 minute.</p>\n<p>While in a curse maelstrom state, you can't benefit from fortune effects, and they also don't cancel misfortune effects on you; they simply have no effect. While in this state, all creatures other than you within a @Template[emanation|distance:10] take a -1 status penalty to all saving throws and skill checks due to the storm of bad luck swirling out of your body. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Expel Maelstrom] action, which you can use to focus the brunt of your curses onto an unlucky target.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.KRUWPDzuwG0LC26d]{Curse Maelstrom}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You are cursed or have previously been cursed."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +165,64 @@
       "name": "Familiar Oddities",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5f8gQxVdioUcgsTD",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Familiar Oddities",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Perhaps due to the curse within you, curses occasionally perceive you as an extension of themselves and readily reveal themselves to you. You gain a +2 circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Identify Magic] on a cursed item or a spell that has the curse trait.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Curse Maelstrom Dedication"
+              },
+              {
+                "value": "trained in Occultism or Curse Lore"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:identify-magic",
+                "familiar-oddities"
+              ],
+              "selector": [
+                "skill-check"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "skill"
     },
@@ -43,6 +232,47 @@
       "name": "Reverse Curse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WyGeBz9U6Hovozdl",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reverse Curse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you counter a curse or misfortune effect, you send it back to destroy its originator. Whenever you succeed at the counteract check to @UUID[Compendium.pf2e.feats-srd.Item.Counter Curse], the creature is affected by its own curse or misfortune effect, attempting a saving throw against its own DC if the effect allows a saving throw. In the case of a constant ability, such as a misfortune aura, the creature is affected only until the beginning of its next turn, when the ability reasserts itself.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Counter Curse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +282,47 @@
       "name": "Share Burden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "adr9buwVuxgZV2B3",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Share Burden",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally within 60 feet would be affected by a curse or misfortune effect, and you wouldn't be affected but you are an eligible target for the effect.</p>\n<hr />\n<p>You draw the misfortune or curse into yourself, potentially enabling you to enter your curse maelstrom state. Instead of affecting your ally, the triggering curse or misfortune effect affects you.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Curse Maelstrom Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -61,6 +332,47 @@
       "name": "Unnerving Expansion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JZurhROfi2JfmLfb",
+        "folder": "SVRSatDqX86L5iRW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unnerving Expansion",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gather your curse around you and impel it to pour outward, expanding your maelstrom. The radius of the emanation of your curse maelstrom state increases by 5 feet until the end of your curse maelstrom state. The outpouring of the curse is unnerving. You attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a creature within the emanation of your curse maelstrom; you don't take penalties for not sharing a language with that creature.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Curse Maelstrom Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

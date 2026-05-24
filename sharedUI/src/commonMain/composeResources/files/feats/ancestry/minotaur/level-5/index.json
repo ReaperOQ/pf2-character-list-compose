@@ -7,6 +7,47 @@
       "name": "Alarming Disappearance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oGUF5vdAsrt3tjq2",
+        "folder": "MsEJQ6p7HPwCYiz4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Alarming Disappearance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your ability to move unseen is startling for one your size, causing panic among your enemies. When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Hide] when previously observed, creatures you are @UUID[Compendium.pf2e.conditionitems.Item.Hidden] from become @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}. They are then temporarily immune to Alarming Disappearance for 1 hour. Typically, creatures that have traveled with you for a significant time, such as your fellow party members, are immune to your Alarming Disappearance.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +57,56 @@
       "name": "Beast of Burden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ra23dnNfwyIE3vTY",
+        "folder": "MsEJQ6p7HPwCYiz4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beast of Burden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your broad frame can allow you to carry weights that immobilize smaller creatures. Increase your maximum and encumbered Bulk limits by 4. You can rest normally while wearing medium armor.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.encumberedAfterAddend",
+              "value": 4
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "inventory.bulk.maxAddend",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +116,66 @@
       "name": "Labyrinthine Echoes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1rPcBoqCsmgFjily",
+        "folder": "MsEJQ6p7HPwCYiz4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Labyrinthine Echoes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can make your voice reverberate off any surface. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Ventriloquism] as an occult innate spell. At 7th level, this spell is heightened to 2nd rank.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:ventriloquism",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:ventriloquism",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:minotaur"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +185,59 @@
       "name": "Natural Orienteering",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JC5mUJssZQKslLct",
+        "folder": "MsEJQ6p7HPwCYiz4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Natural Orienteering",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>There are few twisting paths that can disorient you. When you roll a success on a Survival check to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Direction] or @UUID[Compendium.pf2e.actionspf2e.Item.Track], you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "action:sense-direction",
+                    "action:track"
+                  ]
+                }
+              ],
+              "selector": "survival"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +247,47 @@
       "name": "Puzzle Solver",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0Cc2oFLuwQ6DCQCu",
+        "folder": "MsEJQ6p7HPwCYiz4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Puzzle Solver",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You have a natural affinity for problem-solving and the unknown. Whenever you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] about a subject or creature, you gain a +1 circumstance bonus to your next skill check regarding that creature or subject (even if you didn't succeed at the check). This bonus increases to +2 if you are a master in the skill used to Recall Knowledge.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +297,48 @@
       "name": "Stretching Reach",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1yXmi6vKae6J1A0L",
+        "folder": "MsEJQ6p7HPwCYiz4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stretching Reach",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can leverage your size and muscle to extend your reach and attack more distant foes. While in this stance, when you wield a melee weapon that requires two hands and doesn't have reach, the weapon gains a reach of 10 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Stretching Reach",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Stretching Reach"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "minotaur",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

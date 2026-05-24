@@ -7,6 +7,51 @@
       "name": "Demand Surrender",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XmjvHxW5f7vKFIv7",
+        "folder": "9GUsYS60KgjvtOzJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demand Surrender",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You and your allies currently outnumber enemies on the battlefield, and you or an ally has either @UUID[Compendium.pf2e.conditionitems.Item.Restrained] an opponent or reduced an opponent to 0 Hit Points since the start of your last turn.</p><hr /><p>Confident in your victory, you command your opponent's surrender. Choose one opponent you are observing. You command that opponent to surrender in a strong voice. They must attempt a @Check[will|against:commander|options:inflicts:fleeing,inflicts:prone] save against your class DC, with the following results.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature cannot take any hostile actions that include you as a target for 1 round.</p>\n<p><strong>Failure</strong> As success, and the target is @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature drops any weapons or items it is holding, lies @UUID[Compendium.pf2e.conditionitems.Item.Prone] on the ground, and does not take any hostile actions against you or your allies for 1 minute, or until you or one of your allies attacks it.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "commander",
+              "incapacitation",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +61,52 @@
       "name": "Mercenary Reversal",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dCGg0nRvk8jUQxz8",
+        "folder": "9GUsYS60KgjvtOzJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mercenary Reversal",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You and your allies are currently outnumbered by enemies on the battlefield.</p><hr /><p>Even though the fight seems to be surging against you and your compatriots, you know that a key ally can always turn the tide. Choose a target you are currently observing. You assail it with a list of reasons why it should join you and why its defeat if it does not is surely inevitable. The target attempts a @Check[will|against:commander|options:inflicts:controlled,inflicts:stunned] save against your class DC with the following results.</p><hr /><p><strong>Critical Success</strong> The target is uninterested in joining you and is temporarily immune to further uses of this ability for 24 hours.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} as it is forced to consider the merits of your offer.</p>\n<p><strong>Failure</strong> The target swaps sides and joins you for the duration of the battle. It gains the @UUID[Compendium.pf2e.conditionitems.Item.Controlled] condition, but it can attempt a @Check[will|against:commander] save whenever it takes damage or whenever you direct it to take an action that goes against its nature. On a success, the effect ends and it rejoins its former allies.</p>\n<p><strong>Critical Failure</strong> As a failure, but the target is so impressed by your leadership that it thanks you for the privilege of fighting alongside you; if it is still alive at the end of combat, it turns over any coins, wealth or other monetary possessions it has as tribute.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "commander",
+              "concentrate",
+              "incapacitation",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +116,52 @@
       "name": "Practiced Reflexes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "63jLdP6v8FbohoXb",
+        "folder": "9GUsYS60KgjvtOzJ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Practiced Reflexes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You snap out a quick series of signals or commands that urge your allies to act with alacrity. When you use your @UUID[Compendium.pf2e.classfeatures.Item.Drilled Reactions] ability, you can give an extra reaction to up to four allies.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Drilled Reflexes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

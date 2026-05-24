@@ -7,6 +7,56 @@
       "name": "Maelstrom Flow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yzBlvtPcjhRHFvp0",
+        "folder": "UlSUY2shgoFl9Ni2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Maelstrom Flow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> You're wielding an improvised weapon.</p><hr /><p>You pour energy into an improvised weapon, speeding its destruction to grant it power. The overloaded energy grants your improvised weapon the effect of the astral, corrosive, extending, or frost rune for 1 minute, after which the item is destroyed. If the item has a Hardness greater than your level, or if it's an artifact, cursed item, or other item that's difficult to break or destroy, it is not destroyed, and this ability only lasts until the end of your turn.</p>\n<p>This effect doesn't count against the number of property runes a weapon can have based on its potency rune, but a given weapon can only have one application of Maelstrom Flow at a time.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "resurgent maelstrom hybrid study"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "magus"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +66,181 @@
       "name": "Unsheathing the Sword-Light",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RtT7r61Yytpe2RlF",
+        "folder": "UlSUY2shgoFl9Ni2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unsheathing the Sword-Light",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your @UUID[Compendium.pf2e.actionspf2e.Item.Spellstrike] is charged, and you're wielding a one-handed weapon in the sword group.</p><hr /><p>Honed through 10,000 battles, your sword's mere light can shatter ambitions and break armies. Make a melee Spellstrike with a sword, with a spell that isn't a cantrip or focus spell. Countless copies of your sword, made of light, fall around you, dealing damage equal to double the spell's rank to each creature within a @Template[type:emanation|distance:10] of the target, excluding you and the target of the Spellstrike. The damage is of the same type dealt by your sword Strike and is treated as cold iron and silver.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "aloof firmament hybrid study"
+              },
+              {
+                "value": "Spellstrike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "unsheathing-the-sword-light",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.First",
+                  "value": "1"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Second",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        3
+                      ]
+                    }
+                  ],
+                  "value": "2"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Third",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        5
+                      ]
+                    }
+                  ],
+                  "value": "3"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Fourth",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        7
+                      ]
+                    }
+                  ],
+                  "value": "4"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Fifth",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        9
+                      ]
+                    }
+                  ],
+                  "value": "5"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Sixth",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        11
+                      ]
+                    }
+                  ],
+                  "value": "6"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Seventh",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        13
+                      ]
+                    }
+                  ],
+                  "value": "7"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Eighth",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        15
+                      ]
+                    }
+                  ],
+                  "value": "8"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Ninth",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        17
+                      ]
+                    }
+                  ],
+                  "value": "9"
+                },
+                {
+                  "label": "PF2E.SpecificRule.SpellRank.Tenth",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "self:level",
+                        19
+                      ]
+                    }
+                  ],
+                  "value": "10"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "unsheathing-the-sword-light"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Magus.UnsheathingTheSwordLight.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "arcane",
+              "light",
+              "magus"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +250,51 @@
       "name": "Vermillion Threads",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gcDnshdIZVfp9bbz",
+        "folder": "UlSUY2shgoFl9Ni2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Vermillion Threads",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You use @UUID[Compendium.pf2e.actionspf2e.Item.Arcane Cascade].</p><hr /><p>Your Arcane Cascade sends threads to the four directions, creating a web of strings dyed by your skill and your enemies' blood. The web fills a @Template[type:burst|distance:15] centered on you and is difficult terrain. You can ignore the difficult terrain, and the strings can support your weight, allowing you to walk on them as though you were benefiting from @UUID[Compendium.pf2e.spells-srd.Item.Fly].</p>\n<p>The web lasts for 1 minute but ends early if your Arcane Cascade ends or you leave the web.</p>\n<p>If you Cast a Spell from a spell slot while in the web, the strings glow red until the beginning of your next turn, dealing damage equal to the spell's rank to any creature other than you that moves through the web. The damage occurs at the end of the creature's movement, with a @Check[reflex|against:spell|basic] against your spell DC. A creature can take this damage only once each round.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Arcane Cascade"
+              },
+              {
+                "value": "unfurling brocade hybrid study"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "arcane",
+              "magus"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

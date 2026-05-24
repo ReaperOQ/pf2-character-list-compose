@@ -7,6 +7,47 @@
       "name": "After You",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3kH0fGOIoYvPNQsq",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "After You",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're about to roll initiative.</p><hr /><p>You allow your foes to make the first move in a show of incredible confidence. You don't roll initiative; instead you voluntarily go last. You gain panache. If more than one character uses this ability or another ability to go last, use the normal rules for resolving a tie: NPCs and monsters act before PCs, and within those groups, the creatures can choose whichever order they want.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Panache",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Panache"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +57,57 @@
       "name": "Antagonize",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Wx12NUjqTOjFrEoW",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Antagonize",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your taunts and threats earn your foes' ire. When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a creature, its @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition can't decrease to less than 1 at the end of its turn until it either uses a hostile action against you or can no longer observe or sense you for at least 1 round.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:demoralize"
+              ],
+              "selector": "skill-check",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +117,43 @@
       "name": "Brandishing Draw",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "E25gWBCsDm3DbJdO",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brandishing Draw",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You draw and attack with the same motion. You Interact to draw a weapon, then either Strike or use a one-action finisher. You must still meet any other requirements to use a finisher, and any Strike you make must be made with the weapon you drew.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +163,75 @@
       "name": "Charmed Life",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DkoxNw9tsFFXrfJY",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Charmed Life",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You attempt a saving throw, but you haven't rolled yet.</p><hr /><p>When danger calls, you have a strange knack for coming out on top. You gain a +2 circumstance bonus to the triggering save. If you succeed on the triggering saving throw, you gain panache until the end of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache (Temporary)]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Charisma +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "charmed-life",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "charmed-life"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "charmed-life"
+              ],
+              "selector": "saving-throw",
+              "text": "PF2E.SpecificRule.Swashbuckler.PanacheFailure",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +241,43 @@
       "name": "Enjoy the Show",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Igt8Ml5YIdxueMlF",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enjoy the Show",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You address an ally or any onlookers to your combat, flaunting to your foes how little attention they require. When you @Check[performance|traits:action:perform,bravado]{Perform}, you can choose single creature within 30 feet and use the following success, critical success, and critical failure effects instead of the normal results; if you do, Perform gains the bravado trait, as well as the auditory and linguistic trait as normal for oration.</p><hr /><p><strong>Critical Success</strong> The target takes a –2 circumstance penalty to attack rolls against creatures other than you until the end of its next turn.</p>\n<p><strong>Success</strong> The target takes a –1 circumstance penalty to attack rolls against creatures other then you until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> The target gains a +1 circumstance bonus to attack rolls targeting you until the end of its next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Enjoy the Show]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +287,43 @@
       "name": "Finishing Follow-Through",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DY6pNO3GzHeKSxmQ",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Finishing Follow-Through",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Finishing a foe maintains your swagger. You gain @UUID[Compendium.pf2e.feat-effects.Item.Effect: Panache]{Panache} whenever your finisher brings a target to 0 HP.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +333,94 @@
       "name": "Retreating Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HxMkvkxd8QMXcQ67",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Retreating Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make a calculated attack without letting down your guard. Make a melee Strike with the following failure effect.</p>\n<p><strong>Failure</strong> You Step as a free action.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Retreating",
+                  "value": "retreating"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure"
+              ],
+              "predicate": [
+                "finisher:retreating",
+                {
+                  "or": [
+                    "item:melee",
+                    {
+                      "and": [
+                        "feat:flying-blade",
+                        "item:thrown",
+                        "target:range-increment:1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:agile",
+                    "item:trait:finesse"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Swashbuckler.Finisher.RetreatingNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -70,6 +430,73 @@
       "name": "Tumble Behind (Swashbuckler)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fU7d5P6WrfAirgip",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tumble Behind (Swashbuckler)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your tumbling puts your foes on the back foot. When you @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] successfully, the foe you Tumbled Through is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the next attack you make before the end of your turn.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:tumble-through"
+              ],
+              "selector": "acrobatics",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            },
+            {
+              "key": "RollOption",
+              "option": "tumble-behind",
+              "toggleable": true
+            },
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "tumble-behind"
+              ],
+              "selectors": [
+                "strike-attack-roll",
+                "strike-damage"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -79,6 +506,77 @@
       "name": "Unbalancing Finisher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VXA50vhIRCBt4vvP",
+        "folder": "inBGqfrvqBZdPhnn",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unbalancing Finisher",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You attack with a flashy assault that leaves your target off balance. Make a melee Strike. If you hit and deal damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:panache"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Label",
+              "mergeable": true,
+              "option": "finisher",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Swashbuckler.Finisher.Unbalancing",
+                  "value": "unbalancing"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "finisher:unbalancing"
+              ],
+              "selector": "strike-damage",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "finisher": "Finisher",
+              "swashbuckler": "Swashbuckler"
+            },
+            "value": [
+              "finisher",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

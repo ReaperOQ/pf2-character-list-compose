@@ -7,6 +7,77 @@
       "name": "Benefactor's Wings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N6qQU07KWuxgo8Gy",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Benefactor's Wings",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding or wearing your <em>draconic gift</em>.</p><hr /><p>Calling on your draconic gift, spectral wings carry you to your destination. You Fly. If you don't normally have a fly Speed, you gain a fly Speed of 20 feet for this movement. If your spectral dragon shares your space, this fly Speed is instead 30 feet, and your spectral dragon moves with you. If you aren't on solid ground at the end of this movement, you fall.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "benefactors-wings",
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "benefactors-wings"
+              ],
+              "selector": "fly",
+              "slug": "benefactors-wings-flight-bonus",
+              "value": 20
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "benefactors-wings",
+                "spectral-dragon-space"
+              ],
+              "selector": "fly",
+              "slug": "benefactors-wings-flight-bonus",
+              "value": 30
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +87,52 @@
       "name": "Call Draconic Ally",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7hucfLLgeNeX5Pkw",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call Draconic Ally",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Either by beseeching a dragon or bending it to your will, you conjure a mighty creature to assist you. Once per day while you are @UUID[Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence]{Channeling Draconic Essence}, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Summon Dragon] as an innate spell with a tradition matching your draconic exemplar, heightened to half your level rounded up.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +142,63 @@
       "name": "Deepening Devotion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TP0BKE1nrl5q1n2C",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deepening Devotion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your investment in your draconic gift has unlocked greater power. When your spectral dragon shares your space, the status bonus to saves against sleep and paralysis increases to +2.</p>\n<p>In addition, you can use Draconic Salvation if you succeeded or failed on your saving throw, not only if you critically failed.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "spectral-dragon-space"
+              ],
+              "selector": "saving-throw",
+              "slug": "channel-draconic-essence-bonus",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +208,76 @@
       "name": "Draconic Acolyte Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uhfn5IuLPekAYCDf",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Acolyte Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As an acolyte of dragonkind, you have an item known as a draconic gift that you can use to summon a portion of the magical essence of the dragon you received it from. Choose a @UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.GduFISQ6kzEB6sec#draconic-benefactors]{Draconic Benefactor} with a trait that matches the trained skill you used to qualify for this feat (arcane for Arcana, primal for Nature, occult for Occultism, and divine for Religion). You can't change your draconic benefactor later. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] feat for Dragon Lore. If you were already trained in Dragon Lore, you also become trained in a Lore skill of your choice.</p>\n<p>You gain a <em>draconic gift</em>, a palm-sized magic item of negligible Bulk with a level equal to your level and a trait matching your draconic benefactor's tradition. Choose this item's appearance when you take this feat. This item is linked to your spirit, so if you ever lose possession of it (whether by dropping it or having it stolen from your person), it appears back in your possession at the beginning of your next turn.</p>\n<p>Finally, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence] action and @UUID[Compendium.pf2e.actionspf2e.Item.Draconic Salvation] reaction. These and all other actions from this archetype gain the tradition trait of your draconic benefactor.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Arcana, Nature, Occultism, or Religion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                {
+                  "not": "feature:draconic-benefactor"
+                }
+              ],
+              "uuid": "Compendium.pf2e.ancestryfeatures.Item.Draconic Benefactor"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Draconic Salvation"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +287,64 @@
       "name": "Draconic Familiar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9fTmP4NuLwSoNl8f",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Familiar",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your devotion to dragons has attracted a loyal servant. You gain a familiar. You can select four familiar or master abilities each day, instead of two, but one of them must always be the @UUID[Compendium.pf2e.familiar-abilities.Item.Dragon] familiar ability. When you Channel Draconic Essence, you can also Command your familiar as a free action.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Pet"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.familiarAbilities.value",
+              "priority": 9,
+              "value": 4
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +354,61 @@
       "name": "Draconic Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fMIHi9AuwZF7DufT",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Fury",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding or wearing your draconic gift.</p><hr /><p>You briefly summon spectral claws that lash out in a flurry. All creatures in a @Template[type:cone|distance:15] take @Damage[(1 + floor(@actor.level/4))d6[slashing]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect] save against the higher of your class DC or spell DC. A creature that critically fails the save also takes @Damage[(floor(@actor.level/4))d4[persistent,bleed]] damage. If you are Channeling Draconic Essence, your spectral dragon's space can be the origin of the cone.</p>\n<p>At 8th level and every 4 levels thereafter, the initial damage increases by 1d6 and the persistent bleed damage on a critical failure increases by 1d4.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "{actor|flags.system.draconicBenefactor.tradition}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +418,65 @@
       "name": "Draconic Resilience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5shHvm7YP0B5diqB",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Draconic Resilience",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding or wearing your <em>draconic gift</em>.</p><hr /><p>Energy reminiscent of dragon scales shimmers over you, making it more difficult for attacks to penetrate your defenses. Until the start of your next turn, you gain a +1 status bonus to AC and gain resistance equal to half your level to bludgeoning damage. If you are @UUID[Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence]{Channeling Draconic Essence}, you can grant these benefits to a willing creature who is in the same space as your spectral dragon instead of you.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "{actor|flags.system.draconicBenefactor.tradition}"
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Draconic Resilience",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Draconic Resilience"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +486,70 @@
       "name": "Essence Overflow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "J7b0h6t09kS5e0R4",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Essence Overflow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are Channeling Draconic Essence.</p><hr /><p>Uncontainable power explodes from your spectral dragon. Your Channel Draconic Essence ends, and all creatures (except you) in a @Template[type:emanation|distance:10] from your spectral dragon take @Damage[(5+floor((@actor.level - 4)/2))d6|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect] save against the higher of your class DC or spell DC. The damage's type matches the breath of your draconic benefactor. You then can't use Essence Overflow again for [[/r 1d4 #Recharge Essence Overflow]]{1d4 rounds}.</p>\n<p>At 8th level and every 2 levels thereafter, the damage increases by 1d6.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "traits",
+              "value": "{actor|flags.system.draconicBenefactor.tradition}"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "override",
+              "property": "damage-type",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "value": "{actor|flags.system.draconicBenefactor.breathDamage}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +559,56 @@
       "name": "Frightening Power",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mAoykPgP5OALqeq3",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Frightening Power",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are holding or wearing your <em>draconic gift</em>.</p><hr /><p>Draconic essence coruscates around you, sapping the resilience of your foes. Each enemy in a @Template[type:emanation|distance:20] must attempt a Will saving throw against the higher of your class DC or spell DC. If you are Channeling Draconic Essence, your spectral dragon can be the origin of this emanation. Regardless of the result of its saving throw, a creature that attempts a save is temporarily immune to your Frightening Power for 24 hours.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 4}.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "aura",
+              "emotion",
+              "fear",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -88,6 +618,52 @@
       "name": "Hidden Hoard",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zKh3SQLDHMVcKRLk",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hidden Hoard",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your <em>draconic gift</em> is the key to a repository of treasure that only you can access. You create an extradimensional space that can hold up to 100 Bulk worth of objects. The space functions as a spacious pouch, but has no Bulk, and can be Interacted with using only one hand by touching your draconic gift. You can normally store and retrieve items that could fit through the opening of a bag (as @UUID[Compendium.pf2e.equipment-srd.Item.Spacious Pouch (Type I)]{spacious pouch}). However, you can store an unattended item larger than would normally fit (but no larger than 10 Bulk) by spending 1 minute concentrating on your <em>draconic gift</em> as you press it against the object. Retrieving it takes 1 minute and causes the item to appear in the closest unoccupied space.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -97,6 +673,73 @@
       "name": "Reactive Resilience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "f58Vhv4R4J6a7ie9",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reactive Resilience",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You take damage.</p>\n<p><strong>Requirements</strong> You are @UUID[Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence]{Channeling Draconic Essence}.</p><hr /><p>Your power blunts blades and weakens spells like the hardiest of dragon scales. You gain resistance to the triggering damage equal to your level. Channel Draconic Essence ends.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Resilience"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "reactive-resilence",
+              "predicate": [
+                "self:effect:channel-draconic-essence"
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "reactive-resilence"
+              ],
+              "type": "all-damage",
+              "value": "@actor.level"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -106,6 +749,61 @@
       "name": "Reflexive Devotion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eAcMHQgfsOePtYgp",
+        "folder": "JrW9SiDN0kRE26sN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reflexive Devotion",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative.</p><hr /><p>The power of dragons flows through you at the merest thought. You Channel Draconic Essence.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Draconic Acolyte Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "selector": [
+                "initiative"
+              ],
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

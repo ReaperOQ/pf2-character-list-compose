@@ -7,6 +7,71 @@
       "name": "Deflecting Jewel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e7nTmdVOcaVkn2Q9",
+        "folder": "zOrWiOjFXay2vzPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Deflecting Jewel",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You're the target of a ranged attack while you possess your head gem.</p>\n<p><strong>Requirements</strong> You're aware of the triggering attack.</p><hr /><p>You walk the line between two sides of something, such as belonging to two clans, having a mixed allegiance or faith, or being caught between two possible fates. Your dual nature has attuned your head gem to the half moon, and it has manifested the power to ward away attacks by drawing a line between them and you. You gain a +2 circumstance bonus to AC against the triggering attack.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "has-sarangay-head-gem"
+                }
+              ],
+              "disabledValue": false,
+              "domain": "ac",
+              "key": "RollOption",
+              "option": "deflecting-jewel",
+              "priority": 51,
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "deflecting-jewel"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "occult",
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +81,47 @@
       "name": "Smoke Through Bamboo",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tBfrd9zThNw9lkTI",
+        "folder": "zOrWiOjFXay2vzPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Smoke Through Bamboo",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've spent significant time slipping silently between bamboo thickets, and your light-footedness allows you to navigate even the thickest forests and brush with ease. When you Step, you can move 10 feet instead of 5. This enables you to Step into and within difficult terrain as long as you can meet the extra movement cost.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "new moon sarangay"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +131,76 @@
       "name": "The Moon Weaver's Art",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ceQ09tTO4M7qwHXv",
+        "folder": "zOrWiOjFXay2vzPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Moon Weaver's Art",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've learned to create minor illusions by collecting strands of moonlight and weaving them together to create small images or cloaking veils. You can cast either @UUID[Compendium.pf2e.spells-srd.Item.Illusory Object] or @UUID[Compendium.pf2e.spells-srd.Item.Invisible Item] as an occult innate spell once per day.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:illusory-object",
+                    "item:slug:invisible-item"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:illusory-object",
+                    "item:slug:invisible-item"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:sarangay"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +210,43 @@
       "name": "Tikling Bird Twirl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ILJBC1tFusaHVYQI",
+        "folder": "zOrWiOjFXay2vzPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tikling Bird Twirl",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll a critical hit on a melee Strike against an enemy.</p><hr /><p>You trained your footwork by dancing to music between snapping bamboo poles, and your increased mobility helps you succeed when hunting dangerous beasts or fighting multiple opponents. This style of bobbing and weaving and alternating fight and flight disorients your enemies and allows you to choose your engagements. After resolving your attack, you can immediately Step, Stride, or Swim.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +256,61 @@
       "name": "Warding Jewel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vRX35YpaPqtwsAGD",
+        "folder": "zOrWiOjFXay2vzPk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Warding Jewel",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>A life of hunting and battle has caused your head gem to attune to the waxing moon, which has manifested in the power to protect you from harm. Your head gem protects you by making your skin difficult to pierce. While you possess your head gem, you gain resistance 2 to piercing damage and resistance 1 to slashing damage. The resistance to each type of damage increases by 1 at 9th level and every 4 levels thereafter.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "predicate": [
+                "has-sarangay-head-gem"
+              ],
+              "type": "piercing",
+              "value": "1 + floor((@actor.level -1)/4)"
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "has-sarangay-head-gem"
+              ],
+              "type": "slashing",
+              "value": "floor((@actor.level -1)/4)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "occult",
+              "sarangay"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

@@ -7,6 +7,47 @@
       "name": "Basic Eldritch Archer Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5MG4dBTsFZVbHcX7",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Eldritch Archer Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#basic-spellcasting-feat]{Basic Spellcasting Feat} benefits. Each time you gain a spell slot of a new level from this archetype, add a spell of the appropriate spell rank to your repertoire, either a common spell of your chosen tradition or another spell of that tradition you have learned or discovered.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +57,61 @@
       "name": "Eldritch Archer Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oyLkqhDGwGGj40ME",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eldritch Archer Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You channel powerful magic with your archery, allowing you to deliver potent spells through the tip of an arrow rather than the more mundane flick of the wrist or whatever other gestures are usually used.</p>\n<p>If you don't already cast spells from spell slots, you learn to cast spontaneous spells and gain the Cast a Spell activity. You gain a spell repertoire with one cantrip of your choice, from a tradition of your choice. You choose a common cantrip or other cantrip to which you have access. This cantrip must require a spell attack roll and come from your chosen tradition. You're trained in spell attack modifier and spell DC. Your key spellcasting attribute for these spells is Charisma. Regardless of whether you can already cast spells or gained the ability from this dedication, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Eldritch Shot] activity.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.6A9zBmTyt8cn6ioa]{Eldritch Archer}</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in at least one weapon from the bow or crossbow weapon group"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Eldritch Shot"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +121,47 @@
       "name": "Eldritch Reload",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kp2brlFZEbVCeWWh",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eldritch Reload",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action this turn was to make an Eldritch Shot, Cast a Spell from a spell slot, or activate a piece of magical ammunition; this can't have been a free action or reaction.</p><hr /><p>You integrate your talent for magic into your use of reloading weapons. You Interact to reload a weapon you are wielding.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +171,90 @@
       "name": "Enchanting Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "m8iP2OCzit9WUrMD",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Enchanting Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks.</p>\n<p>Make a bow or crossbow Strike. On a hit, the target takes an additional 2d6 mental damage. On a critical hit, the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}. The mental damage increases to 3d6 if your weapon has a <em>greater striking rune</em>, or to 4d6 if your weapon has a <em>major striking rune</em>.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "enchanting-shot",
+              "toggleable": true
+            },
+            {
+              "damageType": "mental",
+              "diceNumber": "max(2,@weapon.system.damage.dice)",
+              "dieSize": "d6",
+              "key": "DamageDice",
+              "predicate": [
+                "enchanting-shot",
+                {
+                  "or": [
+                    "item:group:bow",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "enchanting-shot",
+                {
+                  "or": [
+                    "item:group:bow",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.EldritchArcher.EnchantingArrow.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "emotion",
+              "magical",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +264,54 @@
       "name": "Expert Eldritch Archer Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eoEYZJNdmvA5GfyK",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expert Eldritch Archer Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You learn additional eldritch archer magic. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#expert-spellcasting-feat]{Expert Spellcasting Feat} benefits.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Eldritch Archer Spellcasting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 2
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +321,92 @@
       "name": "Fatal Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6iOLxitjqHujH1Tj",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fatal Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You modify an arrow or bolt to bring death to your target in a single potent hit. Make a bow or crossbow Strike. On a hit, you deal an additional 10d10 precision damage. On a critical hit, the target must also succeed at a @Check[fortitude|against:class-spell|traits:death,incapacitation] saving throw against the higher of your class DC or spell DC or be immediately slain; this save has the death and incapacitation traits.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "fatal-shot",
+              "toggleable": true
+            },
+            {
+              "category": "precision",
+              "diceNumber": 10,
+              "dieSize": "d10",
+              "key": "DamageDice",
+              "predicate": [
+                "fatal-shot",
+                {
+                  "or": [
+                    "item:group:bow",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "fatal-shot",
+                {
+                  "or": [
+                    "item:group:bow",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.EldritchArcher.ArrowOfDeath.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -61,6 +416,48 @@
       "name": "Homing Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "roItUHUbBqhHfwJr",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Homing Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your shots zip around corners and fly at impossible angles to reach your target.</p>\n<p>Make a bow or crossbow Strike against a foe you can see; the ammunition travels to your target, even going around corners. You ignore the target's @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition and all cover.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +467,77 @@
       "name": "Incorporeal Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LRSTjjBNNlD0XZX8",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Incorporeal Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You can concentrate an immense amount of magic to create a piece of ammunition that phases through everything but your target.</p>\n<p>Make a bow or crossbow Strike against a foe who is @UUID[Compendium.pf2e.conditionitems.Item.Observed] or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] to you (but not @UUID[Compendium.pf2e.conditionitems.Item.Undetected]).</p>\n<p>The ammunition travels to your target in a straight line, passing through any non-magical barriers or walls in its way, though magical barriers stop the arrow. The shot ignores all cover, the @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition, the hidden condition, and circumstance bonuses to AC from shields. It has a +4 status bonus to hit creatures wearing any type of armor.</p>\n<p>The Strike's damage can't be reduced with a Shield Block reaction using a non-magical shield.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "domain": "attack-roll",
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.EldritchArcher.IncorporealShot.Label",
+              "option": "incorporeal-shot",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "incorporeal-shot",
+                {
+                  "or": [
+                    "item:group:bow",
+                    "item:group:crossbow"
+                  ]
+                }
+              ],
+              "selector": [
+                "strike-attack-roll"
+              ],
+              "type": "status",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -79,6 +547,59 @@
       "name": "Magic Ammunition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vUFvcrvszXlHvz2Y",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magic Ammunition",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You imbue your ammunition with raw and potent magic, transforming it to suit your needs in any situation.</p>\n<p>When you select this feat, choose three types of common magical ammunition of 4th level or lower from <em>GM Core</em> or this book. Your GM might allow you to choose from other types of magical ammunition of an appropriate level, such as uncommon ammunition, or ammunition from other books. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Transform Ammunition] action.</p><hr /><p><strong>Special</strong> You can select this feat multiple times. Each time you do, select three additional types of magical ammunition as described above.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round",
+            "value": 1
+          },
+          "level": {
+            "value": 8
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Transform Ammunition"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -88,6 +609,47 @@
       "name": "Master Eldritch Archer Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6kz7FPdxDrsPiNti",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Master Eldritch Archer Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.DOc3Pf8wmVxanTIv#master-spellcasting-feat]{Master Spellcasting Feat} benefits.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Expert Eldritch Archer Spellcasting"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -97,6 +659,52 @@
       "name": "Precious Ammunition",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MlxfNv98LZKfYl64",
+        "folder": "tRecoenlUx637wGV",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Precious Ammunition",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have learned to mimic the power that lies between magic and material. You enchant a piece of ammunition on your person with the magical essence of a precious material, allowing you to leverage certain creatures' weaknesses.</p>\n<p>Choose cold iron or silver; if you shoot the arrow or bolt before the end of your turn, it counts as that material. At 14th level, add adamantine to the list of materials you can choose from.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Eldritch Archer Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Precious Arrow",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Precious Ammunition"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "magical"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

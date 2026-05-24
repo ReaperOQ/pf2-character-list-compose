@@ -7,6 +7,66 @@
       "name": "Crown of Rule",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WT8d5pjPVnh2LPxu",
+        "folder": "QAqC0eLIb1q5f4m8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crown of Rule",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a worn ikon or a body ikon</p><hr /><p>This badge of office proclaims your sovereignty. The imbued ikon gains the following ability.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Heavy is the Crown]</strong> <span class=\"action-glyph\">2</span> (concentrate, mental, spirit, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.CJnA1wEg2kA5BXfe inline]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Heavy is the Crown"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "body-ikon-feat",
+              "worn-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +76,68 @@
       "name": "Gift of the Immortal Herb",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IqaVsxjR2bsR4OU2",
+        "folder": "QAqC0eLIb1q5f4m8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gift of the Immortal Herb",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a body ikon</p><hr /><p>Your blood turns a divine gold, shining in moments its spilled and begetting new life. The imbued ikon gains the following effects.</p>\n<p><strong>Immanence</strong> If your divine spark remains in your body ikon for 10 continuous minutes, you regrow one damaged or ruined limb or organ.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Shed the Mortal Skin]</strong> <span class=\"action-glyph\">1</span> (healing, light, transcendence, vitality)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.rU3CE5niG8vHc5x4 inline]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Shed the Mortal Skin"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "body-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "healing",
+              "ikon",
+              "light",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +147,65 @@
       "name": "Mark of the Sage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8VSMh11XydSm8DbP",
+        "folder": "QAqC0eLIb1q5f4m8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mark of the Sage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a worn ikon</p><hr /><p>Your ikon gains a pin, stripe, or similar marking showing you as a master of your craft. The imbued ikon gains the following ability.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.A Challenge for Heroes]</strong> <span class=\"action-glyph\">2</span> (concentrate, mental, spirit, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.c40APnn4a7bWhtcZ inline]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.A Challenge for Heroes"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "worn-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -34,6 +215,65 @@
       "name": "Shroud of Ghosts",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KnKptBcTwN9yr4GT",
+        "folder": "QAqC0eLIb1q5f4m8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shroud of Ghosts",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a worn ikon</p><hr /><p>Your ikon is connected to the world of the spirits, allowing you to partially fade into their realm. The imbued ikon gains the following ability.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Skirt the Underworld]</strong> <span class=\"action-glyph\">2</span> (concentrate, illusion, incapacitation, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.exuTl8tvVlewxVGJ inline]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Skirt the Underworld"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "worn-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +283,47 @@
       "name": "Strike Rivers, Seize Winds",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "O3vj6p7K49gKKVWM",
+        "folder": "QAqC0eLIb1q5f4m8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strike Rivers, Seize Winds",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour; see text</p><hr /><p>Through sheer physical force, you can wrestle a river, lasso the winds, punch a hole to the molten center of the planet, or create other environmental disturbances via nothing but your own strength.</p>\n<p>You can create each of the following spell effects at the listed rank, but you can't create effects more than once per hour and you can't perform a given effect more than once per day: <strong>4th</strong> @UUID[Compendium.pf2e.spells-srd.Item.Hydraulic Torrent], <strong>5th</strong> @UUID[Compendium.pf2e.spells-srd.Item.Control Water], <strong>6th</strong> @UUID[Compendium.pf2e.spells-srd.Item.Howling Blizzard], <strong>7th</strong> @UUID[Compendium.pf2e.spells-srd.Item.Volcanic Eruption], <strong>8th</strong> @UUID[Compendium.pf2e.spells-srd.Item.Punishing Winds].</p>\n<p>Creating the effects requires the same type and number of actions as Casting the Spell, and they use the higher of your class DC or spell DC when appropriate. Because you are creating these effects with your godly might rather than Casting a Spell, they can't be dispelled or counteracted.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exemplar"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

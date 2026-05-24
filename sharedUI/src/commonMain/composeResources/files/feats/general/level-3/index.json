@@ -7,6 +7,72 @@
       "name": "Ancestral Paragon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "m7KjpkAAh9PptJsY",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ancestral Paragon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>Whether through instinct, study, or magic, you feel a deeper connection to your ancestry. You gain a 1st-level ancestry feat.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:level:1",
+                  "item:category:ancestry",
+                  {
+                    "or": [
+                      "item:trait:{actor|system.details.ancestry.trait}",
+                      "item:trait:{actor|system.details.ancestry.adopted}",
+                      "item:trait:{actor|system.details.ancestry.versatile}",
+                      "item:trait:{actor|system.details.heritage.trait}"
+                    ]
+                  },
+                  {
+                    "not": "item:trait:lineage"
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "ancestralParagon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.AncestralParagon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.ancestralParagon}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -16,6 +82,43 @@
       "name": "Improvised Repair",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xT593tHyPkumPuzz",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improvised Repair",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You can hastily patch damaged equipment together, but the temporary fix lacks the full care required for lasting repairs. You patch together a broken item possessed by you or an adjacent willing creature. Until the item takes damage again, it still functions as a shoddy item of its type. If it's a magic item or another item with activations, it can't be activated while patched together, but can be used for normal functions (such as Striking with a weapon or using Shield Block with a shield). This activity restores no Hit Points, so the item is easy to destroy. Once the item is Repaired normally such that it is no longer broken, it is also no longer shoddy.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -25,6 +128,60 @@
       "name": "Keen Follower",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fD9xjrnPfJ8aQxYA",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Keen Follower",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>Your keen observation of your allies has made you better at following their lead. When using the Follow the Expert activity in exploration mode, you gain a +3 circumstance bonus if the ally you are following is an expert and a +4 circumstance bonus if your ally is a master.</p>\n<p>You can share your observations with others to help further coordinate the group. If the ally you are following has Quiet Allies or another skill feat that allows the group to roll a single skill check for an exploration activity and use the lowest modifier, they can instead use your modifier, even if it's not the lowest.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "self:effect:follow-the-expert",
+                {
+                  "or": [
+                    "follow-the-expert:proficiency:rank:2",
+                    "follow-the-expert:proficiency:rank:3"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "slug": "follow-the-expert-circumstance",
+              "value": "@actor.flags.system.followTheExpertProficiency+1"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -34,6 +191,47 @@
       "name": "Pick up the Pace",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "38uOVS8fLZxraUrg",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pick up the Pace",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You lead by example and can help others push themselves beyond their normal limits. When Hustling in a group during exploration mode, your group can Hustle for as long as the member who could Hustle longest on their own.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Constitution +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -43,6 +241,43 @@
       "name": "Prescient Planner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bh2jHyyYrkLMsIdX",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prescient Planner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p><strong>Cost</strong> the Price of the chosen item</p>\n<p><strong>Requirements</strong> You haven't used this ability since the last time you were able to purchase goods.</p>\n<hr />\n<p>You regularly create convoluted plans and contingencies, using your resources to enact them. You take 1 minute to remove your backpack, then carefully remove an item you hadn't previously declared that you purchased—you intuited that you would come to need the item and purchased it at the latest opportunity. The item must be a piece of adventuring gear, and can't be a weapon, armor, alchemical item, magic item, or other treasure. It must be common with a level no higher than half your level, and its Bulk must be low enough that carrying it wouldn't have made you encumbered.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -52,6 +287,58 @@
       "name": "Robust Health",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yTLGclKtWVFZLKIz",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Robust Health",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>Your physiology responds well to first aid. You gain a circumstance bonus to the number of Hit Points you regain equal to your level from a successful attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds]{Treat your Wounds} or use @UUID[Compendium.pf2e.feats-srd.Item.Battle Medicine] on you. After you or an ally use Battle Medicine on you, you become temporarily immune to that Battle Medicine for only 1 hour, instead of 1 day.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:battle-medicine",
+                    "action:treat-wounds"
+                  ]
+                }
+              ],
+              "selector": "healing-received",
+              "type": "circumstance",
+              "value": "@actor.level"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -61,6 +348,59 @@
       "name": "Thorough Search",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9QQnv7nFpsNCGE89",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thorough Search",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You take your time searching to ensure you find everything. When Searching, you can take twice as long to search. Normally this means you @UUID[Compendium.pf2e.actionspf2e.Item.Search] at up to one quarter of your Speed, to a maximum of 150 feet per minute to check everything, or 75 feet per minute to check everything before you walk into an area. If you do and the GM rolls your secret check to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] to notice something, you gain a +2 circumstance bonus to that Perception check and if you succeed, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Perception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Thorough Search (Seek thoroughly)",
+              "predicate": [
+                "action:seek",
+                "thorough-search"
+              ],
+              "selector": "perception",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     },
@@ -70,6 +410,50 @@
       "name": "Untrained Improvisation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9jGaBxLUtevZYcZO",
+        "folder": "Ak9gc6BXJUsrBm7q",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Untrained Improvisation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You've learned how to handle situations when you're out of your depth. Your proficiency bonus to untrained skill checks is equal to your level –2. This improves to your level –1 at 5th level and your full level at 7th level. This doesn't allow you to use the skill's trained actions.</p>"
+          },
+          "level": {
+            "value": 3
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "skill-check",
+              "type": "proficiency",
+              "value": "@actor.level + clamp(-2,floor((@actor.level - 7) / 2),0)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 3,
       "category": "general"
     }

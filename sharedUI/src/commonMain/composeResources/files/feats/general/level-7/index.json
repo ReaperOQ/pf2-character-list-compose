@@ -7,6 +7,52 @@
       "name": "Bloodsense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QRL79whClQDHljoi",
+        "folder": "DyRBgZFecoHorfy8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bloodsense",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You're extraordinarily sensitive to the presence of blood. You gain bloodsense as an imprecise sense with a range of 15 feet. This allows you to sense the presence of creatures, living or dead, that have blood (this includes most creatures that aren't immune to bleed). You're similarly able to detect the presence of fresh blood in volumes of one pint or more, so long as it's no more than 24 hours old.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Perception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #213: Thirst for Blood"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 15,
+              "selector": "bloodsense"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "general"
     },
@@ -16,6 +62,47 @@
       "name": "Expeditious Search",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GdZLxDtFXaQI3Fop",
+        "folder": "DyRBgZFecoHorfy8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Expeditious Search",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You have a system that lets you search at great speed, finding details and secrets twice as quickly as others can. When Searching, you take half as long as usual to @UUID[Compendium.pf2e.actionspf2e.Item.Search] a given area. This means that while exploring, you double the Speed you can move while ensuring you've Searched an area before walking into it (up to half your Speed). If you're legendary in Perception, you instead Search areas four times as quickly.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Perception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "general"
     },
@@ -25,6 +112,54 @@
       "name": "Numb to Death",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gfMP2aMs3YGONVeB",
+        "folder": "DyRBgZFecoHorfy8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Numb to Death",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your past has left you numb to death's call. The first time each day that you regain Hit Points while you are dying, you gain a circumstance bonus to the number of Hit Points you regain equal to your level, and you neither gain the wounded condition nor increase the value of this condition.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Diehard"
+              },
+              {
+                "value": "You have died at least once"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "general"
     },
@@ -34,6 +169,47 @@
       "name": "Prescient Consumable",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lHFz4MmebvPqTb0A",
+        "folder": "DyRBgZFecoHorfy8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prescient Consumable",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You can predict which consumables you might need in advance. When using @UUID[Compendium.pf2e.feats-srd.Item.Prescient Planner], you can procure a consumable item from your backpack, instead of a piece of adventuring gear. The consumable item must still be common with a level no higher than half your level, and its Bulk must be low enough that carrying it wouldn't have made you encumbered.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prescient Planner"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "general"
     },
@@ -43,6 +219,64 @@
       "name": "Supertaster",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fOIUmDGa9gkeCHA0",
+        "folder": "DyRBgZFecoHorfy8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Supertaster",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "general",
+          "description": {
+            "value": "<p>You have refined your palate and have a discerning sense of taste that can detect abnormalities in the flavor and texture of food and beverages. When eating food or drinking a beverage, you automatically attempt to identify the ingredients, which might alert you to the presence of alterations or additives, such as poisons. The GM rolls a secret Perception check against a DC determined by the poison's level; if the food or drink is poisoned, on a success, you learn that the food or drink was poisoned, but not the specific poison used. If you successfully detect that the food or drink was poisoned, you can spit out the food or drink in time to not be exposed to that instance of the poison (unless you resume eating or drinking the poisoned food or beverage).</p>\n<p>If you lick or taste something while Investigating or attempting to Recall Knowledge to identify something, and if the taste would provide relevant additional information (at the GM's discretion), you gain a +2 circumstance bonus to your check.</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Perception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Supertaster (recall knowledge or investigate via taste)",
+              "predicate": [
+                "taste",
+                {
+                  "or": [
+                    "action:recall-knowledge",
+                    "action:investigate"
+                  ]
+                }
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "general"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "general"
     }

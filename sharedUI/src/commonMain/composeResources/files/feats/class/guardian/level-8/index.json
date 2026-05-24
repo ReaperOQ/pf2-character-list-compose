@@ -7,6 +7,63 @@
       "name": "Group Taunt",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "i991vEx2T7y5L6Ke",
+        "folder": "eiQMbX5ynd8B0yZW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Group Taunt",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your taunts draw the attention of multiple enemies at once. When you use @UUID[Compendium.pf2e.actionspf2e.Item.Taunt], you can choose up to three targets within range, and you can have up to three taunted enemies at a time. Each time you Taunt, you can choose which enemies remain taunted and which the effect ends for. You must remain at or below this limit.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:taunt"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +73,49 @@
       "name": "Juggernaut Charge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GCUXprGmuEl7JUdF",
+        "folder": "eiQMbX5ynd8B0yZW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Juggernaut Charge",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing medium or heavy armor.</p><hr /><p>As you move forward in a rush, you put the weight of your armor behind an attack that can drag a foe with you. You Stride. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy, then Stride again. If your Strike hit and dealt damage, that enemy is pulled with you and is moved the same direction and distance as your second Stride.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +125,81 @@
       "name": "Mighty Bulwark",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5TPKikTyN7lrCvzY",
+        "folder": "eiQMbX5ynd8B0yZW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mighty Bulwark",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Thanks to your incredible connection to your armor, you can use it to shrug off an incredible array of dangers. Your bonus from the bulwark armor trait increases from +3 to +4, and it applies on all Reflex saves, not just damaging Reflex saves.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian or Sentinel Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.TraitBulwark",
+              "predicate": [
+                "armor:trait:bulwark"
+              ],
+              "selector": "reflex",
+              "slug": "bulwark",
+              "tags": [
+                "mighty-bulwark"
+              ],
+              "value": 4
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                "armor:trait:bulwark"
+              ],
+              "selector": "reflex",
+              "slug": "dex",
+              "suppress": true
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                {
+                  "not": "modifier:tag:mighty-bulwark"
+                }
+              ],
+              "selector": "reflex",
+              "slug": "bulwark",
+              "suppress": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +209,70 @@
       "name": "Repositioning Block",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vw93yCHEmxutFO8h",
+        "folder": "eiQMbX5ynd8B0yZW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Repositioning Block",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You used @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] to prevent damage from an adjacent creature's attack.</p><hr /><p>As you absorb a blow from an enemy, you can use their attack's momentum against them. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition] the creature whose attack you used Shield Block against. You don't need to have a hand free to do so. You gain a +1 item bonus to the Athletics check if your shield is at least 4th level, a +2 item bonus if your shield is at least 10th level, and a +3 item bonus if your shield is at least 16th level.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Shield Block"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "repositioning-block",
+                "action:reposition",
+                "self:shield:equipped",
+                {
+                  "gte": [
+                    "{actor|heldShield.system.level.value}",
+                    4
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "item",
+              "value": "max(1,((@actor.heldShield.system.level.value + 2)/ 6))"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +282,48 @@
       "name": "Shield from Arrows",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wzJnJI6d2PaoTZIZ",
+        "folder": "eiQMbX5ynd8B0yZW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield from Arrows",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An adjacent ally is the target of a physical ranged Strike.</p>\n<p><strong>Requirements</strong> You can see the attacker, you are not @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], and you have Raised your Shield.</p><hr /><p>You place your shield in the path of an oncoming projectile. Your adjacent ally gains a +4 circumstance bonus to AC against the triggering attack. If the attack misses, you have deflected it with your shield.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Shield from Arrows]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +333,49 @@
       "name": "Shield Wallop",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Xik9lMAA4e5xFegM",
+        "folder": "eiQMbX5ynd8B0yZW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield Wallop",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a shield.</p><hr /><p>Attacks with your shield knock the sense out of your foes. Make a shield bash, @UUID[Compendium.pf2e.equipment-srd.Item.Shield Boss], or @UUID[Compendium.pf2e.equipment-srd.Item.Shield Spikes] Strike. If you hit and deal damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} until the start of your next turn (@UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2} on a critical hit). If your shield is a @UUID[Compendium.pf2e.equipment-srd.Item.Tower Shield], @UUID[Compendium.pf2e.equipment-srd.Item.Fortress Shield], or another shield that grants a higher circumstance bonus to AC when you @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover] behind it, the creature is instead stupefied 2 if you hit and deal damage to it (@UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 3} on a critical hit).</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

@@ -7,6 +7,49 @@
       "name": "Covering Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sMKUJQ29CYYoB7b0",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Covering Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your very presence on the field of battle protects nearby allies from harm. At the end of each of your turns while you're in this stance, choose one ally adjacent to you to gain lesser cover until the start of your next turn. That ally loses this benefit if they move to a space that is no longer adjacent to you at any point during their move. If you Intercept an Attack that would harm the ally you're covering, that ally can Step as a free action after your reaction is complete.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +59,50 @@
       "name": "Hampering Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UKXaMhb9qlPYw1HD",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hampering Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You make it difficult for enemies to move past you. While you are in this stance, squares in a @Template[type:emanation|distance:5] are difficult terrain for your enemies.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "aura",
+              "guardian",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +112,47 @@
       "name": "Phalanx Formation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4jaCuX2JSjTSJ3wp",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Phalanx Formation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to clear a line of fire for your allies. You don't provide lesser cover to enemies against your allies' attacks.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian or Knight Vigilant Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +162,76 @@
       "name": "Raise Haft",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MpydlJhlBYYXq50r",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Raise Haft",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You know how to use the haft of larger weapons to block your enemies' attacks. Two-handed weapons you wield gain the parry trait. If the weapon already has the parry trait, you increase the circumstance bonus to AC it provides to +2.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:hands-held:2",
+                "item:equipped"
+              ],
+              "property": "traits",
+              "value": "parry"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Guardian.RaiseHaft.ToggleLabel",
+              "option": "raise-haft",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "raise-haft"
+              ],
+              "selector": "ac",
+              "slug": "parry-bonus",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +241,128 @@
       "name": "Shield Your Eyes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3SiZ4hrNi8aWjP8J",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield Your Eyes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You reflexively place your shield between your eyes and visual dangers. While your shield is raised, you gain a +2 circumstance bonus to all defenses against effects with the light or visual trait. If you critically fail your save against such an effect while your shield is raised, you fail instead. Likewise, if such an effect critically succeeds against your DC, it's a success instead.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:raise-a-shield",
+                {
+                  "or": [
+                    "item:trait:light",
+                    "item:trait:visual"
+                  ]
+                }
+              ],
+              "selector": [
+                "ac",
+                "fortitude",
+                "reflex",
+                "will"
+              ],
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "self:effect:raise-a-shield",
+                {
+                  "or": [
+                    "item:trait:light",
+                    "item:trait:visual"
+                  ]
+                }
+              ],
+              "selector": "fortitude"
+            },
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "self:effect:raise-a-shield",
+                {
+                  "or": [
+                    "item:trait:light",
+                    "item:trait:visual"
+                  ]
+                }
+              ],
+              "selector": "reflex"
+            },
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "self:effect:raise-a-shield",
+                {
+                  "or": [
+                    "item:trait:light",
+                    "item:trait:visual"
+                  ]
+                }
+              ],
+              "selector": "will"
+            },
+            {
+              "affects": "origin",
+              "key": "EphemeralEffect",
+              "selectors": [
+                "ac",
+                "fortitude-dc",
+                "reflex-dc",
+                "will-dc"
+              ],
+              "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Shield Your Eyes"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +372,49 @@
       "name": "Shielding Taunt",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qD5At83TIxznCwPg",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shielding Taunt",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a shield.</p><hr /><p>By banging loudly on your shield, you get the attention of even the most stubborn of foes. @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield], and then @UUID[Compendium.pf2e.actionspf2e.Item.Taunt] a creature. Your Taunt gains the auditory trait.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +424,49 @@
       "name": "Taunting Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Um5owecqPW17dtl2",
+        "folder": "jD7qXzi8vqZyCyGl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Taunting Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The force of your blow causes your enemy to focus their attention on you. Make a Strike. Regardless of whether the Strike hits, you Taunt the target. Your Taunt gains the visual trait.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

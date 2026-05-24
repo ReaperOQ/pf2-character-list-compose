@@ -7,6 +7,72 @@
       "name": "Aegis for the Innocent",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "oLTAAXumySFUPwND",
+        "folder": "mGKyDMXfLefvWcaT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aegis for the Innocent",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your nimbus is active.</p><hr /><p>You transfer a portion of your divine spark to an ally, temporarily dimming your nimbus to encase an ally in a barrier of light that repels attackers. Select a willing creature within the bright light of your nimbus. You surround the target in a protective barrier of light; this is a @Template[type:emanation|distance:10] centered on the target. This barrier lasts for 1 minute, or until you Dismiss it. While the Aegis of the Innocent is active, the area of your nimbus is halved.</p>\n<p>The target gains a +1 status bonus to AC. Any enemy within the barrier, or entering the barrier, must attempt a @Check[fortitude|against:class-spell|options:area-effect,damaging-effect] saving throw against your class DC or your spell DC. A creature needs to attempt this save only once each round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Aegis for the Innocent]</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round and treats the space within the barrier as difficult terrain.</p>\n<p><strong>Failure</strong> The creature becomes dazzled for 1 minute, is pushed 10 feet, and treats the space within the barrier as difficult terrain. If a creature would be pushed into a solid barrier or another creature, it stops at that point and takes @Damage[2d6[bludgeoning]|options:area-damage] damage.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature is also @UUID[Compendium.pf2e.conditionitems.Item.Blinded] for 1 round.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "ascended-celestial-nimbus"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.AscendedCelestial.AegisForTheInnocent.HalveAuraToggle",
+              "option": "aegis-for-the-innocent-halve-aura",
+              "priority": 51,
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "downgrade",
+              "path": "flags.system.ascendedCelestial.aura",
+              "predicate": [
+                "aegis-for-the-innocent-halve-aura"
+              ],
+              "priority": 51,
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "manipulate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -16,6 +82,57 @@
       "name": "Ascend",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ur1AMxxLAO3tPayn",
+        "folder": "mGKyDMXfLefvWcaT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ascend",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you strive to ascend to the ranks of celestials, the pull of gravity loosens on your body. You gain a fly Speed equal to your land Speed and the @UUID[Compendium.pf2e.actionspf2e.Item.Flyby Attack] action. When you gain this feat, you can choose to sprout wings, if desired; these wings are permanent.</p>\n<p>Once per day as a single action, you can fly at incredible speeds. When you do, your fly Speed becomes equal to double your Speed for 5 rounds.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Ascend]</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Flyby Attack"
+            },
+            {
+              "key": "BaseSpeed",
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +142,56 @@
       "name": "Channel Divine Spark",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3MzFYTfhoSV6894n",
+        "folder": "mGKyDMXfLefvWcaT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Channel Divine Spark",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You embrace your divine spark, unleashing your full potential. Your nimbus automatically activates (if it isn't already) and the area of your nimbus doubles; you shed bright light for 60 feet (and dim light to the next 60 feet). You can't suppress your nimbus while Channeling your Divine Spark. You gain a number of temporary Hit Points equal to your level, and resistance to physical damage equal to half your level. You gain the @UUID[Compendium.pf2e.conditionitems.Item.Quickened] condition and can use the extra action each round only for Strike and Stride actions. Each time that you damage a creature with a melee Strike, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] or @UUID[Compendium.pf2e.actionspf2e.Item.Trip] that creature as a free action. These effects last for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Channel Divine Spark",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Channel Divine Spark"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +201,52 @@
       "name": "Consult Celestial Advisor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BnBGDllQDfbOTBhZ",
+        "folder": "mGKyDMXfLefvWcaT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Consult Celestial Advisor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>For many, the Calling of an ascended celestial is a wondrous but challenging path, which they must walk alone. This isn't the case for you. A single celestial is responsible for shepherding you into the celestial ranks and has offered to serve as a mentor to you throughout the time of your transformation. You can call upon this mentor for advice, guidance, and support. Once per day, you can spend 30 minutes in deep meditation. During this time, you spiritually converse with your celestial advisor. You gain three benefits during this conversation, which can occur in any order of your choosing.</p>\n<p>You discuss a topic of interest with your celestial advisor. This allows you to Recall Knowledge on any topic once, with mythic proficiency. You can spend 1 Mythic Point to instead Recall Knowledge on any three topics with mythic proficiency.</p>\n<p>You discuss a goal, activity, or event with your celestial advisor. This must be a goal you plan to achieve or an event you expect to happen within 1 week. Your celestial advisor gives you a piece of advice to help you achieve your goal or to see your way through the expected event. This has the effect of @UUID[Compendium.pf2e.spells-srd.Item.Read Omens].</p>\n<p>You discuss an immediate action that you intend to take with your celestial advisor. This must be an action you plan to take within the next 8 hours. Your celestial advisor gives you their opinion on the outcome. This has the effect of @UUID[Compendium.pf2e.spells-srd.Item.Augury], except that the augury can see 8 hours into the future, and the GM doesn't roll a flat check for a failure.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ascended Celestial Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exploration",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     }

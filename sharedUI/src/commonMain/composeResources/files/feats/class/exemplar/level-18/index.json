@@ -7,6 +7,84 @@
       "name": "Branched Tree of Pain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dfQdJIqngKIX24UV",
+        "folder": "BfB3PaWLrYXv4Ljl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Branched Tree of Pain",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a weapon ikon that deals piercing or slashing damage</p><hr /><p>The blade of your ikon takes one or more notches, capable of dealing mortal pain to your foes.</p>\n<p><strong>Immanence</strong> When you Strike with the ikon, you critically succeed if you roll a 19 on the die as long as that result would be a success. This has no effect on a 19 if the result would be a failure.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Plant Thirty Barbs]</strong> <span class=\"action-glyph\">1</span> (death, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.cfQb0mBbyrjhyGf5 inline]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Plant Thirty Barbs"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            },
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "check:roll:total:natural:19",
+                "check:outcome:success",
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}",
+                "divine-spark:{item|flags.system.rulesSelections.ikon}",
+                {
+                  "or": [
+                    "item:damage:type:piercing",
+                    "item:damage:type:slashing"
+                  ]
+                }
+              ],
+              "selector": "strike-attack-roll"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -16,6 +94,123 @@
       "name": "Eternity-Incinerating Blaze",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qv5tqbukVm49kaxn",
+        "folder": "BfB3PaWLrYXv4Ljl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eternity-Incinerating Blaze",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a weapon ikon</p><hr /><p>The blaze of your divine spark is hot enough that it burns in not just the present, but the past and future as well. Whenever you score a critical hit with the imbued ikon, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1} or increases its doomed condition by 1. If the target's maximum dying value is reduced to 0 by this ability, it immediately dies in a flash of spiritual fire that reduces its body to ash. This effect applies even when the ikon is not empowered. The ikon also gains the following transcendence ability.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Burn out of Time]</strong> <span class=\"action-glyph\">2</span> (spirit, transcendence, void)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.ZhVJ7EUTJngrIO2Z inline]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Burn out of Time"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Exemplar.EternityIncineratingBlaze.Note",
+              "title": "PF2E.SpecificRule.Exemplar.EternityIncineratingBlaze.Label"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Exemplar.EternityIncineratingBlaze.BurnOutOfTime.Label",
+              "option": "burn-out-of-time",
+              "priority": 51,
+              "toggleable": true
+            },
+            {
+              "damageType": "spirit",
+              "diceNumber": 3,
+              "dieSize": "d8",
+              "key": "DamageDice",
+              "label": "PF2E.SpecificRule.Exemplar.EternityIncineratingBlaze.Label",
+              "predicate": [
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}",
+                "burn-out-of-time"
+              ],
+              "selector": "strike-damage",
+              "tags": [
+                "exemplar"
+              ]
+            },
+            {
+              "damageType": "void",
+              "diceNumber": 3,
+              "dieSize": "d8",
+              "key": "DamageDice",
+              "label": "PF2E.SpecificRule.Exemplar.EternityIncineratingBlaze.Label",
+              "predicate": [
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}",
+                "burn-out-of-time"
+              ],
+              "selector": "strike-damage",
+              "tags": [
+                "exemplar"
+              ]
+            },
+            {
+              "key": "RollOption",
+              "option": "exemplar-spirit-damage",
+              "predicate": [
+                "burn-out-of-time"
+              ],
+              "priority": 51
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -25,6 +220,79 @@
       "name": "Seven-Colored Cosmic Bridge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3JDumHt2R62HFQFI",
+        "folder": "BfB3PaWLrYXv4Ljl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Seven-Colored Cosmic Bridge",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a melee weapon ikon</p><hr /><p>Your divine spark shines in a riot of shimmering colors, capable of carrying you through the world as fast as light itself. The imbued ikon gains the following abilities.</p>\n<p><strong>Immanence</strong> (light, teleportation) Your weapon scatters rainbow-colored light across nearby surroundings, each a possible destination. When you successfully Strike an enemy, you can choose to teleport to an unoccupied location within 10 feet as a free action.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Fleeting Arc through Heaven and Earth]</strong> <span class=\"action-glyph\">3</span> (light, spirit, teleportation, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.ObFY26oKlreyVIUm inline]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Fleeting Arc through Heaven and Earth"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "divine-spark:{item|flags.system.rulesSelections.ikon}",
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "selector": "melee-strike-attack-roll",
+              "text": "PF2E.SpecificRule.Exemplar.SevenColoredCosmicBridge.Note",
+              "title": "PF2E.SpecificRule.Exemplar.SevenColoredCosmicBridge.Label"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -34,6 +302,78 @@
       "name": "Sunwrecker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9h4EmcrN4xrRydeG",
+        "folder": "BfB3PaWLrYXv4Ljl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sunwrecker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into any weapon ikon</p><hr /><p>Your weapon has the might of legends, capable of shooting or striking any light out of the sky. The imbued ikon gains the following abilities.</p>\n<p><strong>Immanence</strong> (darkness) on a successful critical hit with the weapon, the weapon casts 2nd-rank @UUID[Compendium.pf2e.spells-srd.Item.Darkness] centered on the target of the attack.</p>\n<p><strong>Transcendence—@UUID[Compendium.pf2e.actionspf2e.Item.Break the Sun's Legs]</strong> <span class=\"action-glyph\">2</span> (cold, concentrate, darkness, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.Y9XUwC8ihxZCfndG inline]</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Break the Sun's Legs"
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "property": "other-tags",
+              "value": "chosen-ikon:{item|flags.system.rulesSelections.ikon}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "divine-spark:{item|flags.system.rulesSelections.ikon}",
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "PF2E.SpecificRule.Exemplar.Sunwrecker.Note",
+              "title": "PF2E.SpecificRule.Exemplar.Sunwrecker.Label"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     }

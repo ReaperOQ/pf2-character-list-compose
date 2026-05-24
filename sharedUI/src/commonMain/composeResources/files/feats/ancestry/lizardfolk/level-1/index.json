@@ -7,6 +7,43 @@
       "name": "Bone Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fLDhS0e6fBDjiCUA",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bone Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection to your iruxi ancestors manifests as a simple primal spell that you cast using a fragment of an ancestor's bones. Choose one cantrip from either the occult spell list or the primal spell list. You can cast this cantrip as an innate spell at will, and it's heightened to a spell rank equal to half your level rounded up.</p><hr /><p><strong>Special</strong> Choose when you gain this feat whether your innate spells are primal or occult; this choice applies to all innate spells you gain from lizardfolk ancestry feats that have Bone Magic as a prerequisite.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +53,56 @@
       "name": "Crocodile's Twin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jRtQgOVZMr3QobG1",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crocodile's Twin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your egg contained your twin, a crocodile. Considered a rare and auspicious event, you share a magical bond with this sibling. You gain a tiny crocodile as a familiar.</p><hr /><p><strong>Special</strong> You can take this feat only at 1st level.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "bakuwa lizardfolk heritage or makari lizardfolk heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.attributes.familiarAbilities.value",
+              "priority": 19,
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +112,171 @@
       "name": "Iruxi Armaments",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VatkAzfBYjA6z6OP",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Iruxi Armaments",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your weapons are those you were born with. Choose one of the following options:</p><ul><li><strong>Claws</strong> Your claw attack deals 1d6 slashing damage instead of 1d4 and gains the versatile P trait.</li><li><strong>Fangs</strong> You gain a fangs unarmed attack that deals 1d8 piercing damage and is in the brawling group.</li><li><strong>Tail</strong> You gain a tail unarmed attack that deals 1d6 bludgeoning damage, is in the brawling group, and has the sweep trait.</li></ul><p>At 5th level, whenever you get a critical hit with one of the unarmed attacks you have gained or improved with this feat, you get its critical specialization effect.</p><hr /><p><strong>Special</strong> You can take this feat multiple times, choosing a different unarmed attack option each time.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": 3,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.BattleForm.Attack.Claw",
+                  "predicate": [
+                    {
+                      "not": "iruxi-armaments:claw"
+                    }
+                  ],
+                  "value": "claw"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Fangs",
+                  "predicate": [
+                    {
+                      "not": "iruxi-armaments:fangs"
+                    }
+                  ],
+                  "value": "fangs"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Tail",
+                  "predicate": [
+                    {
+                      "not": "iruxi-armaments:tail"
+                    }
+                  ],
+                  "value": "tail"
+                }
+              ],
+              "flag": "iruxiArmaments",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.UnarmedAttack",
+              "rollOption": "iruxi-armaments"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "iruxi-armaments:claw",
+                "item:tag:lizardfolk-claws"
+              ],
+              "property": "damage-dice-faces"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:lizardfolk-claws",
+                "iruxi-armaments:claw"
+              ],
+              "property": "traits",
+              "value": "versatile-p"
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d8"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/fangs.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Fangs",
+              "predicate": [
+                "iruxi-armaments:fangs"
+              ],
+              "range": null,
+              "slug": "fangs",
+              "traits": [
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/tail.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Tail",
+              "predicate": [
+                {
+                  "not": "self:effect:shed-tail"
+                },
+                "iruxi-armaments:tail"
+              ],
+              "range": null,
+              "slug": "tail",
+              "traits": [
+                "sweep",
+                "unarmed"
+              ]
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:tag:lizardfolk-claws",
+                        "iruxi-armaments:claw"
+                      ]
+                    },
+                    "item:id:{item|id}"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +286,60 @@
       "name": "Lizardfolk Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FhCsnHjdIUyKteCM",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lizardfolk Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You listened carefully to the tales passed down among your community. You gain the trained proficiency rank in Survival and either Nature or Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for either Astrology Lore or Lizardfolk Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +349,47 @@
       "name": "Marsh Runner",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "itjTPh76mZfJCBxQ",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Marsh Runner",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>When you use the Step action, you can ignore difficult terrain caused by flooding, swamps, or quicksand. In addition, when you use the Acrobatics skill to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] on narrow surfaces or uneven marshy ground, you aren't @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], and if you roll a success on the Acrobatics check, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a swim Speed"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +399,64 @@
       "name": "Parthenogenic Hatchling",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U12Sh43QuY85Prdm",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Parthenogenic Hatchling",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You were hatched from an unfertilized egg during hard times for your people, and are a biological copy of your mother. You gain a +1 circumstance bonus to saving throws against diseases. If you roll a success on a saving throw against a disease, you get a critical success instead. If you have a different ability that would improve the save in this way (such as the @UUID[Compendium.pf2e.classfeatures.Item.Battle Hardened] fighter class feature), if you roll a critical failure on the save you get a failure instead.</p>\n<p>You take damage only every 2 hours from thirst and every 2 days from starvation, rather than every hour and every day.</p><hr /><p><strong>Special</strong> You can select this feat only at 1st level.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "item:trait:disease"
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:disease"
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +466,43 @@
       "name": "Reptile Speaker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GEvaoKgQteMrd4ub",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reptile Speaker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You hear the sounds of reptiles as language. You can ask questions of, receive answers from, and use the Diplomacy skill with animals that are reptiles (the GM determines which animals count as reptiles).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -70,6 +512,80 @@
       "name": "Spirit Coffin",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ky9jhAGOWGj8gAsO",
+        "folder": "pg4eevORF0pgEE9L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spirit Coffin",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>A hump forms on your back that allows you to attack and trap spirits. Your weapon and unarmed attack Strikes against incorporeal creatures become magical. If they're already magical, they instead gain the effects of a @UUID[Compendium.pf2e.equipment-srd.Item.Ghost Touch] rune.</p><hr /><p><strong>Special</strong> If you have access to this feat but aren't a bakuwa lizardfolk, your body doesn't change when you take this feat. You must instead wear a physical coffin, which is a small wooden chest of light Bulk that you specially anoint during your daily preparations. If your chest is missing or destroyed, you lose the benefits of spirit coffin until you've replaced and re-anointed it.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "bakuwa lizardfolk heritage or Tian Xia origin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.TOTMToggle.Incorporeal",
+              "option": "target:trait:incorporeal",
+              "toggleable": "totm"
+            },
+            {
+              "definition": [
+                "item:magical"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "target:trait:incorporeal"
+              ],
+              "property": "property-runes",
+              "value": "ghost-touch"
+            },
+            {
+              "definition": [
+                {
+                  "not": "item:magical"
+                }
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "target:trait:incorporeal"
+              ],
+              "property": "weapon-traits",
+              "value": "magical"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

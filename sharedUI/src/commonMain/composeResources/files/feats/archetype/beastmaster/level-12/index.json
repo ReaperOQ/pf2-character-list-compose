@@ -7,6 +7,58 @@
       "name": "Beastmaster's Call",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5kUQuIP8N57MXhuz",
+        "folder": "HaQjfLcwFIC44BGW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Beastmaster's Call",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per turn</p>\n<hr />\n<p>You quickly call in a primal projection of a non-active companion to provide the companion's support benefit. The projection arrives in an unoccupied square of your choice within 30 feet of you, grants you its support benefit, and then disappears on your next turn. The projection has the same AC and saving throw modifiers as the real companion, and if it would take any damage before your next turn, it disappears and the support benefit ends immediately.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "turn",
+            "value": 1
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              },
+              {
+                "value": "Call Companion"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "concentrate",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +68,51 @@
       "name": "Billowing Wings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "um6NtNmEpWxGelom",
+        "folder": "HaQjfLcwFIC44BGW",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Billowing Wings",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've trained your winged companions to gather air in their wings, whipping up a concentrated gust of wind at opponents, potentially staggering them. Your companions with wings gain a gust ranged unarmed attack, which deals 1d4 bludgeoning damage with a range of 30 feet and has the air and propulsive traits. On a critical hit, the target is pushed back 5 feet. This is forced movement.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beastmaster Dedication"
+              },
+              {
+                "value": "animal companion with wings"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

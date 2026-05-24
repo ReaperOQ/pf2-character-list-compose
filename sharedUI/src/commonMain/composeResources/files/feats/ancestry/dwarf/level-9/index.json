@@ -7,6 +7,43 @@
       "name": "Demolitionist",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WldISqAE5Rw3Ewzn",
+        "folder": "1rbBrUclIZizEPQL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demolitionist",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>You know how to destroy objects with a well-placed explosion. Whenever you hit with a bomb Strike against a trap or an unattended object, you ignore the first 5 points of the object's Hardness.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +53,48 @@
       "name": "Echoes in Stone",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nKkbEKbE9vfKWKdd",
+        "folder": "1rbBrUclIZizEPQL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Echoes in Stone",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are standing on a stone or earthen surface.</p>\n<hr />\n<p>You pause a moment to attune your senses to the stone around you. Until the start of your next turn, you gain imprecise tremorsense with a range of 20 feet.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Echoes in Stone",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Echoes in Stone"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +104,69 @@
       "name": "Mountain's Stoutness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "COP89tjrNhEucuRW",
+        "folder": "1rbBrUclIZizEPQL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mountain's Stoutness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your hardiness lets you withstand more punishment than most. Increase your maximum Hit Points by your level. When you have the @UUID[Compendium.pf2e.conditionitems.Item.Dying]{Dying 1} condition, the DC of your recovery checks is equal to 9 + your dying value (instead of 10 + your dying value).</p>\n<p>If you also have the @UUID[Compendium.pf2e.feats-srd.Item.Toughness] feat, the Hit Points gained from it and this feat are cumulative, and the DC of your recovery checks is equal to 6 + your dying value.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "hp",
+              "value": "@actor.level"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "downgrade",
+              "path": "system.attributes.dying.recoveryDC",
+              "predicate": [
+                {
+                  "not": "feat:toughness"
+                }
+              ],
+              "value": 9
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "downgrade",
+              "path": "system.attributes.dying.recoveryDC",
+              "predicate": [
+                "feat:toughness"
+              ],
+              "value": 6
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +176,43 @@
       "name": "Smoke Sight",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "67UXSHUUH0K36xyB",
+        "folder": "1rbBrUclIZizEPQL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Smoke Sight",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p><hr /><p>You're used to fighting and hiding in a haze of smoke and flame. You automatically succeed at the @Check[flat|dc:5] to target a @UUID[Compendium.pf2e.conditionitems.Item.Concealed] creature if that creature is concealed only by smoke. When you are concealed or @UUID[Compendium.pf2e.conditionitems.Item.Hidden] in smoke, increase the DC of the flat check to target you to 6 if you're concealed or 12 if you're hidden.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +222,43 @@
       "name": "Stone Bones",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3Y1k2eAMqCdcCGmK",
+        "folder": "1rbBrUclIZizEPQL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stone Bones",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are struck by a critical hit that deals physical damage.</p>\n<hr />\n<p>Your intractable nature can help you shrug off even the most grievous injuries. Attempt a @Check[flat|dc:17|showDC:all]. If you are successful, the attack becomes a normal hit.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +268,66 @@
       "name": "Stonewalker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KTLdk65OOAVixqtY",
+        "folder": "1rbBrUclIZizEPQL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stonewalker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have a deep reverence for and connection to stone. You can cast @UUID[Compendium.pf2e.spells-srd.Item.One with Stone] as a 3rd-rank divine innate spell once per day.</p>\n<p>If you have the @UUID[Compendium.pf2e.feats-srd.Item.Stonemason's Eye] feat, you can attempt to find unusual stonework and stonework traps that require legendary proficiency in Perception. If you have both Stonemason's Eye and legendary proficiency in Perception, when the GM rolls a secret check for you to notice unusual stonework, you keep your bonus from Stonemason's Eye.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:one-with-stone",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:one-with-stone",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:dwarf"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dwarf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

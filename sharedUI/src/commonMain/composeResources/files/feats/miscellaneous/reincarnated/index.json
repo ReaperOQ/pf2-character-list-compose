@@ -7,6 +7,76 @@
       "name": "Animal Soul Siblings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3omfgwa6waDNj0Eg",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Soul Siblings",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your eyes have been opened to the spiritual essence suffusing the world. You gain @UUID[Compendium.pf2e.spells-srd.Item.Speak with Animals] as a primal innate spell that you can cast once per day. You get a +1 circumstance bonus to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] from animals.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "target:trait:animal",
+                "action:gather-information"
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:speak-with-animals",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:speak-with-animals",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +86,67 @@
       "name": "Boneyard Acquaintance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fjzxzlHhiORtV7Ll",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Boneyard Acquaintance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Before your soul returned from death, you interacted with a host of other souls on their way to the Boneyard. One of these acquaintances owes you a favor. You can temporarily summon it to come to your aid, and it appears as a swirling mass of ectoplasm with indiscernible features and a translucent dagger, the favored weapon of Pharasma. This functions as @UUID[Compendium.pf2e.spells-srd.Item.Spiritual Guardian] that you can cast once per day as a 9th-rank divine innate spell.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:spiritual-guardian",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:spiritual-guardian",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "force",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -25,6 +156,47 @@
       "name": "Clinging to Life",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vAGs7shxc8vhySpI",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Clinging to Life",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You're reduced to 0 hit points and don't immediately die.</p><hr /><p>This life still holds much for you, and you aren't ready to fall back into the River of Souls just yet. When you're reduced to 0 Hit Points and not immediately killed, you go to 1 Hit Point instead, fall @UUID[Compendium.pf2e.conditionitems.Item.Prone], and are @UUID[Compendium.pf2e.conditionitems.Item.Unconscious], and you don't gain the @UUID[Compendium.pf2e.conditionitems.Item.Wounded]{Wounded 1} condition.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -34,6 +206,75 @@
       "name": "Empathy Incarnate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9USZSLGG4zmdZquw",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Empathy Incarnate",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Reincarnation has given you a compassionate perspective and enabled you to relate to almost everyone you speak with, putting them at ease and quickly generating trust. Whenever you attempt a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] or @UUID[Compendium.pf2e.actionspf2e.Item.Request] something, the DC is reduced by 2, and if the creature you're speaking with is lower level than you, any success is a critical success. Whenever you attempt a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information], you can't critically fail.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "gt": [
+                    "self:level",
+                    "target:level"
+                  ]
+                },
+                {
+                  "or": [
+                    "action:make-an-impression",
+                    "action:request"
+                  ]
+                }
+              ],
+              "selector": "diplomacy"
+            },
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:gather-information"
+              ],
+              "selector": "diplomacy"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +284,66 @@
       "name": "I Sense Malevolence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aEcK9cX64xDrbzwH",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "I Sense Malevolence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your time in the River of Souls has given you deep insight into the machinations of those who refuse to move on. You gain @UUID[Compendium.pf2e.spells-srd.Item.Spirit Sense] as a 6th-rank occult innate spell, which you can cast once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:spirit-sense",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:spirit-sense",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -52,6 +353,48 @@
       "name": "Indomitable Spirit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "v84501yLBubHlGPz",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Indomitable Spirit",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your soul has accumulated countless particles of quintessence over myriad deaths and rebirths, and for one moment, this raw material from the Great Beyond envelops you and your comrades. Until the end of your next turn, you and any allies adjacent to you get a +4 circumstance bonus to AC and are @UUID[Compendium.pf2e.conditionitems.Item.Quickened]. The additional action can be used only to Strike or Stride.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Indomitable Spirit]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "concentrate",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -61,6 +404,44 @@
       "name": "I've Had Many Jobs",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "asjDgf7Q9BWZoK5Y",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "I've Had Many Jobs",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Finding and excelling at odd jobs is child's play to one who has worked many occupations during many lives. When you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income], you function as if you were trained in the skill used. If you're at least an expert in the skill used, the DC for your skill check is reduced by 2.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "downtime",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -70,6 +451,48 @@
       "name": "Let's Try That Again",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XKAPPvPpS4b8rSFp",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Let's Try That Again",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You fail a skill check.</p>\n<hr />\n<p>You feel a sense of deja vu when you've made a mistake, almost as if you weren't so careless in a past life and could certainly do better if given another chance. Reroll the triggering skill check and use the new result, even if it's worse than your first roll.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "fortune",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -79,6 +502,44 @@
       "name": "Like a Roach",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uUSCoVhn5pWbkLgm",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Like a Roach",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Living with the bare necessities isn't terribly hard for someone who has defied death, and like a cockroach, you always know how to survive. When you @UUID[Compendium.pf2e.actionspf2e.Item.Subsist] during downtime, the DC for your skill check is reduced by 2. You don't need a minimum proficiency rank to Subsist in unusual environments, nor do you take a –5 penalty if you Subsist after 8 hours or less of exploration.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "downtime",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -88,6 +549,66 @@
       "name": "Lingering Echoes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZTIM5YyCiNxIO3Mp",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lingering Echoes",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Not everyone is reincarnated, and you feel a strong connection with the spiritual echoes of those who didn't receive the same opportunity as you. You gain @UUID[Compendium.pf2e.spells-srd.Item.Talking Corpse] as an occult innate spell that you can cast once per day. You can ask a fourth question of a corpse when you cast this spell. The corpse attempts its @Check[will|against:class-spell|traits:occult,spell] save against your spell DC or your class DC, whichever is higher.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:talking-corpse",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:talking-corpse",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -97,6 +618,77 @@
       "name": "Linguistic Revival",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xSOpBaHbrjiaQsME",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Linguistic Revival",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You achieved fluency in different languages with each reincarnation, and your brain remembers much of the grammar, idioms, and obscenities that you spouted in old lives. You gain @UUID[Compendium.pf2e.spells-srd.Item.Truespeech] as a 5th-rank occult innate spell that you can cast once a day on only yourself. While the spell is active, you get a +2 circumstance bonus to Diplomacy checks while speaking to a creature in a language other than Common.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "not": "language:speaking:common"
+                }
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:truespeech",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:truespeech",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -106,6 +698,52 @@
       "name": "Pain is Temporary",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "j5VRy2iVz5aulQ1h",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pain is Temporary",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>Sangpotshi practitioners know that suffering is a fleeting sensation that ultimately strengthens the soul and prepares it for a new reincarnation. Bolstered by this understanding, you've learned to temporarily steel yourself against all forms of pain. You gain resistance 10 to all damage until the end of your next turn.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Pain is Temporary",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Pain is Temporary"
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "concentrate",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -115,6 +753,85 @@
       "name": "Plant Soul Siblings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mlFDIQuh84VLj5IC",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plant Soul Siblings",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're now able to connect with the spirits present in the greenery of the natural world. You gain @UUID[Compendium.pf2e.spells-srd.Item.Speak with Plants] as a primal innate spell that you can cast once per day. You get a +2 circumstance bonus to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] from animals or plants.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animal Soul Siblings"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "target:trait:plant",
+                    "target:trait:animal"
+                  ]
+                },
+                "action:gather-information"
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:speak-with-plants",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:speak-with-plants",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -124,6 +841,44 @@
       "name": "Rapid Retraining",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WUmeSZZ0feYyZJf1",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Retraining",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Some feel trapped by their choices and have a tough time reinventing themselves. To you, this dilemma is just a natural part of reincarnation. @UUID[Compendium.pf2e.actionspf2e.Item.Retraining] other feats or skill increases during downtime only takes 4 days instead of a week, and class features that require a choice can be retrained in a week instead of a month. You also never need to find a teacher to retrain, as the memories of abilities you possessed in past lives are superior to any instructor.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "downtime",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -133,6 +888,43 @@
       "name": "Reincarnated Ridiculer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SrngYpUpBOa73XTL",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reincarnated Ridiculer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've practiced the art of taunting an enemy, ensuring they know death will only make you stronger. When you @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] an opponent, the target doesn't become temporarily immune to your attempts to Demoralize it unless you critically fail the check. If the target critically hit you with a Strike on its previous turn, the DC for this check is reduced by 4.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -142,6 +934,49 @@
       "name": "Release the Light",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SsME16puYnUzga3O",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Release the Light",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You're below 20 Hit Points. Many people report seeing a bright light before their death. You're one of these people, and at rare intervals when hope seems dim, the light exudes outward from your soul. You shed bright light in a 30-foot radius (and dim light for another 30 feet beyond that) until the end of your next turn. Enemy creatures in the area that rely on sight must attempt a @Check[fortitude|against:class-spell] save equal to your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Blinded] for 1 round and dazzled for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature is blinded for 2 rounds and dazzled for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "light",
+              "reincarnated",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -151,6 +986,47 @@
       "name": "See You in Hell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "D5atazp26amNzoqO",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "See You in Hell",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You're reduced to 0 Hit Points by a creature but not immediately killed.</p><hr /><p>You aren't sure if you'll be reincarnated again, so you might as well take this foe with you. A blast of spiritual energy lashes out from the depths of your soul, targeting the creature who attacked you. The creature takes spirit damage equal to the amount that reduced you to 0 Hit Points (@Check[will|against:class-spell|basic] save with a DC equal to your class DC or spell DC, whichever is higher).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -160,6 +1036,50 @@
       "name": "Sleep of the Reborn",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zz2kOAHYBxbLtOV0",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sleep of the Reborn",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Philosophers compare the cycle of life, death, and rebirth to sleeping, dreaming, and waking. You take it to another level by reliving previous lives in dreams, always waking invigorated and thankful for a new chance at life. Whenever you rest for 8 hours, you gain the effects of a long-term rest. If you're an ancestry that neither sleeps nor dreams, you still receive this benefit by entering a reflective, meditative state during rest.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "system.attributes.hp.recoveryMultiplier",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -169,6 +1089,80 @@
       "name": "Stone Soul Siblings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NPVi1iPfY1GpiC8A",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stone Soul Siblings",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your connection with nature's spirits has progressed to the point where you can even have casual conversation with pebbles and boulders. You gain @UUID[Compendium.pf2e.spells-srd.Item.Speak with Stones] as a primal innate spell that you can cast once per day. You get a +2 circumstance bonus to Diplomacy checks to Gather Information from stones.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Plant Soul Siblings"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "target:trait:stone",
+                "action:gather-information"
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:speak-with-stones",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:speak-with-stones",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:reincarnated"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -178,6 +1172,48 @@
       "name": "This is What it's Like to Die",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "20eTy6lRpCnMymTp",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "This is What it's Like to Die",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>It's one thing to remember your previous lives. It's quite another to remember how you died in each of those lives. You can recall dozens, if not more, of excruciating, humiliating, and devastating ends you've suffered over the eons, and you can inflict upon your enemies a vision of these pains. You gain @UUID[Compendium.pf2e.spells-srd.Item.Phantasmagoria] as an occult innate spell that you can cast once per day.</p>\n<p>When you gain this feat, choose any two of the following damage types: acid, bludgeoning, cold, electricity, fire, piercing, poison, slashing, or sonic. These damage types caused your deaths more often than not in your previous lives, and whenever a creature takes damage from a <em>phantasmagoria</em> spell you cast, you can swap the mental damage that spell normally causes for one of the two damage types you chose.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -187,6 +1223,48 @@
       "name": "Unbreakable Resolve",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e9H7w0X6yFEhn3h4",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unbreakable Resolve",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You fail a Will save.</p><hr /><p>The experience of coming back after death has granted you a strong sense of resolve; devilish words, slick spells, and conniving trickery can't easily catch you unprepared. Reroll the triggering save, using the second result only if it's better.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "fortune",
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -196,6 +1274,65 @@
       "name": "Weight of Experience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rGU4nKAPCkC0lK4Z",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Weight of Experience",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The experience you've accumulated over multiple lifetimes envelops you like a weighted blanket, providing comfort and bestowing confidence under pressure. You gain the trained proficiency rank in one skill of your choice and the @UUID[Compendium.pf2e.feats-srd.Item.Assurance] skill feat in that skill as a bonus feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "choices": {
+                "config": "skills"
+              },
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "preselectChoices": {
+                "assurance": "{item|flags.system.rulesSelections.skill}"
+              },
+              "uuid": "Compendium.pf2e.feats-srd.Item.Assurance"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -205,6 +1342,173 @@
       "name": "Wisdom from Another Life",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2HkagmqG9rsQfyfR",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wisdom from Another Life",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You absorbed a wide variety of facts before you died, and your soul still remembers slivers of this precious knowledge. You gain the trained proficiency rank in one skill of your choice and the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat as a bonus feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Acrobatics",
+                  "predicate": [
+                    "skill:acrobatics:rank:0"
+                  ],
+                  "value": "acrobatics"
+                },
+                {
+                  "label": "PF2E.Skill.Arcana",
+                  "predicate": [
+                    "skill:arcana:rank:0"
+                  ],
+                  "value": "arcana"
+                },
+                {
+                  "label": "PF2E.Skill.Athletics",
+                  "predicate": [
+                    "skill:athletics:rank:0"
+                  ],
+                  "value": "athletics"
+                },
+                {
+                  "label": "PF2E.Skill.Crafting",
+                  "predicate": [
+                    "skill:crafting:rank:0"
+                  ],
+                  "value": "crafting"
+                },
+                {
+                  "label": "PF2E.Skill.Deception",
+                  "predicate": [
+                    "skill:deception:rank:0"
+                  ],
+                  "value": "deception"
+                },
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "predicate": [
+                    "skill:diplomacy:rank:0"
+                  ],
+                  "value": "diplomacy"
+                },
+                {
+                  "label": "PF2E.Skill.Intimidation",
+                  "predicate": [
+                    "skill:intimidation:rank:0"
+                  ],
+                  "value": "intimidation"
+                },
+                {
+                  "label": "PF2E.Skill.Medicine",
+                  "predicate": [
+                    "skill:medicine:rank:0"
+                  ],
+                  "value": "medicine"
+                },
+                {
+                  "label": "PF2E.Skill.Nature",
+                  "predicate": [
+                    "skill:nature:rank:0"
+                  ],
+                  "value": "nature"
+                },
+                {
+                  "label": "PF2E.Skill.Occultism",
+                  "predicate": [
+                    "skill:occultism:rank:0"
+                  ],
+                  "value": "occultism"
+                },
+                {
+                  "label": "PF2E.Skill.Performance",
+                  "predicate": [
+                    "skill:performance:rank:0"
+                  ],
+                  "value": "performance"
+                },
+                {
+                  "label": "PF2E.Skill.Religion",
+                  "predicate": [
+                    "skill:religion:rank:0"
+                  ],
+                  "value": "religion"
+                },
+                {
+                  "label": "PF2E.Skill.Society",
+                  "predicate": [
+                    "skill:society:rank:0"
+                  ],
+                  "value": "society"
+                },
+                {
+                  "label": "PF2E.Skill.Stealth",
+                  "predicate": [
+                    "skill:stealth:rank:0"
+                  ],
+                  "value": "stealth"
+                },
+                {
+                  "label": "PF2E.Skill.Survival",
+                  "predicate": [
+                    "skill:survival:rank:0"
+                  ],
+                  "value": "survival"
+                },
+                {
+                  "label": "PF2E.Skill.Thievery",
+                  "predicate": [
+                    "skill:thievery:rank:0"
+                  ],
+                  "value": "thievery"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -214,6 +1518,62 @@
       "name": "You Seem Somewhat Familiar",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DG3cRm3LrTEeBDMu",
+        "folder": "MKFmNxwrVSwVZLkL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You Seem Somewhat Familiar",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You succeed or critically succeed at a @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] check about a creature.</p><hr /><p>You fought hundreds of foes in your various past lives, and now and then, something about a new opponent tugs at your memory, almost as if you defeated their grandparent long ago. You get a +2 circumstance bonus to your next attack roll, damage roll, or saving throw against this creature. You only receive this bonus once per creature.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Season of Ghosts Hardcover Compilation"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "you-seem-somewhat-familiar",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "you-seem-somewhat-familiar"
+              ],
+              "selector": [
+                "attack-roll",
+                "damage",
+                "saving-throw"
+              ],
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "reincarnated"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

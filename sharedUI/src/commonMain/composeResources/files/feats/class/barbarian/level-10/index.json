@@ -7,6 +7,49 @@
       "name": "Come and Get Me",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Z9gzWFk3qom2z904",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Come and Get Me",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You open yourself to attacks so you can respond in turn. Until your rage ends, you are @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], and damage rolls against you gain a +2 circumstance bonus. If a creature hits you, that creature is off-guard to you until the end of your next turn. If you hit it before the end of your next turn, you gain temporary Hit Points equal to your Constitution modifier, or double that on a critical hit. These temporary Hit Points last until the end of your rage.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Come and Get Me",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Come and Get Me"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +59,44 @@
       "name": "Furious Sprint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "p2I4o9Cc6UrXvjhO",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Furious Sprint",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You rush forward. Stride up to five times, or up to eight times if you used 3 actions. All this movement must be in a straight line (though the GM might allow reasonable variance). You can replace any of these Strides with a @UUID[Compendium.pf2e.actionspf2e.Item.Balance] action if you need to, which you attempt using an [[/act balance skill=athletics]]{Athletics} check instead of an Acrobatics check, using the same DC.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +106,48 @@
       "name": "Great Cleave",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cznEQ1W61MSaXW0u",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Great Cleave",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your fury carries your weapon through multiple foes. When you @UUID[Compendium.pf2e.feats-srd.Item.Cleave], if your Strike also reduces its target to 0 HP, you can continue to make melee Strikes until you make a Strike that doesn't reduce a creature to 0 HP, or until there are no creatures adjacent to the most recent creature you attacked while Cleaving, whichever comes first.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cleave"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +157,43 @@
       "name": "Impressive Landing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QO8l5Dao8HnaFQE4",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Impressive Landing",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fall at least 10 feet and land on a solid surface.</p><hr /><p>You slam into the ground, shattering it around you. Treat the fall as 10 feet shorter. You land on your feet. The ground in a @Template[emanation|distance:5] becomes difficult terrain. Any creature in the emanation when you land takes @Damage[5[bludgeoning]|options:area-damage] damage as the debris hits it and is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the start of its next turn.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +203,44 @@
       "name": "Knockback",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pVLdMOqYwul745k3",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Knockback",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful Strike</p><hr /><p>The weight of your swing drives your enemy back. You push the enemy back 5 feet, with the effects of a successful @UUID[Compendium.pf2e.actionspf2e.Item.Shove]. You can follow the enemy as normal for a successful Shove.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -52,6 +250,44 @@
       "name": "Resounding Blow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9kY9B5WgtEleOicn",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resounding Blow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a melee weapon that deals bludgeoning damage.</p><hr /><p>You strike your enemy in the head with such force that their ears ring. Make a melee Strike. If the Strike hits and deals damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.Deafened] until the start of your next turn (or for 1 minute on a critical hit).</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -61,6 +297,45 @@
       "name": "Silencing Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Yk3QGpalWDn5MhBV",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Silencing Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A quick strike to the face or mouth silences your opponent. Make a melee Strike against an enemy. If it hits, the enemy must succeed at a @Check[fortitude|against:barbarian|options:inflicts:stunned] save against your class DC.</p><hr /><p><strong>Success</strong> The target is unaffected.</p>\n<p><strong>Failure</strong> The target is dazed and can barely vocalize. It's @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and its speech is raspy and hard to understand. It must succeed at a @Check[flat|dc:11] to use linguistic actions or Cast a Spell, unless the spell has the subtle trait.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3} instead of stunned 1.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "incapacitation",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -70,6 +345,44 @@
       "name": "Tangle of Battle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GLbl3qoWCvvjJr4S",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tangle of Battle",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You critically hit an adjacent enemy.</p><hr /><p>Your vicious strike pulls your foe closer, giving you the opportunity to grab them. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] the triggering enemy.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -79,6 +392,45 @@
       "name": "Terrifying Howl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HjinlKihkadhkQ4Z",
+        "folder": "GZnLEqftxPiHa5m1",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrifying Howl",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You unleash a terrifying howl. Attempt Intimidation checks to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] each enemy within 30 feet: you don't take a penalty if the creature doesn't understand your language. Regardless of the results of your checks, each target is then temporarily immune to Terrifying Howl for 1 minute.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

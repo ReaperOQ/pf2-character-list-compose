@@ -1,6 +1,7 @@
 package ru.reaperoq.pf2ecl
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
@@ -8,6 +9,10 @@ import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import org.jetbrains.compose.resources.painterResource
+import pathfinder_2e_character_list.sharedui.generated.resources.Res
+import pathfinder_2e_character_list.sharedui.generated.resources.allDrawableResources
+import ru.reaperoq.pf2ecl.data.Translations
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
@@ -22,6 +27,7 @@ import androidx.navigation.compose.rememberNavController
 import ru.reaperoq.pf2ecl.data.CharacterBuilderViewModel
 import ru.reaperoq.pf2ecl.screens.*
 import ru.reaperoq.pf2ecl.theme.AppTheme
+import ru.reaperoq.pf2ecl.ui.LevelSelector
 
 @Composable
 fun App(
@@ -44,6 +50,8 @@ fun App(
                     Triple("ancestry", "Родословная", Icons.Rounded.Groups),
                     Triple("background", "Предыстория", Icons.Rounded.History),
                     Triple("classSelection", "Класс", Icons.Rounded.Shield),
+                    Triple("spells", "Заклинания", Icons.Rounded.AutoStories),
+                    Triple("feats", "Черты", Icons.Rounded.Stars),
                     Triple("matrix", "Атрибуты", Icons.Rounded.AutoAwesome),
                     Triple("printSheet", "Сводка", Icons.Rounded.Print)
                 )
@@ -71,18 +79,32 @@ fun App(
                                     .background(MaterialTheme.colorScheme.surface, shape = MaterialTheme.shapes.medium)
                                     .padding(12.dp)
                             ) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(40.dp)
-                                        .clip(CircleShape)
-                                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Icon(
-                                        Icons.Rounded.Person,
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.primary
+                                val ancestryKey = characterState.ancestry?.name?.let { Translations.getAncestryDrawableKey(it) } ?: ""
+                                val classKey = characterState.classData?.name?.lowercase() ?: ""
+                                val resourceId = Res.allDrawableResources[ancestryKey] ?: Res.allDrawableResources["class_$classKey"]
+
+                                if (resourceId != null) {
+                                    Image(
+                                        painter = painterResource(resourceId),
+                                        contentDescription = characterState.name,
+                                        modifier = Modifier
+                                            .size(40.dp)
+                                            .clip(CircleShape)
                                     )
+                                } else {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(40.dp)
+                                            .clip(CircleShape)
+                                            .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(
+                                            Icons.Rounded.Person,
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.primary
+                                        )
+                                    }
                                 }
                                 Spacer(modifier = Modifier.width(12.dp))
                                 Column(modifier = Modifier.weight(1f)) {
@@ -93,11 +115,12 @@ fun App(
                                         overflow = TextOverflow.Ellipsis
                                     )
                                     val sub = listOfNotNull(
+                                        "Ур. ${characterState.level}",
                                         characterState.ancestry?.name,
                                         characterState.classData?.name
-                                    ).joinToString(" / ")
+                                    ).joinToString(" · ")
                                     Text(
-                                        text = sub.ifBlank { "Уровень 1 Искатель" },
+                                        text = sub.ifBlank { "Ур. ${characterState.level} · Искатель" },
                                         style = MaterialTheme.typography.bodySmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         maxLines = 1,
@@ -105,6 +128,14 @@ fun App(
                                     )
                                 }
                             }
+
+                            Spacer(modifier = Modifier.height(12.dp))
+
+                            LevelSelector(
+                                level = characterState.level,
+                                onLevelChange = { characterViewModel.setLevel(it) },
+                                label = "Уровень"
+                            )
 
                             Spacer(modifier = Modifier.height(24.dp))
 
@@ -161,11 +192,14 @@ fun App(
                     }
                 }
             } else if (showCreationNav && !isWideScreen) {
+                // On mobile, show only the main steps in the bottom bar, rest accessible via nav
                 val navItems = listOf(
-                    Triple("ancestry", "Родословная", Icons.Rounded.Groups),
-                    Triple("background", "Предыстория", Icons.Rounded.History),
+                    Triple("ancestry", "Род.", Icons.Rounded.Groups),
+                    Triple("background", "Пред.", Icons.Rounded.History),
                     Triple("classSelection", "Класс", Icons.Rounded.Shield),
-                    Triple("matrix", "Атрибуты", Icons.Rounded.AutoAwesome),
+                    Triple("spells", "Спел.", Icons.Rounded.AutoStories),
+                    Triple("feats", "Черты", Icons.Rounded.Stars),
+                    Triple("matrix", "Атр.", Icons.Rounded.AutoAwesome),
                     Triple("printSheet", "Сводка", Icons.Rounded.Print)
                 )
                 Scaffold(
@@ -250,6 +284,20 @@ fun AppNavHost(
         }
         composable("classSelection") {
             ClassScreen(
+                viewModel = characterViewModel,
+                onBack = { navController.popBackStack() },
+                onContinue = { navController.navigate("spells") }
+            )
+        }
+        composable("spells") {
+            SpellsScreen(
+                viewModel = characterViewModel,
+                onBack = { navController.popBackStack() },
+                onContinue = { navController.navigate("feats") }
+            )
+        }
+        composable("feats") {
+            FeatsScreen(
                 viewModel = characterViewModel,
                 onBack = { navController.popBackStack() },
                 onContinue = { navController.navigate("matrix") }

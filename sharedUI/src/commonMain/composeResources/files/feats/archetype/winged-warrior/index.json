@@ -7,6 +7,68 @@
       "name": "Battering Wings",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cJNRNyZbwVofYiUS",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Battering Wings",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Though not powerful enough for flight, your wings can deliver a thrashing to anyone who gets close. You gain a wing unarmed attack that deals 1d4 bludgeoning damage. Your wing attack is in the brawling group and has the agile, finesse, and unarmed traits</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "bludgeoning",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/wing.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Wing",
+              "slug": "wing",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +78,47 @@
       "name": "Bombing Run",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "F2VR4FPL2HdbzfXL",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bombing Run",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You currently have a fly Speed.</p>\n<hr />\n<p>Using your elevation and speed to your advantage, you deliver aerial payloads with greater force. You Fly and can Interact to draw a bomb. At any point during your movement, you can also make a Strike with an alchemical bomb. The bomb deals its splash damage to every creature within 10 feet of the target.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -25,6 +128,47 @@
       "name": "Cratering Drop",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4PdWIMjSHRTPekAl",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cratering Drop",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your previous action was Pluck from the Sky using a melee Strike, and the target failed or critically failed its saving throw.</p><hr /><p>You follow up your enemy's fall, driving you both to the earth in a meteoric descent. You Fly straight down, increasing the amount the enemy falls by your Fly speed. If you reach the ground, you drive the enemy into the ground, dealing double the normal falling damage.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pluck from the Sky"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +178,48 @@
       "name": "Falcon Swoop",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DUpcEx0yMHGSU6o5",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Falcon Swoop",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You currently have a fly Speed.</p>\n<hr />\n<p>Like the fastest of predatory birds, you soar toward your prey at great speeds. Fly twice. At any point during this movement, you can make a Strike against one enemy within reach or within the first range increment of a ranged weapon. That enemy is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the Strike if you're attacking them from above.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +229,51 @@
       "name": "Feathered Flechettes",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fxkByzNBsYOcyYp8",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feathered Flechettes",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Unfurling your wings in a quick snap, you send feathers scattering in all directions. Creatures in a @Template[emanation|distance:15] take @Damage[6d6[slashing]|options:area-damage] damage (@Check[reflex|against:class|basic] save against your class DC). This increases to @Damage[10d6[slashing]|options:area-damage] if your unarmed attacks have a greater striking rune, such as by etching it onto @UUID[Compendium.pf2e.equipment-srd.Item.Handwraps of Mighty Blows], and @Damage[16d6[slashing]|options:area-damage] if they have a major striking rune.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +283,85 @@
       "name": "Gusting Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "riQ8sn3Gpbr3LdtR",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Gusting Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You manipulate the currents of your spell's energy, allowing you to gracefully glide with your wings. If the next action you use is to Cast a Spell with the air or electricity trait, you can Fly up to 10 feet before or after the spell is cast.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:gusting-spell",
+                {
+                  "or": [
+                    "item:trait:air",
+                    "item:trait:electricity"
+                  ]
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.GustingSpell"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "gusting-spell"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype",
+              "manipulate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +371,48 @@
       "name": "Pluck from the Sky",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IfoxFY9kzP4KG9gi",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pluck from the Sky",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> tengu, strix, or awakened animal (flying animal) ancestry</p><hr /><p>The skies are your rightful place, and you will not suffer another to occupy them. Make a Strike against a flying creature. If the attack deals damage, the target must attempt a @Check[reflex|against:class] save against your class DC.</p><hr /><p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> The target falls 15 feet but doesn't take damage if it reaches the ground.</p>\n<p><strong>Failure</strong> The target falls 30 feet but doesn't take damage if it reaches the ground.</p>\n<p><strong>Critical Failure</strong> As failure, but the target takes falling damage.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +422,47 @@
       "name": "Redirecting Draft",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "G3NBWaItq6oLEJxx",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Redirecting Draft",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You or an ally within 10 feet of you is the target of a ranged physical Strike.</p>\n<hr />\n<p>You flap your wings to blow arrows off course. You or the triggering ally gain a +2 circumstance bonus to AC against the triggering attack. If the attack misses, you redirected the attack's flight path.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -79,6 +472,51 @@
       "name": "Smooth Hover",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2DrvFmrHzHLWS8UD",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Smooth Hover",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're airborne at the end of your turn.</p>\n<hr />\n<p>You remain airborne through sheer effort. You don't fall, even if you didn't use Fly or a similar action this turn.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -88,6 +526,53 @@
       "name": "Sonic Strafe",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "D1uVM4fif8Y0FYu1",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sonic Strafe",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You currently have a fly Speed.</p>\n<hr />\n<p>You can now achieve such flight speeds that your passage splits the very air. Fly twice. Any creature that is adjacent to you at any point during your movement takes @Damage[10d6[sonic]] damage (@Check[fortitude|against:class|basic] save against your class DC). On a critical failure, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for 1 hour.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "archetype",
+              "sonic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -97,6 +582,47 @@
       "name": "Sunbird Glare",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QgfrfzQAtzgwAgtQ",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sunbird Glare",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in bright light.</p><hr /><p>By keeping your feathers clean and sleek, you can catch the light across your wings to create a startling glare in the eyes of a creature within 20 feet. The target must succeed at a @Check[fortitude|against:class] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round (1 minute on a critical failure). Regardless of their result, the target is temporarily immune to Sunbird Glare for 10 minutes.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -106,6 +632,47 @@
       "name": "Thunderous Landing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rkViV16nuFbm6hPj",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thunderous Landing",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You currently have a fly Speed and are airborne.</p><hr /><p>You hurl away enemies with the force of your landing. You Fly and, if you end your movement on a solid surface, your landing sends out a shock wave of air. Each creature within 10 feet of your landing position must succeed at a @Check[reflex|against:class] save against your class DC or be pushed 10 feet away. This is forced movement.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -115,6 +682,47 @@
       "name": "Wing Bounce",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HXjDDIannDMNxMIz",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wing Bounce",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You rush forward, flapping your wings for a bit of lift, and can use that momentum to knock down a foe. @UUID[Compendium.pf2e.actionspf2e.Item.Leap], and if you land within melee reach of at least one enemy, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Trip] that enemy. You don't need to have one hand free. If you successfully knock the target @UUID[Compendium.pf2e.conditionitems.Item.Prone], you can Leap again. If you have a fly Speed, you can Fly instead of Leap.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -124,6 +732,47 @@
       "name": "Wing Shove",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wvpDbFZZ9I8aAtmg",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wing Shove",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're flanked by at least two enemies.</p>\n<hr />\n<p>You spread your wings wide, pushing foes away from you. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] one of the flanking enemies, and then make a second Shove attempt against a different enemy that is flanking you. You don't need one hand free. The second Shove attempt has the same multiple attack penalty as the first and doesn't count toward your multiple attack penalty. On a success or critical success, you can't Stride after a target, but that target is also @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the beginning of their next turn. On a critical failure, you're off-guard until the beginning of your next turn instead of falling @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Winged Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -133,6 +782,63 @@
       "name": "Winged Warrior Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c3JnbVKag8I19OA1",
+        "folder": "bXyjv4etblaWIwRs",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Winged Warrior Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through rigorous training, you have strengthened your wings, granting you enough thrust to gain additional altitude. When you make a horizontal @UUID[Compendium.pf2e.actionspf2e.Item.Leap], increase the distance by 10 feet up to a maximum of your Speed. Any fly Speed granted by ancestry feats and other permanent wings increases by 5 feet.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.uewu2vWQluT8Jyf1]{Winged Warrior}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "you have permanent wings (such as from an ancestry or graft)"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.WingedWarrior.Dedication.RollOptionLabel",
+              "option": "winged-warrior-dedication-fly-bonus",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "winged-warrior-dedication-fly-bonus"
+              ],
+              "selector": "fly-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

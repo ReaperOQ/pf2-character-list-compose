@@ -7,6 +7,48 @@
       "name": "Fierce Competitor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SEtFRKVV9bt4MJEn",
+        "folder": "axT2LPwTC1XIrNDk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fierce Competitor",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You challenge a single ally to a physical competition. This competition must involve accomplishing a specific goal for a specific use of the Acrobatics or Athletics skill, such as @UUID[Compendium.pf2e.actionspf2e.Item.Climb]{Climbing} to the top of a wall, @UUID[Compendium.pf2e.actionspf2e.Item.Trip]{Tripping} a specific foe, or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump]{Long Jumping} across a chasm. You and your selected ally gain a +2 circumstance bonus to the associated skill check for 1 minute or until one of you wins the challenge, whichever is first. If you win this competition, you gain a +2 status bonus to Intimidation checks for 1 hour.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +58,47 @@
       "name": "Herbal Forager",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0EsMqnrmTEQBG65e",
+        "folder": "axT2LPwTC1XIrNDk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Herbal Forager",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your skill with herbs has improved. Each day as part of your daily preparations, you can harvest ingredients from your surroundings to craft one temporary alchemical item you know the formula for. This alchemical item must have the healing trait. If not consumed by your next daily preparations, the item is rendered inert.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Skilled Herbalist"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +108,85 @@
       "name": "Mentor of Legends",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "JBjRGWVtVaxLckfH",
+        "folder": "axT2LPwTC1XIrNDk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mentor of Legends",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're an extraordinary teacher, capable of inspiring your students to amazing feats of athletics and ingenuity. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Heroism] as an innate divine spell; in addition to its normal effects, the spell also grants temporary Hit Points equal to half your level. You can't cast this spell on yourself.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Mentor of Legends]</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:heroism",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:heroism",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:centaur"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:heroism",
+                "spellcasting:innate"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "PF2E.SpecificRule.Centaur.MentorOfLegends.Description"
+                },
+                {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Mentor of Legends]"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +196,47 @@
       "name": "Ride On",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4IurxX5pB7NmQX4q",
+        "folder": "axT2LPwTC1XIrNDk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ride On",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You would gain the @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] condition.</p>\n<hr />\n<p>Even when tired, you refuse to give up, pushing yourself to extreme feats of endurance. You delay the effects of the fatigued condition for 3 rounds. If the fatigued condition has a duration, the duration begins to elapse only after the delay. You can't further delay or prevent the fatigued condition after this ability ends.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +246,116 @@
       "name": "Speaker's Defense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "J7j6sSIdkwMwoZTx",
+        "folder": "axT2LPwTC1XIrNDk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Speaker's Defense",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>As a Speaker, you've forged a deep bond with powerful spirits who you can urge to rise up to defend you and your people. If you're a Faithspeaker, you can call on gods or powerful planar beings to cast @UUID[Compendium.pf2e.spells-srd.Item.Share Life] and @UUID[Compendium.pf2e.spells-srd.Item.Status], each once per day as innate divine spells; if you're a Greenspeaker, you can call on the forces of nature to cast @UUID[Compendium.pf2e.spells-srd.Item.Entangling Flora] and @UUID[Compendium.pf2e.spells-srd.Item.Environmental Endurance], each once per day as innate primal spells.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "budding speaker centaur heritage or Speaker in Training"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:share-life",
+                    "item:slug:status"
+                  ]
+                },
+                "spellcasting:innate",
+                "centaur-speaker:faithspeaker"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:share-life",
+                    "item:slug:status"
+                  ]
+                },
+                "spellcasting:innate",
+                "centaur-speaker:faithspeaker"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:centaur"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:entangling-flora",
+                    "item:slug:environmental-endurance"
+                  ]
+                },
+                "spellcasting:innate",
+                "centaur-speaker:greenspeaker"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:entangling-flora",
+                    "item:slug:environmental-endurance"
+                  ]
+                },
+                "spellcasting:innate",
+                "centaur-speaker:greenspeaker"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:centaur"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +365,57 @@
       "name": "Stubborn Defiance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XluSn2ejNkvFMuB6",
+        "folder": "axT2LPwTC1XIrNDk",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stubborn Defiance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're brave and stubborn and refuse to back down or bow to the wishes of another. You gain a +1 status bonus to saves against mental effects. Additionally, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.I Defy You!] reaction.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:mental"
+              ],
+              "selector": "saving-throw",
+              "type": "status",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.I Defy You!"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

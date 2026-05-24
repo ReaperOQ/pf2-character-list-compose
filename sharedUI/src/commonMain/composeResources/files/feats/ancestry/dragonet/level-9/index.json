@@ -7,6 +7,53 @@
       "name": "Bond Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "T86thkbU4X2FdLwd",
+        "folder": "dHEZ9d1DoxJTT1M7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bond Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You form a close bond with a companion, similar to that of a master and familiar, that lets you gift them with a touch of your inherent magic. You can spend time with another player character during your daily preparations to make them your designated companion for that day. That player must have a Focus Point pool. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Fortify Focus] activity.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Fortify Focus"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +63,52 @@
       "name": "Ferocious Will",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rdvwYaVN1Cnlm52A",
+        "folder": "dHEZ9d1DoxJTT1M7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ferocious Will",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You succeed at a saving throw against a magical mental effect.</p><hr /><p>You send a blast of magical feedback at the effect's source, dealing @Damage[ceil(@actor.level/2)d6[mental]] damage with a @Check[will|against:class-spell|basic|options:inflicts:slowed] save against your class DC or spell DC, whichever is higher. If the target critically fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for 1 round. At 11th level and every 2 levels thereafter, the damage increases by 1d6.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +118,58 @@
       "name": "Into the Sky",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fhpCUQUKRNtJMnf6",
+        "folder": "dHEZ9d1DoxJTT1M7",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Into the Sky",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You fly as naturally as any dragonet. You have a fly Speed of 25 feet at all times.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Zip! Zoom!"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "fly-speed",
+              "value": 25
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "dragonet"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

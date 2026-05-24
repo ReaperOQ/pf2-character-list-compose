@@ -7,6 +7,49 @@
       "name": "Foretell Harm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CuVvDrBaVP9nYJlt",
+        "folder": "YX12dq43VWFIeJwH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Foretell Harm",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> Your previous action was to Cast a non-cantrip Spell that dealt damage.</p><hr /><p>Your magic echoes ominously as you glimpse injury in the target's future. At the beginning of your target's next turn, it takes damage equal to twice the triggering spell's rank as a seemingly random and minor misfortune finds it. The damage and type of misfortune is of a type matching the spell; for instance, if you dealt fire damage, a flame might spontaneous ignite on them or they might burn a hand on their torch. The target is then temporarily immune to Foretell Harm for 24 hours.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +59,45 @@
       "name": "Glean Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "MJW4VP7PjVAX131C",
+        "folder": "YX12dq43VWFIeJwH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Glean Lore",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You tap into the collected lore of the divine, accessing a variety of potentially useful information.</p>\n<p>Attempt a @Check[religion] check to understand the information you gain. The GM sets the DC (similar to the DC to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge]), potentially adjusting the DC of the check for topics far removed from your mystery.</p>\n<hr />\n<p><strong>Critical Success</strong> You comprehend the lore accurately or gain a useful clue from the divine about your situation.</p>\n<p><strong>Success</strong> You learn two pieces of information about the topic, one true and one erroneous, but you don't know which is which.</p>\n<p><strong>Failure</strong> You recall incorrect information or gain an erroneous or misleading clue.</p>\n<p><strong>Critical Failure</strong> You recall two pieces of incorrect information or gain two erroneous or misleading clues.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "divine",
+              "oracle",
+              "secret"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +107,74 @@
       "name": "Nudge the Scales",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "acJkVtpX2GUvl90E",
+        "folder": "YX12dq43VWFIeJwH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nudge the Scales",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You lay a finger on the scales of life and death to heal a creature, regardless of whether it's living or undead. You restore @Damage[(2*(1+@actor.level))[healing]] Hit Points to one creature within 30 feet.</p>\n<p>In addition, you can mediate during your daily preparations to place yourself on one side of the scales. Choose life or death. If you align yourself with life, you can be targeted and healed by vitality healing effects, as normal for most living creatures; if you align yourself with death, you gain the void healing ability, and can instead be targeted and healed by void effects and other effects that restore Hit Points to undead creatures..</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "alwaysActive": true,
+              "key": "RollOption",
+              "option": "nudge-the-scales",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Oracle.NudgeTheScales.Life",
+                  "value": "life"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Oracle.NudgeTheScales.Death",
+                  "value": "death"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.hp.negativeHealing",
+              "predicate": [
+                "nudge-the-scales:death"
+              ],
+              "priority": 51,
+              "value": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "healing",
+              "oracle",
+              "spirit"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +184,48 @@
       "name": "Oracular Warning",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Gcliatty0MGYbTVV",
+        "folder": "YX12dq43VWFIeJwH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Oracular Warning",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are about to roll initiative.</p><hr /><p>You have a premonition about impending danger that you use to warn your allies. Each ally within 20 feet gains a +2 status bonus to their initiative roll and gains temporary Hit Points equal to half your level, which last for 1 minute. If you are @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 2} when you use Oracular Warning, the bonus increases to +3, and if you are cursebound 3, the bonus increases to +4.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Oracular Warning]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "cursebound",
+              "divine",
+              "emotion",
+              "mental",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +235,54 @@
       "name": "Trance of Celerity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KANcYBVhzcpSat9s",
+        "folder": "YX12dq43VWFIeJwH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Trance of Celerity",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your feet move faster, almost out of your conscious control. You gain a +5-foot status bonus to your Speeds for 1 minute.</p>\n<p>If you become @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 2} at any point during this duration, the bonus increases to a +10-foot status bonus. If you become @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 3} at any point during this duration, this bonus increases to +15-foot status bonus instead. Finally, if you become @UUID[Compendium.pf2e.conditionitems.Item.Cursebound]{Cursebound 4} at any point during this duration, this bonus increases to a +20-foot status bonus.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Trance of Celerity",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Trance of Celerity"
+          },
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +292,49 @@
       "name": "Whispers of Weakness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "55WR55op9BIdgF1B",
+        "folder": "YX12dq43VWFIeJwH",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whispers of Weakness",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Voices whisper to you how to best lay a creature low. You target one creature within 60 feet; if it has any weaknesses, you learn them, as well as which of its saving throw modifiers is lowest. You also come to understand its movements, gaining a +2 status bonus to your next attack roll (or skill check made as part of an attack action) against that foe before the end of your turn. The target is then temporarily immune for 1 day.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Whispers of Weakness",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Whispers of Weakness"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cursebound",
+              "divine",
+              "oracle"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

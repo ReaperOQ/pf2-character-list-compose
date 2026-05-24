@@ -7,6 +7,65 @@
       "name": "All This Will Happen Again",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Un8aEKnVULYAzP5L",
+        "folder": "LUhqyXRUB5SLYzf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "All This Will Happen Again",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You fail or critically fail a Will save against an emotion effect.</p><hr /><p>Even in the face of overwhelming tribulation, you find solace in the notion that this feeling is fleeting; all things are merely part of a never-ending cycle. Reroll the triggering saving throw with a +1 status bonus. You must use the second result, even if it's worse.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "all-this-will-happen-again",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "item:trait:emotion",
+                "all-this-will-happen-again"
+              ],
+              "selector": "will",
+              "type": "status",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "mental",
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +75,48 @@
       "name": "Elucidating Vision",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mAhmb9CkYe0J2bCD",
+        "folder": "LUhqyXRUB5SLYzf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Elucidating Vision",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your eyes have seen many things in your past lives, and your sight seems to have grown more powerful over your lifetimes. You gain darkvision.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +126,53 @@
       "name": "Innate Understanding",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GhBZU3qjq4JnVKjB",
+        "folder": "LUhqyXRUB5SLYzf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Innate Understanding",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Vague connections to the knowledge and prowess of your past help guide you in tasks that this life might not understand. You can attempt skill actions that normally require a character to be trained even if you're untrained, and you gain a +2 circumstance bonus to the check when doing so.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "proficiency:untrained"
+              ],
+              "selector": "skill-check",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +182,52 @@
       "name": "Remnants of the Past",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XphnZlPp7jEqeyeo",
+        "folder": "LUhqyXRUB5SLYzf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Remnants of the Past",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Memories of your first life are strong and continually return to you, even after several incarnations. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Adopted Ancestry] feat and can choose any common or uncommon humanoid ancestry with the feat. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for your chosen ancestry's Lore, such as Dwarven Lore or Ratfolk Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Adopted Ancestry"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +237,60 @@
       "name": "Samsaran Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eIXMBNTsA7yXzM9Q",
+        "folder": "LUhqyXRUB5SLYzf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Samsaran Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have untold ages of knowledge beneath your belt, focused on the pursuit of enlightenment. You gain the trained proficiency rank in Religion and Society. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Samsaran Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.religion.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +300,109 @@
       "name": "Samsaran Weapon Memory",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5dOAR7OypjgUTz07",
+        "folder": "LUhqyXRUB5SLYzf3",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Samsaran Weapon Memory",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The training of your past lives and even of those of samsarans who came before is deep-seated and guides your movements in combat. Choose two weapons with an ancestry trait from two different common humanoid ancestries, or other ancestries you have access to. You gain access to your chosen weapons. You have familiarity with these weapons—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "config": "baseWeaponTypes"
+              },
+              "flag": "weaponOne",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "config": "baseWeaponTypes"
+              },
+              "flag": "weaponTwo",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+            },
+            {
+              "definition": [
+                "item:category:martial",
+                {
+                  "or": [
+                    "item:base:{item|flags.system.rulesSelections.weaponOne}",
+                    "item:base:{item|flags.system.rulesSelections.weaponTwo}"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialSamsaranWeapons",
+              "sameAs": "simple",
+              "slug": "martial-samsaran-weapons"
+            },
+            {
+              "definition": [
+                "item:category:advanced",
+                {
+                  "or": [
+                    "item:base:{item|flags.system.rulesSelections.weaponOne}",
+                    "item:base:{item|flags.system.rulesSelections.weaponTwo}"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedSamsaranWeapons",
+              "sameAs": "martial",
+              "slug": "advanced-samsaran-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "or": [
+                    "item:base:{item|flags.system.rulesSelections.weaponOne}",
+                    "item:base:{item|flags.system.rulesSelections.weaponTwo}"
+                  ]
+                },
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "samsaran"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

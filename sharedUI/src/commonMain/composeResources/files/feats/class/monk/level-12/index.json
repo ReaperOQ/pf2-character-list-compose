@@ -7,6 +7,44 @@
       "name": "Disrupt Qi",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P13ZhZcR67Ev0vrS",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disrupt Qi",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You carefully target a creature's pressure points to block its inner life force. Make an unarmed Strike. If it deals damage to a living creature, that creature takes @Damage[(floor(@actor.level/6))d6[persistent,void]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} until the persistent damage ends. If you're 18th level or higher, the persistent void damage increases to 3d6.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +54,79 @@
       "name": "Dodging Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nBWoZ311FXFJC8Zl",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dodging Roll",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You take damage from an area effect that allows a Reflex save.</p>\n<hr />\n<p>You dodge a blow at the last possible moment.</p>\n<p>You Step and gain resistance to all damage equal to your level against the triggering effect. If your Step moves you out of the triggering effect's area, this resistance is instead equal to your level plus your Dexterity modifier.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Acrobatics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "dodging-roll",
+              "suboptions": [
+                {
+                  "label": "PF2E.SpecificRule.Monk.DodgingRoll.StepIn",
+                  "value": "in"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Monk.DodgingRoll.StepOut",
+                  "value": "out"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "dodging-roll:in"
+              ],
+              "type": "all-damage",
+              "value": "@actor.level"
+            },
+            {
+              "key": "Resistance",
+              "predicate": [
+                "dodging-roll:out"
+              ],
+              "type": "all-damage",
+              "value": "@actor.level + @actor.abilities.dex.mod"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +136,120 @@
       "name": "Five-Gods Ram",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gq1gGsJDLQuQDrhW",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Five-Gods Ram",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in @UUID[Compendium.pf2e.feats-srd.Item.Rushing Goat Stance].</p><hr /><p>You attack in an unceasing flurry of charging headbutts. Stride or Climb and then make a ramming horn Strike. If the Strike is successful, you immediately push the target back 10 feet, then Stride or Climb and make a second ramming horn Strike against them. If the second Strike is successful, you immediately knock the target @UUID[Compendium.pf2e.conditionitems.Item.Prone], but if the second Strike is a failure or if you're unable to complete all the required actions, you become @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>\n<p>Both Strikes count toward your multiple attack penalty, but the penalty doesn't increase until you've made both of them.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Rushing Goat Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "self:effect:rushing-goat-stance"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Monk.FiveGodsRam.RollOptionLabel",
+              "option": "five-gods-ram",
+              "suboptions": [
+                {
+                  "label": "PF2E.GenericLabel.StrikeCount.First",
+                  "value": "first-strike"
+                },
+                {
+                  "label": "PF2E.GenericLabel.StrikeCount.Second",
+                  "value": "second-strike"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "five-gods-ram:first-strike"
+              ],
+              "selector": [
+                "ramming-horn-attack-roll"
+              ],
+              "text": "PF2E.SpecificRule.Monk.FiveGodsRam.FirstStrike.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "five-gods-ram:second-strike"
+              ],
+              "selector": [
+                "ramming-horn-attack-roll"
+              ],
+              "text": "PF2E.SpecificRule.Monk.FiveGodsRam.SecondStrike.Note",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "failure",
+                "criticalFailure"
+              ],
+              "predicate": [
+                {
+                  "or": [
+                    "five-gods-ram:first-strike",
+                    "five-gods-ram:second-strike"
+                  ]
+                }
+              ],
+              "selector": [
+                "ramming-horn-attack-roll"
+              ],
+              "text": "PF2E.SpecificRule.Monk.FiveGodsRam.FailureNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +259,48 @@
       "name": "Focused Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d7DQhCJKYcLxpHen",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Focused Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Monastic Archer Stance].</p>\n<hr />\n<p>You achieve a state of perfect calm before unleashing your attack, opening your mind to the minute movements of the world around you to increase your accuracy.</p>\n<p>Make a ranged weapon Strike against a target within your weapon's first range increment. This Strike ignores the target's @UUID[Compendium.pf2e.conditionitems.Item.Concealed] condition and all cover.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Monastic Archer Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +310,50 @@
       "name": "Improved Knockback",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HPETR6zq8L6YJyi1",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Improved Knockback",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Shove] a creature, increase both the distance you can push the creature and the distance you can move to follow along with the target by 5 feet on a success or 10 feet on a critical success. If you push the target into another creature or obstacle, they both take @Damage[1d6[bludgeoning]] damage per 5 feet of movement that was prevented.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Knockback Strike"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "monk": "Monk"
+            },
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +363,47 @@
       "name": "Meditative Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fcFrxvqbIX6k71os",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Meditative Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your meditation is so effective that you can achieve a deep focus with the world around you. When you Refocus, you regain all your Focus Points instead of 1.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +413,80 @@
       "name": "Overwhelming Breath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Dwxi1q1OWB1ufFvy",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Overwhelming Breath",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You control your breathing and align it with your qi, exhaling with controlled force in order to overcome your opponent's resistance. If you use your next action to Cast a Spell that has the monk trait and no duration, the spell and any Strikes you make as a result of casting it ignore an amount of the target's resistance to physical damage equal to your level.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:trait:monk",
+                "item:type:spell",
+                "spellshape:overwhelming-breath"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.OverwhelmingBreath"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "overwhelming-breath"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "monk",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -70,6 +496,50 @@
       "name": "Reflexive Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LI9VtCaL5ZRk0Wo8",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reflexive Stance",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative</p>\n<hr />\n<p>You enter a stance without a thought. Use an action that has the stance trait.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "selector": "initiative",
+              "text": "{item|description}",
+              "title": "{item|name} <span class=\"action-glyph\">F</span>"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -79,6 +549,59 @@
       "name": "Wave Spiral",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fLlCodqKXyXbZR7C",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wave Spiral",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per minute</p>\n<p><strong>Requirements</strong> You're in Reflective Ripple Stance.</p><hr /><p>You dip and spin, unleashing a wide whirlpool of water. Make an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Trip] each creature standing on the ground in a @Template[type:emanation|distance:10]. These attacks all count toward your multiple attack penalty, but the penalty doesn't increase until after you make all the attacks.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1M"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Reflective Ripple Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Rival Academies"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "monk",
+              "occult",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -88,6 +611,47 @@
       "name": "Whirling in the Summer Storm",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EqNhUXGFjk99QzCg",
+        "folder": "Ju3sxyqzG7uKpMSC",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whirling in the Summer Storm",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're in @UUID[Compendium.pf2e.feats-srd.Item.Twisting Petal Stance].</p><hr /><p>Your hands move in a hypnotic and distracting flurry that throws your foes off-balance before you cast them away with a violent pirouette. You Step. Then each enemy within your reach must attempt a Will save against the higher of your @Check[will|against:class]{class DC} or your @Check[will|against:deception]{Deception DC}; on a failure, they're @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to melee attacks from you and your allies until the end of your next turn. Then, [[/act shove]] up to three adjacent enemies; each Shove counts toward your multiple attack penalty, but you don't increase your penalty until after you've resolved all the Shove attempts.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Twisting Petal Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Fuse Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kceciNwoldkzAMbq",
+        "folder": "2aPrT57mQYilTnN6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fuse Stance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have combined two stances into a single stance all your own. When you take this feat, choose two stances you know and combine them into a single fused stance. Give your new fused stance a unique name. When you enter your fused stance, you gain all the effects of both stances, including the requirements and restrictions.</p>\n<p>If the stances both grant special attacks, you gain all those attacks. If a stance restricts you to one particular attack (such as Crane Stance), you must abide by that restriction. If the fused stances have incompatible restrictions, the GM determines which apply, or determines you can't fuse those stances at all.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "at least two stances"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +57,48 @@
       "name": "Master Qi Spells",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DAFF7zJphhDPcAws",
+        "folder": "2aPrT57mQYilTnN6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Master Qi Spells",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have achieved near-total mastery of your qi. You gain @UUID[Compendium.pf2e.spells-srd.Item.Medusa's Wrath], @UUID[Compendium.pf2e.spells-srd.Item.Touch of Death], or another 8th-rank qi spell you have access to.</p><hr /><p><strong>Special</strong> You can select this feat more than once, choosing a different spell each time.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Qi Spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +108,73 @@
       "name": "One-Millimeter Punch",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4caP26xpkQajkaDp",
+        "folder": "2aPrT57mQYilTnN6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "One-Millimeter Punch",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your punches have incredible force and control. When you damage a target using One-Inch Punch, you can focus your qi to send the foe flying. If you do, the target must attempt a @Check[fortitude|against:monk] save against your class DC.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is pushed back 5 feet.</p>\n<p><strong>Failure</strong> The target is pushed back 10 feet.</p>\n<p><strong>Critical Failure</strong> The target is pushed back 10 feet for each action you spent on One-Inch Punch.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "One-Inch Punch"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                {
+                  "or": [
+                    "unarmed",
+                    {
+                      "and": [
+                        "feat:monastic-weaponry",
+                        "item:trait:monk"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "or": [
+                    "one-inch-punch-3",
+                    "one-inch-punch-2"
+                  ]
+                }
+              ],
+              "selector": "melee-strike-damage",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -34,6 +184,43 @@
       "name": "Shattering Strike (Monk)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "E4xubBMtj81kX5Bk",
+        "folder": "2aPrT57mQYilTnN6",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shattering Strike (Monk)",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The force of your considered blow shatters objects and defenses alike. Make an unarmed Strike. It bypasses the target's resistances. If the target has Hardness, the Strike treats the Hardness as if it were half its value.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "monk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

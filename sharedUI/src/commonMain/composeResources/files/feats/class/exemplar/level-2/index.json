@@ -7,6 +7,94 @@
       "name": "Hurl at the Horizon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "VTmRh5FJTxo4btKO",
+        "folder": "r7bA28GLK3QkzPwd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hurl at the Horizon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a thrown or melee weapon ikon</p><hr /><p>Your weapon flies from your hand as if propelled under its own power. The imbued ikon gains the following ability.</p>\n<p><strong>Immanence</strong> Your weapon gains the thrown 15 feet trait, or increases its thrown distance by 10 feet if it already has the thrown trait.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}",
+                "divine-spark:{item|flags.system.rulesSelections.ikon}",
+                {
+                  "not": "item:trait:thrown"
+                }
+              ],
+              "property": "other-tags",
+              "value": "thrown-from-hurl-at-the-horizon"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:thrown-from-hurl-at-the-horizon"
+              ],
+              "property": "traits",
+              "value": "thrown-15"
+            },
+            {
+              "definition": [
+                "item:thrown",
+                "item:tag:physical-ikon:{item|flags.system.rulesSelections.ikon}",
+                {
+                  "not": "item:tag:thrown-from-hurl-at-the-horizon"
+                }
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "divine-spark:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "property": "range-increment",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +104,72 @@
       "name": "Leap the Falls",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "U13oe5dQFLvgNkUG",
+        "folder": "r7bA28GLK3QkzPwd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Leap the Falls",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a body ikon</p><hr /><p>Reinforcing your legs with divine energy, you can leap the battlefield as powerfully as a salmon clearing a waterfall. The imbued ikon gains the following ability.</p>\n<p><strong>Immanence</strong> You gain the @UUID[Compendium.pf2e.feats-srd.Item.Powerful Leap] and @UUID[Compendium.pf2e.feats-srd.Item.Quick Jump] skill feats, allowing you to jump further and faster, even if you do not meet the prerequisites for them.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "divine-spark:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.feats-srd.Item.Quick Jump"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "divine-spark:{item|flags.system.rulesSelections.ikon}"
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.feats-srd.Item.Powerful Leap"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "body-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +179,55 @@
       "name": "Red-Gold Mortality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zpeIbe0nQG52YU7a",
+        "folder": "r7bA28GLK3QkzPwd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Red-Gold Mortality",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Usage</strong> imbued into a weapon ikon</p><hr /><p>By channeling your divinity into a creature along with a strike, you can disrupt their ability to recover. The imbued ikon gains the following ability.</p>\n<p><strong>Immanence</strong> When you successfully damage an enemy with the ikon, a marking appears around the wound, painted in the red of mortal blood and the gold of divine ichor. When the target would regain Hit Points, such as from a healing effect or an ability like fast healing or regeneration, it must attempt a @Check[will|against:exemplar] save against your class DC to determine the effects, and then the marking fades. The marking otherwise fades after 1 minute.</p><hr /><p><strong>Success</strong> The creature regains the full number of Hit Points that would be healed.</p>\n<p><strong>Failure</strong> The creature regains only half the number of Hit Points as the contradictory energies swirl within it.</p>\n<p><strong>Critical Failure</strong> The creature doesn't regain any Hit Points.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.exemplar.ikons",
+              "flag": "ikon",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Exemplar.Ikon.Prompt"
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "weapon-ikon-feat"
+            ],
+            "rarity": "common",
+            "value": [
+              "exemplar",
+              "ikon",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

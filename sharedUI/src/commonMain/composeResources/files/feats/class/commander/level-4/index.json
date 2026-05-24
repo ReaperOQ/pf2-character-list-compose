@@ -7,6 +7,50 @@
       "name": "Banner Twirl",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9L0iFYeSCMvrzme4",
+        "folder": "QHbygiXRUCPWkCjh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Banner Twirl",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You spin your banner in an elaborate pattern that your enemies find inscrutable. You and any ally adjacent to you have @UUID[Compendium.pf2e.conditionitems.Item.Concealed]{Concealment} from ranged attacks until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "brandish",
+              "commander",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +60,53 @@
       "name": "Banner's Inspiration",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L2mQO4q8nPdUDVjO",
+        "folder": "QHbygiXRUCPWkCjh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Banner's Inspiration",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You wave your banner, inspiring allies to throw off the shackles of fear. Each ally currently benefiting from your commander's banner reduces their @UUID[Compendium.pf2e.conditionitems.Item.Frightened] condition by 1 and can immediately attempt a new saving throw against any one mental effect currently affecting them. Regardless of the result, any ally that attempts this save is temporarily immune to Banner's Inspiration for 10 minutes.</p><hr /><p><em>PFS Note:</em> This feat allows a new saving throw, so anything that happens on a failed save still occurs if a PC fails.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "brandish",
+              "commander",
+              "emotion",
+              "flourish",
+              "mental",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +116,70 @@
       "name": "Observational Analysis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bYyou5TjkCmzoizu",
+        "folder": "QHbygiXRUCPWkCjh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Observational Analysis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You are able to rapidly discern relevant details about your opponents in the heat of combat. When you use @UUID[Compendium.pf2e.feats-srd.Item.Combat Assessment] against a target that you or an ally has targeted with a Strike or spell since the start of your last turn, you get a +2 circumstance bonus to the @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge] check (+4 if the Strike from Combat Assessment is a critical hit.)</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Combat Assessment"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "domain": "skill-check",
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Commander.ObservationalAnalysis.RollOptionLabel",
+              "option": "observational-analysis-upgrade",
+              "toggleable": true
+            },
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "observational-analysis-upgrade"
+              ],
+              "selector": "skill-check",
+              "slug": "combat-assessment",
+              "value": 4
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +189,52 @@
       "name": "Shielded Recovery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xhqteilfGucKMGkU",
+        "folder": "QHbygiXRUCPWkCjh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shielded Recovery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can bandage wounds with the same hand you use to hold your shield. You can use the same hand you are using to wield a shield to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds] or use @UUID[Compendium.pf2e.feats-srd.Item.Battle Medicine], and you are considered to have a hand free for other uses of Medicine as long as the only thing you are holding or wielding in that hand is a shield. When you use Battle Medicine on an ally while wielding a shield, they gain a +1 circumstance bonus to AC and Reflex saves that lasts until the start of your next turn or until they are no longer adjacent to you, whichever comes first.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Shielded Recovery]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Officer's Medical Training"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +244,49 @@
       "name": "Unsteadying Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1rbB6bYDqjR4gVTH",
+        "folder": "QHbygiXRUCPWkCjh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unsteadying Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your attack makes your opponent more susceptible to follow-up maneuvers from your allies. Make a melee Strike against an enemy within your reach. If the Strike is successful, the enemy takes a –2 circumstance penalty to their Fortitude DC to resist being [[/act grapple]]{Grappled}, [[/act reposition]]{Repositioned}, or [[/act shove]]{Shoved} and a –2 circumstance penalty to their Reflex DC to resist being [[/act disarm]]{Disarmed}. Both penalties last until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Unsteadying Strike]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "commander",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

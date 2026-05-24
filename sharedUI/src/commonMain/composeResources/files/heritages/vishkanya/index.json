@@ -1,0 +1,293 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "elusive-vishkanya.json",
+      "id": "ywNXVLZtwrAStyh1",
+      "name": "Elusive Vishkanya",
+      "img": "icons/skills/movement/figure-running-gray.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ywNXVLZtwrAStyh1",
+        "folder": "Xu028pFM5DiCYojk",
+        "img": "icons/skills/movement/figure-running-gray.webp",
+        "name": "Elusive Vishkanya",
+        "system": {
+          "ancestry": {
+            "name": "Vishkanya",
+            "slug": "vishkanya",
+            "uuid": "Compendium.pf2e.ancestries.Item.u1VJEXsVlmh3Fyx0"
+          },
+          "description": {
+            "value": "<p>Your flexible body seems unnaturally fluid to some, though they can rarely put a finger on what seems strange about you. You can escape foes with ease. You gain a +1 circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Escape]. Additionally, you move twice as fast when Squeezing.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:escape"
+              ],
+              "selector": [
+                "athletics",
+                "acrobatics"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "keen-venom-vishkanya.json",
+      "id": "BhbwjTFw2V67XF35",
+      "name": "Keen-Venom Vishkanya",
+      "img": "icons/skills/toxins/poison-bottle-corked-fire-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "BhbwjTFw2V67XF35",
+        "folder": "Xu028pFM5DiCYojk",
+        "img": "icons/skills/toxins/poison-bottle-corked-fire-green.webp",
+        "name": "Keen-Venom Vishkanya",
+        "system": {
+          "ancestry": {
+            "name": "Vishkanya",
+            "slug": "vishkanya",
+            "uuid": "Compendium.pf2e.ancestries.Item.u1VJEXsVlmh3Fyx0"
+          },
+          "description": {
+            "value": "<p>You're practiced with using your venom in combat, allowing you to employ your venom at a moment's notice. Your @UUID[Compendium.pf2e.actionspf2e.Item.Envenom] action doesn't trigger reactions that normally trigger on a manipulate action. Additionally, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Venom Draw] action.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Venom Draw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "old-blood-vishkanya.json",
+      "id": "PbXqlzRdQbKLQx1R",
+      "name": "Old-Blood Vishkanya",
+      "img": "icons/skills/wounds/blood-cells-vessel-red-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "PbXqlzRdQbKLQx1R",
+        "folder": "Xu028pFM5DiCYojk",
+        "img": "icons/skills/wounds/blood-cells-vessel-red-orange.webp",
+        "name": "Old-Blood Vishkanya",
+        "system": {
+          "ancestry": {
+            "name": "Vishkanya",
+            "slug": "vishkanya",
+            "uuid": "Compendium.pf2e.ancestries.Item.u1VJEXsVlmh3Fyx0"
+          },
+          "description": {
+            "value": "<p>You have a direct matrilineal line to the original group of vishkanyas upon the Vudrani ships that came to reclaim Jalmeray. Since then, your family has adjusted well to a new life in the Inner Sea. You become trained in Society (or another skill of your choice if you're already trained in Society), and you gain your choice of the @UUID[Compendium.pf2e.feats-srd.Item.Courtly Graces] or @UUID[Compendium.pf2e.feats-srd.Item.Streetwise] feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Streetwise"
+                },
+                {
+                  "value": "Compendium.pf2e.feats-srd.Item.Courtly Graces"
+                }
+              ],
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.SkillFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "prismatic-vishkanya.json",
+      "id": "vrU3lmDO7FYzmuQc",
+      "name": "Prismatic Vishkanya",
+      "img": "icons/commodities/leather/scales-blue-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "vrU3lmDO7FYzmuQc",
+        "folder": "Xu028pFM5DiCYojk",
+        "img": "icons/commodities/leather/scales-blue-white.webp",
+        "name": "Prismatic Vishkanya",
+        "system": {
+          "ancestry": {
+            "name": "Vishkanya",
+            "slug": "vishkanya",
+            "uuid": "Compendium.pf2e.ancestries.Item.u1VJEXsVlmh3Fyx0"
+          },
+          "description": {
+            "value": "<p>Your scales shimmer and catch the light in an intoxicating display of colors. You become trained in Performance (or another skill of your choice if you're already trained in Performance) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Fascinating Performance] feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.performance.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Fascinating Performance"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "scalekeeper-vishkanya.json",
+      "id": "ohOJHeFenX97sBHf",
+      "name": "Scalekeeper Vishkanya",
+      "img": "icons/sundries/books/book-eye-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "ohOJHeFenX97sBHf",
+        "folder": "Xu028pFM5DiCYojk",
+        "img": "icons/sundries/books/book-eye-purple.webp",
+        "name": "Scalekeeper Vishkanya",
+        "system": {
+          "ancestry": {
+            "name": "Vishkanya",
+            "slug": "vishkanya",
+            "uuid": "Compendium.pf2e.ancestries.Item.u1VJEXsVlmh3Fyx0"
+          },
+          "description": {
+            "value": "<p>You are part of the family of vishkanyas in your community tasked with keeping records of the history and experiences of your people. Your scholarly skill affords you a quick mind. Once per day, you can attempt to Recall Knowledge as a free action.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "venom-resistant-vishkanya.json",
+      "id": "OBxrlZKg0IC5n238",
+      "name": "Venom-Resistant Vishkanya",
+      "img": "icons/commodities/leather/scales-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "OBxrlZKg0IC5n238",
+        "folder": "Xu028pFM5DiCYojk",
+        "img": "icons/commodities/leather/scales-green.webp",
+        "name": "Venom-Resistant Vishkanya",
+        "system": {
+          "ancestry": {
+            "name": "Vishkanya",
+            "slug": "vishkanya",
+            "uuid": "Compendium.pf2e.ancestries.Item.u1VJEXsVlmh3Fyx0"
+          },
+          "description": {
+            "value": "<p>Your body contains not just venom but numerous antivenoms. You gain poison resistance equal to half your level (minimum 1), and each of your successful saving throws against a poison affliction reduces its stage by 2, or by 1 for a virulent poison. Each critical success against an ongoing poison reduces its stage by 3, or by 2 for a virulent poison.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Impossible Lands"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "poison",
+              "value": "max(1,floor(@actor.level/2))"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "poison",
+                "virulent"
+              ],
+              "selector": "saving-throw",
+              "text": "PF2E.SpecificRule.Vishkanya.VenomResistantVishkanya.VirulentSaveNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "poison",
+                {
+                  "not": "virulent"
+                }
+              ],
+              "selector": "saving-throw",
+              "text": "PF2E.SpecificRule.Vishkanya.VenomResistantVishkanya.PoisonSaveNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

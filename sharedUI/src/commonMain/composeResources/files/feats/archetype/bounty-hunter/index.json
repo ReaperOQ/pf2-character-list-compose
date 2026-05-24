@@ -7,6 +7,93 @@
       "name": "Bounty Hunter Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tKaesXO5nlZ2sspx",
+        "folder": "JWly0XSuudv3BkAo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Bounty Hunter Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When focused on finding your quarry, you're relentless. You gain the Hunt Prey action. You can use Hunt Prey to designate a creature that you've observed, heard about, or learned about through some other means, such as a bounty board or wanted poster. In addition to the other benefits of Hunt Prey, you can designate a target as your prey while Gathering Information about them, in addition to designating them as your prey when Tracking them as normal. If you have already identified your target and selected them as your prey, you gain a +2 circumstance bonus to checks to Gather Information about them.</p>\n<p>If you already have Hunt Prey, you gain the Monster Hunter feat in addition to the other benefits of this feat.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Fea8ZereQhNolDoP]{Bounty Hunter}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "feature:hunt-prey"
+              ],
+              "uuid": "Compendium.pf2e.feats-srd.Item.Monster Hunter"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Hunt Prey"
+            },
+            {
+              "count": true,
+              "key": "RollOption",
+              "option": "grants-hunt-prey",
+              "priority": 99
+            },
+            {
+              "key": "FlatModifier",
+              "label": "PF2E.SpecificRule.BountyHunterDedication.GatherInfoHuntedPrey",
+              "predicate": [
+                "action:gather-information",
+                "target:mark:hunted-prey"
+              ],
+              "selector": "diplomacy",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.survival.rank",
+              "predicate": [
+                {
+                  "gt": [
+                    "grants-hunt-prey",
+                    1
+                  ]
+                }
+              ],
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +103,47 @@
       "name": "Opportunistic Grapple",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BVHDkBa4JMmmj5Sn",
+        "folder": "JWly0XSuudv3BkAo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Opportunistic Grapple",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your prey critically fails on an attack roll against you with a melee Strike.</p>\n<p><strong>Requirements</strong> Your prey is within your reach, you have one free hand, and your target is no more than one size larger than you.</p><hr /><p>You use an opening to capture your prey. You attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] your prey.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bounty Hunter Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +153,48 @@
       "name": "Posse",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N0YcU8mIJnQ4C2N6",
+        "folder": "JWly0XSuudv3BkAo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Posse",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have designated prey with Hunt Prey.</p><hr /><p>By spending 1 minute giving guidance to help hunt down your prey, you instruct up to five willing creatures to assist you. They gain a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] your prey, to @UUID[Compendium.pf2e.actionspf2e.Item.Track] your prey, and to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] about your prey. You and the creatures assisting you gain a +1 circumstance bonus to initiative rolls when entering combat with your prey.</p>\n<p>These benefits lasts until you designate a new prey or your prey dies, whichever comes first. An individual creature assisting you loses this benefit if they're out of your presence for too long to benefit from your instructions. This is usually 1 hour, but is determined by the GM.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bounty Hunter Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +204,80 @@
       "name": "Tools of the Trade",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mRHkGMLecd5aaj2R",
+        "folder": "JWly0XSuudv3BkAo",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tools of the Trade",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're well-versed in weapons that allow you to bring bounties back in one piece, or at least alive. You have familiarity with the @UUID[Compendium.pf2e.equipment-srd.Item.Bola], @UUID[Compendium.pf2e.equipment-srd.Item.Sap], and @UUID[Compendium.pf2e.equipment-srd.Item.Whip]; for the purposes of proficiency, you treat these weapons as simple weapons. You deal an additional 1d4 precision damage with these weapons when using them to make nonlethal Strikes against your prey while they're off-guard to you.</p>\n<p>In addition, you take no penalty when making a nonlethal attack with a weapon without the nonlethal trait.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Bounty Hunter Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:base:bola",
+                    "item:base:sap",
+                    "item:base:whip"
+                  ]
+                }
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.BountyHunterWeapons",
+              "sameAs": "simple",
+              "slug": "tools-of-the-trade"
+            },
+            {
+              "category": "precision",
+              "diceNumber": "1",
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "predicate": [
+                "target:condition:off-guard",
+                {
+                  "or": [
+                    "item:base:bola",
+                    "item:base:sap",
+                    "item:base:whip"
+                  ]
+                }
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

@@ -7,6 +7,61 @@
       "name": "Communal Healing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yExxOkHN1PN37hUa",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Communal Healing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're an exceptional conduit for vitality and, as you channel it through you, you can divert some to heal yourself or another creature. When you cast the @UUID[Compendium.pf2e.spells-srd.Item.Heal] spell to heal a single creature, choose another willing living creature within range of your <em>heal</em> to regain Hit Points equal to the <em>heal</em> spell's rank.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "item:slug:heal",
+                {
+                  "lt": [
+                    "item:cast:actions",
+                    3
+                  ]
+                }
+              ],
+              "selector": "spell-healing",
+              "text": "PF2E.SpecificRule.Cleric.CommunalHealing.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "healing",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +71,44 @@
       "name": "Emblazon Armament",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7RFjTTzznsdPcaYB",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Emblazon Armament",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Carefully etching a sacred image into a physical object, you steel yourself for battle. You can spend 10 minutes emblazoning a symbol of your deity upon a weapon or shield. The symbol doesn't fade until 1 year has passed, but if you Emblazon an Armament, any symbol you previously emblazoned, and any symbol already emblazoned on that item instantly disappears.</p>\n<p>The emblazoned item is a religious symbol of your deity in addition to its normal purpose, and it gains another benefit determined by the type of item. The benefit applies only to followers of the deity the symbol represents, but others can use the item normally.</p>\n<ul>\n<li><strong>Shield</strong> The shield gains a +1 status bonus to its Hardness. (This causes it to reduce more damage with the Shield Block reaction.)</li>\n<li><strong>Weapon</strong> The wielder gains a +1 status bonus to damage rolls with the weapon.</li>\n</ul>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Emblazon Armament]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "exploration"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +118,56 @@
       "name": "Panic the Dead",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PGyzFBwuTgypU8cD",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Panic the Dead",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Vitality strikes terror in the undead. When you use a @UUID[Compendium.pf2e.spells-srd.Item.Heal] spell to damage undead, any undead that fails its saving throw is also @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}. If it critically failed, the creature also gains the @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] condition until the start of your next turn. Mindless undead are not immune to this effect due to being mindless.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "item:slug:heal"
+              ],
+              "selector": "spell-damage",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "emotion",
+              "fear",
+              "mental"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +177,58 @@
       "name": "Rapid Response",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OcBaEnGdDm6CuSnr",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Response",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An ally is reduced to 0 Hit Points.</p>\n<hr />\n<p>You work quickly and efficiently in times of danger to deliver needed assistance. You Stride towards the triggering ally. You gain a +10-foot circumstance bonus to your Speed during this movement.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "rapid-response",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "rapid-response"
+              ],
+              "selector": "speed",
+              "type": "circumstance",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -43,6 +238,55 @@
       "name": "Sap Life",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TiNlehXIDEnIl95M",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sap Life",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You draw the life force out of your enemies. When you cast a @UUID[Compendium.pf2e.spells-srd.Item.Harm] spell and damage at least one living creature, you regain Hit Points equal to the spell rank of your <em>harm</em> spell. If you aren't a living creature, you gain no benefit from this feat.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "item:slug:harm",
+                "self:mode:living"
+              ],
+              "selector": "spell-damage",
+              "text": "PF2E.SpecificRule.Cleric.SapLife.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "healing"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -52,6 +296,59 @@
       "name": "Versatile Font",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "yZ7EcM9CLddZz8Hl",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Versatile Font",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As you explore your deity's aspects, you move beyond restrictions on healing or harming. You can prepare either @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] in the spell slots gained from the harmful font or healing font.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "harmful font or healing font"
+              },
+              {
+                "value": "deity that allows clerics to have both fonts"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "divine-font:heal"
+            },
+            {
+              "key": "RollOption",
+              "option": "divine-font:harm"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -61,6 +358,55 @@
       "name": "Warpriest's Armor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0XdK3BJBA66jBcbQ",
+        "folder": "cMF2nL3TEFBskXGw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Warpriest's Armor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your training has helped you adapt to ever-heavier armor. You are trained in heavy armor. Whenever you gain a class feature that grants you expert or greater proficiency in medium armor, you also gain that proficiency in heavy armor. You treat armor you wear of 2 Bulk or higher as though it were 1 Bulk lighter (to a minimum of 1 Bulk).</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "warpriest doctrine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.heavy.rank",
+              "priority": 41,
+              "value": "@actor.system.proficiencies.defenses.medium.rank"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

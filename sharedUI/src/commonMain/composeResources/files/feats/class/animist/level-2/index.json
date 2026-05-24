@@ -7,6 +7,43 @@
       "name": "Embodiment of the Balance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8Y9DCalsSnXHDCeV",
+        "folder": "qmEprfsbYiWhY3JE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Embodiment of the Balance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your place in the balance between the forces of life and entropy expands the spells you can pull from the spirit realms. You add @UUID[Compendium.pf2e.spells-srd.Item.Heal] and @UUID[Compendium.pf2e.spells-srd.Item.Harm] to your apparition spell repertoire, allowing you to cast them with your apparition spellcasting.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +53,80 @@
       "name": "Grasping Spirits Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qcILhNRHqIbW3xRN",
+        "folder": "qmEprfsbYiWhY3JE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Grasping Spirits Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>Gaining substance from your magic, your apparitions increase the range of your spells, which then pull your enemy closer. If the next action you use is to Cast a Spell that has a range and targets one creature, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet. In addition to the normal effects of the spell, your apparitions briefly take on semi-physical forms and attempt to drag the target toward you. The target must attempt a Fortitude saving throw against your spell DC; on a failure, it is pulled up to 30 feet directly toward you.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "grasping-spirits-spell"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:grasping-spirits-spell"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "divider": true,
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +136,127 @@
       "name": "Spiritual Expansion Spell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZH4gpcvVTAD157fn",
+        "folder": "qmEprfsbYiWhY3JE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spiritual Expansion Spell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your apparitions manifest to scatter the energy of your spell. If the next action you use is to Cast a Spell that has an area of a burst, cone, or line and does not have a duration, increase the area of that spell. Add 5 feet to the radius of a burst that normally has a radius of at least 10 feet (a burst with a smaller radius is not affected). Add 5 feet to the length of a cone or line that is normally 15 feet long or smaller, and add 10 feet to the length of a larger cone or line.</p>\n<p>You can also use this feat to increase the radius of an emanation spell with a duration by 5 feet by dedicating your primary apparition to maintaining the spellshape; dedicating the apparition to the spell prevents you from using the apparition's vessel spell, apparition skills, or @UUID[Compendium.pf2e.spells-srd.Item.Avatar] form for the duration of the modified spell.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "spiritual-expansion-spell"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:duration:0",
+                {
+                  "or": [
+                    {
+                      "and": [
+                        "item:area:type:burst",
+                        {
+                          "gte": [
+                            "item:area:size",
+                            10
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "and": [
+                        {
+                          "or": [
+                            "item:area:type:cone",
+                            "item:area:type:line"
+                          ]
+                        },
+                        {
+                          "lte": [
+                            "item:area:size",
+                            15
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "spellshape:spiritual-expansion-spell"
+              ],
+              "property": "area-size",
+              "value": 5
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:duration:0",
+                {
+                  "or": [
+                    "item:area:type:line",
+                    "item:area:type:cone"
+                  ]
+                },
+                {
+                  "gt": [
+                    "item:area:size",
+                    15
+                  ]
+                },
+                "spellshape:spiritual-expansion-spell"
+              ],
+              "priority": 119,
+              "property": "area-size",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "animist",
+              "apparition",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     }

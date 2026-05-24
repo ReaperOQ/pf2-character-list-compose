@@ -7,6 +7,58 @@
       "name": "Nimble Dodge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dNH8OHEvx3vI9NBQ",
+        "folder": "YpoIOlRXXyRIOffL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nimble Dodge",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature targets you with an attack and you can see the attacker.</p>\n<p><strong>Requirements</strong> You are not encumbered.</p>\n<hr />\n<p>You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "nimble-dodge",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "nimble-dodge"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +68,61 @@
       "name": "Overextending Feint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9CaaU5szcf3mtJXD",
+        "folder": "YpoIOlRXXyRIOffL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Overextending Feint",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You goad a foe into overextending. On a successful @UUID[Compendium.pf2e.actionspf2e.Item.Feint], you can use the following success and critical success effects instead of any other effects that would occur when you Feint.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes a –2 circumstance penalty to all attack rolls against you before the end of its next turn.</p>\n<p><strong>Success</strong> The target takes a –2 circumstance penalty to its next attack roll against you before the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Deception"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess",
+                "success"
+              ],
+              "predicate": [
+                "action:feint"
+              ],
+              "selector": "skill-check",
+              "text": "PF2E.SpecificRule.Rogue.OverextendingFeint.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +132,47 @@
       "name": "Plant Evidence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eww9tuiXPnZFZ3DU",
+        "folder": "YpoIOlRXXyRIOffL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plant Evidence",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can put a single item you're holding of light or negligible Bulk onto a person without them noticing by succeeding at a @Check[thievery|defense:perception] check against their Perception DC. If you have the ruffian racket, you can do this as a free action when you successfully @UUID[Compendium.pf2e.actionspf2e.Item.Shove] a target.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Pickpocket"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +182,73 @@
       "name": "Tumble Behind (Rogue)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YKqMuuC8j35NFh92",
+        "folder": "YpoIOlRXXyRIOffL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tumble Behind (Rogue)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You tumble under and behind your foe, your rapid movement letting you catch them off guard. When you successfully [[/act tumble-through]], the foe whose space you passed through is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the next attack you make before the end of your turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "tumble-behind",
+              "toggleable": true
+            },
+            {
+              "key": "EphemeralEffect",
+              "predicate": [
+                "tumble-behind"
+              ],
+              "selectors": [
+                "strike-attack-roll",
+                "strike-damage"
+              ],
+              "uuid": "Compendium.pf2e.conditionitems.Item.Off-Guard"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "action:tumble-through"
+              ],
+              "selector": "skill-check",
+              "text": "{item|system.description.value}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +258,43 @@
       "name": "Twin Feint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9XALeVNcmlIxf3tJ",
+        "folder": "YpoIOlRXXyRIOffL",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twin Feint",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding two melee weapons, each in a different hand.</p>\n<hr />\n<p>You use an attack with one weapon to distract your foe from a second attack coming at a different angle. Make one Strike with each of your two melee weapons, both against the same target. The target is automatically @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against the second attack. Apply your multiple attack penalty to the Strikes normally.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

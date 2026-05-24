@@ -7,6 +7,94 @@
       "name": "Blessed Sentinel",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "K2oSXGmqTUrcQYar",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blessed Sentinel",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You infuse a weapon with the blessing of Ketephys and attack. Make a Strike. This Strike gains the holy trait and deals an additional 1d4 spirit damage, or 2d4 spirit damage against fiends. This counts as two attacks for your multiple attack penalty.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wylderheart Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "blessed-sentinel",
+              "toggleable": true
+            },
+            {
+              "damageType": "spirit",
+              "diceNumber": 1,
+              "dieSize": "d4",
+              "key": "DamageDice",
+              "predicate": [
+                "blessed-sentinel"
+              ],
+              "selector": "weapon-damage",
+              "slug": "blessed-sentinel"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "add",
+              "predicate": [
+                "blessed-sentinel",
+                "target:trait:fiend"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "strike-damage"
+              ],
+              "slug": "blessed-sentinel",
+              "value": 1
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "blessed-sentinel"
+              ],
+              "property": "traits",
+              "value": "holy"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +104,52 @@
       "name": "Demon-Hunting Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cTTOH6yJibgvRlLX",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Demon-Hunting Companion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a young animal companion that has been specially trained to help you fight demons. You can choose any common animal companion, which gains scent as an imprecise sense with a range of 30 feet that can be used only to smell fiends. If the animal companion already has scent, it gains a +2 circumstance bonus to Perception when using scent against fiends.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wylderheart Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +159,54 @@
       "name": "Fiend Slayer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "DoaqSxIFx5CSgBBE",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fiend Slayer",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your last action was a successful Strike against a fiend that dealt damage.</p><hr /><p>Your attack tears through a fiend, possibly sending it back to where it came from. The fiend you just struck takes @Damage[80[void]] damage with a @Check[fortitude|against:class-spell|basic] save against your class DC or spell DC, whichever is higher. On a critical failure, the target is also @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}. Regardless of the results of the saving throw, the target is then temporarily immune to Fiend Slayer for 24 hours.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wylderheart Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "death",
+              "void"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -34,6 +216,53 @@
       "name": "Primal Guardian",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TopHlb1G3ZRDIWe6",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Primal Guardian",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You grow in power as a guardian of nature. You learn either the @UUID[Compendium.pf2e.spells-srd.Item.Elemental Sheath] or @UUID[Compendium.pf2e.spells-srd.Item.Vicious Howl] focus spell.</p><hr /><p><strong>Special</strong> You can take this feat a second time, gaining the focus spell you didn't gain the first time.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wyldsinger"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +272,74 @@
       "name": "Sacred Weapon",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5Ar7r5HA9k73whaB",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sacred Weapon",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're a living weapon honed to destroy fiends. Whenever you critically Strike a fiend, your attack deals an extra weapon damage die, and the fiend is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 2} until the beginning of your next turn.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wylderheart Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "target:trait:fiend"
+              ],
+              "selector": "strike-attack-roll",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            },
+            {
+              "critical": true,
+              "diceNumber": "1",
+              "key": "DamageDice",
+              "predicate": [
+                "target:trait:fiend"
+              ],
+              "selector": "strike-damage"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +349,53 @@
       "name": "Wild Dance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fHux2F9oZGzOj3GL",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wild Dance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The combination of your passion for both life and the battle against evil makes you graceful and unpredictable. Stride up to your Speed. A creature that attempts a reaction triggered by this movement must first attempt a @Check[will|against:class-spell] save against your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Fascinated] by you until the end of your next turn.</p>\n<p><strong>Failure</strong> The creature is fascinated by you until the end of your next turn, but your movements might be too hard to follow; if the reaction requires an attack roll, you gain a +2 circumstance bonus to AC against that attack roll.</p>\n<p><strong>Critical Failure</strong> The creature is fascinated by you until the end of your next turn, and it loses its reaction.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wylderheart Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "flourish"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -61,6 +405,80 @@
       "name": "Wylderheart Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pwiUuuUtifbAkaHl",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wylderheart Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> You're from Kyonin.</p><hr /><p>You're primed to face off against threats from the Outer Rifts. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat for Demon Lore. If you were already trained in Demon Lore, you also become trained in a Lore skill of your choice. You gain a +1 circumstance bonus to initiative rolls in encounters against fiends, and if you tie with a fiend's initiative roll, you go first.</p>\n<p>Certain wylderheart feats give you focus spells. When you gain your first wylderheart focus spell, you become trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for the wylderheart archetype spells is Wisdom, and they're primal spells. You can Refocus by celebrating life or spending time in nature.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.7LY03W9SJHfIAhWr]{Wylderheart}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "member of the Wylderhearts"
+              },
+              {
+                "value": "you're from Kyonin"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "against-fiends"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.initiative.tiebreakPriority",
+              "predicate": [
+                "against-fiends"
+              ],
+              "priority": 51,
+              "value": 0
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -70,6 +488,53 @@
       "name": "Wyldsinger",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Fp2ITpUZMXrSg3YN",
+        "folder": "OB0hHuUjROemcE5L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wyldsinger",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Passion and song are your weapons of choice. You learn either the @UUID[Compendium.pf2e.spells-srd.Item.Menacing Lament] or @UUID[Compendium.pf2e.spells-srd.Item.Valiant Anthem] focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point.</p><hr /><p><strong>Special</strong> You can take this feat a second time, gaining the focus spell you didn't gain the first time.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Wylderheart Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

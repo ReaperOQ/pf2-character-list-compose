@@ -7,6 +7,83 @@
       "name": "Courageous Onslaught",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8C9qo5LL9J0UTNGc",
+        "folder": "lO3VcNHUi1FDclMq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Courageous Onslaught",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You use your performance to orchestrate an onslaught against your enemies. If your next action is to cast the @UUID[Compendium.pf2e.spells-srd.Item.Courageous Anthem] composition cantrip, one ally of your choice who gains a status bonus from the spell can immediately use their reaction to Stride and then make a melee Strike.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Courageous Advance"
+              },
+              {
+                "value": "Courageous Assault"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:courageous-anthem",
+                "spellshape:courageous-onslaught"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.CourageousOnslaught"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "courageous-onslaught"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "bard",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +93,48 @@
       "name": "Resounding Finale",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lhSqWHXK1JShUabF",
+        "folder": "lO3VcNHUi1FDclMq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Resounding Finale",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You or an ally benefiting from your composition spell would take sonic damage.</p>\n<hr />\n<p>You bring your performance to a sudden, dramatic finish, drowning out other sounds. Your composition spell ends immediately, and all allies that had been benefiting from the spell's effects gain sonic resistance against the triggering damage equal to twice the composition spell's rank.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Resounding Finale]</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "maestro muse"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "concentrate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +144,50 @@
       "name": "Studious Capacity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QGpcyvIezLMgmTia",
+        "folder": "lO3VcNHUi1FDclMq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Studious Capacity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your continued study of occult magic has increased your magical capacity, allowing you to cast spells even when it seems impossible. You can cast one spell each day even after you've run out of spell slots of the appropriate spell rank, but you can't use this ability to cast a spell of your highest spell rank.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "enigma muse"
+              },
+              {
+                "value": "legendary in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

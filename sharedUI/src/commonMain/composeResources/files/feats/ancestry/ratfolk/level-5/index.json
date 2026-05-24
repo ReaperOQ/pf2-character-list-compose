@@ -7,6 +7,62 @@
       "name": "Cornered Fury",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ulrGnvF0KAgEaifX",
+        "folder": "GIgYFdpFEabcVZwR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cornered Fury",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>If a foe of a larger size than you critically hits and damages you, that foe is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you for 1 round.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "outcome": [
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "origin:enemy",
+                {
+                  "gt": [
+                    "origin:size",
+                    "self:size"
+                  ]
+                }
+              ],
+              "selector": "damage-received",
+              "text": "{item|description}",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ratfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +72,73 @@
       "name": "Lab Rat",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QE8asCPqyrdenll0",
+        "folder": "GIgYFdpFEabcVZwR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lab Rat",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've spent more than your share of time in an alchemy lab. You have been exposed to a wide variety of alchemical poisons and harmful substances, leaving you with an increased tolerance of their effects. You have a +1 circumstance bonus to saves against poisons and diseases. If you roll a success on your saving throw against a poison or disease, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ratfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +148,52 @@
       "name": "Quick Stow (Ratfolk)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LAArv2uv6TOkTzQO",
+        "folder": "GIgYFdpFEabcVZwR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Quick Stow (Ratfolk)",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p><hr /><p>You Interact to store one item you're holding in your cheek pouches (provided it fits).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round",
+            "value": 1
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cheek Pouches"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ratfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +203,66 @@
       "name": "Rat Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8MMYFIudSDkdo8cx",
+        "folder": "GIgYFdpFEabcVZwR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rat Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>There always seems to be a little rat around to carry messages for you. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Animal Messenger] once per day as a primal innate spell. When you do, the animal that responds is always a rat. If there are no rats within range, the spell is lost.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:animal-messenger",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:animal-messenger",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:ratfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ratfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +272,44 @@
       "name": "Ratfolk Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "969mPoiYANzV2261",
+        "folder": "GIgYFdpFEabcVZwR",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ratfolk Roll",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You roll up into a ball and move up to four times your Speed in a straight line down an incline. If you reach the bottom of the incline or hit an obstacle during this first turn of movement, you stop rolling safely. Otherwise, you automatically keep rolling at this Speed during subsequent turns until you hit the bottom of the incline or an obstacle ends this movement (which can happen in the middle of your turn). You're @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 2} each turn after the first that you keep rolling, and if you hit an obstacle on a turn after the first, you and the obstacle both take @Damage[4d6[bludgeoning]] damage and you stop rolling.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "move",
+              "ratfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

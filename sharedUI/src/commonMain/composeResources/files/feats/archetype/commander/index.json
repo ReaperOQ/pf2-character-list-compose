@@ -7,6 +7,53 @@
       "name": "Advanced Field Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mFk9QMPrubJ1xfIU",
+        "folder": "3es60s1TTpSIWqPI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Advanced Field Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a commander feat. For the purpose of meeting its prerequisites, your commander level is equal to half your character level.</p><hr /><p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another commander feat.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Basic Field Training"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +63,76 @@
       "name": "Basic Field Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "pYG2LqJ644pzwtIG",
+        "folder": "3es60s1TTpSIWqPI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Basic Field Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain a 1st- or 2nd-level commander feat.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Commander Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:category:class",
+                  "item:trait:commander",
+                  {
+                    "lte": [
+                      "item:level",
+                      2
+                    ]
+                  }
+                ],
+                "itemType": "feat"
+              },
+              "flag": "feat",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.LevelOneOrTwoClassFeat"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.feat}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +142,80 @@
       "name": "Commander Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "e9iVLfL7KIfUG3NV",
+        "folder": "3es60s1TTpSIWqPI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Commander Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the tactics class feature like a commander and gain your own folio; this folio contains two common mobility or offensive tactics of your choosing. You can prepare one of these tactics whenever a commander would be able to prepare tactics. You gain a commander's banner that grants you a 30-foot aura for the purposes of using your tactics, but the banner does not grant the commander's banner bonus to Will saves and DCs against fear effects. You become trained in commander class DC and Warfare Lore; if you were already trained in Warfare Lore, you become trained in another Lore skill of your choice.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.FYeYr2IQ7voFSb8y]{Commander}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Intelligence +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Commander.Banner.Label",
+              "option": "commanders-banner",
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "Aura",
+              "predicate": [
+                "commanders-banner"
+              ],
+              "radius": 30,
+              "slug": "commanders-banner",
+              "traits": []
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.classfeatures.Item.Tactics"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "commander": {
+                "attribute": "int",
+                "rank": 1
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication",
+              "multiclass"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +225,57 @@
       "name": "Officer's Expertise",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1rsWyxs5xQV2FvEV",
+        "folder": "3es60s1TTpSIWqPI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Officer's Expertise",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your proficiency in commander class DC increases to expert, and you become an expert in Warfare Lore. If you're already an expert in Warfare Lore, you instead become an expert in another Lore skill you're trained in or trained in another Lore skill of your choice.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Commander Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "commander": {
+                "attribute": null,
+                "rank": 2
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +285,57 @@
       "name": "Officer's Mastery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mEY7ezGTjoVOH5Q4",
+        "folder": "3es60s1TTpSIWqPI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Officer's Mastery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your proficiency in commander class DC increases to master, and you become a master in Warfare Lore. If you're already a master in Warfare Lore, you instead become a master in another Lore skill you're an expert in, an expert in another Lore skill you're trained in, or trained in another Lore skill of your choice.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Commander Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {
+              "commander": {
+                "attribute": null,
+                "rank": 3
+              }
+            },
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -52,6 +345,115 @@
       "name": "Tactical Excellence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "a7sCZ2ehfsLQutvO",
+        "folder": "3es60s1TTpSIWqPI",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tactical Excellence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You add two new mobility or offensive tactics to your folio and increase your maximum number of tactics prepared by 1.</p><hr /><p><strong>Special</strong> You can select this feat a second time at 8th level; when you do, you may choose your new tactics from either mobility or offensive tactics you do not already know or from any of the expert tactics you have access to.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "maxTakable": 2,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Commander Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "count": true,
+              "key": "RollOption",
+              "option": "tactical-excellence"
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:trait:tactic",
+                  {
+                    "or": [
+                      "item:tag:commander-mobility-tactic",
+                      "item:tag:commander-offensive-tactic",
+                      {
+                        "and": [
+                          "item:tag:commander-expert-tactic",
+                          "tactical-excellence:2"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "itemType": "action"
+              },
+              "flag": "firstTactic",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Commander.Tactics.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.firstTactic}"
+            },
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  "item:trait:tactic",
+                  {
+                    "or": [
+                      "item:tag:commander-mobility-tactic",
+                      "item:tag:commander-offensive-tactic",
+                      {
+                        "and": [
+                          "item:tag:commander-expert-tactic",
+                          "tactical-excellence:2"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "itemType": "action"
+              },
+              "flag": "secondTactic",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Commander.Tactics.Prompt"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.secondTactic}"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

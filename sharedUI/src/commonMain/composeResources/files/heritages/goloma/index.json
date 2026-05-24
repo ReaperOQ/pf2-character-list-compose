@@ -1,0 +1,268 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "farsight-goloma.json",
+      "id": "6JKdAZGa8odFzleS",
+      "name": "Farsight Goloma",
+      "img": "icons/creatures/eyes/icy-cluster-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "6JKdAZGa8odFzleS",
+        "folder": "l6ykje6KzVwUOEcR",
+        "img": "icons/creatures/eyes/icy-cluster-blue.webp",
+        "name": "Farsight Goloma",
+        "system": {
+          "ancestry": {
+            "name": "Goloma",
+            "slug": "goloma",
+            "uuid": "Compendium.pf2e.ancestries.Item.c4secsSNG2AO7I5i"
+          },
+          "description": {
+            "value": "<p>Your eyes have adapted to see more in less than favorable conditions. You gain low-light vision.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "selector": "low-light-vision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "frightful-goloma.json",
+      "id": "KJ2dSDXP9d5hJHzd",
+      "name": "Frightful Goloma",
+      "img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "KJ2dSDXP9d5hJHzd",
+        "folder": "l6ykje6KzVwUOEcR",
+        "img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+        "name": "Frightful Goloma",
+        "system": {
+          "ancestry": {
+            "name": "Goloma",
+            "slug": "goloma",
+            "uuid": "Compendium.pf2e.ancestries.Item.c4secsSNG2AO7I5i"
+          },
+          "description": {
+            "value": "<p>Your face has a particularly off-putting appearance. You are trained in Intimidation (or another skill of your choice if you were already trained in Intimidation) and gain the @UUID[Compendium.pf2e.feats-srd.Item.Intimidating Glare] skill feat as a bonus feat.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.intimidation.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Intimidating Glare"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "insightful-goloma.json",
+      "id": "cnbwtbDmlD0KoLqY",
+      "name": "Insightful Goloma",
+      "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "cnbwtbDmlD0KoLqY",
+        "folder": "l6ykje6KzVwUOEcR",
+        "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+        "name": "Insightful Goloma",
+        "system": {
+          "ancestry": {
+            "name": "Goloma",
+            "slug": "goloma",
+            "uuid": "Compendium.pf2e.ancestries.Item.c4secsSNG2AO7I5i"
+          },
+          "description": {
+            "value": "<p>You've learned to watch for telltale signs of dangerous sentiments to help you avoid trouble. You gain a +1 circumstance bonus to your Perception DC against attempts to Lie to you and your Perception checks to Sense Motive.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-motive"
+              ],
+              "selector": "perception",
+              "slug": "insightful-goloma-sense-motive",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:lie"
+              ],
+              "selector": "perception-dc",
+              "slug": "insightful-goloma-lie",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "vicious-goloma.json",
+      "id": "x5S4MNQ0aqUmgHcC",
+      "name": "Vicious Goloma",
+      "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "x5S4MNQ0aqUmgHcC",
+        "folder": "l6ykje6KzVwUOEcR",
+        "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+        "name": "Vicious Goloma",
+        "system": {
+          "ancestry": {
+            "name": "Goloma",
+            "slug": "goloma",
+            "uuid": "Compendium.pf2e.ancestries.Item.c4secsSNG2AO7I5i"
+          },
+          "description": {
+            "value": "<p>The chitin on your hands forms powerful claws that allow you to defend yourself. You gain a claw unarmed attack that deals 1d6 slashing damage. Your claws are in the brawling group and have the agile, finesse, and unarmed traits.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/features/ancestry/claws.webp",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.claw",
+              "range": null,
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:id:{item|id}"
+              ],
+              "priority": 119,
+              "property": "other-tags",
+              "value": "vicious-goloma-claw"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "vigilant-goloma.json",
+      "id": "sGzhnQpgWErX1bmx",
+      "name": "Vigilant Goloma",
+      "img": "icons/creatures/magical/humanoid-horned-rider.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "sGzhnQpgWErX1bmx",
+        "folder": "l6ykje6KzVwUOEcR",
+        "img": "icons/creatures/magical/humanoid-horned-rider.webp",
+        "name": "Vigilant Goloma",
+        "system": {
+          "ancestry": {
+            "name": "Goloma",
+            "slug": "goloma",
+            "uuid": "Compendium.pf2e.ancestries.Item.c4secsSNG2AO7I5i"
+          },
+          "description": {
+            "value": "<p>You've learned to be aware of not just obvious physical dangers, but also noticeable magical threats. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic] cantrip as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. In addition, your awareness allows you to notice magical traps easier than others. Your proficiency rank in Perception is considered one step better when attempting to detect magical traps. (Trained is considered expert, expert is considered master, and master is considered legendary).</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:detect-magic",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:detect-magic",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:goloma"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

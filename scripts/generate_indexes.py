@@ -37,7 +37,8 @@ def generate_indexes(base_dir):
                             "id": data.get("_id"),
                             "name": data.get("name"),
                             "img": data.get("img"),
-                            "type": data.get("type", None)
+                            "type": data.get("type", None),
+                            "data": data
                         }
 
                         system = data.get("system", {})

@@ -1,0 +1,420 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ancient-scale-azarketi.json",
+      "id": "zPhArF36ZVgLeVUU",
+      "name": "Ancient Scale Azarketi",
+      "img": "icons/commodities/materials/material-feathers-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "zPhArF36ZVgLeVUU",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/commodities/materials/material-feathers-blue.webp",
+        "name": "Ancient Scale Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>Your lineage stems from azarketis who remain dedicated to their deep-sea roots. Divorced from land society, you're a foreigner to any world above a thousand fathoms deep. You gain darkvision.</p>\n<p>Your body is dotted with phosphorescent spots that emit a guiding light and help you communicate. The spots - located primarily on your face, arms, and hands - illuminate a 10-foot radius around you with dim light. You can activate, deactivate, or change the arrangement of lights as an action, which has the concentration trait.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Absalom, City of Lost Omens"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "selector": "darkvision"
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Azarketi.PhosphorescentSpots",
+              "option": "phosphorescent-spots",
+              "toggleable": true,
+              "value": true
+            },
+            {
+              "key": "TokenLight",
+              "predicate": [
+                "phosphorescent-spots"
+              ],
+              "value": {
+                "alpha": 0.3,
+                "animation": {
+                  "intensity": 4,
+                  "speed": 1,
+                  "type": "torch"
+                },
+                "attenuation": 0.35,
+                "bright": 0,
+                "color": "#b5dedd",
+                "dim": 10,
+                "luminosity": 0.4,
+                "shadows": 0.2
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "benthic-azarketi.json",
+      "id": "HFHSh2RWuxa4GhhQ",
+      "name": "Benthic Azarketi",
+      "img": "icons/magic/water/ice-crystal-white.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "HFHSh2RWuxa4GhhQ",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/magic/water/ice-crystal-white.webp",
+        "name": "Benthic Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>Your heritage traces to azarketis living deep beneath the sea, and you can handle the chilling depths more easily than most. You gain resistance to cold equal to half your level, and you don't treat environmental cold as one degree more severe when you are wet. You adapt to pressure changes from being deep underwater automatically without ill effect.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Absalom, City of Lost Omens"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "floor(@actor.level/2)"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "inured-azarketi.json",
+      "id": "7ZDCShtRg5QZggrU",
+      "name": "Inured Azarketi",
+      "img": "icons/creatures/fish/fish-man-eye-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "7ZDCShtRg5QZggrU",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/creatures/fish/fish-man-eye-green.webp",
+        "name": "Inured Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>Your ancestors had to survive in polluted water that made every breath noxious. You gain poison resistance equal to half your level (minimum 1). Furthermore, you can survive outside of water for 72 hours before you begin to suffocate.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "poison",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "mistbreath-azarketi.json",
+      "id": "7wdeVadvchdM0aPK",
+      "name": "Mistbreath Azarketi",
+      "img": "icons/magic/air/fog-gas-smoke-dense-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "7wdeVadvchdM0aPK",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/magic/air/fog-gas-smoke-dense-blue.webp",
+        "name": "Mistbreath Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>You descend from azarketis who migrated to land environments that could support their need for water. Over time, your people adapted to life on land culturally and physically, even resulting in azarketis born with human hair like their Azlanti ancestors. You no longer need to be immersed in water every 24 hours to maintain your skin and can instead mist or wipe your skin with water to live comfortably. Your land Speed is 25 feet, but your swim Speed is only 15 feet.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Absalom, City of Lost Omens"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "selector": "swim-speed",
+              "value": -15
+            },
+            {
+              "key": "FlatModifier",
+              "selector": "land-speed",
+              "value": 5
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "murkeyed-azarketi.json",
+      "id": "MtH5bq0MhaMQbJEL",
+      "name": "Murkeyed Azarketi",
+      "img": "icons/creatures/fish/fish-fangtooth-skeletal-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "MtH5bq0MhaMQbJEL",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/creatures/fish/fish-fangtooth-skeletal-green.webp",
+        "name": "Murkeyed Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>You live in murky waters and have grown accustomed to life in a low-visibility environment. You need only a successful @Check[flat|dc:3] when targeting a concealed creature and a successful @Check[flat|dc:9] when targeting a hidden creature.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "river-azarketi.json",
+      "id": "GlejQr3rBh3sn8sL",
+      "name": "River Azarketi",
+      "img": "icons/environment/wilderness/terrain-river-road-gray.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "GlejQr3rBh3sn8sL",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/environment/wilderness/terrain-river-road-gray.webp",
+        "name": "River Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>You come from azarketis who abandoned the oceans for the fresh water of inland life. The varied geography of rivers required you to develop advanced physical skills to swim against rapids, leap through cascading waters, and deftly navigate shallow and narrow channels.</p>\n<p>When you succeed at an Athletics check to Swim, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Absalom, City of Lost Omens"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "to-critical-success"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:swim"
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "spined-azarketi.json",
+      "id": "9Iu1gFEuvVz9zaYU",
+      "name": "Spined Azarketi",
+      "img": "icons/creatures/abilities/stinger-poison-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "9Iu1gFEuvVz9zaYU",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/creatures/abilities/stinger-poison-green.webp",
+        "name": "Spined Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>Your fins conceal launchable toxic spines. You have a spine ranged unarmed attack with the unarmed trait that deals @Damage[1d4[poison]] damage, has a range increment of 10 feet, and is in the dart weapon group.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "poison",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "dart",
+              "img": "systems/pf2e/icons/unarmed-attacks/spine.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Spine",
+              "range": {
+                "increment": 10
+              },
+              "traits": [
+                "unarmed"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "tactile-azarketi.json",
+      "id": "S1062No0sYH35AhN",
+      "name": "Tactile Azarketi",
+      "img": "icons/creatures/fish/fish-shark-swimming.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "S1062No0sYH35AhN",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/creatures/fish/fish-shark-swimming.webp",
+        "name": "Tactile Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>Your skin can detect the slightest changes in ocean currents. You gain imprecise wavesense with a range of 30 feet, allowing you to sense motion in the water around you. You also gain a +1 circumstance bonus to Survival checks to Sense Direction in aquatic environments.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Ancestry Guide"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-direction",
+                "terrain:aquatic"
+              ],
+              "selector": "survival",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "wavesense"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "thalassic-azarketi.json",
+      "id": "qbWaybAX1LK7kUyY",
+      "name": "Thalassic Azarketi",
+      "img": "icons/weapons/polearms/trident-ice-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "qbWaybAX1LK7kUyY",
+        "folder": "AUXNbLZvON8MyUD3",
+        "img": "icons/weapons/polearms/trident-ice-blue.webp",
+        "name": "Thalassic Azarketi",
+        "system": {
+          "ancestry": {
+            "name": "Azarketi",
+            "slug": "azarketi",
+            "uuid": "Compendium.pf2e.ancestries.Item.yFoojz6q3ZjvceFw"
+          },
+          "description": {
+            "value": "<p>You trace your lineage from azarketis who lived their lives among the great oceans and seas of the world. You know how to use the currents and the primal magic of water to guide your attacks. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Underwater Marauder] skill feat, and your piercing ranged attacks don't have their range increments halved when fighting underwater targets.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens Absalom, City of Lost Omens"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Underwater Marauder"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

@@ -7,6 +7,44 @@
       "name": "Blast Lock",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XLoRtMn48f2KKvsu",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blast Lock",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a loaded firearm.</p>\n<hr />\n<p>Sometimes taking the shortest distance between two points involves removing an obstacle or two. You shoot your firearm at a lock within 10 feet. Make an attack roll against the DC required to @UUID[Compendium.pf2e.actionspf2e.Item.Pick a Lock]{Pick the Lock}</p>\n<hr />\n<p><strong>Critical Success</strong> You open the lock, or you achieve two successes toward opening a complex lock.</p>\n<p><strong>Success</strong> You open the lock, or you achieve one success toward opening a complex lock.</p>\n<p><strong>Failure</strong> You fail to open the lock, and your shot makes it harder to open. Future attempts to Pick the Lock or Blast the Lock take a -2 circumstance penalty.</p>\n<p><strong>Critical Failure</strong> You fail to open the lock, and your shot makes it much harder to open. Future attempts to Pick the Lock or Blast the Lock take a -4 circumstance penalty.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +54,48 @@
       "name": "Cover Fire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "IzkL60LlKzbKIhY1",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cover Fire",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> You're wielding a loaded firearm or crossbow.</p>\n<hr />\n<p>You lay down suppressive fire to protect allies by forcing foes to take cover from your wild attacks. Make a firearm or crossbow Strike; the target must decide before you roll your attack whether it will duck out of the way. If the target ducks, it gains a +2 circumstance bonus to AC against your attack, or a +4 circumstance bonus to AC if it has cover. It also takes a -2 circumstance penalty to ranged attack rolls until the end of its next turn. If the target chooses not to duck, you gain a +1 circumstance bonus to your attack roll for that Strike.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "round",
+            "value": 1
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +105,94 @@
       "name": "Crossbow Crack Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "s6h0xkdKf3gecLk6",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crossbow Crack Shot",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're exceptionally skilled with the crossbow. The first time each round that you Interact to reload a crossbow you are wielding, including Interact actions as part of your slinger's reload and similar effects, you increase the range increment for your next Strike with that weapon by 10 feet and deal 1 additional precision damage per weapon damage die with that Strike. If your crossbow has the backstabber trait and you are attacking an @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] target, backstabber deals 2 additional precision damage per weapon damage die instead of its normal effects.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "domain": "damage",
+              "key": "RollOption",
+              "option": "crossbow-crack-shot",
+              "toggleable": true
+            },
+            {
+              "damageCategory": "precision",
+              "key": "FlatModifier",
+              "predicate": [
+                "crossbow-crack-shot"
+              ],
+              "selector": "crossbow-weapon-group-damage",
+              "slug": "crossbow-crack-shot-bonus",
+              "value": "@weapon.system.damage.dice"
+            },
+            {
+              "key": "AdjustModifier",
+              "predicate": [
+                "crossbow-crack-shot"
+              ],
+              "selector": "crossbow-weapon-group-damage",
+              "slug": "backstabber",
+              "suppress": true
+            },
+            {
+              "definition": [
+                "item:group:crossbow"
+              ],
+              "key": "AdjustStrike",
+              "mode": "add",
+              "predicate": [
+                "crossbow-crack-shot"
+              ],
+              "property": "range-increment",
+              "value": 10
+            },
+            {
+              "damageCategory": "precision",
+              "key": "FlatModifier",
+              "label": "PF2E.TraitBackstabber",
+              "predicate": [
+                "crossbow-crack-shot",
+                "item:trait:backstabber",
+                "target:condition:off-guard"
+              ],
+              "selector": "crossbow-weapon-group-damage",
+              "slug": "crossbow-crack-shot-backstabber",
+              "value": "2*@weapon.system.damage.dice"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +202,47 @@
       "name": "Dual-Weapon Reload",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sjChYEuEWPqndCSK",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dual-Weapon Reload",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You carry your ammunition in a way that allows you to reload while holding two weapons. While you're wielding two one-handed weapons, each in a different hand, you don't need a free hand to reload a one-handed ranged weapon you're wielding.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Gunslinger or Dual-Weapon Warrior Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +252,60 @@
       "name": "Hit the Dirt!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6LFBPpPPJjDq07fg",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hit the Dirt!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature you can see attempts a ranged Strike against you.</p>\n<hr />\n<p>You fling yourself out of harm's way. You @UUID[Compendium.pf2e.actionspf2e.Item.Leap]. Your movement gives you a +2 circumstance bonus to AC against the triggering attack. Regardless of whether or not the triggering attack hits, you land @UUID[Compendium.pf2e.conditionitems.Item.Prone] after completing your Leap.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "domain": "ac",
+              "key": "RollOption",
+              "option": "hit-the-dirt",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "hit-the-dirt",
+                "item:ranged"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +315,84 @@
       "name": "Munitions Crafter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lFVqejlf52cdYrZy",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Munitions Crafter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Bullets and bombs can be scarce in some parts, so you've learned to make your own. You become trained in Crafting and gain the advanced alchemy benefits. You can use the advanced alchemy benefits to create a number of daily consumables equal to 4 + half your level (rounded up); these consumables must be bombs or alchemical ammunition.</p>\n<p>You gain a formula book that includes the formula for black powder and four 1st-level types of common or uncommon alchemical ammunition or bombs of your choice.</p>\n<p>When crafting alchemical ammunition, including black powder in doses or rounds, using advanced alchemy, you create the ammunition in batches of 4 (meaning that if you were 4th level and used all of your advanced alchemy consumables to create alchemical ammunition, you could create a maximum of 24 rounds). You cannot use advanced alchemy to Craft horns or kegs of black powder.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Alchemical Crafting"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "batchSizes": {
+                "other": [
+                  {
+                    "definition": [
+                      {
+                        "or": [
+                          "item:slug:black-powder-dose",
+                          {
+                            "and": [
+                              "item:trait:alchemical",
+                              "item:type:ammo"
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "quantity": 4
+                  }
+                ]
+              },
+              "craftableItems": [
+                "item:group:bomb"
+              ],
+              "isDailyPrep": true,
+              "key": "CraftingAbility",
+              "label": "PF2E.SpecificRule.Alchemist.AdvancedAlchemy",
+              "maxSlots": "4 + ceil(@actor.level / 2)",
+              "slug": "advanced-alchemy"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -61,6 +402,87 @@
       "name": "Sword and Pistol",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dWbISC0di0r4oPCi",
+        "folder": "KnXvyA7sSu2Rr2Hh",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sword and Pistol",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You're comfortable wielding a firearm or crossbow in one hand and a melee weapon in the other, combining melee attacks with shots from the firearm. When you make a successful ranged Strike against an enemy within your reach with your one-handed firearm or one-handed crossbow, that enemy is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] against your next melee attack with a one-handed melee weapon.</p>\n<p>When you make a successful melee Strike against an enemy with your one-handed melee weapon, the next ranged Strike you make against that enemy with a one-handed firearm or one-handed crossbow doesn't trigger reactions that would trigger on a ranged attack but not a melee attack, such as Reactive Strike. Either of these benefits is lost if not used by the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Gunslinger.SwordAndPistol.RollOptionLabel",
+              "option": "sword-and-pistol-reach",
+              "toggleable": true
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "sword-and-pistol-reach",
+                "item:hands-held:1",
+                {
+                  "or": [
+                    "item:group:crossbow",
+                    "item:group:firearm"
+                  ]
+                }
+              ],
+              "selector": [
+                "ranged-strike-attack-roll"
+              ],
+              "text": "PF2E.SpecificRule.Gunslinger.SwordAndPistol.RangedNote",
+              "title": "{item|name}"
+            },
+            {
+              "key": "Note",
+              "outcome": [
+                "success",
+                "criticalSuccess"
+              ],
+              "predicate": [
+                "item:hands-held:1"
+              ],
+              "selector": [
+                "melee-strike-attack-roll"
+              ],
+              "text": "PF2E.SpecificRule.Gunslinger.SwordAndPistol.MeleeNote",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "gunslinger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

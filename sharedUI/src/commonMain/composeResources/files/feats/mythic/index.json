@@ -7,6 +7,60 @@
       "name": "Arc of Destruction",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5fu0H5ZpBxSOwtCL",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arc of Destruction",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy you're observing targets you with a ranged weapon Strike.</p><hr /><p>You redirect an incoming weapon or projectile and send your enemy's own attack roaring back at them, increasing its accuracy with a surge of mythic power. Spend a Mythic Point; you gain a +4 status bonus to AC against the triggering Strike. If the Strike fails, you immediately snatch the weapon or ammunition used for the attack out of the air and launch it back at the enemy, using mythic proficiency for your Strike. If the attack was made with a thrown weapon, add the weapon's runes and other effects to the attack as normal. If the triggering attack was made with a piece of ammunition that you're wielding an appropriate weapon for, you can apply your weapon's runes and other effects to the attack.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "domain": "ac",
+              "key": "RollOption",
+              "option": "arc-of-destruction",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "arc-of-destruction",
+                "item:ranged"
+              ],
+              "selector": "ac",
+              "type": "status",
+              "value": 4
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +70,43 @@
       "name": "Arms That Cut the Waves",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6wxOKT9ApUAZMq1v",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arms That Cut the Waves",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>River, lake, sea, or ocean, the water calls to you, and you don't fear its depths. When you attempt an Athletics check to Swim, you can spend a Mythic Point to attempt the check at mythic proficiency. When you would run out of air and begin suffocating, you can instead spend a Mythic Point to hold your breath for 10 more rounds.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -25,6 +116,53 @@
       "name": "Avenger of Envy",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tlt6Q0uPqtFxOijg",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenger of Envy",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become the champion of the runelords of envy. Their support gives you a heightened awareness of your own failings, but you can call their spirits to your side to protect you from harm. The first time each day you critically fail a skill check or saving throw, you gain 1 Mythic Point. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Aegis of Envy] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #220: Crypt of Runes"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Aegis of Envy"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -34,6 +172,53 @@
       "name": "Avenger of Gluttony",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "exKu8ddKy2UhjZEK",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenger of Gluttony",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become the champion of the runelords of gluttony, and their hungry spirits are always near you. Whenever a spell or other magical effect restores Hit Points to you, you can choose to reduce the number of Hit Points you regain by any amount. The first time each day you reduce the Hit Points by an amount equal to your level, you gain 1 Mythic Point. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Gluttonous Feast] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #220: Crypt of Runes"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Gluttonous Feast"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -43,6 +228,53 @@
       "name": "Avenger of Greed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8zejSGmHi353ZtpL",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenger of Greed",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become a champion of the runelords of greed. Their whispers encourage you to prepare for disasters that might never come to pass. The first time each day you touch an object worth at least 2,000 gp that you've never touched before, you gain 1 Mythic Point. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Convocation of Greed] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #220: Crypt of Runes"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Convocation of Greed"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -52,6 +284,53 @@
       "name": "Avenger of Lust",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FRCcuxb604l6PfAC",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenger of Lust",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become a favorite of Sorshen, the Runelord of Lust. She watches over you wherever you go, protecting you and your companions in times of need. The first time each day you either cast or are the target of a spell of 6th rank or higher that has the emotion or healing trait, you gain 1 Mythic Point. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Sorshen's Devotion] reaction.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #220: Crypt of Runes"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Sorshen's Devotion"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -61,6 +340,53 @@
       "name": "Avenger of Sloth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4TWrnzTzVnHU8MGz",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenger of Sloth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become a champion of the runelords of sloth. They spur you toward idleness, and their spirits are slow to come to your aid. Once they arrive, however, their combined might is undeniable. The first time each day you spend 10 minutes resting, you gain 1 Mythic Point. During this time, you don't need to sleep, but you can't perform activities like Refocus or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds]. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Summon Sloth] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #220: Crypt of Runes"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Summon Sloth"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -70,6 +396,53 @@
       "name": "Avenger of Wrath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kIqMLraYuE8y5F4A",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenger of Wrath",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've become a champion of the runelords of wrath. You gain the Reactive Strike reaction. The first time each day you score a critical hit with a Reactive Strike, you gain 1 Mythic Point. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Host of Wrath] activity.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #220: Crypt of Runes"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Host of Wrath"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -79,6 +452,44 @@
       "name": "Become Destiny",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XXHCdsptuHSwioYL",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Become Destiny",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You defy any external force blocking your mythic purpose. Spend a Mythic Point, and remove any one condition you're afflicted with, end the ongoing effects of any one spell you're currently affected by, or free yourself from the effects of any one trap or hazard (such as a snare or bottomless pit). When freeing yourself from a hazard in this way, you immediately move to the nearest safe location adjacent to the hazard.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +499,43 @@
       "name": "Become Shadow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hyTd3PoXueJ6vvyb",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Become Shadow",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You unleash your mythic power to shroud yourself in darkness and silence to stalk your prey. When you attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.Hide] or @UUID[Compendium.pf2e.actionspf2e.Item.Sneak], or when you roll Stealth for initiative, you can spend a Mythic Point to become @UUID[Compendium.pf2e.conditionitems.Item.Concealed] and to attempt the check or roll using mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -97,6 +545,43 @@
       "name": "Binds That Tie",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TTlZiNSIAO2R3lMQ",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Binds That Tie",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You excel at assisting in capturing your foes. When you attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] an opponent who's already @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] by an ally, you can spend a Mythic Point to attempt the check at mythic proficiency. On a success, you deal additional bludgeoning damage to the target equal to @Damage[(2*(@actor.system.abilities.str.mod))[bludgeoning]]{twice your Strength modifier}.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -106,6 +591,47 @@
       "name": "Call From Death's Door",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "24giyNqSjqrEnhN9",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Call From Death's Door",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> The @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition of an ally you're observing would increase.</p><hr /><p>Even death halts in the face of your power. Spend a Mythic Point; the triggering ally loses the dying condition, their @UUID[Compendium.pf2e.conditionitems.Item.Wounded] condition doesn't increase, and they heal a number of Hit Points equal to @Damage[(2*@actor.level)[healing]]{twice your level}.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Caretaker's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -115,6 +641,44 @@
       "name": "Correct the Story",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dmw79BbtUCJd300O",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Correct the Story",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy critically succeeds at an attack roll or saving throw.</p><hr /><p>You know the story of your journey well and can correct it when your enemy tells it incorrectly. Spend a Mythic Point. The enemy must reroll the triggering attack roll or save and take the new result.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "misfortune",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -124,6 +688,52 @@
       "name": "Cutting Rebuke",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mg8yScrzlUVsoWJc",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cutting Rebuke",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>If words could kill, the poet might rule the world. Your words can. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Bon Mot] skill feat. You can spend a Mythic Point when rolling the Diplomacy check for Bon Mot to attempt the check at mythic proficiency. If the check succeeds, you can also deal @Damage[(@actor.level)[mental]]{mental damage equal to your level} to the target (double on a critical success).</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Demagogue's Calling or Thespian's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Bon Mot"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -133,6 +743,43 @@
       "name": "Divert Destiny",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rljiwL00XW1RcnyL",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Divert Destiny",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An attack or effect would reduce you to 0 Hit Points or kill you outright.</p><hr /><p>You defy the fate before you, calling on wells of mythic vitality to sustain your life and allow you to persevere. You expend 1 Mythic Point and survive the triggering attack or effect, lose the wounded or dying conditions entirely, don't increase your doomed condition, and are conscious and standing with a number of Hit Points equal to 10 + your level, regardless of how many Hit Points you had before.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -142,6 +789,43 @@
       "name": "Ears That Hear the Truth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UbpSGpKNGucwIcHs",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ears That Hear the Truth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have an acute understanding of the rhythms of living things, and you never miss the quaver that betrays a spoken lie. When you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive], or when you roll Perception for initiative, you can spend a Mythic Point to attempt the check or roll at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -151,6 +835,44 @@
       "name": "Eyes That See Eternity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vJupczSgvEfQKA2L",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Eyes That See Eternity",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Mythic power opens your eyes to the secrets of reality and eternity. Spend a Mythic Point; for the next minute, you gain the effects of @UUID[Compendium.pf2e.spells-srd.Item.Truesight] and roll all Perception checks with mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "concentrate",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -160,6 +882,47 @@
       "name": "Feet That Stride the Sky",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0Ahv8HKmJkll0wlq",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Feet That Stride the Sky",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You feel the call of the sky, or perhaps a desperate urge to test the limits of the earth's hold on you. When you or a creature you're mounted on attempts a @UUID[Compendium.pf2e.actionspf2e.Item.High Jump] or @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump], you can spend a Mythic Point to allow you or the mount to attempt the check at mythic proficiency; determine the DC using the Long Jump DCs, and increase your maximum distance to double your Speed.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Acrobat's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -169,6 +932,50 @@
       "name": "Fiery Rebirth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lNIHXCQ0Zc2gY5OH",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fiery Rebirth",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You regain Hit Points while you are @UUID[Compendium.pf2e.conditionitems.Item.Unconscious].</p><hr /><p>When you escape death, you return to life with retributive fire that burns those who harmed you. You expend 1 Mythic Point, return to consciousness, Stand, and regain additional Hit Points equal to your level. You then erupt in flames, dealing fire damage equal to twice your level (@Damage[(2*@actor.level)[fire]]) to adjacent foes, with a @Check[reflex|against:class|basic] save against your class DC. Foes that critically fail the save are also pushed 5 feet away from you.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #216: The Acropolis Pyre"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "fire",
+              "healing",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -178,6 +985,43 @@
       "name": "Fling Into Action",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2eratRTKDhSYvrIZ",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fling Into Action",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You release mythic power to turn disaster into opportunity and hurl yourself into an advantageous position. When you attempt a Reflex save, you can spend a Mythic Point to attempt the save at mythic proficiency. If the check is successful, you immediately fling yourself up to 30 feet in a direction of your choice, or up to 60 feet on a critical success. When flinging yourself in this manner, you can move the entire distance in a straight horizontal or vertical line, or you can move 5 feet horizontally for every 10 feet you move vertically. For example, if you got a critical success using Fling Into Action while Grabbing an Edge as you fall from the middle of a cliff, you could hurl yourself 40 feet up the cliffside and 20 feet forward onto a plateau at the top of the cliff.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -187,6 +1031,48 @@
       "name": "Fool's Fleeting Plan",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cKvGJCD8VdHOU0rq",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fool's Fleeting Plan",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When Aercelys, hero-god of fools and fire, dove into the funeral pyre of his beloved daughter, he seemed a fool without thought for his safety. Yet when he returned with her body, he showed the slow rise of her chest, and those who doubted became the fools.</p>\n<p>You carry Aercelys's spark within you, which protects you from rash decisions. You do not trigger reactions when you use an action that you gained from being @UUID[Compendium.pf2e.conditionitems.Item.Quickened].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -196,6 +1082,47 @@
       "name": "Godspeed",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Mw4owPxaU6i2Dpgl",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Godspeed",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Mythic power grants you speed to rival beasts and demigods. Spend a Mythic Point; for the next minute, you gain a +10-foot status bonus to all your Speeds and are @UUID[Compendium.pf2e.conditionitems.Item.Quickened]. You can use the extra action each round to Stride, Step, or @UUID[Compendium.pf2e.actionspf2e.Item.Leap].</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Godspeed",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Godspeed"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -205,6 +1132,47 @@
       "name": "Hands That Unweave Disaster",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ydE2WS8DAXLvhbDf",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hands That Unweave Disaster",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your hands move with uncanny sureness, dismantling danger. When you attempt an Acrobatics check to @UUID[Compendium.pf2e.actionspf2e.Item.Grab an Edge], you can spend a Mythic Point to attempt the check at mythic proficiency. You can expend a Mythic Point when attempting to @UUID[Compendium.pf2e.actionspf2e.Item.Disable a Device] to attempt the check at mythic proficiency. As normal when attempting a check with mythic proficiency, this allows you to attempt to Disable a Device even if the check normally requires expert or greater proficiency.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Thief's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -214,6 +1182,48 @@
       "name": "Hydra's Bond",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HnXZCpqRaj1nInjh",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hydra's Bond",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When the hero-gods built Pol-Sylirica and its seven armies, they feared betrayal from within. They took inspiration from the multi-headed hydra, and bound the seven armies together with supernatural ties to make them behave as if they shared one body. Following these tactics, during daily preparations, you can select a number of willing creatures equal to half your level to be part of your hydra's bond. Members of the same hydra's bond always know if another member is telling the truth.</p>\n<p>When a member of the hydra's bond saves against an effect that would have them act against their allies (such as the @UUID[Compendium.pf2e.conditionitems.Item.Confused] condition, a @UUID[Compendium.pf2e.spells-srd.Item.Dominate] spell, or other mental effects that would give an ally the @UUID[Compendium.pf2e.conditionitems.Item.Controlled] condition), you can spend a Mythic Point to allow that character to attempt the save at mythic proficiency. If a member of the hydra's bond fails a save against such an effect, other members automatically know that the target is controlled or under the influence of a mental effect. In addition, all members of the hydra's bond gain a +2 circumstance bonus to any roll made to counteract that effect.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -223,6 +1233,50 @@
       "name": "Mythic Allies",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Lx7JtAhIn3aJ6WbP",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Allies",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You channel mythic power through your body and into a summoned ally, temporarily reinforcing them with a shared fraction of your mythic potential. Spend a Mythic Point; the summoned creature gains a +2 status bonus to its attack rolls, a +2 status bonus to all of its defenses, and a number of additional Hit Points equal to your level that last for the duration of its summoning. The next Strike made by the summoned creature after you use this ability gains a +4 circumstance bonus to the attack roll.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Mythic Allies]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "ability to cast spells from slots"
+              },
+              {
+                "value": "at least one summon spell in your spellbook or repertoire"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -232,6 +1286,44 @@
       "name": "Mythic Casting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ejOTX1ukDVNorpt2",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Casting",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can infuse mythic power directly into your spells to make them exceptionally potent. Spend a Mythic Point; if the next action you use is to Cast a Spell, use mythic proficiency to determine your spell attack rolls and save DC for that spell.</p><hr /><p><em>Note:</em> PFS 6-09 allows for the action you use next to be a kineticist impulse, using your mythic proficiency instead of impulse attack rolls and save DC.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -241,6 +1333,47 @@
       "name": "Mythic Containment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "y3E0V6Nmq7HElfDT",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Containment",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You infuse a receptacle, such as a normal bag, sack, or box, with mythic power, transforming it into a prison into which you can command a creature. Spend a Mythic Point, and attempt a @Check[deception|against:will], @Check[diplomacy|against:will], or @Check[intimidation|against:will] check at mythic proficiency against the Will DC of a creature within 30 feet to trick, convince, or command it into entering the receptacle. The receptacle can hold a creature of any size, and the creature enters the receptacle if your check is successful. The creature is @UUID[Compendium.pf2e.conditionitems.Item.Grabbed], is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1}, and has to hold its breath or start suffocating. A creature trapped in the receptacle can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape]; use the skill you used to lure the creature into the bag for the DC, and calculate the DC using mythic proficiency. The trapped creature is automatically freed after 1 minute, but you can spend an additional Mythic Point as a free action to prolong the duration of the containment for an additional minute when it would expire.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Artisan's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -250,6 +1383,53 @@
       "name": "Mythic Counterspell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7GGvKGwLiUGpAxxH",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Counterspell",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature Casts a Spell, you've successfully Recognized the Spell, and you have either a prepared spell or an unexpended spell slot of equal or greater rank.</p><hr /><p>You quench and counter your enemy's magic with potent spellcraft amplified and enhanced by carefully deployed mythic power. Spend a Mythic Point, and expend a prepared spell or unexpended spell slot of the same rank as the triggering spell or higher. You lose your spell slot as if you'd cast the triggering spell. You then attempt to counteract the triggering spell using mythic proficiency to determine your spellcasting proficiency bonus for the counteract check.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Quick Recognition"
+              },
+              {
+                "value": "ability to cast spells from spell slots"
+              },
+              {
+                "value": "Sage's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -259,6 +1439,43 @@
       "name": "Mythic Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d605yhbRoaVgisFG",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You convert your mythic power into a magical effect. When you gain this feat, choose up to three spells of 1st or 2nd rank that take no more than 3 actions to cast and that are either instantaneous or have a duration of 10 minutes or less. You can spend a Mythic Point to cast any of those spells for their normal action cost and use mythic proficiency to determine your spell attack rolls and spell DCs, and the spells are automatically heightened to a rank equal to half your level (rounded up). If you don't normally have the ability to cast spells, you use Charisma as your spellcasting attribute modifier; otherwise, you use the spellcasting ability associated with your spellcasting class. You gain the Cast a Spell activity only for spells cast with this feat; you don't otherwise gain the typical benefits of being a spellcaster.</p><hr /><p><strong>Special</strong> At 14th level, add one spell of 3rd rank for you to cast using this ability. At 20th level, add one 4th-rank spell.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -268,6 +1485,47 @@
       "name": "Mythic Refocus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Oef5B7jxmu5nFxLa",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Refocus",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>As your ability to control your mythic power grows, you learn to channel it to restore and reinforce other forms of power at your command. Spend a Mythic Point; you immediately recover all your Focus Points, filling your focus pool to its current maximum.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a focus pool."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -277,6 +1535,43 @@
       "name": "Mythic Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "toGkX6UVPq1Z1NjB",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mythic Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You infuse your weapon or unarmed attack with mythic power before lashing out at an enemy with devastating force. Spend a Mythic Point and then Strike a creature with a weapon you're wielding or an unarmed attack you have available. This Strike is made at mythic proficiency, and the weapon or unarmed attack counts as a mythic weapon for the purposes of overcoming mythic resistance or mythic immunity.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -286,6 +1581,47 @@
       "name": "Prescience",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Tf9RmqKU148OyQbz",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Prescience",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You're about to roll initiative.</p><hr /><p>Mythic power floods through your mind, filling you with visions of possible futures, events that might or might not happen, and warnings of things that might be. Spend a Mythic Point and roll your initiative check using mythic proficiency. Until the end of your first turn, you have a +1 status bonus to AC and all saves.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Prescience",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Prescience"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -295,6 +1631,47 @@
       "name": "Read the Wind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bBo2mOKrMXXjAY9f",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Read the Wind",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can derive meaning from the tiniest details when tracking an enemy. Whenever you succeed at a check to @UUID[Compendium.pf2e.actionspf2e.Item.Track] at mythic proficiency, you can immediately attempt a check to Recall Knowledge about the creature you're tracking, also at mythic proficiency and with a suitable skill determined by the GM.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hunter's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -304,6 +1681,47 @@
       "name": "Repel Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "A1RcZ9mhYBZKzMUU",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Repel Assault",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy's attack would deal damage equal to or greater than your level to you or an adjacent ally.</p><hr /><p>Your Calling demands that you defy danger and injury to yourself or those who rely on you while allowing you to respond to the originators of such aggression with ferocious and unrivaled fury. Spend a Mythic Point; you gain resistance to the triggering attack equal to your level. If you Strike the enemy that made the attack before the end of your next turn, you can make that Strike at mythic proficiency. This benefit applies only to the first Strike you make against that enemy.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Guardian's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -313,6 +1731,51 @@
       "name": "Sovereign's Blade",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YXuhZHEUXXi9Dhqx",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sovereign's Blade",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a melee weapon.</p><hr /><p>As you raise your weapon into the air, it begins to shed a bright light that pierces darkness and calls your knights to your side. Spend a Mythic Point; you automatically counteract any magical darkness whose counteract rank is 7 or lower. Any knight who can see your raised weapon can immediately use their reaction to Stride up to twice directly toward you, and any of your knights who are adjacent to you after this movement get a +2 status bonus to their attack rolls until the start of your next turn.</p>"
+          },
+          "level": {
+            "value": 18
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Prophesied Monarch Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "otherTags": [
+              "prophesied-monarch-dedication"
+            ],
+            "rarity": "common",
+            "value": [
+              "light",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 18,
       "category": "class"
     },
@@ -322,6 +1785,48 @@
       "name": "Stages of Fate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zJsu5JQGGOpyT6Xk",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stages of Fate",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>At one time, the hero-gods could not tell their own prophecies. Ongalte, hero-god of deicide, defied this rule and cemented why it should be upheld. Those that can reach into the web of fates and pluck out a string are forbidden from speaking of their own myth. Yet nothing forbids them from speaking the myths of others.</p>\n<p>You peer through the world around you to see the delicate threads connecting others to their fate when they become afflicted. Choose a creature within 30 feet that you can see and who you know is affected by an ongoing affliction that progresses through stages, such as most diseases or poisons. Spend 1 Mythic Point, then attempt a @Check[religion] check at mythic proficiency against that affliction's DC.</p><hr /><p><strong>Critical Success</strong> The next time the afflicted creature attempts a saving throw against the affliction, they automatically gain a critical success. If this results in the affliction coming to an end, you gain 1 Mythic Point.</p>\n<p><strong>Success</strong> The next time the afflicted creature attempts a saving throw against the affliction, they gain a +1 circumstance bonus to the roll and increase the result of the saving throw by one degree of success.</p>\n<p><strong>Failure</strong> The next time the afflicted creature attempts a saving throw against the affliction, they gain a +1 circumstance bonus.</p>\n<p><strong>Critical Failure</strong> You share the afflicted's fate, and are exposed to their affliction. You must immediately save against the affliction's effect.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -331,6 +1836,47 @@
       "name": "Steal Magic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jsEMNIxcnfGIx7sX",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Steal Magic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You don't just counter your enemy's magic, you instantly master it and make it your own. When you successfully counterspell an enemy's spell using Mythic Counterspell, you can learn that spell as long as it's on the spell list for your tradition. If you have a spellbook, the spell is instantly scribed into the book, creating new blank pages if needed. If you have a spell repertoire, you can instantly retrain any spell currently in your repertoire to the countered spell, though if the spell you replace is one granted to you by a class feature (such as an animist's apparition spells or a sorcerer's bloodline spells), the spell reverts to the one normally granted by that class feature during your next daily preparations.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Mythic Counterspell"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -340,6 +1886,51 @@
       "name": "Storied Companion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tQvWDkatsuYsNkds",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Storied Companion",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your animal companion or pet would fail a saving throw.</p><hr /><p>Your companion is an integral part of your story, and you can expend your mythic power to protect it, defying events that would prevent it from being so. Spend a Mythic Point; your companion rerolls the triggering save at mythic proficiency and gains temporary Hit Points equal to twice your level that last for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Storied Companion]</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Handler's Calling"
+              },
+              {
+                "value": "you have an animal companion or pet"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "fortune",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -349,6 +1940,47 @@
       "name": "Summon Mythic Power",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "31Z6tFfSKWMe3OdR",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Summon Mythic Power",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You call upon fate, divinity, or whatever other power has carried you this far, demanding that it carry you just a little bit farther. You regain 1 Mythic Point.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -358,6 +1990,43 @@
       "name": "Unbelievable Interception",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Bgnr0hw52Efr8Ew8",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unbelievable Interception",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy you're observing attempts to Strike an ally you can also observe.</p><hr /><p>You move with unbelievable alacrity to intercept an enemy's attack. Spend a Mythic Point; stride twice directly toward the triggering enemy. If you end within the attack's range or reach, you become the target of the triggering Strike, using the original attack roll and comparing the result to your AC. If the enemy's attack fails and the enemy is within your reach, you can immediately attempt a melee Strike against the enemy at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -367,6 +2036,43 @@
       "name": "Unbelievably Believable",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "V5Yz9cKe2Fj9LQbs",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unbelievably Believable",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your words echo with soothing and convincing power. When you attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information], @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression], make a @UUID[Compendium.pf2e.actionspf2e.Item.Request], or @UUID[Compendium.pf2e.actionspf2e.Item.Lie], you can spend a Mythic Point to attempt the check at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -376,6 +2082,43 @@
       "name": "Unbreaking Castle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "bNUNyR3FDkgEb0gJ",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unbreaking Castle",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You're wielding a shield or a weapon with the parry trait.</p><hr /><p>You're the bulwark that doesn't break. Spend a Mythic Point, and Raise a Shield or position the required weapon to parry; for the next minute, whenever you Raise a Shield or position a weapon to parry (including when you first use this ability), all allies you can see gain the shield or weapon's circumstance bonus to AC. When your shield is raised or your weapon is positioned to parry while this effect is active, enemies treat all squares within your reach as difficult terrain. When using the Shield Block reaction, after the block is complete, you can attempt a Strike with a shield bash or an attached weapon on the required shield (such as a shield boss or shield spikes) against an adjacent enemy at mythic proficiency.</p>\n<p>The first time each round an enemy misses you with a melee Strike while your weapon is positioned to parry, you can Strike them with that weapon at mythic proficiency as a reaction.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Unbreaking Castle]</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -385,6 +2128,43 @@
       "name": "Unending Subsistence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RR0p9E6GWt0CRA1q",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unending Subsistence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your mythic power allows you to take a small amount of food and replicate it near endlessly. When you attempt a Society or Survival check to @UUID[Compendium.pf2e.actionspf2e.Item.Subsist], you can spend a Mythic Point to attempt the check at mythic proficiency. Succeeding at the check always provides enough food and shelter for you and up to a dozen other creatures. On a critical success, all creatures you obtain food and shelter for gain a +2 circumstance bonus to Fortitude saving throws for the next 24 hours.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Unending Subsistence]</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -394,6 +2174,43 @@
       "name": "Unrivaled Retort",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kUb7FtYlJPNy4tYv",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Unrivaled Retort",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You are about to attempt a Fortitude or Reflex save against an area effect and are wielding a ranged weapon.</p><hr /><p>You defy the death and destruction around you while using it to fuel your mythic power, spurring you on to acts of incredible speed and empowering a mighty ranged counterattack. Spend a Mythic Point and attempt the triggering save at mythic proficiency. If the save is successful, you can immediately reload and make a ranged Strike targeting the originator of the triggering effect.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -403,6 +2220,43 @@
       "name": "We've Met Before",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7tyjUicN4vh5U1zU",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "We've Met Before",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You've spent at least 1 minute in mutual conversation with a creature.</p><hr /><p>Your ability to discern information about those you interact with is without peer. Spend a Mythic Point to gain a Lore skill specific to the required creature for the next 24 hours; you have mythic proficiency with that skill and can use it to Recall Knowledge about the creature, Decipher Writings created by the creature, @UUID[Compendium.pf2e.actionspf2e.Item.Earn Income] or Subsist in areas ruled by the creature, or perform other appropriate tasks as determined by the GM.</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -412,6 +2266,52 @@
       "name": "Windborne Shove",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "fjk8VsNDkVv1rjiu",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Windborne Shove",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>The hero-god of phalanxes and winds, grand Konebrys, led a force of dozens against an army of thousands. They gathered their soldiers in tight ranks, then marched against the wind to take the enemy by surprise. When a gust pushed the foes back, they struck their victorious blow.</p>\n<p>You emulate Konebrys's tactics in pushing small forces against mighty foes. Whenever you are adjacent to an ally, creatures that attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Tumble Through] your space take a –2 circumstance penalty to their Acrobatics check.</p>\n<p>When you critically succeed on a melee Strike against an enemy, you can immediately attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Shove] your target as a free action. You can spend a Mythic Point on this Shove attempt to do so at mythic proficiency.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "guardian's Calling"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #218: Titanbane"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -421,6 +2321,47 @@
       "name": "You Can't Hide From Us",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4znZkQYxrSg7RMxb",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You Can't Hide From Us",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> Your united companion made a successful Strike against a creature this round.</p><hr /><p>When you and your companion attack together, you can ensure that escape is but a whispered dream. Strike the same creature that your united companion hit. If your Strike is successful, the targeted creature has been marked for death by you and your companion and can't become @UUID[Compendium.pf2e.conditionitems.Item.Hidden] or @UUID[Compendium.pf2e.conditionitems.Item.Concealed] to you and your companion for 1 minute or until it moves more than 60 feet away from either you or your companion, whichever comes first. If the triggering creature is under an effect or spell that would normally grant it this condition, you can immediately attempt to counteract the effect. Your counteract rank is half your level rounded up, and your counteract check modifier is equal to the higher of your class DC –10 or spell DC –10.</p>"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Beast Lord Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -430,6 +2371,52 @@
       "name": "You Can't Keep Us Down",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2q8vzxnlYYWcUGJd",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You Can't Keep Us Down",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Seeing your allies falter, you fill their hearts with your unbreakable hope, rousing them to stay in the fight. All allies within 60 feet that are @UUID[Compendium.pf2e.conditionitems.Item.Dying], or @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] and @UUID[Compendium.pf2e.conditionitems.Item.Wounded], are healed a number of Hit Points equal to @Damage[(3*@actor.level)[healing]]{three times your level}. Then, all allies within 60 feet that are @UUID[Compendium.pf2e.conditionitems.Item.Prone] may stand up as a free action that does not provoke reactions.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 14
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Broken Chain Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "healing",
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 14,
       "category": "class"
     },
@@ -439,6 +2426,79 @@
       "name": "You Can't Kill an Idea",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R5oeNpNCOXU4OtIT",
+        "folder": "Ic6bDFDq8L8Ep2BS",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "You Can't Kill an Idea",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Those who would destroy you instead transform you into a powerful yet formless entity. If you would be killed while you have an @UUID[Compendium.pf2e.actionspf2e.Item.Ultimatum of Liberation] active, you (along with your equipment) become an ideaform.</p>\n<p>As an ideaform, you are @UUID[Compendium.pf2e.conditionitems.Item.Invisible] and incorporeal. You have only 1 Hit Point and can't gain more, but you are immune to all damage; if your @UUID[Compendium.pf2e.conditionitems.Item.Dying] or @UUID[Compendium.pf2e.conditionitems.Item.Doomed] condition would increase to a high enough value to kill you, it does not increase, and you are immune to any effect that would instantly kill or destroy you. You are immune to the @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] condition, yet can take only purely mental actions. You can communicate telepathically with your allies at unlimited range, and gain two extra reactions at the start of each of your turns.</p>\n<p>Additionally, you can Aid allies through nothing but telepathic advice, without having to spend an action to prepare first, and can spend a Mythic Point to do so at mythic proficiency. Any circumstance bonus you grant through Aiding is increased by 1.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: You Can't Kill an Idea]</p>\n<p>Before an hour passes while being an ideaform, you must choose a willing follower of your cause to fuse with and cease to be an ideaform. Use your level, their ancestry, heritage, and ancestry feats, and work with your GM to choose which combination of class, attribute modifiers, skills, and feats would make a good representation of this fusion. This new character has all your previous equipment. If you do not fuse with a follower after an hour of being an ideaform, you cease to be an ideaform and die; the equipment you had at the time of your original death also ceases to exist.</p>"
+          },
+          "level": {
+            "value": 20
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Broken Chain Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder War of Immortals"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.BrokenChain.YouCantKillAnIdea.IdeaformToggle",
+              "option": "ideaform",
+              "toggleable": true
+            },
+            {
+              "inMemoryOnly": true,
+              "key": "GrantItem",
+              "predicate": [
+                "ideaform"
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.conditionitems.Item.Invisible"
+            },
+            {
+              "key": "Immunity",
+              "predicate": [
+                "ideaform"
+              ],
+              "type": "unconscious"
+            },
+            {
+              "add": [
+                "incorporeal"
+              ],
+              "key": "ActorTraits",
+              "predicate": [
+                "ideaform"
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mythic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 20,
       "category": "class"
     }

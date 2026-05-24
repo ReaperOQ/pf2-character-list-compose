@@ -7,6 +7,45 @@
       "name": "Brain Drain",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zQeglKcmBXvqfABR",
+        "folder": "laEbBsPaJOz5aay5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Brain Drain",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>With a wresting of will, you siphon off a creature's mental energy to replenish your own. One non-mindless creature within 30 feet must attempt a @Check[will|against:occult|options:inflicts:stupefied] save against your spell DC.</p><hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} for 1 minute, and you regain 1 Focus Point, up to your normal maximum. You can't use Brain Drain again until after the next time you make your daily preparations.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature is @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 2}.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mental",
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +55,47 @@
       "name": "Dark Persona's Presence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FEMXDBCf8gXBYdez",
+        "folder": "laEbBsPaJOz5aay5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dark Persona's Presence",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You @UUID[Compendium.pf2e.actionspf2e.Item.Unleash Psyche]{Unleash your Psyche}.</p><hr /><p>When you Unleash your Psyche, all your rage and pain-the portion of your psyche dedicated to cruel retribution-come along with it.</p>\n<p>The force of your dark persona's negativity batters constantly against all creatures in a @Template[emanation|distance:30] when you Unleash your Psyche and for as long as your Psyche is Unleashed. A creature must attempt a @Check[will|against:occult|options:area-effect,inflicts:frightened] save against your spell DC the first time it enters the emanation, or if it's in the emanation when you take this action; it doesn't need to attempt a save again, even if it leaves the emanation and returns. A creature frightened by your Dark Persona's Presence can't decrease its frightened value below 1 while within the emanation.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3}.</p>\n<p>While your Psyche is Unleashed, your dark persona cares only for destruction. You can Cast a Spell only if it can directly damage an enemy or object or can impose a detrimental condition or penalty on one.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "aura",
+              "emotion",
+              "fear",
+              "mental",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +105,46 @@
       "name": "Mental Static",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7PlGRHizgieuYzDR",
+        "folder": "laEbBsPaJOz5aay5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Mental Static",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll a critical success on a Will save against a mental effect from a creature.</p>\n<hr />\n<p>Your thoughts sting back when a lesser mind tries to invade your own. You deal @Damage[@actor.level[mental]]{mental damage equal to your level} to the triggering creature. If you so desire, you can also send the creature a single mental image to coincide with the damage, such as a watchful eye or the dread of floating in an infinite sea.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mental",
+              "nonlethal",
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +154,84 @@
       "name": "Remove Presence",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c1QTcMtI9957gQoB",
+        "folder": "laEbBsPaJOz5aay5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Remove Presence",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your spell reaches into the mind of a creature and removes you from it. The amped cantrip must be one that has one or more targets and must either require a spell attack roll or have a saving throw. Use this amp in place of the psi cantrip's normal amp entry.</p><hr /><p><strong>Amp</strong> Choose one target of the spell or one creature in its area. If that enemy fails its save or the spell hits it, you become undetected by that creature, disappearing from its senses for 1 minute or until you use a hostile action. This is similar to being @UUID[Compendium.pf2e.conditionitems.Item.Invisible], but effects like <em>see the unseen </em>don't reveal you-you're affecting the target's mind, not its vision. <em>Truesight</em> can still see through this illusion if the counteract check succeeds.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "amp-spell"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Psychic.Amp.AlternateAmp",
+              "mergeable": true,
+              "option": "alternate-amp",
+              "placement": "spellcasting",
+              "priority": 51,
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "remove-presence"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:psi-cantrip",
+                "alternate-amp:remove-presence"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Psychic.Amp.RemovePresence"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "amp",
+              "illusion",
+              "mental",
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +241,63 @@
       "name": "Thoughtsense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NLyldMwxUWaanlzH",
+        "folder": "laEbBsPaJOz5aay5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thoughtsense",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can detect the flickers of mental activity let off by all thinking creatures. You gain @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.Thoughtsense] as a vague sense that has a range of 30 feet-like all vague senses, it's only about as precise as an average human's sense of smell, meaning you generally can predict only if a creature is present. Your thoughtsense detects only thinking creatures, so a creature that is unthinking or otherwise immune to mental effects (such as many constructs and oozes) can't be perceived using your thoughtsense, regardless of how precise it is.</p>\n<p>While your Psyche is Unleashed, your thoughtsense upgrades to an imprecise sense, letting you use it to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] out creatures.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "predicate": [
+                "self:effect:unleash-psyche"
+              ],
+              "range": 30,
+              "selector": "thoughtsense"
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "thoughtsense": {
+                "acuity": "vague",
+                "range": 30
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "mental",
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +307,83 @@
       "name": "Whispering Steps",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nwcsv54Vs4YBGFs9",
+        "folder": "laEbBsPaJOz5aay5",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whispering Steps",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your spell leaves a lingering connection between you and a creature-one through which you can nudge the creature's mind this way or that. The amped cantrip must take 2 or more actions to cast, target one or more creatures, and either require a spell attack roll or have a saving throw. Use this amp in place of the psi cantrip's normal amp entry.</p><hr /><p><strong>Amp</strong> Choose one enemy who is a target of the spell. If that enemy fails its save or the spell hits it, you whisper in the creature's mind, forcing it to @UUID[Compendium.pf2e.actionspf2e.Item.Stride] up to half its Speed in a direction of your choosing; as this is forced movement, you can't force the creature to move into hazardous terrain, off a ledge, or the like. After it moves, the creature becomes temporarily immune to this amp for 24 hours.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "disabledIf": [
+                {
+                  "not": "amp-spell"
+                }
+              ],
+              "disabledValue": false,
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Psychic.Amp.AlternateAmp",
+              "mergeable": true,
+              "option": "alternate-amp",
+              "placement": "spellcasting",
+              "priority": 51,
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "whispering-steps"
+                }
+              ],
+              "toggleable": true
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:tag:psi-cantrip",
+                "alternate-amp:whispering-steps"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Psychic.Amp.WhisperingSteps"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "amp",
+              "mental",
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

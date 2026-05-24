@@ -7,6 +7,65 @@
       "name": "Distracting Explosion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XPTSCUoA8c4o9RgQ",
+        "folder": "RI7Wht7RxGyl68dq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distracting Explosion",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature within your reach uses a concentrate action.</p><hr /><p>Your enemies think they can concentrate on something else while you're nearby? Oh, you'll give them a distraction, all right! Make a melee Strike against the triggering creature with a weapon or unarmed attack that is benefiting from your offensive boost. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>\n<p><strong>Unstable Function</strong> You pull out all the stops to create an explosive distraction. Add the unstable trait to Distracting Explosion. If the attack hits, you disrupt the triggering concentrate action.</p><hr /><p><strong>Special</strong> If your innovation is a minion, it can take this reaction instead of you, even though minions can't normally take reactions or act when it's not their turn. It uses your reaction for the turn to do so.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "offensive boost"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -16,6 +75,91 @@
       "name": "Electrify Armor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LvmYfUGX3uDCpIHY",
+        "folder": "RI7Wht7RxGyl68dq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Electrify Armor",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing your armor innovation.</p><hr /><p>You electrify your armor to punish foes who dare to attack you. For 1 round, any creature that touches you, or that hits you with a melee unarmed attack or a non-reach melee weapon attack, takes @Damage[1d4[electricity]|overrideTraits] damage. The effect ends if you cease wearing your armor innovation.</p>\n<p>If you have the revolutionary innovation class feature, the damage increases to 2d4.</p>\n<p><strong>Unstable Function</strong> You create an unstable chain reaction, sending countless sparks dancing across your armor. Add the unstable trait to Electrify Armor. The effects last for 1 minute instead of 1 round, and the damage dice increase from d4s to d12s.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Inventor.Unstable.UnstableFunction.Label",
+              "option": "unstable-state",
+              "toggleable": true
+            },
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "traits",
+              "value": "unstable"
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "add",
+              "predicate": [
+                "feature:revolutionary-innovation"
+              ],
+              "property": "dice-number",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "slug": "base",
+              "value": 1
+            },
+            {
+              "key": "DamageAlteration",
+              "mode": "upgrade",
+              "predicate": [
+                "unstable-state"
+              ],
+              "property": "dice-faces",
+              "selectors": [
+                "{item|id}-inline-damage"
+              ],
+              "slug": "base",
+              "value": 12
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -25,6 +169,54 @@
       "name": "Geobukseon Retaliation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WcvscJpQhbTiefwn",
+        "folder": "RI7Wht7RxGyl68dq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Geobukseon Retaliation",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p>\n<p><strong>Trigger</strong> You would take damage.</p><hr /><p>Your armor has a retractable spike-covered shell reminiscent of Hwanggot's heavily armored geobukseon, or \"turtle ships.\" The shell unfolds across your body, giving you a +4 circumstance bonus to AC and resistance 2 to bludgeoning, piercing, and slashing damage until the end of your next turn. Spiked chains propelled by small bursts of black powder also erupt from the shell, dealing @Damage[3d4[piercing],2[persistent,fire]|options:area-damage] damage (@Check[reflex|against:inventor|basic] save against your class DC) to all creatures in a @Template[type:emanation|distance:5].</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "armor innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Geobukseon Retaliation",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Geobukseon Retaliation"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "fire",
+              "inventor",
+              "modification",
+              "unstable"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +226,52 @@
       "name": "Helpful Tinkering",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qUSWPWxYF8gfhfHM",
+        "folder": "RI7Wht7RxGyl68dq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Helpful Tinkering",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p>You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a @Check[crafting|dc:@self.level|adjustment:2] check against a high DC for your level.</p><hr /><p><strong>Success</strong> For 1 minute, the chosen ally's Strikes with the chosen weapon gain the same offensive boost your innovation has.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Helpful Tinkering]</p>\n<p><strong>Critical Failure</strong> Your ally takes @Damage[1d6[@actor.flags.system.inventor.offensiveBoost]]{damage} of the type and amount that your offensive boost normally deals on a successful Strike.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "offensive boost"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor",
+              "manipulate"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -43,6 +281,47 @@
       "name": "Lock On",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "McnLGEZnUbtYCNDW",
+        "folder": "RI7Wht7RxGyl68dq",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lock On",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Aha! You lock on to your enemy's weak point to assist your construct companion in destroying it. When you Lock On, designate an enemy you can see. If your next action is to Command your construct, the construct gains a +2 circumstance bonus to attack rolls against the designated enemy until the end of the turn. If you use 2 actions for the Command, the bonus is instead a +3 circumstance bonus, or a +4 circumstance bonus if you're legendary in Crafting.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Lock On]</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "construct innovation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "inventor"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     }

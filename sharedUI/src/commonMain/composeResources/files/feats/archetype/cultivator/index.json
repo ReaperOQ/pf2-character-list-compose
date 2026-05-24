@@ -7,6 +7,62 @@
       "name": "Cultivator Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nRyfLEs9JfEX2CTc",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cultivator Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through an esoteric, often exacting, regimen of meditation, diet, and exercise, you've learned to transform your body's inner workings into a crucible of planar and spiritual energies. These austerities allow you to refine your body's vitality into qi, the foundation of all cultivation.</p>\n<p>You become an expert in Occultism. In addition, you gain the @UUID[Compendium.pf2e.spells-srd.Item.Adapt Self] domain spell as a focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity meditating to refine essence into qi, which circulates and refills your focus pool. Your cultivator focus spells are occult spells. You're trained in spell attack modifier and spell DC. Your key spellcasting attribute for these spells is Wisdom.</p>\n<p>Cultivator focus spells are treated as qi spells for prerequisites, counting the number of qi spells you possess and their effects, such as a jiang-shi's Drain Qi.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.RIOLY9LaX3qOnujl]{Cultivator}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Occultism"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.occultism.rank",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "spellcasting": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "rare",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -16,6 +72,56 @@
       "name": "Cultivator's Keen Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "X9UprPmeU3ovOgwb",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cultivator's Keen Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Attuned to all arrangements of qi, you gain lifesense as an imprecise sense with a range of 30 feet. You can also sense the presence of precious materials in the same range, which cultivators refer to as \"cultivation materials.\"</p>\n<p>When you participate in rituals, you can substitute all or part of the ritual's cost with an equivalent value of precious materials. This applies only to costs in valuable substances like diamonds, not to rituals that require specific items to function; the GM makes the call if it's unclear.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cultivator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "lifesense": {
+                "acuity": "imprecise",
+                "range": 30
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "occult"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +131,57 @@
       "name": "Ghost-Path Epiphany",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "G96zcEKvxtWLn701",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ghost-Path Epiphany",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Deviating from the orthodox path, you tread an inauspicious descent littered with flowers of death; this heretical choice will, in time, earn you the enmity and fear of more traditional cultivators. You become sanctified with the unholy trait. You also learn the @UUID[Compendium.pf2e.spells-srd.Item.Call Spirit] and @UUID[Compendium.pf2e.spells-srd.Item.Commune] rituals, which can be used to contact only undead or entities from the Void or the Netherworld.</p>\n<p>When you cast a ritual, you can reduce the number of secondary casters by 1 as you direct decaying fragments of your own soul, felled by your proximity to death, to assist with the ritual. When you do, you must fulfill any requirements for the secondary caster, and you attempt the secondary check normally performed by that secondary caster. You can't replace a secondary caster who's the target of the spell (as in the atone ritual).</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cultivator Dedication"
+              },
+              {
+                "value": "you aren't holy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "add": [
+                "unholy"
+              ],
+              "key": "ActorTraits"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -34,6 +191,47 @@
       "name": "Immortal Lightness",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SrTb0JpENFZ0i0mO",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Immortal Lightness",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You breathe, allowing your golden core to release qi into the meridians governing your lower body, and break into a burst of speed that could shame arrows in flight. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Athletic Rush] domain spell as a focus spell.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cultivator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +241,47 @@
       "name": "Lotus Above the Wind",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8lVLhQ0NhGIbQupI",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lotus Above the Wind",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your qi, dancing ever diligently toward cultivation, eludes the grasp of the world's muck and mire. When you cast your @UUID[Compendium.pf2e.spells-srd.Item.Adapt Self] or @UUID[Compendium.pf2e.spells-srd.Item.Athletic Rush] focus spells, you ignore difficult terrain until the end of your next turn.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Immortal Lightness"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +291,47 @@
       "name": "The Bitter Scholar's Promotion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "z3tH63RsLkVze82H",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Bitter Scholar's Promotion",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Tian Xia's shining cities belie its empires' long shadow of death, darkened by thousands of years of suffering and injustice. You pursue immortality not through tuft-hunting with Heaven's dragons or their imperial brats; yours is the power to crack its corrupt wheel, for you can now release the ghost gates to expedite the dead's revenge at being cheated of their fates.</p>\n<p>You cease aging and, regardless of your actual existential state, now register as an undead to effects that can detect undead (such as lifesense or spiritsense).</p>\n<p>In addition, you learn @UUID[Compendium.pf2e.spells-srd.Item.Create Undead] rituals for @UUID[Compendium.pf2e.book-of-the-dead-bestiary.Actor.Gashadokuro], @UUID[Compendium.pf2e.book-of-the-dead-bestiary.Actor.Provincial Jiang-shi]{Jiang-shi}, and @UUID[Compendium.pf2e.lost-omens-bestiary.Actor.Shui Gui]. On a success with one of these rituals, you gain the effects of a critical success instead.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ghost-Path Epiphany"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -61,6 +341,47 @@
       "name": "The Immortal Attains the Summit",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FXxVmdv9BRwkbgdU",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "The Immortal Attains the Summit",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your cultivation bearing glorious fruit, you behold Heaven's will. Returning from your vision of the Holy Mountain, you become an immortal with mystic potency over the terrestrial realms of wind and water.</p>\n<p>You cease aging and, regardless of your actual existential state, now register as a living being to effects that can detect living creatures (such as lifesense or spiritsense).</p>\n<p>In addition, you learn the @UUID[Compendium.pf2e.spells-srd.Item.Control Weather] and @UUID[Compendium.pf2e.spells-srd.Item.Plant Growth] rituals. You can use Occultism instead of Nature for these rituals. On a success with one of these rituals, you gain the effects of a critical success instead.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Three Pecks of Dew"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -70,6 +391,63 @@
       "name": "Three Clear Breaths",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FFHNGhVapUycx3f5",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Three Clear Breaths",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through your disciplined condensations and circulations of qi, you've caught a fleeting glimpse of cultivation's promise, and your health has handsomely profited along the way. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Breath Control], @UUID[Compendium.pf2e.feats-srd.Item.Diehard], and @UUID[Compendium.pf2e.feats-srd.Item.Fast Recovery] feats. You must meet the prerequisites for these feats as normal. For each of these feats you already have, you can instead gain a different feat from the following list: @UUID[Compendium.pf2e.feats-srd.Item.Canny Acumen], @UUID[Compendium.pf2e.feats-srd.Item.Fleet], and @UUID[Compendium.pf2e.feats-srd.Item.Toughness].</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cultivator Dedication"
+              },
+              {
+                "value": "Constitution +2"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Breath Control"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Diehard"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Fast Recovery"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -79,6 +457,57 @@
       "name": "Three Pecks of Dew",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Qg5M34t95rtT0sOp",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Three Pecks of Dew",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>At this stage of cultivation, your body is as much spirit as flesh. While still fettered to the physical realm, your form flourishes without needing conventional food or drink, and your natural healing now rivals that brought by scalpel and suture.</p>\n<p>You become sanctified with the holy trait. When you perform the Subsist downtime activity, you can use Occultism for the skill check (instead of the skills normally associated with your environment). If you do so, this activity gains the vitality trait as you subsist on ambient qi within your environment's dew-laden air and create shelter from solidified emanations of qi.</p>\n<p>Additionally, when you Refocus, you can also @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds] at the same time. If you do so, you can use Occultism for checks to Treat Wounds and disregard the need for a @UUID[Compendium.pf2e.equipment-srd.Item.Healer's Toolkit]; this activity gains the vitality trait as you circulate healing qi through your own body or transfuse your ally with healing qi.</p>"
+          },
+          "level": {
+            "value": 10
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cultivator Dedication"
+              },
+              {
+                "value": "you aren't unholy"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "add": [
+                "holy"
+              ],
+              "key": "ActorTraits"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 10,
       "category": "class"
     },
@@ -88,6 +517,53 @@
       "name": "Wisteria-and-Peony Reunion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "GnTh2t4MvjifRxBd",
+        "folder": "4sIhRrEL5t8HRuwK",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wisteria-and-Peony Reunion",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You Cast a focus spell.</p><hr /><p>Your roots of qi stand firm, shaking off pains and aches like the returning flowers and leaves shed during winter's snow. You @Damage[(@actor.level + @actor.system.resources.focus.max)[healing,vitality]]{regain Hit Points} equal to your level plus the maximum number of Focus Points in your focus pool.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Cultivator Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "healing",
+              "vitality"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

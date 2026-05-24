@@ -7,6 +7,64 @@
       "name": "Animal Companion (Ranger)",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "1JnERVwnPtX620f2",
+        "folder": "jdGPJwfPGSEFHbyl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animal Companion (Ranger)",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You gain the service of a young animal companion that travels with you and obeys simple commands. When you @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Prey], your animal companion gains the action's benefits and your hunter's edge benefit if you have one.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "action",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:hunt-prey",
+                {
+                  "not": "feat:masterful-companion"
+                }
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Ranger.AnimalCompanion.HuntPreyAddendum"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "otherTags": [
+              "hunters-edge-sharing"
+            ],
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -16,6 +74,43 @@
       "name": "Crossbow Ace",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CpjN7v1QN8TQFcvI",
+        "folder": "jdGPJwfPGSEFHbyl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crossbow Ace",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a crossbow with reload 1 or higher.</p>\n<hr />\n<p>Your deep understanding of the crossbow allows you to reload efficiently while moving yourself out of the line of return fire. Either @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion] or @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover], then Interact to reload. As normal, you must meet the requirements to Take Cover; you must be @UUID[Compendium.pf2e.conditionitems.Item.Prone], benefiting from cover, or near a feature that allows you to Take Cover.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -25,6 +120,44 @@
       "name": "Hunted Shot",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "c3b7DhnDBC7YEgRG",
+        "folder": "jdGPJwfPGSEFHbyl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hunted Shot",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged weapon with reload 0.</p><hr /><p>You take two quick shots against the one you hunt. Make two Strikes against your hunted prey with the required weapon. If both hit the same creature, combine their damage for the purpose of resistances and weaknesses. Apply your multiple attack penalty to each Strike normally.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -34,6 +167,44 @@
       "name": "Initiate Warden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iT39wlCEC1aWaSx7",
+        "folder": "jdGPJwfPGSEFHbyl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Initiate Warden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've trained with one of the ranger sects known as wardens, who practice a specialized type of primal magic. You gain your choice of one warden spell from these initial warden spells (or another you have access to).</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Gravity Weapon]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Heal Companion]</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Magic Hide]</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times, choosing a different initial warden spell each time.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -43,6 +214,43 @@
       "name": "Monster Hunter",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YTTJqRKH8QZl6al2",
+        "folder": "jdGPJwfPGSEFHbyl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Monster Hunter",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You quickly assess your prey and apply what you know. As part of the action used to Hunt your Prey, you can attempt a check to Recall Knowledge about your prey. When you critically succeed at identifying your hunted prey with @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge], you note a weakness in the creature's defenses in addition to any other benefits. You gain a +1 circumstance bonus to your next attack roll against that prey, and any ally you tell gains the same benefit. You can give bonuses from Monster Hunter only once per day against a particular creature.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Monster Hunter]</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     },
@@ -52,6 +260,44 @@
       "name": "Twin Takedown",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Gw0wGXikhAhiGoud",
+        "folder": "jdGPJwfPGSEFHbyl",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Twin Takedown",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding two melee weapons, each in a different hand.</p>\n<hr />\n<p>You swiftly attack your hunted prey with each of your weapons, potentially combining their damage into a single devastating attack. Make two Strikes against your hunted prey, one with each of the required weapons. If both hit the same hunted prey, combine their damage for the purpose of its resistances and weaknesses. Apply your multiple attack penalty to each Strike normally.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "ranger"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "class"
     }

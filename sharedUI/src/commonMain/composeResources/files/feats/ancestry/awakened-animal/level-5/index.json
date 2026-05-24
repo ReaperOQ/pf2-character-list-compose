@@ -7,6 +7,62 @@
       "name": "Fierce Grasp",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "2phzdvmFJaUUGDmY",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fierce Grasp",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have an opponent @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p>\n<hr />\n<p>Once you get your hands on someone, it's hard for them to get away. Your opponent takes a –2 circumstance penalty to their next attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Escape] from being grabbed or restrained by you, and you gain a +1 circumstance bonus to your AC against any attacks they make against you while you have them grabbed.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "climbing animal heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "fierce-grasp",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "fierce-grasp"
+              ],
+              "selector": "ac",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +72,64 @@
       "name": "Late Awakener",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RDObXSPRehPF09cm",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Late Awakener",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Whether due to a more gradual process or your animal and sapient sides being especially in conflict, your awakening was a little slower than most, but your eyes are now fully open and your abilities have returned. You gain all the mechanical benefits of the awakened animal heritage you selected at 1st level, allowing you to take feats and gain any benefits that require a specific awakened animal heritage.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You have a versatile heritage."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  "item:ancestry:awakened-animal"
+                ],
+                "itemType": "heritage"
+              },
+              "flag": "heritage",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.AwakenedAnimal.LateAwakener.Prompt"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.heritage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +139,47 @@
       "name": "Natural Ambassador",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SEvwIS22R92vDDMk",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Natural Ambassador",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You remember what it was like to speak easily with other animals, using old, familiar ways of communication to learn what they want and ask for favors in return. You can ask questions of, receive answers from, and use the Diplomacy skill with all animals, not just those of your kind. You gain a +1 circumstance bonus to Diplomacy when you do, or a +2 circumstance bonus with animals of your kind.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "awakened mind"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +189,47 @@
       "name": "Scurry!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UHJ93iBd1Q5iKbKa",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Scurry!",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative.</p>\n<hr />\n<p>Your instincts to move to safety are strong. You Stride; you must end your movement in a location where you have cover from at least one enemy you can see, and you can't take this action if it's impossible for you to do so. You can Climb, Fly, or Swim instead of Striding if you have the corresponding movement type.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Tiny size"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +239,73 @@
       "name": "Strong of Wing",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eWQCoF7zeYSyLgB5",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strong of Wing",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can fly with a greater distance. The fly Speed you gain from Take Flight increases to 25 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Take Flight"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:take-flight"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "take-flight",
+                {
+                  "not": "feat:full-flight"
+                }
+              ],
+              "selector": "fly-speed",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +315,50 @@
       "name": "Urban Jungle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qXBSXhgQYY1wVtya",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Urban Jungle",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Cities are just a new form of wilderness. You've adapted to this wilderness and now can navigate it as easily as where you once came from. When in an urban area, you can move at your full Speed while you @UUID[Compendium.pf2e.actionspf2e.Item.Track] and you can use your choice of Survival or Society to Track.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Fascinated by Society"
+              },
+              {
+                "value": "expert in Society or Survival"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +368,43 @@
       "name": "Wild Stride",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "u5ykPSdzrTTOvQ34",
+        "folder": "wnmRUU9den3HsfHw",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Wild Stride",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a free hand.</p>\n<hr />\n<p>You can move quickly when using your preferred modes of travel. Stride twice. You gain a +5-foot circumstance bonus to your Speed for these Strides, or a +10-foot circumstance bonus if you have two hands free.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "awakened-animal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

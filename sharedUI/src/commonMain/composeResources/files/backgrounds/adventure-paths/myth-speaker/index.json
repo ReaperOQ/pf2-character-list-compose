@@ -6,42 +6,511 @@
       "id": "J0SCT6yZgdf0DTTD",
       "name": "Beast Seeker",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "J0SCT6yZgdf0DTTD",
+        "folder": "4h6Y0ehALprvN9Pe",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Beast Seeker",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "dex",
+                "str"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>From jagged reefs to trackless forests to volcanoes dusted by snow even at this low latitude, Iblydos is home to fearsome creatures willing to eat civilians and snap ships in half. There might be no greater place to test one's monster-hunting credentials than this archipelago, much as countless hero-gods have done over the millennia. Perhaps you traveled here to learn how to slay leviathans and better defend your homeland from some bestial threat. You might instead value the esoteric properties of the slain creatures, knowing the alchemical potential of a hydra's eye or a medusa's venom. Whatever your motivation, you have honed tactics to trip and even tackle massive monsters.</p>\n<p>Choose two attribute boosts. One must be to <strong>Strength</strong> or <strong>Dexterity</strong>, and one is a free attribute boost.</p>\n<p>You're trained in either the Athletics or Thievery skill, as well as the Legendary Beast Lore skill. If you choose Athletics, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Titan Wrestler] skill feat. If you choose Thievery, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Dirty Trick] skill feat.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Myth-Speaker Player's Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Athletics",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Titan Wrestler",
+                    "skill": "athletics"
+                  }
+                },
+                {
+                  "label": "PF2E.Skill.Thievery",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Dirty Trick",
+                    "skill": "thievery"
+                  }
+                }
+              ],
+              "flag": "choice",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.choice.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.choice.feat}"
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Legendary Beast Lore"
+            ],
+            "value": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "child-of-the-polis.json",
       "id": "ovDOXEuRumNhMU5T",
       "name": "Child of the Polis",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "ovDOXEuRumNhMU5T",
+        "folder": "4h6Y0ehALprvN9Pe",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Child of the Polis",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "con",
+                "wis"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>You're a longtime Kardaji Bay resident. Rather than explore distant lands, you've strengthened your connection to Iblydos, learning its little-known secrets and making friends in every port. You know the cadence and body language needed to set strangers at ease and communicate belonging, making it easy to track down deals and leads. Who needs wealth and glory when they can revel in Iblydos's eclectic culture? That said, if anything threatens the isles, you'll be ready to rally your neighbors and fight back.</p>\n<p>Choose two attribute boosts. One must be to <strong>Constitution</strong> or <strong>Wisdom</strong>, and one is a free attribute boost.</p>\n<p>You're trained in either the Diplomacy or Society skill, as well as the Lore skill associated with one Iblydan city-state (Pol-Bailax or Pol-Dhuraxilis is recommended). If you choose Diplomacy, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Bargain Hunter] skill feat. If you choose Society, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Streetwise] skill feat.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Myth-Speaker Player's Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Diplomacy",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Bargain Hunter",
+                    "skill": "diplomacy"
+                  }
+                },
+                {
+                  "label": "PF2E.Skill.Society",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Streetwise",
+                    "skill": "society"
+                  }
+                }
+              ],
+              "flag": "choice",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.choice.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.choice.feat}"
+            }
+          ],
+          "trainedSkills": {
+            "lore": [],
+            "value": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "glory-hound.json",
       "id": "Lue29rc3ZDt64iyL",
       "name": "Glory Hound",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "Lue29rc3ZDt64iyL",
+        "folder": "4h6Y0ehALprvN9Pe",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Glory Hound",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "cha",
+                "str"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>Eventually, even the greatest hero-god must die. Yet many live eternally through song, poetry, shrines, and art. Even though Iblydos isn't producing new hero-gods, its people know how to appreciate and commemorate a real hero. You hope to seize that same immortality through exceptional deeds and a little luck. If everything goes to plan, you'll retire rich and famous, looking good all the while. If the fates turn against you, at the very least you know tales of your exploits will dazzle audiences for ages.</p>\n<p>Choose two attribute boosts. One must be to <strong>Strength</strong> or <strong>Charisma</strong>, and one is a free attribute boost.</p>\n<p>You're trained in either the Intimidation or Performance skill, as well as the Games Lore skill. If you choose Intimidation, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Intimidating Glare] skill feat. If you choose Performance, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Impressive Performance] skill feat.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Myth-Speaker Player's Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Intimidation",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Intimidating Glare",
+                    "skill": "intimidation"
+                  }
+                },
+                {
+                  "label": "PF2E.Skill.Performance",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Impressive Performance",
+                    "skill": "performance"
+                  }
+                }
+              ],
+              "flag": "choice",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.choice.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.choice.feat}"
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Games Lore"
+            ],
+            "value": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "kartaji-epicurean.json",
       "id": "UTqLL3df0thC36QK",
       "name": "Kartaji Epicurean",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "UTqLL3df0thC36QK",
+        "folder": "4h6Y0ehALprvN9Pe",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Kartaji Epicurean",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "con",
+                "int"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>Each city-state hides enough secrets to occupy an adventurer for a lifetime. Even so, many seek the varied experiences and sites at each of Iblydos's eminent cities. You have toured much of Kardaji Bay and the Iblydan archipelago, be that as a trader, an envoy, or a tourist. Along the way, you've incorporated local idioms, idiosyncrasies, and ingredients into your cosmopolitan lifestyle. You've most recently reached Bailax, ready for new adventures.</p>\n<p>Choose two attribute boosts. One must be to <strong>Constitution</strong> or <strong>Intelligence</strong>, and one is a free attribute boost.</p>\n<p>You're trained in either the Crafting or Society skill and the Cooking Lore skill. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat.</p>"
+          },
+          "items": {
+            "Hp98D": {
+              "img": "icons/sundries/books/book-red-exclamation.webp",
+              "level": 1,
+              "name": "Additional Lore",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Myth-Speaker Player's Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Crafting",
+                  "value": "crafting"
+                },
+                {
+                  "label": "PF2E.Skill.Society",
+                  "value": "society"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Cooking Lore"
+            ],
+            "value": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "obari-wanderer.json",
       "id": "KrlSyOoVcND109iT",
       "name": "Obari Wanderer",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "KrlSyOoVcND109iT",
+        "folder": "4h6Y0ehALprvN9Pe",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Obari Wanderer",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "dex",
+                "wis"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>For millennia, the Obari Crossing has been the lifeblood of Iblydos's economy. You're no stranger to these waters, having traveled the route before and learned to feel the currents' pulse. Did you begin your career far to the west in the Impossible Lands before sailing in search of fortune? Perhaps your first voyage involved a hold full of Vudran spices, textiles, and artwork bound for Absalom's markets or beyond. You might have even grown up in Iblydos, learning to ply the Obari Ocean and guide incoming merchants past treacherous reefs. Whatever the case, you're at home at sea—a priceless boon in this scattered archipelago.</p>\n<p>Choose two attribute boosts. One must be to <strong>Dexterity</strong> or <strong>Wisdom</strong>, and one is a free attribute boost.</p>\n<p>You're trained in either the Acrobatics or Survival skill, as well as the Sailing Lore skill. If you choose Acrobatics, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Cat Fall] skill feat. If you choose Survival, you gain the @UUID[Compendium.pf2e.feats-srd.Item.Terrain Expertise] skill feat (aquatic or forest terrain is recommended).</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Myth-Speaker Player's Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Acrobatics",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Cat Fall",
+                    "skill": "acrobatics"
+                  }
+                },
+                {
+                  "label": "PF2E.Skill.Survival",
+                  "value": {
+                    "feat": "Compendium.pf2e.feats-srd.Item.Terrain Expertise",
+                    "skill": "survival"
+                  }
+                }
+              ],
+              "flag": "choice",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.choice.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.choice.feat}"
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Sailing Lore"
+            ],
+            "value": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     },
     {
       "fileName": "student-of-apotheosis.json",
       "id": "pZg3dGKD5jAfcJ0E",
       "name": "Student of Apotheosis",
       "img": "systems/pf2e/icons/default-icons/background.svg",
-      "type": "background"
+      "type": "background",
+      "data": {
+        "_id": "pZg3dGKD5jAfcJ0E",
+        "folder": "4h6Y0ehALprvN9Pe",
+        "img": "systems/pf2e/icons/default-icons/background.svg",
+        "name": "Student of Apotheosis",
+        "system": {
+          "boosts": {
+            "0": {
+              "value": [
+                "cha",
+                "int"
+              ]
+            },
+            "1": {
+              "value": [
+                "cha",
+                "con",
+                "dex",
+                "int",
+                "str",
+                "wis"
+              ]
+            }
+          },
+          "description": {
+            "value": "<p>From subjects of worship to forces of nature that literally reshaped the region, hero-gods are central to Iblydan identity. While every child learns at least a little about their city-state's divinities from the past and present, you have devoured these legends. Do you long to have witnessed their miracles firsthand? Have you studied this topic as an academic, archivist, or priest? Perhaps you just love a good story. Whatever the case, these legends speak to you on an ineffable level. Are the fates hinting at some secret destiny: perhaps you're becoming a hero-god of old?</p>\n<p>Choose two attribute boosts. One must be to <strong>Intelligence</strong> or <strong>Charisma</strong>, and one is a free attribute boost.</p>\n<p>You're trained in either the Occultism or Religion skill, as well as the Hero-God Lore skill. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.My Legend Must Be Told] action. Replace this with the @UUID[Compendium.pf2e.actionspf2e.Item.Mythic Echo] action when you gain a mythic calling.</p>"
+          },
+          "items": {},
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Myth-Speaker Player's Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Occultism",
+                  "value": "occultism"
+                },
+                {
+                  "label": "PF2E.Skill.Religion",
+                  "value": "religion"
+                }
+              ],
+              "flag": "skill",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Skill"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.{item|flags.system.rulesSelections.skill}.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.My Legend Must Be Told"
+            }
+          ],
+          "trainedSkills": {
+            "lore": [
+              "Hero-God Lore"
+            ],
+            "value": []
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": []
+          }
+        },
+        "type": "background"
+      }
     }
   ]
 }

@@ -1,0 +1,376 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "ant-kholo.json",
+      "id": "udMXXjFirjARYr4p",
+      "name": "Ant Kholo",
+      "img": "icons/creatures/invertebrates/ant-strength-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "udMXXjFirjARYr4p",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/creatures/invertebrates/ant-strength-green.webp",
+        "name": "Ant Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>You're a sharp-featured, big-eared kholo about 3 feet tall. Many are skeptical that you are in fact a kholo. Your size is Small instead of Medium. You are trained in Deception (or another skill if you were already trained in Deception). You gain a +1 circumstance bonus to Deception checks to Lie when specifically claiming innocence, to Deception DCs against @UUID[Compendium.pf2e.actionspf2e.Item.Sense Motive] checks to uncover such lies, and to initiative checks when you roll Deception for initiative.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "deception"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:lie"
+              ],
+              "selector": "deception",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "CreatureSize",
+              "value": "small"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.deception.rank",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "cave-kholo.json",
+      "id": "JW45oQRHaqthjmIx",
+      "name": "Cave Kholo",
+      "img": "icons/environment/wilderness/cave-entrance-rocky.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "JW45oQRHaqthjmIx",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/environment/wilderness/cave-entrance-rocky.webp",
+        "name": "Cave Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>Storytellers spin ancient tales claiming that kholo lived in caves and underground before most of your kind ventured into the light. You're a throwback to these ancients, with a broad chest and markings that resemble short black slashes instead of spots. Your eyes are developed to see perfectly in the dark, a valuable advantage to your clan. You gain darkvision.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Sense",
+              "selector": "darkvision"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "dog-kholo.json",
+      "id": "0B0M6CUnVDkeznRv",
+      "name": "Dog Kholo",
+      "img": "icons/creatures/mammals/wolf-howl-moon-black.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "0B0M6CUnVDkeznRv",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/creatures/mammals/wolf-howl-moon-black.webp",
+        "name": "Dog Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>You're a nimble-bodied kholo with a prehistoric, almost dog-like build. Though you typically move like a quadruped, you can still stand and fight like a biped, allowing you to use all equipment normally. If you have both hands free, you can increase your Speed to 30 feet as you run on all fours.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "label": "PF2E.SpecificRule.Automaton.HunterAutomaton.ToggleLabel",
+              "option": "on-all-fours",
+              "toggleable": true
+            },
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "on-all-fours"
+              ],
+              "selector": "land",
+              "value": 30
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "great-kholo.json",
+      "id": "SqEcb1c3yeoJMxm0",
+      "name": "Great Kholo",
+      "img": "icons/creatures/mammals/wolf-shadow-black.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "SqEcb1c3yeoJMxm0",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/creatures/mammals/wolf-shadow-black.webp",
+        "name": "Great Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>You're an imposing, powerful kholo, with tawny fur and brown spots on your hide. You gain 10 Hit Points from your ancestry instead of 8 and gain a +1 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Reposition], @UUID[Compendium.pf2e.actionspf2e.Item.Shove], or @UUID[Compendium.pf2e.actionspf2e.Item.Trip].</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "action:shove",
+                    "action:trip",
+                    "action:reposition"
+                  ]
+                }
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "override",
+              "path": "system.attributes.ancestryhp",
+              "value": 10
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sweetbreath-kholo.json",
+      "id": "B89BCo6LtI3SJq54",
+      "name": "Sweetbreath Kholo",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "B89BCo6LtI3SJq54",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+        "name": "Sweetbreath Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>You're a striped, pale-furred kholo with oddly pleasant breath, which you can use to entrance your prey. You are trained in Diplomacy (or another skill if you were already trained in Diplomacy). You also gain a +1 circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression] if the target can smell your breath.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.diplomacy.rank",
+              "value": 1
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:make-an-impression",
+                "sweet-breath"
+              ],
+              "selector": "diplomacy",
+              "slug": "sweetbreath-kholo",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "winter-kholo.json",
+      "id": "hwRWx3hWx8ahBdz0",
+      "name": "Winter Kholo",
+      "img": "icons/creatures/mammals/dog-husky-white-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "hwRWx3hWx8ahBdz0",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/creatures/mammals/dog-husky-white-blue.webp",
+        "name": "Winter Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>You're a hardy kholo covered in thick, tufted fur that makes you able to survive in the harsh winters of the colder territories. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "witch-kholo.json",
+      "id": "kXp8qRh5AgtD4Izi",
+      "name": "Witch Kholo",
+      "img": "icons/commodities/treasure/dreamcatcher-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "kXp8qRh5AgtD4Izi",
+        "folder": "DdQTPkbUXQDfXSys",
+        "img": "icons/commodities/treasure/dreamcatcher-purple.webp",
+        "name": "Witch Kholo",
+        "system": {
+          "ancestry": {
+            "name": "Kholo",
+            "slug": "kholo",
+            "uuid": "Compendium.pf2e.ancestries.Item.vxbQ1Yw4qwgjTzqo"
+          },
+          "description": {
+            "value": "<p>You're a shaggy, dark-furred kholo capable of making some truly uncanny sounds. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Figment] cantrip as an occult innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. In addition, you gain a +1 circumstance bonus to checks to @UUID[Compendium.pf2e.actionspf2e.Item.Create a Diversion] and Impersonate when using only your voice.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "auditory",
+                {
+                  "or": [
+                    "action:impersonate",
+                    "action:create-a-diversion"
+                  ]
+                }
+              ],
+              "selector": "deception",
+              "type": "circumstance",
+              "value": 1
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:figment",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:figment",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:kholo"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

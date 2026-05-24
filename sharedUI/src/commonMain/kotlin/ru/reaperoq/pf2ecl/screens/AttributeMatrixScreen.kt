@@ -14,11 +14,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Info
@@ -49,6 +48,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import ru.reaperoq.pf2ecl.data.Attribute
 import ru.reaperoq.pf2ecl.data.CharacterBuilderViewModel
+import ru.reaperoq.pf2ecl.data.CharacterProgression
 import ru.reaperoq.pf2ecl.data.Translations
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,7 +60,8 @@ fun AttributeMatrixScreen(
 ) {
     val characterState by viewModel.characterState.collectAsState()
     val attributes = viewModel.calculateAttributes()
-    val customBoosts = characterState.freeBoosts
+    val boostTiers = CharacterProgression.unlockedAttributeBoostTiers(characterState.level)
+    val allBoostsComplete = CharacterProgression.areAllAttributeBoostsComplete(characterState)
 
     Scaffold(
         topBar = {
@@ -81,6 +82,7 @@ fun AttributeMatrixScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
                     .padding(horizontal = 24.dp, vertical = 16.dp)
             ) {
                 Card(
@@ -106,7 +108,7 @@ fun AttributeMatrixScreen(
                                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold)
                             )
                             Text(
-                                "Характеристики персонажа хранятся в виде чистых модификаторов. Базовый уровень всех характеристик равен +0. Каждое улучшение (Boost) дает +1, а штраф (Flaw) дает -1.",
+                                "На 1, 5, 10, 15 и 20 уровнях персонаж получает 4 свободных улучшения характеристик. Каждую характеристику можно улучшить только один раз в рамках одного набора.",
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -116,65 +118,89 @@ fun AttributeMatrixScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Свободные улучшения 1-го уровня",
-                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
-                    )
-                    SuggestionChip(
-                        onClick = {},
-                        label = { Text("Выбрано: ${customBoosts.size} из 4") },
-                        colors = SuggestionChipDefaults.suggestionChipColors(
-                            containerColor = if (customBoosts.size == 4) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant
+                boostTiers.forEach { tier ->
+                    val tierBoosts = CharacterProgression.attributeBoostsForTier(characterState, tier)
+                    val tierComplete = tierBoosts.size == CharacterProgression.BOOSTS_PER_TIER
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = if (tier == 1) "Свободные улучшения 1-го уровня" else "Свободные улучшения $tier-го уровня",
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
                         )
-                    )
-                }
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "Выберите ровно 4 характеристики, чтобы получить свободные классовые улучшения. Каждую характеристику можно улучшить здесь только один раз.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                        SuggestionChip(
+                            onClick = {},
+                            label = { Text("Выбрано: ${tierBoosts.size} из ${CharacterProgression.BOOSTS_PER_TIER}") },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (tierComplete) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant
+                            )
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
 
-                Spacer(modifier = Modifier.height(20.dp))
+                    val columnsCount = if (isWideScreen) 3 else 1
+                    val chunkedAttributes = Attribute.entries.chunked(columnsCount)
 
-                val columnsCount = if (isWideScreen) 3 else 1
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(columnsCount),
-                    horizontalArrangement = Arrangement.spacedBy(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp),
-                    modifier = Modifier.weight(1f)
-                ) {
-                    items(Attribute.entries) { attr ->
-                        val finalMod = attributes[attr] ?: 0
-                        val isCustomBoosted = customBoosts.contains(attr)
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        chunkedAttributes.forEach { rowAttrs ->
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                            ) {
+                                rowAttrs.forEach { attr ->
+                                    Box(modifier = Modifier.weight(1f)) {
+                                        val finalMod = attributes[attr] ?: 0
+                                        val isTierBoosted = tierBoosts.contains(attr)
 
-                        val hasAncestryBoost = characterState.ancestryBoosts.values.contains(attr)
-                        val hasAncestryFlaw = characterState.ancestry?.system?.flaws?.values
-                            ?.flatMap { it.value }
-                            ?.mapNotNull { Attribute.fromId(it) }
-                            ?.contains(attr) == true
-                        val hasBackgroundBoost = characterState.backgroundBoosts.values.contains(attr)
-                        val isClassKey = characterState.classBoost == attr || 
-                            (characterState.classData?.system?.keyAbility?.value?.size == 1 && 
-                             Attribute.fromId(characterState.classData?.system?.keyAbility?.value?.first() ?: "") == attr)
+                                        val hasAncestryBoost = characterState.ancestryBoosts.values.contains(attr)
+                                        val hasAncestryFlaw = characterState.ancestry?.system?.flaws?.values
+                                            ?.flatMap { it.value }
+                                            ?.mapNotNull { Attribute.fromId(it) }
+                                            ?.contains(attr) == true
+                                        val hasBackgroundBoost = characterState.backgroundBoosts.values.contains(attr)
+                                        val isClassKey = characterState.classBoost == attr ||
+                                            (characterState.classData?.system?.keyAbility?.value?.size == 1 &&
+                                                Attribute.fromId(characterState.classData?.system?.keyAbility?.value?.first() ?: "") == attr)
 
-                        AttributeDetailCard(
-                            attribute = attr,
-                            finalValue = finalMod,
-                            hasAncestryBoost = hasAncestryBoost,
-                            hasAncestryFlaw = hasAncestryFlaw,
-                            hasBackgroundBoost = hasBackgroundBoost,
-                            isClassKey = isClassKey,
-                            isCustomBoosted = isCustomBoosted,
-                            onToggleBoost = {
-                                viewModel.toggleFreeBoost(attr)
+                                        AttributeDetailCard(
+                                            attribute = attr,
+                                            finalValue = finalMod,
+                                            hasAncestryBoost = hasAncestryBoost,
+                                            hasAncestryFlaw = hasAncestryFlaw,
+                                            hasBackgroundBoost = hasBackgroundBoost,
+                                            isClassKey = isClassKey,
+                                            isCustomBoosted = isTierBoosted,
+                                            tierLabel = if (tier == 1) "Свободное улучшение (+1)" else "Улучшение $tier-го уровня (+1)",
+                                            showBreakdown = tier == boostTiers.first(),
+                                            hasFreeBoost1 = characterState.freeBoosts.contains(attr),
+                                            levelBoostTiers = if (tier == boostTiers.first()) {
+                                                characterState.attributeBoosts.filterKeys { it in boostTiers && it != 1 }
+                                            } else emptyMap(),
+                                            onToggleBoost = {
+                                                viewModel.toggleAttributeBoostTier(tier, attr)
+                                            }
+                                        )
+                                    }
+                                }
+                                if (rowAttrs.size < columnsCount) {
+                                    repeat(columnsCount - rowAttrs.size) {
+                                        Spacer(modifier = Modifier.weight(1f))
+                                    }
+                                }
                             }
-                        )
+                        }
+                    }
+
+                    if (tier != boostTiers.last()) {
+                        Spacer(modifier = Modifier.height(20.dp))
+                        HorizontalDivider()
+                        Spacer(modifier = Modifier.height(20.dp))
                     }
                 }
 
@@ -190,7 +216,7 @@ fun AttributeMatrixScreen(
                     }
                     Button(
                         onClick = onGenerate,
-                        enabled = customBoosts.size == 4,
+                        enabled = allBoostsComplete,
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                     ) {
                         Text("Сгенерировать лист персонажа")
@@ -210,6 +236,10 @@ fun AttributeDetailCard(
     hasBackgroundBoost: Boolean,
     isClassKey: Boolean,
     isCustomBoosted: Boolean,
+    tierLabel: String = "Свободное улучшение (+1)",
+    showBreakdown: Boolean = true,
+    hasFreeBoost1: Boolean = false,
+    levelBoostTiers: Map<Int, Set<Attribute>> = emptyMap(),
     onToggleBoost: () -> Unit
 ) {
     val finalSign = if (finalValue >= 0) "+$finalValue" else "$finalValue"
@@ -253,20 +283,27 @@ fun AttributeDetailCard(
                 }
             }
 
-            HorizontalDivider()
+            if (showBreakdown) {
+                HorizontalDivider()
 
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(
-                    "Источники улучшения:",
-                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                    color = MaterialTheme.colorScheme.primary
-                )
-                BreakdownRow(label = "Базовое значение", value = "+0")
-                if (hasAncestryBoost) BreakdownRow(label = "Родословная (Ancestry)", value = "+1", isBoost = true)
-                if (hasAncestryFlaw) BreakdownRow(label = "Штраф родословной", value = "-1", isFlaw = true)
-                if (hasBackgroundBoost) BreakdownRow(label = "Предыстория (Background)", value = "+1", isBoost = true)
-                if (isClassKey) BreakdownRow(label = "Ключевая характеристика класса", value = "+1", isBoost = true)
-                if (isCustomBoosted) BreakdownRow(label = "Свободное улучшение героя", value = "+1", isBoost = true)
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text(
+                        "Источники улучшения:",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    BreakdownRow(label = "Базовое значение", value = "+0")
+                    if (hasAncestryBoost) BreakdownRow(label = "Родословная (Ancestry)", value = "+1", isBoost = true)
+                    if (hasAncestryFlaw) BreakdownRow(label = "Штраф родословной", value = "-1", isFlaw = true)
+                    if (hasBackgroundBoost) BreakdownRow(label = "Предыстория (Background)", value = "+1", isBoost = true)
+                    if (isClassKey) BreakdownRow(label = "Ключевая характеристика класса", value = "+1", isBoost = true)
+                    if (hasFreeBoost1) BreakdownRow(label = "Свободное улучшение 1-го уровня", value = "+1", isBoost = true)
+                    levelBoostTiers.forEach { (tier, attrs) ->
+                        if (attrs.contains(attribute)) {
+                            BreakdownRow(label = "Улучшение $tier-го уровня", value = "+1", isBoost = true)
+                        }
+                    }
+                }
             }
 
             Box(
@@ -290,7 +327,7 @@ fun AttributeDetailCard(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
-                        text = "Свободное улучшение (+1)",
+                        text = tierLabel,
                         style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold)
                     )
                     Checkbox(

@@ -7,6 +7,74 @@
       "name": "Defensive Recovery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "d1ktdX1Fk37dG5ms",
+        "folder": "KfXn4bBzJe4gs5Y0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Defensive Recovery",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your faith provides temporary protection in addition to healing. If the next action you use is to cast @UUID[Compendium.pf2e.spells-srd.Item.Harm] or @UUID[Compendium.pf2e.spells-srd.Item.Heal] on a single target and the target regains Hit Points from the spell, it also gains a +2 status bonus to AC and saving throws for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Defensive Recovery]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "spellshape:defensive-recovery"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Spellshape.DefensiveRecovery"
+                }
+              ]
+            },
+            {
+              "key": "RollOption",
+              "label": "PF2E.TraitSpellshape",
+              "mergeable": true,
+              "option": "spellshape",
+              "placement": "spellcasting",
+              "suboptions": [
+                {
+                  "label": "{item|name}",
+                  "value": "defensive-recovery"
+                }
+              ],
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "concentrate",
+              "spellshape"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +84,47 @@
       "name": "Domain Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vVhgYkOU9mPTGTxF",
+        "folder": "KfXn4bBzJe4gs5Y0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Domain Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your devotion to your deity's domains grows greater, and so does the power granted to you. Whenever you Refocus, completely refill your focus pool.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "one or more domain spells"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +134,47 @@
       "name": "Emblazon Antimagic",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xAFdoKl7aOP9rVkl",
+        "folder": "KfXn4bBzJe4gs5Y0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Emblazon Antimagic",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your deity's symbol protects against offensive magic. When you Emblazon an Armament, you can choose from the following effects instead of the effects listed in that feat. These effects have the same restrictions as the base options.</p>\n<ul>\n<li><strong>Shield</strong> When the wielder has the shield raised, they gain the shield's circumstance bonus to saving throws against magic, and they can use Shield Block against damage from their enemies' spells.</li>\n<li><strong>Weapon</strong> When the weapon's wielder critically hits with the weapon, they can attempt to counteract a spell on their target, using half their level, rounded up, as the counteract rank. If they attempt to do so, the emblazoned symbol immediately disappears.</li>\n</ul>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Emblazon Antimagic]</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Emblazon Armament"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +184,44 @@
       "name": "Fortunate Relief",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TzLl1YwivNqCdgIL",
+        "folder": "KfXn4bBzJe4gs5Y0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fortunate Relief",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your god favors your attempts to remove afflictions and conditions. When you cast a healing spell that attempts to counteract an effect, you can roll the counteract check twice and take the higher value.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -43,6 +231,48 @@
       "name": "Sapping Symbol",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UPTQ9oIpz0bTJf3M",
+        "folder": "KfXn4bBzJe4gs5Y0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Sapping Symbol",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> While you have your symbol raised, you are about to take damage from a melee attack.</p>\n<hr />\n<p>Your religious symbol glows with sacred energy, turning the attacker's strength to weakness. Attempt a @Check[religion|defense:will] check against the triggering creature's Will DC. Regardless of the result, the creature is temporarily immune for 1 minute.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 2} until it spends at least 1 action moving away from you.</p>\n<p><strong>Success</strong> As critical success, but @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1}.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Raise Symbol"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric",
+              "divine"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -52,6 +282,57 @@
       "name": "Shared Replenishment",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mTkbgFOHJUBl0Qwg",
+        "folder": "KfXn4bBzJe4gs5Y0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shared Replenishment",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When your deity blesses your warlike acts, you can extend that favor to your allies. You can grant the temporary Hit Points from @UUID[Compendium.pf2e.feats-srd.Item.Replenishment of War] to an ally within 10 feet instead of gaining them yourself. You can grant these temporary Hit Points to a different ally each time, meaning you might be able to grant them to multiple creatures in a single turn.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Replenishment of War"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "item:deity-favored"
+              ],
+              "selector": "strike-damage",
+              "text": "PF2E.SpecificRule.Cleric.SharedReplenishment.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cleric"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

@@ -7,6 +7,47 @@
       "name": "Absorb Strength",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iFSy6WtIUUKSYP2C",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Absorb Strength",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> You are adjacent to an enemy's corpse who has been dead for no longer than 1 minute.</p><hr /><p>You consume a piece of your enemy, absorbing their strength. You gain temporary Hit Points equal to the enemy's level that last for 1 minute.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +57,73 @@
       "name": "Affliction Resistance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5oazhjGmSwfPTlh3",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Affliction Resistance",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your diet has strengthened you against diseases and poisons. You gain a +1 circumstance bonus to saving throws against diseases and poisons. If you roll a success on a saving throw against a disease or poison, you get a critical success instead. If you have a different ability that would improve the save in this way (such as the @UUID[Compendium.pf2e.classfeatures.Item.Battle Hardened] fighter class feature), if you roll a critical failure on the save you get a failure instead.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw"
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:disease",
+                    "item:trait:poison"
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +133,70 @@
       "name": "Distant Cackle",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "P19AnciwNcSqxU7z",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Distant Cackle",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>It takes a very brave person to enter the laughter-haunted forest where you dwell. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Ventriloquism] once per day as a 1st-rank occult innate spell.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "witch kholo heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:ventriloquism",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:ventriloquism",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:kholo"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +206,47 @@
       "name": "Left-Hand Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7XA3Hm2md2tU9pEz",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Left-Hand Blood",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>It's said that the flesh of the right side of a hyena can heal diseases, but that the flesh of the left side is deadly and poisonous. You deal @Damage[1[slashing]|immutable:true] damage to yourself to poison a weapon you are holding. If you hit with the weapon and deal damage, the target also takes @Damage[1d4[persistent,poison]] damage. The poison on your weapon becomes inert after you hit, or at the end of your next turn, whichever comes first.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Left-Hand Blood]</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +256,52 @@
       "name": "Pack Stalker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0FqbyC5tR2DC0DOk",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Pack Stalker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Ambushes are an honored kholo tradition. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Terrain Stalker] feat and can extend its effects to a single ally so long as they remain within 10 feet of you. If you have master proficiency in Stealth, you can extend the effect to two allies. If you have legendary proficiency in Stealth, you can extend it to four allies.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "expert in Stealth"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Stalker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -52,6 +311,48 @@
       "name": "Rabid Sprint",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kvhouG3yJ2vQkzah",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rabid Sprint",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have both your hands free.</p><hr /><p>You run on all fours as fast as you can. Stride three times.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "dog kholo heritage"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -61,6 +362,61 @@
       "name": "Right-Hand Blood",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hrITlxkBqHvaiiRS",
+        "folder": "LJtvngKeaiVlqEB2",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Right-Hand Blood",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>It's said that the flesh of the right side of a hyena can heal diseases, but that the flesh of the left side is deadly and poisonous. You can deal @Damage[1[slashing]] damage to yourself to feed someone blood from your right side and Administer First Aid or take @Damage[2d8[untyped]] damage to @UUID[Compendium.pf2e.actionspf2e.Item.Treat Disease] or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds]; in either case, you don't need a healer's toolkit, and you gain a +1 item bonus to your check. Blood from your left side causes the check to critically fail automatically.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "fromEquipment": false,
+              "key": "FlatModifier",
+              "predicate": [
+                "right-hand-blood",
+                {
+                  "or": [
+                    "action:treat-wounds",
+                    "action:treat-disease",
+                    "action:administer-first-aid"
+                  ]
+                }
+              ],
+              "selector": "medicine",
+              "type": "item",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kholo"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

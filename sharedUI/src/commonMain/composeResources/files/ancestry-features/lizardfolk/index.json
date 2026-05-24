@@ -7,6 +7,51 @@
       "name": "Aquatic Adaptation",
       "img": "systems/pf2e/icons/features/ancestry//aquatic-adaptation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AzGJN1wwLFaLJIeo",
+        "folder": "h3RpR4ckGkmOOhl3",
+        "img": "systems/pf2e/icons/features/ancestry//aquatic-adaptation.webp",
+        "name": "Aquatic Adaptation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>Your reptilian biology allows you to hold your breath for a long time. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Breath Control] general feat as a bonus feat.</p>"
+          },
+          "level": {
+            "value": 0
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Breath Control"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "lizardfolk": "Lizardfolk"
+            },
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 0,
       "category": "ancestryfeature"
     },
@@ -16,6 +61,79 @@
       "name": "Claws",
       "img": "systems/pf2e/icons/features/ancestry/claws.webp",
       "type": "feat",
+      "data": {
+        "_id": "NfkxFWUeG6g41e8w",
+        "folder": "h3RpR4ckGkmOOhl3",
+        "img": "systems/pf2e/icons/features/ancestry/claws.webp",
+        "name": "Claws",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestryfeature",
+          "description": {
+            "value": "<p>Your sharp claws offer an alternative to the fists other humanoids bring to a fight. You have a claw unarmed attack that deals 1d4 slashing damage and has the agile and finesse traits.</p>"
+          },
+          "level": {
+            "value": 0
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "key": "Strike",
+              "label": "PF2E.Weapon.Base.claw",
+              "range": null,
+              "slug": "claw",
+              "traits": [
+                "finesse",
+                "agile",
+                "unarmed"
+              ]
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:id:{item|id}"
+              ],
+              "priority": 119,
+              "property": "other-tags",
+              "value": "lizardfolk-claws"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "lizardfolk": "Lizardfolk"
+            },
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 0,
       "category": "ancestryfeature"
     }

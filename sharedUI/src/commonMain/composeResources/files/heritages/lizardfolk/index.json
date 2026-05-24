@@ -1,0 +1,422 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "bakuwa-lizardfolk.json",
+      "id": "OIW3UYrdaWLwUZCh",
+      "name": "Bakuwa Lizardfolk",
+      "img": "icons/commodities/bones/bones-dragon-grey.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "OIW3UYrdaWLwUZCh",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "icons/commodities/bones/bones-dragon-grey.webp",
+        "name": "Bakuwa Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>Your body is covered in bony plates. Your plates are medium armor in the plate armor group that grant a +4 item bonus to AC, a Dex cap of +1, a check penalty of –2, a Speed penalty of –5 feet, a Strength value of +3, and have the aquadynamic and comfort traits. You can never wear other armor or remove your plates. You can etch armor runes onto your plates.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Bakuwa Lizardfolk Bony Plates"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "cliffscale-lizardfolk.json",
+      "id": "OoUqJJB77VfWbWRM",
+      "name": "Cliffscale Lizardfolk",
+      "img": "systems/pf2e/icons/features/ancestry/cliifscale-lizardfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "OoUqJJB77VfWbWRM",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "systems/pf2e/icons/features/ancestry/cliifscale-lizardfolk.webp",
+        "name": "Cliffscale Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>Your toes are adapted for gripping and climbing. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Combat Climber] feat as a bonus feat, and as long as you aren't wearing footwear, you can use the sticky pads on your feet to climb, leaving your hands free. Additionally, if you roll a success on an Athletics check to climb, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Combat Climber"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:climb"
+              ],
+              "selector": "athletics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "cloudleaper-lizardfolk.json",
+      "id": "sEnMG5zbnXdJvVPz",
+      "name": "Cloudleaper Lizardfolk",
+      "img": "icons/creatures/reptiles/dragon-winged-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "sEnMG5zbnXdJvVPz",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "icons/creatures/reptiles/dragon-winged-blue.webp",
+        "name": "Cloudleaper Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>Your body is light with flaps of skin along your limbs that catch the air that passes beneath you. As long as you can act and have enough room, you can open the flaps to slow any fall just enough to avoid taking damage (whether you have the room to do so depends on the GM's discretion).</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "frilled-lizardfolk.json",
+      "id": "6rIIsZg3tOyIU3g3",
+      "name": "Frilled Lizardfolk",
+      "img": "systems/pf2e/icons/features/ancestry/frilled-lizardfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "6rIIsZg3tOyIU3g3",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "systems/pf2e/icons/features/ancestry/frilled-lizardfolk.webp",
+        "name": "Frilled Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>You can flare your neck frill and flex your dorsal spines, Demoralizing your foes. When you do, @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] loses the auditory trait and gains the visual trait, and you don't take a penalty when you attempt to Demoralize a creature that doesn't understand your language. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.Threatening Approach] action.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Threatening Approach"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "makari-lizardfolk.json",
+      "id": "e6ykfotynKPzR2PT",
+      "name": "Makari Lizardfolk",
+      "img": "icons/magic/nature/meteorite-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "e6ykfotynKPzR2PT",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "icons/magic/nature/meteorite-purple.webp",
+        "name": "Makari Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>You have a trunk-like snout and a connection to the divine. The tradition of any spells or magical abilities you gain from a lizardfolk heritage or ancestry feat is divine instead of its normal tradition (usually primal).</p>\n<p>You gain your choice of the @UUID[Compendium.pf2e.spells-srd.Item.Divine Lance] or @UUID[Compendium.pf2e.spells-srd.Item.Forbidding Ward] cantrips, which you can cast as a divine innate cantrip at will. A cantrip is heightened to a spell rank equal to half your level rounded up. When you cast this cantrip, it loses the manipulate trait, as you cast purely by roaring and flaring your trunk.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": {
+                "filter": [
+                  {
+                    "or": [
+                      "item:slug:forbidding-ward",
+                      "item:slug:divine-lance"
+                    ]
+                  }
+                ],
+                "itemType": "spell",
+                "slugsAsValues": true
+              },
+              "flag": "cantrip",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Prompt.Cantrip"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.cantrip}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.cantrip}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:lizardfolk"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "remove",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.cantrip}",
+                "spellcasting:innate"
+              ],
+              "property": "traits",
+              "value": "manipulate"
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "lizardfolk"
+            ]
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "sandstrider-lizardfolk.json",
+      "id": "6xxXtgj3fcCi53lt",
+      "name": "Sandstrider Lizardfolk",
+      "img": "systems/pf2e/icons/features/ancestry/sandstrider-lizardfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "6xxXtgj3fcCi53lt",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "systems/pf2e/icons/features/ancestry/sandstrider-lizardfolk.webp",
+        "name": "Sandstrider Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>Your thick scales help you retain water and combat the sun's glare. You gain fire resistance equal to half your level (minimum 1). Environmental heat effects are one step less extreme for you, and you can go 10 times as long as normal before you are affected by starvation or thirst. However, unless you wear protective gear or take shelter, environmental cold effects are one step more extreme for you.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "fire",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "unseen-lizardfolk.json",
+      "id": "VYfpTUuXJM3iBOz0",
+      "name": "Unseen Lizardfolk",
+      "img": "systems/pf2e/icons/features/ancestry/unseen-lizardfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "VYfpTUuXJM3iBOz0",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "systems/pf2e/icons/features/ancestry/unseen-lizardfolk.webp",
+        "name": "Unseen Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>You can change your skin color to blend in with your surroundings, making minor shifts with a single action and dramatic changes over the course of an hour. When you're in an area where your coloration is roughly similar to the environment (for instance, forest green in a forest), you can use the minor, single-action application of this ability to make localized changes that help you blend into your surroundings, gaining a +2 circumstance bonus to Stealth checks until your surroundings change in coloration or pattern.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "coloration-matches"
+              ],
+              "selector": "stealth",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "wetlander-lizardfolk.json",
+      "id": "dJeiekfqGQ8dkwsO",
+      "name": "Wetlander Lizardfolk",
+      "img": "systems/pf2e/icons/features/ancestry/wetlander-lizardfolk.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "dJeiekfqGQ8dkwsO",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "systems/pf2e/icons/features/ancestry/wetlander-lizardfolk.webp",
+        "name": "Wetlander Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>Your family is descended from the most common lizardfolk heritage, and you are accustomed to aquatic environments. You gain a 15-foot swim Speed.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "swim",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "woodstalker-lizardfolk.json",
+      "id": "TQFE10VFvh9wb8zb",
+      "name": "Woodstalker Lizardfolk",
+      "img": "icons/magic/nature/tree-spirit-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "TQFE10VFvh9wb8zb",
+        "folder": "Tz2Pzy7TnDEnUJmH",
+        "img": "icons/magic/nature/tree-spirit-green.webp",
+        "name": "Woodstalker Lizardfolk",
+        "system": {
+          "ancestry": {
+            "name": "Lizardfolk",
+            "slug": "lizardfolk",
+            "uuid": "Compendium.pf2e.ancestries.Item.HWEgF7Gmoq55VhTL"
+          },
+          "description": {
+            "value": "<p>You move easily through thick forest and jungle, using every branch or bush. You can always use the @UUID[Compendium.pf2e.actionspf2e.Item.Take Cover] action when in forest or jungle terrain to gain cover, even if you're not next to an obstacle you would normally be able to Take Cover behind. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Terrain Stalker] feat, even if you're not trained in Stealth, and you must choose underbrush as your chosen terrain.</p>"
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "preselectChoices": {
+                "terrain-stalker": "underbrush"
+              },
+              "uuid": "Compendium.pf2e.feats-srd.Item.Terrain Stalker"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

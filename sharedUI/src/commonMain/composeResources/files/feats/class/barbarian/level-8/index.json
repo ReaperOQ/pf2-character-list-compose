@@ -7,6 +7,55 @@
       "name": "Animalistic Brutality",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "L1fnOLZQX68kTmHF",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Animalistic Brutality",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You deepen the connection into your animal instincts. Your unarmed attack from bestial rage gains one of the following traits until you stop raging: backswing, forceful, parry, razing, or sweep. You can't use this ability again until the next time you @UUID[Compendium.pf2e.actionspf2e.Item.Rage]. You can choose a different trait each time you use Animalistic Brutality.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Animal Instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Animalistic Brutality",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Animalistic Brutality"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "morph",
+              "primal",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -16,6 +65,49 @@
       "name": "Disarming Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nL82Dzh0QwkNkJDA",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disarming Assault",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You attack with enough force to knock the weapon out of your foe's hands. Make a melee Strike; if you hit, you can attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] that enemy.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "flourish",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +117,72 @@
       "name": "Follow-Up Assault",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "9Q0tPGtOawPTU2TU",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Follow-Up Assault",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You used your previous action to make a melee Strike that missed.</p><hr /><p>Even in the face of failure you press the attack, determined to succeed. Make a Strike with the same weapon, adding the backswing and forceful weapon traits to that Strike.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "follow-up-assault",
+              "toggleable": true
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:melee",
+                "follow-up-assault"
+              ],
+              "property": "traits",
+              "value": "backswing"
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:melee",
+                "follow-up-assault"
+              ],
+              "property": "traits",
+              "value": "forceful"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -34,6 +192,45 @@
       "name": "Friendly Toss",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "V9kShXu84NlORfcg",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Friendly Toss",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are adjacent to an ally and have one or more hands free.</p><hr /><p>You toss your friends around the battlefield. Pick up an adjacent ally of your size or smaller and throw them to an unoccupied space you can see within 30 feet. Their movement doesn't trigger reactions. Your ally ends this movement on their feet and doesn't take damage from the fall. If your ally ends this movement within melee reach of at least one enemy, they can use their reaction to make a melee Strike against such an enemy.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "manipulate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -43,6 +240,58 @@
       "name": "Furious Bully",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cA1IIy6UEsgETXiX",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Furious Bully",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You bully foes across the battlefield. While raging, you gain a +2 circumstance bonus to Athletics checks for attack actions.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "master in Athletics"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:rage",
+                "attack"
+              ],
+              "selector": "athletics",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -52,6 +301,47 @@
       "name": "Instinctive Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LVTquA3DpqCJDika",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Instinctive Strike",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You trust your instincts and your sense of smell, using all your senses to pinpoint your opponent's location. When you make a melee Strike against an opponent you're detecting using scent, ignore any flat check required due to the target being @UUID[Compendium.pf2e.conditionitems.Item.Concealed] or @UUID[Compendium.pf2e.conditionitems.Item.Hidden].</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Acute Scent or scent"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -61,6 +351,61 @@
       "name": "Invulnerable Rager",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FGtiEx0yYHu16mN1",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Invulnerable Rager",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Even the heaviest armors serve only to enhance your unbridled fury. You are trained in heavy armor. Whenever you gain a barbarian class feature that grants you expert or greater proficiency in medium armor, you also gain that proficiency in heavy armor. If you have the @UUID[Compendium.pf2e.actionspf2e.Item.Quick-Tempered] action, you can use it while wearing heavy armor.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.proficiencies.defenses.heavy.rank",
+              "predicate": [
+                "class:barbarian"
+              ],
+              "priority": 41,
+              "value": "ternary(gte(@actor.level,19),3,ternary(gte(@actor.level,13),2,1))"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {
+              "heavy": {
+                "rank": 1
+              }
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -70,6 +415,49 @@
       "name": "Renewed Vigor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "3hhCDWPm021hvicR",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Renewed Vigor",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Through the haze of battle, you quickly recover your raging vigor. You gain temporary Hit Points equal to half your level plus your Constitution modifier. If you made an attack action this turn, increase the number of temporary Hit Points to your level plus your Constitution modifier. These temporary Hit Points last until the end of your rage.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Renewed Vigor",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Renewed Vigor"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -79,6 +467,46 @@
       "name": "Share Rage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "vayNZR1bTzU1oUa3",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Share Rage",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You haven't used this ability since you last Raged.</p><hr /><p>You stoke an ally's fury. While you are raging, one willing creature within 30 feet gains the effects of the Rage action, except it can still use concentrate actions. It doesn't get any added benefits from your instinct, feats, or the like.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Rage]</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "auditory",
+              "barbarian",
+              "rage",
+              "visual"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -88,6 +516,44 @@
       "name": "Thrash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "rMPL11JRcmlutvRi",
+        "folder": "zjQf9cfin3C7u5cE",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thrash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have an enemy @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You thrash your foe around. An enemy you have grabbed or restrained takes bludgeoning damage equal to your Strength modifier plus your weapon specialization damage plus your @UUID[Compendium.pf2e.actionspf2e.Item.Rage] damage, with a @Check[fortitude|against:barbarian|basic] save against your class DC.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     }

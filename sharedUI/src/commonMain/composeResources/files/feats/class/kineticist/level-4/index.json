@@ -7,6 +7,51 @@
       "name": "Air Shroud",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QV4NCyZQBCABykS1",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Air Shroud",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Turbulent air suffuses your kinetic aura. This doesn't displace other matter but provides air for creatures in your kinetic aura that need air to breathe. Attacks with ranged weapons take a -1 circumstance penalty to their attack rolls if their paths pass through your kinetic aura. Air in your kinetic aura is difficult terrain for flying creatures other than yourself.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Air Shroud",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Air Shroud"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "impulse",
+              "kineticist",
+              "primal",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +61,49 @@
       "name": "Ambush Bladderwort",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BXrnQ8qKf09f3spc",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ambush Bladderwort",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You plant the seed of a giant bladderwort in an unoccupied square of ground or water within 30 feet. It lasts for 10 minutes. Using this impulse again ends any previous one. If a creature enters its square, the seed erupts into a voluminous, translucent plant that seals tight around the triggering creature and fills with water. Unless the creature succeeds at a @Check[reflex|against:kineticist] save against your class DC, it's @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] within the bladderwort and must hold its breath or begin drowning. The @UUID[Compendium.pf2e.actionspf2e.Item.Escape] DC is also your class DC. The plant has AC 10 and 50 Hit Points.</p>\n<p>If a creature dies inside it, the plant shrinks down, converting itself and the remains into a watery fruit. A creature can eat this consumable to regain @Damage[((floor((max(4,@actor.level)-4)/4)+1)d8+(floor((max(4,@actor.level)-4)/4)*4+4))[healing]] HP, after which that creature is temporarily immune for 10 minutes. This fruit rots after 1 hour.</p><hr /><p><strong>Level (+4)</strong> The bladderwort's HP increase by 25 and the fruit's healing increases by 1d8+4.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "composite",
+              "impulse",
+              "kineticist",
+              "plant",
+              "primal",
+              "water",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -25,6 +113,47 @@
       "name": "Blazing Wave",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "C5zKhps2Rv95A8yX",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Blazing Wave",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Flames flow out of you in a cascade, engulfing everyone in a @Template[cone|distance:30]. Each creature in the area takes @Damage[(floor((@actor.level -4)/2)+4)d6[fire]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. A creature that critically fails its save is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p><hr /><p><strong>Level (+2)</strong> The damage increases by 1d6.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fire",
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -34,6 +163,47 @@
       "name": "Born to the Trees",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6dpBiQ9lhgrAQzCd",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Born to the Trees",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You adapt a creature to live among the trees, improving its ability to climb, balance, and leap. Target a willing creature within 30 feet. For 10 minutes, it gains a climb Speed equal to its Speed and a +1 circumstance bonus to Acrobatics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] and Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Long Jump] and @UUID[Compendium.pf2e.actionspf2e.Item.High Jump]. When it Leaps, it increases the distance it can @UUID[Compendium.pf2e.actionspf2e.Item.Leap] horizontally by 5 feet and vertically by 2 feet. If you use Born to the Trees again, any existing one ends.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Born to the Trees]</p>\n<hr />\n<p><strong>Level (6th)</strong> You can target up to 5 willing creatures.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #202: Severed at the Root"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "impulse",
+              "kineticist",
+              "morph",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -43,6 +213,48 @@
       "name": "Calcifying Sand",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kh0uz44otsdQlpIk",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Calcifying Sand",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature damages you with an attack using an unarmed attack or a non-reach melee weapon.</p>\n<hr />\n<p>Your flesh gives way as you're struck, becoming coarse sand that can magically turn your enemy to stone. You gain resistance equal to your level to physical damage from the triggering attack. The attacking creature must attempt a @Check[fortitude|against:class] save against your class DC. Regardless of the result, that creature can't trigger Calcifying Sand again for 1 hour.</p>\n<hr />\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Petrified] until the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "earth",
+              "impulse",
+              "incapacitation",
+              "kineticist",
+              "overflow",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -52,6 +264,45 @@
       "name": "Command Elemental",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "7G773pjnePFgnYxw",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Command Elemental",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You grasp the animating force within an elemental creature and bend it to your will. Choose a trait matching one of your kinetic elements and target an elemental creature within 30 feet that has the chosen trait. The elemental becomes controlled by you if its level is equal to or lower than your level - 3, or @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for as long as you Sustain the effect if its level is equal to your level - 2 or higher. It can attempt a @Check[will|against:kineticist] saving throw against your class DC to resist being @UUID[Compendium.pf2e.conditionitems.Item.Controlled] by you or to end the slowed effect. If the target is already under someone else's command, it can't be slowed by this ability, and the controlling creature also rolls a saving throw, with the elemental using the better result.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and is temporarily immune for 24 hours.</p>\n<p><strong>Success</strong> The target is unaffected.</p>\n<p><strong>Failure</strong> The elemental creature is controlled or slowed as long as you Sustain the impulse, up to 1 minute. This effect ends if you or an ally attacks the elemental.</p>\n<p><strong>Critical Failure</strong> As failure, but you can Sustain the impulse up to 1 hour.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -61,6 +312,47 @@
       "name": "Igneogenesis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "zXsJuf8RjBlJ6nJv",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Igneogenesis",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can create a permanent stone object, either sculpting stone pulled directly from your kinetic gate or manipulating earth and stone around you. It must fit within one 5-foot cube that's adjacent to you and on solid ground, and you can make the object large enough to occupy the square. If you create the object underneath you or another willing creature, you cause the target to rise on top of the object; you can't create it under an unwilling creature. This impulse has an unlimited duration, but if you use Igneogenesis again, the object returns to its original location or form. You can spend 1 hour to use Igneogenesis as an exploration activity; in this case, the object is permanent and non-magical.</p>\n<p>The object can't include any intricate parts or moving pieces. You can attempt a Crafting skill check as part of using this impulse to add details to your creation, such as a symbol, short message, or pattern (with the DC determined by the GM).</p>\n<hr />\n<p><strong>Level (+3)</strong> You can add an additional 5-foot cube to the object. Each cube must be contiguous.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "earth",
+              "impulse",
+              "kineticist",
+              "manipulate",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -70,6 +362,53 @@
       "name": "Lava Leap",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "OFCeTaAX99YbXOu0",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lava Leap",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You wreath yourself in molten stone and hurtle toward your enemy. @UUID[Compendium.pf2e.actionspf2e.Item.Leap] up to your Speed. At the end of your Leap, a wave of lava crashes onto all creatures in a @Template[emanation|distance:10]. Each creature in the area takes @Damage[(floor((@actor.level -4)/3)+1)d6[bludgeoning], (floor((@actor.level -4)/3)+2)d6[fire]|options:area-damage] damage, with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC.</p>\n<p>The cooling remains of the lava form a temporary protective shell around you, granting you a +2 circumstance bonus to AC until the start of your next turn.</p>\n<hr />\n<p><strong>Level (+3)</strong> Each type of damage increases by 1d6.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Lava Leap",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Lava Leap"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "composite",
+              "earth",
+              "fire",
+              "impulse",
+              "kineticist",
+              "overflow",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -79,6 +418,50 @@
       "name": "Lightning Dash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8GG4h6DbpAEGGETG",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lightning Dash",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>For an instant, you transform yourself into a being of pure lightning and fly forward, shocking anyone in your way. You propel yourself forward in a @Template[line|distance:30]. You can move through creatures during this movement, and this movement doesn't trigger reactions that are triggered by movement. Each creature you move through takes @Damage[(floor((@actor.level -4)/3)+2)d12[electricity]|options:area-damage] damage with a @Check[reflex|against:kineticist|basic|options:area-effect] save against your class DC. You return to your normal form in the final square of the line. If you're in the air, you fall unless you have a fly Speed.</p>\n<hr />\n<p><strong>Level (+3)</strong> The length of the line increases by 5 feet, and the damage increases by 1d12.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "air",
+              "electricity",
+              "impulse",
+              "kineticist",
+              "move",
+              "overflow",
+              "polymorph",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -88,6 +471,48 @@
       "name": "Living Bonfire",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nvahDuuKRE0T8Sh9",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Living Bonfire",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Roots and branches of living wood writhe in elemental fire at your command, forming a bonfire fearsome enough to scare off predators in the night. You conjure a bonfire in an unoccupied @Template[square|distance:10]{10-foot-square} space within 30 feet. The bonfire burns for 10 hours, providing all the benefits of a normal campfire. If you use this impulse again, any previous one ends.</p>\n<p>When you make a wood ranged Elemental Blast, you can have it come from the bonfire instead of you, flinging burning logs. This blast deals an additional @Damage[(floor((@actor.level -4)/5)+1)d6[fire]] damage. Each time you do this, the size of the bonfire is reduced by one 5-foot square. If all the squares are removed, the impulse ends.</p><hr /><p><strong>Level (+5)</strong> The fire damage increases by 1d6.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "composite",
+              "fire",
+              "impulse",
+              "kineticist",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -97,6 +522,51 @@
       "name": "Magnetic Field",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YJCAiNpFbX2MIc0G",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magnetic Field",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A magnetic field surrounds you. Choose a polarity when you take this action. You can switch the polarity as a free action at the start of each of your turns while you remain in this stance.</p>\n<p><strong>Attract</strong> A creature that is wearing metal armor, has the metal trait, or is made of metal treats squares in your kinetic aura as difficult terrain when moving away from you. You pull unattended metal objects of light Bulk or less in your kinetic aura to you. They gather in your space and move with you.</p>\n<p><strong>Repel</strong> A creature that is wearing metal armor, has the metal trait, or is made of metal treats squares in your kinetic aura as difficult terrain when moving closer to you. You push unattended metal objects of light Bulk or less in your kinetic aura away. They stop moving once they're outside your aura.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Magnetic Field",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Magnetic Field"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "metal",
+              "primal",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -106,6 +576,46 @@
       "name": "Plate in Treasure",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "exrMKEHRyfINLJhV",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Plate in Treasure",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Precious metal flows from your fingers to plate an object. This has the effects of a @UUID[Compendium.pf2e.spells-srd.Item.Clad In Metal] spell with a rank equal to half your level rounded up. While you're wearing or holding an item of light Bulk or greater that's Plated in Treasure, any metal created by one of your impulses is plated with the metal. If you use Plate in Treasure again, any previous one ends.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "metal",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -115,6 +625,48 @@
       "name": "Rain of Rust",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "t3BPLh4rEInYGJJW",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rain of Rust",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 3
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You conjure a red raincloud in a @Template[burst|distance:10] within 60 feet, which pours rust-colored rain directly below it. Any creature in the rain with the metal trait, that is made of metal, or is wearing metal armor is covered in corrosive build-up. Any such creature is @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} as long as it remains in the area. If such a creature is in the rain at the start of its turn, it takes @Damage[(floor((@actor.level -4)/2)+3)d6[untyped]|options:area-damage] damage with a @Check[fortitude|against:kineticist|basic|options:area-effect] save against your class DC, plus @Damage[1d6[persistent,untyped]|options:area-damage] damage if it fails. Damage from this impulse ignores Hardness. The cloud lasts 1 minute but ends if you use the impulse again.</p><hr /><p><strong>Level (+2)</strong> The initial damage increases by 1d6.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "composite",
+              "impulse",
+              "kineticist",
+              "metal",
+              "primal",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -124,6 +676,52 @@
       "name": "Ravel of Thorns",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "mHvkBdBN4gs6CH1g",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ravel of Thorns",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Thorny vines grow in geometric patterns on surfaces in your kinetic aura. A creature that starts its turn in the thorns takes a –10-foot circumstance penalty to its Speeds until it leaves the area. The thorns are hazardous terrain. A creature takes @Damage[(floor((@actor.level -4)/4)+2)[piercing]] damage each time it moves into one of these squares. If any square the thorns grow on is water or soil, double the hazardous terrain damage for all thorns. If you move, the thorns disappear; new thorns grow at the end of your turn.</p>\n<hr />\n<p><strong>Level (+4)</strong> The damage increases by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Ravel Of Thorns",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Ravel of Thorns"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "plant",
+              "primal",
+              "stance",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -133,6 +731,47 @@
       "name": "Return to the Sea",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FgtUV7SKeq0nTivu",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Return to the Sea",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You adapt a creature to living and moving in water. Target a willing creature within 30 feet. For 10 minutes, it gains the effects of a @UUID[Compendium.pf2e.spells-srd.Item.Feet to Fins] spell, can breathe water, and gets a +1 status bonus to AC and saves against any creature with the amphibious, aquatic, or water trait. In addition, its attacks ignore the effects water normally has on bludgeoning and slashing attacks. If you use Return to the Sea again, any existing one ends.</p>\n<hr />\n<p><strong>Level (6th)</strong> You can target up to 5 willing creatures.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "morph",
+              "primal",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -142,6 +781,49 @@
       "name": "Safe Elements",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZBPRABDXeLVwxFC7",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Safe Elements",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Elements are wild and dangerous, but you've found ways to reduce their risk. When you Channel Elements or use a stance impulse that affects your kinetic aura, you can designate a number of creatures up to your Constitution modifier (minimum 1 creature). Choose whether they are immune to the benefits of your kinetic aura or immune to its damage and drawbacks. You don't have to be able to see a creature to designate it, nor does it need to be in your kinetic aura, but you can't designate a creature that's unnoticed by you.</p>\n<p>In addition, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Pacifying Infusion] action.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Pacifying Infusion"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "kineticist"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -151,6 +833,51 @@
       "name": "Thermal Nimbus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "XJCsa3UbQtsKcqve",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Thermal Nimbus",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You direct waves of warmth into or out of your kinetic gate to drastically shift the temperature around you. Choose cold or fire. You and allies in your kinetic aura gain resistance equal to your level to damage of that type. Any creature that starts its turn in your kinetic aura or moves into your aura during its turn takes @Damage[(floor(@actor.level/2))[@actor.flags.system.kineticist.thermalNimbus]] damage. Elemental resistance from a gate junction is cumulative with resistance from Thermal Nimbus.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Thermal Nimbus",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Thermal Nimbus"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fire",
+              "impulse",
+              "kineticist",
+              "primal",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -160,6 +887,46 @@
       "name": "Tumbling Lumber",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iSnstY2UywUdoBRZ",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tumbling Lumber",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A slew of logs eject from the Plane of Wood and slam into your enemies. They roll in a @Template[line|distance:30|width:10]{10-foot-wide, 30-foot-long line}. Non-magical difficult terrain on any ground the logs roll over is smashed flat; greater difficult terrain remains. Each creature in the area takes @Damage[(floor((@actor.level -4)/3)+2)d8[bludgeoning]|options:area-damage] damage and might be moved by the logs, depending on its @Check[reflex|against:kineticist|options:area-effect,damaging-effect] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is pushed out of the line in the most direct path available.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<hr />\n<p><strong>Level (+3)</strong> The damage increases by 1d8.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "impulse",
+              "kineticist",
+              "primal",
+              "wood"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -169,6 +936,49 @@
       "name": "Whirling Grindstone",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EVgtfnOPDKpB0bAi",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Whirling Grindstone",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>A whirling grindstone made of flint appears in an unoccupied square within 30 feet. The grindstone shreds flesh and shoots sparks. Attempt an @Check[impulse|defense:ac]{impulse attack} roll against the AC of a creature adjacent to the grindstone. On a hit, the creature takes @Damage[(floor((@actor.level -4)/5)+2)d6[slashing], (floor((@actor.level -4)/5)+1)d6[fire]] damage (or double damage on a critical hit). The grindstone lasts until the end of your next turn, and you can Sustain the impulse up to 1 minute. On subsequent turns, the first time you Sustain the impulse that turn, you can roll the grindstone up to 20 feet and can repeat the attack.</p>\n<p>A creature within reach of the grindstone can Interact with it to sharpen a metal weapon. This grants a +2 circumstance bonus to the next damage roll made with that weapon within 1 minute.</p>\n<hr />\n<p><strong>Level (+5)</strong> The grindstone's damage increases by 1d6 slashing and 1d6 fire, and the bonus to weapons increases by 1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "composite",
+              "earth",
+              "impulse",
+              "kineticist",
+              "metal",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -178,6 +988,52 @@
       "name": "Winter Sleet",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xn6EaAbQlAB5ZGe6",
+        "folder": "rJMdZOoyhCZApiwm",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Winter Sleet",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Bone-chilling, swirling sleet surrounds you, cruel as deepest winter. Surfaces in your kinetic aura are coated in slippery ice. A creature that moves on the ice immediately falls unless it succeeds at an @Check[acrobatics|against:kineticist|adjustment:-2|rollerRole:target] check or @Check[reflex|against:kineticist|adjustment:-2] save against your impulse DC – 2. A creature that Steps or Crawls doesn't have to attempt a check or save. You're immune to this effect.</p>\n<p>If a creature on the ice is critically hit by one of your water impulses or critically fails at a save against one, that creature is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} until the end of its next turn.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": true,
+            "title": "Pathfinder Rage of Elements"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Winter Sleet",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Winter Sleet"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "cold",
+              "impulse",
+              "kineticist",
+              "primal",
+              "stance",
+              "water"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

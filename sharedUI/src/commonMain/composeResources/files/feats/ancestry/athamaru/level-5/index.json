@@ -7,6 +7,47 @@
       "name": "Coral Growth",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "wRIX0I4DPqebMGqh",
+        "folder": "o5g9LY4MwmngOVm0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coral Growth",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The difference between yourself and your coral symbiotes is nearly impossible to tell apart as your bodies are so intertwined. When you are underwater, you no longer need to eat or drink, as your coral symbiotes provide you with sufficient nutrition. While you are on land, your body provides your coral symbiotes with sufficient hydration. You no longer need to submerge yourself in water every 24 hours.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Coral Symbiotes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +57,47 @@
       "name": "Growing Eel Friend",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "p4JROE4Qh8TVNnkl",
+        "folder": "o5g9LY4MwmngOVm0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Growing Eel Friend",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your eel pet grows larger and stronger. Your eel pet's size changes to Small, and the eel gains the @UUID[Compendium.pf2e.familiar-abilities.Item.Scent] and @UUID[Compendium.pf2e.familiar-abilities.Item.Tough] pet abilities. However, it becomes too large to carry in a water-filled globe.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Elver Pet"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +107,63 @@
       "name": "Noxious Odor",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "UiN0XrglcEfYtsSl",
+        "folder": "o5g9LY4MwmngOVm0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Noxious Odor",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have developed your skill with your defensive pheromones and have concentrated them into a noxious form. A creature that fails its save against your Emit Defensive Odor action also becomes @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 2} on a critical failure).</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Emit Defensive Odor"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:emit-defensive-odor"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "{item|description}"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru",
+              "poison"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +173,43 @@
       "name": "Riptide Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "usSE6mpdYSGmDdds",
+        "folder": "o5g9LY4MwmngOVm0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Riptide Mount",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are underwater and adjacent to a creature that is at least one size larger than you, has a swim Speed, and is willing to be your mount.</p>\n<hr />\n<p>After working with aquatic beasts of burden for years, you have learned how to easily mount and dismount them. You @UUID[Compendium.pf2e.actionspf2e.Item.Mount] the creature and @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] to issue it an order of your choice.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -43,6 +219,43 @@
       "name": "Skilled Swimmer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "6UucEQumAx9sAEvF",
+        "folder": "o5g9LY4MwmngOVm0",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Skilled Swimmer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You move through the water with ease, mastering your movements with years of practice. When in an aquatic environment, you ignore difficult terrain. In addition, swimming up or down isn't difficult terrain for you.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

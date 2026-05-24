@@ -1,0 +1,218 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "bloodhound-shoony.json",
+      "id": "z4cvqtpkkAYoFpHa",
+      "name": "Bloodhound Shoony",
+      "img": "systems/pf2e/icons/features/ancestry/bloodhound-shoony.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "z4cvqtpkkAYoFpHa",
+        "folder": "2BOnkAZjgqN89Y8f",
+        "img": "systems/pf2e/icons/features/ancestry/bloodhound-shoony.webp",
+        "name": "Bloodhound Shoony",
+        "system": {
+          "ancestry": {
+            "name": "Shoony",
+            "slug": "shoony",
+            "uuid": "Compendium.pf2e.ancestries.Item.q6rsqYARyOGXZA8F"
+          },
+          "description": {
+            "value": "<p>Your ancestors were famous trackers, and you carry in your blood that same gift of the hunt.</p>\n<p>You gain a special sense: imprecise scent with a range of 30 feet. This means you can use your sense of smell to determine the location of a creature, but it remains @UUID[Compendium.pf2e.conditionitems.Item.Hidden].</p>\n<p>In addition, you gain a +2 circumstance bonus to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.Track] creatures that you have previously sensed with your scent.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder #153: Life's Long Shadows"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "Bloodhound Shoony (Track smelled creatures)",
+              "predicate": [
+                "action:track",
+                "target:previously-smelled"
+              ],
+              "selector": "survival",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "acuity": "imprecise",
+              "key": "Sense",
+              "range": 30,
+              "selector": "scent"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "fishseeker-shoony.json",
+      "id": "isJhIPhT4MsjJvoq",
+      "name": "Fishseeker Shoony",
+      "img": "systems/pf2e/icons/features/ancestry/fishseeker-shoony.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "isJhIPhT4MsjJvoq",
+        "folder": "2BOnkAZjgqN89Y8f",
+        "img": "systems/pf2e/icons/features/ancestry/fishseeker-shoony.webp",
+        "name": "Fishseeker Shoony",
+        "system": {
+          "ancestry": {
+            "name": "Shoony",
+            "slug": "shoony",
+            "uuid": "Compendium.pf2e.ancestries.Item.q6rsqYARyOGXZA8F"
+          },
+          "description": {
+            "value": "<p>You come from a long line of fisherfolk and have inherited the quick reflexes necessary to nab and reel in big game. If you roll a success on an attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Grab an Edge], you get a critical success instead; if you roll a critical failure, you get a failure instead. A creature that rolls a failure on a check to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] you gets a critical failure instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder #153: Life's Long Shadows"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "criticalFailure": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:grab-an-edge"
+              ],
+              "selector": "reflex",
+              "type": "save"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:grab-an-edge"
+              ],
+              "selector": "reflex",
+              "type": "save"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:grab-an-edge"
+              ],
+              "selector": "reflex",
+              "text": "PF2E.SpecificRule.Shoony.FishseekerShoony.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "paddler-shoony.json",
+      "id": "mnhpCk9dIwMuFegM",
+      "name": "Paddler Shoony",
+      "img": "systems/pf2e/icons/features/ancestry/paddler-shoony.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "mnhpCk9dIwMuFegM",
+        "folder": "2BOnkAZjgqN89Y8f",
+        "img": "systems/pf2e/icons/features/ancestry/paddler-shoony.webp",
+        "name": "Paddler Shoony",
+        "system": {
+          "ancestry": {
+            "name": "Shoony",
+            "slug": "shoony",
+            "uuid": "Compendium.pf2e.ancestries.Item.q6rsqYARyOGXZA8F"
+          },
+          "description": {
+            "value": "<p>You hail from shoonies who have lived long and successfully among the reeds and cattails of swamps and marshes, and have adapted to the challenges of living near waterlogged areas. You ignore difficult terrain and greater difficult terrain from bogs. When you roll a success to @UUID[Compendium.pf2e.actionspf2e.Item.Swim], you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder #153: Life's Long Shadows"
+          },
+          "rules": [
+            {
+              "key": "Note",
+              "predicate": [
+                "action:swim"
+              ],
+              "selector": "athletics",
+              "text": "When you roll a success to Swim, you get a critical success instead.",
+              "title": "{item|name}"
+            },
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:swim"
+              ],
+              "selector": "athletics",
+              "type": "skill"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "thickcoat-shoony.json",
+      "id": "MhXHEh7utEfxBwmc",
+      "name": "Thickcoat Shoony",
+      "img": "systems/pf2e/icons/features/ancestry/thickcoat-shoony.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "MhXHEh7utEfxBwmc",
+        "folder": "2BOnkAZjgqN89Y8f",
+        "img": "systems/pf2e/icons/features/ancestry/thickcoat-shoony.webp",
+        "name": "Thickcoat Shoony",
+        "system": {
+          "ancestry": {
+            "name": "Shoony",
+            "slug": "shoony",
+            "uuid": "Compendium.pf2e.ancestries.Item.q6rsqYARyOGXZA8F"
+          },
+          "description": {
+            "value": "<p>You are a rare shoony who hails from colder climes. You gain cold resistance equal to half your level (minimum 1), and you treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on). You don't need to succeed at a flat check to target a concealed creature if that creature is @UUID[Compendium.pf2e.conditionitems.Item.Concealed] only by snow. Unless you wear protective gear or take shelter, environmental heat effects are one step more extreme for you.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder #153: Life's Long Shadows"
+          },
+          "rules": [
+            {
+              "key": "Resistance",
+              "type": "cold",
+              "value": "max(1,floor(@actor.level/2))"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

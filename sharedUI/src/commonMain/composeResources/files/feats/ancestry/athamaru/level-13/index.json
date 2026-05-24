@@ -7,6 +7,43 @@
       "name": "Attuned Electroreceptors",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "hHeh1ct8YceyeykX",
+        "folder": "38BCqKFZ0d1ShMtT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Attuned Electroreceptors",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You grow specialized organs that allow you to detect even the faintest of heartbeats. You can sense living creatures and any creature with the electricity trait as an imprecise sense with a range of 20 feet. This range doubles while you are underwater, though only in the body of water you're in.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +53,51 @@
       "name": "Coral Reserve",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KN6IxTO7H5WGYh3W",
+        "folder": "38BCqKFZ0d1ShMtT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Coral Reserve",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You are @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled] or @UUID[Compendium.pf2e.conditionitems.Item.Fatigued].</p>\n<hr />\n<p>Your coral symbiotes provide a store of energy that you can call upon when needed. You suppress your enfeebled or fatigued condition. (If you're affected by both, choose one to suppress.) After 1 minute, the condition returns with any remaining duration it had when you suppressed it.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Coral Symbiotes"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +107,58 @@
       "name": "Rapid Pheromone Recovery",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "iOMoUtyauZEAXYSe",
+        "folder": "38BCqKFZ0d1ShMtT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rapid Pheromone Recovery",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your supply of pheromones replenish very quickly. You can Emit Defensive Odor once per hour, rather than once per day.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Emit Defensive Odor"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:slug:emit-defensive-odor"
+              ],
+              "property": "frequency-per",
+              "value": "PT1H"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -34,6 +168,43 @@
       "name": "Swift Eel Mount",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "8Cq7OqVDPCnF70ay",
+        "folder": "38BCqKFZ0d1ShMtT",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Swift Eel Mount",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your rapport with your eel lets you guide it to avoid dangers as it swims. While you're mounted on an eel, that eel ignores difficult terrain while Swimming and gets a +2 circumstance bonus to all defenses against reactions triggered by its movement.</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "athamaru"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

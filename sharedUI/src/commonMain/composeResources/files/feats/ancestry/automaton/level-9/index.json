@@ -7,6 +7,89 @@
       "name": "Arcane Camouflage",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "N8Ci3w5gQ68rj6a6",
+        "folder": "6ZNOJCnImnivuJJN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Camouflage",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have developed magical techniques to aid you with stalking your prey. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Blur] and @UUID[Compendium.pf2e.spells-srd.Item.Invisibility] each once per day as 2nd-rank arcane innate spells.</p>\n<p><strong>Enhancement</strong> Your camouflage is more potent. Your blur spell now lasts 10 minutes and when you cast invisibility, you can choose to gain the effects of the 4th-rank version of the spell. In addition, you can now cast blur and invisibility each twice per day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hunter automaton"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneCamouflage",
+                "value": "arcane-camouflage"
+              }
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:blur",
+                    "item:slug:invisiblity"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:blur",
+                    "item:slug:invisiblity"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:automaton"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -16,6 +99,70 @@
       "name": "Arcane Propulsion",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YgytD4HGjWNFwiev",
+        "folder": "6ZNOJCnImnivuJJN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Propulsion",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You redirect energy from your core to ports on your back or feet, allowing you to fly for a short time. You can maintain this redirected energy for 5 minutes. You gain a fly Speed equal to your Speed while redirecting the energy.</p>\n<p><strong>Enhancement</strong> You can maintain your flight for longer. You can redirect your energy at all times, allowing you to fly whenever you want, rather than just once per day for 5 minutes.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "predicate": [
+                "enhancement:arcane-propulsion"
+              ],
+              "selector": "fly",
+              "value": "@actor.system.movement.speeds.land.value"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcanePropulsion",
+                "value": "arcane-propulsion"
+              }
+            }
+          ],
+          "selfEffect": {
+            "name": "Effect: Arcane Propulsion",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Arcane Propulsion"
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "arcane",
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -25,6 +172,57 @@
       "name": "Arcane Slam",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "xfbPSP9tl1N95xDF",
+        "folder": "6ZNOJCnImnivuJJN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Slam",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained].</p><hr /><p>You channel magical power from your core into your arm, empowering your attack as you attempt to slam your foe into the ground. Attempt an @UUID[Compendium.pf2e.action-macros.Macro.Athletics: Arcane Slam]{Athletics} check against the foe's Fortitude DC. You take a –2 circumstance penalty to your check if the target is one size larger than you and a –4 circumstance penalty if it's larger than that. You gain a +2 circumstance bonus to your check if the target is one size smaller than you and a +4 circumstance bonus if it's smaller than that.</p><hr /><p><strong>Critical Success</strong> You slam the foe down and the magical energy overwhelms it. The creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone], becomes @UUID[Compendium.pf2e.conditionitems.Item.Dazzled] for 1 round, and takes damage equal to 2d6 plus your Strength modifier. The foe is no longer @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] by you.</p>\n<p><strong>Success</strong> You slam the foe down. The creature is knocked prone and takes damage equal to your Strength modifier. The foe is no longer grabbed or restrained by you.</p>\n<p><strong>Failure</strong> You are unable to slam the creature, but your hold on the creature remains.</p>\n<p><strong>Critical Failure</strong> The creature breaks free and is no longer grabbed or restrained by you.</p>\n<p><strong>Enhancement</strong> Your arms better channel your core's power. You no longer take penalties for attempting to slam larger foes. Your foe takes damage equal to 2d6 plus your Strength modifier on a success (or double that on a critical success).</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "warrior automaton"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneSlam",
+                "value": "arcane-slam"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -34,6 +232,57 @@
       "name": "Core Attunement",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AYXqqeLSqCYhgUY7",
+        "folder": "6ZNOJCnImnivuJJN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Core Attunement",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your core allows you to draw more power from it. Select one 1st-rank arcane spell and one 2nd-rank or lower arcane spell, to which you have access. You can cast your chosen spells as arcane innate spells each once per day.</p>\n<p><strong>Enhancement</strong> Your attunement grows stronger. Select one 5th-rank or lower arcane spell and one 6th-rank or lower arcane spell, to which you have access. You can cast them as arcane innate spells each once per day, in addition to the original spells.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "mage automaton"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.CoreAttunement",
+                "value": "core-attunement"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -43,6 +292,120 @@
       "name": "Lesser Augmentation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AQvtqj2h2n5n8YYg",
+        "folder": "6ZNOJCnImnivuJJN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lesser Augmentation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You know how to get the most out of your unique body and abilities. You gain the enhancement benefits of one of your 1st- or 5th-level automaton ancestry feats. You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat.</p>\n<p><strong>Enhancement</strong> You gain the enhancement benefits of another 1st- or 5th-level automaton ancestry feat. Also, your reconfigurations take less time. You only need to spend 1 day of downtime to change any of your enhancements. If you have multiple enhancements, changing each one requires a separate day.</p>"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "choices": "flags.system.automaton.enhancements.lesser",
+              "flag": "lesserAugmentation",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Automaton.Enhancement.AugmentationPrompt",
+              "rollOption": "enhancement"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.LesserAugmentation",
+                "value": "lesser-augmentation"
+              }
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.Skill.Arcana",
+                  "predicate": [
+                    "skill:arcana:rank:1"
+                  ],
+                  "value": "arc-expert"
+                },
+                {
+                  "label": "PF2E.Skill.Crafting",
+                  "predicate": [
+                    "skill:crafting:rank:1"
+                  ],
+                  "value": "cra-expert"
+                },
+                {
+                  "label": "PF2E.Skill.Arcana",
+                  "predicate": [
+                    "skill:arcana:rank:2"
+                  ],
+                  "value": "arc-master"
+                },
+                {
+                  "label": "PF2E.Skill.Crafting",
+                  "predicate": [
+                    "skill:crafting:rank:2"
+                  ],
+                  "value": "cra-master"
+                }
+              ],
+              "flag": "automatonLoreSkill",
+              "key": "ChoiceSet",
+              "predicate": [
+                "enhancement:automaton-lore"
+              ],
+              "prompt": "PF2E.SpecificRule.Prompt.Skill",
+              "rollOption": "enhancement:automaton-lore"
+            },
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.SpecificRule.Automaton.Enhancement.MagicalResistanceAll",
+                  "value": "all"
+                },
+                {
+                  "label": "PF2E.SpecificRule.Automaton.Enhancement.MagicalResistanceIncrease",
+                  "value": "increase"
+                }
+              ],
+              "flag": "lesserAugmentation",
+              "key": "ChoiceSet",
+              "predicate": [
+                "enhancement:magical-resistance"
+              ],
+              "prompt": "PF2E.SpecificRule.Automaton.Enhancement.EnhancementPrompt",
+              "rollOption": "enhancement:magical-resistance"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     },
@@ -52,6 +415,72 @@
       "name": "Rain of Bolts",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "llWnSLYALh88iRGQ",
+        "folder": "6ZNOJCnImnivuJJN",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Rain of Bolts",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Throughout the day, your body produces powerful projectiles within your chassis. You fire them all at once in either a @Template[type:cone|distance:30] or a @Template[type:emanation|distance:10]. Foes in the area take @Damage[(3 + floor(@actor.level/3))d6[piercing]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic] save against the higher of your class DC or spell DC. This increases to 7d6 at 12th level, 8d6 at 15th level, and 9d6 at 18th level.</p>\n<p><strong>Enhancement</strong> The projectiles regenerate quicker, they are much more powerful, and you can refine the metallic content to harm certain creatures. You can use Rain of Bolts once per hour instead of once per day. The damage increases to 12d6 and each time you use the action, you can choose adamantine, cold iron, or silver. The damage from Rain of Bolts is treated as the metal you chose. At 20th level, the damage increases to 13d6.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 9
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Sharpshooter automaton"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.RainOfBolts",
+                "value": "rain-of-bolts"
+              }
+            },
+            {
+              "itemType": "feat",
+              "key": "ItemAlteration",
+              "mode": "override",
+              "predicate": [
+                "item:id:{item|id}",
+                "enhancement:rain-of-bolts"
+              ],
+              "property": "frequency-per",
+              "value": "PT1H"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 9,
       "category": "ancestry"
     }

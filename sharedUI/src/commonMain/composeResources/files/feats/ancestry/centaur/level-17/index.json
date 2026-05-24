@@ -7,6 +7,108 @@
       "name": "Merge with the Source",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Ekk2iEYMAXYT3EK2",
+        "folder": "l6LWvKXPFJVyyC1t",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Merge with the Source",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're among the most powerful of Speakers and can adopt the form of the spirits you entreat with. Select one of the following spells, which you can cast once per day as a 7th-rank innate spell. If you're a Faithspeaker, select from @UUID[Compendium.pf2e.spells-srd.Item.Angel Form], @UUID[Compendium.pf2e.spells-srd.Item.Daemon Form], @UUID[Compendium.pf2e.spells-srd.Item.Demon Form], or @UUID[Compendium.pf2e.spells-srd.Item.Devil Form], which you cast as a divine spell; if you're a Greenspeaker, select from @UUID[Compendium.pf2e.spells-srd.Item.Elemental Form] or @UUID[Compendium.pf2e.spells-srd.Item.Plant Form], which you cast as a primal spell.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "budding speaker centaur heritage or Speaker in Training"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  {
+                    "or": [
+                      {
+                        "and": [
+                          "centaur-speaker:faithspeaker",
+                          {
+                            "or": [
+                              "item:slug:angel-form",
+                              "item:slug:daemon-form",
+                              "item:slug:demon-form",
+                              "item:slug:devil-form"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "and": [
+                          "centaur-speaker:greenspeaker",
+                          {
+                            "or": [
+                              "item:slug:elemental-form",
+                              "item:slug:plant-form"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "itemType": "spell",
+                "slugsAsValues": true
+              },
+              "flag": "spell",
+              "key": "ChoiceSet"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:{item|flags.system.rulesSelections.spell}",
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:centaur"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     },
@@ -16,6 +118,44 @@
       "name": "Starshot Arrow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Oa5sEYqqY8gNTo56",
+        "folder": "l6LWvKXPFJVyyC1t",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Starshot Arrow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>The greatest centaurs need not wait until their stories are over to touch the stars in the sky. You draw an arrow (or other ammunition), whisper a short invocation over it, and then Strike with a ranged weapon. The arrow becomes a bolt of starlight, changing its damage to your choice of force or spirit and granting it the effects of the <em>@UUID[Compendium.pf2e.equipment-srd.Item.Ghost Touch]</em> rune. When the arrow Strikes its target, it unravels into a constellation of starlight that wraps around the target's limbs, imposing a –10-foot circumstance penalty to its Speeds for [[/r 2d4 #rounds]]{2d4 rounds} or @UUID[Compendium.pf2e.conditionitems.Item.Immobilized]{Immobilizing} it if the Strike was critical hit. The target can untangle itself by spending an Interact action to break free.</p>"
+          },
+          "level": {
+            "value": 17
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "attack",
+              "centaur"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 17,
       "category": "ancestry"
     }

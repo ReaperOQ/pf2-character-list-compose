@@ -7,6 +7,69 @@
       "name": "Analyze Idiolect",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "TZASOwBqVveGjw77",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Analyze Idiolect",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You break down a specific individual's idiolect, memorizing their speech mannerisms and habits.</p>\n<p>If you interact with someone for at least 10 minutes, when you later attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Impersonate] that individual, you gain a +4 circumstance bonus to your Deception checks and DCs. Due to the intense character study required, you can't remember more than one idiolect at a time.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Linguist Dedication"
+              },
+              {
+                "value": "expert in Deception"
+              },
+              {
+                "value": "expert in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "analyze-idiolect"
+              ],
+              "selector": "deception",
+              "type": "circumstance",
+              "value": 4
+            },
+            {
+              "key": "RollOption",
+              "option": "analyze-idiolect",
+              "toggleable": true
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "skill"
     },
@@ -16,6 +79,47 @@
       "name": "Crude Communication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "sbYDDDUWYN6Qx71k",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Crude Communication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Even if you don't speak a creature's language, you can rely on inflection, root words, and body language to infer rudimentary meaning.</p>\n<p>If you interact with a creature for at least 10 minutes and that creature can speak a language, the GM rolls a secret Society check with a DC appropriate for the language's rarity.</p>\n<p>On a success, you understand the gist of the meaning and can communicate basic concepts back to the creature; on a failure, you are mistaken or communicate incorrect concepts.</p>\n<p>If you're legendary in Society, you can communicate instantly without needing to attempt a Society check; even if you didn't know the medium of communication the creature uses (speech, sign language, and so on), you intuit this information as soon as they try to communicate.</p>"
+          },
+          "level": {
+            "value": 8
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Linguist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 8,
       "category": "class"
     },
@@ -25,6 +129,90 @@
       "name": "Linguist Dedication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "u6SDVWbzHnBBPNMo",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Linguist Dedication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You have studied languages and their development. You become trained in Society; if you were already trained in Society, you instead become an expert in Society. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Multilingual] skill feat twice.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.mtc5frNxUHORGscz]{Linguist}</p>"
+          },
+          "level": {
+            "value": 2
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "You speak at least three languages."
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustName": false,
+              "choices": [
+                {
+                  "label": "PF2E.ProficiencyLevel1",
+                  "predicate": [
+                    "skill:society:rank:0"
+                  ],
+                  "value": 1
+                },
+                {
+                  "label": "PF2E.ProficiencyLevel2",
+                  "predicate": [
+                    {
+                      "gte": [
+                        "skill:society:rank",
+                        1
+                      ]
+                    }
+                  ],
+                  "value": 2
+                }
+              ],
+              "flag": "rank",
+              "key": "ChoiceSet",
+              "priority": 30
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.society.rank",
+              "value": "@item.flags.system.rulesSelections.rank"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Multilingual"
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Multilingual"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "dedication"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 2,
       "category": "class"
     },
@@ -34,6 +222,67 @@
       "name": "Multilingual Cipher",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "B4nuabUvA1rk7Hej",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Multilingual Cipher",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You use multiple languages to create and break codes. You gain a +1 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Decipher Writing].</p>\n<p>If another creature attempts to Decipher Writing you encoded, they take a -2 circumstance penalty unless they speak all the languages you used when you created the writing.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Linguist Dedication"
+              },
+              {
+                "value": "expert in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "label": "to Decipher Writing (Multilingual Cipher)",
+              "predicate": [
+                "action:decipher-writing"
+              ],
+              "selector": [
+                "arcana",
+                "occultism",
+                "religion",
+                "society"
+              ],
+              "type": "circumstance",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -43,6 +292,51 @@
       "name": "Phonetic Training",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Wsrw68pklQyaScMX",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Phonetic Training",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>You can pronounce and repeat words with near-perfect accuracy even if you don't understand their meaning, and you can write them down in a phonetic script that allows you or another creature with Phonetic Training to read it later. Even if the words are in a language with sound you can't pronounce, you can faithfully transcribe them. Memorizing long sequences of words remains just as difficult as it is normally.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Linguist Dedication"
+              },
+              {
+                "value": "expert in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     },
@@ -52,6 +346,52 @@
       "name": "Read Shibboleths",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Crd3qMecF9FYHjuH",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Read Shibboleths",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>All communication is filled with slight tells and signals. If you interact with someone for at least 10 minutes, their regional words, pronunciation changes, and nonverbal cues provide you with a minor fact about their social environment, such as their hometown or certain groups they might belong to.</p>\n<p>If a target of this ability is being deceptive about their social environment, such as a commoner pretending to be a noble, they must attempt a Deception, Society, or appropriate Lore check against your Society DC, providing you a false minor fact consistent with their assumed identity on a success.</p>\n<p>Once you've gleaned one or more true minor facts about a person, you can then incorporate these mannerisms into your speech to present yourself in a way that they find familiar. This grants you a +1 circumstance bonus to your Diplomacy and Deception checks with them.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Read Shibboleths]</p>"
+          },
+          "level": {
+            "value": 7
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Linguist Dedication"
+              },
+              {
+                "value": "master in Society"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "linguistic",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 7,
       "category": "skill"
     },
@@ -61,6 +401,49 @@
       "name": "Spot Translate",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jsXDbQAAH3yMchPU",
+        "folder": "7HTBHy5tJLbxzEI8",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Spot Translate",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Another creature within 60 feet uses a linguistic effect in a language you understand.</p><hr /><p>You bridge a language gap, repeating the message in a different language that you know. Choose a language you understand to repeat the message in. The linguistic effect counts as both languages, rather than only the language the triggering creature is using, potentially allowing it to affect a wider range of creatures. As normal, you can translate normal speech without Spot Translate and without using a reaction, but this reaction allows you to apply the benefits of translation to spells and actions such as command or @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize].</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Linguist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "auditory",
+              "linguistic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

@@ -7,6 +7,48 @@
       "name": "Amp Focus",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ikjPRBeBUWV6hYFF",
+        "folder": "IIBIBEz20aTBtYLg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Amp Focus",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You've glimpsed the furthest recesses of your mind. When you Refocus, you regain all your Focus Points (even if you spent them on something other than amps).</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -16,6 +58,49 @@
       "name": "Foreseen Failure",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "PmhprI0vr3zTOkok",
+        "folder": "IIBIBEz20aTBtYLg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Foreseen Failure",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A spell you cast has no effect because you critically failed all your spell attack rolls or because all targets critically succeeded at their saving throws.</p><hr /><p>You see your spell fail to take hold to disastrous end, then snap back to reality—it was all a precognition, and you know to try a different spell. Your spell is expended, but you can Cast a Spell that requires the same number of actions as the triggering spell or fewer to cast. The second spell must be a different spell than the first.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fortune",
+              "occult",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -25,6 +110,43 @@
       "name": "No!!!",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "quqG3jfWFdopF0G2",
+        "folder": "IIBIBEz20aTBtYLg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "No!!!",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A non-minion ally within 60 feet is reduced to 0 Hit Points.</p>\n<hr />\n<p>The shock of seeing your ally near death breaks whatever limits exist in your mind, sending your power spilling forth. If your psyche is currently unleashed, you can immediately use a psyche action that takes 1 action or less to use. If your psyche is not currently unleashed, you Unleash your Psyche, which remains unleashed until the end of your next turn. You can ignore Unleash Psyche's requirement of needing to have @UUID[Compendium.pf2e.actionspf2e.Item.Cast a Spell] on your previous turn, but you still can't Unleash your Psyche if you're stupefied or for 2 rounds after your psyche subsides.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     },
@@ -34,6 +156,63 @@
       "name": "Psi Catastrophe",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qZsTI97BQUwoPgKF",
+        "folder": "IIBIBEz20aTBtYLg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Psi Catastrophe",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You stop holding your power back, unleashing it all in a catastrophic blast. All creatures in a @Template[emanation|distance:20] take @Damage[(@actor.level)d6[bludgeoning]|options:area-damage]{1d6 bludgeoning damage per level} with a @Check[reflex|against:occult|basic|options:area-effect]. Your psyche subsides as your power is expended.</p>"
+          },
+          "level": {
+            "value": 12
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Dark Archive (Remastered)"
+          },
+          "rules": [
+            {
+              "itemId": "{item|id}",
+              "key": "ItemAlteration",
+              "label": "PF2E.TraitMindshift",
+              "mode": "add",
+              "predicate": [
+                "item:tag:mindshifted"
+              ],
+              "property": "description",
+              "value": [
+                {
+                  "text": "PF2E.SpecificRule.Psychic.Mindshift.Addendum"
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "concentrate",
+              "mindshift",
+              "occult",
+              "psyche",
+              "psychic"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 12,
       "category": "class"
     }

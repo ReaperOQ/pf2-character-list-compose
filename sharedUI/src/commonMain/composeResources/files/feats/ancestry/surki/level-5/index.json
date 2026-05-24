@@ -7,6 +7,53 @@
       "name": "Chemical Trail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "QHmODlkNgCvcXqPz",
+        "folder": "vWLkNzYjaicOH8Mg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Chemical Trail",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can leave a faint chemical trail as you move and can use the chemical trails of other surkis to navigate. You gain a +1 circumstance bonus to all checks and saves to @UUID[Compendium.pf2e.actionspf2e.Item.Sense Direction] or reorient yourself.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:sense-direction"
+              ],
+              "selector": "survival",
+              "value": 1
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "exploration",
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +63,60 @@
       "name": "Secondary Adaptation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "gyHAVCNjESPbc5ei",
+        "folder": "vWLkNzYjaicOH8Mg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Secondary Adaptation",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've continued to adapt to the rigors of your environment by continuing your metamorphosis, even as an adult. Choose one surki heritage that you don't already have; you gain that heritage and its benefits.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "choices": {
+                "filter": [
+                  "item:ancestry:surki"
+                ],
+                "itemType": "heritage"
+              },
+              "flag": "heritage",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Surki.SecondaryAdaptation.Prompt"
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "uuid": "{item|flags.system.rulesSelections.heritage}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +126,44 @@
       "name": "Tunnel Roll",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "jSZJWYHZU3hnGRcp",
+        "folder": "vWLkNzYjaicOH8Mg",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tunnel Roll",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can more easily navigate underground tunnels by rolling up into a ball. You roll up and move up to four times your Speed in a straight line down an incline. If you reach the bottom of the incline or hit an obstacle during this first turn of movement, you stop rolling. Otherwise, you automatically keep rolling at this Speed during subsequent turns until you hit the bottom of the incline or an obstacle ends this movement (which can happen in the middle of your turn). You're @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 2} each turn after the first that you keep rolling; if you hit an obstacle on a turn after the first, you and the obstacle both take @Damage[4d6[bludgeoning]] damage, and you stop rolling.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "move",
+              "surki"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

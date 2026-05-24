@@ -7,6 +7,47 @@
       "name": "Magical Scholastics",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AuIE19F9rY3YvXf6",
+        "folder": "tvk5jJfpEBaL9K7k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Magical Scholastics",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>While study is key to your success, a bit of magic can be a helpful aid in discovering the secrets of the past. You can cast @UUID[Compendium.pf2e.spells-srd.Item.Detect Magic], @UUID[Compendium.pf2e.spells-srd.Item.Guidance], and @UUID[Compendium.pf2e.spells-srd.Item.Read Aura] as occult innate cantrips.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Archaeologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +57,59 @@
       "name": "Settlement Scholastics",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "R7BO8br4BjCmpjit",
+        "folder": "tvk5jJfpEBaL9K7k",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Settlement Scholastics",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "skill",
+          "description": {
+            "value": "<p>Your studies open up new horizons. Choose a specific settlement. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] skill feat in the Lore skill for that settlement and learn a single common or uncommon language of your choice that's prevalent in that settlement.</p><hr /><p><strong>Special</strong> You can take this feat multiple times. When you take this feat again, choose a different settlement.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "maxTakable": null,
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Archaeologist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "subfeatures": {
+            "languages": {
+              "slots": 1
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype",
+              "skill"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "skill"
     }

@@ -7,6 +7,70 @@
       "name": "Aldori Parry",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NZgjqVV2HYzLCvvA",
+        "folder": "rkukWM1R4cupIwmM",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Aldori Parry",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding only an Aldori dueling sword.</p><hr /><p>You can parry attacks against you with your Aldori dueling sword. Aldori dueling swords you're wielding gain the parry trait. If you have your other hand or hands free while wielding an Aldori dueling sword, you gain a +2 circumstance bonus to AC while parrying instead of the usual +1.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aldori Duelist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "AdjustModifier",
+              "mode": "upgrade",
+              "predicate": [
+                "hands-free:1",
+                "aldori-dueling-sword"
+              ],
+              "selector": "ac",
+              "slug": "parry-bonus",
+              "value": 2
+            },
+            {
+              "itemType": "weapon",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:base:aldori-dueling-sword"
+              ],
+              "property": "traits",
+              "value": "parry"
+            }
+          ],
+          "selfEffect": null,
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     },
@@ -16,6 +80,71 @@
       "name": "Duelist's Edge",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Bk07joho2dUG3lVw",
+        "folder": "rkukWM1R4cupIwmM",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Duelist's Edge",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative, and you are observing at least one opponent.</p><hr /><p>You hone your reaction time through duels and learn to draw your weapon seamlessly as you begin a fight. You gain a +2 circumstance bonus to the triggering initiative roll, and you can immediately Interact to draw an Aldori dueling sword.</p>"
+          },
+          "level": {
+            "value": 4
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Aldori Duelist Dedication"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "RollOption",
+              "option": "duelists-edge",
+              "toggleable": true
+            },
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "duelists-edge"
+              ],
+              "selector": "initiative",
+              "type": "circumstance",
+              "value": 2
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "duelists-edge"
+              ],
+              "selector": "initiative",
+              "text": "PF2E.SpecificRule.AldoriDuelist.DuelistsEdge.Note",
+              "title": "{item|name} <span class=\"action-glyph\">F</span>"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "archetype"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 4,
       "category": "class"
     }

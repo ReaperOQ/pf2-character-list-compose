@@ -7,6 +7,76 @@
       "name": "Apprentice Sea Witch",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZhXlvowfVIAr8E2x",
+        "folder": "BqETKWM8JXy8uFeQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Apprentice Sea Witch",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You're familiar with the basic spells that most educated merfolk know. Once per day, you can cast either @UUID[Compendium.pf2e.spells-srd.Item.Create Water] or @UUID[Compendium.pf2e.spells-srd.Item.Hydraulic Push] as a 1st-rank primal innate spell. Each time you cast <em>create water</em>, you choose if you create fresh water or salt water.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:create-water",
+                    "item:slug:hydraulic-push"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "or": [
+                    "item:slug:create-water",
+                    "item:slug:hydraulic-push"
+                  ]
+                },
+                "spellcasting:innate"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:merfolk"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -16,6 +86,43 @@
       "name": "Fishblooded",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "ZBm542xaWmneueq4",
+        "folder": "BqETKWM8JXy8uFeQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Fishblooded",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>There's nothing beneath the waves that can slow you down. When in an aquatic environment, you ignore difficult terrain. In addition, swimming up or down isn't difficult terrain for you.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -25,6 +132,43 @@
       "name": "Healing Flesh",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "nMtcYj1DpE2V86Gt",
+        "folder": "BqETKWM8JXy8uFeQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Healing Flesh",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Some legends claim that the flesh of a merfolk, if consumed, can grant health, longevity, and even immortality. For obvious reasons, merfolk prefer to discourage these rumors (with violence, if necessary), but you're living proof that there's at least a fraction of truth to such claims. When @UUID[Compendium.pf2e.actionspf2e.Item.Administer First Aid]{Administering First Aid}, @UUID[Compendium.pf2e.actionspf2e.Item.Treat Disease]{Treating Disease}, or @UUID[Compendium.pf2e.actionspf2e.Item.Treat Wounds]{Treating Wounds}, you can take 1 damage to give someone a drop of your blood. When you do so, you don't need healer's tools, and you gain a +1 item bonus to your Medicine check.</p>\n<p>If someone were to eat your heart and liver within an hour of your death, they would be healed of all physical injuries (regaining Hit Points up to their maximum) and would cease to age for 8 years.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     },
@@ -34,6 +178,49 @@
       "name": "Strong Tail",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "aSS0d0elPm9hDP7d",
+        "folder": "BqETKWM8JXy8uFeQ",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Strong Tail",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>From sheer necessity, you've gotten surprisingly good at moving around on land. Your tail is unusually muscular and lets you hop or slither on land at a modest speed. Your land Speed increases to 15 feet.</p>"
+          },
+          "level": {
+            "value": 5
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Howl of the Wild"
+          },
+          "rules": [
+            {
+              "key": "BaseSpeed",
+              "selector": "land",
+              "value": 15
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "merfolk"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 5,
       "category": "ancestry"
     }

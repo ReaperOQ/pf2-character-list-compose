@@ -7,6 +7,48 @@
       "name": "Collateral Thrash",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "WY7CjISdz6uwXwIb",
+        "folder": "olWKqIyR9YJPlesy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Collateral Thrash",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You smack the foe you're thrashing into someone else. When you Thrash, choose another enemy adjacent to the @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] enemy. That enemy also takes your Thrash damage, with a @Check[reflex|against:barbarian|basic] save against your class DC.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Thrash"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -16,6 +58,52 @@
       "name": "Desperate Wrath",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EWeso1zDkCLGlnsW",
+        "folder": "olWKqIyR9YJPlesy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Desperate Wrath",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> Your turn begins, and your current Hit Points are at half your maximum or less.</p><hr /><p>Your blood boils when you take a beating, and you throw caution to the wind to finish the fight. You get a +2 circumstance bonus to attack rolls, a –1 penalty to AC, and a –1 penalty to saves. These bonuses and penalties last until your Rage ends or until you are above half Hit Points, whichever comes first.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Effect: Desperate Wrath",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Desperate Wrath"
+          },
+          "traits": {
+            "rarity": "common",
+            "selected": {
+              "barbarian": "Barbarian",
+              "rage": "Rage"
+            },
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -25,6 +113,55 @@
       "name": "Dragon Transformation",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "lgEihn7deZwHczGE",
+        "folder": "olWKqIyR9YJPlesy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Dragon Transformation",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You transform into a ferocious Large dragon, gaining the effects of 6th-rank @UUID[Compendium.pf2e.spells-srd.Item.Dragon Form] except that you use your own AC and attack modifier, you apply your extra damage from @UUID[Compendium.pf2e.actionspf2e.Item.Rage], and the Dragon Breath action uses your class DC. Add the temporary Hit Points from dragon form to any you already have from entering a rage (or any other action with the rage trait). The action to Dismiss the transformation gains the rage trait.</p>\n<p>At 18th level, you gain a +20-foot status bonus to your fly Speed, your damage bonus with dragon Strikes increases to +12, and you gain a +14 status bonus to your Dragon Breath damage.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Dragon's Rage Wings"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "concentrate",
+              "polymorph",
+              "primal",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -34,6 +171,48 @@
       "name": "Furious Vengeance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Oyml3OGNy468z3XI",
+        "folder": "olWKqIyR9YJPlesy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Furious Vengeance",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> An enemy within your melee reach critically hits you with a melee Strike.</p><hr /><p>Your enemy's blow fuels your rage and provokes your immediate retaliation. Make a melee Strike against the triggering enemy.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "fury instinct"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -43,6 +222,45 @@
       "name": "Penetrating Projectile",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "tBMMKWYfzD2OMD30",
+        "folder": "olWKqIyR9YJPlesy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Penetrating Projectile",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wielding a ranged or thrown weapon that deals piercing damage.</p><hr /><p>Your projectiles are unhindered by flesh and bone. Make a ranged Strike with a ranged or thrown weapon that deals piercing damage against each creature in a @Template[line|distance:30] (this uses only one projectile despite the number of Strikes). These Strikes ignore all cover granted by creatures. Roll damage only once and apply it to each creature you hit. Each attack counts toward your multiple attack penalty, but don't increase your penalty until you have made all your attacks.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "flourish",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     },
@@ -52,6 +270,44 @@
       "name": "Shattering Blows",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "RL7faGkymMFLAqTU",
+        "folder": "olWKqIyR9YJPlesy",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shattering Blows",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your forceful blows shatter objects with ease. While you are raging, damage from your melee Strikes ignores the first 5 Hardness of an object. If you have the @UUID[Compendium.pf2e.classfeatures.Item.Devastator] class feature, the damage instead ignores the first 10 points Hardness of an object.</p>"
+          },
+          "level": {
+            "value": 16
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "rage"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 16,
       "category": "class"
     }

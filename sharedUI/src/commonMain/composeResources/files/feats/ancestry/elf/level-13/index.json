@@ -7,6 +7,48 @@
       "name": "Anchoring Arrow",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "kin3aIJssaI6VFoD",
+        "folder": "aYiXPmCssiB1YRW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Anchoring Arrow",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>You can prevent demonic foes from fleeing your wrath via teleportation. Make a bow Strike against a demon. In addition to the normal effects of the Strike, the target must attempt a @Check[will|against:class] save against your class DC.</p><hr /><p><strong>Critical Success</strong> The target avoids any additional effect.</p>\n<p><strong>Success</strong> The target takes a –5 circumstance penalty to all their movement Speeds for 1 round as arcane coils of magic meddle with their mobility.</p>\n<p><strong>Failure</strong> As success, but a –5 foot circumstance penalty for 1 minute. While the target is affected by this, Anchoring Arrow attempts to counteract any teleportation effect that would move the target, or any effect that would transport the target to a different plane. The arrow has a counteract rank of 7th and a [[/gmr 1d20+20 @Counteract]]{+20} modifier to the roll.</p>\n<p><strong>Critical Failure</strong> As failure, except a –10 foot circumstance penalty, and the duration is 10 minutes.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "arcane",
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -16,6 +58,49 @@
       "name": "Avenge Ally",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "LTcpBbnngfuYTdB0",
+        "folder": "aYiXPmCssiB1YRW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Avenge Ally",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once every 10 minutes</p>\n<p><strong>Requirements</strong> You are within 30 feet of an ally with the @UUID[Compendium.pf2e.conditionitems.Item.Dying] condition.</p>\n<hr />\n<p>Though you know that you will eventually outlive your companions, seeing them at death's door brings clarity to your attacks. Make a Strike. Roll twice on the attack roll and use the higher result.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT10M",
+            "value": 1
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf",
+              "fortune"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -25,6 +110,69 @@
       "name": "Cold Iron Stomach",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "o8DJyu5JJLppnDCS",
+        "folder": "aYiXPmCssiB1YRW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Cold Iron Stomach",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have steeled yourself against potent odors. Whenever you gain the @UUID[Compendium.pf2e.conditionitems.Item.Sickened] condition, you reduce the value of that condition by 1; if this reduces the value to 0, you avoid becoming sickened entirely. You gain a +2 circumstance bonus to all saving throws against olfactory and poison effects created by demons or environmental hazards associated with the Outer Rifts (including all environmental hazards found in Tanglebriar).</p>"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                {
+                  "or": [
+                    "item:trait:olfactory",
+                    "item:trait:poison"
+                  ]
+                },
+                {
+                  "or": [
+                    "origin:trait:demon",
+                    {
+                      "and": [
+                        "origin:trait:environmental",
+                        "origin:tag:outer-rifts"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "selector": "saving-throw",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -34,6 +182,50 @@
       "name": "Treehealer",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qfeyJVAMyYKXmCvx",
+        "folder": "aYiXPmCssiB1YRW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Treehealer",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You can undo the effect of demonic corruption in plants. By spending 10 minutes in contact with a tree that's been corrupted by demonic presence, you can restore the tree to its original health. This does not prevent that tree from becoming corrupted again in the future. Alternatively, you can spend 10 minutes in contact with a creature with the plant trait. At the end of this time, you restore @Damage[(7d8+56)[healing]] Hit Points to that creature and heal half that amount of your own Hit Points. Additionally, you can attempt to counteract any one curse or disease afflicting that plant creature as if you had cast @UUID[Compendium.pf2e.spells-srd.Item.Cleanse Affliction] heightened to 7th rank. Your counteract rank for this is 7, and your counteract check is equal to your Will save or your spell attack modifier, whichever is higher.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder #210: Whispers in the Dirt"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "elf",
+              "exploration",
+              "healing",
+              "primal"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     },
@@ -43,6 +235,51 @@
       "name": "Universal Longevity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "EiiCCJqWnN5RYMV4",
+        "folder": "aYiXPmCssiB1YRW4",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Universal Longevity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You've perfected your ability to keep up with all the skills you've learned over your long life, so you're almost never truly untrained at a skill. You reflect on your life experiences, changing the skill you selected with @UUID[Compendium.pf2e.feats-srd.Item.Ancestral Longevity] (and the skill you selected with @UUID[Compendium.pf2e.feats-srd.Item.Expert Longevity] if you have that feat).</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "day"
+          },
+          "level": {
+            "value": 13
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Ancestral Longevity"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "elf"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 13,
       "category": "ancestry"
     }

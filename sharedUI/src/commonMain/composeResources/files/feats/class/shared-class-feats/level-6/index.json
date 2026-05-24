@@ -7,6 +7,53 @@
       "name": "Intensified Element Stance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "qOGD3K8VlQAAjsWy",
+        "folder": "sfO1XeUhjfbTZCxd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Intensified Element Stance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Access</strong> Tian Xia origin</p>\n<p><strong>Requirements</strong> You were the recipient of elemental medicine (see @UUID[Compendium.pf2e.feats-srd.Item.Prepare Elemental Medicine]) during your last daily preparations.</p><hr /><p>You expend the elemental medicine in your body to empower your attacks, though you can't consume any more elemental medicine until the next day. While in Intensified Element Stance, your strikes and damaging spells deal an additional 1d6 damage against certain creatures, depending on the type of elemental medicine you expended. If the person who crafted the elemental medicine expended was legendary in the skill they used, increase this damage to 2d6.</p><ul><li><strong>Earth</strong> acid damage against water creatures</li><li><strong>Fire</strong> fire damage against metal creatures and constructs that are primarily metallic</li><li><strong>Metal</strong> electricity damage against wood or plant creatures and constructs primarily made of wood or plant matter</li><li><strong>Water</strong> sonic damage against fire creatures</li><li><strong>Wood</strong> cold damage against earth creatures and constructs that are primarily made of rock or earth</li></ul>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Medicine"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Tian Xia Character Guide"
+          },
+          "rules": [],
+          "selfEffect": {
+            "name": "Stance: Intensified Element Stance",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Stance: Intensified Element Stance"
+          },
+          "traits": {
+            "rarity": "uncommon",
+            "value": [
+              "druid",
+              "ranger",
+              "stance"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +63,49 @@
       "name": "Reactive Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NMWXHGWUcZGoLDKb",
+        "folder": "sfO1XeUhjfbTZCxd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reactive Strike",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> A creature within your reach uses a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using.</p>\n<hr />\n<p>You swat a foe that leaves an opening. Make a melee Strike against the triggering creature. If your attack is a critical hit and the trigger was a manipulate action, you disrupt that action. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "barbarian",
+              "champion",
+              "commander",
+              "exemplar",
+              "guardian",
+              "magus",
+              "swashbuckler"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +115,54 @@
       "name": "Reflexive Shield",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "dHUoQVzDa9Cf4QCG",
+        "folder": "sfO1XeUhjfbTZCxd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reflexive Shield",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You can use your shield to fend off explosions and the like. When you @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield]{Raise your Shield}, you gain your shield's circumstance bonus to Reflex saves.</p>\n<hr />\n<p><strong>Special</strong> If you have the @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] reaction, damage you take as a result of a Reflex save can trigger that reaction, even if the damage isn't physical damage.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "self:effect:raise-a-shield"
+              ],
+              "selector": "reflex",
+              "type": "circumstance",
+              "value": "@actor.system.attributes.shield.ac"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "fighter",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +172,49 @@
       "name": "Shield Warden",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5vXc2s2siR1ihpBT",
+        "folder": "sfO1XeUhjfbTZCxd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Shield Warden",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When you have a shield raised, you can use your @UUID[Compendium.pf2e.feats-srd.Item.Shield Block] reaction when an attack is made against an ally adjacent to you. If you do, the shield prevents that ally from taking damage instead of preventing you from taking damage, following the normal rules for Shield Block.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "shield block"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "champion",
+              "commander",
+              "fighter"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +224,45 @@
       "name": "Skirmish Strike",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "4I1Kq53Qfzrrmg2E",
+        "folder": "sfO1XeUhjfbTZCxd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Skirmish Strike",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Your feet and weapon move in tandem. Either Step and then Strike, or Strike and then Step.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "ranger",
+              "rogue"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +272,50 @@
       "name": "Steady Spellcasting",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "uiGsVmvRfujQQRlK",
+        "folder": "sfO1XeUhjfbTZCxd",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Steady Spellcasting",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>Confident in your technique, you don't lose spells easily. If a reaction would disrupt your spellcasting action, attempt a @Check[flat|showDC:all|dc:15]. If you succeed, your action isn't disrupted.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "bard",
+              "cleric",
+              "druid",
+              "oracle",
+              "psychic",
+              "sorcerer",
+              "witch",
+              "wizard"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }

@@ -7,6 +7,72 @@
       "name": "Arcane Communication",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "Lb8mrOF3W2VGSOpA",
+        "folder": "81X0l2pbUGp5GArP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Communication",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can deliver silent messages. You gain touch telepathy, allowing you to communicate silently and mentally with any creature you're touching, as long as you share a language.</p>\n<p><strong>Enhancement</strong> You can send your messages even further. Your telepathy gains a range of 10 feet, but you still have to share a language with your target.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.lesser",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneCommunication",
+                "predicate": [
+                  {
+                    "not": "enhancement:arcane-communication"
+                  }
+                ],
+                "value": "arcane-communication"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneCommunication",
+                "predicate": [
+                  {
+                    "not": "enhancement:arcane-communication"
+                  }
+                ],
+                "value": "arcane-communication"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +82,105 @@
       "name": "Arcane Eye",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "YG6OCTbbqZwqRTr3",
+        "folder": "81X0l2pbUGp5GArP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Arcane Eye",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your eye has been magically enhanced to pierce darkness. You gain darkvision.</p>\n<p><strong>Enhancement</strong> Your eye can see @UUID[Compendium.pf2e.conditionitems.Item.Invisible] creatures in brief spurts. You can cast @UUID[Compendium.pf2e.spells-srd.Item.See the Unseen] as an arcane innate spell once per hour.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "low-light vision"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.lesser",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneEye",
+                "predicate": [
+                  {
+                    "not": "enhancement:arcane-eye"
+                  }
+                ],
+                "value": "arcane-eye"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ArcaneEye",
+                "predicate": [
+                  {
+                    "not": "enhancement:arcane-eye"
+                  }
+                ],
+                "value": "arcane-eye"
+              }
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:see-the-unseen",
+                "spellcasting:innate",
+                "enhancement:arcane-eye"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell"
+            },
+            {
+              "itemType": "spell",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                "item:slug:see-the-unseen",
+                "spellcasting:innate",
+                "enhancement:arcane-eye"
+              ],
+              "property": "other-tags",
+              "value": "ancestral-spell:automaton"
+            }
+          ],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +190,154 @@
       "name": "Automaton Armament",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0DSCucjk9WZAw4xT",
+        "folder": "81X0l2pbUGp5GArP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Automaton Armament",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You've been provided a body part designed for combat. You gain either a claw or pincer unarmed attack. The claw deals 1d4 slashing damage, is in the brawling group, and has the agile, finesse, and unarmed traits. The pincer deals 1d6 piercing damage, is in the brawling group, and has the grapple and unarmed traits. Your body can be reconfigured; you can select this feat at any level, and you can retrain into or out of this feat or change the type of attack you gain.</p>\n<p><strong>Enhancement</strong> Your attacking part is reinforced. Increase the damage die of the unarmed attack you gain from this feat by one step (from 1d4 to 1d6, or from 1d6 to 1d8).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "baseType": "claw",
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "slashing",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "group": "brawling",
+              "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Claw",
+              "predicate": [
+                "armament:claw"
+              ],
+              "slug": "claw",
+              "traits": [
+                "agile",
+                "finesse",
+                "unarmed"
+              ]
+            },
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "piercing",
+                  "dice": 1,
+                  "die": "d6"
+                }
+              },
+              "group": "brawling",
+              "img": "systems/pf2e/icons/unarmed-attacks/pincer.webp",
+              "key": "Strike",
+              "label": "PF2E.BattleForm.Attack.Pincer",
+              "predicate": [
+                "armament:pincer"
+              ],
+              "slug": "pincer",
+              "traits": [
+                "grapple",
+                "unarmed"
+              ]
+            },
+            {
+              "choices": [
+                {
+                  "label": "PF2E.BattleForm.Attack.Claw",
+                  "value": "claw"
+                },
+                {
+                  "label": "PF2E.BattleForm.Attack.Pincer",
+                  "value": "pincer"
+                }
+              ],
+              "flag": "automatonArmament",
+              "key": "ChoiceSet",
+              "prompt": "PF2E.SpecificRule.Automaton.AutomatonArmament.Prompt",
+              "rollOption": "armament"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d6"
+              },
+              "predicate": [
+                "enhancement:automaton-armament"
+              ],
+              "selector": "claw-damage"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "dieSize": "d8"
+              },
+              "predicate": [
+                "enhancement:automaton-armament"
+              ],
+              "selector": "pincer-damage"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.lesser",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.AutomatonArmament",
+                "predicate": [
+                  {
+                    "not": "enhancement:automaton-armament"
+                  }
+                ],
+                "value": "automaton-armament"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.AutomatonArmament",
+                "predicate": [
+                  {
+                    "not": "enhancement:automaton-armament"
+                  }
+                ],
+                "value": "automaton-armament"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +347,120 @@
       "name": "Automaton Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CF43oiymCFVVEkVS",
+        "folder": "81X0l2pbUGp5GArP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Automaton Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You have come to better understand the process that made your body and the magic that powers it. You gain the trained proficiency rank in Arcana and Crafting. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] feat for Automaton Lore.</p>\n<p><strong>Enhancement</strong> Your gain greater understanding. Increase your proficiency rank in your choice of either Arcana or Crafting to expert. If you were already an expert in the chosen skill, increase your rank to master instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.lesser",
+              "predicate": [
+                {
+                  "not": "enhancement:automaton-lore"
+                }
+              ],
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.AutomatonLore",
+                "value": "automaton-lore"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "predicate": [
+                {
+                  "not": "enhancement:automaton-lore"
+                }
+              ],
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.AutomatonLore",
+                "value": "automaton-lore"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "predicate": [
+                "enhancement:automaton-lore:arc-expert"
+              ],
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "predicate": [
+                "enhancement:automaton-lore:cra-expert"
+              ],
+              "value": 2
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.arcana.rank",
+              "predicate": [
+                "enhancement:automaton-lore:arc-master"
+              ],
+              "value": 3
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.crafting.rank",
+              "predicate": [
+                "enhancement:automaton-lore:cra-master"
+              ],
+              "value": 3
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +470,109 @@
       "name": "Energy Beam",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "AMbYEv9rUt2fcR7F",
+        "folder": "81X0l2pbUGp5GArP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Energy Beam",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can channel your core's power through the magical gem that serves as your eye. You gain an energy beam ranged unarmed attack that deals 1d4 fire damage. The energy beam has a range increment of 20 feet. On a critical hit, the target takes persistent fire damage equal to the number of weapon damage dice. Your eye beam does not add critical specialization effects.</p>\n<p><strong>Enhancement</strong> You channel greater power. Increase the damage die of your energy beam by one step, from 1d4 to 1d6.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "category": "unarmed",
+              "damage": {
+                "base": {
+                  "damageType": "fire",
+                  "dice": 1,
+                  "die": "d4"
+                }
+              },
+              "img": "icons/magic/light/projectile-beam-yellow.webp",
+              "key": "Strike",
+              "range": {
+                "increment": 20
+              },
+              "traits": [
+                "unarmed"
+              ]
+            },
+            {
+              "critical": true,
+              "damageCategory": "persistent",
+              "damageType": "fire",
+              "key": "FlatModifier",
+              "selector": "{item|id}-damage",
+              "slug": "energy-beam-persistent",
+              "value": "@weapon.system.damage.dice"
+            },
+            {
+              "key": "DamageDice",
+              "override": {
+                "upgrade": true
+              },
+              "predicate": [
+                "enhancement:energy-beam"
+              ],
+              "selector": "{item|id}-damage"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.lesser",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.EnergyBeam",
+                "predicate": [
+                  {
+                    "not": "enhancement:energy-beam"
+                  }
+                ],
+                "value": "energy-beam"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.EnergyBeam",
+                "predicate": [
+                  {
+                    "not": "enhancement:energy-beam"
+                  }
+                ],
+                "value": "energy-beam"
+              }
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +582,101 @@
       "name": "Reinforced Chassis",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "cilZUszwjSGB4p1W",
+        "folder": "81X0l2pbUGp5GArP",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Reinforced Chassis",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>Your body is designed to be particularly resilient. Your chassis is made from reinforced armor plating that grants a +3 item bonus to AC with a Dexterity cap of +1. If you are at least 5th level, the item bonus increases to +4 and at 10th level it increases to +5. You can never wear other armor or remove your chassis; however, you still don't become @UUID[Compendium.pf2e.conditionitems.Item.Fatigued] from sleeping. You can etch armor runes onto your chassis. Your chassis is medium armor in the plate group for abilities and for etching runes.</p>\n<p><strong>Enhancement</strong> Your chassis becomes difficult to overcome. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Chassis Deflection] reaction.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Guns & Gears"
+          },
+          "rules": [
+            {
+              "flag": "reinforcedChassis",
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Reinforced Chassis"
+            },
+            {
+              "itemId": "{item|flags.system.itemGrants.reinforcedChassis.id}",
+              "key": "ItemAlteration",
+              "mode": "add",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                }
+              ],
+              "property": "ac-bonus",
+              "value": "ternary(gte(@actor.level,10),2,1)"
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.lesser",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ReinforcedChassis",
+                "predicate": [
+                  {
+                    "not": "enhancement:reinforced-chassis"
+                  }
+                ],
+                "value": "reinforced-chassis"
+              }
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "add",
+              "path": "flags.system.automaton.enhancements.greater",
+              "value": {
+                "label": "PF2E.SpecificRule.Automaton.EnhanceableFeats.ReinforcedChassis",
+                "predicate": [
+                  {
+                    "not": "enhancement:reinforced-chassis"
+                  }
+                ],
+                "value": "reinforced-chassis"
+              }
+            },
+            {
+              "allowDuplicate": false,
+              "key": "GrantItem",
+              "predicate": [
+                "enhancement:reinforced-chassis"
+              ],
+              "reevaluateOnUpdate": true,
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Chassis Deflection"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "automaton"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

@@ -1,0 +1,207 @@
+{
+  "directories": [],
+  "files": [
+    {
+      "fileName": "rite-of-invocation.json",
+      "id": "GpnHIonrLN8TFZci",
+      "name": "Rite of Invocation",
+      "img": "icons/magic/symbols/runes-carved-stone-yellow.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "GpnHIonrLN8TFZci",
+        "folder": "gR7LeZCxEfhx8N1e",
+        "img": "icons/magic/symbols/runes-carved-stone-yellow.webp",
+        "name": "Rite of Invocation",
+        "system": {
+          "ancestry": {
+            "name": "Conrasu",
+            "slug": "conrasu",
+            "uuid": "Compendium.pf2e.ancestries.Item.tZn4qIHCUA6wCdnI"
+          },
+          "description": {
+            "value": "<p>You augmented your exoskeleton with magic. You gain one cantrip from the arcane or occult spell list. You can cast this spell as an innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "rite-of-knowing.json",
+      "id": "faLb2rczsrxAuOTt",
+      "name": "Rite of Knowing",
+      "img": "icons/magic/symbols/cog-shield-white-blue.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "faLb2rczsrxAuOTt",
+        "folder": "gR7LeZCxEfhx8N1e",
+        "img": "icons/magic/symbols/cog-shield-white-blue.webp",
+        "name": "Rite of Knowing",
+        "system": {
+          "ancestry": {
+            "name": "Conrasu",
+            "slug": "conrasu",
+            "uuid": "Compendium.pf2e.ancestries.Item.tZn4qIHCUA6wCdnI"
+          },
+          "description": {
+            "value": "<p>You enhanced your exoskeleton with a connection to Axis, allowing you to tap into the infinite knowledge of the plane. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.Call to Axis] action.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.actionspf2e.Item.Call to Axis"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "rite-of-light.json",
+      "id": "EoWwvDdoMqN5x0c9",
+      "name": "Rite of Light",
+      "img": "icons/magic/light/orb-container-orange.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "EoWwvDdoMqN5x0c9",
+        "folder": "gR7LeZCxEfhx8N1e",
+        "img": "icons/magic/light/orb-container-orange.webp",
+        "name": "Rite of Light",
+        "system": {
+          "ancestry": {
+            "name": "Conrasu",
+            "slug": "conrasu",
+            "uuid": "Compendium.pf2e.ancestries.Item.tZn4qIHCUA6wCdnI"
+          },
+          "description": {
+            "value": "<p>Your exoskeleton bears small shoots that can share life. When using your @UUID[Compendium.pf2e.ancestryfeatures.Item.Sunlight Healing], you can restore the Hit Points of an adjacent ally instead of yourself. That ally becomes temporarily immune to all uses of Sunlight Healing for 1 day.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "rite-of-passage.json",
+      "id": "yVtcyAbLmWCIHHZi",
+      "name": "Rite of Passage",
+      "img": "icons/magic/nature/root-vine-entangle-foot-green.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "yVtcyAbLmWCIHHZi",
+        "folder": "gR7LeZCxEfhx8N1e",
+        "img": "icons/magic/nature/root-vine-entangle-foot-green.webp",
+        "name": "Rite of Passage",
+        "system": {
+          "ancestry": {
+            "name": "Conrasu",
+            "slug": "conrasu",
+            "uuid": "Compendium.pf2e.ancestries.Item.tZn4qIHCUA6wCdnI"
+          },
+          "description": {
+            "value": "<p>Your exoskeleton remains connected with the plants that created it. You can ignore difficult terrain and uneven ground caused by undergrowth. In addition, when you use the Acrobatics skill to Balance on narrow surfaces or uneven ground within forests, you aren't off-guard. When you roll a success attempting one of these Acrobatics checks, you get a critical success instead.</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:balance",
+                "terrain:forest"
+              ],
+              "selector": "acrobatics",
+              "type": "skill"
+            },
+            {
+              "key": "Note",
+              "predicate": [
+                "action:balance"
+              ],
+              "selector": "acrobatics",
+              "text": "PF2E.SpecificRule.Conrasu.RiteOfPassage.Note",
+              "title": "{item|name}"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    },
+    {
+      "fileName": "rite-of-reinforcement.json",
+      "id": "q2omqJ9t0skGTYki",
+      "name": "Rite of Reinforcement",
+      "img": "icons/environment/creatures/monster-barbed-carapace-purple.webp",
+      "type": "heritage",
+      "data": {
+        "_id": "q2omqJ9t0skGTYki",
+        "folder": "gR7LeZCxEfhx8N1e",
+        "img": "icons/environment/creatures/monster-barbed-carapace-purple.webp",
+        "name": "Rite of Reinforcement",
+        "system": {
+          "ancestry": {
+            "name": "Conrasu",
+            "slug": "conrasu",
+            "uuid": "Compendium.pf2e.ancestries.Item.tZn4qIHCUA6wCdnI"
+          },
+          "description": {
+            "value": "<p>Your woven exoskeleton rivals the hardest armors that can be found. Your exoskeleton is medium armor in the plate armor group that grants a +4 item bonus to AC, a Dex cap of +1, a check penalty of -2, a speed penalty of -5 feet, and a Strength value of +3, and has the comfort trait. You can never wear other armor or remove your exoskeleton. You can etch armor runes onto your exoskeleton as normal.</p>\n<p>@UUID[Compendium.pf2e.equipment-srd.Item.Rite of Reinforcement Exoskeleton]</p>"
+          },
+          "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Pathfinder Lost Omens The Mwangi Expanse"
+          },
+          "rules": [
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.equipment-srd.Item.Rite of Reinforcement Exoskeleton"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": []
+          }
+        },
+        "type": "heritage"
+      }
+    }
+  ]
+}

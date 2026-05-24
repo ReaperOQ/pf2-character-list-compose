@@ -7,6 +7,43 @@
       "name": "Croak Talker",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "FCGUAdseGVq6nhUw",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Croak Talker",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You can communicate with the simplest of frogs and other similar creatures using long-winded croaks. You can ask questions of, receive answers from, and use the Diplomacy skill with animals that are amphibians (most amphibians have the amphibious trait).</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -16,6 +53,51 @@
       "name": "Hunter's Defense",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "KYTSvAEqK7KAyVwi",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Hunter's Defense",
+        "system": {
+          "actionType": {
+            "value": "reaction"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> A creature with the animal, beast, elemental, fey, fungus, or plant trait attacks you, and you can see the attacker.</p><hr /><p>Your canny understanding of natural and primal creatures helps you predict and dodge their attacks. The triggering attack roll targets your Nature DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn't remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], even though you wouldn't take the –2 circumstance penalty against the attack.</p>"
+          },
+          "frequency": {
+            "max": 1,
+            "per": "PT1H"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Nature"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -25,6 +107,60 @@
       "name": "Jungle Strider",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "M41PGiFlLE2tByUL",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Jungle Strider",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are adept at dodging roots, foliage, and other jungle obstacles. You ignore difficult terrain in forests and jungles. In addition, when you use the Acrobatics skill to @UUID[Compendium.pf2e.actionspf2e.Item.Balance] on narrow surfaces or uneven ground made of plant material, you aren't @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard], and when you roll a success at one of these Acrobatics checks, you get a critical success instead.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "adjustment": {
+                "success": "one-degree-better"
+              },
+              "key": "AdjustDegreeOfSuccess",
+              "predicate": [
+                "action:balance",
+                {
+                  "or": [
+                    "terrain:foliage",
+                    "terrain:forest"
+                  ]
+                }
+              ],
+              "selector": "acrobatics"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -34,6 +170,49 @@
       "name": "Nocturnal Tripkee",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "BNIAfaJPNCWKs3FN",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Nocturnal Tripkee",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You tend to do most of your hunting and work at night and have adapted to the requirements of nocturnal life. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black-and-white only.</p><hr /><p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "onlyLevel1": true,
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "subfeatures": {
+            "senses": {
+              "darkvision": {}
+            }
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -43,6 +222,47 @@
       "name": "Terrifying Croak",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "T8tNZANOWUZiXuzO",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Terrifying Croak",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You release a haunting croak that reminds those around you of their fears. Attempt an Intimidation check to @UUID[Compendium.pf2e.actionspf2e.Item.Demoralize] a creature within 30 feet; you do not take a penalty to this check for not speaking a language. If the check is successful, the target cannot reduce their frightened condition below 1 for 1 round.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "trained in Intimidation"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -52,6 +272,60 @@
       "name": "Tripkee Lore",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "5VWItcyt3Mx6mbSK",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tripkee Lore",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You are well versed in tripkee culture and tactics. You gain the trained proficiency in Nature and Stealth. If you would automatically become trained in one of those skills, you instead become trained in a skill of your choice.</p>\n<p>You also gain the @UUID[Compendium.pf2e.feats-srd.Item.Additional Lore] general feat for Tripkee Lore.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.nature.rank",
+              "value": 1
+            },
+            {
+              "key": "ActiveEffectLike",
+              "mode": "upgrade",
+              "path": "system.skills.stealth.rank",
+              "value": 1
+            },
+            {
+              "key": "GrantItem",
+              "uuid": "Compendium.pf2e.feats-srd.Item.Additional Lore"
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     },
@@ -61,6 +335,94 @@
       "name": "Tripkee Weapon Familiarity",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "CvtJ98EZvBGSCLOX",
+        "folder": "Iw0dujzKEnLt32xt",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Tripkee Weapon Familiarity",
+        "system": {
+          "actionType": {
+            "value": "passive"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "ancestry",
+          "description": {
+            "value": "<p>You gain access to all uncommon weapons with the tripkee trait. You have familiarity with weapons with the tripkee trait plus the blowgun, dart, hatchet, scythe, and shortbow—for the purpose of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+          },
+          "level": {
+            "value": 1
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Player Core 2"
+          },
+          "rules": [
+            {
+              "definition": [
+                {
+                  "or": [
+                    "item:trait:tripkee",
+                    "item:base:hatchet",
+                    "item:base:scythe",
+                    "item:base:shortbow",
+                    "item:base:composite-shortbow"
+                  ]
+                },
+                "item:category:martial"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.MartialTripkeeWeapons",
+              "sameAs": "simple",
+              "slug": "martial-tripkee-weapons"
+            },
+            {
+              "definition": [
+                "item:trait:tripkee",
+                "item:category:advanced"
+              ],
+              "key": "MartialProficiency",
+              "label": "PF2E.SpecificRule.MartialProficiency.AdvancedTripkeeWeapons",
+              "sameAs": "simple",
+              "slug": "advanced-tripkee-weapons"
+            },
+            {
+              "key": "CriticalSpecialization",
+              "predicate": [
+                {
+                  "gte": [
+                    "self:level",
+                    5
+                  ]
+                },
+                {
+                  "or": [
+                    "item:trait:tripkee",
+                    "item:base:hatchet",
+                    "item:base:scythe",
+                    "item:base:shortbow",
+                    "item:base:composite-shortbow",
+                    "item:base:blowgun",
+                    "item:base:dart"
+                  ]
+                }
+              ]
+            }
+          ],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "tripkee"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 1,
       "category": "ancestry"
     }

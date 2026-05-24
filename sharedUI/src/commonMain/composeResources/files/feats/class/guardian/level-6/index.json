@@ -7,6 +7,63 @@
       "name": "Disarming Intercept",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "HoDs90589eYQwcre",
+        "folder": "yFisFtLM9vV2UJ2L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Disarming Intercept",
+        "system": {
+          "actionType": {
+            "value": "free"
+          },
+          "actions": {
+            "value": null
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Trigger</strong> You @UUID[Compendium.pf2e.actionspf2e.Item.Intercept Attack]{Intercept an Attack} that was made with a melee weapon by a creature you're adjacent to.</p><hr /><p>When you catch a weapon in your armor, you can move your body to wrench it from your foe's grasp. After Intercepting the Attack, attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Disarm] the weapon used for that attack. You don't need to have a hand free, and you gain an item bonus to the Athletics check equal to the value of your armor's potency rune.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Intercept Attack"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "action:disarm",
+                "disarming-intercept"
+              ],
+              "selector": "athletics",
+              "type": "item",
+              "value": "@actor.wornArmor.system.runes.potency"
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -16,6 +73,43 @@
       "name": "Guarded Advance",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "etaixAdHNlHnLH0i",
+        "folder": "yFisFtLM9vV2UJ2L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Guarded Advance",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You slowly advance on the battlefield, taking utmost caution. You @UUID[Compendium.pf2e.actionspf2e.Item.Raise a Shield] and Step twice, in any order.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -25,6 +119,53 @@
       "name": "Lock Down",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "SiGvSOPQmZ0nyXVO",
+        "folder": "yFisFtLM9vV2UJ2L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Lock Down",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.Hampering Stance].</p><hr /><p>You attack an enemy to ensure they can't move beyond your reach. Strike an enemy within your reach. If you hit and deal damage, that enemy can't use move actions to move beyond the reach of the weapon or unarmed attack you used for the Strike. The enemy can still move to other squares within reach of that weapon or unarmed attack. This effect lasts until the beginning of your next turn, until you move, or until you use that weapon or unarmed attack to make another attack, whichever comes first.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": [
+              {
+                "value": "Hampering Stance"
+              }
+            ]
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -34,6 +175,58 @@
       "name": "Retaliating Rescue",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "0EjaNZM7qeARiuEU",
+        "folder": "yFisFtLM9vV2UJ2L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Retaliating Rescue",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>When an ally is in danger, you can hustle to reach them and punish the foe threatening them. Stride up to your Speed. You must end this movement adjacent to an ally who is within an enemy's reach. Then, you push your ally up to 5 feet (as normal for forced movement, this movement doesn't trigger reactions) and make a melee Strike against an enemy within your reach. If your ally was in that enemy's reach and your push moved them out of it, you gain a +2 circumstance bonus to your attack roll.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [
+            {
+              "key": "FlatModifier",
+              "predicate": [
+                "retaliating-rescue"
+              ],
+              "selector": "strike-attack-roll",
+              "type": "circumstance",
+              "value": 2
+            }
+          ],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -43,6 +236,50 @@
       "name": "Ring Their Bell",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "NMRBes7gGfGldOrn",
+        "folder": "yFisFtLM9vV2UJ2L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Ring Their Bell",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 1
+          },
+          "category": "class",
+          "description": {
+            "value": "<p><strong>Requirements</strong> You are wearing medium or heavy armor, and your taunted enemy is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] because it didn't target you or include you in an area effect.</p><hr /><p>Using your armor, you pummel a foe that isn't focused on you in the head or face to stagger them. Make a fist Strike against your taunted enemy even if you don't have a hand free; if you're wielding a @UUID[Compendium.pf2e.equipment-srd.Item.Gauntlet] or @UUID[Compendium.pf2e.equipment-srd.Item.Spiked Gauntlet], you can make a Strike with one of those weapons instead. If the Strike hits and deals damage, the creature must attempt a @Check[fortitude|against:guardian|options:inflicts:stunned|traits:incapacitation] save against your class DC; this is an incapacitation effect.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3}.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "flourish",
+              "guardian",
+              "incapacitation"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     },
@@ -52,6 +289,48 @@
       "name": "Stomp Ground",
       "img": "icons/sundries/books/book-red-exclamation.webp",
       "type": "feat",
+      "data": {
+        "_id": "eSq9I2OPDfzhybkr",
+        "folder": "yFisFtLM9vV2UJ2L",
+        "img": "icons/sundries/books/book-red-exclamation.webp",
+        "name": "Stomp Ground",
+        "system": {
+          "actionType": {
+            "value": "action"
+          },
+          "actions": {
+            "value": 2
+          },
+          "category": "class",
+          "description": {
+            "value": "<p>You bring your booted foot down on the ground with enough force to rattle your foes. Each creature in a @Template[type:emanation|distance:5] must attempt a @Check[reflex|against:guardian|options:area-effect,damaging-effect,inflicts:off-guard,inflicts:prone] saving throw against your class DC.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] until the end of your turn.</p>\n<p><strong>Failure</strong> The creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Critical Failure</strong> The creature is knocked prone and takes @Damage[1d6[bludgeoning]|options:area-damage] damage from the fall.</p>"
+          },
+          "level": {
+            "value": 6
+          },
+          "prerequisites": {
+            "value": []
+          },
+          "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+          },
+          "rules": [],
+          "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+          },
+          "traits": {
+            "rarity": "common",
+            "value": [
+              "guardian"
+            ]
+          }
+        },
+        "type": "feat"
+      },
       "level": 6,
       "category": "class"
     }
